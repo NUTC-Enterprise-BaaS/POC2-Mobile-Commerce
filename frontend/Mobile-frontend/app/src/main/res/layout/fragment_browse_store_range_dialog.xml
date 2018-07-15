@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_browse_store_dialog_height">
+
+        <TextView
+            android:id="@+id/range_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_browse_store_dialog__margin"
+            android:text="@string/brose_store_dialog_change"
+            android:textColor="@color/ColorBlack"
+            android:textSize="@dimen/activity_browse_store_text_size" />
+
+        <EditText
+            android:id="@+id/range_input"
+            android:layout_width="@dimen/activity_browse_store_dialog_edit_width"
+            android:layout_height="@dimen/activity_browse_store_dialog_edit_height"
+            android:layout_below="@id/range_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_browse_store_dialog_edit__margin"
+            android:background="@drawable/forgetpassword_pwdinfo_backgroud"
+            android:ellipsize="end"
+            android:inputType="number"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="0"
+            android:textSize="@dimen/activity_browse_store_text_size" />
+
+        <SeekBar
+            android:id="@+id/range_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_browse_store_button_height"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/activity_browse_store_dialog__margin"
+            android:layout_marginLeft="@dimen/activity_browse_store_dialog__margin"
+            android:layout_marginRight="@dimen/activity_browse_store_dialog__margin"
+            android:layout_marginStart="@dimen/activity_browse_store_dialog__margin"
+            android:max="500" />
+
+        <Button
+            android:id="@+id/range_cancel"
+            android:layout_width="@dimen/activity_browse_store_button_width"
+            android:layout_height="@dimen/activity_browse_store_button_height"
+            android:layout_alignLeft="@id/range_seekbar"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@id/range_seekbar"
+            android:layout_marginBottom="@dimen/activity_browse_store_dialog__margin"
+            android:background="@drawable/activity_register_button_shape"
+            android:gravity="center"
+            android:text="@string/check_clear_dialog_cancel"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/activity_browse_store_text_size" />
+
+        <Button
+            android:id="@+id/range_submit"
+            android:layout_width="@dimen/activity_browse_store_button_width"
+            android:layout_height="@dimen/activity_browse_store_button_height"
+            android:layout_alignEnd="@id/range_seekbar"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@id/range_seekbar"
+            android:layout_marginBottom="@dimen/activity_browse_store_dialog__margin"
+            android:background="@drawable/activity_register_button_shape"
+            android:gravity="center"
+            android:text="@string/check_clear_dialog_ok"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/activity_browse_store_text_size" />
+
+    </RelativeLayout>
+</RelativeLayout>

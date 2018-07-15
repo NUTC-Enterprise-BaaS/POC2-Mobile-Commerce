@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorWhite">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/ColorGeneralTheme">
+
+        <ImageView
+            android:layout_width="@dimen/toolbar_back_image_width"
+            android:layout_height="@dimen/toolbar_back_image_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/toolbar_back_image_margin_left"
+            android:layout_marginStart="@dimen/toolbar_back_image_margin_left"
+            android:scaleType="fitCenter"
+            android:src="@drawable/toolbar_back" />
+
+        <View
+            android:id="@+id/toolbar_back_touch"
+            android:layout_width="@dimen/toolbar_back_touch"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/brose_store_tittle"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/toolbar_text_size" />
+
+        <ImageView
+            android:id="@+id/activity_browse_store_like_image"
+            android:layout_width="@dimen/toolbar_back_image_width"
+            android:layout_height="@dimen/toolbar_back_image_height"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/toolbar_back_image_margin_left"
+            android:layout_marginRight="@dimen/toolbar_back_image_margin_left"
+            android:background="@drawable/icon_n2_04" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/activity_browse_store_margin_horizontal"
+        android:layout_marginTop="@dimen/activity_browse_store_margin_horizontal"
+        android:background="@color/ColorWhite">
+
+        <EditText
+            android:id="@+id/activity_browse_store_editText"
+            android:layout_width="@dimen/activity_browse_store_edittext_width"
+            android:layout_height="@dimen/activity_browse_store_edittext_height"
+            android:background="@drawable/layout_browse_store_search_edittext"
+            android:hint="@string/brose_store_search_hint"
+            android:maxLines="1"
+            android:padding="@dimen/activity_browse_store_margin_horizontal"
+            android:text=""
+            android:textSize="@dimen/activity_browse_store_text_size" />
+
+        <Button
+            android:id="@+id/activity_browse_store_search_button"
+            android:layout_width="@dimen/activity_browse_store_button_width"
+            android:layout_height="@dimen/activity_browse_store_button_height"
+            android:layout_alignTop="@id/activity_browse_store_editText"
+            android:layout_marginLeft="@dimen/activity_browse_store_margin_horizontal"
+            android:layout_marginStart="@dimen/activity_browse_store_margin_horizontal"
+            android:layout_toEndOf="@id/activity_browse_store_editText"
+            android:layout_toRightOf="@id/activity_browse_store_editText"
+            android:background="@drawable/layout_gnenral_button"
+            android:text="@string/brose_store_search"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/activity_browse_store_text_size" />
+
+        <Button
+            android:id="@+id/activity_browse_store_range_search_button"
+            android:layout_width="@dimen/activity_browse_store_button_width"
+            android:layout_height="@dimen/activity_browse_store_button_height"
+            android:layout_alignTop="@id/activity_browse_store_editText"
+            android:layout_marginLeft="@dimen/activity_browse_store_margin_horizontal"
+            android:layout_marginStart="@dimen/activity_browse_store_margin_horizontal"
+            android:layout_toEndOf="@id/activity_browse_store_search_button"
+            android:layout_toRightOf="@id/activity_browse_store_search_button"
+            android:background="@drawable/layout_gnenral_button"
+            android:text="@string/brose_store_range_search"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/activity_browse_store_range_search_text_size" />
+
+        <RelativeLayout
+            android:id="@+id/activity_browse_store_area_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/activity_browse_store_editText"
+            android:layout_alignStart="@id/activity_browse_store_editText"
+            android:layout_below="@id/activity_browse_store_editText"
+            android:layout_marginTop="@dimen/activity_browse_store_margin_horizontal"
+            android:background="@drawable/layout_browse_store_search_edittext">
+
+            <Spinner
+                android:id="@+id/activity_browse_store_area_spinner"
+                android:layout_width="@dimen/activity_browse_store_spinner_width"
+                android:layout_height="@dimen/activity_browse_store_spinner_height"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/activity_browse_store_membe_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/activity_browse_store_search_button"
+            android:layout_alignRight="@id/activity_browse_store_search_button"
+            android:layout_alignTop="@id/activity_browse_store_area_container"
+            android:background="@drawable/layout_browse_store_search_edittext">
+
+            <Spinner
+                android:id="@+id/activity_browse_store_member_spinner"
+                android:layout_width="@dimen/activity_browse_store_spinner_width"
+                android:layout_height="@dimen/activity_browse_store_spinner_height"
+                android:gravity="left" />
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/activity_browse_store_list_change_button"
+            android:layout_width="@dimen/activity_browse_store_button_width"
+            android:layout_height="@dimen/activity_browse_store_button_height"
+            android:layout_alignEnd="@id/activity_browse_store_range_search_button"
+            android:layout_alignLeft="@id/activity_browse_store_range_search_button"
+            android:layout_alignRight="@id/activity_browse_store_range_search_button"
+            android:layout_alignStart="@id/activity_browse_store_range_search_button"
+            android:layout_below="@id/activity_browse_store_range_search_button"
+            android:layout_marginTop="@dimen/activity_browse_store_margin_horizontal"
+            android:background="@drawable/layout_gnenral_button"
+            android:text="@string/brose_store_list_change"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/activity_browse_store_range_search_text_size" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/activity_browse_store_recyclerview"
+            android:layout_width="@dimen/activity_browse_store_recyclerview_width"
+            android:layout_height="match_parent"
+            android:layout_alignEnd="@id/activity_browse_store_list_change_button"
+            android:layout_alignLeft="@id/activity_browse_store_area_container"
+            android:layout_alignRight="@id/activity_browse_store_list_change_button"
+            android:layout_alignStart="@id/activity_browse_store_area_container"
+            android:layout_below="@id/activity_browse_store_area_container"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_browse_store_margin_horizontal"
+            android:background="@color/ColorWhite" />
+    </RelativeLayout>
+</RelativeLayout>

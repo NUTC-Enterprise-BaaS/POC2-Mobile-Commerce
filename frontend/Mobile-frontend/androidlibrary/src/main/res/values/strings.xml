@@ -1,0 +1,233 @@
+<resources>
+    <string name="facebook_app_id">1053181544771323</string>
+
+    <string name="directionText">使用說明</string>
+    <string name="logout">登    出</string>
+    <string name="news">最新消息</string>
+    <string name="bonus">特約發點</string>
+    <string name="advertisement">刊登廣告申請</string>
+    <string name="setting">功能設置</string>
+    <string name="apply">申請加入</string>
+    <string name="enter">進入</string>
+    <string name="preferential">優惠店</string>
+    <string name="change_pasword">密碼變更</string>
+    <string name="change_member_pasword">會員密碼變更</string>
+    <string name="change_csv_pasword">匯出CSV密碼變更</string>
+    <string name="now_password">目前密碼</string>
+    <string name="now_password_random">輸入隨機密碼</string>
+    <string name="now_password_input">輸入目前密碼</string>
+    <string name="new_password">新密碼</string>
+    <string name="new_password_input">輸入新密碼</string>
+    <string name="new_password_input_check">確認新密碼</string>
+    <string name="click_relogin">重新登入</string>
+    <string name="request_load_resetpassword_fial">"舊密碼錯誤，請重新確認"</string>
+    <string name="request_load_resetpassword_fail">"修改失敗，新舊密碼相同"</string>
+
+    <string name="reset_password_susess">重設密碼成功，請重新登入</string>
+    <string name="reset_send_opinion_success">送出意見成功</string>
+
+    <string name="select_logo_success">"已選取主圖"</string>
+    <string name="select_sub_logo_success">"已選取副圖"</string>
+    <string name="request_select_logo_fail">"請先選取主圖"</string>
+
+    <string name="request_shop_pay_fail">"無付款資料"</string>
+    <string name="request_load_fail">"讀取失敗，請檢查網路或重新讀取"</string>
+    <string name="request_load_fail_send_point_fail">"發送點數失敗，請重新嘗試"</string>
+    <string name="request_load_fail_send_opinion_fail">"送出意見失敗，請稍候重新嘗試"</string>
+    <string name="request_load_fail_send_point_email_fail">"輸入的電子郵件錯誤"</string>
+    <string name="request_load_fail_send_opinion_phone_fail">"輸入的電話號碼錯誤"</string>
+    <string name="request_load_fail_send_opinion_block_fail">"對方已被封鎖，無法發送"</string>
+    <string name="request_load_fail_send_opinion_device_fail">"對方無登入過，無法發送"</string>
+
+    <string name="login_dialog_error_tittle">"登入"</string>
+    <string name="logout_error">"登出失敗"</string>
+    <string name="login_dialog_login_fail">"電子郵件或是密碼錯誤"</string>
+    <string name="csv_dialog_login_fail">"密碼錯誤請重新輸入"</string>
+    <string name="csv_dialog_login_success">"登入成功"</string>
+
+    <string name="authenticate_dialog_error_tittle">"驗證碼錯誤"</string>
+    <string name="authenticate_dialog_login_fail">"請重新輸入驗證碼"</string>
+    <string name="login_dialog_error_tittle_register">"註冊"</string>
+    <string name="login_dialog_error_login_empty">"請確認資料已填齊"</string>
+    <string name="register_dialog_error_register_empty">"請確認資料已填齊"</string>
+    <string name="register_dialog_error_password_short">"密碼至少六碼"</string>
+    <string name="register_dialog_error_store_empty">"請選擇店家型態"</string>
+
+    <string-array name="register_empty_error">
+        <item>請輸入姓名</item>
+        <item>請輸入手機號碼</item>
+        <item>請輸入電子郵件</item>
+        <item>請輸入密碼</item>
+        <item>請選擇生日</item>
+        <item>請輸入驗證碼</item>
+    </string-array>
+
+
+    <string name="authenticate_dialog_error_mail_style">"請輸入正確信箱格式"</string>
+    <string name="authenticate_dialog_error_password_length">"密碼長度不足"</string>
+    <string name="authenticate_dialog_error_auth">"驗證碼錯誤"</string>
+    <string name="authenticate_dialog_auth_fail">"請輸入驗證碼"</string>
+    <string-array name="change_password_layout_empty_error">
+        <item>請輸入隨機碼</item>
+        <item>請輸入新密碼</item>
+        <item>請再次輸入新密碼</item>
+    </string-array>
+
+    <string-array name="forgot_passwordfragment_layout_empty_error">
+        <item>請輸入手機號碼或是電子信箱</item>
+        <item>請輸入驗證碼</item>
+    </string-array>
+
+    <string name="login_error_dialog_friend_phone">好友電話或信箱錯誤</string>
+
+    <string name="login_error_dialog_correct_email">"請輸入正確信箱格式"</string>
+    <string name="login_error_dialog_correct_email_or_password">"信箱或是密碼錯誤，請重新輸入"</string>
+    <string name="login_error_dialog_password_lenght">"密碼長度不足"</string>
+    <string name="login_error_dialog_auth_error">"驗證碼錯誤"</string>
+    <string name="login_error_dialog_phone_email_error">"電子信箱或是手機輸入錯誤"</string>
+    <string name="login_error_dialog_same_phone_email_error">"電子信箱或是手機重複使用"</string>
+    <string name="login_error_dialog_password_same_error">"新密碼與舊密碼相同 請重新輸入！"</string>
+    <string name="login_error_dialog_password_not_same">"兩次密碼不相等"</string>
+    <string name="login_error_dialog_email_or_verifycode">"認證碼或是信箱錯誤"</string>
+    <string name="login_error_dialog_already_register">"用戶已經註冊"</string>
+
+    <string name="loading_dialog_message">"讀取中...請耐心等待"</string>
+
+    <string name="check_exit_dialog_message">"確定關閉應用程式？"</string>
+    <string name="check_exit_dialog_cancel">"取消"</string>
+    <string name="check_exit_dialog_ok">"確定"</string>
+
+    <string name="check_lost_data_dialog_message">"放棄已輸入的資訊？"</string>
+    <string name="check_lost_data_dialog_cancel">"取消"</string>
+    <string name="check_lost_data_dialog_ok">"確定"</string>
+    <string name="search_spinner_title">"查詢"</string>
+    <string name="point_layout_title_am">"上午"</string>
+    <string name="point_layout_title_pm">"下午"</string>
+
+    <string name="how_to_use_tittle">"使用說明"</string>
+
+    <string name="basic_information_layout_scan">"掃描 QR 碼"</string>
+    <string name="basic_information_layout_vip_button">"驗證"</string>
+    <string name="basic_information_layout_vip_ok">"已驗證"</string>
+    <string name="basic_information_layout_tittle">"基本資料"</string>
+    <string name="basic_information_layout_account">"會員帳號"</string>
+    <string name="basic_information_layout_birth">"出生日期"</string>
+    <string name="basic_information_layout_country">"國籍別"</string>
+    <string name="basic_information_layout_recommend">"推薦人"</string>
+    <string name="basic_information_layout_vip">"VIP驗證"</string>
+    <string name="basic_information_layout_mail">"電子郵件"</string>
+    <string name="basic_information_layout_store_name">"店家名稱"</string>
+    <string name="basic_information_layout_store_address">"店家地址"</string>
+    <string name="basic_information_layout_store_url">"店家網址"</string>
+    <string name="basic_information_layout_store_contant">"聯絡人"</string>
+    <string name="basic_information_layout_applaction">"更改email"</string>
+    <string name="basic_information_layout_submit">"確認變更"</string>
+    <string-array name="basic_information_layout_error_submit">
+        <item>請輸入電子信箱</item>
+    </string-array>
+
+
+    <string name="register_recommend_dialog_success_title">成功</string>
+    <string name="register_recommend_dialog_success_content">請繼續填寫</string>
+    <string name="set_recommend_dialog_success_title">成功</string>
+    <string name="set_recommend_dialog_success_content">設定推薦人成功</string>
+    <string name="scan_dialog_success_title">已傳送至店家\n請洽店家發點</string>
+    <string name="scan_dialog_success_content">請告知店家手機號碼</string>
+    <string name="qr_success_already_send_to_store">已傳送至店家</string>
+    <string name="qr_success_please_contract_in_store">請洽店家發點</string>
+    <string name="qr_success_please_input_phone_number">請告知店家手機號碼</string>
+    <string name="qr_success_check">確認</string>
+    <string name="brose_store_tittle">"搜尋店家"</string>
+    <string name="brose_store_search_hint">"搜尋關鍵字"</string>
+    <string name="brose_store_search">"搜尋"</string>
+    <string name="brose_store_range_search">"範圍搜尋"</string>
+    <string name="brose_store_list_change">"列表切換"</string>
+    <string name="brose_store_dialog_change">"半徑(公里)"</string>
+
+    <string name="country_chinese">"中國"</string>
+    <string name="country_malaysia">"馬來西亞"</string>
+    <string name="country_singapura">"新加坡"</string>
+    <string name="country_korea">"韓國"</string>
+    <string name="country_japan">"日本"</string>
+    <string name="country_hongkong">"香港"</string>
+    <string name="country_myanmar">"緬甸"</string>
+    <string name="country_taiwan">"台灣"</string>
+
+    <string name="call_dialog_tittle">"注意"</string>
+    <string name="call_dialog_confirm">"Yes"</string>
+    <string name="call_dialog_unconfirm">"No"</string>
+    <string name="call_dialog_now_calling">"你正在播打："</string>
+    <string name="call_dialog_cancel">"No"</string>
+
+    <string name="brose_store_favorite">已加入最愛</string>
+    <string name="brose_store_favorite_cancel">已刪除最愛</string>
+
+    <string name="finish_modify_dialog_tittle">"修改完成"</string>
+    <string name="send_codes_dialog">"已發送認證碼"</string>
+    <string name="codes_error_dialog">"信箱或是認證碼有錯誤"</string>
+
+    <string name="phone_send_point_send_point_success">"發送點數成功"</string>
+    <string name="phone_receive_point_send_point_success">"接收點數成功"</string>
+    <string name="phone_receive_point_send_point_fail">"接收點數失敗"</string>
+    <string name="phone_send_point_send_point_fail">"發送點數失敗(餘額不足)"</string>
+
+    <string name="phone_send_point_deduct_point_success">"扣除點數成功"</string>
+    <string name="phone_send_point_deduct_point_fail">"扣除點數失敗(對方餘額不足)"</string>
+
+    <string name="facebook_app_name">HelloFBSample</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="permission_not_granted">Unable to perform selected action because permissions were not granted.</string>
+    <string name="ok">OK</string>
+    <string name="hello_user">Hello %1$s!</string>
+    <string name="success">Success</string>
+    <string name="successfully_posted_post">Post ID: %1$s</string>
+    <string name="error">Error</string>
+    <string name="status_update">Updating status for %1$s at %2$s</string>
+    <string name="photo_post">Photo Post</string>
+    <string name="you_picked">You picked:</string>
+    <string name="no_friends_selected">&lt;No friends selected&gt;</string>
+    <string name="no_place_selected">&lt;No place selected&gt;</string>
+    <string name="pick_seattle_place">Pick a Seattle Place</string>
+    <string name="app_id">1053181544771323</string>
+    <string name="fb_login_protocol_scheme">fb355198514515820</string>
+    <string name="exception">Exception: %1$s</string>
+    <string-array name="special_list">
+        <item>登出系統</item>
+        <item>功能設置</item>
+        <item>特約公告</item>
+        <item>特約活動</item>
+        <item>點數紀錄</item>
+        <item>付款紀錄</item>
+        <item>推撥申請</item>
+        <item>使用說明</item>
+        <item>客服中心</item>
+        <item>加入優惠</item>
+
+    </string-array>
+
+    <string-array name="premium_list">
+        <item>登出系統</item>
+        <item>功能設置</item>
+        <item>優惠公告</item>
+        <item>優惠活動</item>
+        <item>點數紀錄</item>
+        <item>推撥申請</item>
+        <item>使用說明</item>
+        <item>客服中心</item>
+        <item>加入特約</item>
+    </string-array>
+
+    <string name="general">會 員</string>
+    <string name="special">特 約 店</string>
+    <string name="premium">優 惠 店: %1$s</string>
+
+    <string name="login_layout_title">移動消費 致富商機</string>
+
+    <string name="login_finger_print_dialog_title">未啟用指紋登入</string>
+    <string name="login_finger_print_dialog_message">請先使用帳號登入再點選功能設置啟用指紋登入功能</string>
+    <string name="login_finger_print_dialog_sure">關閉</string>
+    <string name="finger_print_dialog_title">未設置指紋鎖</string>
+    <string name="finger_print_dialog_message">要引導至安全性頁面設定嗎?</string>
+    <string name="finger_print_dialog_yes">是</string>
+    <string name="finger_print_dialog_no">否</string>
+</resources>

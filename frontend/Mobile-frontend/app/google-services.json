@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "255492154935",
+    "project_id": "gobuy-1334"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255492154935:android:80c4c501a4c8288e",
+        "android_client_info": {
+          "package_name": "com.herbhousesgobuyother"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmB_I17GGMZVkJL9el-tIi2tBo3Qaf0JY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

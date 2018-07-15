@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--spinner-->
+    <dimen name="register_spinner_text_size">15sp</dimen>
+
+    <!--Toolbar-->
+    <dimen name="toolbar_height">100dp</dimen>
+    <dimen name="toolbar_back_image_width">80dp</dimen>
+    <dimen name="toolbar_back_image_height">80dp</dimen>
+    <dimen name="toolbar_back_image_margin_left">20dp</dimen>
+    <dimen name="toolbar_text_size">50sp</dimen>
+    <dimen name="toolbar_back_touch">150dp</dimen>
+
+    <!--特約-->
+    <dimen name="special_circle_button_radius">60dp</dimen>
+    <!--優惠-->
+    <dimen name="premium_circle_button_radius">60dp</dimen>
+
+
+    <!--登入畫面-->
+    <dimen name="activity_login_logo_width">600dp</dimen>
+    <dimen name="activity_login_logo_height">250dp</dimen>
+    <dimen name="activity_login_logo_margin_top">80dp</dimen>
+
+    <dimen name="activity_login_layout_account_width">200dp</dimen>
+    <dimen name="activity_login_layout_account_height">80dp</dimen>
+    <dimen name="activity_login_layout_account_margin_top">60dp</dimen>
+    <dimen name="activity_login_layout_account_text_size">30sp</dimen>
+
+    <dimen name="activity_login_layout_account_edit_height">80dp</dimen>
+    <dimen name="activity_login_layout_account_edit_size">30sp</dimen>
+
+    <dimen name="activity_login_password_text_width">200dp</dimen>
+    <dimen name="activity_login_password_text_height">80dp</dimen>
+    <dimen name="activity_login_password_text_textsize">30sp</dimen>
+    <dimen name="activity_login_password_text_marginTop">30dp</dimen>
+
+    <dimen name="activity_login_password_edit_width">170dp</dimen>
+    <dimen name="activity_login_password_edit_height">80dp</dimen>
+    <dimen name="activity_login_password_edit_textsize">30sp</dimen>
+
+    <dimen name="activity_login_marginTop">30dp</dimen>
+
+    <dimen name="activity_login_https_textsize">30sp</dimen>
+    <dimen name="activity_login_https_height">80dp</dimen>
+    <dimen name="activity_login_keep_textsize">30sp</dimen>
+    <dimen name="activity_login_keep_height">80dp</dimen>
+
+    <dimen name="activity_login_authenticate_text_width">200dp</dimen>
+    <dimen name="activity_login_authenticate_text_height">80dp</dimen>
+    <dimen name="activity_login_authenticate_text_textsize">30sp</dimen>
+    <dimen name="activity_login_authenticate_text_marginTop">6dp</dimen>
+
+    <dimen name="activity_login_authenticate_edit_width">200dp</dimen>
+    <dimen name="activity_login_authenticate_edit_height">80dp</dimen>
+    <dimen name="activity_login_authenticate_edit_textsize">30sp</dimen>
+
+    <dimen name="activity_login_authenticate_button_width">130dp</dimen>
+    <dimen name="activity_login_authenticate_button_height">80dp</dimen>
+    <dimen name="activity_login_authenticate_button_textsize">30sp</dimen>
+    <dimen name="activity_login_authenticate_button_margin_top">60dp</dimen>
+
+    <dimen name="activity_login_forget_button_textsize">30sp</dimen>
+    <dimen name="activity_login_forget_button_height">80dp</dimen>
+    <dimen name="activity_login_forget_button_margin_top">10dp</dimen>
+
+    <dimen name="activity_login_register_button_width">170dp</dimen>
+    <dimen name="activity_login_register_button_height">80dp</dimen>
+    <dimen name="activity_login_register_button_textsize">30sp</dimen>
+    <dimen name="activity_login_register_button_margin_top">60dp</dimen>
+
+    <dimen name="activity_login_submit_button_width">170dp</dimen>
+    <dimen name="activity_login_submit_button_height">80dp</dimen>
+    <dimen name="activity_login_submit_button_textsize">30sp</dimen>
+
+    <!--註冊畫面-->
+    <dimen name="activity_register_title_width">305dp</dimen>
+    <dimen name="activity_register_title_height">80dp</dimen>
+    <dimen name="activity_register_title_textsize">45sp</dimen>
+    <dimen name="activity_register_title_marginTop">100dp</dimen>
+    <dimen name="activity_register_title_marginLeft">35dp</dimen>
+
+    <dimen name="activity_register_country_text_width">305dp</dimen>
+    <dimen name="activity_register_country_text_height">80dp</dimen>
+    <dimen name="activity_register_country_text_textsize">45sp</dimen>
+    <dimen name="activity_register_country_text_marginTop">6dp</dimen>
+
+    <dimen name="activity_register_country_spinner_width">400dp</dimen>
+    <dimen name="activity_register_country_spinner_height">80dp</dimen>
+
+    <dimen name="activity_register_name_text_width">305dp</dimen>
+    <dimen name="activity_register_name_text_height">80dp</dimen>
+    <dimen name="activity_register_name_text_textsize">45sp</dimen>
+    <dimen name="activity_register_name_text_marginTop">6dp</dimen>
+
+    <dimen name="activity_register_name_edit_width">400dp</dimen>
+    <dimen name="activity_register_name_edit_height">80dp</dimen>
+    <dimen name="activity_register_name_edit_textsize">45sp</dimen>
+
+    <dimen name="activity_register_account_text_width">305dp</dimen>
+    <dimen name="activity_register_account_text_height">80dp</dimen>
+    <dimen name="activity_register_account_text_textsize">45sp</dimen>
+    <dimen name="activity_register_account_text_marginTop">6dp</dimen>
+
+    <dimen name="activity_register_account_edit_width">400dp</dimen>
+    <dimen name="activity_register_account_edit_height">80dp</dimen>
+    <dimen name="activity_register_account_edit_textsize">45sp</dimen>
+
+    <dimen name="activity_register_mail_width">400dp</dimen>
+    <dimen name="activity_register_mail_height">80dp</dimen>
+    <dimen name="activity_register_mail_edit_textsize">45sp</dimen>
+    <dimen name="activity_register_mail_marginTop">6dp</dimen>
+
+    <dimen name="activity_register_password_text_width">305dp</dimen>
+    <dimen name="activity_register_password_text_height">80dp</dimen>
+    <dimen name="activity_register_password_text_textsize">45sp</dimen>
+    <dimen name="activity_register_password_text_marginTop">6dp</dimen>
+
+    <dimen name="activity_register_password_edit_width">400dp</dimen>
+    <dimen name="activity_register_password_edit_height">80dp</dimen>
+    <dimen name="activity_register_password_edit_textsize">45sp</dimen>
+
+    <dimen name="activity_register_birthday_text_width">305dp</dimen>
+    <dimen name="activity_register_birthday_text_height">80dp</dimen>
+    <dimen name="activity_register_birthday_text_textsize">45sp</dimen>
+    <dimen name="activity_register_birthday_text_marginTop">6dp</dimen>
+
+    <dimen name="activity_register_birthday_edit_width">400dp</dimen>
+    <dimen name="activity_register_birthday_edit_height">80dp</dimen>
+    <dimen name="activity_register_birthday_edit_textsize">45sp</dimen>
+
+    <dimen name="activity_register_recommend_text_width">305dp</dimen>
+    <dimen name="activity_register_recommend_text_height">80dp</dimen>
+    <dimen name="activity_register_recommend_text_textsize">45sp</dimen>
+    <dimen name="activity_register_recommend_text_marginTop">6dp</dimen>
+
+    <dimen name="activity_register_recommend_edit_width">310dp</dimen>
+    <dimen name="activity_register_recommend_edit_height">80dp</dimen>
+    <dimen name="activity_register_recommend_edit_textsize">45sp</dimen>
+
+    <dimen name="activity_register_recommend_button_width">90dp</dimen>
+    <dimen name="activity_register_recommend_button_height">80dp</dimen>
+    <dimen name="activity_register_recommend_button_textsize">45sp</dimen>
+
+    <dimen name="activity_register_authenticate_text_width">305dp</dimen>
+    <dimen name="activity_register_authenticate_text_height">80dp</dimen>
+    <dimen name="activity_register_authenticate_text_textsize">45sp</dimen>
+    <dimen name="activity_register_authenticate_text_marginTop">6dp</dimen>
+
+    <dimen name="activity_register_authenticate_edit_width">250dp</dimen>
+    <dimen name="activity_register_authenticate_edit_height">80dp</dimen>
+    <dimen name="activity_register_authenticate_edit_textsize">45sp</dimen>
+
+    <dimen name="activity_register_authenticate_button_width">150dp</dimen>
+    <dimen name="activity_register_authenticate_button_height">80dp</dimen>
+    <dimen name="activity_register_authenticate_button_textsize">45sp</dimen>
+
+    <dimen name="activity_register_reset_width">305dp</dimen>
+    <dimen name="activity_register_reset_height">80dp</dimen>
+    <dimen name="activity_register_reset_textsize">45sp</dimen>
+    <dimen name="activity_register_reset_marginTop">100dp</dimen>
+
+    <dimen name="activity_register_send_width">305dp</dimen>
+    <dimen name="activity_register_send_height">80dp</dimen>
+    <dimen name="activity_register_send_textsize">45sp</dimen>
+    <dimen name="activity_register_send_marginLeft">100dp</dimen>
+
+    <!--掃一掃-->
+    <dimen name="activity_qrcode_page_item_text">14sp</dimen>
+    <dimen name="activity_qrcode_page_item_height">65dp</dimen>
+
+    <dimen name="fragment_qrcode_scan_container_height">250dp</dimen>
+    <dimen name="fragment_qrcode_scan_item_height">80dp</dimen>
+    <dimen name="fragment_qrcode_scan_item_margin_top">30dp</dimen>
+    <dimen name="fragment_qrcode_scan_line_height">3dp</dimen>
+    <dimen name="fragment_qrcode_scan_item_margin">50dp</dimen>
+    <dimen name="fragment_qrcode_scan_remind_text">30sp</dimen>
+    <dimen name="fragment_qrcode_scan_from_album_text">30sp</dimen>
+
+    <dimen name="fragment_qrcode_show_container_height">160dp</dimen>
+    <dimen name="fragment_qrcode_show_share_button_height">60dp</dimen>
+    <dimen name="fragment_qrcode_show_share_button_margin">18dp</dimen>
+    <dimen name="fragment_qrcode_show_save_button_margin_top">13dp</dimen>
+    <dimen name="fragment_qrcode_show_margin_bottom">20dp</dimen>
+    <dimen name="fragment_qrcode_show_button_text">30sp</dimen>
+
+    <dimen name="fragment_qrcode_scan_dialog_width">250dp</dimen>
+    <dimen name="fragment_qrcode_scan_dialog_height">250dp</dimen>
+    <dimen name="fragment_qrcode_scan_dialog_margin">20dp</dimen>
+    <dimen name="fragment_qrcode_scan_dialog_text_size">20sp</dimen>
+
+    <!--進入特約商首頁-->
+    <dimen name="activity_enter_special_menu_button_margin_top">15dp</dimen>
+    <dimen name="activity_enter_special_menu_button_margin_right">15dp</dimen>
+    <dimen name="activity_enter_special_logo_width">580dp</dimen>
+    <dimen name="activity_enter_special_logo_height">200dp</dimen>
+    <dimen name="activity_enter_special_logo_height_margin_top">40dp</dimen>
+    <dimen name="activity_enter_special_button_container_margin_horizontal">10dp</dimen>
+    <dimen name="activity_enter_special_button_container_margin_vertical">30dp</dimen>
+    <dimen name="activity_enter_special_general_button_width">370dp</dimen>
+    <dimen name="activity_enter_special_general_button_height">370dp</dimen>
+    <dimen name="activity_enter_special_general_button_margin_top">10dp</dimen>
+    <dimen name="activity_enter_special_qrcode_height">240dp</dimen>
+    <dimen name="activity_enter_special_join_height">160dp</dimen>
+    <dimen name="activity_enter_special_general_image_width">150dp</dimen>
+    <dimen name="activity_enter_special_general_image_height">150dp</dimen>
+    <dimen name="activity_enter_special_small_image">120dp</dimen>
+    <dimen name="activity_enter_special_general_text_size">50sp</dimen>
+    <dimen name="activity_enter_special_general_Text_margin_top">15dp</dimen>
+    <dimen name="activity_enter_special_join_width">350dp</dimen>
+    <dimen name="activity_enter_special_right_text_size">60sp</dimen>
+    <dimen name="activity_enter_special_left_text_size">35sp</dimen>
+
+    <!--忘記密碼-->
+    <dimen name="activity_forgetpassword_toolbar_height">50dp</dimen>
+    <dimen name="activity_forgetpassword_size">30dp</dimen>
+    <dimen name="activity_forgetpassword_back_left_margin">20dp</dimen>
+    <dimen name="activity_forgetpassword_pwdinfo_top_margin">80dp</dimen>
+    <dimen name="activity_forgetpassword_pwdinfo_height">80dp</dimen>
+    <dimen name="activity_forgetpassword_pwdinfo_btn_height">60dp</dimen>
+    <dimen name="activity_forgetpassword_middle_line">2dp</dimen>
+    <dimen name="activity_forgetpassword_phoneandemail_edit_left_padding">12dp</dimen>
+    <dimen name="activity_forgetpassword_phoneandemail_edit_width">600dp</dimen>
+    <dimen name="activity_forgetpassword_verifycode_edit_width">400dp</dimen>
+    <dimen name="activity_forgetpassword_verifycode_edit_left_padding">5dp</dimen>
+    <dimen name="activity_forgetpassword_verifycode_btn_width">180dp</dimen>
+    <dimen name="activity_forgetpassword_verifycode_btn_text_size">24sp</dimen>
+    <dimen name="activity_forgetpassword_background_radius">15dp</dimen>
+    <dimen name="activity_forgetpassword_checkandnext_btn_width">600dp</dimen>
+    <dimen name="activity_forgetpassword_checkandnext_btn_height">80dp</dimen>
+    <dimen name="activity_forgetpassword_checkandnext_top_margin">30dp</dimen>
+    <dimen name="activity_forgetpassword_checkandnext_btn_text_size">30sp</dimen>
+
+    <!--進入優惠店-->
+    <dimen name="premium_activity_logo_width">580dp</dimen>
+    <dimen name="premium_activity_logo_height">200dp</dimen>
+    <dimen name="premium_activity_logo_margin_top">40dp</dimen>
+    <dimen name="premium_activity_news_width">370dp</dimen>
+    <dimen name="premium_activity_news_height">370dp</dimen>
+    <dimen name="premium_activity_news_image_width">60dp</dimen>
+    <dimen name="premium_activity_news_image_height">70dp</dimen>
+    <dimen name="premium_activity_bonus_image_width">60dp</dimen>
+    <dimen name="premium_activity_bonus_image_height">70dp</dimen>
+    <dimen name="premium_activity_advertisement_image_width">60dp</dimen>
+    <dimen name="premium_activity_advertisement_image_height">70dp</dimen>
+    <dimen name="premium_activity_scan_qr_code_search_width">240dp</dimen>
+    <dimen name="premium_activity_scan_qr_code_search_image_width">120dp</dimen>
+    <dimen name="premium_activity_scan_qr_code_search_image_height">120dp</dimen>
+    <dimen name="premium_activity_controll_image_width">80dp</dimen>
+    <dimen name="premium_activity_setting_image_width">25dp</dimen>
+    <dimen name="premium_activity_setting_image_height">25dp</dimen>
+    <dimen name="premium_activity_news_margin_top">30dp</dimen>
+    <dimen name="premium_activity_news_margin_right">10dp</dimen>
+    <dimen name="premium_activity_join_height">160dp</dimen>
+    <dimen name="premium_activity_setting_image_margin_left">15dp</dimen>
+    <dimen name="premium_activity_setting_text_margin_left">8dp</dimen>
+    <dimen name="premium_activity_menu_margin_top">15dp</dimen>
+    <dimen name="premium_activity_menu_margin_right">15dp</dimen>
+    <dimen name="premium_activity_scan_qr_code_search_text_margin_top">5dp</dimen>
+    <dimen name="premium_activity_news_text_margin_top">15dp</dimen>
+    <dimen name="premium_activity_bonus_text_margin_top">15dp</dimen>
+    <dimen name="premium_activity_advertisement_text_margin_top">10dp</dimen>
+    <dimen name="premium_activity_news_text_size">50sp</dimen>
+    <dimen name="premium_activity_bonus_text_size">35sp</dimen>
+    <dimen name="premium_activity_join_right_text_size">60sp</dimen>
+
+    <!--搜尋店家-->
+    <dimen name="activity_browse_store_margin_horizontal">10dp</dimen>
+    <dimen name="activity_browse_store_edittext_width">400dp</dimen>
+    <dimen name="activity_browse_store_edittext_height">60dp</dimen>
+    <dimen name="activity_browse_store_button_width">150dp</dimen>
+    <dimen name="activity_browse_store_button_height">60dp</dimen>
+    <dimen name="activity_browse_store_spinner_width">270dp</dimen>
+    <dimen name="activity_browse_store_spinner_height">60dp</dimen>
+    <dimen name="activity_browse_store_recyclerview_width">300dp</dimen>
+    <dimen name="activity_browse_store_recyclerview_item_pic_width">390dp</dimen>
+    <dimen name="activity_browse_store_recyclerview_item_pic_height">200dp</dimen>
+    <dimen name="activity_browse_store_recyclerview_item_text_width">280dp</dimen>
+    <dimen name="activity_browse_store_recyclerview_item_text_height">80dp</dimen>
+    <dimen name="activity_browse_store_recyclerview_item_linear_height">60dp</dimen>
+    <dimen name="activity_browse_store_recyclerview_item_linear_item_width">40dp</dimen>
+    <dimen name="activity_browse_store_recyclerview_item_linear_item_height">40dp</dimen>
+    <dimen name="activity_browse_store_recyclerview_item_linear_item_text_width">60dp</dimen>
+    <dimen name="activity_browse_store_recyclerview_item_linear_item_text_height">60dp</dimen>
+    <dimen name="activity_browse_store_recyclerview_item_linear_item_margin">10dp</dimen>
+    <dimen name="activity_browse_store_recyclerview_item_linear_line_top_margin">30dp</dimen>
+    <dimen name="activity_browse_store_text_size">35sp</dimen>
+    <dimen name="activity_browse_store_range_search_text_size">35sp</dimen>
+    <dimen name="activity_browse_store_item_text_size">35sp</dimen>
+
+    <dimen name="activity_browse_store_recyclerview_item_linear_item_list_width">60dp</dimen>
+    <dimen name="activity_browse_store_recyclerview_item_linear_item_list_height">60dp</dimen>
+    <dimen name="activity_browse_store_recyclerview_line_height">2.5dp</dimen>
+
+    <dimen name="activity_browse_store_spinner_text_size">35sp</dimen>
+
+    <dimen name="activity_browse_store_dialog_height">380dp</dimen>
+    <dimen name="activity_browse_store_dialog__margin">20dp</dimen>
+
+    <dimen name="activity_browse_store_dialog_edit_width">100dp</dimen>
+    <dimen name="activity_browse_store_dialog_edit_height">80dp</dimen>
+    <dimen name="activity_browse_store_dialog_edit__margin">7.5dp</dimen>
+
+    <!--主畫面-->
+    <dimen name="fragment_main_content_margintop">100dp</dimen>
+    <dimen name="fragment_main_menu_marginright">10dp</dimen>
+    <dimen name="fragment_main_menu_margintop">10dp</dimen>
+    <dimen name="fragment_main_logo_width">500dp</dimen>
+    <dimen name="fragment_main_logo_height">200dp</dimen>
+    <dimen name="fragment_main_logo_marginTop">70dp</dimen>
+    <dimen name="fragment_main_marginTop">40dp</dimen>
+    <dimen name="fragment_main_marginBottom">20dp</dimen>
+    <dimen name="fragment_main_new_width">320dp</dimen>
+    <dimen name="fragment_main_new_height">270dp</dimen>
+    <dimen name="fragment_main_new_imageview_width">40dp</dimen>
+    <dimen name="fragment_main_new_imageview_height">50dp</dimen>
+    <dimen name="fragment_main_new_imageview_marginTop">50dp</dimen>
+    <dimen name="fragment_main_activity_search_height">120dp</dimen>
+    <dimen name="fragment_main_activity_search_imageview_width">50dp</dimen>
+    <dimen name="fragment_main_activity_search_imageview_height">50dp</dimen>
+    <dimen name="fragment_main_bottomview_marginTop">3.84dp</dimen>
+    <dimen name="fragment_main_store_search_height">270dp</dimen>
+    <dimen name="fragment_main_store_search_marginTop">50dp</dimen>
+    <dimen name="fragment_main_activity_store_search_width">100dp</dimen>
+    <dimen name="fragment_main_activity_store_search_height">100dp</dimen>
+    <dimen name="fragment_main_special_width">100dp</dimen>
+    <dimen name="fragment_main_special_height">55dp</dimen>
+    <dimen name="fragment_main_apply_special_height">30dp</dimen>
+    <dimen name="fragment_main_bottom_margin_height">10dp</dimen>
+    <dimen name="fragment_main_bottom_margin_width">3.84dp</dimen>
+    <dimen name="fragment_main_activity_news_text">34sp</dimen>
+    <dimen name="fragment_main_activity_apply_special_text">26sp</dimen>
+    <dimen name="fragment_main_activity_special_text">44sp</dimen>
+    <dimen name="fragment_main_activity_special_into_text">16sp</dimen>
+    <dimen name="fragment_main_activity_special_special_text">28sp</dimen>
+    <dimen name="fragment_main_activity_special_padding_bottom_into_text">2dp</dimen>
+    <dimen name="fragment_main_margin">14dp</dimen>
+
+    <!--設定畫面-->
+    <dimen name="activity_setting_row_height">80dp</dimen>
+    <dimen name="activity_setting_row_padding_horizontal">15dp</dimen>
+    <dimen name="activity_setting_line_height">1dp</dimen>
+    <dimen name="activity_setting_inside_line_margin">10dp</dimen>
+    <dimen name="activity_setting_remind_volume_height">50dp</dimen>
+    <dimen name="activity_setting_volume_image_width">30dp</dimen>
+    <dimen name="activity_setting_volume_image_height">30dp</dimen>
+    <dimen name="activity_setting_switch_width">50dp</dimen>
+    <dimen name="activity_setting_voice_margin">5dp</dimen>
+    <dimen name="activity_setting_switch_margin">10dp</dimen>
+    <dimen name="activity_setting_text_size">40sp</dimen>
+
+    <!--最新消息-->
+    <dimen name="fragment_news_item_name_width">500dp</dimen>
+    <dimen name="fragment_news_item_margin_left">10dp</dimen>
+    <dimen name="fragment_news_item_text_size">42sp</dimen>
+    <dimen name="fragment_news_item_margin_right">10dp</dimen>
+
+    <!--推播活動-->
+    <dimen name="fragment_gcm_record_item_name_width">300dp</dimen>
+    <dimen name="fragment_gcm_record_item_margin_left">10dp</dimen>
+    <dimen name="fragment_gcm_record_item_text_size">20sp</dimen>
+    <dimen name="fragment_gcm_record_item_margin_right">10dp</dimen>
+
+    <!--一般會員廣告基底-->
+    <dimen name="activity_normal_advertisement_height">150dp</dimen>
+    <dimen name="activity_normal_advertisement_viewpaper_width">600dp</dimen>
+    <dimen name="activity_normal_advertisement_viewpaper_height">100dp</dimen>
+    <dimen name="activity_normal_advertisement_viewpaper_mergin">10dp</dimen>
+    <dimen name="activity_normal_advertisement_indicator_width">100dp</dimen>
+    <dimen name="activity_normal_advertisement_indicator_height">15dp</dimen>
+    <dimen name="activity_normal_advertisement_indicator_padding">5dp</dimen>
+    <dimen name="activity_normal_advertisement_close_width">40dp</dimen>
+    <dimen name="activity_normal_advertisement_close_height">40dp</dimen>
+    <dimen name="activity_normal_advertisement_close_margin">4dp</dimen>
+
+    <!--特約發點-->
+    <dimen name="fragment_special_point_controls_height">100dp</dimen>
+    <dimen name="fragment_special_point_controls_margin_horizontal">10dp</dimen>
+    <dimen name="fragment_special_point_search_width">120dp</dimen>
+    <dimen name="fragment_special_point_spinner_width">250dp</dimen>
+    <dimen name="fragment_special_point_spinner_margin_left">7dp</dimen>
+    <dimen name="fragment_special_point_input_phone_width">200dp</dimen>
+    <dimen name="fragment_special_point_input_phone_height">75dp</dimen>
+    <dimen name="fragment_special_point_input_phone_margin_right">15dp</dimen>
+    <dimen name="fragment_special_point_export_csv_margin_width">100dp</dimen>
+    <dimen name="fragment_special_point_export_csv_margin_height">90dp</dimen>
+    <dimen name="fragment_special_point_field_height">38dp</dimen>
+    <dimen name="fragment_special_point_list_background_item_height">100dp</dimen>
+    <dimen name="fragment_special_point_search_text">40sp</dimen>
+    <dimen name="fragment_special_point_input_phone_text">30sp</dimen>
+    <dimen name="fragment_special_point_export_csv_text">35sp</dimen>
+    <dimen name="item_special_point_detail_edit_button_width">120dp</dimen>
+    <dimen name="item_special_point_detail_edit_button_height">42dp</dimen>
+    <dimen name="item_special_point_detail_receive_text_size">35sp</dimen>
+    <dimen name="item_special_point_detail_trade_time_text_size">35sp</dimen>
+    <dimen name="fragment_special_point_text_size">30sp</dimen>
+
+    <!--一般發點-->
+    <dimen name="fragment_normal_point_point_text_width">250dp</dimen>
+    <dimen name="fragment_normal_point_search_text_width">100dp</dimen>
+    <dimen name="fragment_normal_point_day_spinner_width">220dp</dimen>
+    <dimen name="fragment_normal_point_day_spinner_img_width">50dp</dimen>
+    <dimen name="fragment_normal_point_day_spinner_margin_top">15dp</dimen>
+    <dimen name="fragment_normal_point_day_spinner_margin_bottom">15dp</dimen>
+    <dimen name="fragment_normal_point_transfer_button_width">180dp</dimen>
+    <dimen name="fragment_normal_point_transfer_button_margin_right">10dp</dimen>
+    <dimen name="fragment_normal_point_transfer_button_margin_top">10dp</dimen>
+    <dimen name="fragment_normal_point_linearlayout_height">50dp</dimen>
+    <dimen name="fragment_normal_point_item_height">90dp</dimen>
+    <dimen name="fragment_normal_point_item_margin_right">2dp</dimen>
+    <dimen name="fragment_normal_point_item_margin_left">2dp</dimen>
+    <dimen name="fragment_normal_point_item_padding_left">5dp</dimen>
+    <dimen name="fragment_normal_point_spinner_item_text_width">160dp</dimen>
+    <dimen name="fragment_normal_point_spinner_item_down_text_size">60sp</dimen>
+    <dimen name="fragment_normal_point_spinner_item_text_size">40sp</dimen>
+    <dimen name="fragment_normal_point_text_size">40sp</dimen>
+    <dimen name="fragment_normal_point_item_trade_time_text_size">26sp</dimen>
+    <dimen name="fragment_normal_point_dialog_background_width">950dp</dimen>
+    <dimen name="fragment_normal_point_dialog_background_height">600dp</dimen>
+    <dimen name="fragment_normal_point_dialog_title_text_width">500dp</dimen>
+    <dimen name="fragment_normal_point_dialog_title_text_height">80dp</dimen>
+    <dimen name="fragment_normal_point_dialog_title_text_margin_top">30dp</dimen>
+    <dimen name="fragment_normal_point_dialog_edit_margin_top">15dp</dimen>
+    <dimen name="fragment_normal_point_dialog_button_width">150dp</dimen>
+    <dimen name="fragment_normal_point_dialog_title_text_text_size">50sp</dimen>
+    <dimen name="fragment_normal_point_dialog_edit_size">30sp</dimen>
+    <dimen name="fragment_normal_point_dialog_password_background_height">400dp</dimen>
+    <dimen name="fragment_normal_point_dialog_check_background_height">450dp</dimen>
+    <dimen name="fragment_normal_point_dialog_check_text_text_size">40sp</dimen>
+    <dimen name="fragment_normal_point_text_left_padding">4dp</dimen>
+
+    <!--匯出CSV表單-->
+    <dimen name="fragment_special_export_csv_date_button_width">260dp</dimen>
+    <dimen name="fragment_special_export_csv_date_button_height">80dp</dimen>
+    <dimen name="fragment_special_export_csv_date_button_margin_vertical">10dp</dimen>
+    <dimen name="fragment_special_export_csv_search_button_width">100sp</dimen>
+    <dimen name="fragment_special_export_csv_search_button_margin_horizontal">13dp</dimen>
+    <dimen name="fragment_special_export_csv_field_height">38dp</dimen>
+    <dimen name="fragment_special_export_csv_date_button_text_size">18sp</dimen>
+    <dimen name="fragment_special_export_csv_symbol_text_size">25sp</dimen>
+    <dimen name="fragment_special_export_csv_search_button_text_size">30sp</dimen>
+    <dimen name="fragment_special_export_csv_export_button_text_size">35sp</dimen>
+    <dimen name="fragment_special_export_csv_field_text_size">18sp</dimen>
+    <dimen name="fragment_special_export_csv_list_background_item_height">100dp</dimen>
+    <dimen name="item_special_export_csv_detail_text_size">14sp</dimen>
+
+    <!--特約店QR碼-->
+    <dimen name="fragment_special_qrcode_toolbar_height">45dp</dimen>
+    <dimen name="fragment_special_qrcode_toolbar_back_image_left_margin">20dp</dimen>
+    <dimen name="fragment_special_qrcode_toolbar_title_textsize">22sp</dimen>
+    <dimen name="fragment_special_qrcode_qr_image_width">650dp</dimen>
+    <dimen name="fragment_special_qrcode_qr_image_height">650dp</dimen>
+    <dimen name="fragment_special_qrcode_qr_image_top_margin">70dp</dimen>
+    <dimen name="fragment_special_qrcode_send_qr_width">650dp</dimen>
+    <dimen name="fragment_special_qrcode_send_qr_height">100dp</dimen>
+    <dimen name="fragment_special_qrcode_send_qr_top_margin">60dp</dimen>
+    <dimen name="fragment_special_qrcode_send_qr_text_size">40sp</dimen>
+    <dimen name="fragment_special_qrcode_store_album_width">650dp</dimen>
+    <dimen name="fragment_special_qrcode_store_album_height">100dp</dimen>
+    <dimen name="fragment_special_qrcode_store_album_margin">30dp</dimen>
+    <dimen name="fragment_special_qrcode_store_album_text_size">40sp</dimen>
+    <dimen name="fragment_special_qrcode_button_radius">20dp</dimen>
+    <dimen name="fragment_special_qrcode_qr_image_text_size">80sp</dimen>
+
+    <!--我的最愛-->
+    <dimen name="fragment_myfavorite_prompt_margin_left">3dp</dimen>
+    <dimen name="fragment_myfavorite_prompt_text_size">25sp</dimen>
+    <dimen name="fragment_myfavorite_remind_text_size">25sp</dimen>
+    <dimen name="fragment_myfavorite_item_layout_width">580dp</dimen>
+    <dimen name="fragment_myfavorite_item_layout_height">140dp</dimen>
+    <dimen name="fragment_myfavorite_item_layout_marginleft">9dp</dimen>
+    <dimen name="fragment_myfavorite_item_distance_marginleft">60dp</dimen>
+    <dimen name="fragment_myfavorite_item_textsize">35sp</dimen>
+    <dimen name="fragment_myfavorite_item_image_width">50dp</dimen>
+    <dimen name="fragment_myfavorite_item_image_height">50dp</dimen>
+    <dimen name="fragment_myfavorite_item_image_marginleft">3dp</dimen>
+    <dimen name="fragment_myfavorite_item_delete_size">35sp</dimen>
+    <dimen name="fragment_myfavorite_item_text_width">500dp</dimen>
+    <dimen name="fragment_myfavorite_item_distance_width">150dp</dimen>
+
+    <dimen name="fragment_myfavorite_item_image_container_width">90dp</dimen>
+    <dimen name="fragment_myfavorite_item_image_container_height">60dp</dimen>
+
+    <!--特約/優惠註冊-->
+    <dimen name="activity_register_container_margin_top">35dp</dimen>
+    <dimen name="activity_register_margin_top">6dp</dimen>
+    <dimen name="activity_register_height">70dp</dimen>//40
+    <dimen name="activity_register_text_width">305dp</dimen>
+    <dimen name="activity_register_checkbox_width">380dp</dimen>
+    <dimen name="activity_register_checkbox_text_width">310dp</dimen>
+    <dimen name="activity_register_checkbox_view_width">50dp</dimen>
+    <dimen name="activity_register_radiobutton_width">227.5dp</dimen>
+    <dimen name="activity_register_radiobutton_text_width">100dp</dimen>
+    <dimen name="activity_register_radiobutton_margin_left">5dp</dimen>
+    <dimen name="activity_register_radiobutton_padding_left">5dp</dimen>
+    <dimen name="activity_register_spinner_width">455dp</dimen>
+    <dimen name="activity_register_spinner_view_width">23dp</dimen>
+    <dimen name="activity_register_spinner_view_margin_right">5dp</dimen>
+    <dimen name="activity_register_recommend_edittext_width">135dp</dimen>
+    <dimen name="activity_register_recommend_btn_width">150dp</dimen>
+    <dimen name="activity_register_id_text_width">380dp</dimen>
+    <dimen name="activity_register_button_width">230dp</dimen>
+    <dimen name="activity_register_button_margin_right">250dp</dimen>
+    <dimen name="activity_register_text_size">45sp</dimen>
+
+
+    <!--基本資料-->
+    <dimen name="fragment_basic_information_return_Button">40dp</dimen>
+    <dimen name="fragment_basic_information_general_margin_left">20dp</dimen>
+    <dimen name="fragment_basic_information_general_relativelayout_height">90dp</dimen>
+    <dimen name="fragment_basic_information_general_text_width">150dp</dimen>
+    <dimen name="fragment_basic_information_general_text_height">75dp</dimen>
+    <dimen name="fragment_basic_information_general_text_long_width">600dp</dimen>
+    <dimen name="fragment_basic_information_general_line_height">1dp</dimen>
+    <dimen name="fragment_basic_information_general_line_margin">10dp</dimen>
+    <dimen name="fragment_basic_information_scan_recommend_height">60dp</dimen>
+
+    <dimen name="fragment_basic_information_general_text_big_size">34sp</dimen>
+    <dimen name="fragment_basic_information_general_text_small_size">30sp</dimen>
+    <dimen name="fragment_basic_information_general_margin_top">15dp</dimen>
+
+    <!--會員密碼變更-->
+    <dimen name="fragment_change_password_content_marginTop">100dp</dimen>
+    <dimen name="fragment_change_password_content_marginLeft">70dp</dimen>
+    <dimen name="fragment_change_password_content_marginRight">70dp</dimen>
+    <dimen name="fragment_change_password_now_password_text_text_size">40sp</dimen>
+    <dimen name="fragment_change_password_now_password_content_heigh">60dp</dimen>
+    <dimen name="fragment_change_password_now_password_content_marginTop">5dp</dimen>
+    <dimen name="fragment_change_password_now_password_content_marginLeft">40dp</dimen>
+    <dimen name="fragment_change_password_now_password_content_marginRight">40dp</dimen>
+    <dimen name="fragment_change_password_now_password_marginLeft">18dp</dimen>
+    <dimen name="fragment_change_password_now_password_marginRight">18dp</dimen>
+    <dimen name="fragment_change_password_now_password_marginTop">12dp</dimen>
+    <dimen name="fragment_change_password_now_password_text_size">32sp</dimen>
+    <dimen name="fragment_change_password_new_password_text_text_size">40sp</dimen>
+    <dimen name="fragment_change_password_new_password_text_marginTop">70dp</dimen>
+    <dimen name="fragment_change_password_new_password_content_heigh">130dp</dimen>
+    <dimen name="fragment_change_password_new_password_content_marginTop">20dp</dimen>
+    <dimen name="fragment_change_password_new_password_text_size">32sp</dimen>
+    <dimen name="fragment_change_password_new_password_marginLeft">18dp</dimen>
+    <dimen name="fragment_change_password_new_password_marginRight">18dp</dimen>
+    <dimen name="fragment_change_password_new_password_check_marginLeft">18dp</dimen>
+    <dimen name="fragment_change_password_new_password_check_marginRight">18dp</dimen>
+    <dimen name="fragment_change_password_new_password_split_view_heigh">1dp</dimen>
+    <dimen name="fragment_change_password_new_password_split_view_marginLeft">5dp</dimen>
+    <dimen name="fragment_change_password_new_password_split_view_marginRight">5dp</dimen>
+    <dimen name="fragment_change_password_new_password_split_view_marginTop">8dp</dimen>
+    <dimen name="fragment_change_password_new_password_check_text_size">32sp</dimen>
+    <dimen name="fragment_change_password_next_image_button_heigh">80dp</dimen>
+    <dimen name="fragment_change_password_next_image_button_marginTop">5dp</dimen>
+    <dimen name="fragment_change_password_next_image_button_text_size">30sp</dimen>
+
+    <!--特約數字鍵-->
+    <dimen name="fragment_special_phone_content_margin_top">40dp</dimen>
+    <dimen name="fragment_special_phone_content_margin_left">40dp</dimen>
+    <dimen name="fragment_special_phone_content_margin_right">40dp</dimen>
+    <dimen name="fragment_special_phone_input_edit_heigh">100dp</dimen>
+    <dimen name="fragment_special_phone_remind_text_heigh">50dp</dimen>
+    <dimen name="fragment_special_phone_key_button_heigh">160dp</dimen>
+    <dimen name="fragment_special_phone_key_button_margin_top">40dp</dimen>
+    <dimen name="fragment_special_phone_key_image_heigh">80dp</dimen>
+    <dimen name="fragment_special_phone_key_image_width">150dp</dimen>
+    <dimen name="fragment_special_phone_button_heigh">90dp</dimen>
+    <dimen name="fragment_special_phone_button_width">300dp</dimen>
+    <dimen name="fragment_special_phone_key_button_size">60sp</dimen>
+    <dimen name="fragment_special_phone_remind_text_size">30sp</dimen>
+
+    <!--側拉選單-->
+    <dimen name="advertisement_drawlayout_width">400dp</dimen>
+    <dimen name="advertisement_drawlayout_heigh">100dp</dimen>
+
+    <!--特約會員密碼變更選擇-->
+    <dimen name="fragment_special_password_choice_text_heigh">100dp</dimen>
+    <dimen name="fragment_special_password_choice_text_padding_left">20dp</dimen>
+    <dimen name="fragment_special_password_choice_spilt_heigh">1dp</dimen>
+    <dimen name="fragment_special_password_choice_text_size">40sp</dimen>
+
+    <!--一般註冊隱私權-->
+    <dimen name="privacy_title_top_margin">40dp</dimen>
+    <dimen name="privacy_left_right_margin">8dp</dimen>
+    <dimen name="privacy_line_height">1dp</dimen>
+    <dimen name="privacy_line_top_margin">20dp</dimen>
+    <dimen name="privacy_scroll_height">850dp</dimen>
+    <dimen name="privacy_bottom_height">100dp</dimen>
+    <dimen name="privacy_title_size">45sp</dimen>
+    <dimen name="privacy_content_size">38sp</dimen>
+    <dimen name="privacy_content_top_margin">10dp</dimen>
+    <dimen name="privacy_check_container_height">60dp</dimen>
+    <dimen name="privacy_button_container_height">60dp</dimen>
+    <dimen name="privacy_check_left_margin">10dp</dimen>
+    <dimen name="privacy_bottom_button_width">100dp</dimen>
+
+    <dimen name="privacy_dot_width">10dp</dimen>
+    <dimen name="privacy_dot_margin_left">90dp</dimen>
+    <dimen name="privacy_dot_margin_right">17dp</dimen>
+    <dimen name="privacy_dot_margin_top">6dp</dimen>
+    <dimen name="privacy_dot_eleven_margin_left">130dp</dimen>
+
+    <!--選擇照片-->
+    <dimen name="activity_select_title_container_height">150dp</dimen>
+    <dimen name="activity_select_title_size">40sp</dimen>
+    <dimen name="activity_select_submit_margin_right">10dp</dimen>
+    <dimen name="activity_select_submit_size">40sp</dimen>
+
+    <!--選擇照片item-->
+    <dimen name="activity_select_item_padding">30dp</dimen>
+    <dimen name="activity_select_item_image_height">250dp</dimen>
+    <dimen name="activity_select_item_check_width">60dp</dimen>
+    <dimen name="activity_select_item_check_height">60dp</dimen>
+
+    <!--上傳Logo-->
+    <dimen name="upload_logo_dialog_width">600dp</dimen>
+    <dimen name="upload_logo_dialog_height">600dp</dimen>
+    <dimen name="upload_logo_dialog_prompt_size">40sp</dimen>
+    <dimen name="upload_logo_dialog_prompt_margin_top">30dp</dimen>
+    <dimen name="upload_logo_dialog_image_height">200dp</dimen>
+    <dimen name="upload_logo_dialog_button_width">200dp</dimen>
+    <dimen name="upload_logo_dialog_button_height">80dp</dimen>
+    <dimen name="upload_logo_dialog_button_size">30sp</dimen>
+    <dimen name="upload_logo_dialog_button_margin_left">40dp</dimen>
+
+    <!--上傳Content-->
+    <dimen name="upload_content_dialog_width">600dp</dimen>
+    <dimen name="upload_content_dialog_height">1050dp</dimen>
+    <dimen name="upload_content_dialog_prompt_size">40sp</dimen>
+    <dimen name="upload_content_dialog_prompt_margin_top">30dp</dimen>
+    <dimen name="upload_content_dialog_image_height">200dp</dimen>
+    <dimen name="upload_content_dialog_button_width">200dp</dimen>
+    <dimen name="upload_content_dialog_button_height">80dp</dimen>
+    <dimen name="upload_content_dialog_button_size">30sp</dimen>
+    <dimen name="upload_content_dialog_button_margin_left">40dp</dimen>
+</resources>

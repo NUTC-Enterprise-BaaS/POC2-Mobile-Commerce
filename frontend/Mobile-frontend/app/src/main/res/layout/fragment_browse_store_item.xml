@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.herbhousesgobuyother.contrube.view.StoreItemContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/ColorWhite">
+
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/layout_browse_store_item_store_image"
+        android:layout_width="@dimen/activity_browse_store_recyclerview_item_pic_width"
+        android:layout_height="@dimen/activity_browse_store_recyclerview_item_pic_height"
+        android:background="@color/ColorTransparent"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/layout_browse_store_item_store_name"
+        android:layout_width="@dimen/activity_browse_store_recyclerview_item_pic_width"
+        android:layout_height="@dimen/activity_browse_store_recyclerview_item_text_height"
+        android:layout_alignBottom="@id/layout_browse_store_item_store_image"
+        android:layout_alignLeft="@id/layout_browse_store_item_store_image"
+        android:layout_alignStart="@id/layout_browse_store_item_store_image"
+        android:layout_alignRight="@id/layout_browse_store_item_store_image"
+        android:layout_alignEnd="@id/layout_browse_store_item_store_image"
+        android:background="@color/ColorBrowseStoreItemGray"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/toolbar_back_image_margin_left"
+        android:text=""
+        android:textColor="@color/ColorBlack"
+        android:textSize="@dimen/activity_browse_store_item_text_size" />
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/activity_browse_store_recyclerview_item_pic_width"
+        android:layout_height="@dimen/activity_browse_store_recyclerview_item_linear_height"
+        android:layout_alignLeft="@id/layout_browse_store_item_store_image"
+        android:layout_alignStart="@id/layout_browse_store_item_store_image"
+        android:layout_alignRight="@id/layout_browse_store_item_store_image"
+        android:layout_alignEnd="@id/layout_browse_store_item_store_image"
+        android:layout_below="@id/layout_browse_store_item_store_image"
+        android:background="@drawable/layout_browse_store_item_border_end">
+
+        <ImageView
+            android:id="@+id/layout_browse_store_item_save_image"
+            android:layout_width="@dimen/activity_browse_store_recyclerview_item_linear_item_width"
+            android:layout_height="@dimen/activity_browse_store_recyclerview_item_linear_item_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_browse_store_recyclerview_item_linear_item_margin"
+            android:layout_marginStart="@dimen/activity_browse_store_recyclerview_item_linear_item_margin"
+            android:background="@drawable/bn_28"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/layout_browse_store_item_call_image"
+            android:layout_width="@dimen/activity_browse_store_recyclerview_item_linear_item_width"
+            android:layout_height="@dimen/activity_browse_store_recyclerview_item_linear_item_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_browse_store_recyclerview_item_linear_item_margin"
+            android:layout_marginStart="@dimen/activity_browse_store_recyclerview_item_linear_item_margin"
+            android:layout_toRightOf="@id/layout_browse_store_item_save_image"
+            android:layout_toEndOf="@id/layout_browse_store_item_save_image"
+            android:background="@drawable/bn_22"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/layout_browse_store_item_map_image"
+            android:layout_width="@dimen/activity_browse_store_recyclerview_item_linear_item_width"
+            android:layout_height="@dimen/activity_browse_store_recyclerview_item_linear_item_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_browse_store_recyclerview_item_linear_item_margin"
+            android:layout_marginStart="@dimen/activity_browse_store_recyclerview_item_linear_item_margin"
+            android:layout_toRightOf="@id/layout_browse_store_item_call_image"
+            android:layout_toEndOf="@id/layout_browse_store_item_call_image"
+            android:background="@drawable/new_b_x8"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/layout_browse_store_item_distance"
+            android:layout_width="@dimen/activity_browse_store_recyclerview_item_linear_item_text_width"
+            android:layout_height="@dimen/activity_browse_store_recyclerview_item_linear_item_text_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/activity_browse_store_recyclerview_item_linear_item_margin"
+            android:layout_marginStart="@dimen/activity_browse_store_recyclerview_item_linear_item_margin"
+            android:layout_toEndOf="@+id/layout_browse_store_item_map_image"
+            android:layout_toRightOf="@+id/layout_browse_store_item_map_image"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/activity_browse_store_item_text_size" />
+    </RelativeLayout>
+
+
+</com.herbhousesgobuyother.contrube.view.StoreItemContainer>
