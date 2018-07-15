@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        applicationId "com.herbhousesgobuyother"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 19
+        versionName "v1.1.1"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':androidlibrary')
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.google.android.gms:play-services-appindexing:9.8.0'
+    compile 'com.google.android.gms:play-services-gcm:9.8.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.+'
+    compile 'me.grantland:autofittextview:0.2.+'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+
+}
+apply plugin: "com.google.gms.google-services"

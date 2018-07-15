@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/advertisement_drawlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/advertisement_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_normal_advertisement_height"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/activity_advertisement_border"
+            android:visibility="invisible">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/advertisement_viewpager"
+                android:layout_width="@dimen/activity_normal_advertisement_viewpaper_width"
+                android:layout_height="@dimen/activity_normal_advertisement_viewpaper_height"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_normal_advertisement_viewpaper_mergin"
+                android:background="@color/ColorWhite"/>
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/advertisement_indicator"
+                android:layout_width="@dimen/activity_normal_advertisement_indicator_width"
+                android:layout_height="@dimen/activity_normal_advertisement_indicator_height"
+                android:layout_below="@id/advertisement_viewpager"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/activity_normal_advertisement_indicator_padding"
+                app:fillColor="@color/ActivityAdvertisementIndicatorFillColor"/>
+
+            <ImageView
+                android:id="@+id/advertisement_close"
+                android:layout_width="@dimen/activity_normal_advertisement_close_width"
+                android:layout_height="@dimen/activity_normal_advertisement_close_height"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/activity_normal_advertisement_close_margin"
+                android:layout_marginRight="@dimen/activity_normal_advertisement_close_margin"
+                android:layout_marginTop="@dimen/activity_normal_advertisement_close_margin"
+                android:background="@drawable/adv_del"/>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/advertisement_container"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/advertisement_drawlayout_content"
+        android:layout_width="@dimen/advertisement_drawlayout_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end">
+
+        <RelativeLayout
+            android:id="@+id/advertisement_drawlayout_title_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/advertisement_drawlayout_heigh"
+            android:background="@color/ColorGeneralTheme">
+
+            <ImageView
+                android:id="@+id/advertisement_icon"
+                android:layout_width="@dimen/toolbar_back_image_width"
+                android:layout_height="@dimen/toolbar_back_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/toolbar_back_image_margin_left"
+                android:scaleType="center"
+                android:src="@drawable/bn_n1_01"/>
+
+            <TextView
+                android:id="@+id/advertisement_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/advertisement_icon"
+                android:gravity="center"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/toolbar_text_size"/>
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/advertisement_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/advertisement_drawlayout_title_content"
+            android:background="@color/ColorWhite">
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

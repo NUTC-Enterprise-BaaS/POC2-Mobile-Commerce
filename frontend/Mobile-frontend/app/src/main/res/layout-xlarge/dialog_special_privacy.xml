@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/ColorWhite">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/privacy_title_top_margin"
+        android:text="@string/privacy_policy"
+        android:textColor="@color/privacy_title_color"
+        android:textSize="@dimen/privacy_title_size"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/privacy_line_height"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/privacy_line_top_margin"
+        android:background="@color/ColorBlack"/>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/privacy_scroll_height"
+        android:layout_below="@id/line"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/privacy_left_right_margin"
+        android:layout_marginTop="@dimen/privacy_line_top_margin"
+        android:scrollbarThumbVertical="@android:color/transparent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/content_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_special_privacy_content_one_title"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/one_dot"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/content_top"
+                android:layout_marginLeft="@dimen/privacy_dot_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/one_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_top"
+                android:layout_toRightOf="@id/one_dot"
+                android:text="@string/dialog_special_privacy_content_one"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/content_two_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/one_content"
+                android:text="@string/dialog_special_privacy_content_two_title"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/two_dot"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/content_two_title"
+                android:layout_marginLeft="@dimen/privacy_dot_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/two_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_two_title"
+                android:layout_toRightOf="@id/one_dot"
+                android:text="@string/dialog_special_privacy_content_two"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/content_three_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/two_content"
+                android:text="@string/dialog_special_privacy_content_three_title"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/three_dot"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/content_three_title"
+                android:layout_marginLeft="@dimen/privacy_dot_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/three_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_three_title"
+                android:layout_toRightOf="@id/one_dot"
+                android:text="@string/dialog_special_privacy_content_three"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/content_four_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/three_content"
+                android:text="@string/dialog_special_privacy_content_four_title"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/four_dot"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/content_four_title"
+                android:layout_marginLeft="@dimen/privacy_dot_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/four_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_four_title"
+                android:layout_toRightOf="@id/one_dot"
+                android:text="@string/dialog_special_privacy_content_four"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/four_dot_second"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/four_content"
+                android:layout_marginLeft="@dimen/privacy_dot_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/four_content_second"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/four_content"
+                android:layout_toRightOf="@id/one_dot"
+                android:text="@string/dialog_special_privacy_content_four_second"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/content_five_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/four_content_second"
+                android:text="@string/dialog_special_privacy_content_five_title"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/five_dot"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/content_five_title"
+                android:layout_marginLeft="@dimen/privacy_dot_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/five_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_five_title"
+                android:layout_toRightOf="@id/one_dot"
+                android:text="@string/dialog_special_privacy_content_five"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/five_dot_second"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/five_content"
+                android:layout_marginLeft="@dimen/privacy_dot_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/five_content_second"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/five_content"
+                android:layout_toRightOf="@id/one_dot"
+                android:text="@string/dialog_special_privacy_content_five_second"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/content_six_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/five_content_second"
+                android:text="@string/dialog_special_privacy_content_six_title"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/six_dot"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/content_six_title"
+                android:layout_marginLeft="@dimen/privacy_dot_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/six_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_six_title"
+                android:layout_toRightOf="@id/one_dot"
+                android:text="@string/dialog_special_privacy_content_six"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/six_dot_second"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/six_content"
+                android:layout_marginLeft="@dimen/privacy_dot_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/six_content_second"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/six_content"
+                android:layout_toRightOf="@id/one_dot"
+                android:text="@string/dialog_special_privacy_content_six_second"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/content_seven_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/six_content_second"
+                android:text="@string/dialog_special_privacy_content_seven_title"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/seven_dot"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/content_seven_title"
+                android:layout_marginLeft="@dimen/privacy_dot_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/seven_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_seven_title"
+                android:layout_toRightOf="@id/one_dot"
+                android:text="@string/dialog_special_privacy_content_seven"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/content_eight_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seven_content"
+                android:text="@string/dialog_special_privacy_content_eight_title"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/eight_dot"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/content_eight_title"
+                android:layout_marginLeft="@dimen/privacy_dot_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/eight_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_eight_title"
+                android:layout_toRightOf="@id/one_dot"
+                android:text="@string/dialog_special_privacy_content_eight"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/content_nine_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eight_content"
+                android:text="@string/dialog_special_privacy_content_nine_title"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/nine_dot"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/content_nine_title"
+                android:layout_marginLeft="@dimen/privacy_dot_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/nine_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_nine_title"
+                android:layout_toRightOf="@id/one_dot"
+                android:text="@string/dialog_special_privacy_content_nine"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/content_ten_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nine_content"
+                android:text="@string/dialog_special_privacy_content_ten_title"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/ten_dot"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/content_ten_title"
+                android:layout_marginLeft="@dimen/privacy_dot_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/ten_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_ten_title"
+                android:layout_toRightOf="@id/one_dot"
+                android:text="@string/dialog_special_privacy_content_ten"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/ten_dot_second"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/ten_content"
+                android:layout_marginLeft="@dimen/privacy_dot_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/ten_content_second"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ten_content"
+                android:layout_toRightOf="@id/one_dot"
+                android:text="@string/dialog_special_privacy_content_ten_second"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/ten_dot_third"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/ten_content_second"
+                android:layout_marginLeft="@dimen/privacy_dot_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/ten_content_third"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ten_content_second"
+                android:layout_toRightOf="@id/one_dot"
+                android:text="@string/dialog_special_privacy_content_ten_third"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/content_eleven_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ten_content_third"
+                android:text="@string/dialog_special_privacy_content_eleven_title"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/eleven_dot"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/content_eleven_title"
+                android:layout_marginLeft="@dimen/privacy_dot_eleven_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/eleven_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_eleven_title"
+                android:layout_toRightOf="@id/eleven_dot"
+                android:text="@string/dialog_special_privacy_content_eleven"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/content_twelve_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eleven_content"
+                android:text="@string/dialog_special_privacy_content_twelve_title"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/twelve_dot"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/content_twelve_title"
+                android:layout_marginLeft="@dimen/privacy_dot_eleven_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/twelve_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_twelve_title"
+                android:layout_toRightOf="@id/twelve_dot"
+                android:text="@string/dialog_special_privacy_content_twelve"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/twelve_dot_second"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/twelve_content"
+                android:layout_marginLeft="@dimen/privacy_dot_eleven_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/twelve_content_second"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/twelve_content"
+                android:layout_toRightOf="@id/twelve_dot"
+                android:text="@string/dialog_special_privacy_content_twelve_second"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/twelve_dot_third"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/twelve_content_second"
+                android:layout_marginLeft="@dimen/privacy_dot_eleven_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/twelve_content_third"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/twelve_content_second"
+                android:layout_toRightOf="@id/twelve_dot"
+                android:text="@string/dialog_special_privacy_content_twelve_third"
+                android:textSize="@dimen/privacy_content_size"/>
+
+            <TextView
+                android:id="@+id/twelve_dot_fourth"
+                android:layout_width="@dimen/privacy_dot_width"
+                android:layout_height="@dimen/privacy_dot_width"
+                android:layout_below="@id/twelve_content_third"
+                android:layout_marginLeft="@dimen/privacy_dot_eleven_margin_left"
+                android:layout_marginRight="@dimen/privacy_dot_margin_right"
+                android:layout_marginTop="@dimen/privacy_dot_margin_top"
+                android:background="@drawable/layout_dialog_privacy"/>
+
+            <TextView
+                android:id="@+id/twelve_content_fourth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/twelve_content_third"
+                android:layout_toRightOf="@id/twelve_dot"
+                android:text="@string/dialog_special_privacy_content_twelve_fourth"
+                android:textSize="@dimen/privacy_content_size"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/scroll">
+
+        <RelativeLayout
+            android:id="@+id/check_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/privacy_check_container_height">
+
+            <CheckBox
+                android:id="@+id/check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/privacy_check_left_margin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/check"
+                android:layout_toRightOf="@id/check"
+                android:text="@string/privacy_policy_content_check"
+                android:textSize="@dimen/privacy_content_size"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/privacy_button_container_height"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/check_container"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/disagree"
+                android:layout_width="@dimen/privacy_bottom_button_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/privacy_button_board"
+                android:gravity="center"
+                android:text="@string/privacy_policy_disagree_button"
+                android:textSize="@dimen/privacy_title_size"/>
+
+            <TextView
+                android:id="@+id/agree"
+                android:layout_width="@dimen/privacy_bottom_button_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/privacy_button_board"
+                android:gravity="center"
+                android:text="@string/privacy_policy_agree_button"
+                android:textSize="@dimen/privacy_title_size"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ColorGeneralTheme">#FF036EB8</color>
+    <color name="ColorSpecialTheme">#FF7ABC29</color>
+    <color name="ColorPremiumTheme">#FFCE121B</color>
+    <color name="ColorWhite">#FFFFFFFF</color>
+    <color name="ColorBlack">#FF000000</color>
+    <color name="ColorTransparent">#00000000</color>
+    <color name="ColorHint">#FFCDCCCC</color>
+    <color name="ColorLine">#FFDDDDDD</color>
+
+    <!--掃一掃-->
+    <color name="ActivityQRcodeBackgroundColor">#FFABABAB</color>
+    <color name="ActivityQRcodePageItemBackgroundColor">#FFEDEDED</color>
+    <color name="ActivityQRcodePageItemBackgroundColor2">#FFD1D1D1</color>
+    <color name="ActivityQRcodePageItemTextColor">#FF666666</color>
+
+
+    <!--進入特約店-->
+    <color name="ActivityEnterSpecialTextColor">#FFFFFFFF</color>
+    <color name="ActivityEnterSpecialNewsBackgroundColor">#FF1E7EBD</color>
+    <color name="ActivityEnterSpecialAdvertisementBackgroundColor">#FFE7AF2A</color>
+    <color name="ActivityEnterSpecialBonusBackgroundColor">#FF2AA738</color>
+    <color name="ActivityEnterSpecialQRcodeBackgroundColor">#FF4CB89D</color>
+    <color name="ActivityEnterSpecialSettingBackgroundColor">#FF818181</color>
+    <color name="ActivityEnterSpecialJoinBackgroundColor">#FFD6140E</color>
+
+    <color name="ActivityForgetPasswordVerifyCodeButtonColor">#FF5887C6</color>
+    <color name="ActivityForgetPasswordLineBackgroundColor">#FFCCCCCC</color>
+
+    <!--進入優惠店-->
+    <color name="ActivityPremiumScanBackgroundColor">#FF4CB89D</color>
+    <color name="ActivityPremiumSettingBackgroundColor">#FF818181</color>
+    <color name="ActivityPremiumAdvertisementBackgroundColor">#FFE7AF2A</color>
+    <color name="ActivityPremiumBonusBackgroundColor">#FFDD4528</color>
+    <color name="ActivityPremiumNewsBackgroundColor">#FF1E7EBD</color>
+    <color name="ActivityPremiumJoinBackgroundColor">#FF2AA738</color>
+
+    <!--搜尋商店-->
+    <color name="ColorBrowseStoreItemGray">#CCFFFFFF</color>
+    <color name="MainFragmentNewsBackground">#FF1E7EBD</color>
+    <color name="MainFragmentScanBackground">#FFE9BE2B</color>
+    <color name="MainFragmentSearchActivityBackground">#FF4DB79D</color>
+    <color name="MainFragmentStoreSearchBackground">#FF1B2950</color>
+    <color name="MainFragmentBonusSearchBackground">#FFDD4528</color>
+    <color name="MainFragmentSettingBackground">#FF818181</color>
+    <color name="MainFragmentSpecialBackground">#FF79BB29</color>
+    <color name="MainFragmentPreferentialBackground">#FFD71417</color>
+    <color name="MainFragmentNewsTextColor">#FFFFFFFF</color>
+
+    <!--設定-->
+    <color name="ActivitySettingTittleBarBackGroundColor">#FF036EB8</color>
+    <color name="ActivitySettingRemindBackGroundColor">#FFEEEEEF</color>
+    <color name="ActivitySettingSeekBarColor">#FF0C67A5</color>
+    <color name="ActivitySettingUpdateColor">#FF036EBA</color>
+
+    <!--廣告主基底-->
+    <color name="ActivityAdvertisementIndicatorFillColor">#FF9A9899</color>
+
+    <!--會員登入-->
+    <color name="ActivityLoginKeepColor">#FF999999</color>
+
+    <!--特約發點-->
+    <color name="FragmentSpecialPointFieldTextColor">#FF323434</color>
+    <color name="FragmentSpecialPointSearchTextColor">#FF595757</color>
+    <color name="FragmentSpecialPointListBackgroundItemColor">#FFD0E3AD</color>
+
+    <!--一般發點-->
+    <color name="MainFragmentNormalPointTextColor">#FFDD4528</color>
+    <color name="MainFragmentNormalPointSearchTextColor">#FF595757</color>
+    <color name="MainFragmentNormalPointSpinnerBackground">#FFD71417</color>
+    <color name="MainFragmentNormalPointRecycleViewBackgroung">#FFD2CCDF</color>
+    <color name="MainFragmentNormalPointLinearLayoutTextColor">#FF323434</color>
+    <color name="MainFragmentNormalPointDialogTextColor">#FF717071</color>
+
+    <!--匯出CSV表單-->
+    <color name="FragmentSpecialExportCsvDateButtonConnerColor">#FF999999</color>
+
+    <!--特約/優惠註冊-->
+    <color name="ActivityRegisterSpinnerColor">#FF7A7A7A</color>
+    <color name="ActivityRegisterTextColor">#FF666666</color>
+    <color name="ActivityRegisterHintColor">#FFCDCCCC</color>
+
+    <!--特約店QR碼-->
+    <color name="FragmentSpecialQRCodeBackgroundColor">#FFABABAB</color>
+
+    <!--我的最愛-->
+    <color name="FragmentPromptTextColor">#FFBCDAE8</color>
+    <color name="FragmentRemindTextColor">#FF666666</color>
+    <color name="FragmentContainerColor">#4C036EB7</color>
+
+    <!--特約數字鍵-->
+    <color name="FragmentSpecialPhoneEditShape">#FF666666</color>
+
+    <!--密碼變更選擇-->
+    <color name="FragmentSpecialPasswordChoiceTextBackground">#FFEFEFF0</color>
+
+    <!--優惠扣點-->
+    <color name="FragmentPremiumPointViewBackground">#FFE79FA7</color>
+
+    <!--隱私權同意書-->
+    <color name="privacy_title_color">#FF727171</color>
+
+    <color name="common_plus_signin_btn_text_light_focused">#FF727171</color>
+
+    <color name="success_color">#FF2493ee</color>
+    <color name="warning_color">#f4511e</color>
+    <color name="hint_color">#42000000</color>
+</resources>

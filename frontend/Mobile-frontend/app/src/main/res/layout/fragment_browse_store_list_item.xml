@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ColorWhite">
+
+    <TextView
+        android:id="@+id/layout_browse_store_item_store_name"
+        android:layout_width="@dimen/activity_browse_store_recyclerview_item_text_width"
+        android:layout_height="@dimen/activity_browse_store_recyclerview_item_text_height"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/toolbar_back_image_margin_left"
+        android:text=""
+        android:textColor="@color/ColorBlack"
+        android:textSize="@dimen/activity_browse_store_item_text_size" />
+
+    <ImageView
+        android:id="@+id/layout_browse_store_item_save_image"
+        android:layout_width="@dimen/activity_browse_store_recyclerview_item_linear_item_list_width"
+        android:layout_height="@dimen/activity_browse_store_recyclerview_item_linear_item_list_height"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/activity_browse_store_recyclerview_item_linear_item_margin"
+        android:layout_marginStart="@dimen/activity_browse_store_recyclerview_item_linear_item_margin"
+        android:background="@drawable/heart_icon_01"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/layout_browse_store_item_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/activity_browse_store_recyclerview_item_linear_item_text_height"
+        android:layout_marginRight="@dimen/activity_browse_store_recyclerview_item_linear_item_margin"
+        android:layout_toLeftOf="@+id/layout_browse_store_item_save_image"
+        android:layout_toStartOf="@+id/layout_browse_store_item_save_image"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/ColorBlack"
+        android:textSize="@dimen/activity_browse_store_item_text_size" />
+
+    <View
+        android:id="@+id/layout_browse_store_item_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_browse_store_recyclerview_line_height"
+        android:layout_below="@id/layout_browse_store_item_save_image"
+        android:layout_marginTop="@dimen/activity_browse_store_recyclerview_item_linear_line_top_margin"
+        android:background="@color/ColorLine" />
+
+
+</RelativeLayout>

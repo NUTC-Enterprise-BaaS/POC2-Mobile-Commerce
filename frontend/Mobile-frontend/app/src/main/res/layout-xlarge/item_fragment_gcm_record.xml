@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_fragment_gcm_record_name_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/fragment_special_point_list_background_item_height">
+
+    <TextView
+        android:id="@+id/item_fragment_gcm_record_name"
+        android:layout_width="@dimen/fragment_gcm_record_item_name_width"
+        android:layout_height="match_parent"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/fragment_gcm_record_item_margin_left"
+        android:paddingRight="@dimen/fragment_gcm_record_item_margin_left"
+        android:textColor="@color/ColorBlack"
+        android:textSize="@dimen/fragment_news_item_text_size"/>
+
+    <TextView
+        android:id="@+id/item_fragment_gcm_record_time"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/item_fragment_gcm_record_name"
+        android:text="2016/11/24 09:04:57"
+        android:layout_marginEnd="@dimen/fragment_gcm_record_item_margin_right"
+        android:layout_marginRight="@dimen/fragment_gcm_record_item_margin_right"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/ColorBlack"
+        android:textSize="@dimen/fragment_gcm_record_item_text_size"/>
+
+
+</RelativeLayout>

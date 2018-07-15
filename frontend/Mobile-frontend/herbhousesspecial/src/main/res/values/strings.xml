@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">herbhousesspecial</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="setting">功能設置</string>
+    <string name="remind">提醒</string>
+    <string name="remind_volume">訊息提示聲音音量</string>
+    <string name="shock">震動</string>
+    <string name="language">語言</string>
+    <string name="chinese">繁體中文</string>
+    <string name="basic_data">基本資料</string>
+    <string name="change_pwd">密碼變更</string>
+    <string name="version">APP版本</string>
+    <string name="update">可更新</string>
+    <string name="version_number">V 1.2</string>
+    <string name="opinion">意見回顧</string>
+
+    <string name="loading_please_login">"請先安裝一般會員 APP 並進行登入"</string>
+    <string name="point_layout_title_tradeDate">交易日期</string>
+    <string name="point_layout_title_tradeTime">交易時間</string>
+
+    <string name="point_layout_title_people">"收點者"</string>
+    <string name="point_layout_title_money">"消費金額"</string>
+    <string name="point_layout_title">"發送紅利點數"</string>
+    <string name="point_layout_search">"搜尋"</string>
+    <string name="point_layout_edit">"編輯"</string>
+
+    <string name="point_dialog_cancel">取消</string>
+    <string name="point_dialog_submit">送出</string>
+    <string name="point_dialog_input_point">請輸入點數</string>
+    <string name="point_dialog_empty">欄位不得為空值</string>
+
+    <string name="csv_fragment_title">匯出CSV表單</string>
+    <string name="csv_fragment_search">查詢日期</string>
+    <string name="csv_fragment_symbol">~</string>
+    <string name="csv_fragment_start">開始日期</string>
+    <string name="csv_fragment_end">結束日期</string>
+    <string name="csv_fragment_export">匯出</string>
+    <string name="csv_fragment_id">編號</string>
+    <string name="csv_fragment_phone">手機號碼</string>
+    <string name="csv_fragment_money">消費金額</string>
+    <string name="date_dialog_empty">請輸入日期</string>
+
+    <string name="point_layout_key">數字鍵</string>
+    <string name="point_layout_csv">匯出CSV表單</string>
+    <string name="phone_send_point_title">數字鍵</string>
+    <string name="phone_send_point_prompt">請輸入電話號碼</string>
+    <string name="phone_send_point_confirm">確認</string>
+    <string name="phone_send_point_check_fail">無此會員</string>
+
+    <string name="opinion_layout_cancel">取消</string>
+    <string name="opinion_layout_submit">送出</string>
+    <string name="opinion_layout_title">若您有任何問題或建議，觀迎聯絡我們!</string>
+    <string name="feedback">意見回饋!</string>
+    <string name="opinion_layout_empty">欄位不得為空值</string>
+    <string name="opinion_layout_hint_company">請輸入公司名稱</string>
+    <string name="opinion_layout_hint_phone">請輸入電話</string>
+    <string name="opinion_layout_hint_contact">請輸入聯絡人</string>
+    <string name="opinion_layout_hint_subject">請輸入  主旨</string>
+    <string name="opinion_layout_hint_content">請輸入  內文</string>
+    <string name="opinion_layout_spinner">項目別</string>
+    <array name="opinion_fragment_item">
+        <item>請選擇</item>
+    </array>
+
+    <string name="latest_news">最新消息</string>
+    <string name="export_csv_dialog_title">密碼</string>
+    <string name="export_csv_dialog_promp">首次登入密碼請輸入身分證字號</string>
+    <string name="export_csv_dialog_input">請輸入密碼</string>
+    <string name="export_csv_dialog_confirm">確認</string>
+    <string name="export_csv_dialog_success">已發送至電子信箱</string>
+    <string name="export_csv_dialog_forget">忘記密碼</string>
+    <string name="export_csv_dialog_fail1">發送失敗，未知錯誤</string>
+    <string name="export_csv_dialog_fail2">發送失敗，密碼錯誤</string>
+    <string name="change_pasword">會員密碼變更</string>
+    <string name="export_csv_dialog_download">下載</string>
+    <string name="export_csv_dialog_text3">之CSV表單</string>
+
+    <string name="preferential_register_title">申請加入優惠店</string>
+    <string name="preferential_register_country">國  籍  別</string>
+    <string name="preferential_register_store_name">店家名稱</string>
+    <string name="preferential_register_entity_store">實 體 店 面</string>
+    <string name="preferential_register_virtual_store">虛 擬 店 面</string>
+    <string name="preferential_register_job_type">行業類別</string>
+    <string name="preferential_register_store_address">店家地址</string>
+    <string name="preferential_register_contact_person">聯絡人</string>
+    <string name="preferential_register_male">男</string>
+    <string name="preferential_register_female">女</string>
+    <string name="preferential_register_member_account">會員帳號</string>
+    <string name="preferential_register_member_password">會員密碼</string>
+    <string name="preferential_register_phone_number">請 輸 入 手 機 號 碼</string>
+    <string name="preferential_register_email">請 輸 入 電 子 信 箱</string>
+    <string name="preferential_register_success">註冊成功</string>
+    <string name="preferential_register_cancel">取消</string>
+    <string name="preferential_register_yes">確定</string>
+    <string name="preferential_register_clear_message">確定清除資訊嗎？</string>
+    <string name="preferential_register_confirm">確認送出</string>
+    <string name="preferential_register_clear">清除重填</string>
+    <string name="preferential_register_verify_code">清除重填</string>
+    <string name="preferential_register_id">驗證碼</string>
+    <string name="preferential_register_birthday_edit_text">YYYY/MM/DD</string>
+    <string name="preferential_register_member_birthday">出生日期</string>
+    <string name="preferential_register_password">密碼長度只少為6個字元</string>
+    <string name="publish">刊登廣告申請</string>
+    <string name="publish_success">刊登廣告成功</string>
+    <string name="publish_fail">"刊登廣告失敗，請稍候重新嘗試"</string>
+
+    <string-array name="preferential_register_country_list">
+        <item>緬甸</item>
+        <item>中國</item>
+        <item>馬來西亞</item>
+        <item>新加坡</item>
+        <item>韓國</item>
+        <item>日本</item>
+        <item>香港</item>
+        <item>台灣</item>
+    </string-array>
+
+    <string name="special_csv_reset_password">匯出CSV密碼變更</string>
+    <string-array name="preferential_register_country_job_list">
+        <item>製造商</item>
+        <item>經銷商</item>
+        <item>批發商</item>
+        <item>零售商</item>
+        <item>服務商</item>
+        <item>分銷商</item>
+        <item>代理商</item>
+    </string-array>
+</resources>

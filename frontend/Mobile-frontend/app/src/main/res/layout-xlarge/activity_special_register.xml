@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorWhite">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/ColorWhite">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ColorWhite">
+
+
+            <RelativeLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+                android:background="@color/ColorSpecialTheme">
+
+                <ImageView
+                    android:layout_width="@dimen/toolbar_back_image_width"
+                    android:layout_height="@dimen/toolbar_back_image_height"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/toolbar_back_image_margin_left"
+                    android:layout_marginStart="@dimen/toolbar_back_image_margin_left"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/toolbar_back" />
+
+                <View
+                    android:id="@+id/toolbar_back_touch"
+                    android:layout_width="@dimen/toolbar_back_touch"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/special_register_title"
+                    android:textColor="@color/ColorWhite"
+                    android:textSize="@dimen/toolbar_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_register_container_margin_top"
+                android:background="@color/ColorWhite">
+
+                <RelativeLayout
+                    android:id="@+id/activity_register_country_relativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/ColorWhite">
+
+                    <TextView
+                        android:id="@+id/activity_register_country_text"
+                        android:layout_width="@dimen/activity_register_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:background="@color/ColorSpecialTheme"
+                        android:gravity="center"
+                        android:text="@string/preferential_register_country"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/activity_register_country_spinner_container"
+                        android:layout_width="@dimen/activity_register_spinner_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_toRightOf="@id/activity_register_country_text"
+                        android:background="@drawable/activity_register_spinner">
+
+                        <ImageView
+                            android:id="@+id/activity_register_country_spinner_view"
+                            android:layout_width="@dimen/activity_register_spinner_view_width"
+                            android:layout_height="@dimen/activity_register_spinner_view_width"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/activity_register_spinner_view_margin_right"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/activity_register_spinner_view" />
+
+                        <Spinner
+                            android:id="@+id/activity_register_country_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/ColorTransparent" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/activity_register_member_account_relativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_register_country_relativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_register_margin_top"
+                    android:background="@color/ColorWhite">
+
+                    <TextView
+                        android:id="@+id/activity_register_member_account_text"
+                        android:layout_width="@dimen/activity_register_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:background="@color/ColorSpecialTheme"
+                        android:gravity="center"
+                        android:text="@string/preferential_register_member_account"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+
+                    <EditText
+                        android:id="@+id/activity_register_member_account_editText"
+                        android:layout_width="@dimen/activity_register_spinner_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_toRightOf="@id/activity_register_member_account_text"
+                        android:background="@drawable/activity_register_spinner"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_register_radiobutton_padding_left"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+                    <TextView
+                        android:id="@+id/activity_register_member_email_text"
+                        android:layout_width="@dimen/activity_register_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_below="@id/activity_register_member_account_text"
+                        android:layout_marginTop="@dimen/activity_register_margin_top"
+                        android:background="@color/ColorSpecialTheme"
+                        android:gravity="center"
+                        android:text="@string/preferential_register_member_email"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+                    <EditText
+                        android:id="@+id/activity_register_member_email_editText"
+                        android:layout_width="@dimen/activity_register_spinner_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_alignLeft="@id/activity_register_member_account_editText"
+                        android:layout_below="@id/activity_register_member_account_editText"
+                        android:layout_marginTop="@dimen/activity_register_margin_top"
+                        android:background="@drawable/activity_register_spinner"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_register_radiobutton_padding_left"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/activity_register_member_birthday_relativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_register_member_account_relativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_register_margin_top"
+                    android:background="@color/ColorWhite">
+
+                    <TextView
+                        android:id="@+id/activity_register_member_birthday_text"
+                        android:layout_width="@dimen/activity_register_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:background="@color/ColorSpecialTheme"
+                        android:gravity="center"
+                        android:text="@string/preferential_register_member_birthday"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+
+                    <EditText
+                        android:id="@+id/activity_register_member_birthday_editText"
+                        android:layout_width="@dimen/activity_register_spinner_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_toRightOf="@id/activity_register_member_birthday_text"
+                        android:background="@drawable/activity_register_spinner"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_register_radiobutton_padding_left"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/activity_register_store_name_relativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_register_member_birthday_relativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_register_margin_top"
+                    android:background="@color/ColorWhite">
+
+                    <TextView
+                        android:id="@+id/activity_register_store_name_text"
+                        android:layout_width="@dimen/activity_register_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:background="@color/ColorSpecialTheme"
+                        android:gravity="center"
+                        android:text="@string/preferential_register_store_name"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+
+                    <EditText
+                        android:id="@+id/activity_register_store_name_editText"
+                        android:layout_width="@dimen/activity_register_spinner_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_toRightOf="@id/activity_register_store_name_text"
+                        android:background="@drawable/activity_register_spinner"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_register_radiobutton_padding_left"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/activity_register_store_relativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_register_store_name_relativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_register_margin_top"
+                    android:background="@color/ColorWhite">
+
+                    <View
+                        android:id="@+id/activity_register_store_entity_view"
+                        android:layout_width="@dimen/activity_register_checkbox_view_width"
+                        android:layout_height="@dimen/activity_register_checkbox_view_width"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/activity_register_checkbox_background"
+                        android:button="@null" />
+
+                    <TextView
+                        android:id="@+id/activity_register_store_entity_text"
+                        android:layout_width="@dimen/activity_register_checkbox_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_toRightOf="@id/activity_register_store_entity_view"
+                        android:gravity="center"
+                        android:text="@string/preferential_register_entity_store"
+                        android:textColor="@color/ActivityRegisterTextColor"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+                    <CheckBox
+                        android:id="@+id/activity_register_store_entity_checkbox"
+                        android:layout_width="@dimen/activity_register_checkbox_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_centerVertical="true"
+                        android:button="@null" />
+
+
+                    <View
+                        android:id="@+id/activity_register_store_virtual_view_checkbox"
+                        android:layout_width="@dimen/activity_register_checkbox_view_width"
+                        android:layout_height="@dimen/activity_register_checkbox_view_width"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/activity_register_store_entity_checkbox"
+                        android:background="@drawable/activity_register_checkbox_background"
+                        android:button="@null" />
+
+                    <TextView
+                        android:id="@+id/activity_register_store_virtual_text"
+                        android:layout_width="@dimen/activity_register_checkbox_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_toRightOf="@id/activity_register_store_virtual_view_checkbox"
+                        android:gravity="center"
+                        android:text="@string/preferential_register_virtual_store"
+                        android:textColor="@color/ActivityRegisterTextColor"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+                    <CheckBox
+                        android:id="@+id/activity_register_store_virtual_checkbox"
+                        android:layout_width="@dimen/activity_register_checkbox_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/activity_register_store_entity_checkbox"
+                        android:button="@null" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/activity_register_job_type_relativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_register_store_relativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/ColorWhite">
+
+                    <TextView
+                        android:id="@+id/activity_register_job_type_text"
+                        android:layout_width="@dimen/activity_register_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:background="@color/ColorSpecialTheme"
+                        android:gravity="center"
+                        android:text="@string/preferential_register_job_type"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/activity_register_job_type_spinner_container"
+                        android:layout_width="@dimen/activity_register_spinner_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_toRightOf="@id/activity_register_job_type_text"
+                        android:background="@drawable/activity_register_spinner">
+
+                        <ImageView
+                            android:id="@+id/activity_register_job_type_spinner_view"
+                            android:layout_width="@dimen/activity_register_spinner_view_width"
+                            android:layout_height="@dimen/activity_register_spinner_view_width"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/activity_register_spinner_view_margin_right"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/activity_register_spinner_view" />
+
+
+                        <Spinner
+                            android:id="@+id/activity_register_job_type_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/ColorTransparent" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/activity_register_store_address_relativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_register_job_type_relativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_register_margin_top"
+                    android:background="@color/ColorWhite">
+
+                    <TextView
+                        android:id="@+id/activity_register_store_address_text"
+                        android:layout_width="@dimen/activity_register_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:background="@color/ColorSpecialTheme"
+                        android:gravity="center"
+                        android:text="@string/preferential_register_store_address"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+
+                    <EditText
+                        android:id="@+id/activity_register_store_address_editText"
+                        android:layout_width="@dimen/activity_register_spinner_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_toRightOf="@id/activity_register_store_address_text"
+                        android:background="@drawable/activity_register_spinner"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_register_radiobutton_padding_left"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/activity_register_contact_person_relativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_register_store_address_relativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_register_margin_top"
+                    android:background="@color/ColorWhite">
+
+                    <TextView
+                        android:id="@+id/activity_register_contact_person_text"
+                        android:layout_width="@dimen/activity_register_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:background="@color/ColorSpecialTheme"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/preferential_register_contact_person"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+
+                    <EditText
+                        android:id="@+id/activity_register_contact_person_editText"
+                        android:layout_width="@dimen/activity_register_spinner_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_toRightOf="@id/activity_register_contact_person_text"
+                        android:background="@drawable/activity_register_spinner"
+                        android:paddingLeft="@dimen/activity_register_radiobutton_padding_left"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/activity_register_sex_relativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_register_contact_person_relativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_register_margin_top"
+                    android:background="@color/ColorWhite">
+
+                    <TextView
+                        android:id="@+id/activity_register_sex_text"
+                        android:layout_width="@dimen/activity_register_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:background="@color/ColorSpecialTheme"
+                        android:gravity="center"
+                        android:text="@string/registered_layout_sex"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+                    <RadioGroup
+                        android:id="@+id/activity_register_sex_radiogroup"
+                        android:layout_width="@dimen/activity_register_spinner_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_toRightOf="@id/activity_register_sex_text">
+
+                        <RelativeLayout
+                            android:id="@+id/activity_register_sex_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/activity_register_contact_person_relativeLayout"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/activity_register_margin_top"
+                            android:background="@color/ColorWhite">
+
+                            <View
+                                android:id="@+id/activity_register_sex_male_radiobutton_view"
+                                android:layout_width="@dimen/activity_register_checkbox_view_width"
+                                android:layout_height="@dimen/activity_register_checkbox_view_width"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/activity_register_radiobutton_margin_left"
+                                android:background="@drawable/activity_register_checkbox_background"
+                                android:button="@null" />
+
+                            <TextView
+                                android:id="@+id/activity_register_sex_male_text"
+                                android:layout_width="@dimen/activity_register_radiobutton_text_width"
+                                android:layout_height="@dimen/activity_register_height"
+                                android:layout_toRightOf="@id/activity_register_sex_male_radiobutton_view"
+                                android:gravity="center"
+                                android:text="@string/preferential_register_male"
+                                android:textColor="@color/ActivityRegisterTextColor"
+                                android:textSize="@dimen/activity_register_text_size" />
+
+                            <RadioButton
+                                android:id="@+id/activity_register_sex_male_radiobutton"
+                                android:layout_width="@dimen/activity_register_radiobutton_width"
+                                android:layout_height="@dimen/activity_register_checkbox_width"
+                                android:layout_marginLeft="@dimen/activity_register_radiobutton_margin_left"
+                                android:button="@null"
+                                android:checked="true" />
+
+
+                            <View
+                                android:id="@+id/activity_register_sex_female_radiobutton_view"
+                                android:layout_width="@dimen/activity_register_checkbox_view_width"
+                                android:layout_height="@dimen/activity_register_checkbox_view_width"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/activity_register_sex_male_radiobutton"
+                                android:background="@drawable/activity_register_checkbox_background"
+                                android:button="@null" />
+
+                            <TextView
+                                android:id="@+id/activity_register_sex_female_text"
+                                android:layout_width="@dimen/activity_register_radiobutton_text_width"
+                                android:layout_height="@dimen/activity_register_height"
+                                android:layout_toRightOf="@id/activity_register_sex_female_radiobutton_view"
+                                android:gravity="center"
+                                android:text="@string/preferential_register_female"
+                                android:textColor="@color/ActivityRegisterTextColor"
+                                android:textSize="@dimen/activity_register_text_size" />
+
+                            <RadioButton
+                                android:id="@+id/activity_register_sex_female_radiobutton"
+                                android:layout_width="@dimen/activity_register_radiobutton_width"
+                                android:layout_height="@dimen/activity_register_checkbox_width"
+                                android:layout_marginLeft="@dimen/activity_register_radiobutton_margin_left"
+                                android:layout_toRightOf="@id/activity_register_sex_male_radiobutton"
+                                android:button="@null" />
+                        </RelativeLayout>
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/activity_register_main_logo_relativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_register_sex_relativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_register_margin_top"
+                    android:background="@color/ColorWhite">
+
+                    <TextView
+                        android:id="@+id/activity_register_main_logo_text"
+                        android:layout_width="@dimen/activity_register_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:background="@color/ColorSpecialTheme"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/preferential_register_main_logo"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+
+                    <TextView
+                        android:id="@+id/activity_register_main_logo_editText"
+                        android:layout_width="@dimen/activity_register_spinner_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_toEndOf="@id/activity_register_main_logo_text"
+                        android:layout_toRightOf="@id/activity_register_main_logo_text"
+                        android:background="@drawable/activity_register_spinner"
+                        android:gravity="center|left"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_register_radiobutton_padding_left"
+                        android:text="@string/preferential_register_main_logo_hint"
+                        android:textColor="@color/ActivityRegisterTextColor"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/activity_register_sub_logo_relativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_register_main_logo_relativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_register_margin_top"
+                    android:background="@color/ColorWhite">
+
+                    <TextView
+                        android:id="@+id/activity_register_sub_logo_text"
+                        android:layout_width="@dimen/activity_register_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:background="@color/ColorSpecialTheme"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/preferential_register_sub_logo"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+
+                    <TextView
+                        android:id="@+id/activity_register_sub_logo_editText"
+                        android:layout_width="@dimen/activity_register_spinner_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_toEndOf="@id/activity_register_sub_logo_text"
+                        android:layout_toRightOf="@id/activity_register_sub_logo_text"
+                        android:background="@drawable/activity_register_spinner"
+                        android:gravity="center|left"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_register_radiobutton_padding_left"
+                        android:text="@string/preferential_register_sub_logo_hint"
+                        android:textColor="@color/ActivityRegisterTextColor"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/activity_register_recommend_relativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_register_sub_logo_relativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_register_margin_top"
+                    android:background="@color/ColorWhite">
+
+                    <TextView
+                        android:id="@+id/activity_register_recommend_text"
+                        android:layout_width="@dimen/activity_register_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:background="@color/ColorSpecialTheme"
+                        android:gravity="center"
+                        android:text="@string/preferential_register_recommend"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+
+                    <EditText
+                        android:id="@+id/activity_register_recommend_qr_text"
+                        android:layout_width="@dimen/activity_register_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_toRightOf="@id/activity_register_recommend_text"
+                        android:background="@drawable/activity_register_spinner"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:gravity="center|left"
+                        android:hint="@string/registered_layout_recommend_hint"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_register_radiobutton_padding_left"
+                        android:paddingStart="@dimen/activity_register_radiobutton_padding_left"
+                        android:textColor="@color/ActivityRegisterHintColor"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+                    <Button
+                        android:id="@+id/activity_register_recommend_button"
+                        android:layout_width="@dimen/activity_register_recommend_btn_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_toRightOf="@id/activity_register_recommend_qr_text"
+                        android:background="@drawable/activity_register_recommend_button_background"
+                        android:gravity="center"
+                        android:text="@string/registered_layout_recommend_send"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/activity_register_id_relativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_register_recommend_relativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_register_margin_top"
+                    android:background="@color/ColorWhite">
+
+                    <TextView
+                        android:id="@+id/activity_register_id_text"
+                        android:layout_width="@dimen/activity_register_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:background="@color/ColorSpecialTheme"
+                        android:gravity="center"
+                        android:text="@string/preferential_register_id"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+                    <TextView
+                        android:id="@+id/activity_register_id_img"
+                        android:layout_width="@dimen/activity_register_id_text_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_toRightOf="@id/activity_register_id_text"
+                        android:background="@color/ColorBlack"
+                        android:gravity="center"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_recommend_button_textsize" />
+
+                    <EditText
+                        android:id="@+id/activity_register_id_editText"
+                        android:layout_width="@dimen/activity_register_spinner_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_alignLeft="@id/activity_register_id_img"
+                        android:layout_below="@id/activity_register_id_img"
+                        android:layout_marginTop="@dimen/activity_register_margin_top"
+                        android:background="@drawable/activity_register_spinner"
+                        android:hint="@string/preferential_register_verify_code"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:paddingLeft="@dimen/activity_register_radiobutton_padding_left"
+                        android:textColorHint="@color/ActivityRegisterHintColor"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_register_id_relativeLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/activity_register_margin_top"
+                    android:layout_marginTop="@dimen/activity_register_margin_top"
+                    android:background="@color/ColorWhite">
+
+                    <Button
+                        android:id="@+id/activity_register_reset_button"
+                        android:layout_width="@dimen/activity_register_button_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_marginRight="@dimen/activity_register_button_margin_right"
+                        android:background="@drawable/activity_register_recommend_button_background"
+                        android:gravity="center"
+                        android:text="@string/registered_layout_reset"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+
+                    <Button
+                        android:id="@+id/activity_register_send_button"
+                        android:layout_width="@dimen/activity_register_button_width"
+                        android:layout_height="@dimen/activity_register_height"
+                        android:layout_toRightOf="@id/activity_register_reset_button"
+                        android:background="@drawable/activity_register_recommend_button_background"
+                        android:text="@string/registered_layout_send"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/activity_register_text_size" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

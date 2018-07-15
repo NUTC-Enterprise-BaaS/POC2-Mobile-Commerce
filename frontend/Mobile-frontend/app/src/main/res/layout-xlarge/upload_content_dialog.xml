@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="@dimen/upload_content_dialog_width"
+        android:layout_height="@dimen/upload_content_dialog_height"
+        android:background="@color/ColorWhite">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:gravity="center"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/toolbar_text_size" />
+
+        <TextView
+            android:id="@+id/prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/upload_content_dialog_prompt_margin_top"
+            android:textColor="@color/ColorHint"
+            android:textSize="@dimen/upload_content_dialog_prompt_size" />
+
+        <ImageView
+            android:id="@+id/view1"
+            android:layout_width="@dimen/upload_content_dialog_image_height"
+            android:layout_height="@dimen/upload_content_dialog_image_height"
+            android:layout_below="@id/prompt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/upload_content_dialog_prompt_margin_top"
+            android:scaleType="centerCrop"
+            android:src="@drawable/upload" />
+
+        <ImageView
+            android:id="@+id/view2"
+            android:layout_width="@dimen/upload_content_dialog_image_height"
+            android:layout_height="@dimen/upload_content_dialog_image_height"
+            android:layout_below="@id/view1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/upload_content_dialog_prompt_margin_top"
+            android:scaleType="centerCrop"
+            android:src="@drawable/upload" />
+
+        <ImageView
+            android:id="@+id/view3"
+            android:layout_width="@dimen/upload_content_dialog_image_height"
+            android:layout_height="@dimen/upload_content_dialog_image_height"
+            android:layout_below="@id/view2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/upload_content_dialog_prompt_margin_top"
+            android:scaleType="centerCrop"
+            android:src="@drawable/upload" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/upload_content_dialog_prompt_margin_top">
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="@dimen/upload_content_dialog_button_width"
+                android:layout_height="@dimen/upload_content_dialog_button_height"
+                android:background="@drawable/special_circle_button"
+                android:text="確認送出"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/upload_content_dialog_button_size" />
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="@dimen/upload_content_dialog_button_width"
+                android:layout_height="@dimen/upload_content_dialog_button_height"
+                android:layout_marginLeft="@dimen/upload_content_dialog_button_margin_left"
+                android:layout_marginStart="@dimen/upload_content_dialog_button_margin_left"
+                android:layout_toEndOf="@id/submit"
+                android:layout_toRightOf="@id/submit"
+                android:background="@drawable/special_circle_button"
+                android:text="取    消"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/upload_content_dialog_button_size" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

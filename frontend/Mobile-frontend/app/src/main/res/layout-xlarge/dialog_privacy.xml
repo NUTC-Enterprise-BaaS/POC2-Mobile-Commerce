@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorWhite">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/privacy_title_top_margin"
+        android:text="@string/privacy_policy"
+        android:textColor="@color/privacy_title_color"
+        android:textSize="@dimen/privacy_title_size" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/privacy_line_height"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/privacy_line_top_margin"
+        android:background="@color/ColorBlack" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/privacy_scroll_height"
+        android:layout_below="@id/line"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/privacy_left_right_margin"
+        android:layout_marginTop="@dimen/privacy_line_top_margin"
+        android:scrollbarThumbVertical="@android:color/transparent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/content_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy_policy_content_top"
+                android:textSize="@dimen/privacy_content_size" />
+
+            <TextView
+                android:id="@+id/content_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_top"
+                android:layout_marginTop="@dimen/privacy_content_top_margin"
+                android:text="@string/privacy_policy_content_middle"
+                android:textSize="@dimen/privacy_content_size" />
+
+            <TextView
+                android:id="@+id/content_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_middle"
+                android:layout_marginTop="@dimen/privacy_content_top_margin"
+                android:text="@string/privacy_policy_content_bottom"
+                android:textSize="@dimen/privacy_content_size" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/scroll">
+
+        <RelativeLayout
+            android:id="@+id/check_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/privacy_check_container_height">
+
+            <CheckBox
+                android:id="@+id/check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/privacy_check_left_margin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/check"
+                android:layout_toRightOf="@id/check"
+                android:text="@string/privacy_policy_content_check"
+                android:textSize="@dimen/privacy_content_size" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/privacy_button_container_height"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/check_container"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/disagree"
+                android:layout_width="@dimen/privacy_bottom_button_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/privacy_button_board"
+                android:gravity="center"
+                android:text="@string/privacy_policy_disagree_button"
+                android:textSize="@dimen/privacy_title_size" />
+
+            <TextView
+                android:id="@+id/agree"
+                android:layout_width="@dimen/privacy_bottom_button_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/privacy_button_board"
+                android:gravity="center"
+                android:text="@string/privacy_policy_agree_button"
+                android:textSize="@dimen/privacy_title_size" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

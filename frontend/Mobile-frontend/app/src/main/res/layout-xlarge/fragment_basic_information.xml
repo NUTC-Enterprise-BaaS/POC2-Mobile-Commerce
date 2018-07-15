@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorWhite">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/ColorGeneralTheme">
+
+        <ImageView
+            android:layout_width="@dimen/toolbar_back_image_width"
+            android:layout_height="@dimen/toolbar_back_image_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/toolbar_back_image_margin_left"
+            android:layout_marginStart="@dimen/toolbar_back_image_margin_left"
+            android:scaleType="fitCenter"
+            android:src="@drawable/toolbar_back" />
+
+        <View
+            android:id="@+id/toolbar_back_touch"
+            android:layout_width="@dimen/toolbar_back_touch"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/basic_information_layout_tittle"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/toolbar_text_size" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:background="@color/ColorWhite"
+        android:scrollbarThumbVertical="@android:color/transparent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:orientation="vertical">
+
+            <!--會員帳號-->
+            <RelativeLayout
+                android:id="@+id/fragment_basic_information_account_relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_basic_information_general_relativelayout_height"
+                android:layout_marginTop="@dimen/fragment_basic_information_general_margin_top">
+
+                <TextView
+                    android:id="@+id/fragment_basic_information_account"
+                    android:layout_width="@dimen/fragment_basic_information_general_text_width"
+                    android:layout_height="@dimen/fragment_basic_information_general_text_height"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_line_margin"
+                    android:layout_marginStart="@dimen/fragment_basic_information_general_line_margin"
+                    android:gravity="center_vertical"
+                    android:text="@string/basic_information_layout_account"
+                    android:textSize="@dimen/fragment_basic_information_general_text_big_size" />
+
+                <TextView
+                    android:id="@+id/fragment_basic_information_account_text"
+                    android:layout_width="@dimen/fragment_basic_information_general_text_long_width"
+                    android:layout_height="@dimen/fragment_basic_information_general_text_height"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_margin_left"
+                    android:layout_marginStart="@dimen/fragment_basic_information_general_margin_left"
+                    android:layout_toEndOf="@id/fragment_basic_information_account"
+                    android:layout_toRightOf="@id/fragment_basic_information_account"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/ColorHint"
+                    android:textSize="@dimen/fragment_basic_information_general_text_big_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fragment_basic_information_general_line_height"
+                    android:layout_below="@id/fragment_basic_information_account"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_line_margin"
+                    android:layout_marginRight="@dimen/fragment_basic_information_general_line_margin"
+                    android:background="@color/ColorBlack" />
+            </RelativeLayout>
+
+            <!--出生日期-->
+
+            <RelativeLayout
+                android:id="@+id/fragment_basic_information_birth_relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_basic_information_general_relativelayout_height">
+
+                <TextView
+                    android:id="@+id/fragment_basic_information_birth"
+                    android:layout_width="@dimen/fragment_basic_information_general_text_width"
+                    android:layout_height="@dimen/fragment_basic_information_general_text_height"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_line_margin"
+                    android:layout_marginStart="@dimen/fragment_basic_information_general_line_margin"
+                    android:gravity="center_vertical"
+                    android:text="@string/basic_information_layout_birth"
+                    android:textSize="@dimen/fragment_basic_information_general_text_big_size" />
+
+                <TextView
+                    android:id="@+id/fragment_basic_information_birth_text"
+                    android:layout_width="@dimen/fragment_basic_information_general_text_long_width"
+                    android:layout_height="@dimen/fragment_basic_information_general_text_height"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_margin_left"
+                    android:layout_marginStart="@dimen/fragment_basic_information_general_margin_left"
+                    android:layout_toEndOf="@id/fragment_basic_information_birth"
+                    android:layout_toRightOf="@id/fragment_basic_information_birth"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/ColorHint"
+                    android:textSize="@dimen/fragment_basic_information_general_text_big_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fragment_basic_information_general_line_height"
+                    android:layout_below="@id/fragment_basic_information_birth"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_line_margin"
+                    android:layout_marginRight="@dimen/fragment_basic_information_general_line_margin"
+                    android:background="@color/ColorBlack" />
+            </RelativeLayout>
+
+            <!--國籍別-->
+
+            <RelativeLayout
+                android:id="@+id/fragment_basic_information_country_relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_basic_information_general_relativelayout_height">
+
+                <TextView
+                    android:id="@+id/fragment_basic_information_country"
+                    android:layout_width="@dimen/fragment_basic_information_general_text_width"
+                    android:layout_height="@dimen/fragment_basic_information_general_text_height"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_line_margin"
+                    android:layout_marginStart="@dimen/fragment_basic_information_general_line_margin"
+                    android:gravity="center_vertical"
+                    android:text="@string/basic_information_layout_country"
+                    android:textSize="@dimen/fragment_basic_information_general_text_big_size" />
+
+                <TextView
+                    android:id="@+id/fragment_basic_information_country_text"
+                    android:layout_width="@dimen/fragment_basic_information_general_text_long_width"
+                    android:layout_height="@dimen/fragment_basic_information_general_text_height"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_margin_left"
+                    android:layout_marginStart="@dimen/fragment_basic_information_general_margin_left"
+                    android:layout_toEndOf="@id/fragment_basic_information_country"
+                    android:layout_toRightOf="@id/fragment_basic_information_country"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/ColorHint"
+                    android:textSize="@dimen/fragment_basic_information_general_text_big_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fragment_basic_information_general_line_height"
+                    android:layout_below="@id/fragment_basic_information_country"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_line_margin"
+                    android:layout_marginRight="@dimen/fragment_basic_information_general_line_margin"
+                    android:background="@color/ColorBlack" />
+            </RelativeLayout>
+
+            <!--推薦人-->
+            <RelativeLayout
+                android:id="@+id/fragment_basic_information_recommend_relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_basic_information_general_relativelayout_height"
+                android:gravity="">
+
+                <TextView
+                    android:id="@+id/fragment_basic_information_recommend"
+                    android:layout_width="@dimen/fragment_basic_information_general_text_width"
+                    android:layout_height="@dimen/fragment_basic_information_general_text_height"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_line_margin"
+                    android:layout_marginStart="@dimen/fragment_basic_information_general_line_margin"
+                    android:gravity="center_vertical"
+                    android:text="@string/basic_information_layout_recommend"
+                    android:textSize="@dimen/fragment_basic_information_general_text_big_size" />
+
+                <RelativeLayout
+                    android:id="@+id/fragment_basic_information_recommend_scanRecommend_relativeLayout"
+                    android:layout_width="@dimen/fragment_basic_information_general_text_long_width"
+                    android:layout_height="@dimen/fragment_basic_information_general_text_height"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_margin_left"
+                    android:layout_marginStart="@dimen/fragment_basic_information_general_margin_left"
+                    android:layout_toEndOf="@id/fragment_basic_information_recommend"
+                    android:layout_toRightOf="@id/fragment_basic_information_recommend">
+
+                    <TextView
+                        android:id="@+id/fragment_basic_information_recommend_text"
+                        android:layout_width="@dimen/fragment_basic_information_general_text_long_width"
+                        android:layout_height="@dimen/fragment_basic_information_general_text_height"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:textColor="@color/ColorHint"
+                        android:textSize="@dimen/fragment_basic_information_general_text_big_size" />
+
+                    <Button
+                        android:id="@+id/fragment_basic_information_recommend_scanRecommend"
+                        android:layout_width="@dimen/fragment_basic_information_general_text_long_width"
+                        android:layout_height="@dimen/fragment_basic_information_scan_recommend_height"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/fragment_basic_information_scan_recommend_button_shape"
+                        android:text="@string/basic_information_layout_scan"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/fragment_basic_information_general_text_small_size" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fragment_basic_information_general_line_height"
+                    android:layout_below="@id/fragment_basic_information_recommend"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_line_margin"
+                    android:layout_marginRight="@dimen/fragment_basic_information_general_line_margin"
+                    android:background="@color/ColorBlack" />
+            </RelativeLayout>
+
+            <!--VIP-->
+            <RelativeLayout
+                android:id="@+id/fragment_basic_information_vip_relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_basic_information_general_relativelayout_height"
+                android:gravity="">
+
+                <TextView
+                    android:id="@+id/fragment_basic_information_vip"
+                    android:layout_width="@dimen/fragment_basic_information_general_text_width"
+                    android:layout_height="@dimen/fragment_basic_information_general_text_height"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_line_margin"
+                    android:layout_marginStart="@dimen/fragment_basic_information_general_line_margin"
+                    android:gravity="center_vertical"
+                    android:text="@string/basic_information_layout_vip"
+                    android:textSize="@dimen/fragment_basic_information_general_text_big_size" />
+
+                <RelativeLayout
+                    android:id="@+id/fragment_basic_information_vip_button_relativeLayout"
+                    android:layout_width="@dimen/fragment_basic_information_general_text_long_width"
+                    android:layout_height="@dimen/fragment_basic_information_general_text_height"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_margin_left"
+                    android:layout_marginStart="@dimen/fragment_basic_information_general_margin_left"
+                    android:layout_toEndOf="@id/fragment_basic_information_vip"
+                    android:layout_toRightOf="@id/fragment_basic_information_vip">
+
+                    <TextView
+                        android:id="@+id/fragment_basic_information_vip_text"
+                        android:layout_width="@dimen/fragment_basic_information_general_text_long_width"
+                        android:layout_height="@dimen/fragment_basic_information_general_text_height"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:textColor="@color/ColorHint"
+                        android:textSize="@dimen/fragment_basic_information_general_text_big_size" />
+
+                    <Button
+                        android:id="@+id/fragment_basic_information_vip_button"
+                        android:layout_width="@dimen/fragment_basic_information_general_text_long_width"
+                        android:layout_height="@dimen/fragment_basic_information_scan_recommend_height"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/fragment_basic_information_scan_recommend_button_shape"
+                        android:text="@string/basic_information_layout_vip_button"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/fragment_basic_information_general_text_small_size" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fragment_basic_information_general_line_height"
+                    android:layout_below="@id/fragment_basic_information_vip"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_line_margin"
+                    android:layout_marginRight="@dimen/fragment_basic_information_general_line_margin"
+                    android:background="@color/ColorBlack" />
+            </RelativeLayout>
+
+            <!--電子信箱-->
+
+            <RelativeLayout
+                android:id="@+id/fragment_basic_information_country_mail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_basic_information_general_relativelayout_height"
+                android:gravity="">
+
+                <TextView
+                    android:id="@+id/fragment_basic_information_mail"
+                    android:layout_width="@dimen/fragment_basic_information_general_text_width"
+                    android:layout_height="@dimen/fragment_basic_information_general_text_height"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_line_margin"
+                    android:layout_marginStart="@dimen/fragment_basic_information_general_line_margin"
+                    android:gravity="center_vertical"
+                    android:text="@string/basic_information_layout_mail"
+                    android:textSize="@dimen/fragment_basic_information_general_text_big_size" />
+
+                <TextView
+                    android:id="@+id/fragment_basic_information_mail_text"
+                    android:layout_width="@dimen/fragment_basic_information_general_text_long_width"
+                    android:layout_height="@dimen/fragment_basic_information_general_text_height"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_margin_left"
+                    android:layout_marginStart="@dimen/fragment_basic_information_general_margin_left"
+                    android:layout_toEndOf="@id/fragment_basic_information_mail"
+                    android:layout_toRightOf="@id/fragment_basic_information_mail"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/ColorHint"
+                    android:textSize="@dimen/fragment_basic_information_general_text_big_size" />
+
+
+                <EditText
+                    android:id="@+id/fragment_basic_information_mail_edit"
+                    android:layout_width="@dimen/fragment_basic_information_general_text_long_width"
+                    android:layout_height="@dimen/fragment_basic_information_general_text_height"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_margin_left"
+                    android:layout_marginStart="@dimen/fragment_basic_information_general_margin_left"
+                    android:layout_toEndOf="@id/fragment_basic_information_mail"
+                    android:layout_toRightOf="@id/fragment_basic_information_mail"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/ColorBlack"
+                    android:textSize="@dimen/fragment_basic_information_general_text_big_size"
+                    android:visibility="invisible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fragment_basic_information_general_line_height"
+                    android:layout_below="@id/fragment_basic_information_mail"
+                    android:layout_marginLeft="@dimen/fragment_basic_information_general_line_margin"
+                    android:layout_marginRight="@dimen/fragment_basic_information_general_line_margin"
+                    android:background="@color/ColorBlack" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginEnd="@dimen/fragment_basic_information_general_line_margin"
+                android:layout_marginRight="@dimen/fragment_basic_information_general_line_margin">
+
+                <TextView
+                    android:id="@+id/fragment_basic_information_change_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/basic_information_layout_applaction"
+                    android:textColor="@color/ColorBlack"
+                    android:textSize="@dimen/fragment_basic_information_general_text_small_size" />
+
+                <TextView
+                    android:id="@+id/fragment_basic_information_change_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/basic_information_layout_submit"
+                    android:textColor="@color/ColorBlack"
+                    android:textSize="@dimen/fragment_basic_information_general_text_small_size"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

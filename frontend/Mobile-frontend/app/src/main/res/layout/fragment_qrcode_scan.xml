@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ActivityQRcodeBackgroundColor">
+
+    <RelativeLayout
+        android:id="@+id/qrcode_scan_text_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_qrcode_scan_container_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/fragment_qrcode_scan_item_margin"
+        android:layout_marginRight="@dimen/fragment_qrcode_scan_item_margin">
+
+        <TextView
+            android:id="@+id/qrcode_scan_remind_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fragment_qrcode_scan_item_height"
+            android:gravity="center"
+            android:text="@string/scan_qr_code_remind"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/fragment_qrcode_scan_remind_text" />
+
+        <TextView
+            android:id="@+id/albums"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fragment_qrcode_scan_item_height"
+            android:layout_below="@id/qrcode_scan_remind_text"
+            android:layout_marginTop="@dimen/fragment_qrcode_scan_item_margin_top"
+            android:background="@drawable/layout_qrcode_scan_album"
+            android:gravity="center"
+            android:text="@string/scan_qr_code_albums"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/fragment_qrcode_scan_from_album_text" />
+    </RelativeLayout>
+
+    <com.journeyapps.barcodescanner.CompoundBarcodeView
+        android:id="@+id/scan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/qrcode_scan_text_container" />
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/garyView"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:orientation="vertical"
+    app:layout_heightPercent="10%"
+    app:layout_widthPercent="99%">
+
+
+    <RelativeLayout
+        android:id="@+id/close"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="50px"
+        app:layout_heightPercent="4%"
+        app:layout_marginLeftPercent="88%"
+        app:layout_marginTopPercent="2%"
+        app:layout_widthPercent="7%"></RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/backound"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="#CC2C24"
+        app:layout_heightPercent="80%"
+        app:layout_marginBottomPercent="4%"
+        app:layout_marginLeftPercent="4%"
+        app:layout_marginRightPercent="4%"
+        app:layout_marginTopPercent="6%"
+        app:layout_widthPercent="90%"></RelativeLayout>
+
+    <ImageView
+        android:id="@+id/scratchCardLogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        app:layout_heightPercent="20%"
+        app:layout_marginBottomPercent="1%"
+        app:layout_marginTopPercent="6%"
+        app:layout_widthPercent="80%"></ImageView>
+
+    <RelativeLayout
+        android:id="@+id/ScratchCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/scratchCardLogo"
+        android:layout_centerHorizontal="true"
+        app:layout_heightPercent="22%"
+        app:layout_widthPercent="63%">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cardview_light_background" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_centerInParent="true"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/remindTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/ScratchCard"
+        android:layout_centerHorizontal="true"
+        app:layout_heightPercent="2%"
+        app:layout_marginTopPercent="0.5%"
+        app:layout_widthPercent="50%" />
+
+    <RelativeLayout
+        android:id="@+id/YellowButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/remindTextView"
+        android:layout_centerHorizontal="true"
+        app:layout_heightPercent="8%"
+        app:layout_marginBottomPercent="0.5%"
+        app:layout_marginTopPercent="0.5%"
+        app:layout_widthPercent="63%" />
+
+    <RelativeLayout
+        android:id="@+id/listview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/YellowButton"
+        android:layout_centerHorizontal="true"
+        app:layout_heightPercent="21%"
+        app:layout_marginBottomPercent="4%"
+        app:layout_marginTopPercent="2%"
+        app:layout_widthPercent="70%" />
+
+</android.support.percent.PercentRelativeLayout>
