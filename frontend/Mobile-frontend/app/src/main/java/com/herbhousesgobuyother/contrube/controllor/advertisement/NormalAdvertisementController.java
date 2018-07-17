@@ -27,6 +27,7 @@ import com.androidlibrary.module.backend.params.AccountInjection;
 import com.androidlibrary.module.backend.params.ServerInfoInjection;
 import com.androidlibrary.module.backend.request.WebRequest;
 import com.herbhousesgobuyother.R;
+import com.herbhousesgobuyother.component.pre.PreferencesHelperImp;
 import com.herbhousesgobuyother.contrube.component.dialog.LoadingDialog;
 import com.herbhousesgobuyother.contrube.component.dialog.LoginErrorDialog;
 
@@ -320,6 +321,7 @@ public class NormalAdvertisementController {
         void onSuccessIntroduction(ApiV1UserInstructionGetData information);
 
         void onSuccessCustomerService(ApiV1UserCustomerServiceGetData information);
+
         void onSuccessCheckState(ApiV1CheckUserIdentityGetData information);
     }
 }

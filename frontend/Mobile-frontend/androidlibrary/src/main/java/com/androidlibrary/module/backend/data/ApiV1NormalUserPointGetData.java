@@ -13,6 +13,7 @@ public class ApiV1NormalUserPointGetData extends JsonData {
     public String token;
     public String store;
     public int point;
+    public String email;
 
     public ApiV1NormalUserPointGetData(String data) {
         super(data);
@@ -22,10 +23,11 @@ public class ApiV1NormalUserPointGetData extends JsonData {
     @Override
     protected void processing(JSONObject json) {
         super.processing(json);
+        email = getString(json, "email", "");
         try {
-            token = json.getJSONObject("message").getString("token");
-            store = json.getJSONObject("message").getString("stor");
             point = json.getJSONObject("message").getInt("point");
+            store = json.getJSONObject("message").getString("stor");
+            token = json.getJSONObject("message").getString("token");
             Log.e("token", token + "token");
         } catch (JSONException e) {
             Log.e("Login ERROR", e.toString());

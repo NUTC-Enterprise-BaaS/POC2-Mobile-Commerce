@@ -33,6 +33,7 @@ import com.androidlibrary.module.consts.AccountConst;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.herbhousesgobuyother.R;
+import com.herbhousesgobuyother.component.pre.PreferencesHelperImp;
 import com.herbhousesgobuyother.contrube.controllor.advertisement.NormalAdvertisementController;
 import com.herbhousesgobuyother.contrube.core.ActivityLauncher;
 import com.herbhousesgobuyother.contrube.core.FragmentLauncher;
@@ -382,8 +383,10 @@ public class ActivityNormalAdvertisement extends AppCompatActivity {
     }
 
     public void goToSpecialApply() {
-        Intent intent = new Intent(mContext, ActivitySpecialRegister.class);
-        startActivity(intent);
+        setAdvertisementEnable(true);
+        FragmentLauncher.changeToBack(mContext, R.id.content_container, null, FragmentNormalCoupon.class.getName());
+//        Intent intent = new Intent(mContext, ActivitySpecialRegister.class);
+//        startActivity(intent);
     }
 
     public void goToPremiumApply() {

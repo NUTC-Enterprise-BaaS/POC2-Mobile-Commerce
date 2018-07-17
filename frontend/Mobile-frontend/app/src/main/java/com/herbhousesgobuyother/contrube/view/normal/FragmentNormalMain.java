@@ -33,11 +33,11 @@ public class FragmentNormalMain extends Fragment {
     private RelativeLayout pointContainer;
     private RelativeLayout settingContainer;
     private RelativeLayout applySpecialContainer;
-    private RelativeLayout applyPremiumContainer;
-    private RelativeLayout enterSpecialContainer;
-    private RelativeLayout enterPremiumContainer;
-    private RelativeLayout checkSpecialContainer;
-    private RelativeLayout checkPremiumContainer;
+//    private RelativeLayout applyPremiumContainer;
+//    private RelativeLayout enterSpecialContainer;
+//    private RelativeLayout enterPremiumContainer;
+//    private RelativeLayout checkSpecialContainer;
+//    private RelativeLayout checkPremiumContainer;
     private TextView ethereumTextView;
     private ImageView openDrawlayoutImag;
     private SettingHideReceiver settingHideReceiver;
@@ -71,12 +71,12 @@ public class FragmentNormalMain extends Fragment {
         pointContainer = (RelativeLayout) getView().findViewById(R.id.fragment_main_bonus_search);
         settingContainer = (RelativeLayout) getView().findViewById(R.id.fragment_main_setting);
         applySpecialContainer = (RelativeLayout) getView().findViewById(R.id.fragment_main_special);
-        applyPremiumContainer = (RelativeLayout) getView().findViewById(R.id.fragment_main_preferential);
-        enterSpecialContainer = (RelativeLayout) getView().findViewById(R.id.fragment_main_enter_special);
-        enterPremiumContainer = (RelativeLayout) getView().findViewById(R.id.fragment_main_enter_preferential);
+//        applyPremiumContainer = (RelativeLayout) getView().findViewById(R.id.fragment_main_preferential);
+//        enterSpecialContainer = (RelativeLayout) getView().findViewById(R.id.fragment_main_enter_special);
+//        enterPremiumContainer = (RelativeLayout) getView().findViewById(R.id.fragment_main_enter_preferential);
         openDrawlayoutImag = (ImageView) getView().findViewById(R.id.fragment_main_menu);
-        checkSpecialContainer = (RelativeLayout) getView().findViewById(R.id.fragment_main_check_special);
-        checkPremiumContainer = (RelativeLayout) getView().findViewById(R.id.fragment_main_check_preferential);
+//        checkSpecialContainer = (RelativeLayout) getView().findViewById(R.id.fragment_main_check_special);
+//        checkPremiumContainer = (RelativeLayout) getView().findViewById(R.id.fragment_main_check_preferential);
         mLogoText = getView().findViewById(R.id.fragment_main_logo);
         ethereumTextView = getView().findViewById(R.id.fragment_main_store_search_textview);
     }
@@ -92,13 +92,13 @@ public class FragmentNormalMain extends Fragment {
         pointContainer.setOnClickListener(pointClick);
         settingContainer.setOnClickListener(settingClick);
         applySpecialContainer.setOnClickListener(applySpecialClick);
-        applyPremiumContainer.setOnClickListener(applyPremiumClick);
-        enterSpecialContainer.setOnClickListener(enterSpecialClick);
-        enterPremiumContainer.setOnClickListener(enterPremiumClick);
+//        applyPremiumContainer.setOnClickListener(applyPremiumClick);
+//        enterSpecialContainer.setOnClickListener(enterSpecialClick);
+//        enterPremiumContainer.setOnClickListener(enterPremiumClick);
         openDrawlayoutImag.setOnClickListener(openClick);
         controller.setCallBackEvent(callBackEvent);
-        checkSpecialContainer.setOnClickListener(null);
-        checkPremiumContainer.setOnClickListener(null);
+//        checkSpecialContainer.setOnClickListener(null);
+//        checkPremiumContainer.setOnClickListener(null);
         checkIsShowJoinButton();
         checkState();
         registerDisplayButtonReceiver();
@@ -119,10 +119,10 @@ public class FragmentNormalMain extends Fragment {
             if (information.result == 0) {
                 if (isShowJoin) {
                     if (!information.special.equals("1")) {
-                        checkSpecialContainer.setVisibility(View.INVISIBLE);
+//                        checkSpecialContainer.setVisibility(View.INVISIBLE);
                     }
                     if (!information.preferential.equals("1")) {
-                        checkPremiumContainer.setVisibility(View.INVISIBLE);
+//                        checkPremiumContainer.setVisibility(View.INVISIBLE);
                     }
                 }
             }
@@ -131,7 +131,7 @@ public class FragmentNormalMain extends Fragment {
         @Override
         public void onSuccess(ApiV1NormalUserPointGetData information) {
             Log.e("onSuccess", "//" + information.token);
-            ethereumTextView.setText(information.token == null ? "開通" : "轉讓點數");
+            ethereumTextView.setText(information.token == null ? "開通轉換點數" : "轉換平台點數");
         }
     };
 
@@ -171,7 +171,7 @@ public class FragmentNormalMain extends Fragment {
     private View.OnClickListener browseClick = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            if (ethereumTextView.getText().toString().equals("開通")) {
+            if (ethereumTextView.getText().toString().equals("開通轉換點數")) {
                 ((ActivityNormalAdvertisement) getActivity()).goToLdap();
             } else {
                 ((ActivityNormalAdvertisement) getActivity()).goToActivity();
@@ -235,22 +235,22 @@ public class FragmentNormalMain extends Fragment {
      */
     private void registeredState() {
         registeredState = accountInjection.loadRegisteredState();
-        if (registeredState.equals("0") || registeredState.equals("4")) {
-            applySpecialContainer.setVisibility(View.VISIBLE);
-            enterSpecialContainer.setVisibility(View.INVISIBLE);
-            applyPremiumContainer.setVisibility(View.VISIBLE);
-            enterPremiumContainer.setVisibility(View.INVISIBLE);
-        } else if (registeredState.equals("1") || registeredState.equals("5")) {
-            applySpecialContainer.setVisibility(View.INVISIBLE);
-            enterSpecialContainer.setVisibility(View.VISIBLE);
-            applyPremiumContainer.setVisibility(View.VISIBLE);
-            enterPremiumContainer.setVisibility(View.INVISIBLE);
-        } else if (registeredState.equals("2") || registeredState.equals("6")) {
-            applySpecialContainer.setVisibility(View.VISIBLE);
-            enterSpecialContainer.setVisibility(View.INVISIBLE);
-            applyPremiumContainer.setVisibility(View.INVISIBLE);
-            enterPremiumContainer.setVisibility(View.VISIBLE);
-        }
+//        if (registeredState.equals("0") || registeredState.equals("4")) {
+//            applySpecialContainer.setVisibility(View.VISIBLE);
+//            enterSpecialContainer.setVisibility(View.INVISIBLE);
+//            applyPremiumContainer.setVisibility(View.VISIBLE);
+//            enterPremiumContainer.setVisibility(View.INVISIBLE);
+//        } else if (registeredState.equals("1") || registeredState.equals("5")) {
+//            applySpecialContainer.setVisibility(View.INVISIBLE);
+//            enterSpecialContainer.setVisibility(View.VISIBLE);
+//            applyPremiumContainer.setVisibility(View.VISIBLE);
+//            enterPremiumContainer.setVisibility(View.INVISIBLE);
+//        } else if (registeredState.equals("2") || registeredState.equals("6")) {
+//            applySpecialContainer.setVisibility(View.VISIBLE);
+//            enterSpecialContainer.setVisibility(View.INVISIBLE);
+//            applyPremiumContainer.setVisibility(View.INVISIBLE);
+//            enterPremiumContainer.setVisibility(View.VISIBLE);
+//        }
     }
 
     /**
@@ -261,12 +261,12 @@ public class FragmentNormalMain extends Fragment {
         boolean isShowJoin = store.loadIsShowJoin();
         int state = (isShowJoin) ? View.VISIBLE : View.GONE;
 
-        applySpecialContainer.setVisibility(state);
-        applyPremiumContainer.setVisibility(state);
-        enterSpecialContainer.setVisibility(state);
-        enterPremiumContainer.setVisibility(state);
-        checkSpecialContainer.setVisibility(state);
-        checkPremiumContainer.setVisibility(state);
+//        applySpecialContainer.setVisibility(state);
+//        applyPremiumContainer.setVisibility(state);
+//        enterSpecialContainer.setVisibility(state);
+//        enterPremiumContainer.setVisibility(state);
+//        checkSpecialContainer.setVisibility(state);
+//        checkPremiumContainer.setVisibility(state);
         if (isShowJoin) {
             registeredState();
         }

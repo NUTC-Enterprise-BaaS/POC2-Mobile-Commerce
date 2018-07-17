@@ -1,5 +1,8 @@
 package com.androidlibrary.module.backend.data;
 
+import android.util.Log;
+
+import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -7,15 +10,21 @@ import org.json.JSONObject;
  */
 
 public class ApiV1NormalConnectLdapPostData extends JsonData {
-    public String token;
+    public String message;
 
     public ApiV1NormalConnectLdapPostData(String data) {
         super(data);
+        Log.e("LdapPostData", "" + data);
     }
 
     @Override
     protected void processing(JSONObject json) {
         super.processing(json);
-        token = getString(json, "token", "");
+        try {
+            message = json.getJSONObject("message").getString("message");
+        } catch (JSONException e) {
+            Log.e("Check Version ERROR", e.toString());
+            e.printStackTrace();
+        }
     }
 }

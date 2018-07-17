@@ -2,6 +2,7 @@ package com.herbhousesgobuyother.contrube.view.normal;
 
 import android.app.AlertDialog;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -19,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidlibrary.module.backend.data.ApiV1BoundsSendData;
+import com.androidlibrary.module.backend.data.ApiV1NormalBuyVoucherPostData;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.MultiFormatReader;
 import com.google.zxing.NotFoundException;
@@ -93,7 +95,7 @@ public class FragmentQRCodeScan extends Fragment {
     private QRCodeScanController.CallBackEvent callBackEvent = new QRCodeScanController.CallBackEvent() {
         @Override
         public void onError() {
-
+            scanState = false;
         }
 
         @Override
@@ -105,6 +107,15 @@ public class FragmentQRCodeScan extends Fragment {
                 getActivity().onBackPressed();
             }
         }
+
+        @Override
+        public void onSuccess(ApiV1NormalBuyVoucherPostData information) {
+            if (information.message.contains("success")) {
+                scanState = false;
+                Toast.makeText(getContext(), "購買優惠券成功", Toast.LENGTH_LONG).show();
+            }
+        }
+
     };
 
     private View.OnClickListener albumsClick = new View.OnClickListener() {
@@ -120,11 +131,28 @@ public class FragmentQRCodeScan extends Fragment {
     private BarcodeCallback callback = new BarcodeCallback() {
         @Override
         public void barcodeResult(BarcodeResult result) {
-            String data = result.getText();
+            final String data = result.getText();
+            Log.e(data, result.getText());
+            final String[] dataList = data.split(",");
             if (!scanState) {
                 scanState = true;
-                Log.e("data", data);
-                controller.scanRequest(data);
+                new AlertDialog.Builder(getContext())
+                        .setTitle("購買優惠卷")
+                        .setMessage("購買優惠卷將扣除" + dataList[1] + "點，是否確定購買優惠卷？")
+                        .setPositiveButton(R.string.finger_print_dialog_yes, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                controller.checkStorePoint(dataList[0], dataList[1], dataList[2], dataList[3]);
+                            }
+                        })
+                        .setNeutralButton(R.string.finger_print_dialog_no, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                scanState = false;
+                                dialog.dismiss();
+                            }
+                        })
+                        .show();
             }
         }
 

@@ -21,7 +21,7 @@
     <string name="check">審核中</string>
     <string name="scan">掃描/推薦</string>
     <!--<string name="search">推播活動</string>-->
-    <string name="search">轉換點數</string>
+    <string name="search">轉換平台點數</string>
     <string name="bonus_search">紅利點數查詢</string>
     <string name="store_search">搜尋店家</string>
 
@@ -558,6 +558,6 @@
     <string name="fingerprint_success">驗證成功</string>
     <string name="fingerprint_hint">觸碰感測器</string>
     <string name="sign_in">使用指紋辨識進行登入</string>
-
+    <string name="get_point_token">重新取得\n驗證碼</string>
 
 </resources>
