@@ -1,5 +1,6 @@
 package com.herbhousesgobuyother.component.notification;
 
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -9,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
@@ -167,6 +169,13 @@ public class StorePromotionsNotification {
 
     public void start() {
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel("1", "行動電商A紅利數交換平台", NotificationManager.IMPORTANCE_HIGH);
+            channel.setDescription("一則新訊息");
+            channel.enableLights(true);
+            channel.enableVibration(true);
+            notificationManager.createNotificationChannel(channel);
+        }
         notificationManager.notify(0, builder.build());
     }
 }

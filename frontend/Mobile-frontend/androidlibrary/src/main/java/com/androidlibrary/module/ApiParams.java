@@ -91,4 +91,7 @@ public class ApiParams {
     public String inputLdapToken = "";
     public String inputLdapPoint = "";
     public String storeName = "";
+    public String userName = "";
+    public String message = "";
+    public String voucherid  = "";
 }

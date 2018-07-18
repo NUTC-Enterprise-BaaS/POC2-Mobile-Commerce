@@ -12,22 +12,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by 依杰 on 2018/7/14.
+ * Created by 依杰 on 2018/7/17.
  */
 
-public class ApiV1NormalStoreChangePost<T extends ProcessingData> extends AuthTokenPostRequest<T> {
-    public ApiV1NormalStoreChangePost(Context context, ApiParams params) {
+public class ApiV1NormalBuyVoucherPost<T extends ProcessingData> extends AuthTokenPostRequest<T> {
+    public ApiV1NormalBuyVoucherPost(Context context, ApiParams params) {
         super(context, params);
     }
 
     @Override
     protected String getUrl() {
-        return ApiUrls.apiV1ChangePoint(getParams());
+        return ApiUrls.apiV1BuyVoucher(getParams());
     }
 
     @Override
     protected Map<String, String> getPostParams() {
         HashMap<String, String> params = new HashMap<>();
+        params.put(ParamsConst.Key.VOUCHER_MESSAGE, getParams().message);
         params.put(ParamsConst.Key.STORE_POINT, getParams().inputLdapPoint);
         params.put(ParamsConst.Key.SEND_POINT_STORE_NAME, getParams().storeName);
         params.put(ParamsConst.Key.SEND_POINT_USER_NAME, getParams().userName);

@@ -11,19 +11,18 @@ import android.view.animation.OvershootInterpolator;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.androidlibrary.module.sql.GCMTable;
 import com.herbhousesgobuyother.R;
 
 import java.util.ArrayList;
 
 /**
- * Created by 依杰 on 2016/11/24.
+ * Created by 依杰 on 2018/7/16.
  */
 
-public class FragmentGCMRecordAdapt extends RecyclerView.Adapter<FragmentGCMRecordAdapt.ViewHolder> {
+public class FragmentNormalCouponAdapt extends RecyclerView.Adapter<FragmentNormalCouponAdapt.ViewHolder> {
     private LayoutInflater layoutInflater;
-    private ViewHolder viewHolder;
-    private FragmentGCMRecordAdapt.DataStructure data;
+    private FragmentNormalCouponAdapt.ViewHolder viewHolder;
+    private FragmentNormalCouponAdapt.DataStructure data;
     private CallBack mCallBck;
 
 
@@ -31,22 +30,22 @@ public class FragmentGCMRecordAdapt extends RecyclerView.Adapter<FragmentGCMReco
         void onClick(int position);
     }
 
-    public FragmentGCMRecordAdapt(Context context) {
+    public FragmentNormalCouponAdapt(Context context) {
         super();
         layoutInflater = LayoutInflater.from(context);
-        data = new FragmentGCMRecordAdapt.DataStructure();
+        data = new FragmentNormalCouponAdapt.DataStructure();
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = layoutInflater.inflate(R.layout.item_fragment_gcm_record, parent, false);
-        viewHolder = new FragmentGCMRecordAdapt.ViewHolder(view);
+    public FragmentNormalCouponAdapt.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = layoutInflater.inflate(R.layout.item_fragment_coupon, parent, false);
+        viewHolder = new FragmentNormalCouponAdapt.ViewHolder(view);
 
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position) {
+    public void onBindViewHolder(FragmentNormalCouponAdapt.ViewHolder holder, final int position) {
 
         viewHolder.name.setText(data.titleGroup.get(position));
         viewHolder.container.setOnClickListener(new View.OnClickListener() {
@@ -70,14 +69,18 @@ public class FragmentGCMRecordAdapt extends RecyclerView.Adapter<FragmentGCMReco
     public static class DataStructure {
         public ArrayList<String> titleGroup = new ArrayList<>();
         public ArrayList<String> idGroup = new ArrayList<>();
-        public ArrayList<String> userGroup = new ArrayList<>();
     }
 
-    public void setData(DataStructure data) {
+    public void setData(FragmentNormalCouponAdapt.DataStructure data) {
         this.data = data;
         notifyDataSetChanged();
     }
 
+    public void clear(){
+        data.idGroup.clear();
+        data.titleGroup.clear();
+        notifyDataSetChanged();
+    }
 
     @Override
     public int getItemCount() {

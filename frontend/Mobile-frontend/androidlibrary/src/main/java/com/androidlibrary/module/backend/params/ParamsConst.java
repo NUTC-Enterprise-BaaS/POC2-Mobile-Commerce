@@ -69,8 +69,11 @@ public class ParamsConst {
         public static final String CSV_PASSWORD = "csv_password";
         public static final String ID_NUMBER = "id_number";
 
-        public static final String LDAP_TOKEN = "token";
+        public static final String LDAP_TOKEN = "verify_code";
         public static final String STORE_POINT = "point";
         public static final String SEND_POINT_STORE_NAME = "toStor";
+        public static final String SEND_POINT_USER_NAME = "toUser";
+        public static final String VOUCHER_MESSAGE = "message";
+        public static final String VOUCHER_ID = "voucherid";
     }
 }

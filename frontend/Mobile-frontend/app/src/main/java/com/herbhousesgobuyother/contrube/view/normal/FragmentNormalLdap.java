@@ -3,6 +3,7 @@ package com.herbhousesgobuyother.contrube.view.normal;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,7 +62,8 @@ public class FragmentNormalLdap extends Fragment {
     private View.OnClickListener submitClickEvent = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            if (mTokenEditText.getText().toString().equals("") || mTokenEditText.getText().toString().length() != 10) {
+            Log.e("onClick", "" + mTokenEditText.getText().toString().length());
+            if (mTokenEditText.getText().toString().equals("") || mTokenEditText.getText().toString().length() != 4) {
                 Toast.makeText(getContext(), "請填寫正確的序號", Toast.LENGTH_LONG).show();
                 return;
             }
@@ -85,6 +87,7 @@ public class FragmentNormalLdap extends Fragment {
         @Override
         public void onSuccess(ApiV1NormalCreateLdapPostData information) {
             if (information.token != null) {
+                Toast.makeText(getContext(), "開通轉換點數功能成功，序號具有一分鐘時效性，過期後可再次申請", Toast.LENGTH_LONG).show();
                 getActivity().onBackPressed();
                 ((ActivityNormalAdvertisement) getActivity()).setAdvertisementEnable(false);
                 FragmentLauncher.changeToBack(getContext(), R.id.content_container, null, FragmentGCMRecord.class.getName());
@@ -93,10 +96,15 @@ public class FragmentNormalLdap extends Fragment {
 
         @Override
         public void onSuccess(ApiV1NormalConnectLdapPostData information) {
-            if (information.token != null) {
+            if (information.message.contains("success")) {
+                Toast.makeText(getContext(), "開通轉換點數功能成功", Toast.LENGTH_LONG).show();
                 getActivity().onBackPressed();
                 ((ActivityNormalAdvertisement) getActivity()).setAdvertisementEnable(false);
                 FragmentLauncher.changeToBack(getContext(), R.id.content_container, null, FragmentGCMRecord.class.getName());
+            } else if (information.message.contains("fail")) {
+                Toast.makeText(getContext(), "驗證碼錯誤", Toast.LENGTH_LONG).show();
+            } else if (information.message.contains("time")) {
+                Toast.makeText(getContext(), "序號已經過期，請再次產生一組新的序號", Toast.LENGTH_LONG).show();
             }
         }
 

@@ -6,10 +6,10 @@ import android.widget.Toast;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.androidlibrary.module.ApiParams;
-import com.androidlibrary.module.backend.api.ApiV1NormalConnectLdapPost;
-import com.androidlibrary.module.backend.api.ApiV1NormalCreateLdapPost;
-import com.androidlibrary.module.backend.data.ApiV1NormalConnectLdapPostData;
-import com.androidlibrary.module.backend.data.ApiV1NormalCreateLdapPostData;
+import com.androidlibrary.module.backend.api.ApiV1NormalUseVoucherPost;
+import com.androidlibrary.module.backend.api.ApiV1NormalVoucherListGet;
+import com.androidlibrary.module.backend.data.ApiV1NormalUseVoucherData;
+import com.androidlibrary.module.backend.data.ApiV1NormalVoucherListGetData;
 import com.androidlibrary.module.backend.data.ErrorProcessingData;
 import com.androidlibrary.module.backend.params.AccountInjection;
 import com.androidlibrary.module.backend.params.ServerInfoInjection;
@@ -18,10 +18,10 @@ import com.herbhousesgobuyother.R;
 import com.herbhousesgobuyother.contrube.component.dialog.LoadingDialog;
 
 /**
- * Created by 依杰 on 2018/7/13.
+ * Created by 依杰 on 2018/7/16.
  */
 
-public class NormalLdapController {
+public class FragmentNormalCouponControllor {
     private Context context;
     private AccountInjection accountInjection;
     private ServerInfoInjection serverInfoInjection;
@@ -29,7 +29,7 @@ public class NormalLdapController {
     private LoadingDialog loadingDialog;
     private CallBackEvent mCallBackEvent;
 
-    public NormalLdapController(Context context) {
+    public FragmentNormalCouponControllor(Context context) {
         this.context = context;
         accountInjection = new AccountInjection(context);
         serverInfoInjection = new ServerInfoInjection();
@@ -37,18 +37,17 @@ public class NormalLdapController {
         apiParams = new ApiParams(serverInfoInjection, accountInjection);
     }
 
-    public void createLdap() {
-        final LoadingDialog  loadingDialog = new LoadingDialog(context,"創建區塊鏈帳戶，並新增Ldap帳號中，請耐心等待...");
+    public void getStoreList() {
         loadingDialog.show();
-        WebRequest<ApiV1NormalCreateLdapPostData> request = new ApiV1NormalCreateLdapPost<>(context, apiParams);
-        request.processing(new WebRequest.Processing<ApiV1NormalCreateLdapPostData>() {
+        WebRequest<ApiV1NormalVoucherListGetData> request = new ApiV1NormalVoucherListGet<>(context, apiParams);
+        request.processing(new WebRequest.Processing<ApiV1NormalVoucherListGetData>() {
             @Override
-            public ApiV1NormalCreateLdapPostData run(String data) {
-                return new ApiV1NormalCreateLdapPostData(data);
+            public ApiV1NormalVoucherListGetData run(String data) {
+                return new ApiV1NormalVoucherListGetData(data);
             }
-        }).failProcess(new WebRequest.FailProcess<ApiV1NormalCreateLdapPostData>() {
+        }).failProcess(new WebRequest.FailProcess<ApiV1NormalVoucherListGetData>() {
             @Override
-            public void run(String data, ApiV1NormalCreateLdapPostData information) {
+            public void run(String data, ApiV1NormalVoucherListGetData information) {
                 loadingDialog.dismiss();
                 ErrorProcessingData.run(context, data, information);
             }
@@ -59,9 +58,9 @@ public class NormalLdapController {
                 String content = context.getString(R.string.request_load_fail);
                 Toast.makeText(context, content, Toast.LENGTH_LONG).show();
             }
-        }).successProcess(new WebRequest.SuccessProcess<ApiV1NormalCreateLdapPostData>() {
+        }).successProcess(new WebRequest.SuccessProcess<ApiV1NormalVoucherListGetData>() {
             @Override
-            public void run(String data, ApiV1NormalCreateLdapPostData information) {
+            public void run(String data, ApiV1NormalVoucherListGetData information) {
                 loadingDialog.dismiss();
                 if (null != mCallBackEvent) {
                     mCallBackEvent.onSuccess(information);
@@ -70,19 +69,18 @@ public class NormalLdapController {
         }).start();
     }
 
-    public void connectLdap(String token) {
-        final LoadingDialog  loadingDialog = new LoadingDialog(context,"創建區塊鏈帳戶，並整合Ldap帳號中，請耐心等待...");
+    public void useCoupon(String id) {
         loadingDialog.show();
-        apiParams.inputLdapToken = token;
-        WebRequest<ApiV1NormalConnectLdapPostData> request = new ApiV1NormalConnectLdapPost<>(context, apiParams);
-        request.processing(new WebRequest.Processing<ApiV1NormalConnectLdapPostData>() {
+        apiParams.voucherid = id;
+        WebRequest<ApiV1NormalUseVoucherData> request = new ApiV1NormalUseVoucherPost<>(context, apiParams);
+        request.processing(new WebRequest.Processing<ApiV1NormalUseVoucherData>() {
             @Override
-            public ApiV1NormalConnectLdapPostData run(String data) {
-                return new ApiV1NormalConnectLdapPostData(data);
+            public ApiV1NormalUseVoucherData run(String data) {
+                return new ApiV1NormalUseVoucherData(data);
             }
-        }).failProcess(new WebRequest.FailProcess<ApiV1NormalConnectLdapPostData>() {
+        }).failProcess(new WebRequest.FailProcess<ApiV1NormalUseVoucherData>() {
             @Override
-            public void run(String data, ApiV1NormalConnectLdapPostData information) {
+            public void run(String data, ApiV1NormalUseVoucherData information) {
                 loadingDialog.dismiss();
                 ErrorProcessingData.run(context, data, information);
             }
@@ -93,9 +91,9 @@ public class NormalLdapController {
                 String content = context.getString(R.string.request_load_fail);
                 Toast.makeText(context, content, Toast.LENGTH_LONG).show();
             }
-        }).successProcess(new WebRequest.SuccessProcess<ApiV1NormalConnectLdapPostData>() {
+        }).successProcess(new WebRequest.SuccessProcess<ApiV1NormalUseVoucherData>() {
             @Override
-            public void run(String data, ApiV1NormalConnectLdapPostData information) {
+            public void run(String data, ApiV1NormalUseVoucherData information) {
                 loadingDialog.dismiss();
                 if (null != mCallBackEvent) {
                     mCallBackEvent.onSuccess(information);
@@ -111,7 +109,8 @@ public class NormalLdapController {
     public interface CallBackEvent {
         void onError();
 
-        void onSuccess(ApiV1NormalCreateLdapPostData information);
-        void onSuccess(ApiV1NormalConnectLdapPostData information);
+        void onSuccess(ApiV1NormalVoucherListGetData information);
+
+        void onSuccess(ApiV1NormalUseVoucherData information);
     }
 }

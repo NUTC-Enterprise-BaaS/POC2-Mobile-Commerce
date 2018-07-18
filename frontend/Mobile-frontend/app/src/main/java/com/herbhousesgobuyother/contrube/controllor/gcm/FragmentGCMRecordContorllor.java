@@ -9,10 +9,14 @@ import com.androidlibrary.module.ApiParams;
 import com.androidlibrary.module.backend.api.ApiV1NormalStoreChangePost;
 import com.androidlibrary.module.backend.api.ApiV1NormalStoreCreateGet;
 import com.androidlibrary.module.backend.api.ApiV1NormalStoreListGet;
+import com.androidlibrary.module.backend.api.ApiV1NormalSyncPointGet;
+import com.androidlibrary.module.backend.api.ApiV1NormalTokenGet;
 import com.androidlibrary.module.backend.api.ApiV1NormalUserPointGet;
 import com.androidlibrary.module.backend.data.ApiV1NormalStoreChangePostData;
 import com.androidlibrary.module.backend.data.ApiV1NormalStoreCreateGetData;
 import com.androidlibrary.module.backend.data.ApiV1NormalStoreListGetData;
+import com.androidlibrary.module.backend.data.ApiV1NormalSyncPointGetData;
+import com.androidlibrary.module.backend.data.ApiV1NormalTokenGetData;
 import com.androidlibrary.module.backend.data.ApiV1NormalUserPointGetData;
 import com.androidlibrary.module.backend.data.ErrorProcessingData;
 import com.androidlibrary.module.backend.params.AccountInjection;
@@ -32,6 +36,7 @@ public class FragmentGCMRecordContorllor {
     private ApiParams apiParams;
     private LoadingDialog loadingDialog;
     private CallBackEvent mCallBackEvent;
+    private LoadingDialog blockChainDialog;
 
     public FragmentGCMRecordContorllor(Context context) {
         this.context = context;
@@ -39,6 +44,7 @@ public class FragmentGCMRecordContorllor {
         serverInfoInjection = new ServerInfoInjection();
         loadingDialog = new LoadingDialog(context);
         apiParams = new ApiParams(serverInfoInjection, accountInjection);
+        blockChainDialog = new LoadingDialog(context, "等候區塊鏈驗證交易中，請稍後...");
     }
 
     public void getStoreList() {
@@ -66,9 +72,7 @@ public class FragmentGCMRecordContorllor {
             @Override
             public void run(String data, ApiV1NormalStoreListGetData information) {
                 loadingDialog.dismiss();
-                if (null != mCallBackEvent) {
-                    checkStoreName(information);
-                }
+                checkStoreName(information);
             }
         }).start();
     }
@@ -138,10 +142,11 @@ public class FragmentGCMRecordContorllor {
         }).start();
     }
 
-    public void changePoint(String name, String point) {
-        loadingDialog.show();
+    public void changePoint(String name, String point, String user) {
+        blockChainDialog.show();
         apiParams.inputLdapPoint = point;
         apiParams.storeName = name;
+        apiParams.userName = user;
         WebRequest<ApiV1NormalStoreChangePostData> request = new ApiV1NormalStoreChangePost<>(context, apiParams);
         request.processing(new WebRequest.Processing<ApiV1NormalStoreChangePostData>() {
             @Override
@@ -151,20 +156,20 @@ public class FragmentGCMRecordContorllor {
         }).failProcess(new WebRequest.FailProcess<ApiV1NormalStoreChangePostData>() {
             @Override
             public void run(String data, ApiV1NormalStoreChangePostData information) {
-                loadingDialog.dismiss();
+                blockChainDialog.dismiss();
                 ErrorProcessingData.run(context, data, information);
             }
         }).unknownFailRequest(new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                loadingDialog.dismiss();
+                blockChainDialog.dismiss();
                 String content = context.getString(R.string.request_load_fail);
                 Toast.makeText(context, content, Toast.LENGTH_LONG).show();
             }
         }).successProcess(new WebRequest.SuccessProcess<ApiV1NormalStoreChangePostData>() {
             @Override
             public void run(String data, ApiV1NormalStoreChangePostData information) {
-                loadingDialog.dismiss();
+                blockChainDialog.dismiss();
                 if (null != mCallBackEvent) {
                     mCallBackEvent.onSuccess(information);
                 }
@@ -172,7 +177,7 @@ public class FragmentGCMRecordContorllor {
         }).start();
     }
 
-    public void checkStorePoint(final String name, final String point) {
+    public void checkStorePoint(final String name, final String point, final String user) {
         loadingDialog.show();
         WebRequest<ApiV1NormalUserPointGetData> request = new ApiV1NormalUserPointGet<>(context, apiParams);
         request.processing(new WebRequest.Processing<ApiV1NormalUserPointGetData>() {
@@ -197,12 +202,76 @@ public class FragmentGCMRecordContorllor {
             @Override
             public void run(String data, ApiV1NormalUserPointGetData information) {
                 loadingDialog.dismiss();
-                if (Integer.valueOf(point) > information.point) {
+                if (Integer.valueOf(point) > Integer.valueOf(information.point)) {
                     if (null != mCallBackEvent) {
-                        mCallBackEvent.onError("輸入的點數大於目前所擁有的" +information.point+"點");
+                        mCallBackEvent.onError("輸入的點數大於目前所擁有的" + information.point + "點");
                     }
                 } else {
-                    changePoint(name, point);
+                    changePoint(name, point, user);
+                }
+            }
+        }).start();
+    }
+
+    public void getVerifyCode() {
+        loadingDialog.show();
+        WebRequest<ApiV1NormalTokenGetData> request = new ApiV1NormalTokenGet<>(context, apiParams);
+        request.processing(new WebRequest.Processing<ApiV1NormalTokenGetData>() {
+            @Override
+            public ApiV1NormalTokenGetData run(String data) {
+                return new ApiV1NormalTokenGetData(data);
+            }
+        }).failProcess(new WebRequest.FailProcess<ApiV1NormalTokenGetData>() {
+            @Override
+            public void run(String data, ApiV1NormalTokenGetData information) {
+                loadingDialog.dismiss();
+                ErrorProcessingData.run(context, data, information);
+            }
+        }).unknownFailRequest(new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                loadingDialog.dismiss();
+                String content = context.getString(R.string.request_load_fail);
+                Toast.makeText(context, content, Toast.LENGTH_LONG).show();
+            }
+        }).successProcess(new WebRequest.SuccessProcess<ApiV1NormalTokenGetData>() {
+            @Override
+            public void run(String data, ApiV1NormalTokenGetData information) {
+                loadingDialog.dismiss();
+                if (null != mCallBackEvent) {
+                    mCallBackEvent.onSuccess(information);
+                }
+            }
+        }).start();
+    }
+
+    public void syncPoint(String url) {
+        loadingDialog.show();
+        WebRequest<ApiV1NormalSyncPointGetData> request = new ApiV1NormalSyncPointGet<>(context, apiParams, url);
+        request.processing(new WebRequest.Processing<ApiV1NormalSyncPointGetData>() {
+            @Override
+            public ApiV1NormalSyncPointGetData run(String data) {
+                return new ApiV1NormalSyncPointGetData(data);
+            }
+        }).failProcess(new WebRequest.FailProcess<ApiV1NormalSyncPointGetData>() {
+            @Override
+            public void run(String data, ApiV1NormalSyncPointGetData information) {
+                loadingDialog.dismiss();
+                ErrorProcessingData.run(context, data, information);
+            }
+        }).unknownFailRequest(new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                loadingDialog.dismiss();
+                String content = context.getString(R.string.request_load_fail);
+                Toast.makeText(context, content, Toast.LENGTH_LONG).show();
+            }
+        }).successProcess(new WebRequest.SuccessProcess<ApiV1NormalSyncPointGetData>() {
+            @Override
+            public void run(String data, ApiV1NormalSyncPointGetData information) {
+                loadingDialog.dismiss();
+                if (null != mCallBackEvent) {
+                    mCallBackEvent.onSuccess(information);
                 }
             }
         }).start();
@@ -220,5 +289,9 @@ public class FragmentGCMRecordContorllor {
         void onSuccess(ApiV1NormalStoreCreateGetData information);
 
         void onSuccess(ApiV1NormalStoreChangePostData information);
+
+        void onSuccess(ApiV1NormalTokenGetData information);
+
+        void onSuccess(ApiV1NormalSyncPointGetData information);
     }
 }

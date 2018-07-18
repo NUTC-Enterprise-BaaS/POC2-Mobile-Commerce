@@ -315,7 +315,21 @@ public class ApiUrls {
         return getDomain(params) + "api/v1/stor/rate";
     }
 
+    public static String apiV1Token(ApiParams params) {
+        return getDomain(params) + "api/v1/get/getverifycode";
+    }
 
+    public static String apiV1BuyVoucher(ApiParams params) {
+        return getDomain(params) + "api/v1/buy/voucher";
+    }
+
+    public static String apiVoucherList(ApiParams params) {
+        return getDomain(params) + "api/v1/voucher/list";
+    }
+
+    public static String apiUseVoucher(ApiParams params) {
+        return getDomain(params) + "api/v1/use/voucher";
+    }
 
     public static String getDomain(ApiParams params) {
         String protocol = (params.isSSL) ? "https" : "http";

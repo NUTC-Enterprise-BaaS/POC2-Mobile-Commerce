@@ -33,23 +33,46 @@
             android:textSize="@dimen/toolbar_text_size" />
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/text_token"
+    <RelativeLayout
+        android:id="@+id/layout_token"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/toolbar_height"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
         android:layout_below="@id/toolbar"
-        android:background="@color/ColorGeneralTheme"
-        android:gravity="center"
-        android:textColor="@color/ColorWhite"
-        android:textSize="16sp" />
+        android:background="@color/ColorGeneralTheme">
+
+        <Button
+            android:id="@+id/button_token"
+            android:layout_width="@dimen/fragment_normal_point_transfer_button_width"
+            android:layout_height="@dimen/toolbar_height"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/fragment_normal_point_transfer_button_margin_right"
+            android:layout_marginRight="@dimen/fragment_normal_point_transfer_button_margin_right"
+            android:layout_marginTop="@dimen/fragment_normal_point_transfer_button_margin_top"
+            android:background="@drawable/fragment_normal_point_transfer_button_background"
+            android:text="@string/get_point_token"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/fragment_normal_point_text_size" />
+
+        <TextView
+            android:id="@+id/text_token"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textColor="@color/ColorWhite"
+            android:textIsSelectable="true"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/fragment_gcm_record_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/text_token"
+        android:layout_below="@id/layout_token"
         android:layout_centerInParent="true"
         android:background="@color/ColorWhite" />
 

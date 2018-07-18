@@ -10,7 +10,8 @@ import org.json.JSONObject;
  */
 
 public class ApiV1NormalStoreChangePostData extends JsonData {
-    public int statusCode;
+    public String status;
+    public String url;
 
     public ApiV1NormalStoreChangePostData(String data) {
         super(data);
@@ -21,8 +22,9 @@ public class ApiV1NormalStoreChangePostData extends JsonData {
     protected void processing(JSONObject json) {
         super.processing(json);
         try {
-            statusCode = json.getJSONObject("message").getInt("statusCode");
-            Log.e("token", statusCode + "rate");
+            status = json.getJSONObject("message").getString("status");
+            url = json.getJSONObject("message").getString("notice");
+            Log.e("token", status);
         } catch (JSONException e) {
             Log.e("Login ERROR", e.toString());
             e.printStackTrace();

@@ -14,4 +14,10 @@ public class LoadingDialog extends ProgressDialog {
         setMessage(context.getString(com.androidlibrary.R.string.loading_dialog_message));
         this.setCancelable(false);
     }
+
+    public LoadingDialog(Context context,String message) {
+        super(context);
+        setMessage(message);
+        this.setCancelable(false);
+    }
 }

@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.herbhousesgobuyother.R;
-import com.herbhousesgobuyother.contrube.controllor.FragmentGCMRecordDialogController;
 
 /**
  * Created by 依杰 on 2018/5/10.
@@ -26,7 +25,6 @@ public class FragmentGCMRecordDialog extends AlertDialog.Builder {
     private TextView mRateText;
     private View view;
     private FragmentGCMRecordDialog.DialogEvent mEvent;
-    private FragmentGCMRecordDialogController controllor;
 
     public FragmentGCMRecordDialog(Context context) {
         super(context);
@@ -52,7 +50,6 @@ public class FragmentGCMRecordDialog extends AlertDialog.Builder {
     }
 
     private void init() {
-        controllor = new FragmentGCMRecordDialogController(getContext());
         finView();
         mSubmitButton.setOnClickListener(submitClick);
         mCancelButton.setOnClickListener(cancleClick);
@@ -64,9 +61,11 @@ public class FragmentGCMRecordDialog extends AlertDialog.Builder {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() > 0)
-                    mResultText.setText(String.valueOf(Integer.valueOf(String.valueOf(charSequence)) * 2));
-                else mResultText.setText("0");
+                if (charSequence.length() > 0) {
+                    if (mRateText.getText() != null) {
+                        mResultText.setText(String.valueOf(Integer.valueOf(String.valueOf(charSequence)) * Integer.valueOf(mRateText.getText().toString())));
+                    }
+                }else mResultText.setText("0");
             }
 
             @Override
@@ -74,8 +73,6 @@ public class FragmentGCMRecordDialog extends AlertDialog.Builder {
 
             }
         });
-        controllor.setmCallBackEvent(callBackEvent);
-
     }
 
     public void setEditDialogEvent(FragmentGCMRecordDialog.DialogEvent clickEvent) {
@@ -108,11 +105,4 @@ public class FragmentGCMRecordDialog extends AlertDialog.Builder {
         return mTitleText;
     }
 
-    private FragmentGCMRecordDialogController.CallBackEvent callBackEvent = new FragmentGCMRecordDialogController.CallBackEvent() {
-        @Override
-        public void onError() {
-
-        }
-
-    };
 }

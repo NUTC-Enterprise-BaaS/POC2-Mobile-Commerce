@@ -9,15 +9,14 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 /**
- * Created by 依杰 on 2018/7/14.
+ * Created by 依杰 on 2018/7/18.
  */
 
-public class ApiV1NormalStoreListGetData extends JsonData {
-    public String status;
+public class ApiV1NormalVoucherListGetData extends JsonData {
     public ArrayList<String> storeNameGroup;
-    public ArrayList<String> userNameGroup;
+    public ArrayList<String> idGroup;
 
-    public ApiV1NormalStoreListGetData(String data) {
+    public ApiV1NormalVoucherListGetData(String data) {
         super(data);
         Log.e("data", data);
     }
@@ -27,18 +26,17 @@ public class ApiV1NormalStoreListGetData extends JsonData {
         super.processing(json);
         JSONArray itemsArray;
         storeNameGroup = new ArrayList<>();
-        userNameGroup = new ArrayList<>();
+        idGroup = new ArrayList<>();
         try {
-            status = json.getJSONObject("list").getString("status");
-            itemsArray = json.getJSONObject("list").getJSONArray("list");
+            itemsArray = json.getJSONArray("message");
 
             iteration(itemsArray, new OnObjectIteration() {
                 @Override
                 public void get(int index, JSONObject object) {
-                    String storeName = getString(object, "stor", "");
-                    String userName = getString(object, "username", "");
+                    String id = getString(object, "id", "");
+                    String storeName = getString(object, "voucher_name", "");
                     storeNameGroup.add(storeName);
-                    userNameGroup.add(userName);
+                    idGroup.add(id);
                 }
             });
         } catch (JSONException e) {

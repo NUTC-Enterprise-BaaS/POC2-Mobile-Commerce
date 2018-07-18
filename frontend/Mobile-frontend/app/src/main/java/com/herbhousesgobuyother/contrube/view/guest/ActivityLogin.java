@@ -133,7 +133,7 @@ public class ActivityLogin extends AppCompatActivity {
     protected View.OnClickListener fingerPrintClick = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            if (mPreferencesHelperImp.getIsUseFingerPrint()) {
+            if (mPreferencesHelperImp.getIsUseFingerPrint()&&accountInjection.loadIsKeepLogin()) {
                 FingerprintAuthenticationDialogFragment fragment
                         = new FingerprintAuthenticationDialogFragment();
                 fragment.show(getFragmentManager(), DIALOG_FRAGMENT_TAG);
