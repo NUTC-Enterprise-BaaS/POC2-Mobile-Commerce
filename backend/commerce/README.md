@@ -1,2 +1,1 @@
-<<<<<<< HEAD
 # commerec api server
