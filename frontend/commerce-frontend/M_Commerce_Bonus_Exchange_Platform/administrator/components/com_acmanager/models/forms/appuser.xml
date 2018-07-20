@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_ACMANAGER_FORM_LBL_APPUSER_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="user_id" type="text" size="40" class="inputbox required validate-numeric"
+                                                    
+			label="COM_ACMANAGER_FORM_LBL_APPUSER_USER_ID"
+			description="COM_ACMANAGER_FORM_DESC_APPUSER_USER_ID" 
+			default="" 
+			filter="safehtml"
+			hint="End user id"
+                                                     /> 
+
+       <field name="device_id" type="textarea"  class="required"
+		rows="3" cols="30"
+        label="COM_ACMANAGER_FORM_LBL_APPUSER_DEVICE_ID"
+        description="COM_ACMANAGER_FORM_DESC_APPUSER_DEVICE_ID"
+        hint="Mobile device id"
+          /> 
+
+		<field name="type" type="radio" class="btn-group btn-group-yesno required"
+            label="COM_ACMANAGER_FORM_LBL_APPUSER_TYPE"
+            description="COM_ACMANAGER_FORM_DESC_APPUSER_TYPE" 
+            default="Android">
+        <option value="Android">Android</option>
+		<option value="iOS">iOS</option>
+		<!--<option value="windows">Windows</option>-->
+		</field>   
+
+       <field name="created_on" type="calendar" class="inputbox"
+        
+        
+         default="0000-00-00 00:00:00" 
+        
+            label="COM_ACMANAGER_FORM_LBL_APPUSER_CREATED_ON"
+            description="COM_ACMANAGER_FORM_DESC_APPUSER_CREATED_ON" 
+        format=" %Y-%m-%d %H:%M:%S"
+        filter="safehtml" /> 
+
+       <field name="active" type="radio" class="btn-group btn-group-yesno"
+            label="COM_ACMANAGER_FORM_LBL_APPUSER_ACTIVE"
+            description="COM_ACMANAGER_FORM_DESC_APPUSER_ACTIVE" 
+            default="1"> 
+        <option value="1">JYES</option>
+		<option value="0">JNO</option>
+		</field>                                   
+
+
+	</fieldset>
+
+</form>

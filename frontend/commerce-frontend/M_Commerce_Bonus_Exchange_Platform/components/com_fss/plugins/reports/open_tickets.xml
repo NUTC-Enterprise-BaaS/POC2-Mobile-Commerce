@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<report>
+  <title>OPEN_TICKETS</title>
+  <description>OPEN_TICKETS_DESC</description>
+
+  <sql>
+    SELECT
+
+    count(*) as open_count,
+    IFNULL(u.username, "Unknown") as username,
+    IFNULL(u.name, "Unknown") as name,
+    MIN(opened) as oldest_open,
+    MIN(lastupdate) as oldest_lastupdate,
+    t.admin_id
+
+    FROM #__fss_ticket_ticket as t
+
+    LEFT JOIN #__users as u ON u.id = t.admin_id
+
+    WHERE ticket_status_id IN
+    ({status})
+
+    AND t.source != 'email' AND t.source != 'email_declined'
+
+    GROUP BY admin_id
+
+    ORDER BY open_count DESC
+  </sql>
+
+  <totals>1</totals>
+  
+  <field name="username" totalheader="1" link="index.php?option=com_fss&amp;view=admin_support&amp;searchtype=advanced&amp;what=search&amp;status=&amp;handler={admin_id}">HANDLER</field>
+  <field name="name">NAME</field>
+  <field name="oldest_open" format="date" dateformat="DATE_FORMAT_LC1">OLDEST_OPEN</field>
+  <field name="oldest_lastupdate" format="date" dateformat="DATE_FORMAT_LC1">OLDEST_LAST_ACTIVE</field>
+  <field name="open_count" sum="1">OPEN_TICKETS_</field>
+
+  <filter>
+    <name>status</name>
+    <type>normal</type>
+    <sql>SELECT * FROM #__fss_ticket_status</sql>
+    <key>id</key>
+    <display>title</display>
+    <translate>1</translate>
+
+    <default>all_open</default>
+
+    <extra key="all_open" value="SELECT id FROM  #__fss_ticket_status as s WHERE is_closed = 0">ALL_OPEN</extra>
+    <extra key="all" value="SELECT id FROM  #__fss_ticket_status as s WHERE 1">ALL_TICKETS</extra>
+
+    <title>Status</title>
+  </filter>
+
+</report>

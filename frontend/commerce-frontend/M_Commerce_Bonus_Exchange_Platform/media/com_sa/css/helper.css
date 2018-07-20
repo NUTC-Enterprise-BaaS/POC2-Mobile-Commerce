@@ -1,0 +1,57 @@
+.modsa #undo {
+display:block;
+}
+
+.ad-price-lable {
+font-weight:normal;
+padding-left:0;
+padding-right:5px;
+}
+
+.ad_ignore_button {
+cursor:pointer;
+float:right;
+}
+
+.ad_ignore_button_span {
+margin:0;
+position:absolute;
+right:5px;
+top:5px;
+width:auto!important;
+}
+
+.ad_prev_anchor {
+font-weight:bold;
+}
+
+.ad_prev_anchor:active {
+padding:0;
+text-decoration:none;
+}
+
+.ad_prev_first {
+font-size:13px;
+font-weight:bold;
+padding-left:5px;
+}
+
+.ad_prev_img {
+padding-left:5px;
+}
+
+.ad_prev_main {
+margin:5px;
+position:relative;
+width: auto;
+display: inline-block;
+}
+
+.ad_prev_main:hover .ad_ignore_button_span {
+display:block!important;
+}
+
+.ad_prev_third {
+font-size:13px;
+padding-left:5px;
+}

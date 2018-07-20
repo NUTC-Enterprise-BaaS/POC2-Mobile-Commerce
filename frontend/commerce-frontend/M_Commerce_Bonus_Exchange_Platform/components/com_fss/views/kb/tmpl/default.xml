@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="KB_LIST_ALL_ARTICLES">
+		<help url = "http://www.freestyle-joomla.com/comhelp/fss/frontend-view-kb-default" />
+		<message></message>
+	</layout>
+	<state>
+		<name>KB_LIST_ALL_ARTICLES</name>
+		<url addpath="/administrator/components/com_fss/elements">
+      <param name="prodid" type="sql" default="" label="Select Product" query="(SELECT '' as id, 'Show Product List' as title) UNION (SELECT id, title FROM #__fss_prod ORDER BY ordering)" key_field="id" value_field="title" />
+      <param name="catid" type="sql" default="" label="Select Category" query="(SELECT '' as id, 'Show Category List' as title) UNION (SELECT id, title FROM #__fss_kb_cat ORDER BY ordering)" key_field="id" value_field="title" />
+    </url>
+		<params>
+
+			<param name="@spacer" type="spacer" default="Main Page" label="" description="" />
+			<param name="main_show_prod" type="radio" default="-1" label="Show Product List" description="When viewing main page, should product list be shown?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</param>
+			<param name="main_show_cat" type="radio" default="-1" label="Show Category List" description="When viewing main page, should category list be shown?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</param>
+			<param name="main_show_sidebyside" type="radio" default="-1" label="Layout Side By Side" description="When viewing main page, should Products and Categories be show side by side when both are displayed?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</param>
+			<param name="main_show_search" type="radio" default="-1" label="Show Search Articles" description="When viewing main page, should the search articles be shown?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</param>
+
+
+			<param name="@spacer" type="spacer" default="Main Page - Products List Settings" label="" description="" />
+      <param name="main_prod_colums" type="list" default="-1" label="Number Of Product Columns" description="When viewing main page, how many columns should products be listed in?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">3</option>
+      </param>
+
+      <param name="main_prod_search" type="radio" default="-1" label="Show Product Search" description="When viewing main page, should the product search be enabled?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</param>
+			<param name="main_prod_pages" type="radio" default="-1" label="Use pages for product list" description="When viewing main page, should the list of products be grouped by page?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</param>
+
+
+			<param name="@spacer" type="spacer" default="Main Page - Category List Settings" label="" description="" />
+			<param name="main_cat_mode" type="list" default="-1" label="Category View Mode" description="When viewing main page, how should categories be listed?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="normal">Normal List</option>
+				<option value="accordian">Accordian With Articles</option>
+				<option value="links">Links to Articles</option>
+			</param>
+			<param name="main_cat_arts" type="list" default="-1" label="Articles Sublist Mode" description="When viewing main page, and categories has a sublist of articles, how should they be displayed?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="normal">Normal List with Link</option>
+				<option value="popup">List with popups</option>
+			</param>
+      <param name="main_cat_colums" type="list" default="-1" label="Number Of Category Columns" description="When viewing main page, how many columns should categories be listed in?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">3</option>
+      </param>
+
+
+      <param name="@spacer" type="spacer" default="When Product Selected" label="" description="" />
+			<param name="prod_cat_mode" type="list" default="-1" label="Category View Mode" description="When viewing a product page, how should categories be listed?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="normal">Normal List</option>
+				<option value="accordian">Accordian With Articles</option>
+				<option value="links">Links to Articles</option>
+			</param>
+			<param name="prod_cat_arts" type="list" default="-1" label="Articles Sublist Mode" description="When viewing a product page, and categories has a sublist of articles, how should they be displayed?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="normal">Normal List with Link</option>
+				<option value="popup">List with popups</option>
+			</param>
+      <param name="prod_cat_colums" type="list" default="-1" label="Number Of Category Columns" description="When viewing a product page, how many columns should categories be listed in?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">3</option>
+      </param>
+      <param name="prod_search" type="radio" default="-1" label="Show Search Articles" description="When viewing a product page, should the 'search articles' be shown?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</param>
+
+			<param name="@spacer" type="spacer" default="When Product and Category Selected" label="" description="" />
+			<param name="cat_cat_mode" type="list" default="-1" label="Sub Category View Mode" description="When product and category selected, how should sub categories be listed?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="normal">Normal List</option>
+				<option value="accordian">Accordian With Articles</option>
+				<option value="links">Links to Articles</option>
+			</param>
+			<param name="cat_cat_arts" type="list" default="-1" label="Articles Sublist Mode" description="When product and category selected, how should articles be displayed?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="normal">Normal List with Link</option>
+				<option value="popup">List with popups</option>
+			</param>
+			<param name="cat_art_pages" type="radio" default="-1" label="Use pages for article list" description="When product and category selected, should the list of articles be grouped by page?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</param>
+      <param name="cat_search" type="radio" default="-1" label="Show Search Articles" description="When product and category selected, should the 'search articles' be shown?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </param>
+      <param name="cat_desc" type="radio" default="-1" label="Show Category Description" description="When product and category selected, should the description of the category?">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </param>
+
+		</params>
+
+
+		<fields name="request">
+			<fieldset name="request" label="KB_MAIN_SETTINGS">
+				<field name="prodid" type="sql" default="" label="KB_SEL_PROD" query="(SELECT '' as id, 'Show Product List' as title) UNION (SELECT id, title FROM #__fss_prod ORDER BY ordering)" key_field="id" value_field="title" />
+        <field name="catid" type="sql" default="" label="KB_SEL_CAT" query="(SELECT '' as id, 'Show Category List' as title) UNION (SELECT id, title FROM #__fss_kb_cat ORDER BY ordering)" key_field="id" value_field="title" />
+      </fieldset>
+		</fields>
+
+		<fields name="params">
+			<fieldset name="mainpage"	label="KB_MAIN_PAGE">
+				<field name="main_show_prod" type="radio" default="-1" label="KB_MAIN_SHOW_PROD" description="VIEWHELP_KB_MAIN_SHOW_PROD">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="main_show_cat" type="radio" default="-1" label="KB_MAIN_SHOW_CAT" description="VIEWHELP_KB_MAIN_SHOW_CAT">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="main_show_sidebyside" type="radio" default="-1" label="KB_MAIN_SHOW_SIDEBYSIDE" description="VIEWHELP_KB_MAIN_SHOW_SIDEBYSIDE">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="main_show_search" type="radio" default="-1" label="KB_MAIN_SHOW_SEARCH" description="VIEWHELP_KB_MAIN_SHOW_SEARCH">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="mpprodlist"	label="KB_MAIN_PAGE_PROD">
+        <field name="main_prod_colums" type="list" default="-1" label="KB_MAIN_PROD_COLUMS" description="VIEWHELP_KB_MAIN_PROD_COLUMS">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">3</option>
+        </field>
+        <field name="main_prod_search" type="radio" default="-1" label="KB_MAIN_PROD_SEARCH" description="VIEWHELP_KB_MAIN_PROD_SEARCH">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="main_prod_pages" type="radio" default="-1" label="KB_MAIN_PROD_PAGES" description="VIEWHELP_KB_MAIN_PROD_PAGES">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			
+    </fieldset>
+
+			<fieldset name="mpcatlist"	label="KB_MAIN_PAGE_CAT">
+				<field name="main_cat_mode" type="list" default="-1" label="kb_main_cat_mode" description="VIEWHELP_KB_MAIN_CAT_MODE">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="normal">KB_MAIN_CAT_MODE_NORMAL</option>
+					<option value="accordian">KB_MAIN_CAT_MODE_ACCORDIAN</option>
+					<option value="links">KB_MAIN_CAT_MODE_LINKS</option>
+				</field>
+				<field name="main_cat_arts" type="list" default="-1" label="KB_MAIN_CAT_ARTS" description="VIEWHELP_KB_MAIN_CAT_ARTS">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="normal">KB_MAIN_CAT_ARTS_NORMAL</option>
+					<option value="popup">KB_MAIN_CAT_ARTS_POPUP</option>
+				</field>
+        <field name="main_cat_colums" type="list" default="-1" label="KB_MAIN_PROD_COLUMS" description="VIEWHELP_KB_MAIN_CAT_COLUMS">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">3</option>
+        </field>
+      </fieldset>
+
+			<fieldset name="prodsel"	label="KB_PROD_SEL">
+				<field name="prod_cat_mode" type="list" default="-1" label="KB_PROD_CAT_MODE" description="VIEWHELP_KB_PROD_CAT_MODE">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="normal">KB_MAIN_CAT_MODE_NORMAL</option>
+					<option value="accordian">KB_MAIN_CAT_MODE_ACCORDIAN</option>
+					<option value="links">KB_MAIN_CAT_MODE_LINKS</option>
+				</field>
+				<field name="prod_cat_arts" type="list" default="-1" label="KB_PROD_CAT_ARTS" description="VIEWHELP_KB_PROD_CAT_ARTS">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="normal">KB_MAIN_CAT_ARTS_NORMAL</option>
+					<option value="popup">KB_MAIN_CAT_ARTS_POPUP</option>
+				</field>
+        <field name="prod_cat_colums" type="list" default="-1" label="KB_PROD_CAT_COLUMS" description="VIEWHELP_KB_PROD_CAT_COLUMS">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">3</option>
+        </field>
+        <field name="prod_search" type="radio" default="-1" label="KB_PROD_SEARCH" description="VIEWHELP_KB_PROD_SEARCH">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="prodcatsel"	label="KB_PROD_CAT_SEL">
+				<field name="cat_cat_mode" type="list" default="-1" label="KB_CAT_CAT_MODE" description="VIEWHELP_KB_CAT_CAT_MODEVIEWHELP_KB_CAT_CAT_MODE">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="normal">KB_CAT_CAT_MODE_NORMAL</option>
+					<option value="accordian">KB_CAT_CAT_MODE_ACCORDIAN</option>
+					<option value="links">KB_CAT_CAT_MODE_LINKS</option>
+				</field>
+				<field name="cat_cat_arts" type="list" default="-1" label="KB_CAT_CAT_ARTS" description="VIEWHELP_KB_CAT_CAT_ARTS">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="normal">KB_CAT_CAT_ARTS_NORMAL</option>
+					<option value="popup">KB_CAT_CAT_ARTS_POPUP</option>
+				</field>
+				<field name="cat_art_pages" type="radio" default="-1" label="KB_CAT_ART_PAGES" description="VIEWHELP_KB_CAT_ART_PAGES">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+        <field name="cat_search" type="radio" default="-1" label="KB_CAT_SEARCH" description="VIEWHELP_KB_CAT_SEARCH">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="cat_desc" type="radio" default="-1" label="KB_CAT_DESC" description="VIEWHELP_KB_CAT_DESC">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+			</fieldset>
+		</fields>
+
+	</state>
+</metadata>

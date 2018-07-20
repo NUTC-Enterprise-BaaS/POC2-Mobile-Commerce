@@ -1,0 +1,46 @@
+@import "mixins.less";
+
+body div#discuss-wrapper {
+	.btn-primary {
+		color: #fff!important;
+		background-color: #f57d62!important;
+		border-color: #f57d62!important;
+		background-image: none !important;
+
+		&:hover {
+			webkit-transition: background 0.1s ease-in-out;
+			-moz-transition: background 0.1s ease-in-out;
+			-o-transition: background 0.1s ease-in-out;
+			transition: background 0.1s ease-in-out;
+			background-color: #e74c3c!important;
+		}
+	}
+
+	.discuss-toolbar {
+		.nav {
+			> li {
+				> a {
+					overflow: visible;
+				}
+
+				> .dropdown-toggle_ {
+					 > .label-notification {
+						padding: 2px 4px;
+					}
+
+					> .label {
+						position: absolute;
+						top: -7px;
+						right: -6px;
+						z-index: 2;
+					}
+				}				
+			}
+		}
+	}
+}
+
+#discuss-dialog {
+    bottom: auto !important;
+    overflow: hidden !important;
+}

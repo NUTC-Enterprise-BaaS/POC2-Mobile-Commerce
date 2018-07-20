@@ -1,0 +1,30 @@
+<?php
+
+/*
+This plugin is now disabled as AcySMS are publishing a alternate version of this plugin with the same classname, but a different filename.
+This is causing issues when updating the Freestyle Support component.
+
+If you wish to use AcySMS intergation, please use the plugin provided by AcySMS.
+*/
+
+if (!class_exists("SupportActionsAcySMS"))
+{
+	class SupportActionsAcySMS extends SupportActionsPlugin
+	{
+		var $title = "AcySMS Plugin";
+		var $description = "This plugin will allow you to notify your user via SMS each time a ticket is submitted or answered";
+
+		function User_Open($ticket, $params)
+		{
+			JPluginHelper::importPlugin('acysms');
+			$dispatcher = JDispatcher::getInstance();
+			$dispatcher->trigger('onAcySMS_FreestyleSupportSendNotification', array($ticket, $params,'ticketCreated'));
+		}
+
+		function User_Reply($ticket, $params){
+			JPluginHelper::importPlugin('acysms');
+			$dispatcher = JDispatcher::getInstance();
+			$dispatcher->trigger('onAcySMS_FreestyleSupportSendNotification', array($ticket, $params,'ticketReplied'));
+		}
+	}
+}

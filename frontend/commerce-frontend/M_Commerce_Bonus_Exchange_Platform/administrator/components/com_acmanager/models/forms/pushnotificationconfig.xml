@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+        <field name="id" type="text" default="0" label="COM_ACMANAGER_FORM_LBL_PUSHNOTIFICATIONCONFIG_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="type" type="radio" class="btn-group btn-group-yesno required"
+            label="COM_ACMANAGER_FORM_LBL_PUSHNOTIFICATIONCONFIG_TYPE"
+            description="COM_ACMANAGER_FORM_DESC_PUSHNOTIFICATIONCONFIG_TYPE" 
+            default="Android">
+        <option value="Android">Android</option>
+		<option value="iOS">Ios</option>
+		<!--<option value="windows">Windows</option>-->
+		</field>   
+
+       <field name="name" type="text" size="40" class="inputbox required"
+                                                    
+            label="COM_ACMANAGER_FORM_LBL_PUSHNOTIFICATIONCONFIG_NAME"
+            description="COM_ACMANAGER_FORM_DESC_PUSHNOTIFICATIONCONFIG_NAME" 
+            default=""  hint="name" /> 
+
+       <field name="active" type="radio" class="btn-group btn-group-yesno"
+            label="COM_ACMANAGER_FORM_LBL_PUSHNOTIFICATIONCONFIG_ACTIVE"
+            description="COM_ACMANAGER_FORM_DESC_PUSHNOTIFICATIONCONFIG_ACTIVE" 
+            default="0"> 
+            <option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>  
+
+       <field name="is_prod" type="radio" class="btn-group btn-group-yesno "                                                    
+            label="COM_ACMANAGER_FORM_LBL_PUSHNOTIFICATIONCONFIG_IS_PROD"
+            description="COM_ACMANAGER_FORM_DESC_PUSHNOTIFICATIONCONFIG_IS_PROD" 
+            default="1">
+            <option value="1">Production</option>
+			<option value="0">Development</option>
+		</field> 
+
+       <!--<field name="params" type="textarea" buttons="true"
+        class="inputbox"
+        filter="safehtml"
+        default="" 
+        label="COM_ACMANAGER_FORM_LBL_PUSHNOTIFICATIONCONFIG_PARAMS"
+        description="COM_ACMANAGER_FORM_DESC_PUSHNOTIFICATIONCONFIG_PARAMS"  />
+        -->
+        
+    <fields name="params" label="params for ios">
+			<fieldset name="server_config">
+				
+				<field name="server_key" type="text" size="40" class="inputbox"
+														
+				label="COM_ACMANAGER_FORM_LBL_PUSHNOTIFICATIONCONFIG_SERVER_KEY"
+				description="COM_ACMANAGER_FORM_DESC_PUSHNOTIFICATIONCONFIG_SERVER_KEY" 
+				default="" /> 
+				
+				<field name="project_number" type="text" size="40" class="inputbox"
+														
+				label="COM_ACMANAGER_FORM_LBL_PUSHNOTIFICATIONCONFIG_PROJ_NM"
+				description="COM_ACMANAGER_FORM_DESC_PUSHNOTIFICATIONCONFIG_PROJ_NM" 
+				default="" />
+				
+				<field name="passphrase" type="text" size="40" class="inputbox"
+														
+				label="COM_ACMANAGER_FORM_LBL_PUSHNOTIFICATIONCONFIG_IOS_PASSPHRASE"
+				description="COM_ACMANAGER_FORM_DESC_PUSHNOTIFICATIONCONFIG_IOS_PASSPHRASE" 
+				default="" />
+				 
+				<!-- <field name="server_key" type="text" size="40" class="inputbox"
+														
+				label="COM_ACMANAGER_FORM_LBL_PUSHNOTIFICATIONCONFIG_SERVER_KEY"
+				description="COM_ACMANAGER_FORM_DESC_PUSHNOTIFICATIONCONFIG_SERVER_KEY" 
+				default="" /> -->
+
+			</fieldset>
+	</fields>
+        
+
+	</fieldset>
+	
+
+
+</form>

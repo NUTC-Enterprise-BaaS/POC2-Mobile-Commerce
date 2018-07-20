@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="template" client="site" method="upgrade">
+	<name>wanderers</name>
+	<version>2.0.10</version>
+	<creationDate>12th July 2014</creationDate>
+	<author>Stack Ideas Sdn Bhd</author>
+	<authorEmail>support@stackideas.com</authorEmail>
+	<copyright>Copyright (C) 2010 - 2014 Stack Ideas Sdn Bhd. All rights reserved.</copyright>
+	<description>TPL_WANDERERS_DESCRIPTION</description>
+	<scriptFile>script.php</scriptFile>
+	<files>
+			<folder>bootstrap</folder>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>less</folder>
+		<folder>scripts</folder>
+		<file>component.php</file>
+		<file>en-GB.tpl_wanderers.ini</file>
+		<file>en-GB.tpl_wanderers.sys.ini</file>
+		<file>error.php</file>
+		<file>favicon.ico</file>
+		<file>framework.php</file>
+		<file>index.php</file>
+		<file>script.php</file>
+		<file>templateDetails.xml</file>
+		<file>template_preview.png</file>
+		<file>template_thumbnail.png</file>
+
+	</files>
+	<positions>
+		<position>position-top</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-7</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-4</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.tpl_wanderers.ini</language>
+		<language tag="en-GB">en-GB.tpl_wanderers.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="show_heading_title" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_WANDERERS_SHOW_HEADING_TITLE" description="TPL_WANDERERS_SHOW_HEADING_TITLE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="title" default="Wanderers" label="TPL_WANDERERS_FORM_SITE_TITLE" description="TPL_WANDERERS_FORM_SITE_TITLE_DESC" filter="string"/>
+				<field name="show_heading_description" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_WANDERERS_SHOW_HEADING_DESCRIPTION" description="TPL_WANDERERS_SHOW_HEADING_DESCRIPTION_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="description" default="Social template for Joomla" label="TPL_WANDERERS_FORM_SITE_DESCRIPTION" description="TPL_WANDERERS_FORM_SITE_DESCRIPTION_DESC" filter="string"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

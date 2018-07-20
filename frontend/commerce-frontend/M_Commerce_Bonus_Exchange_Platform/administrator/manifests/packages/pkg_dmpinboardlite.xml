@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension
+        type="package"
+        version="3.0"
+        method="upgrade">
+
+    <name>Package Installer - DM Pinboard Lite</name>
+    <packagename>dmpinboardlite</packagename>
+    <version>1.3.0</version>
+    <creationDate>September 2013</creationDate>
+    <url>http://dmjoomlaextensions.com</url>
+    <packager>DM Digital</packager>
+    <author>DM Digital</author>
+    <packagerurl>http://dmjoomlaextensions.com</packagerurl>
+    <description>Package Installer - DM Pinboard Lite</description>
+
+    <scriptfile>script.php</scriptfile>
+
+    <files folder="packages">
+        <file type="component" id="com_dmpinboardlite">com_dmpinboardlite.zip</file>
+        <file type="component" id="com_dmhelper">com_dmhelper.zip</file>
+    </files>
+
+</extension>

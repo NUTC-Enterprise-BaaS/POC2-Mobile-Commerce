@@ -1,0 +1,108 @@
+.targetting .ui-helper-hidden-accessible {
+  display: none !important;
+}
+ul.selections {
+	background-color: #FFFFFF;
+	border-color: #cccccc;
+	border-style: solid;
+	border-width: 1px;
+	list-style-type: none !important;
+	height:auto;
+	padding: 1px 1px 1px 1px !important;
+	cursor:text;
+}
+ul.selections li {
+	float: left;
+   	/*margin: 1px 4px 1px 0;*/
+   	line-height: 1em !important;
+   	background-image: none !important;
+}
+input.geo_fields{
+	border: medium none;
+	/*font-size: 13px;*/
+	height: 18px;
+	outline: medium none;
+	padding-bottom: 3px;
+
+	margin: 0px;
+	background: none !important;
+	border: none !important;
+}
+li.selection{
+	border-color: #ccc;
+	border-radius: 3px;
+	border-right: 1px solid #ccc;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 1px 1px #E4EDF2;
+	color: #2B3840;
+	padding: 3px !important;
+	text-shadow: 0 1px 1px #FFFFFF;
+	font-size: 90%;
+	margin: 1px 3px 1px 2px !important;
+}
+.saradioLabel {
+	display: inline-block;
+	float: none;
+}
+ul.ui-autocomplete /*suggestion dropdown*/
+{
+	overflow-y: scroll;
+	height: 200px;
+	/*background-color: rgba(255, 255, 255, 0.95);*/
+	background-color: #ffffff;
+	border-radius: 2px 2px 2px 2px;
+	box-shadow: 0 2px 12px #222222;
+	color: #000000;
+	font-size: 14px;
+	list-style-type: none;
+	margin: 2px 0 0;
+	padding: 0;
+	position: absolute;
+	z-index: 2;
+	text-align:left;
+}
+li.ui-menu-item /*individual suggestion*/
+{
+	-moz-border-bottom-colors: none;
+	-moz-border-image: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	/*background-color: #D8D8D8;*/
+	background-color: #ffffff;
+	border-color: #CCCCCC;
+	border-style: solid;
+	border-width: 0 1px 1px;
+	cursor: pointer;
+	font: 11px "Lucida Grande","Verdana";
+	list-style-type: none;
+	margin: 0;
+	padding: 5px 12px;
+	z-index: 1000;
+}
+
+li.ui-menu-item:hover{
+	background:#fff;
+}
+
+ul.ui-corner-all {
+display: block;
+width: 220px !important;
+}
+.ui-state-hover
+{
+color: #000000 !important;
+background-color: #fff !important;
+text-decoration: none !important;
+}
+li.selection a.close {
+	color: #333;
+	cursor: pointer;
+	float: right;
+	font-size: 85%;
+	font-weight: bold;
+ 	padding: 1px 2px 1px 2px;
+	text-shadow: 0 1px 1px #FFFFFF;
+	line-height: normal !important;
+}

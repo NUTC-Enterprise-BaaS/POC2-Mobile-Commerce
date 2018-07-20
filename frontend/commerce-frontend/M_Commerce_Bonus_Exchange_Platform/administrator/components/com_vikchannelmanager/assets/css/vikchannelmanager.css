@@ -1,0 +1,3015 @@
+@charset "utf-8";
+
+.vcmprogramblockeddiv {
+	display: inline-block;
+	width: 100%;
+}
+.vcmwizardlogodiv {
+	display: inline-block;
+	float: left;
+}
+.vcmprogramblockedmsg {
+	display: inline-block;
+	float: left;
+	font-size: 16px;
+	font-weight: bold;
+	background: #fff;
+	border:2px solid #ddd;
+	border-radius: 8px;
+	padding: 15px;
+	color: #006699;
+	margin: 65px 0 0 40px;
+}
+.vcmprogramblockedbutton {
+	display: block;
+	margin: 10px 0 0 0;
+	text-align: center;
+}
+.vcmprogramblockedbutton a {
+	background: #0A840C;
+	color: #fff !important;
+	border-radius: 5px;
+	border:1px solid #086809;
+	padding: 5px 8px;
+}
+.vcmprogramblockedbutton a:hover {
+	text-decoration: none;
+	color: #eee !important;
+}
+
+.vcmupdatedashbutton {
+	margin: 10px 0 0 0;
+	text-align: center;
+}
+.vcmupdatedashbutton a {
+	background: #0A840C;
+	color: #fff !important;
+	border-radius: 5px;
+	border:1px solid #086809;
+	padding: 5px 8px;
+}
+.vcmupdatedashbutton a:hover {
+	text-decoration: none;
+	color: #eee !important;
+}
+.vcmmenulifirst {
+	position: relative;
+}
+.vcmnewupavailnotice {
+	position: relative;
+}
+.vcmnewupavailnotice:before {
+	position: absolute;
+	content: "";
+	height: 24px;
+	width: 24px;
+	right: 0;
+	top: -10px;
+	background: url(images/updater_icon.png) left center no-repeat;
+}
+#dashboard-menu {
+	background: none repeat scroll 0 0 #f00;
+	border: 2px solid #fff;
+	border-radius: 14px;
+	color: #fff;
+	display: none	;
+	font-size: 12px;
+	font-weight: bold;
+	height: 24px;
+	left: -12px;
+	line-height: 22px;
+	position: absolute;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+}
+
+.vcmrevexpstatussent, .vcmrevexpstatusqueued, .vcmrevexpstatuscanceled {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.vcmrevexpstatussent {
+	color:#008000;
+}
+
+.vcmrevexpstatusqueued {
+	color:#FF7000;
+}
+
+.vcmrevexpstatuscanceled {
+	color:#990000;
+}
+
+#hmfooter {
+	font-size: x-small;
+	text-align: center;
+}
+
+.vcmrequired {
+	border: 1px solid red;
+	border-radius: 5px;
+}
+
+.successmade {
+	background: #dff2bf url("./images/ok.png") no-repeat scroll 10px center;
+	color: #4ca25a;
+	margin: 10px 0;
+	padding: 12px 12px 12px 40px;
+}
+
+.err{
+	background-image: url('./images/no.png');
+	background-position: center left;
+	background-repeat: no-repeat;
+	height: 20px;
+	padding-left: 25px;
+	color: #ff0000;
+}
+.icon-48-vikchannelmanager {
+	background: url('./images/icon-48-vikchannelmanager.png') no-repeat;
+}
+
+ul.vcmuladminmenu {
+	list-style-type: none !important;
+	height: 80px;
+	margin: auto;
+	display: block;
+}
+
+ul.vcmuladminmenu ul {
+	list-style-type: none !important;
+	display: none;
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	z-index: 1000;
+}
+
+ul.vcmuladminmenu li {
+	float: left;
+	background: #006699;
+	border-radius: 5px;
+	width: 157px;
+	margin: 0 1px 0 0;
+	transition: all 400ms ease-in-out 0s;
+	-moz-transition: all 400ms ease-in-out 0s;
+	-webkit-transition: all 400ms ease-in-out 0s;
+	-o-transition: all 400ms ease-in-out 0s;
+	text-transform: capitalize;
+}
+ul.vcmuladminmenu > li:hover {
+	background: #6E9800 !important;
+	transition:all 400ms ease-in-out 0s;
+	-moz-transition:all 400ms ease-in-out 0s;
+	-webkit-transition:all 400ms ease-in-out 0s;
+	-o-transition:all 400ms ease-in-out 0s;
+}
+ul.vcmuladminmenu li ul li {
+	background: #006699 !important;
+	width: 162px;
+	text-align: right;
+}
+ul.vcmuladminmenu li ul li a {
+	display: block;
+	padding: 11px 15px 11px 10px;
+	color: #fff !important;
+	font-size:14px;
+}
+li.highlight {
+	background: #3887AF !important;
+}
+ul.vcmuladminmenu li.parent {
+	position: relative;
+}
+ul.vcmuladminmenu li.parent:after {
+	border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 4px solid;
+    color: #fff;
+    content: "";
+    display: inline-block;
+    height: 0;
+    position: absolute;
+    top: 19px;
+    left: 9px;
+    vertical-align: middle;
+    width: 0;
+}
+ul.vcmuladminmenu li.parent ul li {
+	float: none;
+	margin: 1px 0 0 0;
+}
+ul.vcmuladminmenu li ul li.vcmadminmenusynch {
+	background: url('./images/synchro_tab.png') no-repeat !important;
+}
+ul.vcmuladminmenu a {
+	display: block;
+	padding: 10px 0 11px 15px;
+	color: #fff !important;
+	font-size:14px;
+}
+ul.vcmuladminmenu li.parent > a {
+	padding: 10px 0 11px 25px;
+}
+ul.vcmuladminmenu li a:hover{
+	text-decoration: none;
+}
+ul.vcmuladminmenu li ul li:hover {
+	background: #3887AF no-repeat !important;
+}
+ul.vcmuladminmenu li ul li a:hover {
+	color:#fff !important;
+}
+ul.vcmuladminmenu ul a {
+	display: block;
+	padding: 10px;
+}
+.vcmactivechannelscont {
+	display: inline-block;
+	margin: 5px 0;
+}
+.vcmactivechannelscont > div {
+	width: 105px;
+	height: 32px;
+}
+.vcmwizardchannelsdiv .vcmactivechannelscont {
+	float: none;
+	display: block;
+}
+.vcmactivechannelslabel {
+	float: left;
+	display: inline-block;
+	padding: 9px 13px 0 0;
+}
+.vcmchannelrsdash .vcmactivechsoutrospan {
+	display: block;
+}
+/* ACTIVE CHANNELS */
+.vcmactivechannelscont > div {
+	display: inline-block;
+	float: left;
+}
+.vcmchlogotripconnect {
+	background: url(images/tripadvisor_icon_dash.jpg) left bottom no-repeat;
+}
+.vcmchlogotrivago {
+	background: url(images/trivago_icon_dash.jpg) left bottom no-repeat;
+}
+.vcmchlogoexpedia {
+	background: url(images/expedia_icon_dash.jpg) left bottom no-repeat;
+}
+.vcmchlogoagoda {
+	background: url(images/agoda_icon_dash.jpg) left bottom no-repeat;
+}
+.vcmchlogobooking {
+	background: url(images/booking_icon_dash.jpg) left bottom no-repeat;
+}
+.vcmchlogoairbnb {
+	background: url(images/airbnb_icon_dash.jpg) left bottom no-repeat;
+}
+.vcmchlogoflipkey {
+	background: url(images/flipkey_icon_dash.jpg) left bottom no-repeat;
+}
+.vcmchlogoholidaylettings {
+	background: url(images/holidaylettings_icon_dash.jpg) left bottom no-repeat;
+}
+.vcmchlogowimdu {
+	background: url(images/wimdu_icon_dash.jpg) left bottom no-repeat;
+}
+.vcmchlogovrbo{
+	background: url(images/vrbo_icon_dash.jpg) left bottom no-repeat;
+}
+.vcmchlogohomeaway{
+	background: url(images/homeaway_icon_dash.jpg) left bottom no-repeat;
+}
+/* UNACTIVE CHANNELS */
+.unactive-channel {
+	opacity: 0.8;
+}
+.vcmchlogotripconnect.unactive-channel {
+	background: url(images/tripadvisor_icon_dash_bn.jpg) left bottom no-repeat;
+}
+.vcmchlogotrivago.unactive-channel {
+	background: url(images/trivago_icon_dash_bn.jpg) left bottom no-repeat;
+}
+.vcmchlogoexpedia.unactive-channel {
+	background: url(images/expedia_icon_dash_bn.jpg) left bottom no-repeat;
+}
+.vcmchlogoagoda.unactive-channel {
+	background: url(images/agoda_icon_dash_bn.jpg) left bottom no-repeat;
+}
+.vcmchlogobooking.unactive-channel {
+	background: url(images/booking_icon_dash_bn.jpg) left bottom no-repeat;
+}
+.vcmchlogoairbnb.unactive-channel {
+	background: url(images/airbnb_icon_dash_bn.jpg) left bottom no-repeat;
+}
+.vcmchlogoflipkey.unactive-channel {
+	background: url(images/flipkey_icon_dash_bn.jpg) left bottom no-repeat;
+}
+.vcmchlogoholidaylettings.unactive-channel {
+	background: url(images/holidaylettings_icon_dash_bn.jpg) left bottom no-repeat;
+}
+.vcmchlogowimdu.unactive-channel {
+	background: url(images/wimdu_icon_dash_bn.jpg) left bottom no-repeat;
+}
+.vcmchlogovrbo.unactive-channel {
+	background: url(images/vrbo_icon_dash_bn.jpg) left bottom no-repeat;
+}
+.vcmchlogohomeaway.unactive-channel {
+	background: url(images/homeaway_icon_dash_bn.jpg) left bottom no-repeat;
+}
+.vcmactivechsintrospan {display: block;}
+
+
+.vcmdashdivleft {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 2px solid #DDDDDD;
+	float: left;
+	margin: 15px 10px 15px 0;
+	padding: 20px;
+	width: 55%;
+	font-size:13px;
+	font-family: "Century Gothic", Tahoma, Arial, Sans-serif;
+}
+.vcmdashdivleft > div, .vcmdashdivleft > p, .vcmdashdivleft > h3 {
+	display: inline-block;
+	width: 92%;
+	margin: 5px 0;
+}
+.vcmdashdivleft .vcmdashdivlefthead {
+	color: #999;
+	font-size: 18px;
+	margin: 0 0 10px;
+	padding: 0 0 5px;
+	text-transform: uppercase;
+	font-family: "Century Gothic", Tahoma, Arial, Sans-serif;
+	border-bottom: 1px solid #ddd;
+}
+
+.vcmdashdivright {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 2px solid #DDDDDD;
+	float: right;
+	margin: 15px 0 15px 10px;
+	padding: 20px;
+	width: 35%;
+}
+.vcmdashdivright .vcmdashdivrighthead {
+	color: #999;
+	font-size: 18px;
+	margin: 0 0 10px;
+	padding: 0 0 5px;
+	text-transform: uppercase;
+	font-family: "Century Gothic", Tahoma, Arial, Sans-serif;
+	border-bottom: 1px solid #ddd;
+}
+
+p.vcmfatal {
+	background: #FFBABA url('./images/notactive_icon.png') no-repeat 3px center;
+	padding: 7px 4px 7px 35px;
+	color: #D8000C;
+	margin: 8px 0 0 0;
+}
+p.vcmwarning {
+	background: #FEEFB3 url('./images/warning_icon.png') no-repeat 3px center;
+	padding: 7px 4px 7px 35px;
+	color: #9F6000;
+	margin: 8px 0 0 0;
+}
+p.vcmupdater {
+	background: #fff url('./images/updater_icon.png') no-repeat 7px center;
+	padding: 7px 4px 7px 40px;
+	margin: 8px 0 0 0;
+}
+.vcmok {
+	background: #ffffff url('./images/active_icon.png') no-repeat 5px center;
+	padding: 7px 4px 7px 40px;
+	margin: 8px 0 0 0;
+}
+p.standby {
+	background-image: url('./images/warning_icon.png');
+	background-position: center left;
+	background-repeat: no-repeat;
+	height: 24px;
+	padding-left: 30px;
+}
+p.cancelled {
+	background-image: url('./images/notactive_icon.png');
+	background-position: center left;
+	background-repeat: no-repeat;
+	height: 24px;
+	padding-left: 30px;
+	color: red;
+}
+.vcmchannelrsdash, .vcmexprsdash {
+	display: block;
+	margin: 10px 0 0 0;
+}
+.vcmexprsdash {
+	display: inline-block;
+	width: 100%;
+	margin: 10px 0 0 0;
+}
+
+p.vcmok span {
+	font-weight: normal;
+}
+
+p.vcmstatuson {
+	background: #fff url('./images/active_icon.png') no-repeat 5px center;
+	padding: 4px 4px 4px 38px;
+}
+
+p.vcmstatusoff {
+	background: #fff url('./images/notactive_icon.png') no-repeat 5px center;
+	padding: 4px 4px 4px 38px;
+}
+pre.vcmpreerror {
+	padding: 10px;
+	border: 2px dashed #ff0000;
+	font-size: 13px !important;
+}
+
+.vcmdivleft {
+	float: left;
+	width: 35%;
+	overflow: hidden;
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #DDDDDD;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 0 2px #DDDDDD;
+	margin: 15px 15px 15px 0;
+	padding: 10px;
+}
+
+.vcmdivmiddle {
+	float: left;
+	width: 23%;
+	overflow: hidden;
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #DDDDDD;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 0 2px #DDDDDD;
+	margin: 15px 0 15px 0;
+	padding: 10px;
+	min-height: 200px;
+}
+
+.vcmdivright {
+	float: right;
+	width: 35%;
+	overflow: hidden;
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #DDDDDD;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 0 2px #DDDDDD;
+	margin: 15px 0 15px 0;
+	padding: 10px;
+}
+
+.vcmdivhotel {
+	display: block;
+	clear: both;
+	overflow: hidden;
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #DDDDDD;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 0 2px #DDDDDD;
+	padding: 15px;
+}
+
+.vcmdivhotel span {
+	font-weight: bold;
+}
+
+table.vcmtableleft {
+	width: 100%;
+}
+
+table.vcmtableleft td.vcmtableleftfirsttd {
+	text-align: right;
+	vertical-align: top;
+}
+
+table.vcmtableleft td.vcmtableleftsecondtd {
+	text-align: left;
+	vertical-align: top;
+
+}
+
+table.vcmtablemiddle {
+	text-align: center;
+	width: 100%;
+}
+
+table.vcmtableschema {
+	text-align: center;
+	width: 100%;
+	border-spacing:0;
+	border-collapse:collapse;
+	color: #666;
+}
+table.vcmtableschema .vcmschemarow td {
+	vertical-align: top;
+	padding: 0 !important;
+}
+table.vcmtableschema .vcmtrbigheader > td {
+	height: 20px;
+	padding: 0 0 15px 0;
+}
+table.vcmtableschema .vcmtrmediumheader > td {
+	font-size: 13px;
+	font-weight: bold;
+	color: #666;
+	padding: 0 0 10px 0;
+}
+table.vcmtableschema .vcmtrmediumheader td:last-child,
+table.vcmtableschema .vcmschemarow td:last-child {
+	text-align: right;
+}
+table.vcmtableschema .vcmfirsttd, 
+.vcmschemarow td:nth-of-type(1) {
+	text-align: left;
+	width: 165px;
+}
+table.vcmtableschema .vcmtrmediumheader td:nth-of-type(2),
+.vcmschemarow td:nth-of-type(2) {
+	text-align: right;
+}
+table.vcmtableschema .vcmtrmediumheader td:nth-of-type(3),
+table.vcmtableschema .vcmschemarow td:nth-of-type(4) {
+	text-align: left;
+}
+.vcmlargeheading {
+	font-size: 24px;
+	font-weight: normal;
+	color: #666;
+	margin: 15px 0 5px 0;
+	padding: 0;
+}
+.vcmtdlinked {
+	width: 175px;
+	background: url(images/link-background.jpg) center center no-repeat;
+}
+.vcmrheadtype {
+	font-size: 20px;
+	font-weight: bold;
+	color: #666;
+	border-bottom:1px dotted #ccc;
+}
+.vcmrheadtype {
+	position: relative;
+	padding: 3px 0 10px 0px;
+}
+.vcmrheadtype:before {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 0;
+	height: 31px;
+	width: 31px;
+}
+.headtype_channels {
+	text-align: left;
+}
+.headtype_expedia {
+	text-align: left;
+	padding-left: 38px;
+	background: url(images/expedia-li.png) no-repeat scroll left top rgba(0, 0, 0, 0);
+}
+.headtype_agoda {
+	text-align: left;
+	padding-left: 38px;
+	background: url(images/agoda-li.png) no-repeat scroll left top rgba(0, 0, 0, 0);
+}
+.headtype_bookingcom {
+	text-align: left;
+	padding-left: 38px;
+	background: url(images/bookingcom-li.png) no-repeat scroll left top rgba(0, 0, 0, 0);
+}
+.headtype_vrbo {
+	text-align: left;
+	padding-left: 40px;
+	background: url(images/vrbo-li.png) no-repeat scroll left top rgba(0, 0, 0, 0);
+}
+.headtype_homeaway {
+	text-align: left;
+	padding-left: 40px;
+	background: url(images/homeaway-li.png) no-repeat scroll left top rgba(0, 0, 0, 0);
+}
+.headtype_vikbooking {
+	text-align: right;
+}
+
+div.vcmtableleftdivroomfield {
+	display: block;
+	margin-bottom: 15px;
+}
+
+span.vcmtableleftspkey {
+	background: none repeat scroll 0 0 #eee;
+	font-weight: bold;
+	padding: 4px;
+	min-width: 100px;
+	display: inline-block;
+}
+.vcmtableleftsubdiv span.vcmtableleftspkey {
+	display: inline-block;
+	min-width: 125px;
+}
+
+span.vcmtableleftspval {
+	background: none repeat scroll 0 0 #ffab48;
+	font-weight: bold;
+	padding: 4px;
+	border: 1px solid #e99b43;
+}
+
+span.vcmtableleftspkeyopen {
+	background: #cccccc url('./images/arrowdown.gif') no-repeat 97% center !important;
+	font-weight: bold;
+	padding: 4px 25px 4px 4px;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 0 1px #DDDDDD;
+	cursor: pointer;
+}
+
+span.vcmtableleftspkeyclose {
+	background: #d2e1ce url('./images/arrowup.gif') no-repeat 97% center !important;
+	font-weight: bold;
+	padding: 4px 25px 4px 4px;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 0 1px #DDDDDD;
+	cursor: pointer;
+}
+
+div.vcmtableleftsubdiv {
+	display: none;
+	margin: 15px 0 0 15px;
+	background:#fbfbfb;
+	border:1px solid #ddd;
+	width: 98%;
+	padding: 15px 10px; 
+}
+div.vcmtableleftsubdiv span.vcmtableleftspval {
+	background: #ffd55c;
+}
+
+img.vcmvbroomimg {
+	max-width: 140px;
+}
+
+div.vcmsubdivseparator {
+	display: block;
+	border-bottom: 1px solid #cccccc;
+	padding: 0;
+	margin-bottom: 15px;
+}
+
+.vcmvbroomtdlink {
+	min-width: 80px;
+	vertical-align: middle;
+}
+
+.vcmvbroomtdname {
+	font-weight: bold;
+	vertical-align: top;
+}
+
+.vcmvbroomtdsmalldesc {
+	vertical-align: top;
+}
+
+span.vcmselectotaroom {
+	background: #cccccc url('./images/link.png') no-repeat right center !important;
+	color: #000000;
+	font-weight: bold;
+	padding: 4px 18px 4px 4px;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 0 1px #DDDDDD;
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+}
+
+span.vcmselectedotaroom {
+	background: #d2e1ce url('./images/link.png') no-repeat right center !important;
+}
+
+span.vcmselectvbroom {
+	background: #d2e1ce url('./images/link.png') no-repeat left center !important;
+	color: #000000;
+	font-weight: bold;
+	padding: 4px 4px 4px 18px;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 0 1px #DDDDDD;
+	cursor: pointer;
+	display: none;
+}
+
+img.vcmimgremovelink {
+	max-width: 23px;
+	cursor: pointer;
+	border: 0;
+}
+
+div.vcmrelationshema {
+	float: left;
+	width: 50%;
+	overflow: hidden;
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 4px solid #DDDDDD;
+	border-radius: 10px 10px 10px 10px;
+	margin: 5px 0 10px;
+	padding: 15px 25px;
+	min-height: 200px;
+}
+
+p.vbpfiltconfnumb {
+	text-align: right;
+}
+
+table.vcmtablenots {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+.vcmnotsrow0 {
+	background: none repeat scroll 0 0 #e0e3e5;
+}
+
+.vcmnotsrow1 {
+	background: none repeat scroll 0 0 #ededed;
+}
+
+.vcmnotstdright {
+	vertical-align: middle;
+	text-align: right;
+}
+.vcmnotstdright input {
+	line-height: 1em !important;
+	padding: 0;
+	margin: 0 !important;
+	height: auto;
+	width: auto;
+}
+
+.vcmremovenots {
+	font-size: 11px;
+	background: #ffffff url(images/trash.png) no-repeat 3px center !important;
+	color: #000000;
+	font-weight: normal;
+	padding: 4px 5px 2px 18px !important;
+	border: 1px solid #DDDDDD;
+	cursor: pointer;
+	border-radius: 3px;
+	margin: 0 0 2px 0;
+}
+
+p.vcminfotext {
+	padding: 10px;
+	margin: 10px;
+	text-align: left;
+	font-weight: bold;
+	color: #000000;
+	background: none repeat scroll 0 0 #ededed;
+	border: 1px solid #DDDDDD;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 0 2px #DDDDDD;
+}
+
+p.vcminfotext span {
+	font-style: italic;
+	font-size: larger;
+}
+
+.vcmconfirmsubmit {
+	padding: 5px 20px 5px 5px !important;
+	background: #d2e1ce url('./images/enabled.png') no-repeat right center !important;
+	border: 1px solid #DDDDDD !important;
+}
+
+.vcmnotifymessblock {
+	line-height: 1.6em;
+	font-size: 11px;
+	padding: 0.1em 0.5em 0.3em 0.7em;
+	border-left: 11px solid #ccc;
+	margin: 1.7em 0 1.7em 0.3em;
+	overflow: auto;
+	width: 93%;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap !important;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+}
+
+.vcmexprs, .vcmchannelrs {
+	display: block;
+}
+
+.vcmesitinfo {
+	font-style: italic;
+	padding-left: 5px;
+	vertical-align: bottom;
+}
+
+span.vcmajaxnewnotification {
+	background: #83A2E0 !important;
+	padding: 7px;
+	font-weight: bold !important;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 0 1px #DDDDDD;
+	display: inline-block;
+	margin: 5px 0 5px 0;
+}
+
+span.vcmajaxnewnotification a {
+	color: #ffffff !important;
+}
+.vcmtacallrooms, .vcmtriallrooms {
+	display: inline-block;
+	width: 100%;
+}
+.vcmtacallrooms .vcmtacroomdiv, .vcmtriallrooms .vcmtriroomdiv {
+	display: inline-block;
+	float: left;
+	width: 25%;
+	padding: 10px;
+	margin: 0 10px 15px 0;
+	background: #fff;
+	border: 4px solid #8C8C8C;
+	border-radius: 15px;
+	height: 480px;
+	position: relative;
+}
+.vcmtacallrooms .vcmroomactive {
+	border: 4px solid #50893C;
+}
+.vcmtriallrooms .vcmtriroomactive {
+	border: 4px solid #44aaFF;
+}
+.vcmtacallrooms .vcmtacroomdiv:last-child, .vcmtriallrooms .vcmtriroomdiv:last-child {
+	margin: 0 0 15px;
+}
+.vcmtacallrooms .vcmtacroomtopdiv, .vcmtriallrooms .vcmtriroomtopdiv {
+	display: inline-block;
+	width: 100%;
+	margin: 0 0 5px 0;
+}
+.vcmtacallrooms .vcmtacroomtopdiv > *, .vcmtriallrooms .vcmtriroomtopdiv > * {
+	float: left;
+	display: inline-block;
+}
+.vcmtacallrooms .vcmtacroomtopdiv .vcmtacroomimagediv, .vcmtriallrooms .vcmtriroomtopdiv .vcmtriroomimagediv {
+	margin: 0 15px 0 0;
+}
+.vcmtacroomimagediv img, .vcmtriroomimagediv img {
+	max-height: 150px;
+	max-width: 150px;
+}
+.vcmtacroomdetailsdiv, .vcmtacroomdetailsdiv {
+	width: 50%;
+}
+.vcmroomdetinput {
+	border: 1px solid #ccc;
+	padding: 5px 5px;
+	margin: 0 0 5px 0;
+	border-radius: 2px;
+}
+.vcmtacroomcostlabel, .vcmtriroomcostlabel {
+	position: relative;
+}
+.vcmtacroomcostlabel span, .vcmtriroomcostlabel span {
+	position: absolute;
+	color: #666;
+	left: 5px;
+	top: -1px;
+}
+.vcmtacroomcostlabel .vcmroomdetinput, .vcmtriroomcostlabel .vcmroomdetinput {
+	padding: 5px 5px 5px 17px;
+}
+.vcmtacroomnamediv input.vcmroomdetinput, .vcmtriroomnamediv input.vcmroomdetinput {
+	font-size: 12px;
+	font-weight: bold;
+}
+input.vcmroomdetinput {
+	width: 90%;
+}
+textarea.vcmroomdetinput {
+	width: 97.5%;
+	max-width: 97.5%;
+	max-height: 150px;
+}
+select.vcmroomdetinput {
+	width: 100%;
+	max-width: 100%;
+}
+.vcmtacroomtriplogodiv, .vcmtriroomtrivlogodiv {
+	text-align: right;
+	font-size: 16px;
+	color: #8B8B8B;
+	margin: 10px 0 0 0;
+	position: absolute;
+	bottom:15px;
+	right: 15px;
+}
+.vcmtacroomdiv .vcmtacroomtriplogodiv a, .vcmtriroomdiv .vcmtriroomtriplogodiv a,
+.vcmtacroomdiv .vcmtriroomtrivlogodiv a, .vcmtriroomdiv .vcmtriroomtrivlogodiv a {
+	display: inline-block;
+	padding: 10px 47px 10px 0;
+}
+.vcmtacroomdiv .vcmtacroomtriplogodiv a:hover, .vcmtriroomdiv .vcmtriroomtriplogodiv a:hover,
+.vcmtriroomdiv .vcmtriroomtrivlogodiv a:hover, .vcmtriroomdiv .vcmtriroomtrivlogodiv a:hover {
+	text-decoration: none;
+}
+.vcmroomactive .vcmtacroomtriplogodiv a {
+	color: #50893C;
+	background: url(images/tripon.png) right center no-repeat;
+}
+.vcmroomactive .vcmtacroomtriplogodiv a:hover {
+	color: #8B8B8B;
+	background: url(images/tripoff.png) right center no-repeat;
+}
+.vcmroomunactive .vcmtacroomtriplogodiv a {
+	color: #8B8B8B;
+	background: url(images/tripoff.png) right center no-repeat;
+}
+.vcmroomunactive .vcmtacroomtriplogodiv a:hover {
+	color: #50893C;
+	background: url(images/tripon.png) right center no-repeat;
+}
+
+.vcmtriroomactive .vcmtriroomtrivlogodiv a {
+	color: #44aaFF;
+	background: url(images/trivagoon.png) right center no-repeat;
+}
+.vcmtriroomactive .vcmtriroomtrivlogodiv a:hover {
+	color: #44aaFF;
+	background: url(images/trivagooff.png) right center no-repeat;
+}
+.vcmroomunactive .vcmtriroomtrivlogodiv a {
+	color: #8B8B8B;
+	background: url(images/trivagooff.png) right center no-repeat;
+}
+.vcmroomunactive .vcmtriroomtrivlogodiv a:hover {
+	color: #44aaff;
+	background: url(images/trivagoon.png) right center no-repeat;
+}
+.vcmtacstatuserrdiv {
+	width: 60%;
+	display: table;
+	background: #fefefe;
+	border:2px solid #ddd;
+	border-radius: 10px;
+	margin: 10px auto 10px;
+	padding: 10px 0;
+	font-size: 14px;
+	text-align: center;
+}
+.vcmtacstatuserrtitlediv {
+	color: #990000;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+}
+.vcmtacstatuserrmsgdiv {
+	color: #333;
+	font-weight: bold;
+}
+.vcminventorynoroom {
+	display: inline-block;
+	width: 100%;
+	background: #fefefe;
+	border:1px solid #ccc;
+	padding: 10px 0;
+	border-radius: 10px;
+	margin: 10px 0 10px;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: "Century Gothic", Tahoma, Arial, Sans-serif;
+	color: #990000;
+	padding-left: 40px;
+}
+
+.vcmactionstoolbar {
+	display: inline-block;
+	width: 100%;
+	background: #fefefe;
+	border:1px solid #ccc;
+	padding: 10px 0;
+	border-radius: 10px;
+	margin: 10px 0 10px;
+}
+.vcmactionstoolbar > * {
+	display: inline-block;
+	float: right;
+}
+.vcmactionstoolbar > div {
+	margin: 0 15px 0 0;
+}
+.vcmactionstoolbar > .vcmtacroomheadtitle, 
+.vcmactionstoolbar > .vcmtriroomheadtitle {
+	float: left;
+	padding: 14px 0 14px 80px;
+	background: url(images/info-icon.png) 30px center no-repeat;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: "Century Gothic", Tahoma, Arial, Sans-serif;
+	color: #666;
+}
+.vcmactionstoolbar > div > a {
+	display: inline-block;
+	padding: 17px 50px 17px 0;
+	font-size: 16px;
+}
+.vcmactionstoolbar > div > a:hover {
+	text-decoration: none;
+}
+.vcmactionstoolbar > div > a.vcmtripstatuslinkactive {
+	color: #50893C;
+	background: url(images/triponall.png) right center no-repeat;
+}
+.vcmactionstoolbar > div > a.vcmtripstatuslinkunactive {
+	color: #8B8B8B;
+	background: url(images/tripoffall.png) right center no-repeat;
+}
+.vcmactionstoolbar > div > a.vcmtrivagotatuslinkactive {
+	color: #44AAFF;
+	background: url(images/trivagoonall.png) right center no-repeat;
+}
+.vcmactionstoolbar > div > a.vcmtrivagostatuslinkunactive {
+	color: #8B8B8B;
+	background: url(images/trivagooffall.png) right center no-repeat;
+}
+.vcmliexpedia, .vcmlitripadvisor, .vcmlitripconnect, .vcmlitrivago, 
+.vcmliairbnb, .vcmliflipkey, .vcmliholidaylettings, .vcmliwimdu, 
+.vcmliagoda, .vcmlibookingcom, .vcmlivrbo, .vcmlihomeaway, .vcmliycs50 {
+	position: relative;	
+}
+.vcmliexpedia:before {
+	position: absolute;
+	content: "";
+	height: 31px;
+	width: 31px;
+	right: 0;
+	top: -16px;
+	background: url(images/expedia-li.png) left center no-repeat;
+}
+.vcmlihomeaway:before {
+	position: absolute;
+	content: "";
+	height: 31px;
+	width: 31px;
+	right: 0;
+	top: -16px;
+	background: url(images/homeaway-li.png) left center no-repeat;
+}
+.vcmlivrbo:before {
+	position: absolute;
+	content: "";
+	height: 33px;
+	width: 33px;
+	right: 0;
+	top: -16px;
+	background: url(images/vrbo-li.png) left center no-repeat;
+}
+.vcmliagoda:before, .vcmliycs50:before {
+	position: absolute;
+	content: "";
+	height: 31px;
+	width: 31px;
+	right: 0;
+	top: -16px;
+	background: url(images/agoda-li.png) left center no-repeat;
+}
+.vcmlibookingcom:before {
+	position: absolute;
+	content: "";
+	height: 31px;
+	width: 31px;
+	right: 0;
+	top: -16px;
+	background: url(images/bookingcom-li.png) left center no-repeat;
+}
+.vcmlitripadvisor:before {
+	position: absolute;
+	content: "";
+	height: 21px;
+	width: 34px;
+	right: 0;
+	top: -10px;
+	background: url(images/tripadvisor-li.png) left center no-repeat;
+}
+.vcmlitripconnect:before {
+	position: absolute;
+	content: "";
+	height: 21px;
+	width: 34px;
+	right: 0;
+	top: -10px;
+	background: url(images/tripadvisor-li.png) left center no-repeat;
+}
+.vcmlitrivago:before {
+	position: absolute;
+	content: "";
+	height: 34px;
+	width: 34px;
+	right: 0;
+	top: -17px;
+	background: url(images/trivago-li.png) left center no-repeat;
+}
+.vcmlibooking:before {
+	position: absolute;
+	content: "";
+	height: 33px;
+	width: 33px;
+	right: 0;
+	top: -13px;
+	background: url(images/booking-li.png) left center no-repeat;
+}
+.vcmliairbnb:before {
+	position: absolute;
+	content: "";
+	height: 33px;
+	width: 33px;
+	right: 0;
+	top: -13px;
+	background: url(images/airbnb-li.png) left center no-repeat;
+}
+.vcmliflipkey:before {
+	position: absolute;
+	content: "";
+	height: 33px;
+	width: 33px;
+	right: 0;
+	top: -13px;
+	background: url(images/flipkey-li.png) left center no-repeat;
+}
+.vcmliholidaylettings:before {
+	position: absolute;
+	content: "";
+	height: 33px;
+	width: 33px;
+	right: 0;
+	top: -13px;
+	background: url(images/holidaylettings-li.png) left center no-repeat;
+}
+.vcmliwimdu:before {
+	position: absolute;
+	content: "";
+	height: 33px;
+	width: 33px;
+	right: 0;
+	top: -13px;
+	background: url(images/wimdu-li.png) left center no-repeat;
+}
+.vcmwizardapicontainer {
+	text-align: center;
+	font-weight: bold;
+}
+.vcmwizardapicontainer .vcmwizardapititlediv,
+.vcmwizardapicontainer .vcmwizardapilabeldiv {
+	font-size: 16px;
+	color: #333;
+	font-style: italic;
+}
+.vcmwizardapikeydiv {
+	margin: 10px 0 5px;
+}
+.vcmwizardapikeydiv input {
+	border:2px solid #ddd;
+	padding: 5px 5px;
+	border-radius: 5px;
+	width: 200px !important;
+	display: inline-block;
+	margin: 0 0 5px 0;
+}
+.vcmwizardapikeydiv .vcmapiaccepted {
+	border:2px solid #076004;
+}
+.vcmwizardapikeydiv .vcmapirefused {
+	border:2px solid #D90000;
+}
+.vcmwizarderrordiv {
+	color:#D90000;
+}
+.vcmapikeytextdiv {
+	margin: 0 0 15px 0;
+}
+.vcmwizardapikeydiv .vcmapikeyactiondiv a, .vcmchannel {
+	background: #02669A;
+	color: #fff !important;
+	padding: 7px 10px;
+	border-radius: 5px;
+	display: inline-block;
+	width: 133px;
+	text-align: center;
+}
+.vcmsyncha {
+	background: #02669A;
+	color: #fff !important;
+	padding: 7px 10px;
+	border-radius: 5px;
+	display: inline-block;
+	text-align: center;
+}
+.vcmsynchspan {
+	display: inline-block !important;
+	margin: 15px 0 0 0 !important;
+	width: auto !important;
+}
+.vcminlinedate {
+	float: left;
+	margin: 15px 25px 0 0;
+	min-height: 28px;
+}
+.vcmchannelspanloading {
+	display: inline-block;
+}
+input.vcmapiloading {
+	background: url('./images/ajaxloader_small.gif') no-repeat 95% center !important;
+}
+span.vcmsynchspanloading, span.vcmchannelspanloading {
+	position: relative;
+}
+.vcmdashdivleft .vcmchannelspanloading {
+	width: auto !important;
+}
+span.vcmsynchspanloading {
+	width: auto !important
+}
+span.vcmsynchspanloading:after, span.vcmchannelspanloading:after {
+	background: url('./images/ajaxloader.gif') no-repeat right center !important;
+	width: 53px !important;
+	height: 10px;
+	content: "";
+	position: absolute;
+	right: -55px;
+	top: 9px;
+}
+.row-fluid span.vcmsynchspanloading:after {
+	width: 53px !important;
+}
+.vcmchannelspansuccess .vcmchannel {
+	background: #02669A !important;
+}
+span.vcmsynchspanerror, span.vcmchannelspanerror {
+	width: auto !important;
+	margin-bottom: 5px;
+	position: relative; 
+}
+.vcmsynchspanerror:after, .vcmchannelspanerror:after {
+	background: url('./images/notactive_icon.png') no-repeat right center;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	right: 0;
+	content: "";
+	top: 4px;
+	right: -30px;
+}
+
+span.vcmsynchspansuccess {
+	width: auto !important;
+	padding-right: 20px !important;
+	background: url('./images/enabled.png') no-repeat right center !important;
+}
+.vcmactivechannelscont > span {
+	display: block;
+}
+.vcmactivechsoutrospan {
+	display: inline-block;
+	margin: 5px 0 0 0;
+}
+.vcmactivechsinglespan {
+	color: #02669A;
+	font-size: 13px;
+}
+.vcmwizardapicontainer, .vcmexprs {
+	margin: 15px 0 50px;
+}
+.vcmchannelrs {
+	margin: 15px 0 0 0;
+}
+.vcmtacstatusdiv {
+	background: #fff;
+	border:1px solid #ddd;
+	border-radius: 8px;
+	padding: 10px;
+	font-size: 14px;
+	margin: 10px 0 0 0;
+}
+.vcmtacstatusdiv .vcmstatusinfoval {
+	font-weight: bold;
+}
+.vcmparamsheadtrivago, .vcmsettingsheadtrivago {
+	font-size: 16px;
+	background: url(images/trivago-li.png) left center no-repeat;
+	padding: 1px 0 1px 36px;
+}
+.vcmparamsheadexpedia, .vcmsettingsheadexpedia {
+	font-size: 16px;
+	background: url(images/expedia-li.png) left center no-repeat;
+	padding: 1px 0 1px 36px;
+}
+.vcmparamsheadvrbo, .vcmsettingsheadvrbo {
+	font-size: 16px;
+	background: url(images/vrbo-li.png) left center no-repeat;
+	padding: 1px 0 1px 40px;
+}
+.vcmparamsheadhomeaway, .vcmsettingsheadhomeaway {
+	font-size: 16px;
+	background: url(images/homeaway-li.png) left center no-repeat;
+	padding: 1px 0 1px 40px;
+}
+.vcmparamsheadagoda, .vcmsettingsheadagoda, .vcmparamsheadycs50, .vcmsettingsheadycs50 {
+	font-size: 16px;
+	background: url(images/agoda-li.png) left center no-repeat;
+	padding: 1px 0 1px 36px;
+}
+.vcmparamsheadbookingcom, .vcmsettingsheadbookingcom {
+	font-size: 16px;
+	background: url(images/bookingcom-li.png) left center no-repeat;
+	padding: 1px 0 1px 36px;
+}
+.vcmparamsheadtripconnect, .vcmsettingsheadtripconnect {
+	font-size: 16px;
+	background: url(images/tripadvisor-li.png) left center no-repeat;
+	padding: 1px 0 1px 38px;
+}
+.vcmparamsheadairbnb, .vcmsettingsheadairbnb {
+	font-size: 16px;
+	background: url(images/airbnb-li.png) left center no-repeat;
+	padding: 1px 0 1px 38px;
+}
+.vcmparamsheadflipkey, .vcmsettingsheadflipkey {
+	font-size: 16px;
+	background: url(images/flipkey-li.png) left center no-repeat;
+	padding: 1px 0 1px 38px;
+}
+.vcmparamsheadholidaylettings, .vcmsettingsheadholidaylettings {
+	font-size: 16px;
+	background: url(images/holidaylettings-li.png) left center no-repeat;
+	padding: 1px 0 1px 38px;
+}
+.vcmparamsheadwimdu, .vcmsettingsheadwimdu {
+	font-size: 16px;
+	background: url(images/wimdu-li.png) left center no-repeat;
+	padding: 1px 0 1px 38px;
+}
+
+.vcmchsetthelptext {
+	font-size: smaller;
+	font-style: italic;
+	padding-left: 5px;
+}
+
+.vcmhdparwarning {
+	padding: 5px;
+	margin: 5px;
+	border: 2px solid #FF9900;
+	border-radius: 4px;
+	color: #666;
+	font-weight: bold;
+	box-shadow: 0 0 2px #333;
+}
+
+.vcm-customa-changes {
+	display: none;
+	float: right;
+	padding: 5px 8px 6px 13px;
+	background: none repeat scroll 0 0 #ddd;
+	color: #555;
+	font-weight: bold;
+	border-radius: 5px;
+	border:1px solid #ccc;
+	text-align: center;
+	margin: 0 0 0 10px;
+}
+.vcm-customa-changes span {
+	display: inline-block;
+	float: left;
+	margin-top: 6px;
+}
+.vcm-customa-changes span#vcm-totchanges {
+	margin-right: 5px;
+	color: #ff4b45;
+	font-size: 14px;
+	background: none repeat scroll 0 0 #ffffff;
+	padding: 5px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	text-align: center;
+	vertical-align: middle;
+	margin: 0;
+	margin-left: 5px;
+}
+
+.vcmnotshow {
+	display: none;
+}
+.vcm-info-overlay-block {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background-color: rgba(0,0,0,0.5);
+	display: none;
+}
+.vcm-info-overlay-content {
+	position: fixed;
+	left: 33.3%;
+	top: 20%;
+	width: 33.3%;
+	height: 60%;
+	z-index: 101;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 5px 5px 5px 0 #000;
+	overflow: auto;
+}
+.vcm-modal-alert .vcm-info-overlay-content {
+	height: 20%;
+	top: 40%;
+}
+
+.vcm-modal-alert.warning-longer .vcm-info-overlay-content {
+	height: 40%;
+	top: 20%;
+	left: 25%;
+	width: 50%;
+}
+.vcm-info-overlay-content h3 {
+	text-align: center;
+	margin-top: 0;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 10px;
+}
+.vcm-modal-alert.warning .vcm-info-overlay-content h3 {
+	color: #9F6000;
+}
+p.vcm-roominfo-paragraph {
+	font-weight: bold;
+}
+.vcm-roominfo-block {
+	display: block;
+	margin: 0 0 20px 15px;
+	padding: 0 0 20px 0;
+	border-bottom: 1px dotted #ccc;
+}
+.vcm-roominfo-entry {
+	display: block;
+}
+.vcm-roominfo-entry span {
+	display: inline-block;
+	min-width: 160px;
+	color: #02669a;
+}
+
+/* Loading Overlay */
+
+.vcm-loading-overlay {
+	position: fixed;
+	z-index: 9999;
+	height: 2em;
+	width: 5em;
+	overflow: show;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	font-size: 35px;
+	display: none;
+}
+/* Transparent Overlay */
+.vcm-loading-overlay:before {
+	content: '';
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+}
+.vcm-loading-dot {
+	width: 1em;
+	height: 1em;
+	border-radius: 0.5em;
+	background: #fff;
+	position: absolute;
+	animation-duration: 1.0s;
+	-moz-animation-duration: 1.0s;
+	-ms-animation-duration: 1.0s;
+	-o-animation-duration: 1.0s;
+	-webkit-animation-duration: 1.0s;
+	animation-timing-function: ease;
+	-moz-animation-timing-function: ease;
+	-ms-animation-timing-function: ease;
+	-o-animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-ms-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+.vcm-loading-dot1 {
+	left: 0;
+	background-color: #878787;
+}
+.vcm-loading-dot2 {
+	left: 0;
+	background-color: #bf8707;
+}
+.vcm-loading-dot3 {
+	left: 1.5em;
+	background-color: #878b05;
+}
+.vcm-loading-dot4 {
+	left: 3em;
+	background-color: #417b9f;
+}
+.vcm-loading-dot5 {
+	left: 4.5em;
+	background-color: #878787;
+}
+@keyframes reveal {
+	from { transform: scale(0.001);-ms-transform: scale(0.001);-webkit-transform: scale(0.001); }
+	to { transform: scale(1);-ms-transform: scale(1);-webkit-transform: scale(1); }
+}
+@-moz-keyframes reveal {
+	from { transform: scale(0.001);-ms-transform: scale(0.001);-webkit-transform: scale(0.001); }
+	to { transform: scale(1);-ms-transform: scale(1);-webkit-transform: scale(1); }
+}
+@-o-keyframes reveal {
+	from { transform: scale(0.001);-ms-transform: scale(0.001);-webkit-transform: scale(0.001); }
+	to { transform: scale(1);-ms-transform: scale(1);-webkit-transform: scale(1); }
+}
+@-webkit-keyframes reveal {
+	from { transform: scale(0.001);-ms-transform: scale(0.001);-webkit-transform: scale(0.001); }
+	to { transform: scale(1);-ms-transform: scale(1);-webkit-transform: scale(1); }
+}
+@keyframes slide {
+	to { transform: translateX(1.5em); }
+}
+@-moz-keyframes slide {
+	to { transform: translateX(1.5em); }
+}
+@-o-keyframes slide {
+	to { transform: translateX(1.5em);-o-transform: translateX(1.5em); }
+}
+@-webkit-keyframes slide {
+	to { transform: translateX(1.5em);-webkit-transform: translateX(1.5em); }
+}
+.vcm-loading-dot1 {
+	animation-name: reveal;
+	-moz-animation-name: reveal;
+	-ms-animation-name: reveal;
+	-o-animation-name: reveal;
+	-webkit-animation-name: reveal;
+}
+.vcm-loading-dot2, .vcm-loading-dot3, .vcm-loading-dot4 {
+	animation-name: slide;
+	-moz-animation-name: slide;
+	-ms-animation-name: slide;
+	-o-animation-name: slide;
+	-webkit-animation-name: slide;
+}
+.vcm-loading-dot5 {
+	animation-name: reveal;
+	-moz-animation-name: reveal;
+	-ms-animation-name: reveal;
+	-o-animation-name: reveal;
+	-webkit-animation-name: reveal;
+	animation-direction: reverse;
+	-moz-animation-direction: reverse;
+	-ms-animation-direction: reverse;
+	-o-animation-direction: reverse;
+	-webkit-animation-direction: reverse;
+}
+
+/* overview */
+
+.vcmoverviewtablerowone form {
+	display: table;
+	margin: 0 auto;
+}
+.vcmoverviewtablerowone form > * {
+	display: inline-block;
+	float: left;
+	margin:0 3px;
+}
+.vcmosprevweek, .vcmosprevday,
+.vcmosnextday, .vcmosnextweek {
+	background: none repeat scroll 0 0 #eee;
+    border: 1px solid #777;
+    border-radius: 4px;
+    color: #666;
+    display: inline-block;
+    font-size: 11px;
+    padding: 4px 5px;
+    text-decoration: none !important;
+}
+.vcmoverviewtablerowone form > a:hover {
+	text-decoration: none;
+	background: #ccc;
+}
+.vcmoverviewtablerowone input {
+	position: relative;
+	background: url("images/calendar-icon.png") no-repeat scroll 95% center #eee;
+}
+
+.vcmoverviewtable {
+	width: 100%;
+	border: 1px solid #CCCCCC;
+	border-collapse: inherit;
+	border-spacing: 1px;
+	font-size: 14px;
+}
+.vcmoverviewtablerowone {
+	height: 30px;
+}
+.vcmoverviewtablerow {
+	height: 50px;
+}
+.vcmoverviewtdone {
+	min-width: 130px !important;
+	text-align: left !important;
+	padding-left: 1px;
+}
+.free{
+	color: #000000;
+}
+
+.busy{
+	color: #fff;
+	background: #8a8fab;
+}
+
+.full{
+	color: #fff;
+	background: #dd5500;
+}
+
+.notbusy{
+	color: #000000;
+	background: #b7e0cc;
+}
+
+.equal{
+	border-bottom: 2px solid #8a8fab;
+}
+
+.day-block:active {
+	cursor: pointer;
+}
+
+.block-picked-start {
+    /*background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 50%, #ffc499 50%, #ffc499 100%);*/
+    background: #ffc499;
+}
+
+.block-picked-middle {
+    background: #ffc499;
+}
+
+.block-picked-end {
+    background: #ffc499;
+}
+.bluedays{
+	/*min-width: 2.7%;*/
+	width: 30px;
+	background: none repeat scroll 0 0 #02679a;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding: 4px 5px;
+	text-align: center;
+}
+.bluedays span {
+	display: block;
+}
+td.roomname {
+	background: #d3dae1;
+	min-width: 165px !important;
+	padding-left: 1px;
+	text-align: left !important;
+}
+.vcm-oversight-roomunits {
+	background: #3e6372 none repeat scroll 0 0;
+	border-radius: 50%;
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 5px 0 2px;
+	min-height: 20px;
+	min-width: 20px;
+	padding: 4px;
+	text-align: center;
+}
+.vcm-oversight-roomname {
+	font-size: 105%;
+	font-weight: bold;
+}
+
+/* change availability dialog */
+
+.vcmos-dialog-info {
+	width: 60px;
+	display: inline-block;
+
+}
+
+.vcmos-dialog-param-check label {
+	display: inline-block;
+}
+.vcmos-dialog-param-check {
+	float: right;
+}
+
+.vcmos-dialog-param-value {
+	display: block;
+	margin: 10px 0 5px 20px;
+}
+
+/* custom av confirm page */
+
+.vcm-custa-roomname {
+	border-bottom: 1px solid #ccc;
+}
+.vcm-custa-roomdesc {
+	color: #aa0000;
+	font-weight: bold;
+	font-style: italic;
+}
+.vcm-custa-roomcont {
+    clear: left;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+	margin-bottom: 20px;
+}
+.vcm-custa-roomcont-inner {
+	border-right:1px solid #ccc;
+    float: left;
+    position: relative;
+    right: 30%;
+    width: 100%;
+}
+.vcm-custa-channelhead {
+	margin-bottom: 10px;
+}
+.vcm-custa-roomchannels {
+    float: left;
+    left: 35%;
+    overflow: hidden;
+    position: relative;
+    width: 25%;
+    padding: 15px;
+}
+
+.vcm-custa-roomdetails {
+    float: left;
+    left: 32%;
+    overflow: hidden;
+    position: relative;
+    width: 67%;
+    padding: 15px;
+}
+
+.vcm-custa-from-label, .vcm-custa-to-label, .vcm-custa-units-label {
+	display: inline-block;
+	width: 50px;
+	font-size: 15px;
+}
+.vcm-custa-from-value, .vcm-custa-to-value {
+	display: inline-block;
+	width: 70px;
+	margin-right: 75px;
+}
+
+.vcm-custa-roomblock {
+	margin-bottom: 5px;
+}
+
+.vcm-custa-roomch label {
+	display: inline-block;
+}
+.vcm-custa-roomch {
+	display: inline-block;
+	min-width: 30%;
+}
+
+/* api key */
+
+.vcmorderapikeydiv {
+    background: none repeat scroll 0 0 #fbfbfb;
+    border: 1px solid #ddd;
+    border-radius: 13px;
+    box-shadow: 0 0 2px #eee inset;
+    display: inline-block;
+    font-size: 17px;
+    margin: 10px 0 0;
+    text-align: center;
+}
+.vcmorderapikeydiv > div {
+    display: inline-block;
+    float: left;
+}
+.vcmorderapikeydiv .vcmorderapikeyinner {
+    padding: 16px 16px 0;
+}
+.vcmorderapikeydiv .vcmorderapikeylogo {
+    background: none repeat scroll 0 0 #f6f6f6;
+    border-bottom-left-radius: 12px;
+    border-right: 1px solid #ddd;
+    border-top-left-radius: 12px;
+    box-shadow: 0 0 2px #eee inset;
+    padding: 8px;
+}
+.vcmorderapikeydiv .vcmorderapikeylogo > span {
+    background: url("images/vikcm_apikey.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 38px;
+    width: 48px;
+}
+.vcmorderapikeydiv .vcmorderapikeyvalinput {
+	font-size: 12px;
+	color: #666;
+	border: 1px solid #ddd;
+	width: 200px !important;
+	padding: 3px 3px 3px 6px;
+	border-radius: 2px;
+	background: #fefefe;
+}
+
+/* Rates, Availability and Restrictions */
+
+#vcmroomsynchresponsebox {
+	margin-top: 10px;
+}
+.vcm-channel-toolbar {
+	float: right;
+}
+.vcm-separe {
+	display: inline-block;
+    float: left;
+    width: 35px;
+    color: #fff;
+}
+.vcmrardate {
+	font-weight: bold;
+	font-size: 16px;
+}
+.vcmrar-rateplan {
+	display: inline-block;
+	border: 1px dashed #ccc;
+	padding: 5px;
+	border-radius: 3px;
+	margin-bottom: 5px;
+	min-height: 60px;
+	width: 99%;
+}
+.vcmrar-rateplan.vcmrar-rateplan-parent:not(.vcmrar-rateplan-parent-noderived) {
+	border-bottom: none;
+}
+.vcmrar-rateplan.vcmrar-rateplan-derived:not(.vcmrar-rateplan-derived-hidden) {
+	border-top: none;
+	position: relative;
+}
+.vcmrar-rateplan-derived:before {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	background: url('images/connected32.png') left center no-repeat;
+	left: 50%;
+	top: -32px;
+	content: "";
+}
+.vcmrar-addlos {
+	display: inline-block;
+	cursor: pointer;
+	padding: 0 0 0 20px;
+	background: url('images/add.png') left center no-repeat;
+	font-weight: bold;
+	margin-top: 10px;
+	min-height: 16px;
+	min-width: 100px;
+}
+.vcmrateplansp {
+	border-radius: 3px;
+	cursor: pointer;
+	display: inline-block;
+	padding: 5px 30px 5px 5px;
+	margin: 0 0 8px 0; 
+}
+.vcmrateplanoff {
+	background: #D1D5D8 url(images/check-circle-empty.png) 97% center no-repeat;
+	border:1px solid #ccc;
+	color: #fff;
+}
+.vcmrateplanon {
+	background: #02669A url(images/check-circle.png) 97% center no-repeat;
+	border:1px solid #02669A;
+	color: #fff;
+}
+.vcmrateplansp-toenabled {
+	background: #D1D5D8 url(images/check-circle-goenable.png) 97% center no-repeat;
+}
+.vcmrateplansp-todisabled {
+	background: #02669A url(images/cancel-circle-todisable.png) 97% center no-repeat;
+}
+.vcmrarratesp {
+	font-weight: bold;
+	display: block;
+	height: 35px;
+}
+.vcmrarcurrency {
+	margin-right: 3px;
+	font-weight: normal !important;
+}
+.vcmrarrestr-block {
+	display: block;
+	border: 1px dashed #ccc;
+	padding: 5px;
+	border-radius: 3px;
+	margin-bottom: 5px;
+}
+.vcmrarrestr-arrivdep {
+	display: block;
+	margin-bottom: 10px;
+}
+.vcmrarrestr-minlos {
+	font-weight: bold;
+	color: #666;
+	display: inline-block;
+	margin-right: 8px;
+}
+.vcmrarrestr-maxlos {
+	font-weight: bold;
+	color: #222;
+	display: inline-block;
+	margin: 0 0 0 10px;
+}
+.vcmrarrestr-maxlos input, .vcmrarrestr-minlos input {
+	margin: 0 0 0 8px;
+}
+.vcmrarrestr-tag {
+	font-size: 11px;
+	display: inline-block;
+	padding: 2px 26px 2px 4px;
+	border-radius: 3px;
+	min-height: 16px;
+	cursor: pointer;
+	font-weight: bold;
+}
+.vcmtagenabled {
+	background: #02669A url(images/check-circle_14.png) 95% center no-repeat;
+	border:1px solid #02669A;
+	color: #fff;
+}
+.vcmtagdisabled {
+	background: #D1D5D8 url(images/check-circle-empty_14.png) 95% center no-repeat;
+	border:1px solid #ccc;
+	color: #fff;
+}
+.vcmrarrestr-tag-toenabled {
+	background: #D1D5D8 url(images/check-circle-goenable_14.png) 95% center no-repeat;
+}
+.vcmrarrestr-tag-todisabled {
+	background: #02669A url(images/cancel-circle-todisable_14.png) 95% center no-repeat;
+}
+.vcmrar-newroomstatus {
+	display: none;
+}
+.vcmshowtip {
+	position: relative;
+}
+.vcmshowtip:after {
+	content: "\25CF";
+	font-size: 11px;
+    font-weight: bold;
+    position: absolute;
+    right: -8px;
+    top: -9px;
+	color: #55A9E1;
+}
+.vcmshowinfo {
+	position: relative;
+	cursor: pointer;
+}
+.vcmshowinfo:after {
+	content: "\25CF";
+	font-size: 11px;
+    font-weight: bold;
+    position: absolute;
+    right: -8px;
+    top: -9px;
+	color: #55A9E1;
+}
+.imgtoggle {
+	cursor: pointer;
+	vertical-align: top;
+}
+.vcmrar-newroomstatus-toenabled {
+	display: inline-block !important;
+	width: 34px;
+	height: 16px;
+	background: url(images/to_enabled.png) left center no-repeat;
+}
+.vcmrar-newroomstatus-todisabled {
+	display: inline-block !important;
+	width: 36px;
+	height: 16px;
+	background: url(images/to_disabled.png) left center no-repeat;
+}
+.vcm-ibe-compare {
+	display: none;
+	float: left;
+	border-radius: 5px;
+	margin: 15px 0 0;
+	padding: 7px 9px 7px 32px;
+	background: #F9E6A4 url('images/compare-icon.png') 4px center no-repeat;
+	border:1px solid #eacc65;
+	color: #444;
+	cursor: pointer;
+}
+.vcm-ibe-compare-active {
+	background-color: #eacc65;
+	box-shadow: 0 0 3px #BDA654 inset;
+}
+#vcm-channel-controls {
+	display: none;
+	margin-left: 20px;
+	float: left;
+	border-radius: 5px;
+	margin: 15px 0 0;
+	padding: 7px 9px 7px 9px;
+	background: #F9E6A4;
+	border:1px solid #eacc65;
+	color: #444;
+}
+#vcm-channel-controls select {
+	margin: 0 !important;
+}
+.vcm-copy-ratesinv {
+	display: none;
+	float: left;
+	border-radius: 5px;
+	margin: 15px 0 0;
+	padding: 7px 9px 7px 32px;
+	background: #698c00 url('images/copy-icon.png') 4px center no-repeat;
+	border:1px solid #5b7900;
+	color: #fff;
+	cursor: pointer;
+}
+.vcm-copy-ratesinv-full {
+	position: relative;
+}
+.vcm-copy-ratesinv-full:before {
+	background: none repeat scroll 0 0 #f00;
+	border-radius: 50%;
+	color: #fff;
+	content: attr(data-content);
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	height: 20px;
+	position: absolute;
+	right: -10px;
+	text-align: center;
+	top: -10px;
+	width: 20px;
+}
+.vcm-copyrar-new label {
+	display: block;
+}
+.vcm-copyrar-left, .vcm-addlos-left {
+	float: left;
+	text-align: center;
+	width: 50%;
+}
+.vcm-copyrar-right, .vcm-addlos-right {
+	float: right;
+	text-align: center;
+	width: 50%;
+}
+.vcm-addlos-from {
+	display: inline-block;
+	margin-right: 3px;
+}
+.vcm-addlos-to {
+	display: inline-block;
+	margin: 0 3px 0 10px;
+}
+.vcm-addlos-right div span {
+	display: inline-block;
+	margin-right: 3px;
+}
+.vcm-copyrar-tocalc-cont {
+	display: inline-block;
+	min-width: 90px;
+}
+.vcm-copyrar-tocalc {
+	display: inline-block;
+	margin-left: 5px;
+	border-bottom: 1px solid #698c00;
+}
+.vcm-copyrar-bottom, .vcm-addlos-bottom {
+	display: block;
+	margin-top: 10px;
+	clear: both;
+	text-align: center;
+}
+.vcm-copyrar-applied, .vcm-addlos-applied {
+	display: block;
+	border-top: 1px dashed #ccc;
+	clear: both;
+	padding: 10px;
+	margin: 10px;
+	font-weight: bold;
+	text-align: center;
+}
+.vcm-copyrar-applied div, .vcm-addlos-applied div {
+	background: none repeat scroll 0 0 #eee;
+	border: 1px solid #ccc;
+	margin-bottom: 3px;
+	padding: 4px;
+}
+.vcm-copyrar-copyfrom {
+	display: inline-block;
+	margin-right: 5px;
+}
+.vcm-copyrar-copyto {
+	display: inline-block;
+	margin-left: 5px;
+}
+.vcm-copyrar-copywhere {
+	display: inline-block;
+	margin-left: 5px;
+}
+.vcm-copyrar-where span {
+	display: inline-block;
+	margin-right: 3px;
+}
+.vcm-copyrar-where span label {
+	display: inline !important;
+}
+.vcm-copyrar-copyunset, .vcm-addlos-unset {
+	display: inline-block;
+	float: right;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	background: url('images/error_new.png') left center no-repeat;
+}
+.vcm-copyrar-done, .vcm-alert-modal-done, .vcm-tip-modal-done {
+	display: block;
+	text-align: center;
+}
+.vcm-alert-modal-done, .vcm-tip-modal-done {
+	margin-top: 30px;
+}
+.vcm-comparison {
+	display: none;
+	border-radius: 3px;
+	background: #F8E295;
+	border:1px solid #EACC65;
+	color: #444;
+	padding: 3px;
+}
+.vcm-compare-restrictions {
+	text-align: center;
+}
+.vcm-compare-restrictions .vcm-compare-ibecenter {
+	display: block;
+}
+.vcm-compare-ibelab {
+	font-weight: bold;
+	display: inline-block;
+}
+.vcm-compare-ibecircle {
+	font-weight: bold;
+	display: inline-block;
+	padding: 5px;
+	border-radius: 50%;
+	color: #fff;
+	background: #02669a;
+	min-height: 18px;
+	min-width: 18px;
+}
+.vcm-compare-ibecircleavail {
+	background: #d1d5d8;
+}
+.vcm-compare-ibeoflab {
+	font-weight: bold;
+	display: inline-block;
+	margin: 0 5px 0 5px;
+}
+.vcmrar-spacer {
+	display: inline-block;
+	width: 100%;
+	height: 10px;
+}
+.vcmrar-rplan-leftblock {
+	float: left;
+}
+.vcmrarratesp .vcmrarratelabel {
+	display:inline-block;
+	width:150px;
+}
+.vcmrar-rplan-losoccupancy-cont {
+	max-height:250px;
+	overflow:scroll;
+	font-size:11px;
+}
+.vcmrar-rplan-losoccupancy-cont .vcm-los-new input {
+	font-size:11px !important;
+	width:100px;
+	padding:2px !important;
+}
+.vcmrar-rplan-rightblock {
+	float: right;
+	width: 45%;
+	padding: 0;
+	margin: -18px 0 0 0;
+}
+.vcm-compare-pricecols {
+	display: none;
+	padding: 3px 5px;
+}
+.vcm-compare-pricecols-active {
+	display: inline-block;
+    width: 94%;
+}
+.vcm-compare-rates {
+	font-size: 12px;
+}
+.vcm-compare-ratetab {
+	width: 50%;
+	float: left;
+	display: inline-block;
+	background: #EFCD5B;
+	text-align: center;
+	cursor: pointer;
+	font-size: 10px;
+	position: relative;
+}
+.vcm-compare-ratetab a {
+	display: block;
+	color: #111;
+	cursor: pointer;
+}
+.vcm-compare-ratetab-active {
+	background: #F8E295;
+	cursor: default;
+}
+.vcm-compare-ratetab-active a, .vcm-compare-ratetab-active a:hover {
+	cursor: default !important;
+	text-decoration: none;
+}
+.vcm-compare-ratetab:first-child {
+	border-top-left-radius: 3px;
+}
+.vcm-compare-ratetab:last-child {
+	border-top-right-radius: 3px;
+}
+.vcm-compare-rates-roomcost {
+	display: block;
+	height: 35px;
+	position: relative;
+}
+.vcm-compare-rates-copycost {
+	background: url(images/arrow-prices.png) left 3px no-repeat;
+	width: 14px;
+	height: 18px;
+	display: inline-block;
+	margin: 0 5px 0 0;
+	cursor: pointer;
+	float: left;
+}
+.vcm-compare-rates-roomcost:after {
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	content: "";
+	top: 26px;
+	left: 0; 
+	border-bottom:1px dashed #efcd5b;
+}
+.vcm-compare-pricefornights {
+	display: inline-block;
+	margin-right: 5px;
+	font-weight: bold;
+}
+.vcm-compare-pricebox {
+	font-size: 13px;
+}
+.vcm-compare-pricecurrency {
+	margin-right: 2px;
+}
+.vcm-compare-copyall {
+	background: url(images/arrow-prices.png) left 3px no-repeat;
+	min-width: 14px;
+	height: 18px;
+	display: inline-block;
+	padding: 0 0 0 19px;
+	margin: 10px 0 0;
+	cursor: pointer;
+	float: left;
+	font-weight: bold;
+	font-size: 12px;
+}
+.vcm-compare-copyall:after {
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	content: "";
+	top: 26px;
+	left: 0; 
+	border-bottom:1px dashed #efcd5b;
+}
+.vcmrar-room-box {
+	font-size: 14px;
+}
+.vcmrardate-scroll {
+	background: #eee;
+	border:1px solid #ddd;
+	border-bottom-left-radius:8px;
+	border-bottom-right-radius:8px;
+	padding: 10px;
+	box-shadow: 0px 1px 1px #ddd;
+	margin-left: -10px;
+	cursor: pointer;
+}
+.vcmrar-room-scroll {
+	font-weight: bold;
+	margin-top: 10px;
+}
+.vcmrarinvlastupdate {
+	display: block;
+	margin-top: 5px;
+	font-size: 11px;
+}
+.vcmrarinvlastupdate span {
+	display: block;
+	font-style: italic;
+}
+.vcm-centerp {
+	text-align: center;
+}
+.vcm-italicp {
+	font-style: italic;
+	font-size: smaller;
+	margin-top: 5px;
+}
+.vcm-addlos-occupancy {
+	margin-bottom: 5px;
+}
+.vcm-addlos-occupancy span {
+	display: inline-block;
+	margin-right: 3px;
+}
+.vcm-addlos-occupancy select {
+	vertical-align: middle;
+}
+.vcmrar-rplan-losoccupancy-column {
+	display: none;
+	float: left;
+    width: 25%;
+}
+.vcmrar-rplan-losoccupancy-column span {
+	display: inline-block;
+	font-weight: bold;
+}
+.vcmrar-rplan-losoccupancy-column > span {
+	font-size:13px;
+}
+.vcmrar-rplan-losoccupancy-column .vcmrarcurrency {
+	font-size:10px;
+}
+.vcm-addlos-copyratesibe {
+	display: none;
+}
+/* End Rates, Availability and Restrictions */
+
+.vcmvbroomimg {
+	border-radius: 3px;
+	border:1px solid #ddd;
+	padding: 2px;
+	margin: 0 5px 0 0;
+}
+.vcm-notif-left-block {
+	float: left;
+}
+.vcm-notif-right-block {
+	float: right;
+}
+.vcm-notif-room-cont {
+	border:1px solid #ddd;
+	background: #f6f6f6;
+	border-radius: 4px;
+	padding: 8px;
+	margin: 0 0 5px 0;
+}
+span.vcm-notif-title {
+	display: block;
+}
+.vcm-notif-title span {
+	font-weight: bold;
+}
+.vcm-notif-largep {
+	font-size: 15px;
+}
+.vcmotaspblock {
+	display: block;
+	font-weight: bold;
+	border:1px solid #ddd;
+	background: #f6f6f6;
+	border-radius: 4px;
+	padding: 4px;
+	margin: 0 0 2px 0;
+	text-align: center;
+}
+.vcm-dash-hidden {
+	display: none;
+}
+.vcm-childnotification-head {
+	display: block;
+}
+.vcm-sp-right {
+	display: inline-block;
+	margin-left: 50px;
+}
+.vcm-dash-openchildn {
+	display: inline-block;
+	background: url(images/arrow-right.png) left center no-repeat;
+	padding: 0 0 0 13px;
+}
+.vcm-dash-closechildn {
+	display: inline-block;
+	background: url(images/arrow-down.png) left center no-repeat;
+	padding: 0 0 0 13px;
+}
+.vcm-childnotif-otaname {
+	display: inline-block;
+	margin: 0 0 0 5px;
+}
+.vcm-notif-toberead {
+	font-weight: bold;
+	border:1px solid #0290BB;
+}
+.vcmtablenots a.modal {
+	display: inline-block;
+	background: url(images/info.png) right top no-repeat;
+	padding: 0 14px 0 0;
+}
+.vcmtablenots td {
+	padding: 2px 0;
+}
+.vcm-notif-idblock {
+	display: block;
+	font-weight: bold;
+	border:1px solid #ddd;
+	background: #f6f6f6;
+	border-radius: 4px;
+	padding: 4px;
+	margin: 0 0 2px 0;
+	text-align: left;
+}
+.vcm-notif-idblock a {
+	display: block;
+}
+.pagination {
+	margin: 8px 0 0 !important;
+}
+.vcmconfigbottom {
+	display: block;
+	min-height: 350px;
+}
+
+/* End Listings */
+.vcmlistingscont {
+	display: block;
+	padding: 3px;
+}
+.vcmsingleproperty {
+	display: block;
+	margin: 10px 0 25px 0;
+	clear: both;
+	height: auto;
+	overflow: hidden;
+	padding: 10px;
+	border: 3px solid #ccc;
+	border-radius: 10px;
+}
+.vcmpropertyleft {
+	float: left;
+	display: inline-block;
+	vertical-align: top;
+}
+.vcmpropertyleft img {
+	border-radius: 3px;
+	border:1px solid #ddd;
+	padding: 2px;
+	margin: 0 5px 0 0;
+	max-width: 250px;
+}
+.vcmpropertydetails {
+	float: left;
+	margin: 0 0 0 10px;
+}
+.vcmpropertydetailstop {
+	display: block;
+}
+.vcmpropertydetailsmiddle {
+	display: block;
+}
+.vcmpropertydetailsmiddle .vcmpropertyurle4j {
+	display: block;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 5px;
+}
+.vcmpropertydetailsmiddle .vcmpropertyurlcha {
+	margin-top: 5px;
+}
+.vcmpropertyurle4j .vcmpropertyinputblock {
+	display: block;
+	font-weight: bold;
+	color: #777;
+}
+.vcmpropertyinputblock input[type="text"] {
+	width: 500px !important;
+}
+.vcmpropertyurlcha .vcmpropertyinputblock {
+	display: block;
+	font-weight: bold;
+	color: #777;
+}
+.vcmpropertystatusok {
+	color: #007700;
+	font-weight: bold;
+}
+.vcmpropertystatusbad {
+	color: #AA0000;
+	font-weight: bold;
+}
+/* End Listings */
+
+.vcm-oversight-toolbar-left {
+	display: inline-block;
+	width: 100%;
+	margin: 5px 0;
+}
+.vcm-oversight-toolbar-left > form {
+	float: left;
+	margin: 5px 10px 0 0;
+}
+.vcm-oversight-acmp-block{
+	display: block;
+}
+.vcmsynchspan-acmp .vcmsyncha {
+	background: #DDDDDD url(images/compare-icon.png) 8px center no-repeat; 
+	border:1px solid #ccc;
+	font-size: 14px;
+	padding: 10px 13px 10px 50px;
+	border-radius: 4px;
+	display: inline-block;
+	color: #555 !important;
+	position: relative;
+	transition: all 400ms ease-in-out 0s;
+	-moz-transition: all 400ms ease-in-out 0s;
+	-webkit-transition: all 400ms ease-in-out 0s;
+	-o-transition: all 400ms ease-in-out 0s;
+}
+.vcmsynchspan-acmp {
+	margin: 0 !important;
+}
+.vcmsynchspan-acmp .vcmsyncha:hover {
+	text-decoration: none;
+	background-color: #ccc;
+	transition: all 400ms ease-in-out 0s;
+	-moz-transition: all 400ms ease-in-out 0s;
+	-webkit-transition: all 400ms ease-in-out 0s;
+	-o-transition: all 400ms ease-in-out 0s;
+}
+.vcmsynchspan-acmp .vcmsyncha:after {
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	background-color: #CCCCCC;
+	left: 40px;
+	content: "";
+	top: 0;
+}
+.vcm-oversight-acmp-response {
+	margin: 20px 0 0;
+	display: inline-block;
+	width: 100%;
+}
+
+
+/* Joomla 3.x */
+
+input, textarea, select {
+    width: auto !important;
+}
+input[type="number"] {
+	width: 45px !important;
+}
+table.adminform label {
+	display: inline;
+	margin:0 0 0 5px;
+}
+table.adminform td {
+	padding: 6px 0;
+}
+table.adminform div.input-append {
+	display: inline;
+}
+
+.icon-vikchannelmanager:before {
+	content: "\62";
+}
+.vcmorderapikeyinner .vcmorderapikeylabspan {
+	width: auto !important;
+	float: none !important;
+	display: inline-block !important;
+}
+
+/* Start Availability compare */
+.vcm-acmp-channel-row {
+	background-color: #E4ECF2;
+}
+.vcm-acmp-channel-row td {
+	padding: 5px;
+	text-align: center;
+}
+.vcm-acmp-channel-row .vcm-acmp-channel-cell {
+	text-align: right;
+	font-weight: bold;
+	padding: 10px 45px 10px;
+	background-position: 98% center;
+	background-repeat: no-repeat;
+}
+.vcm-acmp-channel-expedia .vcm-acmp-channel-cell {
+	background-image:url(images/expedia-logo.png);
+}
+.vcm-acmp-channel-vrbo .vcm-acmp-channel-cell {
+	background-image:url(images/vrbo-li.png);
+}
+.vcm-acmp-channel-homeaway .vcm-acmp-channel-cell {
+	background-image:url(images/homeaway-li.png);
+}
+.vcm-acmp-channel-bookingcom .vcm-acmp-channel-cell {
+	background-image:url(images/booking-logo.png);
+}
+.vcm-acmp-channel-agoda .vcm-acmp-channel-cell {
+	background-image:url(images/agoda-logo.png);
+	padding: 10px 60px 10px 45px;
+}
+.vcm-closedinventorytd  {
+	background: #FFBFBF;
+}
+.vcm-tdcomparemismatch {
+	position: relative;
+}
+.vcm-tdcomparemismatch::before {
+	background: #feefb3 none repeat scroll 0 0;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	color: #9f6000;
+	content: "!";
+	font-size: 12px;
+	font-weight: bold;
+	height: 18px;
+	width: 18px;
+	position: absolute;
+	text-align: center;
+	right: 1px;
+	bottom: 1px;
+	bottom: calc(50% - 10px);
+}
+/* End Availability compare */
+
+.vcm-customa-legend-block {
+	float: right;
+	margin: 12px 0 0;
+}
+.vcm-customa-legend-block .vcm-customa-legend-entry {
+	display: inline-block;
+    font-size: 12px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.vcm-customa-legend-block .vcm-customa-legend-entry > span {
+	display: inline-block;
+	float: left;
+}
+.vcm-customa-legend-block .vcm-customa-legend-box {
+	border: 1px solid #ddd;
+    border-radius: 2px;
+    display: inline-block;
+    height: 15px;
+    vertical-align: middle;
+    width: 14px;
+}
+.vcm-customa-legend-block .vcm-customa-legend-label {
+	padding: 0px 0 0 5px;
+}
+.vcm-customa-legend-block .vcm-customa-legend-green {
+	background: #B7E0CC;
+}
+.vcm-customa-legend-block .vcm-customa-legend-purple {
+	background: #8A8FAB;
+}
+.vcm-customa-legend-block .vcm-customa-legend-greenself {
+	background: #B7E0CC;
+	border-bottom:2px solid #8A8FAB;
+}
+.vcm-customa-legend-block .vcm-customa-legend-red {
+	background: #DD5500;
+}
+.vcm-customa-legend-block .vcm-customa-legend-sky {
+	background: #e4ecf2;
+}
+.vcm-customa-legend-block .vcm-customa-legend-pink {
+	background: #FFBFBF;
+}
+.vcm-customa-legend-block .vcm-customa-legend-dashed {
+	text-align: center;
+}
+
+a.vcm-diagnostic-setting {
+	background: #378137 none repeat scroll 0 0;
+	border: 0 none;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	padding: 8px;
+	text-align: center;
+}
+a.vcm-diagnostic-setting:hover {
+	text-decoration: none !important;
+	color: #fff !important;
+}
+.vcm-diagnostic-goodresponse {
+	padding: 10px 20px;
+	margin-top: 15px;
+	display: block;
+	border: 1px solid #378137;
+	border-radius: 5px;
+}
+.vcm-diagnostic-goodresponse .head-title {
+	margin-bottom: 10px;
+	padding: 5px;
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom: 1px solid #378137;
+}
+.vcm-diagnostic-goodresponse .body-content {
+	margin-top: 5px;
+}
+.vcm-diagnostic-badresponse .body-content {
+	margin-top: 5px;
+}
+.vcm-diagnostic-badresponse {
+	padding: 10px 20px;
+	margin-top: 15px;
+	display: block;
+	border: 1px solid #942a25;
+	border-radius: 5px;
+}
+.vcm-diagnostic-badresponse .head-title {
+	margin-bottom: 10px;
+	padding: 5px;
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom: 1px solid #942a25;
+}
+.vcm-wizard-getapikey {
+	display: block;
+	margin-top: 30px;
+}
+.vcm-wizard-getapikey-info {
+	display: block;
+}
+.vcm-wizard-getapikey-link {
+	display: block;
+}
+/* Launch PCID_RQ button */
+.vcm-pcid-launch {
+	display: inline-block;
+	background: #5495B8 url(images/credit-card-security.png) 5px 2px no-repeat;
+	color: #fff;
+	font-weight: bold;
+	padding: 8px 10px 8px 47px;
+	border-radius: 4px;
+}
+.vcm-pcid-launch:hover {
+	color:#fff;
+	text-decoration:none;
+	background-color: #4B87A6;
+}
+.vcm-notif-pcidrq-container {
+	float: right;
+}
+.vcm-pcid-header h3 {
+	text-align: center;
+}
+.vcm-pcid-body {
+	display: inline-block;
+	width: 100%;
+}
+.vcm-pcid-body > div > pre {
+	display: block;
+	border: 1px solid #ddd;
+	min-height: 200px;
+}
+.vcm-pcid-body-block {
+	width: 46%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 5px;
+	cursor: pointer;
+	min-height: 250px;
+	overflow: auto;
+}
+#vcm-pcid-body-left {
+	float: left;
+}
+#vcm-pcid-body-right {
+	float: right;
+}
+.vcm-pcid-body .off pre {
+	opacity: 0.1;
+}
+/* END Launch PCID_RQ button */
+
+.vcm-accountparam-changed {
+	box-shadow: 4px 4px 1px 0 #378137 !important;
+	-moz-box-shadow: 4px 4px 1px 0 #378137 !important;
+	-webkit-box-shadow: 4px 4px 1px 0 #378137 !important;
+}
+.vcm-moreaccounts-numrooms {
+	display: block;
+	font-size: smaller;
+}
+.vcm-moreaccounts-table {
+	width: 100%;
+}
+.vcm-moreaccounts-firstrow {
+	height: 30px;
+	vertical-align: top;
+}
+.vcm-moreaccounts-firstrow td {
+	font-size: 16px;
+	font-weight: bold;
+}
+.vcm-moreaccounts-rows {
+	border-bottom: 1px solid #ddd;
+}
+.vcm-moreaccounts-rows td {
+	padding: 5px 0;
+}
+.vcm-moreaccounts-rows td:first-child {
+	width: 60%;
+}
+.vcm-moreaccounts-inner {
+	display: inline-block;
+	width: 100%;
+}
+.vcm-moreaccounts-inner > div {
+	float: left;
+	display: inline-block;
+	margin-right:10px;
+}
+.vcm-moreaccounts-sel > label {
+	display: inline-block;
+	margin-right:5px;
+}
+.vcm-config-param-cell {
+    background: #e9e9e9 none repeat scroll 0 0;
+    border-right: 1px solid #ddd;
+    text-align: right !important;
+    vertical-align: middle !important;
+}
+.vcm-menunav-wrap {
+	display: inline-block;
+	width: 100%;
+}
+.vcm-menunav-left {
+	float: left;
+	display: inline-block;
+	width: 200px;
+}
+.vcm-menunav-right {
+	float: left;
+	display: inline-block;
+	margin: 20px 0 0;
+}
+/*** Responsive ***/
+@media screen and (max-width: 900px) {
+	.vcm-table-responsive {
+   		min-height: 0.01%;
+    	overflow-x: auto;
+	}
+	.vcm-table-responsive .vcm-table {
+		background-color: transparent;
+	}
+	.vcm-table-responsive .vcm-table td {
+	    line-height: 1.42857;
+	    padding: 8px;
+	}
+	ul.vcmuladminmenu li {
+		margin: 3px !important;
+	}
+	.vcmdashdivleft {
+		width: 93%;
+		float: none;
+	}
+	.vcmdashdivright {
+		width: 93%;
+		float: none;
+		margin-left:0;
+	}
+	div.vcmrelationshema {
+		width: 90%;
+	}
+	.vcmrarratesp {
+		width: auto;
+	}
+	.vcmrar-rplan-losoccupancy-column {
+		width: 100%;
+	}
+	.vcmrarrestr-block, .vcmrarratesp {
+		height: auto;
+	}
+	.vcmrarrestr-tag {
+		margin: 3px;
+	}
+	.vcm-info-overlay-content {
+		width: 70%;
+		left: 14%;
+	}
+	.vcmdivmiddle {
+		width: 100%;
+	}
+	.vcmdivleft, .vcmdivmiddle, .vcmdivright {
+		width: 96%;
+		float: none;
+	}
+	.vcmtacallrooms .vcmtacroomdiv, .vcmtriallrooms .vcmtriroomdiv {
+		width: 96%;
+		height: 215px;
+	}
+	#vcmdatepicker {
+		width: 87px !important;
+	}
+	.vcmosprevday, .vcmosnextday {
+		display: none !important;
+	}
+	.vcmosprevweek, .vcmosprevday, .vcmosnextday, .vcmosnextweek {
+		font-size: 10px;
+		padding: 4px;
+	}
+	.vcmsynchspan {
+		margin: 15px 0 0 !important;
+	}
+	.vcm-oversight-roomname {
+		font-size: 12px !important;
+	}
+	.vcmrar-rplan-losoccupancy-cont {
+		border-top:1px solid #ddd;
+	}
+	.vcm-acmp-channel-row .vcm-acmp-channel-cell {
+		padding: 10px 45px !important;
+	}
+	.vcm-tdcomparemismatch::before {
+		right: 0;
+		bottom:calc(50% - 17px);
+		height: 12px;
+		width: 12px;
+		font-size: 9px; 
+	}
+}

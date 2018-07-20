@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+    <name>Vik Wall Image</name>
+    <author>e4j - Extensionsforjoomla.com</author>
+    <creationDate>June 2015</creationDate>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>templates@extensionsforjoomla.com</authorEmail>
+    <authorUrl>www.extensionsforjoomla.com</authorUrl>
+    <version>1.0</version>
+    <files>
+        <filename module="mod_vikwallimage">mod_vikwallimage.php</filename>
+        <filename>mod_vikwallimage.xml</filename>
+        <filename>helper.php</filename>
+        <filename>mod_vikwallimage.css</filename>
+        <filename>index.html</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>tmpl/default.php</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="background" type="media" preview="true" directory="/images/" description="Insert the wallpaper image" />
+                <field name="textarea" type="editor" default="Insert here your text" label="Your content" rows="10" cols="5" filter="safehtml" />            
+            </fieldset>
+             <fieldset name="Options">
+                <field name="enablemask" type="list" default="1" label="Enable Mask">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="colormask" type="color" default="#000000" label="Color Mask" />
+                <field name="opacitymask" type="list" default="0.5" label="Level opacity mask" description="Choose the opacity level for the color mask, 1 is full colored and 0 is completely transparent">
+                     <option value="1">1</option>
+                     <option value="0.9">0.9</option>
+                     <option value="0.8">0.8</option>
+                     <option value="0.7">0.7</option>
+                     <option value="0.6">0.6</option>
+                     <option value="0.5">0.5</option>
+                     <option value="0.4">0.4</option>
+                     <option value="0.3">0.3</option>
+                     <option value="0.2">0.2</option>
+                     <option value="0.1">0.1</option>
+                     <option value="0">0</option>
+                </field>
+                <field name="moduleclass_sfx" type="text" label="Module Class suffix" description="Module Class suffix"/>
+                <field
+                    name="prepare_content"
+                    type="radio"
+                    class="btn-group btn-group-yesno"
+                    label="Prepare content"
+                    description="Prepare content"
+                    default="0">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>    
+             </fieldset>
+        </fields>
+    </config>
+</extension>

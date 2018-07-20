@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_J_BUSINESSDIRECTORY_MENUITEM_ADD_COMPANY">
+		<message>COM_J_BUSINESSDIRECTORY_MENUITEM_ADD_COMPANY_INFO</message>
+	</layout>
+	<state>
+		<name>controller</name>
+		<description>descr</description>
+		<url>
+			<param name="controller" type="hidden" default="managecompany" />
+
+		</url>
+	</state>
+	<!-- Add fields to the request variables for the layout. -->
+	
+</metadata>

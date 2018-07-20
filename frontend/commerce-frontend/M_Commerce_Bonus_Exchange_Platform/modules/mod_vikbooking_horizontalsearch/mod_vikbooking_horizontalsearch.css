@@ -1,0 +1,312 @@
+.vrcmodroomsboxdiv {
+    position: relative;
+}
+
+.vbmodhorsearchmaindiv {
+    display: inline-block;
+    width: 100%;
+}
+
+.vbmodhorsearchmaindiv form > div {
+    display: inline-block;
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+.vbmodhorsearchcheckindiv label,
+.vbmodhorsearchcheckoutdiv label,
+.vbmodhorsearchroomsel label,
+.vbmodhorsearchbookdiv label,
+.vbmodhscategories {
+    display: block;
+    width: 100%;
+    margin: 0 0 5px 0;
+}
+
+.vbmodhorsearchbookdiv {
+    display: inline-block;
+    float: left;
+}
+.input-group input {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.vb-cal-img {}
+
+.vbmodhorsearchmaindiv .ui-datepicker-trigger {
+    display: none;
+}
+.vbmodhorsearchroomdentr .horsanumdiv,
+.vbmodhorsearchroomdentr .horscnumdiv {
+    display: inline-block;
+    float: none;
+}
+
+.vbmodhorsearchrac .horsanumsel select,
+.vbmodhorsearchrac .horscnumsel select,
+.vbhsrnselsp select,
+.vbhsrcselsp select {
+    background: transparent;
+    border: 0;
+   color: #555;
+   font-size: inherit;
+   overflow: hidden;
+   padding:5px 37px 5px 7px !important;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   -moz-appearance: none;
+   -moz-border-radius: 2px;
+   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -moz-padding-end: 20px;
+   -moz-padding-start: 2px;
+   -moz-user-select: none;
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   min-width: 55px;
+   max-width: 150px;
+   width: 130%;
+}
+.vbmodhorsearchrac .horsanumsel,
+.vbmodhorsearchrac .horscnumsel,
+.vbhsrnselsp,
+.vbhsrcselsp {
+    background: #fff url(images/arrow.png) 87% center no-repeat;
+    overflow: hidden;
+     border: 1px solid #ccc;
+     display: inline-block;
+     border-radius: 4px;
+}
+
+.vbmodhorsearchrac .vbmodhorsearchroomsel {
+    display: inline-block;
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+.vbmodhorsearchrac .vbmodhorsearchroomdentr {
+    display: inline-block;
+}
+
+.vbmodhorsearchroomdentr .horsanumlb,
+.vbmodhorsearchroomdentr .horscnumlb {
+    display: block;
+    width: 100%;
+    margin: 0 0 5px 0;
+}
+
+.horsanumdiv,
+.horscnumdiv {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.vbmoreroomscontmod .vbmodhorsearchroomdentr {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+}
+
+.vbmodhorsearchrac > .vbmodhorsearchroomdentr > * {
+    display: table;
+}
+
+.vbmoreroomscontmod .vbmodhorsearchroomdentr > *,
+.vbmoreroomscontmod .vbmodhorsearchroomdentr .horsanumdiv > * {
+    display: inline-block;
+}
+
+.vbsearchinputmod {
+    cursor: pointer;
+}
+
+.vbchooseadperoomtab td,
+.vbmoreroomscontmod td {
+    width: 50px;
+}
+
+.vbmodhorsearchbookdiv {
+    margin: 0;
+}
+
+.vbsearchinputmodhors {
+    background: #365868;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 23px 0 0 15px;
+    padding: 7px 20px;
+    border:0;
+}
+
+.vbmodhorsearchroomdentrfirst .horsrnum {
+    display: inline-block;
+    float: left;
+    margin: 30px 15px 0 0;
+}
+
+.vbmoreroomscontmod .vbmodhorsearchroomdentr {
+    margin: 10px 0 0 0;
+}
+
+.vbmoreroomscontmod .horsrnum {
+    margin: 9px 15px 0 0;
+    float: left;
+}
+
+.vbmoreroomscontmod .horsanumsel {
+    margin: 0 13px 0 0;
+}
+
+.vbmodhorsearchtotnights {
+    padding: 30px 0 0;
+}
+
+.vbmodhorsearchmaindiv input[type=text] {
+    width: auto !important;
+}
+.vbmodhorsearchmaindiv form .vbmodhorsearchbookdiv {
+	margin: 0;
+	float: left;
+}
+
+.input-group input {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.vb-cal-img {
+	padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-left: 0;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: #eee url(images/calendar.png) center center no-repeat;
+    height: 34px;
+    cursor: pointer;
+    float: left;
+}
+
+/*** jQuery Calendar ***/
+.ui-datepicker {
+    width: 40em !important;
+}
+.ui-datepicker table {
+  font-size: 0.75em !important;
+}
+.ui-datepicker td {
+  background: #eee;
+}
+.ui-datepicker .ui-datepicker-title {
+    font-size: 18px !important;
+    font-weight: 400 !important;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+    font-size: 11px !important;
+    border:1px solid #eee !important;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  background: transparent !important;
+  font-weight: 500 !important;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+  color: #fff !important;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus {
+  background: #fff !important;
+  border:1px solid #3e6372 !important;
+  border-radius: 3px;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus {
+  color: #222222 !important;
+}
+.ui-widget-header {
+  background: transparent !important;
+  border: 0 !important;
+  font-size: 22px !important;
+  font-weight: 300 !important;
+}
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+  opacity: 0.2 !important;
+}
+.ui-datepicker-other-month {
+  background: transparent !important;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+  padding: 0.5em !important;
+  text-align: center !important;
+}
+.vev-ev-list-evtimecont {
+  background: #f6f6f6 !important;
+  color: #222222;
+}
+.ui-datepicker-current-day {
+    border-radius: 3px;
+    background: #3e6372 !important;
+}
+.ui-datepicker-current-day:hover .ui-state-active {
+  color:#3e6372 !important;
+}
+.ui-datepicker .ui-datepicker-current-day span.ui-state-active, .ui-datepicker .ui-datepicker-current-day a.ui-state-active {
+  border:1px solid #3e6372 !important;
+}
+.ui-datepicker-days-cell-over {
+  background: #eee !important;
+}
+.ui-datepicker-header .ui-corner-all.ui-state-hover {
+  border-color: #eee !important;
+  background: #ddd !important;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+    width: 1.6em !important;
+    height: 1.6em !important;
+}
+.ui-datepicker th {
+  font-size: 12px !important;
+  color: #3e6372 !important;
+}

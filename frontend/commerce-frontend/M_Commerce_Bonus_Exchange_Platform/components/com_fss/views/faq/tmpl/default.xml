@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="FAQS_LIST_ALL">
+		<help url = "http://www.freestyle-joomla.com/comhelp/fss/frontend-view-faq-default" />
+		<message></message>
+	</layout>
+	<state>
+		<name>FAQS_LIST_ALL</name>
+		<url addpath="/administrator/components/com_fss/elements">
+			<param name="catid" type="sql" default="" label="FAQS_SELECT_CATEGORY" query="(SELECT '' as id, 'Show Category List' as title) UNION (SELECT id, title FROM #__fss_faq_cat ORDER BY ordering)" key_field="id" value_field="title" />
+		</url>
+		
+		<fields name="request">
+			<fieldset name="request" label="FAQS_MAIN_SETTINGS">
+				<field name="catid" type="sql" default="" label="FAQS_SELECT_CATEGORY" query="(SELECT '' as id, 'Show Category List' as title) UNION (SELECT id, title FROM #__fss_faq_cat ORDER BY ordering)" key_field="id" value_field="title" />
+			</fieldset>
+		</fields>
+
+		<fields name="params">
+			<fieldset name="cats"	label="FAQS_WHEN_SHOWING_LIST_OF_CATEGORIES">
+				<field name="hide_allfaqs" type="radio" default="-1" label="FAQS_HIDE_ALLFAQS" description="VIEWHELP_FAQS_HIDE_ALLFAQS">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">jNo</option>
+					<option value="1">jYes</option>
+				</field>
+        <field name="hide_tags" type="radio" default="-1" label="FAQS_HIDE_TAGS" description="VIEWHELP_FAQS_HIDE_TAGS">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">jNo</option>
+          <option value="1">jYes</option>
+        </field>
+        <field name="hide_search" type="radio" default="-1" label="FAQS_HIDE_SEARCH" description="VIEWHELP_FAQS_HIDE_SEARCH">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">jNo</option>
+          <option value="1">jYes</option>
+        </field>
+        <field name="show_featured" type="radio" default="-1" label="FAQS_SHOW_FEATURED" description="VIEWHELP_FAQS_SHOW_FEATURED">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">jNo</option>
+          <option value="1">jYes</option>
+        </field>
+        <field name="num_cat_colums" type="list" default="-1" label="FAQS_NUM_CAT_COLUMS" description="VIEWHELP_NUM_CAT_COLUMS">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </field>
+        <field name="view_mode_cat" type="list" default="-1" label="FAQS_VIEW_MODE_CAT" description="VIEWHELP_VIEW_MODE_CAT">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="list">FAQS_VIEW_MODE_CAT_LIST</option>
+					<option value="inline">FAQS_VIEW_MODE_CAT_INLINE</option>
+					<option value="accordian">FAQS_VIEW_MODE_CAT_ACCORDIAN</option>
+					<option value="popup">FAQS_VIEW_MODE_CAT_POPUP</option>
+				</field>
+				<field name="view_mode_incat" type="list" default="-1" label="FAQS_VIEW_MODE_INCAT" description="VIEWHELP_FAQS_VIEW_MODE_INCAT">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="allononepage">FAQS_VIEW_MODE_INCAT_ALLONONEPAGE</option>
+					<option value="accordian">FAQS_VIEW_MODE_INCAT_ACCORDIAN</option>
+					<option value="questionwithtooltip">FAQS_VIEW_MODE_INCAT_QUESTIONWITHTOOLTIP</option>
+					<option value="questionwithlink">FAQS_VIEW_MODE_INCAT_QUESTIONWITHLINK</option>
+          <option value="questionwithpopup">FAQS_VIEW_MODE_INCAT_QUESTIONWITHPOPUP</option>
+          <option value="questionnewwindow">Question with new window</option>
+        </field>
+			</fieldset>
+
+			<fieldset name="list"	label="FAQS_WHEN_SHOWING_LIST_OF_FAQS">
+
+				<field name="view_mode" type="list" default="-1" label="FAQS_VIEW_MODE" description="VIEWHELP_FAQS_VIEW_MODE">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="allononepage">FAQS_VIEW_MODE_INCAT_ALLONONEPAGE</option>
+          <option value="accordian">FAQS_VIEW_MODE_INCAT_ACCORDIAN</option>
+          <option value="questionwithtooltip">FAQS_VIEW_MODE_INCAT_QUESTIONWITHTOOLTIP</option>
+          <option value="questionwithlink">FAQS_VIEW_MODE_INCAT_QUESTIONWITHLINK</option>
+          <option value="questionwithpopup">FAQS_VIEW_MODE_INCAT_QUESTIONWITHPOPUP</option>
+          <option value="questionnewwindow">Question with new window</option>
+        </field>
+				<field name="enable_pages" type="radio" default="-1" label="FAQS_ENABLE_PAGES" description="VIEWHELP_FAQS_ENABLE_PAGES">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+			</fieldset>
+		</fields>
+	</state>
+</metadata>

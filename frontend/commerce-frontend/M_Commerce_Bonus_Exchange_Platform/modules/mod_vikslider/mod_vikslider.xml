@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+  <name>VikSlider</name>
+  <author>Alessio Gaggii - Extensionsforjoomla.com</author>
+  <creationDate>November 2012</creationDate>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>tech@extensionsforjoomla.com</authorEmail>
+  <authorUrl>www.extensionsforjoomla.com</authorUrl>
+  <version>1.1</version>
+  <description>
+<![CDATA[
+Module to create Image or Content Slideshows.<br/>How-to: Create a folder vikslider in images/ and upload every image you wish to use in that folder. In case you want to make a slideshow of contents, create a file .html with the code or just text you want to view for each content to include in the slideshow. Put all these files into the same folder images/vikslider/
+]]>
+</description>
+ 
+  <files>
+    <filename module="mod_vikslider">mod_vikslider.php</filename>
+    <filename>mod_vikslider.xml</filename>
+    <filename>mod_vikslider.css</filename>
+    <filename>index.html</filename>
+    <filename>src/index.html</filename>
+    <filename>src/jquery.js</filename>
+    <filename>src/effects.js</filename>
+    <filename>src/left.png</filename>
+    <filename>src/right.png</filename>
+  </files>
+ 
+  <languages>
+    <language tag="en-GB">language/en-GB/en-GB.mod_vikslider.ini</language>
+  </languages>
+ 
+  <config><fields name="params"><fieldset name="basic">
+    <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+    <field name="@spacer" type="spacer" default="" label="" description="" />
+
+    <field name="width" type="text" default="800" label="DIVWIDTH" description="DIVWIDTH" />
+
+    <field name="height" type="text" default="200" label="DIVHEIGHT" description="DIVHEIGHT" />
+    
+    <field name="effect" type="list" default="fade" label="EFFECT" description="EFFECT">
+      <option value="fade">Fade</option>
+      <option value="shuffle">Shuffle</option>
+      <option value="cover">Cover</option>
+      <option value="curtainX">Curtain X</option>
+      <option value="curtainY">Curtain Y</option>
+      <option value="fadeZoom">Fade Zoom</option>
+      <option value="scrollUp">Scroll Up</option>
+      <option value="scrollDown">Scroll Down</option>
+      <option value="scrollLeft">Scroll Left</option>
+      <option value="scrollRight">Scroll Right</option>
+      <option value="toss">Toss</option>
+      <option value="turnUp">Turn Up</option>
+      <option value="turnDown">Turn Down</option>
+      <option value="turnLeft">Turn Left</option>
+      <option value="turnRight">Turn Right</option>
+      <option value="wipe">Wipe</option>
+      <option value="zoom">Zoom</option>
+    </field>
+
+    <field name="timeout" type="text" default="5000" label="TIMEOUT" description="TIMEOUTDESC" />
+
+    <field name="speedeffect" type="text" default="1500" label="SPEEDEFFECT" description="SPEEDEFFECTDESC" />
+
+    <field name="pausehover" type="radio" default="1" label="PAUSEHOVER" description="PAUSEHOVERDESC">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </field>
+    
+    <field name="navigation" type="radio" default="0" label="NAVIG" description="NAVIGDESC">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </field>
+
+    <field name="@spacer" type="spacer" default="" label="" description="" />
+    <field name="vikslide_1" type="filelist" directory="/images/vikslider" hide_default="1" default="" label="SLIDEIMG" description="SLIDEIMGDESC" />    
+    <field name="link_1" type="text" default="" label="LINK" description="LINKDESC" />
+    <field name="alt_1" type="text" default="" label="ALT tag" description="Alt tag for this image" />
+
+    <field name="@spacer" type="spacer" default="" label="" description="" />
+    <field name="vikslide_2" type="filelist" directory="/images/vikslider" hide_default="1" default="" label="SLIDEIMG" description="SLIDEIMGDESC" />    
+    <field name="link_2" type="text" default="" label="LINK" description="LINKDESC" />
+    <field name="alt_2" type="text" default="" label="ALT tag" description="Alt tag for this image" />
+
+    <field name="@spacer" type="spacer" default="" label="" description="" />
+    <field name="vikslide_3" type="filelist" directory="/images/vikslider" hide_default="1" default="" label="SLIDEIMG" description="SLIDEIMGDESC" />    
+    <field name="link_3" type="text" default="" label="LINK" description="LINKDESC" />
+    <field name="alt_3" type="text" default="" label="ALT tag" description="Alt tag for this image" />
+
+    <field name="@spacer" type="spacer" default="" label="" description="" />
+    <field name="vikslide_4" type="filelist" directory="/images/vikslider" hide_default="1" default="" label="SLIDEIMG" description="SLIDEIMGDESC" />    
+    <field name="link_4" type="text" default="" label="LINK" description="LINKDESC" />
+    <field name="alt_4" type="text" default="" label="ALT tag" description="Alt tag for this image" />
+
+    <field name="@spacer" type="spacer" default="" label="" description="" />
+    <field name="vikslide_5" type="filelist" directory="/images/vikslider" hide_default="1" default="" label="SLIDEIMG" description="SLIDEIMGDESC" />    
+    <field name="link_5" type="text" default="" label="LINK" description="LINKDESC" />
+    <field name="alt_5" type="text" default="" label="ALT tag" description="Alt tag for this image" />
+
+
+    <field name="@spacer" type="spacer" default="" label="" description="" />
+    <field name="vikslide_6" type="filelist" directory="/images/vikslider" hide_default="1" default="" label="SLIDEIMG" description="SLIDEIMGDESC" />    
+    <field name="link_6" type="text" default="" label="LINK" description="LINKDESC" />
+    <field name="alt_6" type="text" default="" label="ALT tag" description="Alt tag for this image" />
+
+
+    <field name="@spacer" type="spacer" default="" label="" description="" />
+    <field name="vikslide_7" type="filelist" directory="/images/vikslider" hide_default="1" default="" label="SLIDEIMG" description="SLIDEIMGDESC" />    
+    <field name="link_7" type="text" default="" label="LINK" description="LINKDESC" />
+    <field name="alt_7" type="text" default="" label="ALT tag" description="Alt tag for this image" />
+
+
+    <field name="@spacer" type="spacer" default="" label="" description="" />
+    <field name="vikslide_8" type="filelist" directory="/images/vikslider" hide_default="1" default="" label="SLIDEIMG" description="SLIDEIMGDESC" />    
+    <field name="link_8" type="text" default="" label="LINK" description="LINKDESC" />
+    <field name="alt_8" type="text" default="" label="ALT tag" description="Alt tag for this image" />
+
+
+    <field name="@spacer" type="spacer" default="" label="" description="" />
+    <field name="vikslide_9" type="filelist" directory="/images/vikslider" hide_default="1" default="" label="SLIDEIMG" description="SLIDEIMGDESC" />    
+    <field name="link_9" type="text" default="" label="LINK" description="LINKDESC" />
+    <field name="alt_9" type="text" default="" label="ALT tag" description="Alt tag for this image" />
+
+    <field name="@spacer" type="spacer" default="" label="" description="" />
+    <field name="vikslide_10" type="filelist" directory="/images/vikslider" hide_default="1" default="" label="SLIDEIMG" description="SLIDEIMGDESC" />    
+    <field name="link_10" type="text" default="" label="LINK" description="LINKDESC" />
+    <field name="alt_10" type="text" default="" label="ALT tag" description="Alt tag for this image" />
+
+
+    <field name="loadjq" type="radio" default="1" label="LOADJQ" description="LOADJQDESC">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </field>
+
+    <field name="navtablealign" type="list" default="center" label="NAVTABLEALIGN" description="NAVTABLEALIGNDESC">
+    	<option value="center">CENTER</option>
+    	<option value="left">LEFT</option>
+    	<option value="right">RIGHT</option>
+    </field>
+    
+    <field name="navleftstyle" type="textarea" default="" label="NAVLEFTSTYLE" description="NAVLEFTSTYLEDESC" rows="10" cols="20" />
+
+    <field name="navrightstyle" type="textarea" default="" label="NAVRIGHTSTYLE" description="NAVRIGHTSTYLEDESC" rows="10" cols="20" />
+
+  </fieldset></fields></config>
+
+</extension>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="socialadstargeting" method="upgrade">
+	<name>Social Ads - jsprofiletargeting </name>
+	<creationDate>2016-10-12</creationDate>
+	<version>3.1.4</version>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>http://www.techjoomla.com</authorUrl>
+	<copyright>Copyright (c) 2009-2016 TechJoomla. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>Plugin for targeting JomSocial Native Profile types</description>
+	<files>
+		<filename plugin="plug_jsprofiletargeting">plug_jsprofiletargeting.php</filename>
+		<folder>plug_jsprofiletargeting</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB/en-GB.plg_socialadstargeting_jsprofiletargeting.ini</language>
+		<language tag="es-ES">es-ES/es-ES.plg_socialadstargeting_jsprofiletargeting.ini</language>
+		<language tag="de-DE">de-DE/de-DE.plg_socialadstargeting_jsprofiletargeting.ini</language>
+		<language tag="sv-SE">sv-SE/sv-SE.plg_socialadstargeting_jsprofiletargeting.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.plg_socialadstargeting_jsprofiletargeting.ini</language>
+		<language tag="da-DK">da-DK/da-DK.plg_socialadstargeting_jsprofiletargeting.ini</language>
+		<language tag="th-TH">th-TH/th-TH.plg_socialadstargeting_jsprofiletargeting.ini</language>
+		<language tag="pt-PT">pt-PT/pt-PT.plg_socialadstargeting_jsprofiletargeting.ini</language>
+  	</languages>
+	<satargeting>
+		<plgfield>jsprofiletargeting_jspt</plgfield>
+	</satargeting>
+</extension>

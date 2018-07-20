@@ -1,0 +1,397 @@
+/*Create ad dispaly*/
+.sa_fieldset .hide-filed { display:none; }
+.sa_fieldset .show-filed { display:block; }
+.preview{float:left; margin-bottom: 10px; margin-left: 10px; width:auto;}
+.preview .preview_sa { margin:0px 0px 0px 5px; }
+#mapping-field-table ul,
+ol {
+margin: 0;
+padding: 0;
+}
+.sa-form label {
+display: block;
+font-size: 12px;
+font-weight: bold;
+min-height: 20px;
+}
+
+@media (max-width: 480px){
+	.sa-border-right {border-right: 0;}
+	.sa-fieldset .targetting .input-append .sa-fields-inputbox{ width: 75%;}
+	.sa-fieldset .targetting .sa-fields-inputbox{ width: 180px; }
+	.sa-fieldset .targetting select {
+	 width: auto;
+	}
+	.sa-create .span7, .target_space .span6{ width: 100%; }
+}
+
+@media (max-width: 800px){
+	.sa-border-right {border-right: 0;}
+}
+#step1 fieldset.sa-fieldset label { float: none!important }
+.sa-create{/*float:left;*/ }
+.sa-create .control-group{/*margin-bottom: 9px !important;*//*^mL v3.1*/}
+
+/*end hack in bootstrap*/
+/* tabs */
+dl.tabs { float: left; margin: 10px 0 -1px 0; z-index: 50; }
+dl.tabs dt { float: left; padding: 4px 10px; border: 1px solid #ccc; border-bottom:none; margin-left: 3px; background-color: #EFF2F7; color: #666; }
+dl.tabs dt.open { background: #F9F9F9; border-bottom: 1px solid #F9F9F9; z-index: 100; color: #000; }
+div.current { clear: both; border: 1px solid #ccc; padding: 20px 10px 5px; margin-bottom:40px; margin-left:3px; width:100%;height:550px;overflow:auto}
+div.current dd { padding: 0; margin: 0; }
+
+/*for textbox size*/
+#addataad_url1, #url2, #eBann, #eBann1{ border:1px solid #BDC7D8;}
+#eBann1{height:65px;}
+#addataad_url1{
+width:20%;
+margin: 0px;
+float: left !important;
+}
+#sa-ads .actions .modal {
+display:block;
+position:relative;
+}
+/*textbox size ends here*/
+/*   characteres left*/
+.minitext { font: normal 0.7em Arial, sans-serif; color: Black; padding-left:3px; }
+.disable { color: #CF110C;}
+/* char left ends here*/
+/*for text above textbox*/
+#sa-form-span{font-weight:normal;}
+#sa-form-spantxt, #sBann, #sBann1{ color:#777777;}
+/*for text above textbox ends here*/
+/*preview of an ad*/
+.sa-form-rightside { float:right; width:50%; }
+.sa-form-rightside-inner { margin:10px; height:200px; width:150px; background-color:#FFF; }
+#preview-span { font-weight:bold;  text-align:center; padding:5px 0px 0px 49px; }
+#preview-title{  font-weight: bold; }
+.preview-title-lnk{ text-decoration:none; }
+#layout_div{padding:5px 0px 0px 0px;}
+#layout1{height:110px; width:265px; overflow:auto;}
+/*
+.layout_span{float:left; position: relative;margin-left:0px !important;}
+*/
+input.layout_radio{margin: 0; position: absolute; }
+img.layout_radio{padding: 1px 6px 6px 15px; width:100px;}
+#upload_area{ /*padding:7px 3px 1px 1px; text-align:center;*/ display:block;}
+/* lower div*/
+#lowerdiv { height:100%; width:100%; margin-bottom: 20px; display:none; }
+#bottomdiv { height:100%; width:100%; margin-bottom: 20px; display:block; }
+.sa-form .alert-help-inline {font-size:12px; font-weight:normal;}
+
+/*
+#bottom1{ display:none; }
+.checkad-outer { height:150px; width : 100px; border:solid 1px; }
+#checkad-img-tr { text-align:center; }
+#checkad-img { height:80px; width:80px; }
+*/
+
+.ad-fields-lable{ width:95px; text-align:left; padding-right:5px; }
+.sa-fields-inputbox{ /*width:217px;*/ border:1px solid #BDC7D8; /*margin:5px;*/ }
+/*Social Targeting*/
+#fixedElement{
+padding: 5px;
+border: 1px solid #CCC;
+position: absolute;
+right: 5px;
+top: 5px;
+}
+#social_target_space{position: relative;}
+.targetting .input-append input[type="text"]{ display:inline-block !important; }
+.sa_h3_chkbox{ float:left; }
+.sa_labels{ font-weight:normal; width:145px; font-style:normal;}
+.sa_labels1{ font-style:italic; }
+.altbutton .sa_labels{font-weight:bold;}
+.targetting .ui-helper-hidden-accessible{ display: none !important;}
+.targetting_yes_no label.first, .unlimited_yes_no label.first{
+-webkit-border-radius:  3px 0 0 3px !important;
+-moz-border-radius: 3px 0 0 3px !important;
+border-radius:3px 0 0 3px !important;
+}
+.targetting_yes_no label.last, .unlimited_yes_no label.last{
+-webkit-border-radius:  0 3px 3px 0 !important;
+-moz-border-radius: 0 3px 3px 0 !important;
+border-radius:0 3px 3px 0 !important;
+}
+.targetting_yes_no input, .unlimited_yes_no input{ display:none !important;}
+.targetting_yes_no label,  .unlimited_yes_no label{ display:inline-block !important;}
+/*Promoplugin elements styling*/
+.promotplugin { padding:0px; }
+#defaulturl{ padding-top:5px; }
+
+/*Pricing*/
+#priceperclick{ padding-left:0px;}
+#selectlink a, #webpagelink a {
+ text-decoration: underline !important;
+ font-style: italic;
+}
+/* Design tab */
+.sa-fieldset{
+ border: 1px solid #CCCCCC !important;
+ border-radius: 5px;
+ padding: 5px;
+}
+.buildad_pricing_tab .controls {
+    margin-left: 180px !important;
+}
+.sa-fieldset .body-text {width: 100%;}
+.sa-form .help-inline {
+font-weight: normal;
+font-size: 12px;
+color: #75788b;
+text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+padding-left: 0px !important;
+}
+.sa-border-right {border-right: 1px dashed #CCCCCC;}
+.sa-create .alert{margin-bottom: 0px !important;}
+.sa-form .alert-help-inline {
+font-weight: normal;
+font-size: 12px;
+color: #75788b;
+text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+margin-left: 0px !important;
+}
+.sa-create .controls, .targetting .controls { margin-left: 0!important}
+.fileinput-button {
+position: relative;
+overflow: hidden;
+vertical-align: middle;
+}
+.fileinput-button input {
+position: absolute !important;
+top: 0;
+right: 0;
+margin: 0;
+opacity: 0;
+font-size: 23px;
+direction: ltr;
+cursor: pointer;
+}
+#default_zone{ margin-left:2px;}
+#default_zone td{ padding:5px 3px; }
+input#unlimited_ad{
+	margin:2px;
+	float:left;
+}
+input#review, input#back2{ width:100px;}
+/*Create ad - Campaign*/
+.show-grid {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+/*Create ad - adsummary*/
+.ad_reviewAdmainContainer .show-grid {
+
+  margin-bottom: 0px ;
+}
+.show-grid [class*="span"] {
+  background-color: #eee;
+  text-align: center;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  min-height: 40px;
+  line-height: 69x;
+}
+.sa-form .prev_next_wizard_actions .form-actions , #sa_payHtmlDiv .form-actions{ padding-left:15px !important }
+.table-responsive {
+width: 100%;
+margin-bottom: 15px;
+overflow-y: hidden;
+overflow-x: auto;
+}
+@media (max-width: 767px){
+.table-responsive {
+width: 100%;
+margin-bottom: 15px;
+overflow-y: hidden;
+overflow-x: auto;
+}
+}
+
+/*Create ad - billing*/
+#ads_mainwrapper  .sa_Mediumselect { width: 161px !important; }
+/*Create ad - sa.js*/
+.com_socialad_ajax_loading{ text-align:center; }
+.com_socialad_ajax_loading_img{ height:72px !important;width:72px !important;}
+.com_socialad_ajax_loading_text{ font-weight:bold;}
+.btn-next, .btn-prev{
+	color: #ffffff !important;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35) !important;
+	background-color: #2b96e2 !important;
+	background-image: linear-gradient(to bottom, #32aaff, #006bb7) !important;
+	background-repeat: repeat-x !important;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.5) !important;
+}
+.btn-next:focus , .btn-next:hover ,.btn-prev:focus , .btn-prev:hover{
+	background-color: #2b96e2 !important;
+	background-image: none !important;
+	background-position: 0px 0px  !important;
+}
+/*Payment view*/
+.hidePaymentFields{display:none;}
+#sa-payment .pymentCoupon{margin-top: 10px;}
+
+/* For create ad tabs*/
+#sa_create .sa_steps_parent {
+background-color:#f9f9f9;
+border:1px solid #d4d4d4;
+border-radius:4px;
+box-shadow:0 1px 4px rgba(0,0,0,0.065);
+}
+
+#sa_create .sa_steps_parent .sa-steps-ol {
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+background:#fff;
+border-radius:4px;
+display:inline-block;
+font-size:12px;
+font-weight:bold;
+margin:0!important;
+padding:0!important;
+}
+
+#sa_create .sa_steps_parent .sa-steps-ol .active {
+background:#f3f4f5;
+color:#3a87ad;
+}
+
+#sa_create .sa_steps_parent .sa-steps-ol .active .badge { background-color:#3a87ad; }
+
+#sa_create .sa_steps_parent .sa-steps-ol .active:after { border-left-color:#f3f4f5; }
+
+#sa_create .sa_steps_parent .sa-steps-ol .badge {
+background-image:none;
+height:auto;
+position:static;
+width:auto;
+}
+
+#sa_create .sa_steps_parent .sa-steps-ol .complete {
+background:#f3f4f5;
+color:#468847;
+cursor:pointer;
+}
+
+#sa_create .sa_steps_parent .sa-steps-ol .complete .badge-success { background-color:#468847; }
+
+#sa_create .sa_steps_parent .sa-steps-ol .complete:after { border-left-color:#f3f4f5;}
+
+#sa_create .sa_steps_parent .sa-steps-ol li {
+background:#dddee4;
+display:inline-block;
+line-height:18px;
+list-style:none;
+margin:0!important;
+padding:12px 17px 10px 30px!important;
+position:relative;
+zoom:1;
+}
+
+#sa_create .sa_steps_parent .sa-steps-ol li:after {
+border-bottom:20px inset transparent;
+border-left:20px solid #dddee4;
+border-top:20px inset transparent;
+content:"";
+height:0;
+position:absolute;
+right:-20px;
+top:0;
+width:0;
+z-index:2;
+}
+
+#sa_create .sa_steps_parent .sa-steps-ol li:before {
+border-bottom:20px inset transparent;
+border-left:20px solid #fff;
+border-top:20px inset transparent;
+content:"";
+height:0;
+left:0;
+position:absolute;
+top:0;
+width:0;
+}
+
+#sa_create .sa_steps_parent .sa-steps-ol li:first-child {
+-moz-border-radius:4px 0 0 4px;
+-webkit-border-radius:4px 0 0 4px;
+border-radius:4px 0 0 4px;
+padding-left:12px;
+}
+
+#sa_create .sa_steps_parent .sa-steps-ol li:first-child:before { border:none;}
+
+@media max-width 480px{
+#sa_create .sa_steps_parent .sa-steps-ol li { padding:12px 0 10px 25px!important; } }
+ @media (max-width: 979px) and (min-width: 768px){
+.techjoomla-bootstrap .sa_reg .span8{
+width: 100%;
+}
+}
+ .techjoomla-bootstrap .sa-form .step-content { margin-top: 5px !important; }
+#sa-form-td{padding-bottom:0px; }
+/*start hack in bootstrap*/
+.techjoomla-bootstrap .form-horizontal .control-label { margin-top: 0 !important; }
+.techjoomla-bootstrap .target_space .targetting_yes_no, .techjoomla-bootstrap .unlimited_yes_no{ margin-left: 18px !important; }
+.techjoomla-bootstrap .targetting {
+background-color: #fff;
+padding: 10px;
+}
+.techjoomla-bootstrap div.sa-form .form-horizontal .control-label {
+float: left;
+padding-top: 5px;
+text-align: right;
+width: 160px;
+}
+.techjoomla-bootstrap .nav-tabs{ list-style-type: none !important; }
+.techjoomla-bootstrap .nav-tabs > li { margin-bottom: -1px !important;}
+
+.techjoomla-bootstrap h1,.techjoomla-bootstrap  h2,.techjoomla-bootstrap  h3,.techjoomla-bootstrap  h4,.techjoomla-bootstrap  h5,.techjoomla-bootstrap  h6 {
+   color: inherit !important;
+    font-family: inherit;
+    font-weight: bold !important;
+    margin: 0 !important;
+    text-rendering: optimizelegibility;
+}
+.sa-create .sa-info  .uneditable-input{ width: 125px; }
+.sa-create .sa-info  .fileinput-button{ border-radius: 0 4px 4px 0 ;}
+.techjoomla-bootstrap .sa_terms_checkbox_style { margin-top:-1px;}
+.techjoomla-bootstrap .btn-primary,.techjoomla-bootstrap  .btn-primary:hover,.techjoomla-bootstrap  .btn-warning,.techjoomla-bootstrap  .btn-warning:hover,.techjoomla-bootstrap  .btn-danger,.techjoomla-bootstrap  .btn-danger:hover,.techjoomla-bootstrap  .btn-success,.techjoomla-bootstrap  .btn-success:hover,.techjoomla-bootstrap  .btn-info,.techjoomla-bootstrap  .btn-info:hover,.techjoomla-bootstrap  .btn-inverse,.techjoomla-bootstrap  .btn-inverse:hover { color: #FFFFFF !important; }
+input#altadbutton, input#social_target, input#geo_target, input#context_target{ margin:3px; }
+/* filter search css added by kk */
+.filter-search #search_list{ margin-bottom:0px!important;}
+
+.techjoomla-bootstrap .qtc_currencey_textbox input[type="text"]{padding: 4px 6px!important; height:20px!important}
+
+.techjoomla-bootstrap .form-horizontal .qtc_controls_text {padding-top:5px;}
+
+.techjoomla-bootstrap  .qtc_modal .icon-edit:before { content: none !important; }
+.techjoomla-bootstrap .msg_support_type{ margin-top:10px !important; }
+
+.techjoomla-bootstrap .cal_text{ margin-top:5px !important; }
+.techjoomla-bootstrap .ads_ckout_select{ width: 161px !important;}
+.techjoomla-bootstrap #sa_reomveMargin .alert{ margin-bottom: 0px !important;
+margin-top: 5px !important;}
+span.hasTooltip:hover { display: block !important; }
+span.hasTooltip:focus { display: block !important; }
+.affiliate_div_style
+{
+	width:100% !important;
+}
+/* Dashboard style8 */
+.tjDB .stat-box {min-width: 185px;}
+/*Calender issue on the bootstrap 3 template*/
+.icon-calendar{
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-calendar:before {
+content: "\f073";
+}

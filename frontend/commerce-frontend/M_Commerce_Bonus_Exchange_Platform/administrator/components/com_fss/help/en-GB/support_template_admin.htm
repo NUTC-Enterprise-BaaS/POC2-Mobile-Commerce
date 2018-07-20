@@ -1,0 +1,28 @@
+<b>{link}</b> : URL for link to ticket details<br>
+<b>{subject}</b> : Ticket subject including link to ticket details. Includes {checkbox}<br>
+<b>{subject_text}</b> : Ticket subject (text only)<br>
+<b>{checkbox}</b> : Checkbox for batch actions. Must be included for batch actions to function<br>
+<b>{lock}</b> : Ticket locked by another user icon<br>
+<b>{tags}</b> : Tags icon with tooltip containing tag list for ticket<br>
+<b>{attach}</b> : Attachments icon with tooltip containing attachment list for ticket<br>
+<b>{msgcount_total}</b> : Number of messages for the ticket<br>
+<b>{msgcount_user}</b> : Number of messages by the user for the ticket<br>
+<b>{msgcount_handler}</b> : Number of messages by the handler for the ticket<br>
+<b>{msgcount_private}</b> : Number of messages by the private for the ticket<br>
+<b>{deletebutton}</b> : Button for deleting ticket<br>
+<b>{archivebutton}</b> : Button for archiving ticket<br>
+<b>{handler_tag}</b> : Ticket handlers name and color highlight<br>
+<b>{trhl}*</b> : Put this within each &lt;tr&gt; tag used. Sets up the mouse over and a few other things. 
+Example &lt;tr {trhl}&gt;&lt;td&gt;{name}&lt;/td&gt;&lt;/td&gt;<br>
+<b>{class}</b> : This needs to be added to the class tag of any table row<br>
+<b>{candelete}</b> : If the can delete setting is set<br>
+<b>{hidehandler}</b> : If the ticket handler should be hidden<br>
+<b>{view}</b> : Current view. Values are: 'open', 'followup', 'waiting', 'allopen', 'closed', 'archive'. 
+This is used to customize the ticket list based on what view is selected.<br>
+<b>{hidehandler}</b> : If the hide ticket handler settings is set<br>
+<b>{multiuser}</b> : If the hide ticket has multiple users<br>
+<b>{if,field,value,operator}HTML{endif}</b> : If statement. field should be one of the fields above. 
+Value should be a string or number, enclosed in speech marks ("). If value is blank, then compares against 
+an empty string. Operator is equals if empty, other values: 'not' for not equals. Fileds with a * cannot 
+be used in an if statement.<br><br>This HTML code will be output within a &lt;table&gt; element, so 
+needs to be in the format &lt;tr {trhl}&gt;&lt;td&gt;{name}&lt;/td&gt;&lt;/td&gt;<br>

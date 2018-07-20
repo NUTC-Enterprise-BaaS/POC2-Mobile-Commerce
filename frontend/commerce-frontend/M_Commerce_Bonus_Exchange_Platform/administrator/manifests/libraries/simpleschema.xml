@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" method="upgrade" version="1.7.0">
+    <name>simpleschema</name>
+    <libraryname>simpleschema</libraryname>
+    <author>Techjoomla</author>
+    <creationDate>29th Mar 2014</creationDate>
+    <copyright>Copyright (C) 2011</copyright>
+    <license>
+
+    http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+
+    </license>
+    <authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>http://www.techjoomla.com</authorUrl>
+	<version>2.1.1</version>
+    <description>
+
+    helper file for api
+
+    </description>
+    <files>
+        <folder>easyblog</folder>
+    </files>
+</extension>

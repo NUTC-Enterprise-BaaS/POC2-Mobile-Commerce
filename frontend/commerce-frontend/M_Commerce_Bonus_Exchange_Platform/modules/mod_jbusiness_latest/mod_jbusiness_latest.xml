@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" ersion="3.0" client="site" method="upgrade">
+	<name>JBusinessDirectory - Latest Businesses</name>
+	<creationDate>November 2013</creationDate>
+	<author>CMSJunkie</author>
+	<copyright>(C) CMSJunkie. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>info@cmsjunkie.com</authorEmail>
+	<authorUrl>www.cmsjunkie.com</authorUrl>
+	<version>3.5.0</version>
+	<description>JBusinessDirectory</description>
+	
+	<files>
+		<filename module="mod_jbusiness_latest">mod_jbusiness_latest.php</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_jbusiness_latest.xml</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_jbusiness_latest.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_jbusiness_latest.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_jbusinessdirectory/models/fields">
+				<field
+					name="viewtype"
+					type="radio"
+					class="btn-group"
+					default="simple"
+					label="View type"
+					description="Choose the module layout">
+					<option
+						value="simple">Simple</option>
+					<option
+						value="slider">Slider</option>
+					<option
+						value="tier">Tier</option>
+					<option
+						value="tier_type">Tier Type</option>
+						
+					<option
+						value="list">List</option>
+				</field>
+
+				<field name="layout-type" type="list" default="horizontal" label="Layout type" 
+					description="How will module will be displayed, horizontal or vertical">
+					<option 
+						value="horizontal">horizontal</option>
+   					<option 
+   						value="vertical">vertical</option>
+				</field>
+
+				<field
+					name="categoryIds"
+					type="businesscategories"
+					multiple="true"
+					size="10"
+					default=""
+					label="Categories"
+					category_type="1"
+					description="Select categories">
+				</field>
+
+				<field
+					name="type"
+					type="businesstypes"
+					multiple="false"
+					size="10"
+					default=""
+					label="Type"
+					description="Select type">
+				</field>
+
+				<field
+					name="city"
+					type="businesscities"
+					multiple="false"
+					size="10"
+					default=""
+					label="City"
+					description="Select city">
+				</field>
+
+				<field
+						name="region"
+						type="businessregions"
+						multiple="false"
+						size="10"
+						default=""
+						label="Region"
+						description="Select Region">
+				</field>
+				
+				<field
+					name="country"
+					type="businesscountries"
+					multiple="false"
+					size="10"
+					default=""
+					label="Country"
+					description="Select country" >
+				</field>
+
+				<field
+					name="count"
+					type="text"
+					default="8"
+					label="Number of businesses"
+					description="Number of businesses that will be displayed"/>
+
+				<field
+					name="only_featured"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="Only featured"
+					description="Show only featurd businesses">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="only_with_logo"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="Only with logo"
+					description="Show only items with logo">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+
+				<field
+					name="geo_location"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="User geo location"
+					description="Display businesses based on user geo location - this will do a refresh of the page and the coordinates will be added on current URL">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+
+				<field
+					name="radius"
+					type="text"
+					default="100"
+					label="Geo location radius"
+					description="Show the business listing based on radius"/> -->
+
+				<field
+					name="order"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="Ordering"
+					description="Set ordering for diplaying latest business listings">
+					<option
+						value="3">Alphabetical</option>
+					<option
+						value="2">ID</option>
+					<option
+						value="1">Creation date</option>
+					<option
+						value="0">Random</option>
+				</field>
+
+				<field
+					name="showviewall"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="Show view all"
+					description="Display view all link at the bottom">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+
+				<field
+					name="backgroundColor"
+					type="text"
+					default="#EAEAEA"
+					label="Item background color"
+					description="The background color of latest business item" />
+
+				<field
+					name="borderColor"
+					type="text"
+					default="#AAAAAA"
+					label="Item border color"
+					description="The background color of border of latest business item" />
+
+			</fieldset>
+			
+			<fieldset name="slider" label="Slider view options">
+				<field
+					name="nrVisibleItems"
+					type="text"
+					default="4"
+					label="Visible items"
+					description="Number of business that will be visible at one time" />
+					
+				<field
+					name="nrItemsToScrool"
+					type="text"
+					default="1"
+					label="Number of items to scrool"
+					description="Number of businesses that will be scrooled" />
+					
+				<field
+					name="autoplay"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="Autoplay"
+					description="Automatic scroll">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				
+				<field
+					name="autoplaySpeed"
+					type="text"
+					default="2000"
+					label="Autoplay Speed"
+					description="Speef of the autoplay" />
+			</fieldset>
+			
+			<fieldset name="tier" label="Tier view options">
+					<field
+						name="max-numbers-row"
+						type="text"
+						default="5"
+						label="Max number of businesses per row"
+						description="Maximum number of businesses that will be displayed in a row (Tire View)" />
+					
+					<field
+						name="show-header"
+						type="radio"
+						class="btn-group"
+						default="0"
+						label="Show header"
+						description="Show header for each row">
+						<option
+							value="1">JYES</option>
+						<option
+							value="0">JNO</option>
+					</field>
+					
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+			
+		</fields>
+	</config>
+</extension>

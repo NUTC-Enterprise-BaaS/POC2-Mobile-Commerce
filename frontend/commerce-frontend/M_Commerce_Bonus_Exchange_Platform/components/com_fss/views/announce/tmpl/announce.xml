@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="ANNOUNCEMENTS_SHOW_SINGLE">
+		<help url = "http://www.freestyle-joomla.com/comhelp/fss/frontend-view-announce-announce" />
+		<message></message>
+  </layout>
+	<state>
+		<name>ANNOUNCEMENTS_SHOW_SINGLE</name>
+		
+        <params addpath="/administrator/components/com_fss/elements">
+			<param name="announceid" type="sql" default="" label="Select Announcement" query="SELECT id, title FROM #__fss_announce" key_field="id" value_field="title" />
+		</params>
+		
+		<fields name="request">
+			<!-- Basic options. -->
+			<fieldset name="request"	label="Main Settings"
+					  addfieldpath="/administrator/components/com_fss/elements">
+				<field name="announceid" type="sql" default="" label="Select Announcement" query="SELECT id, title FROM #__fss_announce" key_field="id" value_field="title" />
+			</fieldset>
+		</fields>
+	</state>
+</metadata>

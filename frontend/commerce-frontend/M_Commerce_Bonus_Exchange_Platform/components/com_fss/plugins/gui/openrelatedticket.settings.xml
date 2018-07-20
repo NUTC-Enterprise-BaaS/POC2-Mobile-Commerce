@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fields name="related" label="Related Ticket">
+
+    <fieldset name="related" label="">
+
+      <field
+         name="label"
+         type="text"
+         class="btn-group btn-group-yesno"
+         label="Label"
+         description=""
+         default="Open Related Ticket"
+         />
+
+      <field
+				name="display"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="Location"
+				description="Show as button or in tools"
+        default="0">
+        <option value="0">Button</option>
+        <option value="1">Tools Menu</option>
+      </field>
+
+      <field
+				name="change_product"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="Selected Product"
+				description="Change product for related ticket"
+        default="0">
+        <option value="0">Keep Existing</option>
+        <option value="1">Allow Choice</option>
+        <option value="2">Specify below</option>
+      </field>
+
+      <field name="product" type="fsssqlcombo" label="New Product" description="">
+        <sql>SELECT title as text, id as value FROM #__fss_prod ORDER BY ordering</sql>
+      </field>
+
+      <field
+       name="change_department"
+       type="radio"
+       class="btn-group btn-group-yesno"
+       label="Selected Department"
+       description="Change department for related ticket"
+       default="0">
+        <option value="0">Keep Existing</option>
+        <option value="1">Allow Choice</option>
+        <option value="2">Specify below</option>
+      </field>
+
+      <field name="department" type="fsssqlcombo" label="New Department" description="">
+        <sql>SELECT title as text, id as value FROM #__fss_ticket_dept ORDER BY ordering</sql>
+      </field>
+      
+      <field name="spacer" type="fssspacer" label="" description="">
+      </field>
+    </fieldset>
+  </fields>
+
+</form>

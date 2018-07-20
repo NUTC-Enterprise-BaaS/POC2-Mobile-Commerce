@@ -1,0 +1,72 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<form>
+  <authorEmail>support@freestyle-joomla.com</authorEmail>
+  <author>Freestyle Joomla</author>
+  <copyright>(C) 2013 Freestyle Joomla. All rights reserved.</copyright>
+  <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html </license>
+  <authorUrl>http://www.freestyle-joomla.com</authorUrl>
+
+  <fieldset>
+    <field name="asset_id" type="hidden" filter="unset" />
+
+    <field name="rules" type="fssrules" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="support_admin" validate="rules"
+        tab_id="tab_support_admin"
+		/>
+
+    <field name="rules_misc" type="fssrules" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="support_admin_misc" validate="rules"
+        tab_id="tab_support_admin_misc"
+		/>
+
+    <field name="rules_ticket" type="fssrules" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="support_admin_ticket" validate="rules"
+        tab_id="tab_support_admin_ticket"
+		/>
+
+    <field name="rules_ticket_cc" type="fssrules" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="support_admin_ticket_cc" validate="rules"
+        tab_id="tab_support_admin_ticket_cc"
+		/>
+
+    <field name="rules_ticket_other" type="fssrules" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="support_admin_ticket_other" validate="rules"
+        tab_id="tab_support_admin_ticket_other"
+		/>
+
+    <field name="rules_ticket_una" type="fssrules" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="support_admin_ticket_una" validate="rules"
+        tab_id="tab_support_admin_ticket_una"
+		/>
+
+    <field name="view_products" type="fssrules" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="" validate="rules" />
+
+    <field name="view_departments" type="fssrules" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="" validate="rules" />
+
+    <field name="view_categories" type="fssrules" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="" validate="rules" />
+
+    <field name="assign_products" type="fssrules" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="" validate="rules" />
+
+    <field name="assign_departments" type="fssrules" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="" validate="rules" />
+
+    <field name="assign_categories" type="fssrules" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="" validate="rules" />
+  </fieldset>
+</form>

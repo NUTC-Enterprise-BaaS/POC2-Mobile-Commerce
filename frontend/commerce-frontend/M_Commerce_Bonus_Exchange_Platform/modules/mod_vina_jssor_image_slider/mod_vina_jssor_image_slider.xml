@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="site" method="upgrade">
+	
+<!-- Author Block -->
+	<name>Vina Jssor Image Slider</name>
+	<author>VinaGecko.com</author>
+	<creationDate>March 15, 2014</creationDate>
+	<copyright>Copyright (C) 2014 VinaGecko.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>support@vinagecko.com</authorEmail>
+	<authorUrl>http://VinaGecko.com</authorUrl>
+	<version>1.3.0</version>
+	
+	<description>
+		<![CDATA[vina jssor image slider]]>
+	</description>
+
+<!-- Files upload Block -->	
+	<files>
+		<filename module="mod_vina_jssor_image_slider">mod_vina_jssor_image_slider.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>samples</folder>
+		<folder>libs</folder>
+		<folder>assets</folder>
+		<folder>languages</folder>
+		<folder>tmpl</folder>
+	</files>
+
+<!-- Languages Block -->
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_vina_jssor_image_slider.ini</language>
+<language tag="zh-TW">languages/zh-TW.mod_vina_jssor_image_slider.ini</language>
+	</languages>
+	
+<!-- Config Block -->
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_vina_jssor_image_slider/libs/elements">
+			<fieldset name="basic">
+				<field
+					name="layout"
+					type="list"
+					default="default"
+					label="VINA_JSSOR_IS_STYLE"
+					description="VINA_JSSOR_IS_STYLE_DESC">
+						<option value="default">Default</option>
+						<option value="thumbnail2">Thumbnails at Top</option>
+						<option value="thumbnail">Thumbnails at Bottom</option>
+				</field>
+				<field
+					name="maxWidth"
+					type="text"
+					default="600"
+					label="VINA_JSSOR_IS_MAX_WIDTH"
+					description="VINA_JSSOR_IS_MAX_WIDTH_DESC" />
+				<field
+					name="maxHeight"
+					type="text"
+					default="300"
+					label="VINA_JSSOR_IS_MAX_HEIGHT"
+					description="VINA_JSSOR_IS_MAX_HEIGHT_DESC" />
+				<field
+					name="scaleSlider"
+					type="text"
+					default="600"
+					label="VINA_JSSOR_IS_SCALESLIDER"
+					description="VINA_JSSOR_IS_SCALESLIDER_DESC" />
+				<field 
+                    name="resizeImage" 
+                    type="list" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_IS_RESIZE_IMAGES" 
+                    description="VINA_JSSOR_IS_RESIZE_IMAGES_DESC">
+                        <option value="0">No Resize Image</option>
+                        <option value="1">Use Timthumb Class</option>
+						<option value="2">Use CSS Resize</option>
+                </field>
+				<field 
+                    name="imageTransitions" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_IS_IMAGE_TRANSITIONS" 
+                    description="VINA_JSSOR_IS_IMAGE_TRANSITIONS_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="imageTransitionList"
+					type="textarea" rows="3"
+					value="{$Duration:1200,$Opacity:2}"
+					label="VINA_JSSOR_IS_IMAGE_TRANSITION_LIST"
+					description="VINA_JSSOR_IS_IMAGE_TRANSITION_LIST_DESC" />
+				<field
+					name="thumbnailImageWidth"
+					type="text"
+					default="60"
+					label="VINA_JSSOR_IS_SMALL_IMAGE_WIDTH"
+					description="VINA_JSSOR_IS_SMALL_IMAGE_WIDTH_DESC" />
+				<field
+					name="thumbnailImageHeight"
+					type="text"
+					default="30"
+					label="VINA_JSSOR_IS_SMALL_IMAGE_HEIGHT"
+					description="VINA_JSSOR_IS_SMALL_IMAGE_HEIGHT_DESC" />
+				<field 
+                    name="autoPlay" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_IS_AUTOPLAY" 
+                    description="VINA_JSSOR_IS_AUTOPLAY_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="autoPlayInterval"
+					type="text"
+					default="4000"
+					label="VINA_JSSOR_IS_AUTOPLAY_INTERVAL"
+					description="VINA_JSSOR_IS_AUTOPLAY_INTERVAL_DESC" />
+				<field 
+                    name="pauseOnHover" 
+                    type="list" 
+                    default="0" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_IS_PAUSE_ON_HOVER" 
+                    description="VINA_JSSOR_IS_PAUSE_ON_HOVER_DESC">
+                        <option value="0">No Pause</option>
+                        <option value="1">Pause for Desktop</option>
+						<option value="2">Pause for Touch Device</option>
+						<option value="3">Pause for All</option>
+                </field>
+				<field 
+                    name="arrowKeyNavigation" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_IS_ARROW_KEY_NAVIGATION" 
+                    description="VINA_JSSOR_IS_ARROW_KEY_NAVIGATION_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="slideDuration"
+					type="text"
+					default="500"
+					label="VINA_JSSOR_IS_SLIDE_DURATION"
+					description="VINA_JSSOR_IS_SLIDE_DURATION_DESC" />
+				<field 
+                    name="playOrientation" 
+                    type="list" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_IS_PLAY_ORIENTATION" 
+                    description="VINA_JSSOR_IS_PLAY_ORIENTATION_DESC">
+                        <option value="0">Horizental</option>
+                        <option value="1">Vertical</option>
+                </field>
+				<field 
+                    name="dragOrientation" 
+                    type="list" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_IS_DRAG_ORIENTATION" 
+                    description="VINA_JSSOR_IS_DRAG_ORIENTATION_DESC">
+                        <option value="0">No Drag</option>
+						<option value="1">Horizental</option>
+                        <option value="2">Vertical</option>
+						<option value="3">Either</option>
+                </field>
+				<field 
+                    name="displayCaptions" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_IS_DISPLAY_CAPTIONS" 
+                    description="VINA_JSSOR_IS_DISPLAY_CAPTIONS_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field 
+                    name="captionTransitions" 
+                    type="radio" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_IS_CAPTION_TRANSITIONS" 
+                    description="VINA_JSSOR_IS_CAPTION_TRANSITIONS_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="captionTransitionList"
+					type="textarea" rows="3"
+					value="{$Duration:900,$FlyDirection:1,$Easing:{$Left:$JssorEasing$.$EaseInOutSine},$ScaleHorizontal:0.6,$Opacity:2}"
+					label="VINA_JSSOR_IS_CAPTION_TRANSITION_LIST"
+					description="VINA_JSSOR_IS_CAPTION_TRANSITION_LIST_DESC" />
+				<field 
+                    name="playInMode" 
+                    type="list" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_IS_PLAY_IN_MODE" 
+                    description="VINA_JSSOR_IS_PLAY_IN_MODE_DESC">
+                        <option value="0">None</option>
+						<option value="1">Chain</option>
+                        <option value="3">Chain Flatten</option>
+                </field>
+				<field 
+                    name="playOutMode" 
+                    type="list" 
+                    default="3" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_IS_PLAY_OUT_MODE" 
+                    description="VINA_JSSOR_IS_PLAY_OUT_MODE_DESC">
+                        <option value="0">None</option>
+						<option value="1">Chain</option>
+                        <option value="3">Chain Flatten</option>
+                </field>
+				<field 
+                    name="chanceToShow" 
+                    type="list" 
+                    default="2" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_IS_NAVIGATION" 
+                    description="VINA_JSSOR_IS_NAVIGATION_DESC">
+                        <option value="0">Never</option>
+						<option value="1">Mouse Over</option>
+                        <option value="2">Always</option>
+                </field>
+				<field 
+                    name="autoCenter" 
+                    type="list" 
+                    default="0" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_IS_NAVIGATION_POSITION" 
+                    description="VINA_JSSOR_IS_NAVIGATION_POSITION_DESC">
+                        <option value="0">None</option>
+						<option value="1">Horizontal</option>
+						<option value="2">Vertical</option>
+						<option value="3">Both</option>
+                </field>
+				<field 
+                    name="navOrientation" 
+                    type="list" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_IS_NAVIGATION_ORIENTATION" 
+                    description="VINA_JSSOR_IS_NAVIGATION_ORIENTATION_DESC">
+						<option value="1">Horizontal</option>
+						<option value="2">Vertical</option>
+                </field>
+				<field 
+                    name="directionArrow" 
+                    type="list" 
+                    default="1" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_IS_DIRECTION_NAVIGATION" 
+                    description="VINA_JSSOR_IS_DIRECTION_NAVIGATION_DESC">
+                        <option value="0">Never</option>
+						<option value="1">Mouse Over</option>
+                        <option value="2">Always</option>
+                </field>
+			</fieldset>
+			
+			<fieldset name="slider">
+				<field name="slides" type="data" label="Slides" description="" filter="raw" />
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field 
+                    name="copyRightText" 
+                    type="radio" 
+                    default="0" 
+					class="btn-group btn-group-yesno"
+                    label="VINA_JSSOR_IS_SHOW_COPYRIGHT_TEXT" 
+                    description="VINA_JSSOR_IS_SHOW_COPYRIGHT_TEXT_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+						<option value="1">JGLOBAL_USE_GLOBAL</option>
+						<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+						<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

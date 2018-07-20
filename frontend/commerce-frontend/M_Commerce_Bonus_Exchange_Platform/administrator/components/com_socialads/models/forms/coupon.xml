@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="COM_SOCIALADS_FORM_LBL_COUPON_ID" readonly="true" class="readonly required" description="JGLOBAL_FIELD_ID_DESC" />
+		<field name="created_by" type="createdby" default="" label="COM_SOCIALADS_FORM_LBL_COUPON_CREATED_BY" description="COM_SOCIALADS_FORM_DESC_COUPON_CREATED_BY" />
+		<field name="published" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_COUPON_PUBLISHED" description="COM_SOCIALADS_FORM_DESC_COUPON_PUBLISHED" filter="safehtml" />
+		<field name="state" type="radio" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="btn-group inputbox" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field name="name" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_COUPON_NAME" description="COM_SOCIALADS_FORM_DESC_COUPON_NAME" required="true" filter="safehtml" />
+		<field name="code" type="text" size="40" class="inputbox" label="COM_SOCIALADS_COUPONS_CODE" description="COM_SOCIALADS_FORM_DESC_COUPON_CODE" required="true" filter="safehtml" />
+		<field name="value" type="text" size="40" class="alphaDecimalCheck inputbox validate-numeric" label="COM_SOCIALADS_FORM_LBL_COUPON_VALUE" description="COM_SOCIALADS_FORM_DESC_COUPON_VALUE" required="true" filter="safehtml" />
+		<field name="val_type" type="radio" size="40" class="inputbox btn-group" label="COM_SOCIALADS_FORM_LBL_COUPON_VAL_TYPE" description="COM_SOCIALADS_FORM_DESC_COUPON_VAL_TYPE" default="0" filter="safehtml">
+			<option value="1">COM_SOCIALADS_PERCENTAGE</option>
+			<option value="0">COM_SOCIALADS_FLAT_RATE</option>
+		</field>
+		<field name="max_use" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_COUPON_MAX_USE" description="COM_SOCIALADS_FORM_DESC_COUPON_MAX_USE" filter="safehtml" />
+		<field name="max_per_user" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_COUPON_MAX_PER_USER" description="COM_SOCIALADS_FORM_DESC_COUPON_MAX_PER_USER" filter="safehtml" />
+		<field name="description" type="textarea" buttons="true" class="inputbox" filter="safehtml" label="COM_SOCIALADS_FORM_LBL_COUPON_DESCRIPTION" description="COM_SOCIALADS_FORM_DESC_COUPON_DESCRIPTION" />
+		<field name="couponParams" type="textarea" class="inputbox" label="COM_SOCIALADS_FORM_LBL_COUPON_PARAMS" description="COM_SOCIALADS_FORM_DESC_COUPON_PARAMS" />
+		<field name="from_date" type="calendar" class="inputbox" default="0000-00-00 00:00:00" label="COM_SOCIALADS_FORM_LBL_COUPON_FROM_DATE" menu_published="0" description="COM_SOCIALADS_FORM_DESC_COUPON_FROM_DATE" format="%Y-%m-%d %H:%M:%S" filter="USER_UTC" hint = "YYYY-MM-DD  H:M:S"/>
+	<field name="exp_date" type="calendar" class="inputbox" default="0000-00-00 00:00:00" label="COM_SOCIALADS_FORM_LBL_COUPON_EXP_DATE" description="COM_SOCIALADS_FORM_DESC_COUPON_EXP_DATE" format="%Y-%m-%d %H:%M:%S" filter="USER_UTC" hint = "YYYY-MM-DD  H:M:S"/>
+	<field name="state" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>

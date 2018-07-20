@@ -1,0 +1,266 @@
+/*Css For frontend ads view and adsummary view in old SA which is yet not required yet*/
+/*manage-ads start here*/
+/*
+.managead-td{ width:15%; text-align:left; }
+*/
+/*manage-ad ends here*/
+
+/*adsummary*/
+/*
+.summary{ width:100%; }
+
+.stats{ width:100%;height:200px;/*overflow:auto; font-weight:bold;*/  /*float:left;*/ }
+
+/*
+.tabs{  width:97%;height:60%; font-weight:bold;   margin-top:6px; }
+
+.summery-tr{background: none repeat scroll 0 0 #F6F6F6; color: #404040;border: 1px solid;border-collapse: collapse;border-spacing: 0px;  }
+
+.summery-td{ font-weight:bold;  padding:5px; }
+*/
+/*ad-summery ends here*/
+
+/*
+a.selected { background-color:#1F75CC; color:white; z-index:100; }
+*/
+/*Popup*/
+/*
+.messagepop { background-color:#FFFFFF; border:1px solid #999999; cursor:default; display:none; margin-top: 15px; position:absolute; text-align:left; width:394px; z-index:50; padding: 25px 25px 20px; }
+*/
+
+/*
+removed by Dipti
+label { display: block; margin-bottom: 3px; padding-left: 15px; text-indent: -15px; } */
+
+/*
+.messagepop p, .messagepop.div { border-bottom: 1px solid #EFEFEF; margin: 8px 0; padding-bottom: 8px; }
+*/
+/*Popup Ends*/
+
+/*admin-settings*/
+/*
+.setting-td{ width:50px; }
+
+.ad_view{float:left;}
+.preview-buttons{ margin:25px 0px 0px 5px; float:left;}
+.preview-buttons a:link, .preview-buttons a:visited{ text-decoration:none; background-color:#EFF2F7; color:#000;}
+
+.preview-buttons a:hover, .preview-buttons a:focus, .preview-buttons a:active{text-decoration:none; background-color:#fff; color:#000;}
+*/
+
+/*input.button{padding:1px 2px 2px; background-color:#EFF2F7; border:1px solid #ccc; color:#000;cursor:pointer;}*/
+
+/*
+.preview-buttons a.editbutton:hover, .preview-buttons a.editbutton  {border:1px solid #ccc;  padding:1px 8px 2px;}
+*/
+/*admin-settings end*/
+
+/*ad-overview page in popup*/
+/*
+div.adsummary_main{padding:20px;}
+*/
+/* ad-overview page ends here*/
+
+/* content tables from template.css */
+/*
+td.sectiontableheader {
+  background: #efefef;
+  color: #333;
+  font-weight: bold;
+  padding: 4px;
+  border-right: 1px solid #fff;
+*/
+/*
+}
+
+tr.sectiontableentry0 td,
+tr.sectiontableentry1 td {
+padding: 4px;
+  background-color:#F9F9F9;
+}
+
+tr.sectiontableentry2 td{
+  padding: 4px;
+  background-color:#FFFFFF;
+}
+
+td.sectiontableentry0,
+td.sectiontableentry1,
+td.sectiontableentry2 {
+  padding: 3px;
+  background-color:#EFF2F7;
+}
+/*ignore table*/
+/*
+.ignoretable{width:90%}
+
+
+#line_chart_div{
+*/
+/* float: left; overflow: auto; /*margin-right: 5px;VK*/
+/*
+}
+.techjoomla-bootstrap .chart_div{
+width: 100%;height: 250px;
+
+}
+*/
+/*ManageAds Table*/
+/*
+.manageadtable
+{
+padding-top:20px;
+}
+.managead-toolbar ,.sa-campaign-toolbar{
+font-weight: bold;
+padding: 4px 10px;
+position: relative;
+background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#ffffff),color-stop(100%,#ededed));
+border-bottom: 1px solid #D3D3D3;
+color: #0C192E;
+text-shadow: 0 1px 0 #FFF;
+margin-bottom: 10px;
+}
+div.managead-toolbar div.managead-toolbar_maindiv .span3 , div.managead-toolbar div.managead-toolbar_maindiv .span9
+{
+background: transparent  !important;
+}
+.managead-toolbar select, .sa-campaign-toolbar select{
+margin:0px !important;
+}
+table.managead tfoot .info td{
+background-color: #d9edf7;;
+}
+
+table.managead td {
+border-top: 1px solid #dddddd;
+}
+table.managead .ad-preview-img img, table.managead .ad-type-img img{
+max-width:16px !important;
+}
+table.managead .row-fluid div.span6{
+background: transparent  !important;
+text-align: right !important;
+}
+table.managead .managead-center
+{
+text-align:center !important;
+}
+table.managead .managead-right
+{
+text-align:right !important;
+}
+.manageadtableheader
+{
+background: none repeat scroll 0 0 #F6F6F6;
+float: left;
+padding: 5px;
+font-size: 120%;
+margin-bottom: 5px;
+}
+.manageadtableheader p.muted{
+margin:0px !important;
+text-align: center !important;
+}
+
+#manageadspan
+{
+ background: none;
+color: #404040;
+
+}
+.sa_toolbar_img{cursor:pointer;}
+*/
+
+/*start for geo*/
+/*
+.target_space{
+margin:5px 2px 5px 10px;
+}
+*/
+/*end for geo
+.techjoomla-bootstrap table,th,tr,td{/*border: 0px  !important;VK}*/
+
+/*Styling for tooltips*/
+/*
+.tip-wrap{
+	background: white;
+	line-height: 14px;
+	border: 1px solid;
+}
+.tip-wrap .tip-title{
+	color: #000000 !important;
+}
+
+div.redlabel{
+	font-style:italic;
+}
+#payment_tab_spacer{margin-left: 34%;margin-top: 20px;z-index: 50;}
+#cop_tr{display:none}
+#payment_tab_spacer_lower_bottom{display: block;
+}
+
+.techjoomla-bootstrap .table-bordered th,.techjoomla-bootstrap .table-bordered td {
+* }
+*/
+   /* border-left: medium none !important; VK*/
+
+
+
+
+/*
+.techjoomla-bootstrap .form-horizontal #qtc_mainwrapper .controls {
+    margin-left: 120px;
+}
+*/
+/*
+.techjoomla-bootstrap #qtc_mainwrapper .qtc_select {
+    width: 161px !important;
+}
+*/
+
+
+/* added by kk for registration view */
+/*
+.q2c-registration .form-horizontal .control-label{ text-align:left!important; width:140px!important;}
+.q2c-registration .form-horizontal .controls{  margin-left: 151px!important;}
+.q2c-registration-btn{ text-align:right;}
+*/
+
+
+
+/*
+.techjoomla-bootstrap .form-horizontal .controls {
+    clear: both !important;
+}
+
+.techjoomla-bootstrap .controls {
+    clear: both !important;
+}
+*/
+
+
+
+
+/*
+div.ad-info{float:left; width:59%;}
+
+span.unlimited_adtext{
+	float:left;
+	width:90%;
+}
+*/
+
+/*
+.techjoomla-bootstrap .managead .icon-clock {
+background-position: -48px -24px;
+}
+.techjoomla-bootstrap .ad_summary_div .chart_div{
+overflow:auto;
+}
+*/
+
+
+
+
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="TESTIMONIALS_CREATE">
+		<help url = "http://www.freestyle-joomla.com/comhelp/fss/frontend-view-test-create" />
+		<message></message>
+  </layout>
+	<state>
+		<name>TESTIMONIALS_CREATE</name>
+    <fields name="request">
+      <fieldset name="request">
+        <field name="onlyprodid" type="sql" default="" label="TEST_SEL_PROD" query="(SELECT -1 as id, 'All Products' as title) UNION (SELECT 0 as id, 'General Testimonials' as title) UNION (SELECT id, title FROM #__fss_prod ORDER BY ordering)" key_field="id" value_field="title" />
+      </fieldset>
+    </fields>
+  </state>
+</metadata>

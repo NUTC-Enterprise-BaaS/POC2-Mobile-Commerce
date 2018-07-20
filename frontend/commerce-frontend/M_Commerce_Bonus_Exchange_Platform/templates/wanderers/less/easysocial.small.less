@@ -1,0 +1,192 @@
+@import "mixins.less";
+
+/*= Row Table
+---------------------------------------------------------------------------------------------- */
+
+.row-table 
+{
+	display: block;
+	width: auto;
+
+	> .col-cell 
+	{
+		display: block;
+		width: auto !important;
+
+		+ .col-cell 
+		{
+			padding: 0;
+		}
+	}
+}
+
+.cell-hidden-mobile
+{
+	display: none !important;
+}
+
+.cell-visible-mobile
+{
+	display: block !important;
+}
+
+/*= Avatar
+---------------------------------------------------------------------------------------------- */
+.header-avatar
+{
+	/*bottom: auto;
+	top: 0;
+	z-index: 10;
+	margin: 0 auto;*/
+
+	bottom: auto;
+	top: 175px;
+	left: 29%;
+	z-index: 10;
+	margin: 0 auto;
+
+	.avatar > img {
+		width: 150px;
+		height: 150px;
+		.border-radius(5px);
+	}
+}
+
+/*= Profile
+---------------------------------------------------------------------------------------------- */
+.profile-header 
+{
+	.es-header-content
+	{
+		margin-left: 0;
+
+	}
+
+	.es-header-details
+	{
+		padding-top: 40px;
+		position: relative;
+		top: 0;
+
+		> div > div {
+			text-align: center;
+			height: 100% !important;
+		}
+	}
+
+	.es-header-meta {
+		padding: 10px 0;
+		display: block;
+		width: 100%;
+
+		li {
+			display: block;
+
+			+ li {
+				border-left: 0;
+				border-top: 1px solid #d7d7d7;
+				padding: 20px 0;
+				margin: 0;
+			}
+		}
+	}
+
+	.es-header-actions {
+		> ul {
+			> li {
+				display: block;
+				text-align: center;
+				padding: 20px 0;
+
+				+ li {
+					border-left: none;
+					border-top: 1px solid #e2e2e2;
+				}
+			}
+		}
+	}
+}
+
+
+/*= Notification Setting
+---------------------------------------------------------------------------------------------- */
+.eb-notification-content
+{
+	.row-table + .row-table 
+	{
+		padding-bottom: 0;
+
+		h5 
+		{
+			border-top: 1px solid #ddd;
+			margin-top: 30px;
+			padding-top: 30px;
+		}
+	}
+
+	.col-cell + .col-cell 
+	{
+		p 
+		{
+			margin-top: 15px;
+		}
+	}
+}
+
+/*= Privacy Setting
+---------------------------------------------------------------------------------------------- */
+.form-group {
+	.control-label {
+		text-align: left !important;
+		padding-bottom: 10px;
+	}
+}
+
+
+/*= Album
+---------------------------------------------------------------------------------------------- */
+.register-column {
+	border-top: 1px solid #d7d7d7;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+/*= Album
+---------------------------------------------------------------------------------------------- */
+.sidebar-collapse {
+	&.collapse {
+		display: none !important;
+		height: 0 !important;
+		padding-bottom: 0;
+		overflow: visible !important;
+	}
+
+	&.in {
+		display: block !important;
+		height: auto !important;
+	}
+}
+
+
+/*= Sidebar =*/
+.es-container .es-sidebar {
+	// background: transparent!important;
+	border: 0!important;
+	// display: none;
+}
+
+
+/*= Groups
+---------------------------------------------------------------------------------------------- */
+.view-group_page {
+	.header-avatar {
+		top: 25%;
+		left: 43%;
+		a {
+			img {
+				width: 50px;
+				height: 50px;
+			}
+		}
+	}
+}

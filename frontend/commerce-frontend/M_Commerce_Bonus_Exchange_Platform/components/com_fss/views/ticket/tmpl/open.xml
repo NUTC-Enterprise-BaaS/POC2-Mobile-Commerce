@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="SUPPORT_OPEN_TICKET">
+    <help url = "http://www.freestyle-joomla.com/comhelp/fss/frontend-view-ticket-open" />
+    <message></message>
+  </layout>
+  <state>
+    <name>SUPPORT_OPEN_TICKET</name>
+
+    <fields name="request">
+      <fieldset name="request"
+				addfieldpath="/administrator/components/com_fss/models/fields">
+
+        <field name="prodid" type="sql" default="" label="FSS_SUPPORT_SELECT_PRODUCT"
+               query="(SELECT '' as id, 'Show Product List' as title) UNION (SELECT id, title FROM #__fss_prod WHERE insupport = 1 AND published = 1 ORDER BY ordering)"
+               key_field="id" value_field="title" />
+        <field name="deptid" type="sql" default="" label="FSS_SUPPORT_SELECT_DEPARTMENT"
+               query="(SELECT '' as id, 'Show Department List' as title) UNION (SELECT id, title FROM #__fss_ticket_dept ORDER BY ordering)"
+               key_field="id" value_field="title" />
+      </fieldset>
+    </fields>
+  </state>
+</metadata>

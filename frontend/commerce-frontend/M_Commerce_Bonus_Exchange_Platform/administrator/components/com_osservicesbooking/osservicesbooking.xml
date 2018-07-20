@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.4.6" method="upgrade">
+	<name>Osservicesbooking</name>
+	<author>Dang Thuc Dam</author>
+	<creationDate>20.7.2012</creationDate>
+	<copyright>(C) 2006-2015 Ossolution.</copyright>
+	<license>Commons GNU GPL</license>
+	<authorEmail>damdt@joomservices.com</authorEmail>
+	<authorUrl>www.joomdonation.com</authorUrl>
+	<version>2.4.6</version>
+  <description><![CDATA[
+	<br />
+	<table>
+		<tr>
+			<td class="sectionname" valign="top">OS Services Booking - Joomla Appointments & Schedule component is used for online service scheduling and appointment management.</td>
+		</tr>
+		</table>
+  ]]></description>
+  <scriptfile>install.osservicesbooking.php</scriptfile>
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install.osservicesbooking.sql</file>
+    </sql>
+  </install>  
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/uninstall.osservicesbooking.sql</file>
+    </sql>
+  </uninstall>
+  <languages>
+      <language tag="en-GB">component/languages/en-GB/en-GB.com_osservicesbooking.ini</language>
+	  <language tag="zh-TW">component/languages/zh-TW/zh-TW.com_osservicesbooking.ini</language>
+  </languages>
+  <files folder="component">
+    <folder>classes</folder>    
+    <folder>js</folder>
+    <folder>helpers</folder>
+    <folder>style</folder>
+	<folder>views</folder>
+	<folder>plugins</folder>
+	<folder>asset</folder>
+	<folder>tcpdf</folder>
+    <filename>index.html</filename>
+    <filename>osservicesbooking.php</filename>
+	<filename>ipn_log.txt</filename>
+	<filename>cron.php</filename>
+	<filename>router.php</filename>
+  </files>
+
+  <administration>
+    <menu img="components/com_osservicesbooking/asset/images/calendar.png">OS Services Booking</menu>
+	<submenu>
+		<menu img="components/com_osservicesbooking/asset/images/icon-16-default.png" link="option=com_osservicesbooking">Dashboard</menu>
+		<menu img="components/com_osservicesbooking/asset/images/configuration.png" link="option=com_osservicesbooking&amp;task=configuration_list">Configuration</menu>
+		<menu img="components/com_osservicesbooking/asset/images/marker.png" link="option=com_osservicesbooking&amp;task=venue_list">Manage Venues</menu>
+		<menu img="components/com_osservicesbooking/asset/images/category.png" link="option=com_osservicesbooking&amp;task=category_list">Manage Categories</menu>
+		<menu img="components/com_osservicesbooking/asset/images/services.png" link="option=com_osservicesbooking&amp;task=service_list">Manage Services</menu>
+		<menu img="components/com_osservicesbooking/asset/images/order.png" link="option=com_osservicesbooking&amp;task=orders_list">Manage Services Orders</menu>
+		<menu img="components/com_osservicesbooking/asset/images/employee.png" link="option=com_osservicesbooking&amp;task=employee_list">Manage Employees</menu>
+		<menu img="components/com_osservicesbooking/asset/images/time.png" link="option=com_osservicesbooking&amp;task=worktime_list">Manage Working time</menu>
+		<menu img="components/com_osservicesbooking/asset/images/time.png" link="option=com_osservicesbooking&amp;task=worktimecustom_list">Manage Custom Working time</menu>
+		<menu img="components/com_osservicesbooking/asset/images/field.png" link="option=com_osservicesbooking&amp;task=fields_list">Manage Custom Fields</menu>	
+		<menu img="components/com_osservicesbooking/asset/images/email.png" link="option=com_osservicesbooking&amp;task=emails_list">Manage Email Templates</menu>
+		<menu img="components/com_osservicesbooking/asset/images/currency.png" link="option=com_osservicesbooking&amp;task=plugin_list">Manage Payment Plugins</menu>
+		<menu img="components/com_osservicesbooking/asset/images/coupon.png" link="option=com_osservicesbooking&amp;task=coupon_list">Manage Coupons</menu>
+		<menu img="components/com_osservicesbooking/asset/images/translation.png" link="option=com_osservicesbooking&amp;task=translation_list">Translation</menu>
+		<menu img="components/com_osservicesbooking/asset/images/data.png" link="option=com_osservicesbooking&amp;task=install_list">Install Sample Data</menu>
+	</submenu>
+	<languages>
+       <language tag="en-GB">admin/languages/en-GB/en-GB.com_osservicesbooking.ini</language>
+	   <language tag="en-GB">admin/languages/en-GB/en-GB.com_osservicesbooking.sys.ini</language>
+	   <language tag="zh-TW">admin/languages/zh-TW/zh-TW.com_osservicesbooking.ini</language>
+	   <language tag="zh-TW">admin/languages/zh-TW/zh-TW.com_osservicesbooking.sys.ini</language>
+    </languages>
+    <files folder="admin">    
+        <folder>classes</folder>  
+        <folder>tables</folder>
+        <folder>helpers</folder>
+		<folder>asset</folder>
+		<folder>sql</folder>
+		<folder>elements</folder>
+        <filename>index.html</filename> 
+        <filename>osservicesbooking.php</filename>
+		<filename>access.xml</filename>
+		<filename>config.xml</filename>
+    </files>
+	
+	<files folder="admin/sql">
+    <!-- database script -->
+      <filename>install.osservicesbooking.sql</filename>
+      <filename>uninstall.osservicesbooking.sql</filename>
+    </files>
+  </administration>
+</extension>

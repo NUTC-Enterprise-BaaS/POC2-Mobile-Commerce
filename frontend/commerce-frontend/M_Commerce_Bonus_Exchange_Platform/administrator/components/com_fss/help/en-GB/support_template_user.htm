@@ -1,0 +1,11 @@
+<b>{link}</b> : URL for link to ticket details<br>
+<b>{subject}</b> : Ticket subject including link to ticket details<br>
+<b>{subject_text}</b> : Ticket subject (text only)<br>
+<b>{trhl}*</b> : Put this within each &lt;tr&gt; tag used. Sets up the mouse over and a few other things. 
+Example &lt;tr {trhl}&gt;&lt;td&gt;{name}&lt;/td&gt;&lt;/td&gt;<br>
+<b>{class}</b> : This needs to be added to the class tag of any table row<br>
+<b>{if,field,value,operator}HTML{endif}</b> : If statement. field should be one of the fields above. 
+Value should be a string or number, enclosed in speech marks ("). If value is blank, then compares against 
+an empty string. Operator is equals if empty, other values: 'not' for not equals. Fileds with a * cannot 
+be used in an if statement.<br><br>This HTML code will be output within a &lt;table&gt; element, so 
+needs to be in the format &lt;tr {trhl}&gt;&lt;td&gt;{name}&lt;/td&gt;&lt;/td&gt;<br>

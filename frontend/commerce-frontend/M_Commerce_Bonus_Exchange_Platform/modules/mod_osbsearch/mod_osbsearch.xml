@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.1" position="left" method="upgrade">
+    <name>OSB Search</name>
+    <author>Dang Thuc Dam</author>
+    <authorEmail>damdt@joomservices.com</authorEmail>
+    <authorUrl>http://joomdonation.com</authorUrl>
+    <version>1.1</version>
+    <creationDate>August 2014</creationDate>
+    <copyright>Copyright (C) 2015 Ossolution. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <description>Display OS Services Booking search form</description>
+    <files>
+        <filename module="mod_osbsearch">mod_osbsearch.php</filename>
+        <filename>index.html</filename>
+		<folder>asset</folder>
+		<folder>tmpl</folder>		
+    </files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="show_venue" class="btn-group" type="radio" default="1" label="Show Venue Field" description="Do you want to show Venue field in the Search module">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="show_service" class="btn-group" type="radio" default="1" label="Show Services  Field" description="Do you want to show Services field in the Search module">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="show_employee" class="btn-group" type="radio" default="1" label="Show Employee Field" description="Do you want to show Employee field in the Search module">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="show_category" class="btn-group" type="radio" default="1" label="Show Category Field" description="Do you want to show Employee field in the Search module">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="show_date" class="btn-group" type="radio" default="1" label="Show Date Field" description="Do you want to show Date field in the Search module">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

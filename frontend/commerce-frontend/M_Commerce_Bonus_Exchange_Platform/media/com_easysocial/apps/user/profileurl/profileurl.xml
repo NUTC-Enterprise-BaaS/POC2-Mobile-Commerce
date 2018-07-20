@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<social type="apps" group="user">
+	<name>ProfileURL</name>
+	<element>profileurl</element>
+	<author>Mike Feng Jinglong</author>
+	<url>http://www.simbunch.com/</url>
+	<created>14th November 2014</created>
+	<version>1.0</version>
+	<copyright>Copyright (C) 2011 - 2016. All rights reserved SIMBunch.</copyright>
+	<license>GNU General Public License, version 3 (http://www.gnu.org/licenses/gpl-3.0.html)</license>
+	<description>
+		ProfileURL app for EasySocial.
+	</description>
+	<installable>false</installable>
+	<core>true</core>
+	<widget>true</widget>
+	<system>false</system>
+	<files>
+		<folder>assets</folder>
+		<folder>widgets</folder>
+		<file>profileurl.php</file>
+		<file>profileurl.xml</file>
+	</files>
+</social>

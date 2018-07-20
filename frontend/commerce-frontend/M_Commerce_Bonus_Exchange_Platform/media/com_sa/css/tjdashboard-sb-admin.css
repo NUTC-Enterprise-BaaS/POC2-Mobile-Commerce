@@ -1,0 +1,87 @@
+/*!
+ * Start Bootstrap - SB Admin 2 Bootstrap Admin Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/*
+ * Changes for TJ by@manoj
+ * 1. Added .tjDB namespace
+ */
+.tjDB body {
+background-color: #f8f8f8;
+}
+@media (min-width: 768px) {
+.tjDB #page-wrapper {
+position: inherit;
+/*margin: 0 0 0 250px;
+padding: 0 30px;
+border-left: 1px solid #e7e7e7;*//*^manoj*/
+}
+}
+
+.tjDB .huge {
+/*font-size: 40px;*/ font-size: 1.3em; /*^manoj*/
+font-weight: bold; /*+manoj*/
+margin-bottom: 5px; /*+manoj*/
+}
+.tjDB .panel-green {
+border-color: #5cb85c;
+}
+.tjDB .panel-green .panel-heading {
+border-color: #5cb85c;
+color: #fff;
+background-color: #5cb85c;
+}
+.tjDB .panel-green a {
+color: #5cb85c;
+}
+.tjDB .panel-green a:hover {
+color: #3d8b3d;
+}
+.tjDB .panel-red {
+border-color: #d9534f;
+}
+.tjDB .panel-red .panel-heading {
+border-color: #d9534f;
+color: #fff;
+background-color: #d9534f;
+}
+.tjDB .panel-red a {
+color: #d9534f;
+}
+.tjDB .panel-red a:hover {
+color: #b52b27;
+}
+.tjDB .panel-yellow {
+border-color: #f0ad4e;
+}
+.tjDB .panel-yellow .panel-heading {
+border-color: #f0ad4e;
+color: #fff;
+background-color: #f0ad4e;
+}
+.tjDB .panel-yellow a {
+color: #f0ad4e;
+}
+.tjDB .panel-yellow a:hover {
+color: #df8a13;
+}
+
+/*+manoj*/
+.tjDB .label-info {
+background-color: #428bca;
+}
+
+.tjDB .i-document {color:#428bca;}
+.tjDB .i-question {color:#428bca;}
+.tjDB .i-support {color:#dd4b38;}
+.tjDB .i-horn {color:#3b5998;}
+.tjDB .i-facebook {color:#3b5998;}
+.tjDB .i-twitter {color:#55acee;}
+.tjDB .i-google {color:#dd4b38;}
+/*+manoj - end*/
+
+.tjDB .form-inline .form-control {
+max-width: 100px;
+}

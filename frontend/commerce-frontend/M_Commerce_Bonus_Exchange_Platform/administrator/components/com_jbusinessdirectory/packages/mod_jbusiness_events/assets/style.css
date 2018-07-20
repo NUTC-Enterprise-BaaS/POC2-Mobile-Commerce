@@ -1,0 +1,219 @@
+.latest-events{
+	display: block;
+	padding: 20px 0;
+	text-align:center;
+}
+
+.latest-events ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	display:inline-block;	
+}
+
+.latest-events ul li{
+	margin-bottom: 15px;
+	float: left;
+}
+
+.latest-events .event-image{
+	display: block;
+	position: relative;
+}
+
+.latest-events .event-title{
+	min-height: 30px;
+	vertical-align: middle;
+	padding-top: 10px;
+}
+
+.latest-events .event-item-container {
+    background: none repeat scroll 0 0 #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    font-size: 95%;
+	padding: 10px;
+	text-align: center;
+}
+
+.latest-events .event-item-container a{
+	font-weight: 600;
+	color: #333;
+}
+
+.latest-events .event-overlay{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    opacity: 0;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    transition: opacity 400ms ease 0s;
+    z-index: 2;
+}
+
+.latest-events .event-image:hover .event-overlay {
+    opacity: 1;
+}
+
+.latest-events .event-overlay .event-vertical-middle {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+
+.latest-events .event-overlay .event-vertical-middle > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.latest-events .event-overlay a {
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin: 3px;
+    opacity: 0;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transform: scale3d(0, 0, 0);
+    transition: all 400ms ease 0s;
+    vertical-align: middle;
+}
+.latest-events:hover .event-overlay a:hover {
+    background: none repeat scroll 0 0 #333;
+    border-color: #333;
+}
+
+.latest-events .event-overlay:hover a{
+	opacity:1;
+	transform: scale3d(1, 1, 1);
+}
+
+
+
+/*-----------simple - events --------------*/
+#events-container {
+    width: 100%;
+}
+#events-container .events-wrapper {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: left;
+}
+#events-container .event-item {
+    background-color: #F1F1F1;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    position: relative;
+    text-align: center;
+}
+
+
+#events-container .event-item a{
+	color: #111;
+}
+
+#events-container .event-content {
+    display: block;
+}
+
+#events-container h3 {
+    color: #555;
+    font-size: 17px;
+    margin: 10px 0 5px 0;
+}
+#events-container h3 a {
+    color: #555;
+}
+#events-container .event-image {
+    margin: 0;
+    padding: 0;
+}
+
+#events-container .item-thumbnail{
+	text-align: center;
+}
+
+#events-container .item-thumbnail img {
+    height: 100%;
+    width: auto;
+    max-width: none;
+}
+#events-container .event-description {
+    margin: 10px 0;
+}
+
+#events-container .entry-date {
+    background: #575756 none repeat scroll 0 0;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #fff;
+    left: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    padding: 10px 10px 12px;
+    position: absolute;
+    text-align: center;
+    top: -9px;
+    transition: all 0.4s ease 0s;
+    width: 90px;
+    z-index: 11;
+}
+
+#events-container  .entry-date .day {
+    display: block;
+    font-size: 22px;
+    line-height: 28px;   
+}
+
+#events-container .entry-date .month {
+    text-transform: uppercase;
+}
+
+#events-container .item-location{
+  	background: #919191 none repeat scroll 0 0;
+    padding: 7px 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+#events-container .item-location a{
+	color: #FFFFFF;
+	font-weight: 700;
+	 font-size: 13px;
+}
+
+.latest-events.view-all-items{
+	text-align: center;
+}
+
+.latest-events .view-all-items a{
+	background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 6px 18px;
+}
+
+.latest-events.view-all-items a:hover{
+	background-color: #F0F0F0;	
+}
+
+/*-----------end simple - events --------------*/
+
+
+

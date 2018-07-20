@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_socialads</name>
+	<creationDate>2016-10-12</creationDate>
+	<copyright>Copyright (c) 2009-2016 TechJoomla. All rights reserved</copyright>
+	<license>GNU General Public License version 2, or later</license>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>http://www.techjoomla.com</authorUrl>
+	<version>3.1.4</version>
+	<description>COM_SOCIALADS_XML_DESCRIPTION</description>
+	<scriptfile>script.socialads.php</scriptfile>
+	<install>
+		<!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+			<file driver="mysql" charset="utf8">sql/insert.records.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<media folder="media" destination="com_sa">
+		<folder>css</folder>
+		<folder>fields</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>vendors</folder>
+		<file>index.html</file>
+	</media>
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>defines.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>init.php</filename>
+		<filename>router.php</filename>
+		<filename>socialads.php</filename>
+		<folder>classes</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<folder>views_bs2</folder>
+	</files>
+	<languages folder="site/language">
+		<language tag="en-GB">en-GB/en-GB.com_socialads.ini</language>
+		<language tag="en-GB">en-GB/en-GB.com_socialads_common.ini</language>
+		<language tag="zh-TW">zh-TW/zh-TW.com_socialads.ini</language>
+		<language tag="zh-TW">zh-TW/zh-TW.com_socialads_common.ini</language>
+	</languages>
+	<administration>
+		<menu img="../.../../media/com_sa/images/s_com_sa.png">COM_SOCIALADS</menu>
+		<submenu>
+			<menu link="option=com_socialads&amp;view=dashboard" view="dashboard" img="../.../../media/com_sa/images/s_dashboard.png" alt="Socialads/Dashboard">COM_SOCIALADS_TITLE_DASHBOARD</menu>
+			<menu link="option=com_socialads&amp;view=forms" view="forms" img="../.../../media/com_sa/images/s_managesa.png" alt="Socialads/forms">COM_SOCIALADS_TITLE_ADS</menu>
+			<menu link="option=com_socialads&amp;view=zones" view="zones" img="../.../../media/com_sa/images/s_zones.png" alt="Socialads/Zones">COM_SOCIALADS_TITLE_ZONES</menu>
+			<menu link="option=com_socialads&amp;view=adorders" view="adorders" img="../.../../media/com_sa/images/s_orders.png" alt="Socialads/adorders">COM_SOCIALADS_TITLE_AD_ORDERS</menu>
+			<menu link="option=com_socialads&amp;view=coupons" view="coupons" img="../.../../media/com_sa/images/s_coupons.png" alt="Socialads/Coupons">COM_SOCIALADS_TITLE_COUPONS</menu>
+			<menu link="option=com_socialads&amp;view=importfields" view="importfields" img="../.../../media/com_sa/images/s_importfields.png" alt="Socialads/importfields">COM_SOCIALADS_TITLE_SOCIAL_TARGETING</menu>
+		</submenu>
+		<files folder="administrator">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>socialads.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="administrator/language">
+			<language tag="en-GB">en-GB/en-GB.com_socialads.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_socialads.sys.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_socialads.menu.ini</language>
+			<language tag="zh-TW">zh-TW/zh-TW.com_socialads.ini</language>
+			<language tag="zh-TW">zh-TW/zh-TW.com_socialads.sys.ini</language>
+			<language tag="zh-TW">zh-TW/zh-TW.com_socialads.menu.ini</language>
+		</languages>
+	</administration>
+	<updateservers>
+		<server type="extension" priority="1" name="SocialAds updates"><![CDATA[https://techjoomla.com/component/ars/updates/components/socialads?format=xml&dummy=extension.xml]]></server>
+	</updateservers>
+	<config>
+		<fields>
+			<fieldset>
+				<field name="social_integration" default="Joomla" />
+				<field name="jomsocial_toolbar" default="0" />
+				<field name="priority" default="0" />
+				<field name="geo_targeting" default="1" />
+				<field name="geolite_city" default="1" />
+				<field name="test_ip" default="125.99.61.134" />
+				<field name="contextual_targeting" default="1" />
+				<field name="search_pages" default="0" />
+				<field name="query_strings" default="option=com_search&amp;view=search|searchword option=com_zoo&amp;view=search&amp;controller=search&amp;task=search|searchtext option=com_finder&amp;view=search|q option=com_community&amp;view=search|q" />
+				<field name="meta_keywords" default="1" />
+				<field name="smart_search" default="0" />
+				<field name="batch_size" default="20" />
+				<field name="payment_mode" default="pay_per_ad_mode" />
+				<field name="min_pre_balance" default="10" />
+				<field name="pricing_options" default="perclick" />
+				<field name="zone_pricing" default="1" />
+				<field name="per_clicks" default=".50" />
+				<field name="per_impressions" default=".5" />
+				<field name="per_day" default="20" />
+				<field name="slab_enable" default="0" />
+				<field name="slab_pay_per_day" default="0" />
+				<field name="minimum_charge" default="20" />
+				<field name="threshold" default="10" />
+				<field name="currency" default="USD" />
+				<field name="currency_symbol" default="$" />
+				<field name="currency_display_format" default="{CURRENCY_SYMBOL}{AMOUNT}" />
+				<field name="terms_conditions_payment" default="0" />
+				<field name="articleid_terms" default="1" />
+				<field name="order_prefix" default="OID" />
+				<field name="separator" default="-" />
+				<field name="random_orderid" default="1" />
+				<field name="padding_count" default="10" />
+				<field name="promotion_plugins" default="0" />
+				<field name="advertisers_ads" default="0" />
+				<field name="registration_form" default="1" />
+				<field name="editable_adtype_zone" default="0" />
+				<field name="display_count" default="0" />
+				<field name="reach_offset" default="100" />
+				<field name="image_path" default="sa" />
+				<field name="media_size" default="1024" />
+				<field name="flash_uploads" default="1" />
+				<field name="video_uploads" default="1" />
+				<field name="allow_autoplay" default="0" />
+				<field name="approval_status" default="0" />
+				<field name="interval_impressions" default="60" />
+				<field name="interval_clicks" default="60" />
+				<field name="ignore_ads" default="1" />
+				<field name="feedback_on_ignore" default="1" />
+				<field name="ignore_affiliate" default="0" />
+				<field name="jbolo_integration" default="0" />
+				<field name="social_sharing" default="0" />
+				<field name="boostrap_manually" default="0" />
+				<field name="jquery_ui" default="1" />
+				<field name="cron_key" default="1234" />
+				<field name="archivestat" default="1" />
+				<field name="maintain_stats" default="30" />
+				<field name="weekly_stats" default="0" />
+				<field name="intro_text_mail" default="Hey [SEND_TO_NAME]!, Thank you for advertising with us. Here is the summary of the performance of all your advertisements on [SITENAME] for the last week!" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

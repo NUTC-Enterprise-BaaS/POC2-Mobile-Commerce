@@ -1,0 +1,39 @@
+.main-categories [class^="dir-icon-"]{
+	margin-right: 10px;
+}
+
+.main-categories .dir-icon-menu-arrow {
+	float: right;
+	line-height: 35px;
+}
+
+.main-categories .active > a > .dir-icon-menu-arrow::before {
+	content: "\f107";
+}
+
+.main-categories .dir-icon-menu-arrow::before {
+	content: "\f104";
+}
+
+.event-categories-slider .categories-slider-item .categories-slide-image {
+	margin: 0 auto;
+	width: 111px;
+	height: 111px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+	border: 1px solid #dfdfdf;
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* Slide Title */
+.event-categories-slider .categories-slider-item p {
+	color: #333;
+	font-size: 13px;
+	line-height: 1.2;
+	text-align: center;
+}

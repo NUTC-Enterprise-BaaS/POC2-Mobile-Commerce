@@ -1,0 +1,37 @@
+.viksocialiconscontain {
+	display: inline-block;
+}
+.viksocialicons {
+	display: inline-block;
+}
+.big, .medium, .small {
+	display: inline-block;
+	background-repeat:no-repeat !important;
+}
+.fbclass {
+
+}
+.medium {
+	height: 33px;
+	width: 33px;
+	background-position: 0px center !important;
+}
+.medium:hover {
+	background-position: -33px center !important;
+}
+.big {
+	height: 48px;
+	width: 48px;
+	background-position: 0px center !important;
+}
+.big:hover {
+	background-position: -49px center !important;
+}
+.small {
+	height: 24px;
+	width: 24px;
+	background-position: 0px center !important;
+}
+.small:hover {
+	background-position: -24px center !important;
+}

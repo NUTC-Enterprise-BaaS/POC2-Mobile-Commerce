@@ -1,0 +1,166 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.fss_main .media,
+.fss_main .media-body {
+  overflow: hidden;
+  *overflow: visible;
+  zoom: 1;
+}
+.fss_main .media,
+.fss_main .media .media {
+  margin-top: 15px;
+}
+.fss_main .media:first-child {
+  margin-top: 0;
+}
+.fss_main .media-object {
+  display: block;
+}
+.fss_main .media-heading {
+  margin: 0 0 5px;
+}
+.fss_main .media > .pull-left {
+  margin-right: 10px;
+}
+.fss_main .media > .pull-right {
+  margin-left: 10px;
+}
+.fss_main .media-list {
+  margin-left: 0;
+  list-style: none;
+}
+.fss_main .pagination-large ul > li > a,
+.fss_main .pagination-large ul > li > span {
+  padding: 11px 19px;
+  font-size: 17.5px;
+}
+.fss_main .pagination-large ul > li:first-child > a,
+.fss_main .pagination-large ul > li:first-child > span {
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  border-top-left-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  border-bottom-left-radius: 6px;
+}
+.fss_main .pagination-large ul > li:last-child > a,
+.fss_main .pagination-large ul > li:last-child > span {
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-right-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  border-bottom-right-radius: 6px;
+}
+.fss_main .pagination-mini ul > li:first-child > a,
+.fss_main .pagination-mini ul > li:first-child > span,
+.fss_main .pagination-small ul > li:first-child > a,
+.fss_main .pagination-small ul > li:first-child > span {
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-bottom-left-radius: 3px;
+}
+.fss_main .pagination-mini ul > li:last-child > a,
+.fss_main .pagination-mini ul > li:last-child > span,
+.fss_main .pagination-small ul > li:last-child > a,
+.fss_main .pagination-small ul > li:last-child > span {
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-bottom-right-radius: 3px;
+}
+.fss_main .pagination-mini a,
+.fss_main .pagination-mini span,
+.fss_main .pagination-small a,
+.fss_main .pagination-small span {
+  line-height: 20px;
+}
+.fss_main .pagination-small ul > li > a,
+.fss_main .pagination-small ul > li > span {
+  padding: 2px 10px;
+  font-size: 11.9px;
+}
+.fss_main .pagination-mini ul > li > a,
+.fss_main .pagination-mini ul > li > span {
+  padding: 0 6px;
+  font-size: 10.5px;
+}
+div.fss_modal {
+  position: fixed;
+  top: 10% !important;
+  left: 50%;
+  z-index: 20000 !important;
+  width: 560px;
+  margin-left: -280px;
+  margin-top: 0px !important;
+  outline: none;
+}
+div.fss_modal.fade {
+  -webkit-transition: opacity .3s linear, top .3s ease-out;
+  -moz-transition: opacity .3s linear, top .3s ease-out;
+  -o-transition: opacity .3s linear, top .3s ease-out;
+  transition: opacity .3s linear, top .3s ease-out;
+  top: -25%;
+}
+div.fss_modal.fade.in {
+  top: 10%;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19999 !important;
+  background-color: #000;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+}
+.modal-backdrop,
+.modal-backdrop.fade.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+.collapse.in {
+  height: auto;
+}

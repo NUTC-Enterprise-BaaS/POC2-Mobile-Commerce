@@ -1,0 +1,24 @@
+#businesslocations .locations-content{
+	float: left;
+	padding: 20px;
+}
+
+#businesslocations ul > li > a::before{
+	content: "";
+}
+
+#businesslocations ul > li {
+    border-bottom: none;
+    display: block;
+}
+
+
+#businesslocations .location-region a{
+	font-size: 14px;
+	color: #2099c9;
+	font-weight: bold;
+}
+
+#businesslocations .location-city a{
+	font-size: 13px;
+}

@@ -1,0 +1,50 @@
+.fss_main .nav {
+  margin-bottom: 12px;
+}
+.fss_main .input-append select,
+.fss_main .input-append textarea,
+.fss_main .input-append input[type="text"],
+.fss_main .input-append input[type="password"],
+.fss_main .input-append input[type="datetime"],
+.fss_main .input-append input[type="datetime-local"],
+.fss_main .input-append input[type="date"],
+.fss_main .input-append input[type="month"],
+.fss_main .input-append input[type="time"],
+.fss_main .input-append input[type="week"],
+.fss_main .input-append input[type="number"],
+.fss_main .input-append input[type="email"],
+.fss_main .input-append input[type="url"],
+.fss_main .input-append input[type="search"],
+.fss_main .input-append input[type="tel"],
+.fss_main .input-append input[type="color"],
+.fss_main .input-append .inputbox {
+  display: inline-block;
+}
+.fss_main form {
+  margin: 0 0 18px;
+}
+.fss_main input[type="file"] {
+  margin: 4px 0px;
+}
+.fss_main .sceditor-button {
+  width: inherit !important;
+  height: inherit !important;
+}
+.fss_main .label {
+  display: inline-block;
+}
+.fss_main .fileinput-button input {
+  height: 32px;
+}
+.fss_main.body-modal .window-mainbody {
+  padding: 0 !important;
+}
+.fss_main.body-modal .window-mainbody .modal-header h3 {
+  margin: 0 !important;
+}
+.fss_main.body-modal .window-mainbody .modal-footer input {
+  display: inline-block;
+}
+.fss_modal {
+  bottom: inherit !important;
+}

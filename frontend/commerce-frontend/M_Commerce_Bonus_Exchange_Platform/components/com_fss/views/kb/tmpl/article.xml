@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="KB_SHOW_SINGLE_ARTICLE">
+		<help url = "http://www.freestyle-joomla.com/comhelp/fss/frontend-view-kb-article" />
+		<message></message>
+  </layout>
+	<state>
+		<name>KB_SHOW_SINGLE_ARTICLE</name>
+		<url addpath="/administrator/components/com_fss/elements">
+            <param name="kbartid" type="kbartid" default="0" label="Select Article" description="Please select a Article to link to" />
+        </url>
+		
+		<fields name="request">
+			<fieldset name="request"
+				addfieldpath="/administrator/components/com_fss/models/fields">
+
+				<field name="kbartid" type="modal_kbartid" default="0" label="Select Article" description="Please select a Article to link to" />
+			</fieldset>
+		</fields>
+	</state>
+</metadata>
