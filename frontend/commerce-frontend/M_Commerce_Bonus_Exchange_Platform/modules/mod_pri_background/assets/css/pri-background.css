@@ -1,0 +1,41 @@
+/**
+ * @package     Joomla.Site
+ * @subpackage  mod_pri_background
+ * @version     4.0
+ *
+ * @copyright   Copyright (C) 2016 Devpri SRL. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+html {
+	position: relative;
+}
+.pri-background-container {
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+.pri-background-container-absolute,
+.pri-background-container-scroll{
+	position: absolute;
+}
+.pri-background-container-fixed{
+	position: fixed;
+}
+.pri-background-size {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Slider */
+.pri-background-slider {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}

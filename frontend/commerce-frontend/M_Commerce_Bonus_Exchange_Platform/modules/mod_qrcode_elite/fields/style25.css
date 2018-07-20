@@ -1,0 +1,8 @@
+/**
+ * @package			QRCode Elite
+ * @subpackage		mod_qrcode_elite
+ * @copyright		Copyright (C) 2013 Elite Developers All rights reserved.
+ * @license			GNU/GPL v3 http://www.gnu.org/licenses/gpl.html
+ */
+
+input[type="checkbox"], input[type="radio"] { border: 0; } div.a_panel { clear: both; margin-bottom: 8px !important; border: 1px solid #87CEFA; } div.a_panel_top { margin-bottom: 0 !important; border-bottom: 0 !important; font-size: 1.091em; } div.a_panel_title { background-color: #E3F3FF; font-weight: bold; margin-top: 5px; } div.a_panel_slide { background-color: #FAFAFA; font-size: 1.091em; } div.a_panel_slide:hover { background-color: #E3F3FF; } div.a_panel_slide input.checkbox { margin: 0 8px 0 0; } div.a_panel_slide.a_panel_include, div.a_panel_slide.a_panel_exclude { margin-bottom: 0 !important; border-bottom: 0 !important; background-color: #437b1d; color: #FFFFFF; } div.a_panel_slide.a_panel_exclude { background-color: #ac1f1f; } ul.config-option-list ul { margin: 0; padding: 0; list-style: none; } .a_bloc { display: block; padding: 4px 8px 0 8px; } .a_bloc_notitle, .a_title { padding: 4px 8px; } label.a_title { float: none !important; padding: 5px 8px 3px 8px !important; margin: 0 !important; pointer: cursor; } .a_title ul { margin: 0 !important; margin-left: 2em !important; } .a_title ul li { list-style: disc outside !important; } span.a_code { font-family: monospace; font-size: 12px; color: #666666; } input.a_codefield { font-family: monospace; font-size: 2em; padding: 2px 5px; text-align: center; } .aslide ul { margin: 0; } div#mc-component .aslide ul li { padding: 5px 0; } div.a_hr { height: 2px; border-left: 0 !important; border-right: 0 !important; }

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="List All Venues">
+		<message>
+			<![CDATA[List All Venues.]]>
+		</message>
+	</layout>
+	<state>
+		<name>List All Venues</name>
+		<description>List All Venues of Services Booking component</description>
+	</state>
+</metadata>

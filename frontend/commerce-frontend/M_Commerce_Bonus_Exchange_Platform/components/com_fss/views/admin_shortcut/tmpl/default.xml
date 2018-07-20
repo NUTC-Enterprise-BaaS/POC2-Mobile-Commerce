@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="ADMIN_SHORTCUTS">
+    <help url = "http://www.freestyle-joomla.com/comhelp/fss/frontend-view-faq-faq" />
+    <message></message>
+  </layout>
+  <state>
+    <name>ADMIN_SHORTCUTS</name>
+
+    <fields name="request">
+      <fieldset name="request">
+
+        <field name="shortcut" type="list" default="" label="Select Shortcut" description="Please select a Shortcut to link to">
+          <option value="">Please select a shortcut</option>
+          <option value="create.registered">Create Ticket For: Registered User</option>
+          <option value="create.unregistered">Create Ticket For: Unregistered User</option>
+
+          <option value="tickets.mine">Tickets: My Tickets #</option>
+          <option value="tickets.other">Tickets: Other Handlers Tickets #</option>
+          <option value="tickets.unassigned">Tickets: Unassigned Tickets #</option>
+
+          <option value="tickets.status">Tickets: Specific Status #</option>
+          
+          <option value="myadminsettings">My Admin Settings</option>
+
+          <option value="content.announcements">Content: Announcements</option>
+          <option value="content.faqs">Content: FAQs</option>
+          <option value="content.kb">Content: Knowledge Base Articles</option>
+          <option value="content.glossary">Content: Glossary</option>
+        </field>
+        <field name="status" type="sql" default="" label="Ticket Status #" description="Select ticket status. Only used by shortcuts with a # after the name"
+               query="SELECT id, title FROM #__fss_ticket_status ORDER BY ordering" key_field="id" value_field="title">
+          <option value="all">All</option>
+          <option value="allopen">All Open</option>
+          <option value="closed">All Closed</option>
+        </field>
+      </fieldset>
+    </fields>
+  </state>
+</metadata>

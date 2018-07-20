@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="Usernamelist" type="list" label="COM_SOCIAL_ADS_FILTER_GATEWAYS" description="COM_SOCIAL_ADS_FILTER_GATEWAYS_DESC" onchange="this.form.submit();">
+			<option value="0">SELECT_USER</option>
+		</field>
+	</fieldset>
+</form>

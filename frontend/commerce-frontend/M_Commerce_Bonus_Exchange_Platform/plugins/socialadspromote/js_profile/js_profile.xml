@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="socialadspromote" method="upgrade">
+	<name>Social Ads - Promote - JomSocial Profile</name>
+	<creationDate>2016-10-12</creationDate>
+	<version>3.1.4</version>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>http://www.techjoomla.com</authorUrl>
+	<copyright>Copyright (c) 2009-2016 TechJoomla. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>Plugin for Promoting JS Profile</description>
+	<files>
+		<filename plugin="js_profile">js_profile.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB/en-GB.plg_socialadspromote_js_profile.ini</language>
+	</languages>
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="plugin_name" type="text" default="JomSocial Profile" label="PLG_NAME" description="PLG_NAM_DESC" />
+				<field name="js_field" type="sql" default="4" label="PLG_SA_PROMOTE_JS_PROFILE_FIELD_NAM" description="PLG_SA_PROMOTE_JS_PROFILE_FIELD_NAM_DESC" query="SELECT id, name FROM #__community_fields WHERE published = 1" key_field='id' value_field='name' />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

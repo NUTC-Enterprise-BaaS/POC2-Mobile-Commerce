@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fields name="email" label="EMail Ticket">
+
+    <fieldset name="email" label="">
+
+      <field
+         name="email"
+         type="text"
+         class="btn-group btn-group-yesno"
+         label="To Address"
+         description=""
+         default=""
+         required="1"
+         />
+      
+    </fieldset>
+  </fields>
+
+</form>

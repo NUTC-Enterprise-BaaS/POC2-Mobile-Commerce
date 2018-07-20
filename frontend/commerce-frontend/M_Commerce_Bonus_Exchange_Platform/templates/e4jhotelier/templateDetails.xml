@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="template" version="2.5" client="site">
+	<name>E4J Hotelier</name>
+	<version>1.0</version>
+	<creationDate>June 2015</creationDate>
+	<author>Valentina Arras - Extensions for joomla</author>
+	<authorEmail>templates@extensionsforjoomla.com</authorEmail>
+	<authorUrl>http://www.extensionsforjoomla.com</authorUrl>
+	<copyright>Template Design © Joomla Templates Extensionsforjoomla. All rights reserved.</copyright>
+	<description><![CDATA[ <style type='text/css'>
+	div.btnposxml {float:left; width:200px; text-align:center; padding:10px; margin:0 15px 0 0; border-radius:#F80; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; background:#f60;} 
+	div.btnposxml a {color:#fff;} 
+	div.btnvarxml {float:left; width:250px; text-align:center; padding:10px; border-radius:#273969; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; background:#304680;} 
+	div.btnvarxml a {color:#fff;}
+	span.mod-desc {line-height:2em;}
+	.pane-sliders .panel {border:0;} 
+	div.panel h3.pane-toggler-down, div.panel h3.pane-toggler {padding:10px; color:#99CC00; border-top-left-radius:4px; border-top-right-radius:4px; -moz-border-top-left-radius:4px; -moz-border-top-right-radius:4px; -webkit-border-top-left-radius:4px; -webkit-border-top-right-radius:4px; background:#f6f6f6; border:1px solid #ccc;  border-top:2px solid #99CC00;} 
+	div.pane-slider.pane-down {border:1px solid #ccc; border-top:0;}
+	div.pane-slider ul.adminformlist li {border-bottom: 1px solid #EEEEEE; margin: 0; overflow: hidden; padding: 5px 5px;}
+	div.pane-slider ul.adminformlist li > label { height:20px; line-height:24px; margin: 0 10px 0 0; text-align:right;padding:10px 0px;}
+	div.pane-slider ul.adminformlist input, div.pane-slider ul.adminformlist select {padding:3px 5px; height:24px; line-height:24px; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px;}
+	span.bt-doc { text-transform:uppercase; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; color:#fff; text-shadow:0 0 1px #999; padding:8px 5px; font-size:14px; background:#99CC00; display:block; width:205px; text-align:center; float:none; clear:both; margin:10px 0 0 0; }
+	span.bt-doc a {color:#fff;}
+	h1.maintit-e4jadmin {color:#99CC00; font-size:20px; border-bottom:1px solid #ddd; margin:0 0 15px; padding:0 0 5px;}
+	p.desc-featured {font-weight:bold;font-size:14px; line-height:2em;}
+	h3.readdoc {margin:0; padding:0; border-top:1px solid #ddd; margin:15px 0 0; padding:15px 0 0 0;}
+	</style>
+	<p>Template E4J Hotelier, created by e4j... and designed for the component VikBooking.<br /></p>
+	<h1 class="maintit-e4jadmin">Getting Started</h1>
+	<p class="desc-featured">1. Set the template as Default<br />
+	2. Choose your color layout</p>
+	<h3 class="readdoc">CHECK THE DOCUMENTATION</h3>
+	Download and Read the documentation of the template.
+	<span class="bt-doc"><a href="http://www.extensionsforjoomla.com/documentations/templates#template-hotelier" target="_blank">Read the Documentation</a></span>	
+	]]>
+	</description>
+	<license>GPL</license>
+	
+<description>
+	</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>main.css</filename>
+		<filename>colswitch.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>template_preview.png</filename>
+		<filename>params.ini</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<folder>blocks</folder>
+		<folder>php</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+	</files>
+	<positions>
+		<position>mainmenu</position>
+		<position>upmenu-right</position>
+		<position>upmenu-left</position>
+		<position>breadcrumb</position>
+		<position>logo</position>
+		<position>user</position>
+		<position>slider</position>
+		<position>slider-fullscreen</position>
+		<position>slide-up</position>
+		<position>slide-down</position>
+		<position>slide-left</position>
+		<position>slide-right</position>
+		<position>module-box1</position>
+		<position>module-box2</position>
+		<position>fullbox</position>
+		<position>sidebar-right</position>
+		<position>sidebar-left</position>
+		<position>upcontent</position>
+		<position>subcontent</position>
+		<position>subfooter</position>
+		<position>footer</position>
+	</positions>
+	<config>
+		<fields name="params" addfieldpath="/templates/e4jhotelier/php">
+			<fieldset name="basic">
+				<field name="Header01" type="header" default="Template Layout" label="" description="" />
+				
+				<field name="tcolour" type="list" default="0" label="Colour Layout" description="Set template colour layout" >
+					<option value="0">Yellow</option>
+					<option value="1">Blue</option>
+					<option value="2">Azure</option>
+					<option value="3">Green</option>
+					<option value="4">Red</option>
+				</field>
+
+				<field name="getmenufixed" type="list" default="0" label="Menu fixed" description="Menu fixed on the top of your website" >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+
+				<field name="headertxt" type="text" default="18px" label="Titles Font Size" description="Set a size for your Titles" />
+
+				<field name="bfont" type="list" default="latoregularbd" label="Body Font" description="Set template body layout" >
+					<option value="0">Lato</option>
+					<option value="1">PT Sans</option>
+					<option value="2">Open Sans</option>
+					<option value="3">Droid Sans</option>
+					<option value="4">Century Gothic</option>
+					<option value="5">Arial</option>
+				</field>
+				
+				<field name="hfont" type="list" default="latoregular" label="Header font" description="Chose your header font" >
+					<option value="0">Lato</option>
+					<option value="1">PT Sans</option>
+					<option value="2">Open Sans</option>
+					<option value="3">Droid Sans</option>
+					<option value="4">Century Gothic</option>
+					<option value="5">Arial</option>
+				</field>
+
+				<field name="responsive" type="list" default="0" label="Responsive layout" description="This setting allow to display your website compatible with devices like mobile, Ipad, etc.." >
+					<option value="0">yes</option>
+					<option value="1">no</option>
+				</field>
+			</fieldset>
+			<fieldset name="options">
+		    	<field name="config" type="config" label="Config" description="" default="" />
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

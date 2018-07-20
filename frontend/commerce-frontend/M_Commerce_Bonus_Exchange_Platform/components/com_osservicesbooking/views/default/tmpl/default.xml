@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Default layout: Services booking">
+		<message>
+			<![CDATA[Front page.]]>
+		</message>
+	</layout>
+	<state>
+		<name>Default layout: Services booking</name>
+		<description>Default layout of Services Booking component</description>
+	</state>
+	<fields name="request">		
+		<fieldset name="request" addfieldpath="/administrator/components/com_osservicesbooking/elements">
+			<field name="date_from" type="calendar" default="" label="Select date from" description="" format="%Y-%m-%d" />
+			<field name="date_to" type="calendar" default="" label="Select date to" description="" format="%Y-%m-%d" />
+			<field name="category_id" type="osbcategory" size="3" default="" label="Select Category" description="Choose the category which you want to display services" />
+			<field name="sid" type="osbservice" size="3" default="" label="Select Service" description="Choose the service that you want to display" />
+			<field name="employee_id" type="osbemployee" size="3" default="" label="Select Employee" description="Choose the employee that you want to display services" />
+			<field name="vid" type="osbvenue" size="3" default="" label="Select Venue" description="Choose the venu that you want to display services" />
+		</fieldset>	
+	</fields>
+</metadata>

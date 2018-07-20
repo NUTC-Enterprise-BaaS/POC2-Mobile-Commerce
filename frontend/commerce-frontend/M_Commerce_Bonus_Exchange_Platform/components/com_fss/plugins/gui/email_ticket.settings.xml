@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fields name="template" label="Template">
+
+    <fieldset name="template" label="">
+
+      <field
+         name="subject"
+         type="text"
+         class="btn-group btn-group-yesno"
+         label="Subject"
+         description="Subject of email"
+         default="[{reference}] {subject}"
+         />
+
+      <field
+         name="message"
+         type="fsseditor"
+         class="btn-group btn-group-yesno"
+         label="Message"
+         description="Body of email"
+         default=""
+         >
+        <default>
+          <![CDATA[
+          <p>A ticket has been emailed to you from '{websitetitle}' by '{sending_name}'.</p>
+<p><strong>Ticket Summary :-</strong></p>
+<p>Subject: {subject}<br />Ticket reference number: {reference}<br />{department_start}Department: {department}<br />{department_end}{category_start}Category: {category}<br />{category_end}{product_start}Product: {product}<br />{product_end}</p>
+<p>You can view the ticket by going to <a href='{admin_link}'>{admin_link}</a></p>
+<p><strong>Messages :-</strong></p>
+<p>{messagehistory}</p>
+          ]]>
+        </default>
+      </field>
+
+    </fieldset>
+  </fields>
+
+</form>

@@ -1,0 +1,123 @@
+/*Icons for J2.5.x*/
+.icon-48-archivestats{background-image: url(../images/l_archivestats.png); padding-left:60px!important;}
+.icon-48-archivestat{background-image: url(../images/l_archivestats.png); padding-left:60px!important;}
+.icon-48-campaigns{background-image: url(../images/l_campaigns.png); padding-left:60px!important;}
+.icon-48-campaign{background-image: url(../images/l_campaigns.png); padding-left:60px!important;}
+.icon-48-coupons{background-image: url(../images/l_coupons.png); padding-left:60px!important;}
+.icon-48-coupon{background-image: url(../images/l_coupons.png); padding-left:60px!important;}
+.icon-48-datas{background-image: url(../images/l_datas.png); padding-left:60px!important;}
+.icon-48-data{background-image: url(../images/l_datas.png); padding-left:60px!important;}
+.icon-48-ignores{background-image: url(../images/l_ignores.png); padding-left:60px!important;}
+.icon-48-ignore{background-image: url(../images/l_ignores.png); padding-left:60px!important;}
+.icon-48-adorders{background-image: url(../images/l_orders.png); padding-left:60px!important;}
+.icon-48-adorder{background-image: url(../images/l_orders.png); padding-left:60px!important;}
+.icon-48-zones{background-image: url(../images/l_zones.png); padding-left:60px!important;}
+.icon-48-zone{background-image: url(../images/l_zones.png); padding-left:60px!important;}
+
+/*General css classes start*/
+.sa-btn-wrapper{margin:5px 0 5px 0 !important;}
+.sa-text-justify{text-align:justify;}
+/*Widths*/
+.tj-width-1{width:1%;}
+.tj-width-5{width:5%;}
+.tj-width-10{width:10%;}
+.tj-width-15{width:15%;}
+.tj-width-20{width:20%;}
+.tj-width-25{width:25%;}
+.tj-width-30{width:30%;}
+.tj-width-auto{width:auto !important;}
+/*General css classes end*/
+
+/*Dashboard*/
+#graph-monthly-sales{max-height:270px;}
+#donut-chart{max-height:230px;}
+.sa-dashboard-calender{
+min-height:35px!important;
+max-width:90px!important;
+}
+/*Ads*/
+.sa-legends-padding{padding:10px;}
+
+#sa-wallet .wallet_filter select
+{
+margin-left: 5px;
+}
+.sa-ad-imprtfields .showFields
+{
+display: none;
+}
+.sa-ad-imprtfields .hideFields
+{
+display: block;
+}
+.sa-imprtfields-controls-inline
+{
+display: inline-flex !important;
+}
+.sa-imprtfields-controls-left-margin
+{
+margin-left: 5px !important;
+}
+.sa-ad-details .saPadding{
+padding: 0px 2%;
+}
+.other-filters{
+padding: 0 14px;
+}
+/*Zone Form view*/
+#sa-zone .radio_align{padding-left: 0px;}
+.yes_no_toggle {margin-left: 0px !important;}
+.yes_no_toggle input {display: none !important;}
+.yes_no_toggle label.first {-webkit-border-radius: 3px 0 0 3px !important; -moz-border-radius: 3px 0 0 3px !important; border-radius: 3px 0 0 3px !important;}
+.yes_no_toggle label{clear: none !important;}
+.sa_setting_radio{float: none !important; margin-right: 5px;}
+
+/*Payment plugin selection for joomla 2.5*/
+.sa-elements-gateways-link{clear:none; float:left;}
+/*Component options overrides start*/
+#component-form .control-label{width: 250px !important;}
+/*For J2.5.x*/
+#component-form div.current label, div.current span.faux-label{min-width: 250px !important;}
+#component-form div.current fieldset.radio label{min-width: 45px !important;}
+/*Component options overrides end*/
+/*Configuration for joomla 2.5*/
+.sa-elements-legend-hint{clear:both; float:left; color:#000 !important; opacity: 0.65; font-size: 1.2em !important;}
+.sa-elements-legend{display: block; width: 100%; padding: 0; margin-bottom: 18px; font-size: 19.5px; line-height: 36px; color: #333; border: 0; border-bottom: 1px solid #e5e5e5;}
+.sa-elements-custom{float:left;}
+
+/*Newsfeed*/
+.tj-news-items div:not(:first-child).tj-news-item{
+margin-top: 5px;
+border-top: 1px solid #d1d9df;
+padding-top: 5px;
+}
+/*Newsfeed calender icon*/
+time.icon{font-size: 1em; /* change icon size */ display: block; position: relative; width: 7em; height: 7em; background-color: #fff; margin: 2em auto; border-radius: 0.6em; box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd; overflow: hidden; -webkit-backface-visibility: hidden; -webkit-transform: rotate(0deg) skewY(0deg); -webkit-transform-origin: 50% 10%; transform-origin: 50% 10%;}
+time.icon * {display: block; width: 100%; font-size: 1em; font-weight: bold; font-style: normal; text-align: center;}
+time.icon strong {position: absolute; top: 0; /* padding: 0.4em 0; */ color: #fff; background-color: #fd9f1b; border-bottom: 1px dashed #f37302; box-shadow: 0 2px 0 #fd9f1b;}
+time.icon em {position: absolute; bottom: 0.3em; color: #fd9f1b;}
+time.icon span {width: 100%; font-size: 2.8em; letter-spacing: -0.05em; padding-top: 1em; color: #2f2f2f;}
+time.icon:hover, time.icon:focus {-webkit-animation: swing 0.6s ease-out; animation: swing 0.6s ease-out;}
+@-webkit-keyframes swing {
+0% {-webkit-transform: rotate(0deg)  skewY(0deg);}
+20% {-webkit-transform: rotate(12deg) skewY(4deg);}
+60% {-webkit-transform: rotate(-9deg) skewY(-3deg);}
+80% {-webkit-transform: rotate(6deg)  skewY(-2deg);}
+100% {-webkit-transform: rotate(0deg)  skewY(0deg);}
+}
+@keyframes swing {0% {transform: rotate(0deg)  skewY(0deg);}
+20% {transform: rotate(12deg) skewY(4deg);}
+60% {transform: rotate(-9deg) skewY(-3deg);}
+80% {transform: rotate(6deg)  skewY(-2deg);}
+100% {transform: rotate(0deg)  skewY(0deg);}
+}
+/*Newsfeed calender icon end*/
+.affiliate_div_style
+{
+	width:100% !important;
+}
+/*For geo targeting instruction*/
+.geo_target_instructions
+{
+word-break: break-word;
+}

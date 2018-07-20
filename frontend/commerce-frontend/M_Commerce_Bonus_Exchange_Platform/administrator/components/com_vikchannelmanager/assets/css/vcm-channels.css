@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+.vbotasp {
+	display: inline-block;
+	min-width: 85px;
+	background: none repeat scroll 0 0 #02679a;
+	border: 0;
+	border-radius: 5px 5px 5px 5px;
+	margin: 0 3px 0 0;
+	padding: 4px;
+	color: #ffffff;
+	font-weight: bold;
+	position: relative;
+}
+.vbotasp:before {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	content: "";
+	left:-27px;
+	top: 3px;
+}
+.vcm-relation-label-small {
+	display: inline-block;
+	min-width: 50px;
+	margin: 0 3px 0 0;
+	padding: 0;
+	position: relative;
+}
+.vcm-relation-label-small:before {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	content: "";
+	left:-22px;
+	top: 0;
+}
+span[class*="tripconnect"]:before {
+	background: url('./channels/tripadvisor.png') left center no-repeat;
+}
+span[class*="hotels"]:before {
+	background: url('./channels/hotels.png') left center no-repeat;
+}
+span[class*="expedia"]:before {
+	background: url('./channels/expedia.png') left center no-repeat;
+}
+span[class*="trivago"]:before {
+	background: url('./channels/trivago.png') left center no-repeat;
+}
+span[class*="venere"]:before {
+	background: url('./channels/venere.png') left center no-repeat;
+}
+span[class*="booking"]:before {
+	background: url('./channels/booking.png') left center no-repeat;
+}
+span[class*="agoda"]:before {
+	background: url('./channels/agoda.png') left center no-repeat;
+}
+span[class*="orbitz"]:before {
+	background: url('./channels/orbitz.png') left center no-repeat;
+}
+span[class*="lastminute"]:before {
+	background: url('./channels/lastminute.png') left center no-repeat;
+}
+span[class*="airbnb"]:before {
+	background: url('./channels/airbnb.png') left center no-repeat;
+}
+span[class*="wimdu"]:before {
+	background: url('./channels/wimdu.png') left center no-repeat;
+}
+span[class*="flipkey"]:before {
+	background: url('./channels/flipkey.png') left center no-repeat;
+}
+span[class*="holidaylettings"]:before {
+	background: url('./channels/holidaylettings.png') left center no-repeat;
+}
+span[class*="vrbo"]:before {
+	background: url('./channels/vrbo.png') left center no-repeat;
+}
+span[class*="homeaway"]:before {
+	background: url('./channels/homeaway.png') left center no-repeat;
+}

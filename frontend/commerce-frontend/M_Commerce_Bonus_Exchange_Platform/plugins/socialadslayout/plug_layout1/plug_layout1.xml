@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="socialadslayout" method="upgrade">
+	<name>Social Ads - Layout 1</name>
+	<creationDate>2016-10-12</creationDate>
+	<version>3.1.4</version>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>http://www.techjoomla.com</authorUrl>
+	<copyright>Copyright (c) 2009-2016 TechJoomla. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>plugin for the layouts</description>
+	<files>
+		<filename plugin="plug_layout1">plug_layout1.php</filename>
+		<folder>plug_layout1</folder>
+	</files>
+	<!-- parameters for Joomla 3.0.x -->
+	<params>
+		<param name="layout_type" type="text" default="Text And Image" label="Layout" description="Enter Type Of Layout" />
+	</params>
+
+	<!-- Fields for Joomla 1.6.x and onwards -->
+	<config name="params">
+			<fields name="params">
+				<fieldset name="basic">
+					<field name="layout_type" type="text" default="Text And Media" label="Layout" description="Enter Type Of Layout" />
+				</fieldset>
+		</fields>
+	</config>
+</extension>

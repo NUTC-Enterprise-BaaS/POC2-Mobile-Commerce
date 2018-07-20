@@ -1,0 +1,41 @@
+/*.bg-on {
+    background-color: #FFF88F;
+}
+
+.bg-off {
+    background-color: #D6D6D4;
+}
+
+.table > tbody > tr > td {
+    border-color: #BBBBBB;
+}
+
+.list-group-item {
+    padding: 8px 10px;*/
+.button-notification {
+  background-color: rgb(68, 117, 186);
+  height: 100px;
+  width: 100px;
+  border: none;
+  border-radius:20px;
+  color: white;
+  padding-left: 80px 36px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+}
+.chosen-single {
+    display: block;
+    /*overflow: hidden;*/
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    background-clip: padding-box;
+    box-shadow: 0 0 3px white inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+    color: #777;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 41px;
+}

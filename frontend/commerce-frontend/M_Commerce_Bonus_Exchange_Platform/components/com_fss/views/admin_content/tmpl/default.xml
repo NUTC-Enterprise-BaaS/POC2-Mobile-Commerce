@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="CONTENT_ADMINISTRATION">
+	  <help url = "http://www.freestyle-joomla.com/comhelp/fss/frontend-view-admin-context" />
+	  <message></message>
+  </layout>
+  <state>
+    <name>CONTENT_ADMINISTRATION</name>
+  </state>
+</metadata>

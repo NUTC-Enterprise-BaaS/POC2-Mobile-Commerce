@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<opackage>
+	<name>Gen: MangoPay (market)</name>
+	<base>
+	</base>
+	<outputs>
+		<output type="zip" path="" filename="plg_hikamarket_mangopay" />
+	</outputs>
+	<dictionnary>
+		<entry name="{__VERSION__}" value="1.0.0" />
+		<entry name="{__YEAR__}" date="yyyy" />
+		<entry name="{__MONTH__}" date="mm" />
+		<entry name="{__DAY__}" date="dd" />
+		<entry name="{__BUILD_NB__}" date="yyMMddHHmm" />
+	</dictionnary>
+	<files>
+		<file name="mangopay.php">
+			<rule type="*" action="sourcecode" param="replace;commentary;header:header.txt;" />
+		</file>
+		<file name="mangopay_backend.php">
+			<rule type="*" action="sourcecode" param="replace;commentary;header:header.txt;" />
+		</file>
+		<file name="mangopay_class.php">
+			<rule type="*" action="sourcecode" param="replace;commentary;header:header.txt;" />
+		</file>
+		<file name="mangopay_ctrl.php">
+			<rule type="*" action="sourcecode" param="replace;commentary;header:header.txt;" />
+		</file>
+		<file name="mangopay.xml">
+			<rule type="*" action="sourcecode" param="replace" />
+		</file>
+		<directory name="views\" filter="*.*" subDirs="true">
+			<rules>
+				<rule type="directory" action="addfile" param="index.html" />
+				<rule type="*.php" action="sourcecode" param="replace;commentary;header:header.txt;" />
+			</rules>
+		</directory>
+		<directory name="media\" filter="*.*" subDirs="true">
+			<rules>
+				<rule type="directory" action="addfile" param="index.html" />
+				<rule type="*" action="copy" />
+			</rules>
+		</directory>
+		<directory name="language\" filter="*.*" subDirs="true">
+			<rules>
+				<rule type="directory" action="addfile" param="index.html" />
+				<rule type="*.ini" action="copy" />
+			</rules>
+		</directory>
+	</files>
+	<excludes>
+		<exclude name="*.bak" />
+		<exclude name="*.zip" />
+	</excludes>
+</opackage>

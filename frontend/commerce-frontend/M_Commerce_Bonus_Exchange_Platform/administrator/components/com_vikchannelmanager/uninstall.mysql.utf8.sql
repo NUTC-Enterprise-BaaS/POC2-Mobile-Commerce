@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS `#__vikchannelmanager_roomsxref`;
+DROP TABLE IF EXISTS `#__vikchannelmanager_config`;
+DROP TABLE IF EXISTS `#__vikchannelmanager_orders`;
+DROP TABLE IF EXISTS `#__vikchannelmanager_notifications`;
+DROP TABLE IF EXISTS `#__vikchannelmanager_notification_child`;
+DROP TABLE IF EXISTS `#__vikchannelmanager_keys`;
+DROP TABLE IF EXISTS `#__vikchannelmanager_channel`;
+DROP TABLE IF EXISTS `#__vikchannelmanager_hotel_details`;
+DROP TABLE IF EXISTS `#__vikchannelmanager_tac_rooms`;
+DROP TABLE IF EXISTS `#__vikchannelmanager_tri_rooms`;
+DROP TABLE IF EXISTS `#__vikchannelmanager_listings`;
+DROP TABLE IF EXISTS `#__vikchannelmanager_call_stats`;
+DROP TABLE IF EXISTS `#__vikchannelmanager_rar_updates`;

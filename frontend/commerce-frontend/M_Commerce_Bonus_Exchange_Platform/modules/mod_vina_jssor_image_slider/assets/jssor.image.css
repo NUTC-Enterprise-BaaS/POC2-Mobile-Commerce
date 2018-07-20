@@ -1,0 +1,145 @@
+/*
+# ------------------------------------------------------------------------
+# Vina Jssor Image Slider for Joomla 3
+# ------------------------------------------------------------------------
+# Copyright(C) 2014 www.VinaGecko.com. All Rights Reserved.
+# @license http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL
+# Author: VinaGecko.com
+# Websites: http://vinagecko.com
+# Forum:    http://vinagecko.com/forum/
+# ------------------------------------------------------------------------
+*/
+.vina-jssor-image-slider {
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+.vina-jssor-image-slider .vina-is-loading {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.vina-jssor-image-slider .vina-is-filter {
+	filter: alpha(opacity=70);
+	opacity:0.7;
+	position: absolute;
+	display: block;
+	background-color: #000000;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height:100%;
+}
+.vina-jssor-image-slider .vina-is-loading-icon {
+	position: absolute;
+	display: block;
+	background: url(images/loading.gif) no-repeat center center;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height:100%;
+}
+.vina-jssor-image-slider .vina-is-slides {
+	cursor: move;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+}
+.vina-jssor-image-slider .slider1-N div,
+.vina-jssor-image-slider .slider1-N div:hover,
+.vina-jssor-image-slider .slider1-N div.av {
+	FILTER: alpha(opacity=70);
+	opacity: .7;
+	overflow:hidden;
+	cursor: pointer;
+	BORDER: #000 1px solid;
+}
+.vina-jssor-image-slider .slider1-N div {
+	background-color: gray;
+}
+.vina-jssor-image-slider .slider1-N div:hover,
+.vina-jssor-image-slider .slider1-N div.av:hover,
+.vina-jssor-image-slider .slider1-N div.hv {
+	background-color: #d3d3d3;
+}
+.vina-jssor-image-slider .slider1-N div.av {
+	background-color: #fff;
+}
+.vina-jssor-image-slider .slider1-N div.dn {
+	background-color: #555555;
+}
+.vina-jssor-image-slider .jssord02l,
+.vina-jssor-image-slider .jssord02r,
+.vina-jssor-image-slider .jssord02ldn,
+.vina-jssor-image-slider .jssord02rdn {
+	position: absolute;
+	cursor: pointer;
+	display: block;
+	background: url(images/d02.png) no-repeat;
+	overflow:hidden;
+}
+.vina-jssor-image-slider .jssord02l {
+	background-position: -3px -33px;
+}
+.vina-jssor-image-slider .jssord02r {
+	background-position: -63px -33px;
+}
+.vina-jssor-image-slider .jssord02l:hover {
+	background-position: -123px -33px;
+}
+.vina-jssor-image-slider .jssord02r:hover {
+	background-position: -183px -33px;
+}
+.vina-jssor-image-slider .jssord02ldn {
+	background-position: -243px -33px;
+}
+.vina-jssor-image-slider .jssord02rdn {
+	background-position: -303px -33px;
+}
+.vina-jssor-image-slider .vina-caption {
+	position:absolute;
+}
+.vina-jssor-image-slider .jssort03 .w,
+.vina-jssor-image-slider .jssort03 .pav:hover .w {
+	position: absolute;
+	border: white 1px dashed;
+}
+.vina-jssor-image-slider .jssort03 .pdn .w,
+.vina-jssor-image-slider .jssort03 .pav .w {
+	border-style: solid;
+}
+.vina-jssor-image-slider .jssort03 .c {
+	filter:  alpha(opacity=45);
+	opacity: .45;
+	transition: opacity .6s;
+	-moz-transition: opacity .6s;
+	-webkit-transition: opacity .6s;
+	-o-transition: opacity .6s;
+}
+.vina-jssor-image-slider .jssort03 .p:hover .c,
+.vina-jssor-image-slider .jssort03 .pav .c {
+	filter:  alpha(opacity=0);
+	opacity: 0;
+}
+.vina-jssor-image-slider .jssort03 .p:hover .c {
+	transition: none;
+	-moz-transition: none;
+	-webkit-transition: none;
+	-o-transition: none;
+}
+.vina-jssor-image-slider .vina-thumbnail-mask {
+	background-color: #000;
+	filter:alpha(opacity=30);
+	opacity:.3;
+	width: 100%;
+	height:100%;
+}
+/*Default style*/
+.vina-jssor-image-slider .vina-caption.default {
+	background: none repeat scroll 0 0 rgba(225, 225, 225, 0.7);
+    border-radius: 5px;
+	border-radius: 5px;
+}
+.vina-jssor-image-slider .vina-caption.default h3 {
+	margin-top: 0;
+}

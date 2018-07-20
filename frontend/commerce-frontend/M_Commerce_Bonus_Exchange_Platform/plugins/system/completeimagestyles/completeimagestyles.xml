@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.7" group="system" method="upgrade">
+	<name>System - Complete Image Styles</name>
+	<creationDate>2012-01-01</creationDate>
+	<author>Thanos Manesis</author>
+	<authorEmail>info@impression-estudio.gr</authorEmail>
+	<authorUrl>http://joomla.impression-estudio.gr</authorUrl>
+	<copyright>All rights reserved by Impression eStudio 2012.</copyright>
+	<license>GPL 2.0</license>
+	<version>2.1.4</version>
+	<description>Complete collection of styles for images.</description>
+	<files>
+		<filename plugin="completeimagestyles">completeimagestyles.php</filename>
+		<filename>index.html</filename>
+		<folder>completeimagestyles</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_completeimagestyles.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="plugins/system/completeimagestyles/completeimagestyles/fields">
+			<fieldset name="basic">
+				<field name="styles" type="styles" default="" label="" description=""/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

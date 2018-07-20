@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+  <help url="HELP_MODULE" key="HELP_MODULE"></help>
+  <name>MOD_FSS_FAQS</name>
+  <author>Freestyle Joomla</author>
+  <creationDate>2013 07 25</creationDate>
+  <version>1.10.0.1668</version>
+  <description>MOD_FSS_FAQS_DESC</description>
+  <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+  <files>
+    <filename>mod_fss_faqs.xml</filename>
+    <filename module="mod_fss_faqs">mod_fss_faqs.php</filename>
+    <filename>index.html</filename>
+    <folder>tmpl</folder>
+  </files>
+  <languages>
+    <language tag="en-GB">en-GB.mod_fss_faqs.ini</language>
+    <language tag="en-GB">en-GB.mod_fss_faqs.sys.ini</language>
+  </languages>
+
+  <!-- Joomla 1.6+ -->
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="catid" type="sql" default="" label="Which FAQ Category" query="(SELECT 0 as id, 'All FAQs' as title) UNION (SELECT -5 as id, 'Featured FAQs' as title) UNION (SELECT id, title FROM #__fss_faq_cat ORDER BY ordering)" key_field="id" value_field="title" />
+        <field name="dispcount" type="text" size="3" default="10" label="Max Number Of&lt;br/&gt;FAQs To Display" description="How many faqs should be displayed" />
+        <field name="maxheight" type="text" size="5" default="0" label="Maximum Height" description="Maximum height of display. If larger than this, the display will scroll. Use 0 for auto height." />
+        <field name="listtype" type="list" default="newpage" label="Answer Display" description="How should the FAQ answers be displayed">
+          <option value="newpage">New Page</option>
+          <option value="popup">Popup Window</option>
+          <option value="accordion">Accordion</option>
+        </field>
+        <field name="per_page" type="list" default="0" label="FAQs per page" description="">
+          <option value="0">All</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </field>
+      </fieldset>
+
+      <fieldset name="advanced">
+        <field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+      </fieldset>
+    </fields>
+  </config>
+</extension>

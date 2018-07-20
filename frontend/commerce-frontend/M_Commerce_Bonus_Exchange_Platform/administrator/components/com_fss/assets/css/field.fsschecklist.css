@@ -1,0 +1,31 @@
+div.fss_fsschecklist_cont {
+  float: left;
+  margin-bottom: 8px;
+}
+div.fss_fsschecklist_cont div.fss_fsschecklist {
+  margin-top: 4px;
+  max-height: 200px;
+  min-width: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 4px;
+  border-radius: 4px;
+}
+div.fss_fsschecklist_cont div.fss_fsschecklist input[type="text"] {
+  display: none;
+}
+div.fss_fsschecklist_cont div.fss_fsschecklist div.item {
+  clear: both;
+  padding: 3px;
+}
+div.fss_fsschecklist_cont div.fss_fsschecklist div.item input {
+  margin: 1px 4px 0px 3px;
+}
+div.fss_fsschecklist_cont div.fss_fsschecklist.cols-4 {
+  width: 300px;
+}
+div.fss_fsschecklist_cont div.fss_fsschecklist.cols-4 div.item {
+  clear: none;
+  float: left;
+  width: 22%;
+}

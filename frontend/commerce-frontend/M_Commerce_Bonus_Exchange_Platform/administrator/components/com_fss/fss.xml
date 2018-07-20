@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>COM_FSS</name>
+	<!-- The following elements are optional and free of formatting constraints -->
+	<creationDate>2016 06 02</creationDate>
+	<authorEmail>support@freestyle-joomla.com</authorEmail>
+	<authorUrl>http://www.freestyle-joomla.com</authorUrl>
+	<author>Freestyle Joomla</author>
+	<copyright>Copyright Freestyle Joomla 2010</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>2.5.21.2074</version>
+	<description>Freestyle Support Portal</description>
+
+	<scriptfile>install25.php</scriptfile>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu img="components/com_fss/assets/menu_icon_s.png">FREESTYLE_SUPPORT_PORTAL</menu>
+		<submenu>
+      <menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=fsss">COM_FSS_OVERVIEW</menu>
+      <menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=settings">COM_FSS_SETTINGS</menu>
+      <menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=templates">COM_FSS_TEMPLATES</menu>
+      <menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=settingsview">COM_FSS_VIEW_SETTINGS</menu>
+      <menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=mainmenus">COM_FSS_MAIN_MENU</menu>
+
+			<menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=faqs">COM_FSS_FAQS</menu>
+			<menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=faqcats">COM_FSS_FAQ_CATEGORIES</menu>
+			<menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=prods">COM_FSS_PRODUCTS</menu>
+
+      <menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=tests">COM_FSS_MODERATION</menu>
+
+      <menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=kbcats">COM_FSS_KB_CATS</menu>
+			<menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=kbarts">COM_FSS_KB_ARTICLES</menu>
+
+			<menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=fields">COM_FSS_CUSTOM_FIELDS</menu>
+
+			<menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=glossarys">COM_FSS_GLOSSARY</menu>
+			<menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=ticketcats">COM_FSS_TICKET_CATEGORIES</menu>
+			<menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=ticketdepts">COM_FSS_TICKET_DEPARTMENTS</menu>
+			<menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=ticketpris">COM_FSS_TICKET_PRIORITIES</menu>
+			<menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=ticketgroups">COM_FSS_TICKET_GROUPS</menu>
+			<menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=ticketemails">COM_FSS_TICKET_EMAIL_ACCOUNTS</menu>
+      <menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=ticketstatuss">COM_FSS_TICKET_STATUS</menu>
+
+      <menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=fusers">COM_FSS_USERS</menu>
+
+			<menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=announces">COM_FSS_ANNOUNCEMENTS</menu>
+			<menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=emails">COM_FSS_EMAIL_TEMPLATES</menu>
+			<menu img="components/com_fss/assets/images/blank_16.png" link="option=com_fss&amp;view=backup">COM_FSS_ADMIN</menu>
+		</submenu>
+
+		<!-- Administration Main File Copy Section -->
+		<files folder="admin">
+			<filename>database_fss.dat</filename>
+			<filename>data_fss.xml</filename>
+
+      <filename>access.xml</filename>
+      <filename>config.xml</filename>
+      <filename>controller.php</filename>
+			<filename>element.php</filename>
+			<filename>fss.php</filename>
+			<filename>index.html</filename>
+			<filename>settings.php</filename>
+			<filename>updatedb.php</filename>
+			<filename>adminhelper.php</filename>
+
+			<folder>extensions</folder>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>elements</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+      <folder>views</folder>
+      <folder>help</folder>
+      <folder>html</folder>
+      <folder>helper</folder>
+    </files>
+
+		<languages folder="admin_lang">
+			<language tag="en-GB">en-GB/en-GB.com_fss.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_fss.sys.ini</language>
+			<language tag="zh-TW">zh-TW/zh-TW.com_fss.ini</language>
+            <language tag="zh-TW">zh-TW/zh-TW.com_fss.sys.ini</language>
+      
+      <!-- Search plugin language files -->
+      <language tag="en-GB">en-GB/en-GB.plg_search_fss_announce.ini</language>
+      <language tag="en-GB">en-GB/en-GB.plg_search_fss_faqs.ini</language>
+      <language tag="en-GB">en-GB/en-GB.plg_search_fss_glossary.ini</language>
+      <language tag="en-GB">en-GB/en-GB.plg_search_fss_kb.ini</language>
+	  <language tag="zh-TW">zh-TW/zh-TW.plg_search_fss_announce.ini</language>
+      <language tag="zh-TW">zh-TW/zh-TW.plg_search_fss_faqs.ini</language>
+      <language tag="zh-TW">zh-TW/zh-TW.plg_search_fss_glossary.ini</language>
+      <language tag="zh-TW">zh-TW/zh-TW.plg_search_fss_kb.ini</language>
+      
+      
+      <!-- Finder plugin language files -->
+      <language tag="en-GB">en-GB/en-GB.plg_finder_fss_announce.ini</language>
+      <language tag="en-GB">en-GB/en-GB.plg_finder_fss_announce.sys.ini</language>
+      <language tag="en-GB">en-GB/en-GB.plg_finder_fss_faq.ini</language>
+      <language tag="en-GB">en-GB/en-GB.plg_finder_fss_faq.sys.ini</language>
+      <language tag="en-GB">en-GB/en-GB.plg_finder_fss_glossary.ini</language>
+      <language tag="en-GB">en-GB/en-GB.plg_finder_fss_glossary.sys.ini</language>
+      <language tag="en-GB">en-GB/en-GB.plg_finder_fss_kb.ini</language>
+      <language tag="en-GB">en-GB/en-GB.plg_finder_fss_kb.sys.ini</language>
+      <language tag="zh-TW">zh-TW/zh-TW.plg_finder_fss_announce.ini</language>
+      <language tag="zh-TW">zh-TW/zh-TW.plg_finder_fss_announce.sys.ini</language>
+      <language tag="zh-TW">zh-TW/zh-TW.plg_finder_fss_faq.ini</language>
+      <language tag="zh-TW">zh-TW/zh-TW.plg_finder_fss_faq.sys.ini</language>
+      <language tag="zh-TW">zh-TW/zh-TW.plg_finder_fss_glossary.ini</language>
+      <language tag="zh-TW">zh-TW/zh-TW.plg_finder_fss_glossary.sys.ini</language>
+      <language tag="zh-TW">zh-TW/zh-TW.plg_finder_fss_kb.ini</language>
+      <language tag="zh-TW">zh-TW/zh-TW.plg_finder_fss_kb.sys.ini</language>
+    </languages>
+	</administration>
+
+  <!-- Site Main File Copy Section -->
+  <files folder="site">
+    <filename>controller.php</filename>
+    <filename>fss.php</filename>
+    <filename>index.html</filename>
+    <filename>_powered.php</filename>
+    <!--<filename>router.php</filename>-->
+
+    <folder>cron</folder>
+    <folder>views</folder>
+    <folder>models</folder>
+    <folder>assets</folder>
+    <folder>files</folder>
+    <folder>helper</folder>
+    <folder>tmpl</folder>
+    <folder>plugins</folder>
+    <folder>language</folder>
+  </files>
+
+  <languages folder="site_lang">
+    <language tag="en-GB">en-GB/en-GB.com_fss.ini</language>
+    <language tag="zh-TW">zh-TW/zh-TW.com_fss.ini</language>
+  </languages>
+<!--
+  <updateservers>
+    <server type="collection" name="Freestyle Support Portal Updates">http://www.freestyle-joomla.com/update/list.php</server>
+  </updateservers>
+  -->
+</extension>

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fields name="products" label="Product Tabs">
+    
+    <fieldset name="products" label="">
+      <field
+				name="show"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="Show Products as tabs"
+				description="Show Products as tabs"
+        default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+      
+      <field
+         name="dropdown"
+         type="radio"
+         class="btn-group btn-group-yesno"
+         label="Create dropdown for list"
+         description="Show in a dropdown"
+         default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+
+      <field
+				name="location"
+				type="list"
+				class=""
+				label="Tab location"
+				description="Where should the tabs be shown"
+        default="1">
+        <option value="0">Start</option>
+        <option value="1">Before "Other"</option>
+        <option value="2">After "Other"</option>
+        <option value="3">Start of "Other" dropdown</option>
+        <option value="4">End of "Other" dropdown</option>
+      </field>
+
+      <field name="status" type="fsssqlcombo" label="Status to show" description="">
+        <option value="">All Statuses</option>
+        <option value="allopen">All Open</option>
+        <option value="closed">All Closed</option>
+        <sql>SELECT title as text, id as value FROM #__fss_ticket_status ORDER BY ordering</sql>
+      </field>
+
+      <field
+        name="use"
+        type="radio"
+				class="btn-group btn-group-yesno"
+        label="Which Products"
+        description=""
+        useglobal="1">
+        <option value="">All</option>
+        <option value="1">Include</option>
+        <option value="0">Exclude</option>
+      </field>
+     
+      <field name="list" type="fsschecklist" label="" description="">
+        <sql>SELECT title as display, id FROM #__fss_prod ORDER BY ordering</sql>
+      </field>
+
+    </fieldset>
+  </fields>
+  
+  <fields name="departments" label="Department Tabs">
+
+    <fieldset name="departments" label="">
+      <field
+				name="show"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="Show Departments as tabs"
+				description="Show Departments as tabs"
+        default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+
+      <field
+         name="dropdown"
+         type="radio"
+         class="btn-group btn-group-yesno"
+         label="Create dropdown for list"
+         description="Show in a dropdown"
+         default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+      
+      <field
+				name="location"
+				type="list"
+				class=""
+				label="Tab location"
+				description="Where should the tabs be shown"
+        default="1">
+        <option value="0">Start</option>
+        <option value="1">Before "Other"</option>
+        <option value="2">After "Other"</option>
+        <option value="3">Start of "Other" dropdown</option>
+        <option value="4">End of "Other" dropdown</option>
+      </field>
+      
+      <field name="status" type="fsssqlcombo" label="Status to show" description="">
+        <option value="">All Statuses</option>
+        <option value="allopen">All Open</option>
+        <option value="closed">All Closed</option>
+        <sql>SELECT title as text, id as value FROM #__fss_ticket_status ORDER BY ordering</sql>
+      </field>
+
+      <field
+        name="use"
+        type="radio"
+				class="btn-group btn-group-yesno"
+        label="Which Departments"
+        description=""
+        useglobal="1">
+        <option value="">All</option>
+        <option value="1">Include</option>
+        <option value="0">Exclude</option>
+      </field>
+
+      <field name="list" type="fsschecklist" label="" description="">
+        <sql>SELECT title as display, id FROM #__fss_ticket_dept ORDER BY ordering</sql>
+      </field>
+
+  </fieldset>
+  </fields>
+
+</form>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+  <help url="HELP_MODULE" key="HELP_MODULE"></help>
+  <name>MOD_FSS_SUPPORT</name>
+	<author>Freestyle Joomla</author>
+	<creationDate>2016 06 02</creationDate>
+	<version>2.5.21.2074</version>
+	<description>MOD_FSS_SUPPORT_DESC</description>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<files>
+		<filename>mod_fss_support.xml</filename>
+		<filename module="mod_fss_support">mod_fss_support.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+    <language tag="en-GB">en-GB.mod_fss_support.ini</language>
+    <language tag="en-GB">en-GB.mod_fss_support.sys.ini</language>
+  </languages>
+
+	<!-- Joomla 1.6+ -->
+	<config>
+		<fields name="params">
+      <fieldset name="basic">
+        <field name="listtype" type="radio" default="admin" label="LIST_TYPE" description="CHOOSE_TO_ADMIN_OR_USER_INFORMATION">
+          <option value="admin">HANDLER_SUMMARY</option>
+          <option value="user">USER_SUMMARY</option>
+        </field>
+        <field name="hide_tickets" type="radio" default="0" label="HIDE__SUPPORT_TICKETS_" description="">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="hide_moderate" type="radio" default="0" label="HIDE__MODERATE_" description="">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="tickets_user_only" type="radio" default="0" label="HANDLERS_TICKET_ONLY" description="">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="tickets_closed_status" type="radio" default="0" label="SHOW_CLOSED_TICKET_STATUS" description="">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="tickets_archived_status" type="radio" default="0" label="SHOW_ARCHIVED_TICKET_STATUS" description="">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="tickets_show_my_tickets" type="radio" default="0" label="SHOW_MY_TICKETS" description="Admin Only">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="tickets_open_ticket" type="radio" default="0" label="SHOW_OPEN_TICKET" description="Shows 'Open Ticket' button for current user.">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="tickets_open_ticket_reg" type="radio" default="0" label="SHOW_OPEN_TICKET_REG" description="Shows 'Open Ticket' button for another registered user (Admin Only).">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="tickets_open_ticket_unreg" type="radio" default="0" label="SHOW_OPEN_TICKET_UNREG" description="Shows 'Open Ticket' button for another registered user (Admin Only).">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field> 
+      </fieldset>
+      <fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+  <fields name="tab1" label="Tab 1">
+
+    <fieldset name="tab1" label="">
+      <field
+				name="exampleradio"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="Example radio field"
+				description=""
+        default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+
+      <field
+        name="examplelist"
+        type="list"
+				class="btn-group btn-group-yesno"
+        label="Example list field"
+        description=""
+        useglobal="1">
+        <option value="entry1">1st Entry</option>
+        <option value="entry2">2nd Entry</option>
+        <option value="entry3">3rd Entry</option>
+        <option value="entry4">4th Entry</option>
+        <option value="entry5">5th Entry</option>
+      </field>
+
+      <field
+         name="exampletext"
+         type="text"
+         class=""
+         label="Example string field"
+         description=""
+         />
+      
+      <field
+         name="examplelong"
+         type="textarea"
+         class=""
+         label="Example text field"
+         description=""
+         rows="10"
+         />
+      
+    </fieldset>
+  </fields>
+
+  <fields name="tab2" label="Another Tab">
+
+    <fieldset name="tab2" label="">
+
+      <field
+         name="message"
+         type="editor"
+         class="btn-group btn-group-yesno"
+         label="Message"
+         description="Message"
+         />
+
+    </fieldset>
+
+
+  </fields>
+
+</form>
+<!--
+
+To use these setting within a plugin, call the following code:
+
+$this->loadSettings();
+
+Your function within the plugin should NOT be static.
+
+The settings will be in the $this->settings object. Ie:
+
+stdClass Object
+(
+    [tab1] => stdClass Object
+        (
+            [exampleradio] => 0
+            [examplelist] => entry1
+            [exampletext] => ghkdf
+            [examplelong] => khgdf
+        )
+
+    [tab2] => stdClass Object
+        (
+            [message] => 
+        )
+
+)
+
+-->

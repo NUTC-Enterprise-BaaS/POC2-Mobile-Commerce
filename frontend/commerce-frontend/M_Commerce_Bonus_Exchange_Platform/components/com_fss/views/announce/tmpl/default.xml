@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="ANNOUNCEMENT_LIST">
+		<help url = "http://www.freestyle-joomla.com/comhelp/fss/frontend-view-announce-default" />
+		<message></message>
+  </layout>
+  <state>
+    <name>ANNOUNCEMENT_LIST</name>
+  </state>
+</metadata>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="finder" method="upgrade">
+	<name>JBusinessDirectory Offers Finder</name>
+	<author>CMSJunkie</author>
+	<creationDate>December 2015</creationDate>
+	<copyright>Copyright (C) CMSJunkie. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>info@cmsjunkie.com</authorEmail>
+	<authorUrl>www.cmsjunkie.com</authorUrl>
+	<version>1.0.0</version>
+	<description>JBD_OFFERS_XML_DESC</description>
+	<files>
+		<filename plugin="offers">offers.php</filename>
+	</files>
+</extension>

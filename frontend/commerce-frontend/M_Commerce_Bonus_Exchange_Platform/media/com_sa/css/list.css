@@ -1,0 +1,100 @@
+/**
+ * @version     3.2
+ * @package     com_socialads
+ * @copyright   Copyright (c) 2009-2015 TechJoomla. All rights reserved
+ * @license     GNU General Public License version 2, or later
+ * @author      Techjoomla <extensions@techjoomla.com> - http://www.techjoomla.com
+ */
+#filter-bar div.fltrt div.button2-left .blank a {
+margin-top:0!important;
+}
+
+button.open {
+font-weight:bold;
+}
+
+div.field-filter {
+float:left;
+margin:10px;
+}
+
+div.field-filter:first-of-type {
+margin-left:0;
+}
+
+div.filter-search,div.filter-select {
+clear:both;
+float:left;
+}
+
+div.filter-select .fltlft {
+clear:both;
+float:left;
+}
+
+div.filter-select.hide {
+display:none;
+}
+
+div.filter-select.show {
+display:block;
+}
+
+div.list-footer {
+clear:both;
+text-align:center;
+text-decoration:none;
+}
+
+div.list-footer div.counter {
+display:inline-block;
+}
+
+div.list-footer div.limit {
+display:inline-block;
+}
+
+div.list-footer ul {
+display:inline-block;
+list-style:none;
+}
+
+div.list-footer ul li {
+display:inline-block;
+}
+
+table.front-end-list {
+background-color:#f3f3f3;
+border-spacing:1px;
+color:#666;
+width:100%;
+}
+
+table.front-end-list tbody tr td {
+background:#fff;
+border:1px solid #fff;
+}
+
+table.front-end-list td {
+padding-left:8px;
+}
+
+table.front-end-list td,table.front-end-list th {
+padding:4px;
+}
+
+table.front-end-list thead th {
+background:#f7f7f7;
+border-bottom:1px solid #ccc;
+border-left:1px solid #fff;
+color:#666;
+text-align:center;
+}
+
+table.front-end-list thead th.align-center,table.front-end-list tbody td.align-center {
+text-align:center;
+}
+
+table.front-end-list thead th.align-left {
+text-align:left;
+}

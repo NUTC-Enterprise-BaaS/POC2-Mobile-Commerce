@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+.vikslImage {
+	width:100%;
+	position:relative;
+}
+#vikslider_prev {
+	top:50%;
+	left:20px;
+	position:absolute;
+	z-index:1000;
+	opacity:0;
+	transition: all 400ms ease-in-out 0s;
+	-moz-transition: all 400ms ease-in-out 0s;
+	-webkit-transition: all 400ms ease-in-out 0s;
+	-o-transition: all 400ms ease-in-out 0s;
+}
+#vikslider_next {
+	top:50%;
+	right:20px;
+	position:absolute;
+	z-index:1000;
+	opacity:0;
+	transition: all 400ms ease-in-out 0s;
+	-moz-transition: all 400ms ease-in-out 0s;
+	-webkit-transition: all 400ms ease-in-out 0s;
+	-o-transition: all 400ms ease-in-out 0s;
+}
+.vikslImage:hover #vikslider_prev, .vikslImage:hover #vikslider_next {
+	opacity:10;
+	transition:all 400ms ease-in-out 0s;
+	-moz-transition:all 400ms ease-in-out 0s;
+	-webkit-transition:all 400ms ease-in-out 0s;
+	-o-transition:all 400ms ease-in-out 0s;
+}
+.viksliderimgcontainer {
+	position:relative;
+}
+.vikslidertxtimg {
+	background:rgba(0,0,0,0.8);
+	background:#000\9;
+	position:absolute;
+	top:80%;
+	right:25px;
+	color:#fff;
+	padding:10px;
+	font-size:13px;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}

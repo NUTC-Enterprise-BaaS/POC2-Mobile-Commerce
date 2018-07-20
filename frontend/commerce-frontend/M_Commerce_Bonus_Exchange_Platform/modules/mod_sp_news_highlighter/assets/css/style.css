@@ -1,0 +1,51 @@
+/*
+# SP News Highlighter Module by JoomShaper.com
+# --------------------------------------------
+# Author    JoomShaper http://www.joomshaper.com
+# Copyright (C) 2010 - 2014 JoomShaper.com. All Rights Reserved.
+# License - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+# Websites: http://www.joomshaper.com
+*/
+.sp_news_higlighter{
+	position: relative;
+}
+.sp-nh-buttons{
+	float: left;
+	margin-right: 5px;
+}
+.sp-nh-item{
+	overflow: hidden;
+	position: relative;
+}
+span.sp-nh-date{ 
+	font-size: 80%;
+	font-style: italic;
+}
+span.sp-nh-text{
+	margin: 0 6px 0 0
+}
+span.sp-nh-text,
+.sp-nh-prev,
+.sp-nh-next {
+	display: block;
+	float: left;
+}
+.sp-nh-prev,
+.sp-nh-next{
+	background-repeat: no-repeat;
+	cursor: pointer;
+	width: 13px;
+	margin: 0 2px;
+}
+.sp-nh-prev{
+	background-position: 0 50%
+}
+.sp-nh-next{
+	background-position: -26px 50%
+}
+.sp-nh-prev:hover{ 
+	background-position: -13px 50%
+}
+.sp-nh-next:hover{
+	background-position: -39px 50%
+}

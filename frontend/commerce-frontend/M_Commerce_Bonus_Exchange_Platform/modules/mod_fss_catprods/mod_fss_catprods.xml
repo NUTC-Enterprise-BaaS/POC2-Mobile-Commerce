@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+  <help url="HELP_MODULE" key="HELP_MODULE"></help>
+  <name>MOD_FSS_CATPRODS</name>
+	<author>Freestyle Joomla</author>
+	<creationDate>2016 06 02</creationDate>
+	<version>2.5.21.2074</version>
+	<description>MOD_FSS_CATPRODS_DESC</description>
+  <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+  <files>
+		<filename>mod_fss_catprods.xml</filename>
+		<filename module="mod_fss_catprods">mod_fss_catprods.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+    <language tag="en-GB">en-GB.mod_fss_catprods.ini</language>
+    <language tag="en-GB">en-GB.mod_fss_catprods.sys.ini</language>
+  </languages>
+	
+	<!-- For Joomla 1.6 + -->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="listtype" type="radio" default="faqcat" label="List Type" description="Choose to list faq cats, kb cats or kb products">
+					<option value="faqcat">FAQ Categories</option>
+					<!-- ##NOT_FAQS_START## -->
+					<option value="kbprod">KB Products</option>
+					<option value="kbcats">KB Categories</option>
+					<!-- ##NOT_FAQS_END## -->
+				</field>
+			</fieldset>
+			
+			<!-- ##NOT_FAQS_START## -->
+			<fieldset name="kbcats" label="When viewing KB prods / categories">
+				<field name="prodid" type="sql" default="" label="Product when showing KB Categories" query="(SELECT 0 as id, 'All Products' as title) UNION (SELECT -1 as id, 'Use current context' as title) UNION (SELECT id, title FROM #__fss_prod ORDER BY ordering)" key_field="id" value_field="title" />
+			</fieldset>
+			<!-- ##NOT_FAQS_END## -->
+			
+			<fieldset name="general" label="General parameters">
+				<field name="show_images" type="radio" default="1" label="Show Images" description="Show images against category heading">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

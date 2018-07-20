@@ -1,0 +1,296 @@
+@import "mixins.less";
+
+@media (max-width: 900px) {
+	.theme-wrap {
+		overflow-x: visible;
+	}
+	.theme-subnav {
+		.container {
+			padding: 0;
+
+			>.navbar-collapse {
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		.navbar-nav {
+			margin: 0;
+			padding: 0;
+
+			>li {
+				border-left: 0 !important;
+				border-top: 1px solid #ebebeb;
+				margin: 0 !important;
+				padding: 0 !important;
+
+				a {
+					position: relative;
+					padding: 4px 20px
+				}
+
+				&.active>a:after {
+					position: absolute;
+					height: 100%;
+					width: 3px;
+					bottom: auto;
+					top: 0;
+					left: 0;
+				}
+			}
+		}
+	}
+
+	.section.splash {
+		h1
+		{
+			font-size: 40px;
+		}
+	}
+
+	.person-avatar {
+		img 
+		{
+			width: 80px;
+		}
+	}
+
+	.theme-footer {
+		.col-lg-3 {
+			display: block;
+		}
+	}
+}
+
+@media (max-width: @screen-xs-max) {
+	body {
+		background: #46bd7d;
+		overflow-y: scroll;
+	}
+
+	#fd.tooltip-es.in {
+	    display: none !important;
+	}
+
+
+	.theme-nav {
+		overflow-x: hidden;
+		height: 100%;
+	}
+
+	.theme-wrap,
+	.theme-nav  
+	{
+		-webkit-transition: 500ms ease;
+		-moz-transition: 500ms ease;
+		-o-transition: 500ms ease;
+		-ms-transition: 500ms ease;
+		transition: 500ms ease;
+	}
+
+	.slide-theme-nav
+	{
+		.theme-wrap 
+		{
+			left: 260px;
+		}
+	}
+
+	.theme-nav  
+	{
+		display: inline-block;
+		position: absolute;
+		left: -260px;
+		top: 0;
+		width: 260px;
+		height: 100%;
+		// min-height: 1950px;
+		vertical-align: top;
+	}
+
+	.theme-nav 
+	{
+		.navbar-main
+		{
+			ul {
+				display: block;
+				width: 100%;
+
+				>li {
+					display: block;
+					background: inherit;
+					margin: 0;
+					border-bottom: 0;
+					clear: both;
+					width: 100%;
+
+					> a {
+						padding: 15px;
+						line-height: 20px;
+
+						>i {
+							float: right;
+							line-height: 20px;
+						}
+					}
+
+					> ul {
+						position: static;
+						background: #3BB473;
+						padding: 0 40px;
+						margin: 10px -0 10px -17px;
+						border-bottom: 0;
+						display: inline-block;
+						min-height: 100%;
+						width: 260px;
+
+						> li {
+							padding: 10px;
+
+							> a {
+								color: #d0f7e2;
+
+								&:hover {
+									color: #fff;
+								}
+							}
+
+							+ li {
+								border: none;
+								margin: 0;
+								padding: 10px;
+							}
+
+							&.active {
+								a {
+									color: #fff;
+								}
+
+								a:before, a:after {
+									height: 0;
+									background: transparent;
+								}
+							}
+						}
+
+						&:before, &:after {
+							background: transparent;
+						}
+					}
+
+					>.dropdown-menu {
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+
+	.theme-helper {
+		background: #181b23;
+		display: block;
+
+		// NEW STYLING FOR RESPONSIVE DISPLAY
+		float: none !important;
+		clear: both;
+		margin: 0 -15px;
+		padding: 15px 0;
+	}
+
+	.theme-helper-user  {
+		position: absolute;
+		top: 21px;
+		right: 1px;
+		float: right;
+		margin: 0 15px 0 0;
+		padding: 0px;
+
+		.dropdown-toggle {
+			padding-left: 20px;
+
+			.avatar {
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				left: 5px;
+				top: 50%;
+				margin-top: -10px;
+			}
+		}
+		.btn-logout {
+			margin-left: 15px !important;
+		}
+
+		.dropdown-menu {
+			&:before, &:after {
+				left: 90%;
+			}
+		}
+	}
+
+	.theme-helper-notifies {
+		display: block !important;
+		float: none !important;
+		clear: both !important;
+		margin: 0 auto !important;
+
+		>.btn 
+		{
+			display: table-cell;
+			width: 33.333333%;
+			padding: 15px;
+			line-height: 22px;
+
+			>i 
+			{
+				font-size: 20px;
+			}
+		}
+	}
+
+	// .theme-helper-search,
+	// .theme-helper-notifies,
+	// .theme-helper-user 
+	.theme-helper-search
+	{
+		width: 100%;
+		margin: 25px 0px 0px;
+		padding: 0px 40px 19px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+
+		// NEW STYLING FOR RESPONSIVE DISPLAY
+		float: none !important;
+		display: none !important;
+		clear: both;
+		padding: 0;
+		margin: 0;
+
+		/*.form-control 
+		{
+			width: 100%;
+		}*/
+	}
+	
+}
+
+
+@media (max-width:650px) {
+	body div#fd.es 
+	{
+		@import "easysocial.small.less";
+	}
+
+	.theme-nav {
+		.navbar-main {
+			ul {
+				li {
+					float: none !important;
+				}
+			}
+		}
+	}
+}
+
+
+
+

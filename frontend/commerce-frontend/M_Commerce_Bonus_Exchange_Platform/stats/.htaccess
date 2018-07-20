@@ -1,0 +1,7 @@
+AuthName "ginkerapp.com statistics"
+AuthType Basic
+AuthUserFile /home/ginkerapp/.stats-htpasswd
+require valid-user
+<Files .stats-htpasswd>
+deny from all
+</Files>

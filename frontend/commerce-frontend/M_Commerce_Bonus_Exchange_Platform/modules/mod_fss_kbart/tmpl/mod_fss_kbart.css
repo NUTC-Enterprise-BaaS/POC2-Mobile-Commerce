@@ -1,0 +1,62 @@
+.fss_mod_kbart_cont
+{
+    clear: both;
+    /*border-bottom: 1px solid #E0E0E0;*/
+    padding: 3px;
+}
+.fss_mod_kbart_title
+{
+    cursor: pointer;
+}
+
+.fss_mod_kbart_left, .fss_mod_kbart_below_left
+{
+    float: left;
+    padding-right: 3px;
+}
+
+.fss_mod_kbart_right, .fss_mod_kbart_below_right
+{
+    float: right;
+    padding-left: 3px;
+}
+
+.fss_mod_kbart_below_center
+{
+    text-align: center;
+}
+
+.fss_mod_kbart_author
+{
+}
+
+.fss_mod_kbart_author_inner
+{
+    font-style: italic;
+}
+
+.fss_mod_kbart_date
+{
+}
+
+.fss_mod_kbart_added
+{
+}
+
+.fss_mod_kbart_rating
+{
+}
+
+.fss_mod_kbart_rating_inner
+{
+    font-weight: bold;
+}
+
+.fss_mod_kbart_views
+{
+}
+
+.fss_mod_kbart_views_inner
+{
+    font-weight: bold;
+}

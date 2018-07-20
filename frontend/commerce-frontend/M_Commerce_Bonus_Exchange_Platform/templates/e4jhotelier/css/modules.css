@@ -1,0 +1,593 @@
+.grid-module > .moduletable {
+	margin: 5px 10px;
+}
+.module {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+}
+#fullbox .module {
+	float: none;
+}
+#fullbox .grid-module > .moduletable {
+	margin: 0;
+}
+#foot-cont .module, #module-box1 .module, #module-box2 .module {
+	float: left;
+}
+input.mod-submit-btn {
+	border-radius: 3px;
+    font-weight: 400;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.userdata-divmain {
+	display: inline-block;
+	width: 100%;
+	margin: 8px 0 5px 0;
+}
+footer .grid-module > .moduletable {
+	background: none;
+	font-weight: 300;
+	font-size: 14px;
+}
+footer .grid-module > .moduletable > h3 {
+	font-size: 24px;
+	font-weight: 100;
+	color: #ccc;
+}
+.newsflash img {
+	width: 100%;
+	height: auto;
+}
+.newsflash-mcontent {
+	display: inline-block;
+	margin: 0 0 8px 0;
+	padding: 0 0 8px 0;
+	border-bottom:1px dotted #ccc;
+}
+.newsflash-mcontent:last-child {
+	border:0;
+}
+.newsflash-title {
+	font-size: 14px;
+	font-weight: bold;
+}
+.newsflash p {
+	margin: 0 0 8px 0;
+}
+.readmore a {
+	color:#fff;
+	padding:5px 10px;
+	border-radius: 3px;
+}
+.moduletable {
+	display: block;
+	position: relative;
+}
+.moduletable > h3 {
+	margin: 0 0 10px 0;
+}
+#cnt-container .e4j-menusubtitle {
+	font-size: 24px;
+}
+.menu li,
+#mainmenu .loginmenu h3 {
+	position: relative;
+	list-style-type: none;
+	transition: all 400ms ease-in-out 0s;
+	-moz-transition: all 400ms ease-in-out 0s;
+	-webkit-transition: all 400ms ease-in-out 0s;
+	-o-transition: all 400ms ease-in-out 0s;
+	line-height: 1.5em;
+}
+.menu li:hover,
+#mainmenu .loginmenu h3:hover {
+	transition:all 400ms ease-in-out 0s;
+	-moz-transition:all 400ms ease-in-out 0s;
+	-webkit-transition:all 400ms ease-in-out 0s;
+	-o-transition:all 400ms ease-in-out 0s;
+}
+.menu li:last-child {
+	margin:0;
+}
+.menu li img {
+	border:0;
+	padding:0 10px 0 0;
+	float: left;
+}
+.l-inline > ul {
+	margin:0;
+	padding:0;
+	width:100%;
+}
+.l-inline ul > li {
+	display:inline-block;
+	float: left;
+	padding:7px 5px;
+	margin:0 0;
+	position: relative;
+}
+.l-block {
+	display:block;
+	float:none;
+	border:0;
+	padding:0;
+}
+ul.l-block > li {
+	display:block;
+	float:none;
+	padding:2px;
+}
+.l-inline li > .l-block,
+.loginmenu > .e4jcartcontent,
+.topmenu li > .l-block {
+	width: 200px;
+}
+.mainmenu-items .mmenu li > .l-block {
+	width: 215px;
+}
+.loginmenu > .e4jaccountmanagercont {
+	width: 250px;
+}
+.l-inline li > .l-block,
+.loginmenu > #login-form,
+.loginmenu > .e4jaccountmanagercont,
+.loginmenu > .e4jcartcontent {
+	position: absolute;
+	left: 0;
+	top:25px;
+	z-index: 100002;
+	font-size: 14px;
+	display:none;
+}
+.e4jsign-rsz > #login-form,
+.e4jsign-rsz > .e4jaccountmanagercont,
+.e4jsign-rsz > .e4jcartcontent{
+	right: 18px;
+	left: auto;
+}
+.topmenu li > .l-block {
+	position: absolute;
+	left: 0;
+	top:40px;
+	z-index: 100002;
+	font-size: 14px;
+	display:none;
+}
+.loginmenu > #login-form {
+	width: 235px;
+}
+.loginmenu > #login-form > div {
+	width: 100%;
+}
+.l-inline li > .l-block li {
+	padding:5px 15px;
+}
+.l-inline li > .l-block li:last-child {
+	border:0;
+}
+.l-inline li .l-block li > .l-block {
+	position:absolute;
+    width:200px;
+	top:0px;
+	left:140px;
+	padding:0px;
+	display:none;
+	z-index: 1001;
+}
+.l-inline li .l-block li a {
+	display: block;
+	color: #999;
+}
+.topmenu li > .l-block > div {
+	background: #333;
+	color: #fff;
+	width: 100%;
+	display: inline-block;
+}
+#mainmenu #login-form > div,
+.loginmenu > .e4jaccountmanagercont > div,
+.loginmenu > .e4jcartcontent > div {
+	background: #ddd;
+	box-shadow: 2px 3px 2px rgba(34,34,34,0.5);
+	color: #444;
+	width: 100%;
+	display: inline-block;
+}
+.l-inline li .l-block > div,
+.loginmenu > #login-form > div,
+.loginmenu > .e4jaccountmanagercont > div,
+.loginmenu > .e4jcartcontent > div {
+	padding:15px 10px; 
+	margin: 15px 0 20px 5px;
+}
+.upmenu-content .loginmenu h3 .e4j-menutitle {
+	color: #fff;
+    font-size: 12px !important;
+}
+.loginmenu #login-form fieldset > div, 
+.loginmenu #login-form > div {
+	background: #333;
+	padding: 15px;
+}
+.loginmenu #login-form .pretext {
+	font-size: 20px;
+	color: #ddd;
+}
+.topmenu li > .l-block > div {
+	padding:15px 10px; 
+	margin: -5px 0 20px 5px;
+}
+#mainmenu .moduletable {
+	float: left;
+}
+#mainmenu .mmenu {
+	float: left;
+} 
+#mainmenu .spt-menu {
+	margin: 0 0 0 1em;
+}
+.upmenu-content .l-inline ul > li {
+	padding: 4px 5px;
+}
+.moduletable_menu > ul,
+#mainmenu .moduletable > ul,
+.nav-devices-list .moduletable > ul {
+	padding:0;
+}
+.moduletable_menu > ul > li,
+#mainmenu .moduletable > ul > li,
+.nav-devices-list .moduletable > ul > li {
+	padding:0px;
+}
+.moduletable_menu > ul,
+#mainmenu .moduletable > ul,
+.nav-devices-list .moduletable > ul {
+	display: inline-block;
+	text-transform: uppercase;
+}
+.moduletable_menu > ul > li > a,
+.moduletable_menu > ul > li > span,
+#mainmenu .moduletable > ul > li > a,
+#mainmenu .moduletable > ul > li > span,
+.nav-devices-list .moduletable > ul > li > a,
+.nav-devices-list .moduletable > ul > li > span {
+	font-size:15px;
+	font-weight: 300;
+	padding: 8px 0.7em;
+	cursor: pointer;
+	display: inline-block;
+}
+.nav-devices-list ul > li .e4j-menusubtitle {
+	display: block;
+	font-size: 12px;
+	color: #777;
+}
+.topmenu > ul > li > a,
+.topmenu > ul > li > span {
+	font-size:14px;
+	padding: 8px 1em;
+	display: inline-block;
+	font-weight: 300;
+}
+.e4j-menutitle-cnt {
+	display: inline-block;
+}
+.l-inline .e4j-menutitle {
+	font-size:16px;
+	display: block !important;
+}
+.l-inline .e4j-menusubtitle {
+	font-size:12px;
+	display: block !important;
+	font-style: italic;
+}
+.l-inline li.active .e4j-menusubtitle {
+	color: #999;
+}
+.module .e4j-divmenutitle, .module .e4j-menusubtitle {
+	display: inline-block;
+}
+.module .e4j-divmenutitle {
+	padding: 0;
+}
+.module .e4j-menusubtitle {
+	margin: 0 0 0 10px;
+}
+#tbar-user .langtab select {
+	font-size:16px;
+	display: inline-block;
+	border-right: 1px solid #ddd;
+}
+#slideadv {
+	width:100%;
+	display: inline-block;
+	padding:0;
+	position: relative;
+}
+.leftsearch {
+	position: absolute;
+	width: 100%;
+	top: 20%;
+	left: 0;
+}
+.rightsearch {
+	position: absolute;
+	width: 100%;
+	top: 20%;
+	right: 0;
+}
+.bottomsearch {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+.upsearch {
+	position: absolute;
+	width: 100%;
+	top: 25px;
+}
+.form-inline {
+	display: inline-block;
+}
+.form-inline .element-invisible {
+	margin: 0 5px 0 0;
+}
+.form-inline > * {
+	
+}
+.md-search .moduletable {
+	padding: 10px 20px;
+	display: table;
+	color: #fff;
+	z-index: 100000;
+	margin: 0 auto;
+	width: 90%;
+}
+.md-search .moduletable h3 {
+	font-size: 26px;
+}
+.leftsearch.v-search .moduletable {
+	float: left;
+	width: 400px;
+	padding: 30px;
+}
+.leftsearch.v-search .moduletable .vbmodhorsearchmaindiv form .vbmodhorsearchbookdiv,
+.rightsearch.v-search .moduletable .vbmodhorsearchmaindiv form .vbmodhorsearchbookdiv {
+	float: none;
+	clear: both;
+	margin: 10px 0 0;
+	width: 100%;
+}
+.rightsearch.v-search .moduletable {
+	float: right;
+	width: 400px;
+	padding: 30px;
+}
+.h-search-inner {
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	border-radius: 0;
+}
+.triangle-search {
+	width: 0; 
+    height: 0; 
+    float: left;
+    margin-top: 0px;
+    margin-left: 0px;
+    position: absolute;
+    z-index: 100001;
+    border-top: 97px solid #eee; 
+    border-right: 97px solid transparent;
+}
+.triangle-search::before {
+	content: "";
+	position: absolute;
+	top: -82px;
+	left: 14px;
+	width: 30px;
+	height: 30px;
+	background: url(../images/calendar-big-white.png) center center no-repeat;
+}
+.h-search .moduletable {
+	width: 100%;
+	padding: 18px 50px 18px 120px;
+	border-radius: 0;
+	position: relative;
+}
+.h-search .vbsearchinputmodhors {
+	margin: 10px 0 0 !important;
+	padding: 8px 46px !important;
+	font-size: 22px;
+	font-weight: normal !important;
+	text-transform: uppercase;
+}
+.v-search .vbsearchinputmodhors {
+	margin: 10px 0 0 !important;
+	padding: 7px 50px !important;
+	font-size: 18px;
+	font-weight: normal !important;
+	text-transform: uppercase;
+	width: 100%;
+}
+.loginfield label {
+	color: #999;
+	font-size: 12px;
+}
+.upmenu-content .loginfield input.inputbox {
+	background:#444;
+	border-radius: 2px;
+	border:1px solid #444;
+	color: #ddd;
+	width: 99%;
+}
+.upmenu-content #login-form .inputbox{
+    padding: 7px 10px 7px 10px;
+}
+.qst-login ul li {
+	float: none !important;
+	display: block !important;
+	margin: 0;
+	padding: 0;
+}
+.qst-login ul li > a {
+	color: #999;
+	font-size: 12px;
+}
+/*** Mod languages ***/
+.moduletable .e4jsellang {
+
+}
+.moduletable .e4jsellang select {
+	height: 22px;
+}
+.langtab .imgflage4j, .lang .imgflage4j, .mod-languages {
+	display:inline-block;
+}
+.lang .e4jsellang, .langtab .e4jsellang {
+	margin:0;
+	display: inline-block;
+	position: relative;
+	min-width: 85px;
+	height: 25px;
+	padding: 2px 0 0;
+}
+.lang .e4jsellang:after, .langtab .e4jsellang:after {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 6px 7px 0 7px;
+	border-color: #999999 transparent transparent transparent;
+	position: absolute;
+	right: 0;
+	top:13px;
+	font-size: 12px;
+	content: "";
+}
+.lang .e4jsellang .e4jselectedlang, 
+.langtab .e4jsellang .e4jselectedlang,
+.upmenu-content .vbcurconv-menu {
+	min-width: 85px;
+	overflow: hidden;
+	float: right;
+}
+.upmenu-content .vbcurconv-menu {
+	max-width: 85px;
+	margin: 2px 0 0;
+}
+.lang .e4jsellang .e4jselectedlang select,
+.langtab .e4jsellang .e4jselectedlang select, .upmenu-content .vbcurconv-menu select {
+	background: transparent;
+	border:0;
+	height: 25px;
+	padding: 2px 2px 2px 0px;
+	display: inline-block;
+	width: 120%;
+	cursor: pointer;
+}
+.upmenu-content .vbcurconv-flag img {
+	height: 12px;
+	width: auto;
+	display: inline-block;
+    float: left;
+}
+.upmenu-content .vbcurconv-flag {
+	padding: 9px 5px 0;	
+}
+.upmenu-content .vbcurconv-flag span {
+	display: inline-block;
+	margin: -3px 0 0 5px;
+	float: left;
+}
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+.lang .e4jsellang .imgflage4j,
+.langtab .e4jsellang .imgflage4j {
+	display: inline-block;
+	width: 20px;
+	float: left;
+	padding: 6px 0 0;
+}
+.lang .e4jsellang select option,
+.langtab .e4jsellang select option,
+.upmenu-content .vbcurconv-menu select option {
+	background: #eee;
+	padding: 5px;
+	color: #666;
+	border: 0;
+}
+#tbar-user .e4jsellang {
+	margin: 20px 0 0 0;
+}
+#tbar-upmenu .lang .e4jsellang {
+	background: #222 url(../images/flagselectarrow.png) 95% 9px no-repeat;
+	border-right:1px solid #666;
+	border-left:1px solid #666; 
+	padding:0 5px 0 11px;
+}
+#tbar-usertab .langtab .e4jsellang {
+	background: #666 url(../images/flagselectarrow-black.png) 92% 10px no-repeat;
+	padding:0 5px 0 11px;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+	-moz-border-bottom-left-radius:5px;
+	-moz-border-bottom-left-radius:5px;
+}
+#tbar-upmenu .lang .e4jsellang select {
+	padding: 0px 2px 2px 17px;
+}
+#tbar-usertab .langtab .e4jsellang select {
+	padding: 2px 2px 2px 17px;
+}
+#mainmenu .loginmenu h3 {
+	color: #eee;
+	width: 26px;
+	height: 29px;
+	display: inline-block;
+	cursor: pointer;
+	padding: 0 5px;
+}
+#mainmenu .loginmenu:hover h3 {
+	opacity: 0.6;
+}
+#mainmenu .e4jsign h3 {
+	float: left;
+	background: url(../images/usr_login.png) left center no-repeat;
+}
+#mainmenu .e4jaccount h3 {
+	background: url(../images/account_manager.png) left 4px no-repeat;
+}
+#mainmenu .e4jcartcont h3 {
+	background: url(../images/cart.png) left 5px no-repeat;
+}
+.accordion-body {
+	display: inline-block;
+	width: 100%;
+}
+.accordion-body.collapse {
+	display: none !important;
+	transition: all 400ms ease-in-out 0s;
+	-moz-transition: all 400ms ease-in-out 0s;
+	-webkit-transition: all 400ms ease-in-out 0s;
+	-o-transition: all 400ms ease-in-out 0s;
+}
+.accordion-body.collapse.in {
+	display: inline-block !important;
+	transition: all 400ms ease-in-out 0s;
+	-moz-transition: all 400ms ease-in-out 0s;
+	-webkit-transition: all 400ms ease-in-out 0s;
+	-o-transition: all 400ms ease-in-out 0s;
+}
+.accordion-toggle {
+	font-size: 18px;
+	font-weight: 400;
+}
+.ui-datepicker {
+	z-index: 100000 !important; 
+}

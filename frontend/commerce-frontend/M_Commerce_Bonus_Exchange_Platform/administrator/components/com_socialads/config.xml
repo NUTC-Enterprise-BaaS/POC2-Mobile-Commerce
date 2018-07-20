@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset label="COM_SOCIALADS_TARGETING" name="Targetting" addfieldpath="/media/com_sa/fields">
+		<field menu="hide" type="legend" id="socialads-integration-settings" name="socialads-integration-settings" label="" default="COM_SOCIALADS_FORM_INTEGRATION_OPTION" hint="" />
+		<field name="social_integration" type="integration" label="COM_SOCIALADS_FORM_LBL_SOCIAL_INTEGRATION" default="Joomla" description="COM_SOCIALADS_FORM_DESC_SOCIAL_INTEGRATION" />
+		<field name="jomsocial_toolbar" type="radio" class="btn-group" showon="social_integration:JomSocial" label="COM_SOCIALADS_FORM_LBL_JOMSOCIAL_TOOLBAR" description="COM_SOCIALADS_FORM_DESC_JOMSOCIAL_TOOLBAR" default="0" menu_published="0" filter="raw">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field menu="hide" type="legend" id="socialads-display-priority" name="socialads-display-priority" label="" default="COM_SOCIALADS_FORM_LBL_DISPLAY_PRIORITY" hint="" />
+		<field name="display_priority" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_DISPLAY_PRIORITY" description="COM_SOCIALADS_FORM_DESC_DISPLAY_PRIORITY" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="priority" type="priority" class="configpriority" showon="display_priority:1" multiple="multiple" label="COM_SOCIALADS_FORM_LBL_CUSTOM_PRIORITY" description="COM_SOCIALADS_FORM_DESC_CUSTOM_PRIORITY" default="0" />
+
+		<field menu="hide" type="legend" id="geo-target" name="geo-target" label="" default="COM_SOCIALADS_GEO_TARGETING" hint="" />
+		<field name="geo_targeting" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_GEO_TARGETING" description="COM_SOCIALADS_FORM_DESC_GEO_TARGETING" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="geolite_city" type="geolife" label="COM_SOCIALADS_FORM_LBL_GEOLITE_CITY" description="COM_SOCIALADS_FORM_DESC_GEOLITE_CITY" />
+		<field name="geo_options" type="list" label="COM_SOCIALADS_FORM_LBL_GEO_OPTIONS" description="COM_SOCIALADS_FORM_DESC_GEO_OPTIONS" default="byregion" multiple="true">
+			<option value="byregion">COM_SOCIALADS_AD_GEO_STATE</option>
+			<option value="bycity">COM_SOCIALADS_AD_GEO_CITY</option>
+		</field>
+		<field name="test_ip" type="text" label="COM_SOCIALADS_FORM_LBL_TEST_IP" description="COM_SOCIALADS_FORM_DESC_TEST_IP" default="125.99.61.134" />
+
+		<field menu="hide" type="legend" id="contextual-argeting" name="contextual-argeting" label="" default="COM_SOCIALADS_FORM_LBL_CONTEXTUAL_TARGETING" hint="" />
+		<field name="contextual_targeting" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_CONTEXTUAL_TARGETING" description="COM_SOCIALADS_FORM_DESC_CONTEXTUAL_TARGETING" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="search_pages" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_SEARCH_PAGES" description="COM_SOCIALADS_FORM_DESC_SEARCH_PAGES" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="query_strings" type="textarea" label="COM_SOCIALADS_FORM_LBL_QUERY_STRINGS" showon="search_pages:1" description="COM_SOCIALADS_FORM_DESC_QUERY_STRINGS" default="option=com_search&amp;view=search|searchword option=com_zoo&amp;view=search&amp;controller=search&amp;task=search|searchtext option=com_finder&amp;view=search|q option=com_community&amp;view=search|q" class="control-label" cols="50" rows="6" />
+		<field name="meta_keywords" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_META_KEYWORDS" description="COM_SOCIALADS_FORM_DESC_META_KEYWORDS" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="smart_search" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_SMART_SEARCH" description="COM_SOCIALADS_FORM_DESC_SMART_SEARCH" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="smart_search_cron" type="cron" hint='|controller=indexer|task=makeIndexing|indexlimitstart=0|indexlimit=20' label="COM_SOCIALADS_FORM_LBL_SMART_SEARCH_CRON" showon="smart_search:1" description="COM_SOCIALADS_FORM_DESC_SMART_SEARCH_CRON" />
+		<field name="batch_size" type="text" label="COM_SOCIALADS_FORM_LBL_BATCH_SIZE" showon="smart_search:1" description="COM_SOCIALADS_FORM_DESC_BATCH_SIZE" default="20" filter="int" />
+	</fieldset>
+
+	<fieldset label="COM_SOCIALADS_PRICING" name="Pricing" addfieldpath="/media/com_sa/fields">
+		<field menu="hide" type="legend" id="pricing-model-configuration" name="pricing-model-configuration" label="" default="COM_SOCIALADS_PRICING_MODEL_CONFIGURATION" hint="" />
+		<field name="payment_mode" type="paymentmode" class="btn-group" label="COM_SOCIALADS_FORM_LBL_PAYMENT_MODE" description="COM_SOCIALADS_FORM_DESC_PAYMENT_MODE" default="0" menu_published="0" filter="raw" />
+		<field name="min_pre_balance" type="text" label="COM_SOCIALADS_FORM_LBL_MIN_PRE_PAID_BALANCE" description="COM_SOCIALADS_FORM_DESC_MIN_PRE_PAID_BALANCE" default="10" class="validate-numeric" />
+		<field name="pricing_options" type="list" multiple="multiple" label="COM_SOCIALADS_FORM_LBL_PRICING_OPTIONS" description="COM_SOCIALADS_FORM_DESC_PRICING_OPTIONS" default="perclick">
+			<option value="perclick">COM_SOCIALADS_ZONES_PER_CLICK</option>
+			<option value="perimpression">COM_SOCIALADS_ZONES_PER_IMP</option>
+			<option value="perday">COM_SOCIALADS_ZONES_PER_DAY</option>
+		</field>
+
+		<field menu="hide" type="legend" id="advertising-rates" name="advertising-rates" label="" default="COM_SOCIALADS_ADVERTISING_RATES" hint="" />
+		<field name="zone_pricing" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_ADVERTISING_RATES" description="COM_SOCIALADS_FORM_DESC_ADVERTISING_RATES" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="per_clicks" type="text" label="COM_SOCIALADS_FORM_LBL_PRICE_PER_CLICKS" description="COM_SOCIALADS_FORM_DESC_PRICE_PER_CLICKS" default=".50" class="validate-numeric" />
+		<field name="per_impressions" type="text" label="COM_SOCIALADS_FORM_LBL_PER_IMPRESSIONS" description="COM_SOCIALADS_FORM_DESC_PER_IMPRESSIONS" default=".5" class="validate-numeric" filter="float" />
+		<field name="per_day" type="text" label="COM_SOCIALADS_FORM_LBL_PER_DAY" description="COM_SOCIALADS_FORM_DESC_PER_DAY" default="20" class="validate-numeric" filter="float" />
+		<field name="slab_enable" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_SLAB_ENABLE" description="COM_SOCIALADS_FORM_DESC_SLAB_ENABLE" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="slab_pay_per_day" type="radio" class="btn-group" showon="slab_enable:1" label="COM_SOCIALADS_FORM_LBL_SLAB_PAY_PER_DAY" description="COM_SOCIALADS_FORM_DESC_SLAB_PAY_PER_DAY" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="configure_slab" type="slabpay" label="COM_SOCIALADS_FORM_LBL_CONFIGURE_SLABS" showon="slab_enable:1" description="COM_SOCIALADS_FORM_DESC_CONFIGURE_SLABS" />
+
+		<field menu="hide" type="legend" id="pricing-thresholds" name="pricing-thresholds" label="" default="COM_SOCIALADS_PRICING_THRESHOLDS" hint="" />
+		<field name="minimum_charge" type="text" label="COM_SOCIALADS_FORM_LBL_MINIMUM_CHARGE" description="COM_SOCIALADS_FORM_DESC_MINIMUM_CHARGE" default="20" class="validate-numeric" filter="int" />
+		<field name="threshold" type="text" label="COM_SOCIALADS_FORM_LBL_THRESHOLD" description="COM_SOCIALADS_FORM_DESC_THRESHOLD" default="10" class="validate-numeric" filter="int" />
+
+		<field menu="hide" type="legend" id="payment-settings" name="payment-settings" label="" default="COM_SOCIALADS_PAYMENT_SETTING" hint="" />
+		<field name="gateways" type="gatewayplg" multiple="multiple" default="" label="COM_SOCIALADS_FORM_LBL_PAYMENT_GATEWAY" description="COM_SOCIALADS_FORM_DESC_PAYMENT_GATEWAY" />
+		<field name="currency" type="text" label="COM_SOCIALADS_FORM_LBL_CURRENCY" description="COM_SOCIALADS_FORM_DESC_CURRENCY" default="USD" filter="string" />
+		<field name="currency_symbol" type="text" default="$" label="COM_SOCIALADS_CURRENCY_SYM" description="COM_SOCIALADS_CURRENCY_SYM_DESC" />
+		<field name="currency_display_format" type="text" default="{CURRENCY_SYMBOL}{AMOUNT}" label="COM_SOCIALADS_CURRENCY_DISPLAY_FORMAT" description="COM_SOCIALADS_CURRENCY_DISPLAY_FORMAT_DESC" size="5" />
+		<field name="vat_no" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_VAT_NO" description="COM_SOCIALADS_FORM_DESC_VAT_NO" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="terms_conditions_payment" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_TERMS_CONDITIONS_PAYMENT" description="COM_SOCIALADS_FORM_DESC_TERMS_CONDITIONS_PAYMENT" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="articleid_terms" type="text" showon="terms_conditions_payment:1" label="COM_SOCIALADS_FORM_LBL_ARTICLEID_TERMS" description="COM_SOCIALADS_FORM_DESC_ARTICLEID_TERMS" default="1" class="validate-numeric" filter="int" />
+<!--
+		<field name="recurring_payments" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_RECURRING_PAYMENTS" description="COM_SOCIALADS_FORM_DESC_RECURRING_PAYMENTS" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+-->
+		<!-- Order Id settings -->
+		<field menu="hide" type="legend" id="sa-orderid" name="sa-orderid" label="" default="COM_SOCIALADS_ORDER_SETTINGS" hint="COM_SOCIALADS_SETTINGS_ORDERID_HINT"/>
+
+		<field name="order_prefix" type="text" default="OID" maxlength="5" label="COM_SOCIALADS_ORDER_PREFIX" description="COM_SOCIALADS_ORDER_PREFIX_DESC" />
+
+		<field name="separator" type="text" default="-" maxlength="1" label="COM_SOCIALADS_SEPARATOR" description="COM_SOCIALADS_SEPARATOR_DESC" />
+
+		<field name="random_orderid" class="btn-group" type="radio" default="1" label="COM_SOCIALADS_RANDOM_OREDRID" description="COM_SOCIALADS_RANDOM_OREDRID_DESC" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="padding_count" type="text" default="10" class="validate-numeric" label="COM_SOCIALADS_PADDING_COUNT" description="COM_SOCIALADS_PADDING_COUNT_DESC" />
+	</fieldset>
+
+	<fieldset label="COM_SOCIALADS_AD_DISPLAY" name="AdDisplay">
+		<field menu="hide" type="legend" id="creation-display" name="creation-display" label="" default="COM_SOCIALADS_AD_CREATION_AND_DISPLAY" hint="" />
+		<field name="ad_type_allowed" type="adtype" multiple="multiple" default="" label="COM_SOCIALADS_FORM_LBL_AD_TYPE_ALLOWED" description="COM_SOCIALADS_FORM_DESC_AD_TYPE_ALLOWED" />
+		<field name="promotion_plugins" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_PROMOTION_PLUGINS" description="COM_SOCIALADS_FORM_DESC_PROMOTION_PLUGINS" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="advertisers_ads" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_ADVERTISERS_ADS" description="COM_SOCIALADS_FORM_DESC_ADVERTISERS_ADS" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="registration_form" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_REGISTRATION_FORM" description="COM_SOCIALADS_FORM_DESC_REGISTRATION_FORM" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="editable_adtype_zone" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_EDITABLE_ADTYPE_ZONE" description="COM_SOCIALADS_FORM_DESC_EDITABLE_ADTYPE_ZONE" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="display_count" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_DISPLAY_COUNT" description="COM_SOCIALADS_FORM_DESC_DISPLAY_COUNT" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="reach_offset" type="text" label="COM_SOCIALADS_FORM_LBL_REACH_OFFSET" description="COM_SOCIALADS_FORM_DESC_REACH_OFFSET" default="100" class="validate-numeric" filter="int" />
+
+		<field menu="hide" type="legend" id="media-settings" name="media-settings" label="" default="COM_SOCIALADS_AD_MEDIA_SETTINGS" hint="" />
+		<field name="image_path" type="text" default="sa" label="COM_SOCIALADS_MEDIA_IMAGE_FOLDER_LABEL" description="COM_SOCIALADS_MEDIA_IMAGE_FOLDER_LABEL_DESC" />
+		<field name="media_size" type="text" label="COM_SOCIALADS_FORM_LBL_MEDIA_SIZE" description="COM_SOCIALADS_FORM_DESC_MEDIA_SIZE" default="1024" class="validate-numeric" filter="int" />
+		<field name="flash_uploads" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_FLASH_UPLOADS" description="COM_SOCIALADS_FORM_DESC_FLASH_UPLOADS" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="video_uploads" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_VIDEO_UPLOADS" description="COM_SOCIALADS_FORM_DESC_VIDEO_UPLOADS" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="allow_autoplay" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_ALLOW_AUTOPLAY" description="COM_SOCIALADS_FORM_DESC_ALLOW_AUTOPLAY" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field menu="hide" type="legend" id="moderation-fraud" name="moderation-fraud" label="" default="COM_SOCIALADS_AD_MODERATION_AND_FRAUD_CHECKS" hint="" />
+		<field name="approval_status" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_APPROVAL_STATUS" description="COM_SOCIALADS_FORM_DESC_APPROVAL_STATUS" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="interval_impressions" type="text" label="COM_SOCIALADS_FORM_LBL_INTERVAL_IMPRESSIONS" description="COM_SOCIALADS_FORM_DESC_INTERVAL_IMPRESSIONS" default="60" class="validate-numeric" filter="int" />
+		<field name="interval_clicks" type="text" label="COM_SOCIALADS_FORM_LBL_INTERVAL_CLICKS" description="COM_SOCIALADS_FORM_DESC_INTERVAL_CLICKS" default="60" class="validate-numeric" filter="int" />
+
+		<field menu="hide" type="legend" id="user-management" name="user-management" label="" default="COM_SOCIALADS_USER_MANAGEMENT" hint="" />
+		<field name="ignore_ads" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_IGNORE_ADS" description="COM_SOCIALADS_FORM_DESC_IGNORE_ADS" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="feedback_on_ignore" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_FEEDBACK_ON_IGNORE" description="COM_SOCIALADS_FORM_DESC_FEEDBACK_ON_IGNORE" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="ignore_affiliate" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_IGNORE_AFFILIATE" description="COM_SOCIALADS_FORM_DESC_IGNORE_AFFILIATE" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="jbolo_integration" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_JBOLO_INTEGRATION" description="COM_SOCIALADS_FORM_DESC_JBOLO_INTEGRATION" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="social_sharing" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_SOCIAL_SHARING" description="COM_SOCIALADS_FORM_DESC_SOCIAL_SHARING" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="addthis_pub_id" type="text" label="COM_SOCIALADS_FORM_LBL_ADDTHIS_PUBLISHER_ID" description="COM_SOCIALADS_FORM_DESC_ADDTHIS_PUBLISHER_ID" default="" class="validate-numeric" showon="social_sharing:1"/>
+	</fieldset>
+
+	<fieldset label="COM_SOCIALADS_ADVANCED" name="General" addfieldpath="/media/com_sa/fields">
+		<field menu="hide" type="legend" id="cache-setting" name="cache-setting" label="" default="COM_SOCIALADS_CACHE_SETTINGS" hint="" />
+		<field name="enable_caching" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_ENABLE_CACHE" description="COM_SOCIALADS_FORM_DESC_ENABLE_CACHE" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="cache_time" type="text" label="COM_SOCIALADS_FORM_LBL_CACHE_TIME" description="COM_SOCIALADS_FORM_DESC_CACHE_TIME" default="3600" class="validate-numeric" filter="int" />
+
+		<field menu="hide" type="legend" id="system-setting" name="system-setting" label="" default="COM_SOCIALADS_SYSTEM_SETTINGS" hint="" />
+		<field name="boostrap_manually" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_BOOSTRAP_MANUALLY" description="COM_SOCIALADS_FORM_DESC_BOOSTRAP_MANUALLY" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="jquery_ui" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_JQUERY_UI" description="COM_SOCIALADS_FORM_DESC_JQUERY_UI" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="bsSetupInstruc" type="bsSetup"  label="COM_SOCIALADS_BS_SETUP_INSTRUCTION" description="COM_SOCIALADS_BS_SETUP_INSTRUCTION_DES" />
+		<field menu="hide" type="legend" id="auto-process-setup" name="auto-process-setup" label="" default="COM_SOCIALADS_AUTOMATED_PROCESSES_SETUP" hint="" />
+		<field name="cron_key" type="text" label="COM_SOCIALADS_FORM_LBL_CRON_KEY" description="COM_SOCIALADS_FORM_DESC_CRON_KEY" default="1234" filter="int" />
+		<field name="single_cron_url" type="cron" hint= "|task=saStatisticsCron" label="COM_SOCIALADS_FORM_LBL_SINGLE_CRON_URL" description="COM_SOCIALADS_FORM_DESC_SINGLE_CRON_URL" />
+		<field name="clean_unused" type="cron" hint='|task=removeImages' label="COM_SOCIALADS_FORM_LBL_CLEAN_UNUSED" description="COM_SOCIALADS_FORM_DESC_CLEAN_UNUSED" class="controls" />
+
+		<field menu="hide" type="legend" id="statistics-setting" name="statistics-setting" label="" default="COM_SOCIALADS_STATISTICS_SETTINGS" hint="" />
+		<field name="archivestat" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_ARCHIVESTAT" description="COM_SOCIALADS_FORM_DESC_ARCHIVESTAT" default="1" menu_published="0" filter="raw">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="maintain_stats" type="text" label="COM_SOCIALADS_FORM_LBL_MAINTAIN_STATS" description="COM_SOCIALADS_FORM_DESC_MAINTAIN_STATS" default="30" class="validate-numeric" filter="int" />
+		<field name="weekly_stats" type="radio" class="btn-group" label="COM_SOCIALADS_FORM_LBL_WEEKLY_STATS" description="COM_SOCIALADS_FORM_DESC_WEEKLY_STATS" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="intro_text_mail" type="textarea" label="COM_SOCIALADS_FORM_LBL_INTRO_TEXT_MAIL" description="COM_SOCIALADS_FORM_DESC_INTRO_TEXT_MAIL" default="Hey [SEND_TO_NAME]!, Thank you for advertising with us. Here is the summary of the performance of all your advertisements on [SITENAME] for the last week!" class="control-label" cols="30" rows="5" />
+	</fieldset>
+
+	<fieldset name="ALU" label="COM_SOCIALADS_LIVE_UPDATES" description="">
+		<field name="downloadid" type="text" default="" size="30" label="COM_SA_OPTIONS_DOWNLOADID_LBL" description ="COM_SA_OPTIONS_DOWNLOADID_DESC" />
+	</fieldset>
+
+	<fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+		<field name="rules" type="rules" component="com_socialads" class="inputbox" filter="rules" validate="rules" label="JCONFIG_PERMISSIONS_LABEL" section="component" />
+	</fieldset>
+</config>

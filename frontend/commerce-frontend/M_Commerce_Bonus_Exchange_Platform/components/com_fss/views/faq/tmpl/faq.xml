@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="FAQ_SHOW_SINGLE_FAQ">
+		<help url = "http://www.freestyle-joomla.com/comhelp/fss/frontend-view-faq-faq" />
+		<message></message>
+  </layout>
+	<state>
+		<name>FAQ_SHOW_SINGLE_FAQ</name>
+		<url addpath="/administrator/components/com_fss/elements">
+            <param name="faqid" type="faqid" default="0" label="Select FAQ" description="Please select a FAQ to link to" />
+        </url>
+
+		<fields name="request">
+			<fieldset name="request"
+				addfieldpath="/administrator/components/com_fss/models/fields">
+
+				<field name="faqid" type="modal_faqid" default="0" label="Select FAQ" description="Please select a FAQ to link to" />
+			</fieldset>
+		</fields>
+	</state>
+</metadata>
