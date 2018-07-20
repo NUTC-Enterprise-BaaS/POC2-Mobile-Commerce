@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="FSS_LOGIN_REGISTER">
+		<help url = "http://www.freestyle-joomla.com/comhelp/fss/frontend-view-main-default" />
+		<message></message>
+  </layout>
+	<state>
+		<name>FSS_LOGIN_REGISTER</name>
+	
+		<!-- Joomla 1.6 settings -->
+		<fields name="params">
+      <fieldset addfieldpath="/components/com_fss/models/field" />
+      <!-- Basic options. -->
+			<fieldset name="basic"	label="Main Settings">
+        <field name="type" type="list" default="0" label="Redirect on login" description="When the user has logged in, where should they be directed?">
+          <option value="0">Support Main Menu</option>
+          <option value="99">Joomla Menu Item</option>
+          <option value="7">Link</option>
+          <option value="1">KB</option>
+          <option value="2">FAQs</option>
+          <option value="3">Testimonials</option>
+          <option value="4">New Ticket</option>
+          <option value="5">View Tickets</option>
+          <option value="6">Announcements</option>
+          <option value="8">Glossary</option>
+          <option value="9">Admininstration</option>
+        </field>
+        
+        <field name="menuitemid" type="fssmenuitem" default="" label="Item (only for 'Joomla Menu Item')" query="SELECT id, title FROM #__fss_faq_cat ORDER BY ordering" key_field="id" value_field="title" />
+
+        <field name="link" type="text" default="" label="URL (only for 'Link')" description="Enter URL for redirect type 'Link'">
+        </field>
+      </fieldset>
+		</fields>
+	</state>
+</metadata>

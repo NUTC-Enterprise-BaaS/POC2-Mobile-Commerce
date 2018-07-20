@@ -1,0 +1,25 @@
+.icon-48-appusers {
+      background-image: url(../images/l_appusers.png);
+      padding-left:60px!important;
+}
+
+.icon-48-appuser {
+      background-image: url(../images/l_appusers.png);
+      padding-left:60px!important;
+}
+
+.icon-48-pushnotificationconfigs {
+      background-image: url(../images/l_pushnotificationconfigs.png);
+      padding-left:60px!important;
+}
+
+.icon-48-pushnotificationconfig {
+      background-image: url(../images/l_pushnotificationconfigs.png);
+      padding-left:60px!important;
+}
+
+
+
+.other-filters{
+    padding: 0 14px;
+}

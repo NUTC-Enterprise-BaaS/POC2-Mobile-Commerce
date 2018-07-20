@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="module" client="administrator" method="upgrade">
+	<name>KC Admin QuickIcons</name>
+	<author>Laurelle Keashly</author>
+	<creationDate>June 2013 - updated Sept. 4 2014</creationDate>
+	<copyright>Copyright (C) 2010 - 2014 Keashly.ca Consulting. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@keashly.ca</authorEmail>
+	<authorUrl>www.keashly.net</authorUrl>
+	<version>3.2.0</version>
+	<description>MOD_KC_ADMIN_QUICKICONS_XML_DESCRIPTION</description>
+	<files>
+        <filename module="mod_kc_admin_quickicons">mod_kc_admin_quickicons.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>css</folder>
+        <folder>tmpl</folder>
+	</files>
+	<languages folder="language">
+	<language tag="zh-TW">zh-TW/zh-TW.mod_kc_admin_quickicons.ini</language>
+		<language tag="zh-TW">zh-TW/zh-TW.mod_kc_admin_quickicons.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_kc_admin_quickicons.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_kc_admin_quickicons.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="layouttype"
+					type="filelist"
+					default="icons.css"
+					label="KC_LAYOUTTYPE_LABEL"
+					description="KC_LAYOUTTYPE_DESC" 
+					directory="administrator/modules/mod_kc_admin_quickicons/css"
+					filter="\.css"
+					hide_none= "true"
+					hide_default="true" />
+				
+				<field name="spacer" type="spacer" default="" label="KC_LINK1" description="" />
+				<field name="label1" type="text" default="Clear Cache" label="KC_TEXT_LABEL" description="KC_TEXT_DESC" />
+				<field name="link1" type="text" default="index.php?option=com_cache" label="KC_LINK_LABEL" description="KC_LINK_DESC" />
+				<field name="target1" type="list" default="" label="KC_TARGET_LABEL" description="KC_TARGET_DESCRIPTION">
+					<option value="">KC_TARGET_PARENT</option>
+					<option value="_blank">KC_TARGET_NEW_WINDOW</option>
+				</field>
+				<field name="icomoonicon1" type="text" default="" label="KC_ICOICON_LABEL" description="KC_ICOICON_DESC" />
+				<field name="icon1" type="ImageList" default="icon-48-clear.png" label="KC_ICON_LABEL" description="KC_ICON_DESC" directory="/administrator/templates/hathor/images/header" hide_default="1" />
+				<field name="custom1" type="radio" default="0" label="KC_CUSTOM_LABEL" description="KC_CUSTOM_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="path1" type="text" default="" label="KC_PATH_LABEL" description="KC_PATH_DESC" />
+				<field name="c_icon1" type="text" default="" label="KC_C_ICON_LABEL" description="KC_C_ICON_DESC" />
+				<field name="order1" type="list" default="0" label="KC_OPTION_LABEL" description="KC_OPTION_DESCRIPTION">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+					<option value="3">4</option>
+					<option value="4">5</option>
+					<option value="5">6</option>
+					<option value="6">7</option>
+					<option value="7">8</option>
+					<option value="8">9</option>
+					<option value="9">10</option>
+					<option value="10">11</option>
+					<option value="11">12</option>
+					<option value="12">13</option>
+					<option value="13">14</option>
+					<option value="14">15</option>
+				</field>
+				
+				<field name="spacer2" type="spacer" default="" label="KC_LINK2" description="" />
+				<field name="label2" type="text" default="" label="KC_TEXT_LABEL" description="KC_TEXT_DESC" />
+				<field name="link2" type="text" default="index.php?option=" label="KC_LINK_LABEL" description="KC_LINK_DESC" />
+				<field name="target2" type="list" default="" label="KC_TARGET_LABEL" description="KC_TARGET_DESCRIPTION">
+					<option value="">KC_TARGET_PARENT</option>
+					<option value="_blank">KC_TARGET_NEW_WINDOW</option>
+				</field>
+				<field name="icomoonicon2" type="text" default="" label="KC_ICOICON_LABEL" description="KC_ICOICON_DESC" />
+				<field name="icon2" type="imagelist" default="0" label="KC_ICON_LABEL" description="KC_ICON_DESC" directory="/administrator/templates/hathor/images/header" hide_default="true" />
+				<field name="custom2" type="radio" default="0" label="KC_CUSTOM_LABEL" description="KC_CUSTOM_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="path2" type="text" default="" label="KC_PATH_LABEL" description="KC_PATH_DESC" />
+				<field name="c_icon2" type="text" default="" label="KC_C_ICON_LABEL" description="KC_C_ICON_DESC" />
+				<field name="order2" type="list" default="1" label="KC_OPTION_LABEL" description="KC_OPTION_DESCRIPTION">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+					<option value="3">4</option>
+					<option value="4">5</option>
+					<option value="5">6</option>
+					<option value="6">7</option>
+					<option value="7">8</option>
+					<option value="8">9</option>
+					<option value="9">10</option>
+					<option value="10">11</option>
+					<option value="11">12</option>
+					<option value="12">13</option>
+					<option value="13">14</option>
+					<option value="14">15</option>
+				</field>
+				
+				<field name="spacer3" type="spacer" default="" label="KC_LINK3" description="" />
+				<field name="label3" type="text" default="" label="KC_TEXT_LABEL" description="KC_TEXT_DESC" />
+				<field name="link3" type="text" default="index.php?option=" label="KC_LINK_LABEL" description="KC_LINK_DESC" />
+				<field name="target3" type="list" default="" label="KC_TARGET_LABEL" description="KC_TARGET_DESCRIPTION">
+					<option value="">KC_TARGET_PARENT</option>
+					<option value="_blank">KC_TARGET_NEW_WINDOW</option>
+				</field>
+				<field name="icomoonicon3" type="text" default="" label="KC_ICOICON_LABEL" description="KC_ICOICON_DESC" />
+				<field name="icon3" type="imagelist" default="0" label="KC_ICON_LABEL" description="KC_ICON_DESC" directory="/administrator/templates/hathor/images/header" hide_default="true" />
+				<field name="custom3" type="radio" default="0" label="KC_CUSTOM_LABEL" description="KC_CUSTOM_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="path3" type="text" default="" label="KC_PATH_LABEL" description="KC_PATH_DESC" />
+				<field name="c_icon3" type="text" default="" label="KC_C_ICON_LABEL" description="KC_C_ICON_DESC" />
+				<field name="order3" type="list" default="2" label="KC_OPTION_LABEL" description="KC_OPTION_DESCRIPTION">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+					<option value="3">4</option>
+					<option value="4">5</option>
+					<option value="5">6</option>
+					<option value="6">7</option>
+					<option value="7">8</option>
+					<option value="8">9</option>
+					<option value="9">10</option>
+					<option value="10">11</option>
+					<option value="11">12</option>
+					<option value="12">13</option>
+					<option value="13">14</option>
+					<option value="14">15</option>
+				</field>
+				
+				<field name="spacer4" type="spacer" default="" label="KC_LINK4" description="" />
+				<field name="label4" type="text" default="" label="KC_TEXT_LABEL" description="KC_TEXT_DESC" />
+				<field name="link4" type="text" default="index.php?option=" label="KC_LINK_LABEL" description="KC_LINK_DESC" />
+				<field name="target4" type="list" default="" label="KC_TARGET_LABEL" description="KC_TARGET_DESCRIPTION">
+					<option value="">KC_TARGET_PARENT</option>
+					<option value="_blank">KC_TARGET_NEW_WINDOW</option>
+				</field>
+				<field name="icomoonicon4" type="text" default="" label="KC_ICOICON_LABEL" description="KC_ICOICON_DESC" />
+				<field name="icon4" type="imagelist" default="0" label="KC_ICON_LABEL" description="KC_ICON_DESC" directory="/administrator/templates/hathor/images/header" hide_default="true" />
+				<field name="custom4" type="radio" default="0" label="KC_CUSTOM_LABEL" description="KC_CUSTOM_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="path4" type="text" default="" label="KC_PATH_LABEL" description="KC_PATH_DESC" />
+				<field name="c_icon4" type="text" default="" label="KC_C_ICON_LABEL" description="KC_C_ICON_DESC" />
+				<field name="order4" type="list" default="3" label="KC_OPTION_LABEL" description="KC_OPTION_DESCRIPTION">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+					<option value="3">4</option>
+					<option value="4">5</option>
+					<option value="5">6</option>
+					<option value="6">7</option>
+					<option value="7">8</option>
+					<option value="8">9</option>
+					<option value="9">10</option>
+					<option value="10">11</option>
+					<option value="11">12</option>
+					<option value="12">13</option>
+					<option value="13">14</option>
+					<option value="14">15</option>
+				</field>
+				
+				<field name="spacer5" type="spacer" default="" label="KC_LINK5" description="" />
+				<field name="label5" type="text" default="" label="KC_TEXT_LABEL" description="KC_TEXT_DESC" />
+				<field name="link5" type="text" default="index.php?option=" label="KC_LINK_LABEL" description="KC_LINK_DESC" />
+				<field name="target5" type="list" default="" label="KC_TARGET_LABEL" description="KC_TARGET_DESCRIPTION">
+					<option value="">KC_TARGET_PARENT</option>
+					<option value="_blank">KC_TARGET_NEW_WINDOW</option>
+				</field>
+				<field name="icomoonicon5" type="text" default="" label="KC_ICOICON_LABEL" description="KC_ICOICON_DESC" />
+				<field name="icon5" type="imagelist" default="0" label="KC_ICON_LABEL" description="KC_ICON_DESC" directory="/administrator/templates/hathor/images/header" hide_default="true" />
+				<field name="custom5" type="radio" default="0" label="KC_CUSTOM_LABEL" description="KC_CUSTOM_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="path5" type="text" default="" label="KC_PATH_LABEL" description="KC_PATH_DESC" />
+				<field name="c_icon5" type="text" default="" label="KC_C_ICON_LABEL" description="KC_C_ICON_DESC" />
+				<field name="order5" type="list" default="4" label="KC_OPTION_LABEL" description="KC_OPTION_DESCRIPTION">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+					<option value="3">4</option>
+					<option value="4">5</option>
+					<option value="5">6</option>
+					<option value="6">7</option>
+					<option value="7">8</option>
+					<option value="8">9</option>
+					<option value="9">10</option>
+					<option value="10">11</option>
+					<option value="11">12</option>
+					<option value="12">13</option>
+					<option value="13">14</option>
+					<option value="14">15</option>
+				</field>
+				
+				<field name="spacer6" type="spacer" default="" label="KC_LINK6" description="" />
+				<field name="label6" type="text" default="" label="KC_TEXT_LABEL" description="KC_TEXT_DESC" />
+				<field name="link6" type="text" default="index.php?option=" label="KC_LINK_LABEL" description="KC_LINK_DESC" />
+				<field name="target6" type="list" default="" label="KC_TARGET_LABEL" description="KC_TARGET_DESCRIPTION">
+					<option value="">KC_TARGET_PARENT</option>
+					<option value="_blank">KC_TARGET_NEW_WINDOW</option>
+				</field>
+				<field name="icomoonicon6" type="text" default="" label="KC_ICOICON_LABEL" description="KC_ICOICON_DESC" />
+				<field name="icon6" type="imagelist" default="0" label="KC_ICON_LABEL" description="KC_ICON_DESC" directory="/administrator/templates/hathor/images/header" hide_default="true" />
+				<field name="custom6" type="radio" default="0" label="KC_CUSTOM_LABEL" description="KC_CUSTOM_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="path6" type="text" default="" label="KC_PATH_LABEL" description="KC_PATH_DESC" />
+				<field name="c_icon6" type="text" default="" label="KC_C_ICON_LABEL" description="KC_C_ICON_DESC" />
+				<field name="order6" type="list" default="5" label="KC_OPTION_LABEL" description="KC_OPTION_DESCRIPTION">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+					<option value="3">4</option>
+					<option value="4">5</option>
+					<option value="5">6</option>
+					<option value="6">7</option>
+					<option value="7">8</option>
+					<option value="8">9</option>
+					<option value="9">10</option>
+					<option value="10">11</option>
+					<option value="11">12</option>
+					<option value="12">13</option>
+					<option value="13">14</option>
+					<option value="14">15</option>
+				</field>
+
+				<field name="spacer7" type="spacer" default="" label="KC_LINK7" description="" />
+				<field name="label7" type="text" default="" label="KC_TEXT_LABEL" description="KC_TEXT_DESC" />
+				<field name="link7" type="text" default="index.php?option=" label="KC_LINK_LABEL" description="KC_LINK_DESC" />
+				<field name="target7" type="list" default="" label="KC_TARGET_LABEL" description="KC_TARGET_DESCRIPTION">
+					<option value="">KC_TARGET_PARENT</option>
+					<option value="_blank">KC_TARGET_NEW_WINDOW</option>
+				</field>
+				<field name="icomoonicon7" type="text" default="" label="KC_ICOICON_LABEL" description="KC_ICOICON_DESC" />
+				<field name="icon7" type="imagelist" default="0" label="KC_ICON_LABEL" description="KC_ICON_DESC" directory="/administrator/templates/hathor/images/header" hide_default="true" />
+				<field name="custom7" type="radio" default="0" label="KC_CUSTOM_LABEL" description="KC_CUSTOM_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="path7" type="text" default="" label="KC_PATH_LABEL" description="KC_PATH_DESC" />
+				<field name="c_icon7" type="text" default="" label="KC_C_ICON_LABEL" description="KC_C_ICON_DESC" />
+				<field name="order7" type="list" default="6" label="KC_OPTION_LABEL" description="KC_OPTION_DESCRIPTION">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+					<option value="3">4</option>
+					<option value="4">5</option>
+					<option value="5">6</option>
+					<option value="6">7</option>
+					<option value="7">8</option>
+					<option value="8">9</option>
+					<option value="9">10</option>
+					<option value="10">11</option>
+					<option value="11">12</option>
+					<option value="12">13</option>
+					<option value="13">14</option>
+					<option value="14">15</option>
+				</field>
+				
+				<field name="spacer8" type="spacer" default="" label="KC_LINK8" description="" />
+				<field name="label8" type="text" default="" label="KC_TEXT_LABEL" description="KC_TEXT_DESC" />
+				<field name="link8" type="text" default="index.php?option=" label="KC_LINK_LABEL" description="KC_LINK_DESC" />
+				<field name="target8" type="list" default="" label="KC_TARGET_LABEL" description="KC_TARGET_DESCRIPTION">
+					<option value="">KC_TARGET_PARENT</option>
+					<option value="_blank">KC_TARGET_NEW_WINDOW</option>
+				</field>
+				<field name="icomoonicon8" type="text" default="" label="KC_ICOICON_LABEL" description="KC_ICOICON_DESC" />
+				<field name="icon8" type="imagelist" default="0" label="KC_ICON_LABEL" description="KC_ICON_DESC" directory="/administrator/templates/hathor/images/header" hide_default="true" />
+				<field name="custom8" type="radio" default="0" label="KC_CUSTOM_LABEL" description="KC_CUSTOM_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="path8" type="text" default="" label="KC_PATH_LABEL" description="KC_PATH_DESC" />
+				<field name="c_icon8" type="text" default="" label="KC_C_ICON_LABEL" description="KC_C_ICON_DESC" />
+				<field name="order8" type="list" default="7" label="KC_OPTION_LABEL" description="KC_OPTION_DESCRIPTION">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+					<option value="3">4</option>
+					<option value="4">5</option>
+					<option value="5">6</option>
+					<option value="6">7</option>
+					<option value="7">8</option>
+					<option value="8">9</option>
+					<option value="9">10</option>
+					<option value="10">11</option>
+					<option value="11">12</option>
+					<option value="12">13</option>
+					<option value="13">14</option>
+					<option value="14">15</option>
+				</field>
+				
+				<field name="spacer9" type="spacer" default="" label="KC_LINK9" description="" />
+				<field name="label9" type="text" default="" label="KC_TEXT_LABEL" description="KC_TEXT_DESC" />
+				<field name="link9" type="text" default="index.php?option=" label="KC_LINK_LABEL" description="KC_LINK_DESC" />
+				<field name="target9" type="list" default="" label="KC_TARGET_LABEL" description="KC_TARGET_DESCRIPTION">
+					<option value="">KC_TARGET_PARENT</option>
+					<option value="_blank">KC_TARGET_NEW_WINDOW</option>
+				</field>
+				<field name="icomoonicon9" type="text" default="" label="KC_ICOICON_LABEL" description="KC_ICOICON_DESC" />
+				<field name="icon9" type="imagelist" default="0" label="KC_ICON_LABEL" description="KC_ICON_DESC" directory="/administrator/templates/hathor/images/header" hide_default="true" />
+				<field name="custom9" type="radio" default="0" label="KC_CUSTOM_LABEL" description="KC_CUSTOM_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="path9" type="text" default="" label="KC_PATH_LABEL" description="KC_PATH_DESC" />
+				<field name="c_icon9" type="text" default="" label="KC_C_ICON_LABEL" description="KC_C_ICON_DESC" />
+				<field name="order9" type="list" default="8" label="KC_OPTION_LABEL" description="KC_OPTION_DESCRIPTION">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+					<option value="3">4</option>
+					<option value="4">5</option>
+					<option value="5">6</option>
+					<option value="6">7</option>
+					<option value="7">8</option>
+					<option value="8">9</option>
+					<option value="9">10</option>
+					<option value="10">11</option>
+					<option value="11">12</option>
+					<option value="12">13</option>
+					<option value="13">14</option>
+					<option value="14">15</option>
+				</field>
+				
+				<field name="spacer10" type="spacer" default="" label="KC_LINK10" description="" />
+				<field name="label10" type="text" default="" label="KC_TEXT_LABEL" description="KC_TEXT_DESC" />
+				<field name="link10" type="text" default="index.php?option=" label="KC_LINK_LABEL" description="KC_LINK_DESC" />
+				<field name="target10" type="list" default="" label="KC_TARGET_LABEL" description="KC_TARGET_DESCRIPTION">
+					<option value="">KC_TARGET_PARENT</option>
+					<option value="_blank">KC_TARGET_NEW_WINDOW</option>
+				</field>
+				<field name="icomoonicon10" type="text" default="" label="KC_ICOICON_LABEL" description="KC_ICOICON_DESC" />
+				<field name="icon10" type="imagelist" default="0" label="KC_ICON_LABEL" description="KC_ICON_DESC" directory="/administrator/templates/hathor/images/header" hide_default="true" />
+				<field name="custom10" type="radio" default="0" label="KC_CUSTOM_LABEL" description="KC_CUSTOM_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="path10" type="text" default="" label="KC_PATH_LABEL" description="KC_PATH_DESC" />
+				<field name="c_icon10" type="text" default="" label="KC_C_ICON_LABEL" description="KC_C_ICON_DESC" />
+				<field name="order10" type="list" default="9" label="KC_OPTION_LABEL" description="KC_OPTION_DESCRIPTION">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+					<option value="3">4</option>
+					<option value="4">5</option>
+					<option value="5">6</option>
+					<option value="6">7</option>
+					<option value="7">8</option>
+					<option value="8">9</option>
+					<option value="9">10</option>
+					<option value="10">11</option>
+					<option value="11">12</option>
+					<option value="12">13</option>
+					<option value="13">14</option>
+					<option value="14">15</option>
+				</field>
+				
+				<field name="spacer11" type="spacer" default="" label="KC_LINK11" description="" />
+				<field name="label11" type="text" default="" label="KC_TEXT_LABEL" description="KC_TEXT_DESC" />
+				<field name="link11" type="text" default="index.php?option=" label="KC_LINK_LABEL" description="KC_LINK_DESC" />
+				<field name="target11" type="list" default="" label="KC_TARGET_LABEL" description="KC_TARGET_DESCRIPTION">
+					<option value="">KC_TARGET_PARENT</option>
+					<option value="_blank">KC_TARGET_NEW_WINDOW</option>
+				</field>
+				<field name="icomoonicon11" type="text" default="" label="KC_ICOICON_LABEL" description="KC_ICOICON_DESC" />
+				<field name="icon11" type="imagelist" default="0" label="KC_ICON_LABEL" description="KC_ICON_DESC" directory="/administrator/templates/hathor/images/header" hide_default="true" />
+				<field name="custom11" type="radio" default="0" label="KC_CUSTOM_LABEL" description="KC_CUSTOM_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="path11" type="text" default="" label="KC_PATH_LABEL" description="KC_PATH_DESC" />
+				<field name="c_icon11" type="text" default="" label="KC_C_ICON_LABEL" description="KC_C_ICON_DESC" />
+				<field name="order11" type="list" default="10" label="KC_OPTION_LABEL" description="KC_OPTION_DESCRIPTION">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+					<option value="3">4</option>
+					<option value="4">5</option>
+					<option value="5">6</option>
+					<option value="6">7</option>
+					<option value="7">8</option>
+					<option value="8">9</option>
+					<option value="9">10</option>
+					<option value="10">11</option>
+					<option value="11">12</option>
+					<option value="12">13</option>
+					<option value="13">14</option>
+					<option value="14">15</option>
+				</field>
+				
+				<field name="spacer12" type="spacer" default="" label="KC_LINK12" description="" />
+				<field name="label12" type="text" default="" label="KC_TEXT_LABEL" description="KC_TEXT_DESC" />
+				<field name="link12" type="text" default="index.php?option=" label="KC_LINK_LABEL" description="KC_LINK_DESC" />
+				<field name="target12" type="list" default="" label="KC_TARGET_LABEL" description="KC_TARGET_DESCRIPTION">
+					<option value="">KC_TARGET_PARENT</option>
+					<option value="_blank">KC_TARGET_NEW_WINDOW</option>
+				</field>
+				<field name="icomoonicon12" type="text" default="" label="KC_ICOICON_LABEL" description="KC_ICOICON_DESC" />
+				<field name="icon12" type="imagelist" default="0" label="KC_ICON_LABEL" description="KC_ICON_DESC" directory="/administrator/templates/hathor/images/header" hide_default="true" />
+				<field name="custom12" type="radio" default="0" label="KC_CUSTOM_LABEL" description="KC_CUSTOM_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="path12" type="text" default="" label="KC_PATH_LABEL" description="KC_PATH_DESC" />
+				<field name="c_icon12" type="text" default="" label="KC_C_ICON_LABEL" description="KC_C_ICON_DESC" />
+				<field name="order12" type="list" default="11" label="KC_OPTION_LABEL" description="KC_OPTION_DESCRIPTION">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+					<option value="3">4</option>
+					<option value="4">5</option>
+					<option value="5">6</option>
+					<option value="6">7</option>
+					<option value="7">8</option>
+					<option value="8">9</option>
+					<option value="9">10</option>
+					<option value="10">11</option>
+					<option value="11">12</option>
+					<option value="12">13</option>
+					<option value="13">14</option>
+					<option value="14">15</option>
+				</field>
+				
+				<field name="spacer13" type="spacer" default="" label="KC_LINK13" description="" />
+				<field name="label13" type="text" default="" label="KC_TEXT_LABEL" description="KC_TEXT_DESC" />
+				<field name="link13" type="text" default="index.php?option=" label="KC_LINK_LABEL" description="KC_LINK_DESC" />
+				<field name="target13" type="list" default="" label="KC_TARGET_LABEL" description="KC_TARGET_DESCRIPTION">
+					<option value="">KC_TARGET_PARENT</option>
+					<option value="_blank">KC_TARGET_NEW_WINDOW</option>
+				</field>
+				<field name="icomoonicon13" type="text" default="" label="KC_ICOICON_LABEL" description="KC_ICOICON_DESC" />
+				<field name="icon13" type="imagelist" default="0" label="KC_ICON_LABEL" description="KC_ICON_DESC" directory="/administrator/templates/hathor/images/header" hide_default="true" />
+				<field name="custom13" type="radio" default="0" label="KC_CUSTOM_LABEL" description="KC_CUSTOM_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="path13" type="text" default="" label="KC_PATH_LABEL" description="KC_PATH_DESC" />
+				<field name="c_icon13" type="text" default="" label="KC_C_ICON_LABEL" description="KC_C_ICON_DESC" />
+				<field name="order13" type="list" default="12" label="KC_OPTION_LABEL" description="KC_OPTION_DESCRIPTION">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+					<option value="3">4</option>
+					<option value="4">5</option>
+					<option value="5">6</option>
+					<option value="6">7</option>
+					<option value="7">8</option>
+					<option value="8">9</option>
+					<option value="9">10</option>
+					<option value="10">11</option>
+					<option value="11">12</option>
+					<option value="12">13</option>
+					<option value="13">14</option>
+					<option value="14">15</option>
+				</field>
+				
+				<field name="spacer14" type="spacer" default="" label="KC_LINK14" description="" />
+				<field name="label14" type="text" default="" label="KC_TEXT_LABEL" description="KC_TEXT_DESC" />
+				<field name="link14" type="text" default="index.php?option=" label="KC_LINK_LABEL" description="KC_LINK_DESC" />
+				<field name="target14" type="list" default="" label="KC_TARGET_LABEL" description="KC_TARGET_DESCRIPTION">
+					<option value="">KC_TARGET_PARENT</option>
+					<option value="_blank">KC_TARGET_NEW_WINDOW</option>
+				</field>
+				<field name="icomoonicon14" type="text" default="" label="KC_ICOICON_LABEL" description="KC_ICOICON_DESC" />
+				<field name="icon14" type="imagelist" default="0" label="KC_ICON_LABEL" description="KC_ICON_DESC" directory="/administrator/templates/hathor/images/header" hide_default="true" />
+				<field name="custom14" type="radio" default="0" label="KC_CUSTOM_LABEL" description="KC_CUSTOM_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="path14" type="text" default="" label="KC_PATH_LABEL" description="KC_PATH_DESC" />
+				<field name="c_icon14" type="text" default="" label="KC_C_ICON_LABEL" description="KC_C_ICON_DESC" />
+				<field name="order14" type="list" default="13" label="KC_OPTION_LABEL" description="KC_OPTION_DESCRIPTION">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+					<option value="3">4</option>
+					<option value="4">5</option>
+					<option value="5">6</option>
+					<option value="6">7</option>
+					<option value="7">8</option>
+					<option value="8">9</option>
+					<option value="9">10</option>
+					<option value="10">11</option>
+					<option value="11">12</option>
+					<option value="12">13</option>
+					<option value="13">14</option>
+					<option value="14">15</option>
+				</field>
+				
+				<field name="spacer15" type="spacer" default="" label="KC_LINK15" description="" />
+				<field name="label15" type="text" default="" label="KC_TEXT_LABEL" description="KC_TEXT_DESC" />
+				<field name="link15" type="text" default="index.php?option=" label="KC_LINK_LABEL" description="KC_LINK_DESC" />
+				<field name="target15" type="list" default="" label="KC_TARGET_LABEL" description="KC_TARGET_DESCRIPTION">
+					<option value="">KC_TARGET_PARENT</option>
+					<option value="_blank">KC_TARGET_NEW_WINDOW</option>
+				</field>
+				<field name="icomoonicon15" type="text" default="" label="KC_ICOICON_LABEL" description="KC_ICOICON_DESC" />
+				<field name="icon15" type="imagelist" default="0" label="KC_ICON_LABEL" description="KC_ICON_DESC" directory="/administrator/templates/hathor/images/header" hide_default="true" />
+				<field name="custom15" type="radio" default="0" label="KC_CUSTOM_LABEL" description="KC_CUSTOM_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="path15" type="text" default="" label="KC_PATH_LABEL" description="KC_PATH_DESC" />
+				<field name="c_icon15" type="text" default="" label="KC_C_ICON_LABEL" description="KC_C_ICON_DESC" />
+				<field name="order15" type="list" default="14" label="KC_OPTION_LABEL" description="KC_OPTION_DESCRIPTION">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+					<option value="3">4</option>
+					<option value="4">5</option>
+					<option value="5">6</option>
+					<option value="6">7</option>
+					<option value="7">8</option>
+					<option value="8">9</option>
+					<option value="9">10</option>
+					<option value="10">11</option>
+					<option value="11">12</option>
+					<option value="12">13</option>
+					<option value="13">14</option>
+					<option value="14">15</option>
+				</field>
+				
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

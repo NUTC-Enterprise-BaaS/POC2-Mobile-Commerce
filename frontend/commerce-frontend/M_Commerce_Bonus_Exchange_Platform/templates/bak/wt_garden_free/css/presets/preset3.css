@@ -1,0 +1,129 @@
+a {
+  color: #6ab42f;
+}
+a:hover {
+  color: #528c24;
+}
+.sp-megamenu-parent >li.active>a,
+.sp-megamenu-parent >li:hover>a {
+  color: #fff;
+  background: #6ab42f;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item >a:hover {
+  background: #83cf47;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active>a {
+  background: #83cf47;
+  color: #fff;
+}
+#offcanvas-toggler >i {
+  color: #000000;
+}
+#offcanvas-toggler >i:hover {
+  color: #6ab42f;
+}
+.btn-primary,
+.sppb-btn-primary {
+  background-color: #1679c3;
+  border-color: #0e4e7e;
+}
+.btn-primary:hover,
+.sppb-btn-primary:hover {
+  background-color: #136bac;
+  border-color: #0b4067;
+}
+ul.social-icons >li a:hover {
+  color: #6ab42f;
+}
+.sp-page-title {
+  background-color: #6ab42f;
+  background: #6ab42f url("../images/bg_title.png");
+}
+.layout-boxed .body-innerwrapper {
+  background: #ffffff;
+}
+.sp-module ul >li >a {
+  color: #000000;
+}
+.sp-module ul >li >a:hover {
+  color: #6ab42f;
+}
+.sp-module .latestnews >div >a {
+  color: #000000;
+}
+.sp-module .latestnews >div >a:hover {
+  color: #6ab42f;
+}
+.sp-module .tagscloud .tag-name:hover {
+  background: #6ab42f;
+}
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li.active > a,
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li > a:hover {
+  background: rgba(0,0,0,0);
+  border: 1px solid #000000;
+  border-radius: 0;
+  color: #000000;
+}
+.search .btn-toolbar button {
+  background: #6ab42f;
+}
+.pager li>a {
+  border-radius: 0;
+}
+.pager li>a:hover {
+  background-color: #000000;
+  color: #fff !important;
+  border-color: #000000;
+}
+.post-format {
+  background: #6ab42f;
+}
+.voting-symbol span.star.active:before {
+  color: #6ab42f;
+}
+.sp-rating span.star:hover:before,
+.sp-rating span.star:hover ~ span.star:before {
+  color: #528c24;
+}
+.entry-link,
+.entry-quote {
+  background: #6ab42f;
+}
+blockquote {
+  border-color: #6ab42f;
+}
+.carousel-left:hover,
+.carousel-right:hover {
+  background: #6ab42f;
+}
+#sp-footer {
+  background: #6ab42f;
+  border-top: 1px solid #535353;
+}
+.sp-comingsoon body {
+  background-color: #6ab42f;
+}
+.pagination>li>a,
+.pagination>li>span {
+  border-radius: 0;
+  padding: 8px 18px;
+  color: #000000;
+}
+.pagination>li>a:hover,
+.pagination>li>a:focus,
+.pagination>li>span:hover,
+.pagination>li>span:focus {
+  color: #000000;
+}
+.pagination>.active>a,
+.pagination>.active>span {
+  border-color: #6ab42f;
+  background-color: #6ab42f;
+}
+.pagination>.active>a:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:hover,
+.pagination>.active>span:focus {
+  border-color: #6ab42f;
+  background-color: #6ab42f;
+}

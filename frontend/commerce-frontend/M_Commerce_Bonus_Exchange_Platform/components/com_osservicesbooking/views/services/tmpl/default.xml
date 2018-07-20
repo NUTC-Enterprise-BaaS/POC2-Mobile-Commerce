@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="List All Services">
+		<message>
+			<![CDATA[List All Services.]]>
+		</message>
+	</layout>
+	<state>
+		<name>List All Services</name>
+		<description>List All Services of Services Booking component</description>
+		<fields name="params">
+			<fieldset name="basic" label="Basic Setting">
+				<field name="list_type" class="btn-group" type="radio" default="0" label="Select view type" description="Select View Type: List view or Grid view">
+					<option value="0">List View</option>
+					<option value="1">Grid View</option>
+				</field>
+			</fieldset>
+		</fields>
+	</state>
+</metadata>

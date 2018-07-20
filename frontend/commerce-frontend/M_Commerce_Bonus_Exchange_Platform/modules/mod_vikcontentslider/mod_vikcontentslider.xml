@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0.0" client="site" method="upgrade">
+	<name>VikContentSlider</name>
+	<author>Valentina Arras - e4j - Extensionsforjoomla.com</author>
+	<creationDate>January 2016</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>tech@extensionsforjoomla.com</authorEmail>
+	<authorUrl>https://e4j.com</authorUrl>
+	<version>3.0</version>
+	<description>
+<![CDATA[ 
+<div style="font-weight:normal; font-size:13px;">
+<h2 style="color:#666; font-size:22px; font-weight:normal; border-bottom:1px solid #ddd;">Vik Content Slider</h2>
+<p>With this module you can create as many slider as you want. <br />
+The configuration is quite is, you have just to choose the visibility of dots, arrows, autostops, etc. <br />
+
+After you do it, you have five fields for each image:<br />
+- <strong>Background image</strong><br />
+This field allow you to choose an image as background for the slide.<br />
+- <strong>Title slide</strong><br />
+In this field you can write the title of your slide<br />
+- <strong>Caption</strong><br />
+This is the field for the description of your slide<br />
+- <strong>Read More Link</strong><br />
+In this field you may to insert a link for your slide<br />
+
+You can configure Vik Content Slider, so go to Extensions > Module Manager, edit the Vik Content Slider module and set up your slider. Enjoy it!</p>
+<div style="font-size:12px; float:right;"><a style="color:#666;" href="http://extensionsforjoomla.com/" target="_blank">Copyright Extensions For Joomla</a></div>
+
+</div>]]>
+	</description>
+
+	<files>
+		<filename module="mod_vikcontentslider">mod_vikcontentslider.php</filename>
+		<filename>mod_vikcontentslider.xml</filename>
+		<filename>index.html</filename>
+		<folder>src</folder>
+		<folder>php</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">languages/en-GB/en-GB.mod_vikcontentslider.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			
+			<fieldset name="basic" addfieldpath="/modules/mod_vikcontentslider/php">
+				<field name="Headerslide" type="header" default="VIKCSYOURSLIDES" label="" description="" />
+				<field name="vikassetsp" type="vikassets" label="" />
+				<field name="viksliderimages" type="vikslidesmanager" label="" />
+			</fieldset>
+			
+			<fieldset name="slideroptions" label="SLIDEROPTIONS">
+				<field name="width" type="text" default="100%" label="DIVWIDTH" description="DIVWIDTH" /> 
+				<field name="interval" type="text" default="4000" label="INTERVAL" description="INTERVALDESC" />
+
+				<field name="font" type="list" default="0" label="Fonts" description="Chose your slider font">
+					<option value="0">Lato</option>
+					<option value="1">Roboto</option>
+					<option value="2">Oswald</option>
+					<option value="3">Convergence</option>
+				</field>
+
+				<field name="autoplay" type="radio" default="0" label="AUTOPLAY" description="AUTOPLAYDESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="navigation" type="radio" default="0" label="NAVIG" description="NAVIGDESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="dotsnav" type="radio" default="0" label="DOTS" description="DOTSDESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="navdotsdalign" type="list" default="0" label="NAVDOTSALIGN" description="NAVDOTSALIGNDESC">
+					<option value="center">CENTER</option>
+					<option value="left">LEFT</option>
+					<option value="right">RIGHT</option>
+				</field>
+
+				<field name="loadjq" type="radio" default="0" label="LOADJQ" description="LOADJQDESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="readmoretext" type="text" default="Read More" label="READMTEXT" description="READMTEXTDESC" />
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

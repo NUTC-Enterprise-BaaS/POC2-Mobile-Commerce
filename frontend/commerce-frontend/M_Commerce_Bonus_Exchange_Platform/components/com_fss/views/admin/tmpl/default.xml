@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="SUPPORT_MAIN_ADMIN_PAGE">
+	  <help url = "http://www.freestyle-joomla.com/comhelp/fss/frontend-view-admin-default" />
+	  <message></message>
+  </layout>
+  <state>
+    <name>SUPPORT_MAIN_ADMIN_PAGE</name>
+  </state>
+</metadata>

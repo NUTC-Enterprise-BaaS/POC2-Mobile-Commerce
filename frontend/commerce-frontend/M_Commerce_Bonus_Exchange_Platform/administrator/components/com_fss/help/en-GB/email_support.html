@@ -1,0 +1,38 @@
+<h4>The following can be used in this template:</h4>
+<style>
+.info_list li
+{
+    padding: 1px 12px;
+}
+</style>
+<ul class='info_list'>
+<li>{ticket_link} - URL to view the ticket on your site. THIS LINK IS FOR THE USERS OF THE SITE, NOT THE TICKET HANDLERS.</li>
+<li>{admin_link} - URL to view the ticket in the support admin section of your site. DO NOT USE THIS IN EMAILS TO YOUR USERS, JUST TO THE TICKET HANDLERS.</li>
+<li>{email_pending_link} - URL to the pending email imports tab. DO NOT USE THIS IN EMAILS TO YOUR USERS, JUST TO THE TICKET HANDLERS.</li>
+<li>{ticket_id} - Ticket record id. Used if you wish to create custom links to the ticket.</li>
+<li>{subject} - Ticket message subject</li>
+<li>{body} - Message body</li>
+<li>{messagehistory} - Message history (output all messages in the ticket except the current one)</li>
+<li>{reference} - Ticket reference number</li>
+<li>{password} - Ticket password if an unregistered user creating ticket</li>
+<li>{user_name} - Users full name</li>
+<li>{user_username} - Users username. This is Unregistered if an unregistered user is creating the ticket</li>
+<li>{user_email} - Users email address</li>
+<li>{handler_name} - Ticket handlers fullname</li>
+<li>{handler_username} - Ticket handlers username</li>
+<li>{handler_email} - Ticket handlers email</li>
+<li>{ticket_id} - The id of the ticket for linking back to the ticket page</li>
+<li>{status} - Ticket status</li>
+<li>{priority} - Ticket priority</li>
+<li>{category} - Category</li>
+<li>{department} - Department</li>
+<li>{product} - Product name</li>
+<li>{websitetitle} - The name of your website (specified in the Joomla config, or in the Freestyle Settings)</li>
+<li>{custom_1} - Custom field with the ID or 1</li>
+<li>{custom_X} - Custom field, replace X with the id of the field</li>
+<li>{custom_AAAAAA} - Custom field, where AAAAAA is the alias of the custom field, eg, {custom_fish} to display field with alias fish</li> 
+<li>{product_desc} - Product description</li>
+<li>{department_desc} - Department description</li>
+</ul>
+<br /><br />
+<p>You can also do {product_start}Product: {product}{product_end} in the template. This will only be output if the field {product} is not empty. This is usefull for sometimes hiding fields. (You can use this to hide custom fields that have no value etc).</p>

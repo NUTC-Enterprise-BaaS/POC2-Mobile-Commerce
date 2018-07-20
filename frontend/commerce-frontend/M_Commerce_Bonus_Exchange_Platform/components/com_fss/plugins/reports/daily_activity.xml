@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<report>
+  <title>DAILY_ACTIVITY</title>
+  <description>DAILY_ACTIVITY_DESC</description>
+
+  <sql>
+    <![CDATA[
+
+    SELECT 
+    
+      sum(COALESCE(openedcount, 0)) as openedcount, 
+      sum(COALESCE(closedcount, 0)) as closedcount, 
+      sum(COALESCE(handlercount, 0)) as handlercount, 
+      sum(COALESCE(usercount, 0)) as usercount, 
+      sum(COALESCE(totalcount, 0)) as totalcount, 
+      {dategroup_disp} as display, 
+      date
+
+    FROM #__fss_date_day as baseday
+
+    LEFT JOIN 
+      (
+        SELECT count(*) as openedcount, DATE(opened) as opened
+        FROM #__fss_ticket_ticket as t
+        WHERE 
+            opened BETWEEN '{opened_from} 00:00:00' AND '{opened_to} 23:59:59'
+        {if,product}
+            AND
+                {product}
+        {endif}
+        
+        {if,department}
+            AND
+                {department}
+        {endif}
+        
+        {if,user,'unreg'}
+          AND 
+              t.user_id = '0'
+        {endif}
+        {if,user,'unreg',not}
+          {if,user,'all',not}
+            {if,user}
+            AND 
+                t.user_id = '{user}'
+            {endif}
+          {endif}
+        {endif}
+        
+        
+        {if,handler,'unassigned'}
+          AND
+              t.admin_id = '0'
+        {endif}
+        {if,handler,'unassigned',not}
+          {if,handler,'all',not}
+          AND 
+              t.admin_id = '{handler}'
+          {endif}
+        {endif}
+        
+        AND t.source != 'email' AND t.source != 'email_declined'
+ 
+        GROUP BY DATE(opened)
+      ) AS opened
+      ON baseday.date = opened.opened
+
+    LEFT JOIN 
+      (
+        SELECT count(*) as closedcount, DATE(closed) as closed
+        FROM #__fss_ticket_ticket as t
+        WHERE 
+            opened BETWEEN '{opened_from} 00:00:00' AND '{opened_to} 23:59:59'
+            
+        {if,product}
+            AND
+                {product}
+        {endif}
+        
+        {if,department}
+            AND
+                {department}
+        {endif}
+         
+        {if,user,'unreg'}
+          AND 
+              t.user_id = '0'
+        {endif}
+        {if,user,'unreg',not}
+          {if,user,'all',not}
+            {if,user}
+            AND 
+                t.user_id = '{user}'
+            {endif}
+          {endif}
+        {endif}
+          
+        
+        {if,handler,'unassigned'}
+          AND
+              t.admin_id = '0'
+        {endif}
+        {if,handler,'unassigned',not}
+          {if,handler,'all',not}
+          AND 
+              t.admin_id = '{handler}'
+          {endif}
+        {endif}
+        
+        AND t.source != 'email' AND t.source != 'email_declined' 
+                 
+        GROUP BY DATE(closed)
+      ) AS closed
+      ON baseday.date = closed.closed
+  
+    LEFT JOIN 
+      (
+        SELECT count(*) as handlercount, DATE(posted) as posted
+        FROM #__fss_ticket_messages as m
+        WHERE 
+            posted BETWEEN '{opened_from} 00:00:00' AND '{opened_to} 23:59:59'
+        AND
+            m.admin IN (1, 2)
+
+        {if,handler,'unassigned',not}
+          {if,handler,'all',not}
+          AND 
+              m.user_id = '{handler}'
+          {endif}
+        {endif}
+        
+        {if,department}
+            AND
+                m.ticket_ticket_id IN (SELECT id FROM #__fss_ticket_ticket WHERE {department} AND source != 'email' AND source != 'email_declined')
+        {endif}
+        
+        {if,product}
+            AND
+                m.ticket_ticket_id IN (SELECT id FROM #__fss_ticket_ticket WHERE {product} AND source != 'email' AND source != 'email_declined')
+        {endif}
+       
+        GROUP BY DATE(posted)
+      ) AS handlermc
+      ON baseday.date = handlermc.posted
+
+    LEFT JOIN 
+      (
+        SELECT count(*) as usercount, DATE(posted) as posted
+        FROM #__fss_ticket_messages as m
+        WHERE 
+            posted BETWEEN '{opened_from} 00:00:00' AND '{opened_to} 23:59:59'
+        AND
+            m.admin = 0
+        
+        {if,user,'unreg'}
+          AND 
+              m.user_id = '0'
+        {endif}
+        {if,user,'unreg',not}
+          {if,user,'all',not}
+            {if,user}
+            AND 
+                m.user_id = '{user}'
+            {endif}
+          {endif}
+        {endif}
+        
+        {if,department}
+            AND
+                m.ticket_ticket_id IN (SELECT id FROM #__fss_ticket_ticket WHERE {department} AND source != 'email' AND source != 'email_declined')
+        {endif}
+       
+        {if,product}
+            AND
+                m.ticket_ticket_id IN (SELECT id FROM #__fss_ticket_ticket WHERE {product} AND source != 'email' AND source != 'email_declined')
+        {endif}
+
+        GROUP BY DATE(posted)
+      ) AS usermc
+      ON baseday.date = usermc.posted
+
+    LEFT JOIN 
+      (
+        SELECT count(*) as totalcount, DATE(posted) as posted
+        FROM #__fss_ticket_messages as m
+        WHERE 
+            posted BETWEEN '{opened_from} 00:00:00' AND '{opened_to} 23:59:59'
+        AND
+            m.admin IN (0, 1, 2)
+        
+        {if,department}
+            AND
+                m.ticket_ticket_id IN (SELECT id FROM #__fss_ticket_ticket WHERE {department} AND source != 'email' AND source != 'email_declined')
+        {endif}
+        
+        {if,product}
+            AND
+                m.ticket_ticket_id IN (SELECT id FROM #__fss_ticket_ticket WHERE {product} AND source != 'email' AND source != 'email_declined')
+        {endif}
+
+
+        GROUP BY DATE(posted)
+      ) AS totalmc
+      ON baseday.date = totalmc.posted
+
+    WHERE 
+    
+    baseday.date BETWEEN '{opened_from} 00:00:00' AND '{opened_to} 23:59:59'
+
+    AND 
+    
+    baseday.date >= (SELECT MIN(opened) as mindate FROM #__fss_ticket_ticket)
+
+    GROUP BY {dategroup}
+    
+    ORDER BY date DESC
+]]>
+
+  </sql>
+
+  <!--<filter>
+    <name>datepreset</name>
+    <type>datepresets</type>
+    <filter>opened</filter>
+    <title>Opened</title>
+    <extra key="">Custom</extra>
+    <extra key="7">Last 7 days</extra>
+    <extra key="30">Last 30 days</extra>
+    <extra key="61">Last 2 Months</extra>
+    <extra key="92">Last 3 Months</extra>
+    <extra key="182">Last 6 Month</extra>
+    <extra key="365">Last Year</extra>
+    <extra key="999999">All Time</extra>
+  </filter>-->
+
+  <filter>
+    <name>opened</name>
+    <type>daterange</type>
+    <field>opened</field>
+
+    <!--
+    The default date range can be modified on a report by using the default tag. Eg:
+    
+    <default>lastmonth</default>
+    
+    Options: 
+      blank for last 3 months, 
+      lastmonth - last month
+      thismonth - this month
+      lastweek - last week
+      thisweek - this week
+      diff - see example below
+      datetime - see example below
+    
+    Example of using day counts to specify the default date range of the select. 
+    Numbers are how many days ago to display
+    <default>diff</default>
+    <default_from>90</default_from>
+    <default_to>0</default_to>
+
+    datetime type will pass the default_from/to to the DateTime class. An example is:
+    <default>datetime</default>
+    <default_from>first day of last month</default_from>
+    <default_to>last day of last month</default_to>
+    
+    For info on what can be used see http://php.net/manual/en/function.strtotime.php
+    
+    A few examples:
+    -1 week
+    now
+    last monday
+    -->
+  </filter>
+
+  <filter>
+    <name>product</name>
+    <type>lookup</type>
+    <translate>1</translate>
+    <table>#__fss_prod</table>
+    <field>prod_id</field>
+    <key>id</key>
+    <display>title</display>
+    <order>ordering</order>
+    <header>SELECT_PRODUCT</header>
+    <title>PRODUCT</title>
+    <published>1</published>
+  </filter>
+
+  <filter>
+    <name>department</name>
+    <type>lookup</type>
+    <translate>1</translate>
+    <table>#__fss_ticket_dept</table>
+    <field>ticket_dept_id</field>
+    <key>id</key>
+    <display>title</display>
+    <order>title</order>
+    <title>DEPARTMENT</title>
+    <header>SELECT_DEPARTMENT</header>
+  </filter>
+
+  <filter>
+    <name>handler</name>
+    <type>normal</type>
+    <sql>SELECT f.user_id as id, CONCAT(u.name, ' (', u.username, ')') as title FROM #__fss_users as f LEFT JOIN #__users as u ON f.user_id = u.id ORDER BY u.name</sql>
+    <key>id</key>
+    <display>title</display>
+
+    <default>all</default>
+
+    <extra key="all">ALL_HANDLERS</extra>
+    <extra key="unassigned">UNASSIGNED</extra>
+
+    <title>HANDLER</title>
+  </filter>
+
+  <filter>
+    <name>user</name>
+    <type>normal</type>
+    <sql>SELECT u.id, IF(u.id, CONCAT(u.name, ' (', u.username, ')'), 'Unknown') as title FROM #__fss_ticket_ticket as t LEFT JOIN #__users as u ON t.user_id = u.id WHERE t.user_id > 0 AND u.id > 0 GROUP BY u.id ORDER BY u.name</sql>
+    <key>id</key>
+    <display>title</display>
+
+    <default>all</default>
+
+    <extra key="all">ALL_USERS</extra>
+    <extra key="unreg" value="unreg">UNREGISTERED</extra>
+
+    <title>USER</title>
+  </filter>
+
+  <group>
+    <name>dategroup</name>
+    <type>dategroup</type>
+    <field>date</field>
+    <title>GROUPING</title>
+  </group>
+
+  <totals>1</totals>
+  
+  <field name="display" style="white-space: nowrap;" totalheader="1">PERIOD</field>
+  <field name="date" style="white-space: nowrap;">DATE</field>
+  <field name="openedcount" sum="1">TICKETS_OPENED</field>
+  <field name="closedcount" sum="1">TICKETS_CLOSED</field>
+  <field name="handlercount" sum="1">HANDLER_MESSAGES</field>
+  <field name="usercount" sum="1">USER_MESSAGES</field>
+  <field name="totalcount" sum="1">TOTAL_MESSAGES</field>
+  
+  <graph>
+    <xaxis>date</xaxis>
+    <yaxis>openedcount</yaxis>
+    <yaxis2>closedcount</yaxis2>
+  </graph>
+</report>

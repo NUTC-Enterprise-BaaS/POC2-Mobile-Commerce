@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0.0" method="upgrade">
+	<name>VikChannelManager</name>
+   	<version>1.4</version>
+   	<creationDate>2016-March</creationDate>
+   	<author>e4j - Extensionsforjoomla.com</author>
+   	<authorEmail>tech@extensionsforjoomla.com</authorEmail>
+   	<authorUrl>http://www.e4j.com/</authorUrl>
+   	<copyright>Copyright (C) 2016 e4j - Extensionsforjoomla.com - All rights reserved</copyright>
+   	<license>GNU/GPL Version 2 or later - http://www.gnu.org/licenses/gpl-2.0.html</license>
+  
+   	<description><![CDATA[
+		<h1>VikChannelManager</h1>
+		<div style="clear: both;"></div>
+		<p>Connect your website with VikBooking to portals like Expedia, Booking.com, Agoda, Tripadvisor, Airbnb and many others!</p>
+		<p>Developed by e4j - <a href="https://extensionsforjoomla.com" target="_blank">Extensionsforjoomla.com</a>
+	]]></description>
+
+	<scriptfile>script.php</scriptfile>
+	
+	<install folder="admin">
+		<sql>
+			<file driver="mysql" charset="utf8">install.mysql.utf8.sql</file>
+		</sql>
+	</install> 
+	
+	<uninstall folder="admin">
+		<sql>
+			<file driver="mysql" charset="utf8">uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	
+	<!-- Site Main File Copy Section -->
+	<files folder="site">
+		<filename>vikchannelmanager.php</filename>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>views</folder>
+		<folder>helpers</folder>
+	</files>
+
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB.com_vikchannelmanager.ini</language>
+   	</languages>
+   
+   <administration>
+      <!-- Administration Menu Section -->
+		<menu img="components/com_vikchannelmanager/assets/css/images/icon-16-vikchannelmanager.png">COM_VIKCHANNELMANAGER_MENU</menu>
+		
+		<!-- Administration Main File Copy Section -->
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>vikchannelmanager.php</filename>
+			<filename>install.mysql.utf8.sql</filename>
+			<filename>uninstall.mysql.utf8.sql</filename>
+			<folder>assets</folder>
+			<folder>helpers</folder>
+			<folder>views</folder>
+      	</files>
+		
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB.com_vikchannelmanager.ini</language>
+			<language tag="en-GB">language/en-GB.com_vikchannelmanager.sys.ini</language>
+	    	</languages>
+		   
+   </administration>
+
+</extension>

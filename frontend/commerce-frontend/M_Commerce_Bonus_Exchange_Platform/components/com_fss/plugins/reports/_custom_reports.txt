@@ -1,0 +1,14 @@
+If you wish to customize a report, please make a copy of the xml file into the Custom folder and edit it there.
+
+This will prevent an update overwriting your changes.
+
+Any reports in the custom folder will be used in place of those in this folder
+
+New in 2.3:
+  <filter>
+    <name>newdate</name>
+    <type>date</type>
+    <title>My Date Filter</title>
+  </filter>
+
+

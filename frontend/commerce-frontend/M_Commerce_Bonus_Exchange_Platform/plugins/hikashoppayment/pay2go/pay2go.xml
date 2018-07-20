@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/plugin-install.dtd">
+<extension type="plugin" version="2.5" method="upgrade" group="hikashoppayment">
+    <name>Pay2go Payment Plugin</name>
+    <creationDate>Sep 2015</creationDate>
+    <version>1.0.7</version>
+    <author>Pay2go</author>
+    <authorEmail>cs@pay2go.com</authorEmail>
+    <authorUrl>https://www.pay2go.com/</authorUrl>
+    <copyright>COPYRIGHT 2015 © PAY2GO TECHNOLOGY CORPORATION</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <description>This plugin enables you to setup your Pay2go payment system</description>
+    <files>
+        <filename plugin="pay2go">pay2go.php</filename>
+        <filename>pay2go_end.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <params addpath="/components/com_hikashop/params">
+        <param name="pluginoptions" type="pluginoptions" default="plugin" label="hikashop" description="HikaShop options" />
+    </params>
+    <config>
+        <fields name="params" addfieldpath="/components/com_hikashop/fields">
+            <fieldset name="basic">
+                <field id="pluginoptions" name="pluginoptions" type="pluginoptions" label="hikashop" description="HikaShop options" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

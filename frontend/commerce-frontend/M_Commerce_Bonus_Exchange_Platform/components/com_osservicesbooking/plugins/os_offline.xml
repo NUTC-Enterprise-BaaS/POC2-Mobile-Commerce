@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install version="1.0" type="osbplugin" group="payment">
+	<name>os_offline</name>
+	<title>Offline Payment</title>	
+	<author>Tuan Pham Ngoc</author>
+	<creationDate>09-03-2010</creationDate>
+	<copyright>Copyright 2007-2010 Ossolution Team</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+	<authorEmail>contact@joomdonation.com</authorEmail>
+	<authorUrl>www.joomdonation.com</authorUrl>
+	<version>1.0</version>
+	<description>Offline Payment Plugin For OS Services Booking Extension</description>
+	<config>	
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="order_status" type="list" label="Order status" description="Please select order status when customers select this payment plugin at booking form">
+					<option value="0">Pending</option>
+					<option value="1">Active</option>
+				</field>
+			</fieldset>			
+		</fields>
+	</config>
+	<files>
+		<filename>os_offline.php</filename>				
+	</files>	
+	<installsql />
+	<installfile />	
+</install>

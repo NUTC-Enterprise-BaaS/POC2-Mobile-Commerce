@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ticketprint>
+  
+  <!-- Title of the custom print, this is displayed in your Print menus on your site -->
+  <title>Example</title>
+  <description>Example Custom Print Layout</description>
+
+  <!-- Should the custom layout be displayed to your sites users? -->
+  <user>1</user>
+
+  <!-- Should the custom layout be displayed to your sites admins? -->
+  <admin>1</admin>
+
+  <!-- Should the custom layout be displayed in the batch print menu? -->
+  <batch>1</batch>
+
+  <!-- Should the page heading be hidden? -->
+  <noheader>0</noheader>
+
+  <!-- A piece of php code can be entered here to determine if the layout will be displayed for a given ticket or not. The
+    $ticket variable contains the current support ticket. 
+    
+    If this is not needed, you can remove the tag from the html and the print will always be visible
+    
+    Return true to display the plugin, or false to hide it.
+    This is not called for batch printing -->
+  <can_run_php>
+    <![CDATA[
+       /* Example for showing only for a certain product: */
+       
+       /*if ($ticket->ticket_dept_id == 2)
+			     return true;
+       return false;*/
+    
+			 return true;
+    ]]>
+  </can_run_php>
+
+  <!-- The name of the php template in the example folder -->
+  <include>main.php</include>
+</ticketprint>

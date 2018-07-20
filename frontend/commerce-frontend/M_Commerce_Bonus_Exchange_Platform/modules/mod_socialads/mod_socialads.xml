@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client ="site" method="upgrade">
+	<name>mod_socialads</name>
+	<creationDate>2016-10-12</creationDate>
+	<version>3.1.4</version>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>http://www.techjoomla.com</authorUrl>
+	<copyright>Copyright (c) 2009-2015 TechJoomla. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>MOD_SOCIALADS_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_socialads">mod_socialads.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	<languages folder="languages">
+		<language tag="en-GB">en-GB/en-GB.mod_socialads.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_socialads.sys.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.mod_socialads.ini</language>
+		<language tag="it-IT">it-IT/it-IT.mod_socialads.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_socialads.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_socialads.ini</language>
+		<language tag="da-DK">da-DK/da-DK.mod_socialads.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.mod_socialads.ini</language>
+		<language tag="th-TH">th-TH/th-TH.mod_socialads.ini</language>
+		<language tag="sv-SE">sv-SE/sv-SE.mod_socialads.ini</language>
+		<language tag="pt-PT">pt-PT/pt-PT.mod_socialads.ini</language>
+	</languages>
+
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="MOD_SUFIX" description="MOD_SUFIX_DES" />
+				<field name="zone" type="sql" default="1" label="SEL_ZONE" query="SELECT id , zone_name FROM #__ad_zone WHERE 	state=1"
+						key_field="id" value_field="zone_name" description="SEL_ZONE_DES"/>
+				<field name="ad_rotation" type="radio" class="btn-group" default="0" label="AD_ROTATION" description="AD_ROTATION_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+				<field name="ad_rotation_delay" type="text" class= "validate-numeric" default="10" label="AD_ROTATION_DELAY" description="AD_ROTATION_DELAY_DESC" />
+				<field name="no_rand" type="radio" class="btn-group" default="1" label="RAN_DIS" description="RAN_DIS_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+				<field name="alt_ad" type="radio" class="btn-group" default="1" label="ALT_ADS"	description="ALT_ADS_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+				<field name="num_ads" type="text" class="validate-numeric" default="2" label="NUM_ADS" description="NUM_ADS_DES" />
+
+				<field name="debug" type="radio" class="btn-group" default="0" label="DEBUG" description="DEBUG_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+				<field name="create" type="radio" class="btn-group" default="1" label="ADLINK" description="ADLINK_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+				<field name="create_text" type="text" default="Create an Ad" label="TEXT_ADLINK" description="TEXT_ADLINK_DES" />
+				<field name="create_guest" type="radio" class="btn-group" default="0" label="ADLINKGUEST" description="ADLINKGUEST_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+				<field name="create_page" type="radio" default="0" label="ADLINK_WIN" description="ADLINK_WIN_DES">
+						<option value="0">SA_SAMWIN</option>
+						<option value="1">SA_NEWWIN</option>
+				</field>
+				<field name="adlink_secure" type="radio" class="btn-group" default="0" label="ADLINKSECURE" description="ADLINKSECURE_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

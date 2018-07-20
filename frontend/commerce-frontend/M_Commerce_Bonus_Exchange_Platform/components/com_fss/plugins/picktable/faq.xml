@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<plugin>
+  <table>
+    <display>FAQ</display>
+    <sql>SELECT a.*, c.title as category FROM #__fss_faq_faq as a LEFT JOIN #__fss_faq_cat as c ON a.faq_cat_id = c.id</sql>
+
+    <use_auth published="a.published" access="a.access" author="a.author" />
+
+    <addbtntext>SELECT_FAQ</addbtntext>
+
+    <!-- default ordering field -->
+    <ordering>a.question</ordering>
+
+    <!-- field that is the id -->
+    <keyfield>id</keyfield>
+    <displayfield>question</displayfield>
+
+    <link>index.php?option=com_fss&amp;view=faq&amp;faqid=%ID%</link>
+    
+    <!-- filters at the top of the page -->
+    <filters>
+      <!-- what fields to search on -->
+      
+      <search>
+        <field>question</field>
+      </search>
+      
+      <!-- published filter -->
+      <filter id="category" type="lookup" field="a.faq_cat_id">
+        <sql>SELECT id, title FROM #__fss_faq_cat ORDER BY title</sql>
+        <key>id</key>
+        <display>title</display>
+        <heading>Select Category</heading>
+        
+      </filter>
+      
+    </filters>
+
+    <!-- what fields to display -->
+    <displayfields>
+      <field link="1" name="question" id="JGLOBAL_TITLE" type="string" sort="a.question" />
+      <field name="category" id="Category" type="string" sort="c.title" />
+    </displayfields>
+  </table>
+</plugin>

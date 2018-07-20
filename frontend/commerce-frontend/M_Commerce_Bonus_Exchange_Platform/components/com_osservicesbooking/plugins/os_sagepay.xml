@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install version="1.0" type="osbplugin" group="payment">
+	<name>os_sagepay</name>
+	<title>Sagepay</title>	
+	<author>Tuan Pham Ngoc</author>
+	<creationDate>09-03-2010</creationDate>
+	<copyright>Copyright 2007-2010 Ossolution Team</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+	<authorEmail>contact@joomdonation.com</authorEmail>
+	<authorUrl>www.joomdonation.com</authorUrl>
+	<version>1.0</version>
+	<description>Sagepay Payment Plugin For OS Services Booking Extension</description>
+	<params>	
+		<param name="sg_mode" type="list" label="Sagepay Mode" description="Set to Test Mode Or Live Mode">
+			<option value="0">Test Mode</option>
+			<option value="1">Live Mode</option>
+		</param>
+		<param name="sg_vendor_name" type="text" size="40" label="Vendor Name" description="et this value to the Vendor Name assigned to you by Sage Pay or chosen when you applied " default=""></param>			
+		<param name="sg_encryption_password" type="text" size="40" label="Encryption Password" description="Set this value to the XOR Encryption password assigned to you by Sage Pay " default=""></param>			
+		<param name="sg_currency" type="text" label="Currency" default="GBP"></param>					
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_osservicesbooking/elements">
+				<field name="sg_mode" type="list" label="Sagepay Mode" description="Set to Test Mode Or Live Mode">
+					<option value="0">Test Mode</option>
+					<option value="1">Live Mode</option>
+				</field>
+				<field name="sg_vendor_name" type="text" size="40" label="Vendor Name" description="et this value to the Vendor Name assigned to you by Sage Pay or chosen when you applied " default=""></field>			
+				<field name="sg_encryption_password" type="text" size="40" label="Encryption Password" description="Set this value to the XOR Encryption password assigned to you by Sage Pay " default=""></field>			
+				<field name="sg_currency" type="text" label="Currency" default="GBP"></field>	
+			</fieldset>	
+		</fields>
+	</config>
+	<files>
+		<filename>os_sagepay.php</filename>				
+		<folder>sagepay</folder>				
+	</files>	
+	<installsql />
+	<installfile />
+</install>

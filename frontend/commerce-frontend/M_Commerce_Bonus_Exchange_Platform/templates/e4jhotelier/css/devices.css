@@ -1,0 +1,74 @@
+/**** PC Width ***/
+@import url(desktop_devices.css);
+
+/*** General ***/ 
+.upmenu-content {
+	width: 100%;
+}
+main {
+	width: 100%;
+}
+#foot-cont {
+	width: 100%;
+}
+#subfoot-cont {
+	width: 100%;
+}
+#lmpart {
+	width: 100%;
+}
+#submenu {
+	width: 100%;
+}
+.module-fullwidth-cont {
+	width: 100%;
+}
+.h-search .grid-block {
+	width:100%;
+}
+#tbar-logo .moduletable {
+	text-align: center;
+}
+#tbar-logo .moduletable .custom {
+	text-align: center;
+}
+#mainmenu {
+	width: 100%;
+}
+#mainmenu .l-inline {
+	width:100%;
+}
+#slideadv {
+	height:auto !important;
+}
+footer .grid-module .moduletable img {
+	width: auto;
+}
+.h-search {
+	top: 5px;
+	position: relative;
+}
+.v-search {
+	top: 5px;
+	position: relative;
+}
+.h-search .moduletable,
+.v-search .moduletable {
+	width: 100%;
+	float: left !important;
+}
+.logorounded {
+	min-height: inherit !important;
+}
+.menumobile {
+	position: relative;
+}
+.vikcs-slide h2 {
+	font-size:22px !important;
+}
+footer form.email textarea {
+	width:93%;
+}
+.vbmodhorsearchmaindiv form .vbmodhorsearchbookdiv {
+	float: left !important;
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0" method="upgrade">
+	<name>SocialAds Package</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>www.techjoomla.com</authorUrl>
+	<copyright>Copyright (c) 2009-2016 TechJoomla. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<creationDate>24th November 2015</creationDate>
+	<version>1.8</version>
+	<packagename>socialads</packagename>
+	<packager>Techjoomla Team</packager>
+
+	<description>
+	</description>
+
+	<files folder="components">
+		<file type="component" id="com_tjfields">com_tjfields.zip</file>
+		<file type="component" id="com_socialads">com_socialads.zip</file>
+		<file type="component" id="com_sa">com_sa.zip</file>
+	</files>
+
+	<scriptfile>script.pkg_socialads.php</scriptfile>
+
+	<updateservers>
+		<server type="extension" priority="1" name="SocialAds updates"><![CDATA[https://techjoomla.com/component/ars/updates/components/socialads?format=xml&dummy=extension.xml]]></server>
+	</updateservers>
+
+</extension>

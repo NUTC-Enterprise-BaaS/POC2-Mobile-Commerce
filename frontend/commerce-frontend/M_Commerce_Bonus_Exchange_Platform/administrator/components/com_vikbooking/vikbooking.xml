@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+
+	<name>COM_VIKBOOKING</name>
+	<version>1.7</version>
+	<creationDate>2016-February</creationDate>
+	<author>e4j - Extensionsforjoomla.com</author>
+	<authorEmail>tech@e4j.com</authorEmail>
+	<authorUrl>https://e4j.com/</authorUrl>
+	<copyright>Copyright (C) e4j - Extensionsforjoomla.com - All rights reserved</copyright>
+	<license>GNU Gpl</license>
+
+	<description>
+		<![CDATA[
+		<h1>VikBooking v1.6</h1>
+		<div style="clear: both;"></div>
+		<p>Build your Accommodation Website with a powerful Booking Engine.</p>
+		]]>
+	</description>
+
+	<scriptfile>script.php</scriptfile>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install.mysql.utf8.sql</file>
+		</sql>
+	</install> 
+	
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>	
+	
+	<files folder="site">
+		<filename>vikbooking.php</filename>
+		<filename>controller.php</filename>
+		<filename>vikbooking_styles.css</filename>
+		<filename>vikbooking_smartphones.css</filename>
+		<filename>vikbooking_tablets.css</filename>
+		<filename>vikbooking_custom.css</filename>
+		<filename>_router.php</filename>
+		<filename>index.html</filename>
+		<folder>class</folder>
+		<folder>views</folder>
+		<folder>helpers</folder>
+		<folder>resources</folder>
+		<folder>themes</folder>
+	</files>
+
+	<languages folder="site/language">
+		<language tag="en-GB">en-GB.com_vikbooking.ini</language>
+		<language tag="it-IT">it-IT.com_vikbooking.ini</language>
+	</languages>
+
+	<administration>
+	
+		<menu img="components/com_vikbooking/icon-16-vikbooking.png">COM_VIKBOOKING_MENU</menu>
+
+		<files folder="admin">
+			<filename>vikbooking.php</filename>
+			<filename>admin.vikbooking.html.php</filename>
+			<filename>vikbooking.css</filename>
+			<filename>vikbooking.jpg</filename>
+			<filename>icon-16-vikbooking.png</filename>
+			<filename>icon-48-vikbooking.png</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>index.html</filename>
+			<filename>install.mysql.utf8.sql</filename>
+			<filename>uninstall.mysql.utf8.sql</filename>
+			<filename>toolbar.vikbooking.html.php</filename>
+			<filename>toolbar.vikbooking.php</filename>
+			<filename>engLicense.txt</filename>
+			<folder>resources</folder>
+			<folder>payments</folder>
+			<folder>smsapi</folder>
+			<folder>cronjobs</folder>
+			<folder>fields</folder>
+			<folder>helpers</folder>
+		</files>
+		
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB.com_vikbooking.ini</language>
+			<language tag="en-GB">en-GB.com_vikbooking.sys.ini</language>
+			<language tag="it-IT">it-IT.com_vikbooking.ini</language>
+			<language tag="it-IT">it-IT.com_vikbooking.sys.ini</language>
+		</languages>
+
+	</administration>
+
+</extension>

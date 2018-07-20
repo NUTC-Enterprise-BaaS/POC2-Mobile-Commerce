@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="List All Items - Categories, Services, Employee">
+		<message>
+			<![CDATA[List All Items - Categories, Services, Employee.]]>
+		</message>
+	</layout>
+	<state>
+		<name>List All Items - Categories, Services, Employee</name>
+		<description>List All Items - Categories, Services, Employee - of Services Booking component</description>
+		<fields name="params">
+			<fieldset name="basic" label="Basic Setting">
+				<field name="show_category" class="btn-group" type="radio" default="1" label="Do you want to show categories" description="">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="show_service" class="btn-group" type="radio" default="1" label="Do you want to show services" description="">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="show_employee" class="btn-group" type="radio" default="1" label="Do you want to show employees" description="">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="max_category" class="input-mini" type="text" default="9" label="Maximum Categories" description="Maximum Categories that you want to be shown in the list" />
+				<field name="max_service" class="input-mini" type="text" default="9" label="Maximum Services" description="Maximum Services that you want to be shown in the list" />
+				<field name="max_employee" class="input-mini" type="text" default="9" label="Maximum Employees" description="Maximum Employees that you want to be shown in the list" />
+			</fieldset>
+		</fields>
+	</state>
+</metadata>

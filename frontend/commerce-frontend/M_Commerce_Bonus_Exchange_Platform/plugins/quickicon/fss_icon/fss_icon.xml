@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="quickicon" method="upgrade">
+  <name>plg_quickicon_fss_icon</name>
+  <author>Freestyle Joomla</author>
+  <creationDate>28 April 2013</creationDate>
+  <copyright>Copyright (C) 2013 Freestyle Joomla. All rights reserved</copyright>
+  <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+  <authorUrl>www.freestyle-joomla.net</authorUrl>
+  <version>1.0</version>
+  <description>Freestyle Support Portal Quick Icon</description>
+  <files>
+    <filename plugin="fss_icon">fss_icon.php</filename>
+  </files>
+  <config>
+    <fields name="params"></fields>
+  </config>
+</extension>

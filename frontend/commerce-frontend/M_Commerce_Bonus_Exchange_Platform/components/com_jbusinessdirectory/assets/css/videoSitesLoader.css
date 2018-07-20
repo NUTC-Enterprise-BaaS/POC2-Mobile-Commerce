@@ -1,0 +1,45 @@
+.videoSitesLoader-holder {
+	display: block;
+	position: relative;
+    float: left;
+    padding: 0 10px 10px 0 !important;
+    width: 25%;
+}
+
+@media (max-width: 767px) {
+	.videoSitesLoader-holder {
+		width: 50%;
+	}
+}
+
+@media (max-width: 480px) {
+	.videoSitesLoader-holder {
+		width: 100%;
+	}
+}
+
+.videoSitesLoader {
+	position: relative;
+	cursor: pointer;
+	background: #ccc no-repeat center center / cover; 
+	padding-bottom: 56.25%; 
+	height: 0px;
+	clear:both;
+	margin-bottom: 10px;
+}
+
+.videoSitesLoader-holder .play_btn {
+    background: rgba(0, 0, 0, 0) url("../images/play-btn.png") no-repeat scroll 0 0;
+    height: 33px;
+    left: 50%;
+    margin-left: -28px;
+    position: absolute;
+    top: 50%;
+    margin-top:-25px;
+    width: 48px;
+    z-index: 2;
+}
+
+.videoSitesLoader-holder:hover .play_btn {
+    background-image: url("../images/play-btn-hover.png");
+}

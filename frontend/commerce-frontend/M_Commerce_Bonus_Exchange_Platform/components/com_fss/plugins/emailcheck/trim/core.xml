@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<emailcheck>
+  <!--
+    A list of regular expressions that will be tested against each line of the message. 
+    If the expression matches, then the email will be trimmed from this point onwards
+    -->
+  
+  <!-- Examples for the line starting with -->
+  <trimmatch>
+    <starts><![CDATA[>]]></starts>
+  </trimmatch>
+  
+  <!-- Regular expression example -->
+  <trimmatch>
+    <regex><![CDATA[^-{2,8}Original Message-{2,8}]]></regex>
+  </trimmatch>
+
+  <trimmatch>
+    <regex><![CDATA[^On .*\d{4}.* wrote:$]]></regex>
+  </trimmatch>
+
+  <trimmatch>
+    <regex><![CDATA[^On\s]]></regex>
+    <nearby>
+      <after>1</after>
+      <regex><![CDATA[wrote:$]]></regex>
+     </nearby>
+  </trimmatch>
+
+  <!-- Match From:, To: and Subject: all nearby. 3 entries to check for each one first-->
+  <trimmatch>
+    <regex><![CDATA[^To:]]></regex>
+    <nearby>
+      <lines>8</lines>
+      <regex><![CDATA[^From:]]></regex>
+    </nearby>
+    <nearby>
+      <lines>8</lines>
+      <regex><![CDATA[^Subject:]]></regex>
+    </nearby>
+  </trimmatch>
+  
+  <trimmatch>
+    <regex><![CDATA[^From:]]></regex>
+    <nearby>
+      <lines>8</lines>
+      <regex><![CDATA[^To:]]></regex>
+    </nearby>
+    <nearby>
+      <lines>8</lines>
+      <regex><![CDATA[^Subject:]]></regex>
+    </nearby>
+  </trimmatch>
+  
+  <trimmatch>
+    <regex><![CDATA[^Subject:]]></regex>
+    <nearby>
+      <lines>8</lines>
+      <regex><![CDATA[^From:]]></regex>
+    </nearby>
+    <nearby>
+      <lines>8</lines>
+      <regex><![CDATA[^To:]]></regex>
+    </nearby>
+  </trimmatch>
+  
+</emailcheck>

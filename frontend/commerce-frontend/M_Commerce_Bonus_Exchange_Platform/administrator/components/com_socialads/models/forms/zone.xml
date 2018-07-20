@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="COM_SOCIALADS_FORM_LBL_ZONE_ID" readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+		<field name="created_by" type="createdby" default="" label="COM_SOCIALADS_FORM_LBL_ZONE_CREATED_BY" description="COM_SOCIALADS_FORM_DESC_ZONE_CREATED_BY" />
+		<field name="zone_name" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_ZONE_ZONE_NAME" description="COM_SOCIALADS_FORM_DESC_ZONE_ZONE_NAME" required="true" filter="safehtml" />
+		<field name="published" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_ZONE_PUBLISHED" description="COM_SOCIALADS_FORM_DESC_ZONE_PUBLISHED" filter="safehtml" />
+		<field name="ad_type" type="list" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_ZONE_AD_TYPE" description="COM_SOCIALADS_FORM_DESC_ZONE_AD_TYPE" default="text_media" filter="safehtml" onchange="adtype(this.value);">
+			<option value="text_media">Text and Media</option>
+			<option value="text">Text</option>
+			<option value="media">Image</option>
+		</field>
+		<field name="orientation" type="list" class="inputbox" label="COM_SOCIALADS_FORM_LBL_ORIENTATION" description="COM_SOCIALADS_FORM_DESC_ORIENTATION" default="1" filter="safehtml">
+			<option value="1">COM_SOCIALADS_ZONES_HORIZONTAL</option>
+			<option value="2">COM_SOCIALADS_ZONES_VERTICAL</option>
+		</field>
+		<field name="max_title" type="text" size="40" class="inputbox max_title alphaCheck" label="COM_SOCIALADS_FORM_LBL_ZONE_MAX_TITLE" description="COM_SOCIALADS_FORM_DESC_ZONE_MAX_TITLE" required="true" filter="safehtml" />
+		<field name="max_des" type="text" size="40" class="inputbox alphaCheck" label="COM_SOCIALADS_FORM_LBL_ZONE_MAX_DES" description="COM_SOCIALADS_FORM_DESC_ZONE_MAX_DES" required="true" filter="safehtml" />
+		<field name="img_width" type="text" size="40" class="inputbox width alphaCheck" label="COM_SOCIALADS_FORM_LBL_ZONE_IMG_WIDTH" description="COM_SOCIALADS_FORM_DESC_ZONE_IMG_WIDTH" required="true" filter="safehtml" />
+		<field name="img_height" type="text" size="40" class="inputbox height alphaCheck" label="COM_SOCIALADS_FORM_LBL_ZONE_IMG_HEIGHT" description="COM_SOCIALADS_FORM_DESC_ZONE_IMG_HEIGHT" required="true" filter="safehtml" />
+		<field name="per_click" type="text" size="40" class="inputbox alphaDecimalCheck" label="COM_SOCIALADS_FORM_LBL_ZONE_PER_CLICK" description="COM_SOCIALADS_FORM_DESC_ZONE_PER_CLICK" required="true" filter="safehtml" />
+		<field name="per_imp" type="text" size="40" class="inputbox alphaDecimalCheck" label="COM_SOCIALADS_FORM_LBL_ZONE_PER_IMP" description="COM_SOCIALADS_FORM_DESC_ZONE_PER_IMP" required="true" filter="safehtml" />
+		<field name="per_day" type="text" size="40" class="inputbox alphaDecimalCheck" label="COM_SOCIALADS_FORM_LBL_ZONE_PER_DAY" description="COM_SOCIALADS_FORM_DESC_ZONE_PER_DAY" required="true" filter="safehtml" />
+		<field name="num_ads" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_ZONE_NUM_ADS" description="COM_SOCIALADS_FORM_DESC_ZONE_NUM_ADS" filter="safehtml" />
+		<!--<field name="layout" type="checkboxes" label="COM_SOCIALADS_FORM_LBL_ZONE_LAYOUT" description="COM_SOCIALADS_FORM_DESC_ZONE_LAYOUT" filter="safehtml" multiple = "multiple" /> -->
+		<field name="state" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>

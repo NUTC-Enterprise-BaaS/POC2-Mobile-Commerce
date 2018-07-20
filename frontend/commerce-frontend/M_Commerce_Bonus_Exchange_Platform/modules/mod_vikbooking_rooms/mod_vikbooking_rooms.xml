@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>mod_vikbooking_rooms</name>
+	<author>Extensionsforjoomla.com</author>
+	<creationDate>January 2014</creationDate>
+	<copyright>Copyright (C) 2014 Extensionsforjoomla.com. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>tech@extensionsforjoomla.com</authorEmail>
+	<authorUrl>www.extensionsforjoomla.com</authorUrl>
+	<version>1.1</version>
+	<description>
+	<![CDATA[ 
+  <div style="font-weight:normal; font-size:13px;">
+  <h2 style="color:#666; font-size:22px; font-weight:normal; border-bottom:1px solid #ddd;">Vik Booking Rooms</h2>
+  <p>This module shows a list of rooms created with the component VikBooking. <br />
+ 	<strong>Compatibility with VikBooking 1.4 and higher.</strong></p>
+ 
+  </div>
+  <div style="font-size:12px; float:right;"><a style="color:#666;" href="http://extensionsforjoomla.com/" target="_blank">Copyright Extensions For Joomla</a></div>]]></description>
+	<files>
+		<filename module="mod_vikbooking_rooms">mod_vikbooking_rooms.php</filename>
+		<folder>tmpl</folder>
+		<folder>php</folder>
+		<folder>src</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>left-arrow.png</filename>
+		<filename>right-arrow.png</filename>
+		<filename>right-arrow.png</filename>
+		<filename>sf-bt.png</filename>
+		<filename>mod_vikbooking_rooms.xml</filename>
+		<filename>mod_vikbooking_rooms.css</filename>	
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_vikbooking_rooms.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_vikbooking_rooms/php">
+				<field name="Header01" type="header" default="VBROOMSCONFIGURATION" label="" description="" />
+				<field name="showcatname" type="list" default="1" label="VBROOMSCATEGORY" description="VBROOMSCATEGORYDESC" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="shownumbpeople" type="list" default="1" label="VBROOMSSHOWPEOPLE" description="VBROOMSSHOWPEOPLEDESC" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="showdetailsbtn" type="list" default="1" label="VBROOMSSHOWDETAILSBTN" description="VBROOMSSHOWDETAILSBTN" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="showroomdesc" type="list" default="1" label="SHOWROOMDESC" description="SHOWROOMDESC" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="widthroom" type="text" default="310px" label="VBROOMSWIDTH" description="VBROOMSWIDTHDESC" />
+				<field name="numb" type="text" default="4" label="VBROOMSNUMB" description="VBROOMSNUMBDESC" size="5" filter="integer"/>
+				<field name="scrollbar" type="list" default="1" label="VBROOMSSCROLLABAR" description="VBROOMSSCROLLABARDESC">
+					<option value="0">JYES</option>
+					<option value="1">JNO</option>
+				</field>
+				<field name="dotted" type="list" default="1" label="VBROOMSDOTNAV" description="VBROOMSDOTNAVDESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="arrows" type="list" default="0" label="VBROOMSARROWS" description="VBROOMSARROWSDESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="autoplay" type="list" default="1" label="VBROOMSAUTOPLAY" description="VBROOMSAUTOPLAYDESC">
+					<option value="0">JYES</option>
+					<option value="1">JNO</option>
+				</field>
+				<field name="autoplaytime" type="text" default="5000" label="VBROOMSTIMESCROLL" description="VBROOMSTIMESCROLLDESC" />
+				<field name="query" type="list" default="price" label="VBROOMSORDERFILTER" description="VBROOMSORDERFILTERDESC">
+					<option value="price">BYPRICE</option>
+					<option value="name">BYNAME</option>
+					<option value="category">BYCATEGORY</option>
+				</field>
+				<field name="order" type="list" default="asc" label="VBROOMSORDERTYPE" description="VBROOMSORDERTYPEDESC">
+					<option value="asc">TYPEASC</option>
+					<option value="desc">TYPEDESC</option>
+				</field>
+				<field name="currency" type="text" default="€" label="VBROOMSCURRENCY" description="VBROOMSCURRENCYDESC" size="10" filter="raw" />				
+				<field name="Header02" type="header" default="VBROOMSFILTERCAT" label="" description="" />
+				<field name="catid" type="sql" default="0" label="VBROOMSSELECTCAT" query="SELECT id, name FROM #__vikbooking_categories" key_field="id" value_field="name"/>
+				<field name="querycat" type="list" default="price" label="ORDERING" description="ORDERING">
+					<option value="price">BYPRICE</option>
+					<option value="name">BYNAME</option>
+				</field>
+				<field name="loadjq" type="radio" default="1" label="LOADJQ" description="LOADJQDESC">
+				    <option value="1">JYES</option>
+				    <option value="0">JNO</option>
+			    </field>
+
+				<field name="Header03" type="header" default="Joomla!" label="" description="" />
+				<field name="itemid" type="menuitem" default="" label="Select a Menu Item" description="Important: this should be linked to a Menu Item of type VikBooking - Rooms List to avoid problems with the URL Rewrite" />
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="Module Class Suffix, in case your template would like one" />
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

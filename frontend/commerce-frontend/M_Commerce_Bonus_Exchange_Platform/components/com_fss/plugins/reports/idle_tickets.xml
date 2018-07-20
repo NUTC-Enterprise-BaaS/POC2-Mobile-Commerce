@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<report>
+  <title>IDLE_TICKETS</title>
+  <description>IDLE_TICKETS_DESC</description>
+
+  <sql>
+    <![CDATA[
+    SELECT
+
+    IF (
+      t.admin_id = 0,
+      'Unassigned',
+      IF (au.name IS NULL,
+        'Unknown',
+        CONCAT(au.name, ' (', au.username, ')')
+      )
+    ) as handler,
+
+    IF (tu.name IS NULL,
+      IF (
+        t.unregname = '',
+        'Unknown',
+        CONCAT(t.unregname, ' (-- unreg --)')
+      ),
+      CONCAT(tu.name, ' (', tu.username, ')')
+    ) as user,
+
+    t.*,
+    s.title as status,
+    s.translation as status_translation,
+    c.title as category,
+    c.translation as category_translation,
+    p.title as product,
+    p.translation as product_translation,
+    d.title as department,
+    d.translation as department_translation,
+    pri.title as priority,
+    pri.translation as priority_translation,
+    au.username as handlerusername,
+    tu.username as ticketusername,
+    
+    concat(floor(timetaken / 60),':',lpad(mod(timetaken, 60), 2, '0')) as time
+   
+    FROM #__fss_ticket_ticket as t
+
+    LEFT JOIN #__users as au ON t.admin_id = au.id
+
+    LEFT JOIN #__users as tu ON t.user_id = tu.id
+
+    LEFT JOIN #__fss_ticket_status as s ON t.ticket_status_id = s.id
+
+    LEFT JOIN #__fss_ticket_cat as c ON t.ticket_cat_id = c.id
+    LEFT JOIN #__fss_ticket_dept as d ON t.ticket_dept_id = d.id
+    LEFT JOIN #__fss_prod as p ON t.prod_id = p.id
+    LEFT JOIN #__fss_ticket_pri as pri ON t.ticket_pri_id = pri.id
+
+
+    WHERE 1
+    
+    {if,status,"all_open"}
+        AND
+               ticket_status_id IN (SELECT id FROM  #__fss_ticket_status as s WHERE is_closed = 0)
+    {endif}
+    
+    {if,status,"all_open",not}
+      {if,status,"all",not}
+        {if,status}
+          AND
+              ticket_status_id = '{status}'
+        {endif}
+      {endif}
+    {endif}
+    
+    {if,product}
+        AND
+            {product}
+    {endif}
+    
+    {if,department}
+        AND
+            {department}
+    {endif}
+
+    {if,user}
+        AND
+            t.user_id = '{user}'
+    {endif}
+      
+    AND
+      lastupdate < DATE_SUB(NOW(), INTERVAL {opened} DAY)
+    
+    {if,handler,"",not}
+        AND
+            admin_id = '{handler}'
+    {endif}
+    
+    {if,group}
+        AND
+            t.user_id IN (SELECT user_id FROM #__fss_ticket_group_members WHERE group_id = '{group}')
+    {endif}
+    
+    AND t.source != 'email' AND t.source != 'email_declined'
+    
+    ORDER BY lastupdate DESC
+]]>
+  </sql>
+
+  <field name="title" span="3" style="font-weight:bold;font-size:110%" link="index.php?option=com_fss&amp;view=admin_support&amp;layout=ticket&amp;ticketid={id}">Title</field>
+  <field name="time">Time</field>
+  <field name="user" nowrap="1" link="index.php?option=com_fss&amp;view=admin_support&amp;searchtype=advanced&amp;what=search&amp;status=&amp;username={ticketusername}">User</field>
+  <field name="reference" row="2">Ref</field>
+  <field name="opened" format="date" style="white-space: nowrap;" dateformat="M j, Y" row="2">Opened</field>
+  <field name="closed" format="date" style="white-space: nowrap;" dateformat="M j, Y" row="2" blank=" --- ">Closed</field>
+  <field name="lastupdate" format="date" style="white-space: nowrap;" dateformat="M j, Y" row="2" blank=" --- ">LAST_UPDATE</field>
+  <field name="handler" row="2" link="index.php?option=com_fss&amp;view=admin_support&amp;searchtype=advanced&amp;what=search&amp;status=&amp;handler={admin_id}">HANDLER</field>
+  <field name="product" row="3" link="index.php?option=com_fss&amp;view=admin_support&amp;searchtype=advanced&amp;what=search&amp;status=&amp;product={prod_id}">PRODUCT</field>
+  <field name="department" row="3" link="index.php?option=com_fss&amp;view=admin_support&amp;searchtype=advanced&amp;what=search&amp;status=&amp;department={ticket_dept_id}">DEPARTMENT</field>
+  <field name="category" row="3" link="index.php?option=com_fss&amp;view=admin_support&amp;searchtype=advanced&amp;what=search&amp;status=&amp;category={ticket_cat_id}">CATEGORY</field>
+  <field name="priority" row="3">PRIORITY</field>
+  <field name="status" style="font-weight:bold;" row="3" link="index.php?option=com_fss&amp;view=admin_support&amp;tickets={ticket_status_id}">STATUS</field>
+
+  <filter>
+    <name>opened</name>
+    <type>normal</type>
+    <field>opened</field>
+    <title>LAST_ACTIVITY</title>
+    <default>7</default>
+    <extra key="1" value="1">YESTERDAY</extra>
+    <extra key="2" value="2">2_DAYS</extra>
+    <extra key="3" value="3">3_Days</extra>
+    <extra key="4" value="4">4_Days</extra>
+    <extra key="5" value="5">5_Days</extra>
+    <extra key="6" value="6">6_Days</extra>
+    <extra key="7" value="7">1_Week</extra>
+    <extra key="14" value="14">2_Week</extra>
+    <extra key="21" value="21">3_Week</extra>
+    <extra key="30" value="30">1_Month</extra>
+  </filter>
+
+  <filter>
+    <name>status</name>
+    <type>normal</type>
+    <sql>SELECT * FROM #__fss_ticket_status</sql>
+    <key>id</key>
+    <translate>1</translate>
+    <display>title</display>
+
+    <default>all_open</default>
+
+    <extra key="all" value="all">ALL_TICKETS</extra>
+    <extra key="all_open" value="all_open">ALL_OPEN</extra>
+
+    <title>STATUS</title>
+  </filter>
+
+  <filter>
+    <name>product</name>
+    <type>lookup</type>
+    <table>#__fss_prod</table>
+    <field>prod_id</field>
+    <translate>1</translate>
+    <key>id</key>
+    <display>title</display>
+    <order>ordering</order>
+    <header>SELECT_PRODUCT</header>
+    <title>PRODUCT</title>
+    <published>1</published>
+  </filter>
+
+  <filter>
+    <name>department</name>
+    <type>lookup</type>
+    <table>#__fss_ticket_dept</table>
+    <field>ticket_dept_id</field>
+    <translate>1</translate>
+    <key>id</key>
+    <display>title</display>
+    <order>title</order>
+    <title>DEPARTMENT</title>
+    <header>SELECT_DEPARTMENT</header>
+  </filter>
+
+  <filter>
+    <name>handler</name>
+    <type>normal</type>
+    <sql>SELECT f.user_id as id, CONCAT(u.name, ' (', u.username, ')') as title FROM #__fss_users as f LEFT JOIN #__users as u ON f.user_id = u.id ORDER BY u.name</sql>
+    <key>id</key>
+    <display>title</display>
+
+    <default>all</default>
+
+    <extra key="" value="">ALL_HANDLERS</extra>
+    <extra key="unassigned" value="0">UNASSIGNED</extra>
+
+    <title>HANDLER</title>
+  </filter>
+
+  <filter>
+    <name>user</name>
+    <type>normal</type>
+    <sql>SELECT u.id, IF(u.id, CONCAT(u.name, ' (', u.username, ')'), 'Unknown') as title FROM #__fss_ticket_ticket as t LEFT JOIN #__users as u ON t.user_id = u.id WHERE t.user_id > 0 AND u.id > 0 GROUP BY u.id ORDER BY u.name</sql>
+    <key>id</key>
+    <display>title</display>
+
+    <default>all</default>
+
+    <extra key="" value="">ALL_USERS</extra>
+    <extra key="0" value="0">UNREGISTERED</extra>
+
+    <title>USER</title>
+  </filter>
+
+  <filter>
+    <name>group</name>
+    <type>normal</type>
+    <sql>SELECT * FROM #__fss_ticket_group ORDER BY groupname</sql>
+    <key>id</key>
+    <display>groupname</display>
+
+    <default></default>
+
+    <extra key="" value="">SELECT_TICKET_GROUP</extra>
+
+    <title>TICKET_GROUP</title>
+  </filter>
+
+  <translate>
+    <field>status</field>
+    <data>status_translation</data>
+    <source>title</source>
+  </translate>
+
+  <translate>
+    <field>category</field>
+    <data>category_translation</data>
+    <source>title</source>
+  </translate>
+
+  <translate>
+    <field>product</field>
+    <data>product_translation</data>
+    <source>title</source>
+  </translate>
+
+  <translate>
+    <field>department</field>
+    <data>department_translation</data>
+    <source>title</source>
+  </translate>
+
+  <translate>
+    <field>priority</field>
+    <data>priority_translation</data>
+    <source>title</source>
+  </translate>
+</report>

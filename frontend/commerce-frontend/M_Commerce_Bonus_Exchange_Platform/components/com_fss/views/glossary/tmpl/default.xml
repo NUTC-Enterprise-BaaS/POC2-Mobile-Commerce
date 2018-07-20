@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="GLOSSARY_LIST_ALL_ARTICLES">
+	  <help url = "http://www.freestyle-joomla.com/comhelp/fss/frontend-view-glossary-default" />
+	  <message></message>
+  </layout>
+  <state>
+    <name>GLOSSARY_LIST_ALL_ARTICLES</name>
+
+    <fields name="params">
+      <fieldset name="main"	label="GLOSSARY_VIEW_SETTINGS">
+        <field name="use_letter_bar" type="list" default="-1" label="GLOSSARY_USE_LETTER_BAR" description="VIEW_HELP_GLOSSARY_USE_LETTER_BAR">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">GLOSSARY_USE_LETTER_BAR_0</option>
+          <option value="1">GLOSSARY_USE_LETTER_BAR_1</option>
+          <option value="2">GLOSSARY_USE_LETTER_BAR_2</option>
+        </field>
+        <field name="long_desc" type="list" default="-1" label="Long Description" description="How should the long description be displayed">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">Inline</option>
+          <option value="1">New Page</option>
+          <option value="2">Read More Toggle</option>
+          <option value="3">Popup</option>
+        </field>
+        <field name="show_search" type="radio" default="-1" label="Show Search" description="">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">jNo</option>
+          <option value="1">jYes</option>
+        </field>
+      </fieldset>
+    </fields>
+  </state>
+</metadata>

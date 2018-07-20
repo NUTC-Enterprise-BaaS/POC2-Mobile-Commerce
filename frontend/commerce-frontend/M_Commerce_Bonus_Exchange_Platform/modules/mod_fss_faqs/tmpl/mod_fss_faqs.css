@@ -1,0 +1,10 @@
+.fss_mod_faqs_cont
+{
+    clear: both;
+    /*border-bottom: 1px solid #E0E0E0;*/
+    padding: 3px;
+}
+.fss_mod_faqs_title
+{
+    cursor: pointer;
+}

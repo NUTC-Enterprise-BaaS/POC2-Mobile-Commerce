@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="socialadspromote" method="upgrade">
+	<name>Social Ads - Promote - EasySocial Profile</name>
+	<creationDate>2016-10-12</creationDate>
+	<version>3.1.4</version>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>http://www.techjoomla.com</authorUrl>
+	<copyright>Copyright (c) 2009-2016 TechJoomla. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>Plugin for Promoting ES Profile</description>
+	<files>
+		<filename plugin="es_profile">es_profile.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB/en-GB.plg_socialadspromote_es_profile.ini</language>
+	</languages>
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="plugin_name" type="text" default="Easy Social Profile" label="PLG_NAME" description="PLG_NAM_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

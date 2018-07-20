@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Administrator: Manage all Orders">
+		<message>
+			<![CDATA[Administrator: Manage all Orders.]]>
+		</message>
+	</layout>
+	<state>
+		<name>Administrator: Manage all Orders</name>
+		<description>Administrator: Manage all Orders at Front-end</description>
+	</state>
+</metadata>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>mod_qrcode_elite</name>
+	<author>Elite Developers</author>
+	<creationDate>August 2013</creationDate>
+	<copyright>Copyright (C) 2013 Elite Developers. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later; see LICENSE.txt</license>
+	<authorEmail>admin@elitewebdev.com</authorEmail>
+	<authorUrl>www.elitewebdev.com</authorUrl>
+	<version>4.2</version>
+	<description>MOD_QRCODE_ELITE_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_qrcode_elite">mod_qrcode_elite.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>license.txt</filename>
+		<folder>tmpl</folder>
+		<folder>fields</folder>
+    </files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_qrcode_elite.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_qrcode_elite.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_qrcode_elite/fields">
+			<fieldset name="basic">
+				<field name="@bloc_top_a" type="a_bloc" start="1" label="QR Code Generator"/>
+					<field name="@bloc_qrtp_a" type="a_bloc" start="1" />
+						<field name="alg" type="radio" class="btn-group" default="text-align:center;" label="MOD_QRCODE_ELITE_ALIGNEMENT" description="MOD_QRCODE_ELITE_SELECT_ALIGNEMENT">
+							<option value="text-align:left;">MOD_QRCODE_ELITE_LEFT</option>
+							<option value="text-align:center;">MOD_QRCODE_ELITE_CENTER</option>
+							<option value="text-align:right;">MOD_QRCODE_ELITE_RIGHT</option>
+							<option value="css">MOD_QRCODE_ELITE_CSS</option>
+						</field>
+						<field name="@slide_css_a" type="a_slide" param="alg" value="css" />
+							<field name="acss" type="text" default="float:left;" label="MOD_QRCODE_ELITE_CSS" description="MOD_QRCODE_ELITE_ENTER_A_CUSTOM_CSS_STYLE"/>
+						<field name="@slide_css_b" type="a_slide" />	
+						
+						<field name="@bloc_blc11_a" type="a_bloc" start="1" />
+							<field name="before"  type="textarea" rows="3" default="" label="MOD_QRCODE_ELITE_TEXT_BEFORE" description="MOD_QRCODE_ELITE_ENTER_YOUR_TEXT_HERE" />
+							<field name="befcss" type="text" default="" label="MOD_QRCODE_ELITE_CSS_BEFORE" description="MOD_QRCODE_ELITE_ENTER_A_CSS_STYLE_FOR_TEXT_BEFORE"/>
+						<field name="@bloc_blc11_b" type="a_bloc" end="1" />
+						<field name="@bloc_blcg1_a" type="a_bloc" start="1" />
+							<field name="ecc" type="list" default="L" label="MOD_QRCODE_ELITE_ECC" description="MOD_QRCODE_ELITE_ERROR_CORRECTION_CAPABILITY">
+								<option value="L">MOD_QRCODE_ELITE_L_SMALLEST</option>
+								<option value="M">MOD_QRCODE_ELITE_M</option>
+								<option value="Q">MOD_QRCODE_ELITE_Q</option>
+								<option value="H">MOD_QRCODE_ELITE_H_BEST</option>
+							</field>
+							<field name="size" type="list" default="4" label="MOD_QRCODE_ELITE_SIZE" description="MOD_QRCODE_ELITE_SELECTE_QR_CODE_SIZE">
+								<option value="1">MOD_QRCODE_ELITE_1</option>
+								<option value="2">MOD_QRCODE_ELITE_2</option>
+								<option value="3">MOD_QRCODE_ELITE_3</option>
+								<option value="4">MOD_QRCODE_ELITE_4</option>
+								<option value="5">MOD_QRCODE_ELITE_5</option>
+								<option value="6">MOD_QRCODE_ELITE_6</option>
+								<option value="7">MOD_QRCODE_ELITE_7</option>
+								<option value="8">MOD_QRCODE_ELITE_8</option>
+								<option value="9">MOD_QRCODE_ELITE_9</option>
+								<option value="10">MOD_QRCODE_ELITE_10</option>
+							</field>
+							<field name="margin" type="list" default="2" label="MOD_QRCODE_ELITE_MARGIN" description="MOD_QRCODE_ELITE_SELECTE_QR_CODE_MARGIN">
+								<option value="0">MOD_QRCODE_ELITE_0</option>
+								<option value="2">MOD_QRCODE_ELITE_2</option>
+								<option value="4">MOD_QRCODE_ELITE_4</option>
+								<option value="6">MOD_QRCODE_ELITE_6</option>
+								<option value="8">MOD_QRCODE_ELITE_8</option>
+								<option value="10">MOD_QRCODE_ELITE_10</option>
+								<option value="12">MOD_QRCODE_ELITE_12</option>
+								<option value="14">MOD_QRCODE_ELITE_14</option>
+								<option value="16">MOD_QRCODE_ELITE_16</option>
+								<option value="18">MOD_QRCODE_ELITE_18</option>
+								<option value="20">MOD_QRCODE_ELITE_20</option>
+							</field>
+							<field name="backcolor" type="color" size="32" default="#ffffff" label="MOD_QRCODE_ELITE_BACKCOLOR" description="MOD_QRCODE_ELITE_SELECT_A_BACKCOLOR" />
+							<field name="forecolor" type="color" size="32" default="#000000" label="MOD_QRCODE_ELITE_FORECOLOR" description="MOD_QRCODE_ELITE_SELECT_A_FORECOLOR" />
+							<field name="qrtype" type="list" default="1" label="MOD_QRCODE_ELITE_QR_CODE_DATA_TYPE" description="MOD_QRCODE_ELITE_SELECTE_WHAT_YOU_WANT_TO_DISPLAY_IN_THE_QR_CODE">
+								<option value="1">MOD_QRCODE_ELITE_PAGE_URL</option>
+								<option value="2">MOD_QRCODE_ELITE_CUSTOM_URL</option>
+								<option value="3">MOD_QRCODE_ELITE_YOUTUBE_VIDEO</option>
+								<option value="4">MOD_QRCODE_ELITE_TEXT</option>
+								<option value="5">MOD_QRCODE_ELITE_PHONE_NUMBER</option>
+								<option value="6">MOD_QRCODE_ELITE_SEND_SMS</option>
+								<option value="8">MOD_QRCODE_ELITE_EMAIL_ADDRESS</option>
+								<option value="9">MOD_QRCODE_ELITE_SEND_EMAIL</option>
+								<option value="10">MOD_QRCODE_ELITE_VCARD</option>
+							</field>											
+							<field name="@slide_sld1_a" type="a_slide" param="qrtype" value="1" />
+								<field name="@bloc_blc1_a" type="a_bloc" start="1" label="Page URL" />
+									<field name="siteurl" type="radio" class="btn-group" default="p" label="MOD_QRCODE_ELITE_SELECT_URL" description="MOD_QRCODE_ELITE_CHOOSE_BETWEEN_CURRENT_PAGE_URL_OR_WEBSITE_ROOT_URL">
+										<option value="p">MOD_QRCODE_ELITE_PAGE_URL</option>
+										<option value="w">MOD_QRCODE_ELITE_WEBSITE_URL</option>
+									</field>
+								<field name="@bloc_blc1_b" type="a_bloc" end="1" />
+							<field name="@slide_sld1_b" type="a_slide" />
+							<field name="@slide_sld2_a" type="a_slide" param="qrtype" value="2" />
+								<field name="@bloc_blc2_a" type="a_bloc" start="1" label="Custom URL" />
+									<field name="customurl" type="URL" size="32" default="http://" label="MOD_QRCODE_ELITE_CUSTOM_URL" description="MOD_QRCODE_ELITE_ENTER_A_VALID_URL" />
+								<field name="@bloc_blc2_b" type="a_bloc" end="1" />
+							<field name="@slide_sld2_b" type="a_slide" />
+							<field name="@slide_sld3_a" type="a_slide" param="qrtype" value="3" />
+								<field name="@bloc_blc3_a" type="a_bloc" start="1" label="Youtube Video" />	
+									<field name="youtube" type="text" size="50" default="http://www.youtube.com/watch?v=" label="MOD_QRCODE_ELITE_YOUTUBE_URL" description="MOD_QRCODE_ELITE_ENTER_A_VALID_YOUTUBE_URL" />
+								<field name="@bloc_blc3_b" type="a_bloc" end="1" />
+							<field name="@slide_sld3_b" type="a_slide" />
+							<field name="@slide_sld4_a" type="a_slide" param="qrtype" value="4" />
+								<field name="@bloc_blc4_a" type="a_bloc" start="1" label="Text" />
+									<field name="text"  type="textarea" rows="3" default="" label="MOD_QRCODE_ELITE_TEXT" description="MOD_QRCODE_ELITE_ENTER_YOUR_TEXT_HERE" />
+								<field name="@bloc_blc4_b" type="a_bloc" end="1" />
+							<field name="@slide_sld4_b" type="a_slide" />
+							<field name="@slide_sld5_a" type="a_slide" param="qrtype" value="5" />
+								<field name="@bloc_blc5_a" type="a_bloc" start="1" label="Phone Number" />
+									<field name="phone" type="text" size="32" default="" label="MOD_QRCODE_ELITE_PHONE_NUMBER" description="MOD_QRCODE_ELITE_ENTER_A_VALID_PHONE_NUMBER" />
+								<field name="@bloc_blc5_b" type="a_bloc" end="1" />
+							<field name="@slide_sld5_b" type="a_slide" />
+							<field name="@slide_sld6_a" type="a_slide" param="qrtype" value="6" />
+								<field name="@bloc_blc6_a" type="a_bloc" start="1" label="Send SMS" />
+									<field name="phonenumber" type="text" size="32" default="" label="MOD_QRCODE_ELITE_PHONE_NUMBER" description="MOD_QRCODE_ELITE_ENTER_A_VALID_PHONE_NUMBER" />
+									<field name="sms" type="text" size="32" default="" maxlength="160" label="MOD_QRCODE_ELITE_SMS" description="MOD_QRCODE_ELITE_ENTER_YOUR_MESSAGE_HERE" />
+								<field name="@bloc_blc6_b" type="a_bloc" end="1" />
+							<field name="@slide_sld6_b" type="a_slide" />
+							<field name="@slide_sld8_a" type="a_slide" param="qrtype" value="8" />
+								<field name="@bloc_blc8_a" type="a_bloc" start="1" label="E-mail" />
+									<field name="email" type="text" size="32" default="" label="MOD_QRCODE_ELITE_EMAIL_ADDRESS" description="MOD_QRCODE_ELITE_ENTER_A_VALID_EMAIL_ADDRESS" />
+								<field name="@bloc_blc8_b" type="a_bloc" end="1" />
+							<field name="@slide_sld8_b" type="a_slide" />
+							<field name="@slide_sld9_a" type="a_slide" param="qrtype" value="9" />
+								<field name="@bloc_blc9_a" type="a_bloc" start="1" label="Send E-mail" />
+									<field name="emailaddr" type="text" size="32" default="" label="MOD_QRCODE_ELITE_EMAIL_ADDRESS" description="MOD_QRCODE_ELITE_ENTER_A_VALID_EMAIL_ADDRESS" />
+									<field name="subject" type="text" size="32" default="" label="MOD_QRCODE_ELITE_SUBJECT" description="MOD_QRCODE_ELITE_ENTER_YOUR_SUBJECT" />
+									<field name="message" type="textarea" rows="3" default="" label="MOD_QRCODE_ELITE_EMAIL_BODY" description="MOD_QRCODE_ELITE_ENTER_YOUR_EMAIL_BODY" />
+								<field name="@bloc_blc9_b" type="a_bloc" end="1" />
+							<field name="@slide_sld9_b" type="a_slide" />	
+							<field name="@slide_sld10_a" type="a_slide" param="qrtype" value="10" />
+								<field name="@bloc_blc10_a" type="a_bloc" start="1" label="Vcard" />
+									<field name="firstname" type="text" size="32" default="" label="MOD_QRCODE_ELITE_FIRST_NAME" description="" />
+									<field name="lastname" type="text" size="32" default="" label="MOD_QRCODE_ELITE_LAST_NAME" description="" />
+									<field name="jobtitle" type="text" size="32" default="" label="MOD_QRCODE_ELITE_JOB_TITLE" description="" />
+									<field name="telephonenumber" type="text" size="32" default="" label="MOD_QRCODE_ELITE_TELEPHONE_NUMBER" description="" />
+									<field name="cellphone" type="text" size="32" default="" label="MOD_QRCODE_ELITE_CELL_PHONE" description="" />
+									<field name="faxnumber" type="text" size="32" default="" label="MOD_QRCODE_ELITE_FAX_NUMBER" description="" />
+									<field name="emailaddress" type="text" size="32" default="" label="MOD_QRCODE_ELITE_EMAIL_ADDRESS" description="" />
+									<field name="website" type="text" size="32" default="" label="MOD_QRCODE_ELITE_WEBSITE_ADDRESS" description="" />
+									<field name="organization" type="text" size="32" default="" label="MOD_QRCODE_ELITE_ORGANIZATION" description="" />
+									<field name="streetaddress" type="text" size="32" default="" label="MOD_QRCODE_ELITE_STREET_ADDRESS" description="" />
+									<field name="city" type="text" size="32" default="" label="MOD_QRCODE_ELITE_CITY" description="" />
+									<field name="state" type="text" size="32" default="" label="MOD_QRCODE_ELITE_STATE" description="" />
+									<field name="zip" type="text" size="32" default="" label="MOD_QRCODE_ELITE_ZIP" description="" />
+									<field name="country" type="text" size="32" default="" label="MOD_QRCODE_ELITE_COUNTRY" description="" />
+								<field name="@bloc_blc10_b" type="a_bloc" end="1" />
+							<field name="@slide_sld10_b" type="a_slide" />
+						<field name="@bloc_blcg1_b" type="a_bloc" end="1" />
+						<field name="@bloc_blc12_a" type="a_bloc" start="1"/>
+							<field name="after"  type="textarea" rows="3" default="" label="MOD_QRCODE_ELITE_TEXT_AFTER" description="MOD_QRCODE_ELITE_ENTER_YOUR_TEXT_HERE" />
+							<field name="aftcss" type="text" default="" label="MOD_QRCODE_ELITE_CSS_AFTER" description="MOD_QRCODE_ELITE_ENTER_A_CSS_STYLE_FOR_TEXT_AFTER"/>			
+						<field name="@bloc_blc12_b" type="a_bloc" end="1" />
+						<field name="mob" type="radio" class="btn-group" default="0" label="MOD_QRCODE_ELITE_BLOCK_QRCODE_ON_MOBILES" description="MOD_QRCODE_ELITE_BLOCK_QRCODE_FROM_MOBILES_AND_TABLETS">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+							<option value="2">MOD_QRCODE_ELITE_SELECTION</option>
+						</field>
+						<field name="@slide_mobi_a" type="a_slide" param="mob" value="2" />
+							<field name="mobsel" type="list" multiple="true" default="" label="MOD_QRCODE_ELITE_SELECT_MOBILE" description="MOD_QRCODE_ELITE_SELECT_WHERE_YOU_WANT_TO_EXCLUDE_QRCODE">
+								<option value="p">MOD_QRCODE_ELITE_PHONE</option>
+								<option value="t">MOD_QRCODE_ELITE_TABLET</option>
+								<option value="a">MOD_QRCODE_ELITE_ANDROID</option>
+								<option value="i">MOD_QRCODE_ELITE_IOS</option>
+							</field>
+						<field name="@slide_mobi_b" type="a_slide" />
+					<field name="@bloc_qrtp_b" type="a_bloc" end="1" />
+				<field name="@bloc_top_b" type="a_bloc" end="1" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="@bloc_adv_a" type="a_bloc" start="1" label="Module Options"/>
+					<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+					<field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+					<field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+						<option	value="1">JGLOBAL_USE_GLOBAL</option>
+						<option	value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+					</field>
+					<field name="@slide_cache_a" type="a_slide" param="cache" value="1" />
+						<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+						<field name="cachemode" type="hidden" default="static">
+							<option value="static"></option>
+						</field>
+					<field name="@slide_cache_b" type="a_slide" />
+				<field name="@bloc_adv_b" type="a_bloc" end="1" />
+				<field name="module" type="hidden" default="qrcode" />
+				<field name="fields" type="hidden" default="fields/qrcode.php" />
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="QRCode Elite Module Update Server">http://www.elitewebdev.com/files/joomla/extensions/qrcode_elite/1/xmls/updatemod.xml</server>
+	</updateservers>
+</extension>
