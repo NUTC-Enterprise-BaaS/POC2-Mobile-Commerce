@@ -25,6 +25,7 @@ Route::post('ldap/point/change', 'LdapController@ldapUserPointChange');
 Route::post('ldap/u2u/useradd', 'LdapController@addLdapU2U');
 Route::post('ldap/showStor', 'LdapController@showUserStor');
 Route::post('ldap/getverifycode', 'LdapController@getverifycode');
+Route::post('ldap/binding/clear', 'LdapController@cleanBinding');
 
 Route::group(['middleware' => 'jwt.auth'], function(){
   Route::get('auth/user', 'AuthController@user');

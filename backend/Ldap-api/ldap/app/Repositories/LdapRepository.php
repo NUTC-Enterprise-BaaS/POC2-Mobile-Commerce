@@ -41,23 +41,46 @@ class LdapRepository
         	$check = tokenVerification::where('verify_code',$params->verify_code)->where('created_at','>',date('Y-m-d H:i:s', strtotime('-1 min')))->first();
 			if($check != null){
 				$token = tokenVerification::where('id',$check->id)->first()->token;
-				$this->url = 'http://'.$this->host.'/api/v1/user/newAccount';
-				$this->curl->setHeader('Accept', 'application/json');
-				$this->curl->setHeader('Content-Type', 'application/json');
-				$this->body = $this->body = '{"point":'.$params->point.',"store":"'.$params->stor.'"}';
-				$this->curl->post($this->url,$this->body);
-				$data = json_decode($this->curl->response);
-				if($data != null){
-					ldapauths::create(["stor"=>$params->stor,"user"=>$params->email,"bc_account"=>$data->message->account,"token"=>$token]);
-					return $token;
+				$user_check = ldapauths::where(["stor"=>$params->stor,"user"=>$params->email])->first();
+				if($user_check != null){
+					$user_check = ldapauths::where(["stor"=>$params->stor,"user"=>$params->email])
+												->update(["token"=>$token]);
+					if($user_check != null){
+						return $token;
+					}else{
+						return 'binding fail';
+					}
 				}else{
-					return 'api fail';
+					$this->url = 'http://'.$this->host.'/api/v1/user/newAccount';
+					$this->curl->setHeader('Accept', 'application/json');
+					$this->curl->setHeader('Content-Type', 'application/json');
+					$this->body = $this->body = '{"point":'.$params->point.',"store":"'.$params->stor.'"}';
+					$this->curl->post($this->url,$this->body);
+					$data = json_decode($this->curl->response);
+					if($data != null){
+						ldapauths::create(["stor"=>$params->stor,"user"=>$params->email,"bc_account"=>$data->message->account,"token"=>$token]);
+						return $token;
+					}else{
+						return 'api fail';
+					}
 				}
 			}else{
 				return "time error";
 			}
 		}else{
 			return "verify_code fail";
+		}
+	}
+	public function cleanBinding($params)
+	{
+		$user_check = ldapauths::where(["stor"=>$params->stor,"user"=>$params->email])->first();
+		if($user_check != null){
+			$token = $this->createToken();
+			$user = ldapauths::where(["stor"=>$params->stor,"user"=>$params->email])
+								->update(["token"=>$token]);
+			return $token;
+		}else{
+			return "user no enable BlockChain";
 		}
 	}
 	public function getAccountPoint($account)
@@ -124,5 +147,15 @@ class LdapRepository
 	    }else{
 	    	$this->createTokeVerifyCode($token);
 	    }
-    }
+	}
+	public function createToken()
+    {
+        $token = str_random(20);
+        $check = ldapauths::where('token',$token)->count();
+        if($check == 0){
+	        return $token;
+	    }else{
+	    	$this->createToken();
+	    }
+	}
 }

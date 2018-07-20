@@ -30,6 +30,34 @@ class LdapController extends Controller
 		            ]);
     	}
     }
+    public function addLdapU2U(Request $request)
+    {
+        $message = $this->LdapRepository->addLdapU2U($request);
+        if($message == "verify_code fail" || $message == "time error" || $message == "api fail"){
+            return response()->json([
+                            "message" => $message
+                        ]);
+        }else{
+            return response()->json([
+                            "message" => "binding success",
+                            "token" => $message
+                        ]);
+        }
+    }
+	public function cleanBinding(Request $request)
+	{
+		$message = $this->LdapRepository->cleanBinding($request);
+		if($message == "user no enable BlockChain"){
+			return response()->json([
+				"message" => $message
+			]);
+		}else{
+			return response()->json([
+				"message" => "binding clean",
+				"token" => $message
+			]);
+		}
+	}
     public function ldapUserPoint(Request $request)
     {
 		$account = ldapauths::where(["stor"=>$request->stor,"user"=>$request->email])->first();
@@ -77,25 +105,11 @@ class LdapController extends Controller
 		    			"list" => $data
 		            ]);
     }
-    public function addLdapU2U(Request $request)
-    {
-        $message = $this->LdapRepository->addLdapU2U($request);
-        if($message == "verify_code fail" || $message == "time error" || $message == "api fail"){
-            return response()->json([
-                            "message" => $message
-                        ]);
-        }else{
-            return response()->json([
-                            "message" => "binding success",
-                            "token" => $message
-                        ]);
-        }
-    }
     public function getverifycode(Request $request)
     {
         $verifycode = $this->LdapRepository->createTokeVerifyCode($request->token);
         return response()->json([
                         "verifycode" => $verifycode
                     ]);
-    }
+	}
 }
