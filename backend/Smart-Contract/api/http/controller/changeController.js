@@ -50,6 +50,7 @@ const transformPointEvent = async(transformPointEvent,txHash,fromAccount,toAccou
     transformPointEvent.watch(function(err, result) {
       if (!err && result.transactionHash == txHash) {
         console.log({
+                'changeTxRecord':txHash,
           			'fromOriginName': contract.getPoint.call({from: fromAccount})[0],
           			'fromPoint': contract.getPoint.call({from: fromAccount})[1].toNumber(),
           			'toOriginName': contract.getPoint.call({from: toAccount})[0],
@@ -58,6 +59,7 @@ const transformPointEvent = async(transformPointEvent,txHash,fromAccount,toAccou
         resolve({
           statusCode:200,
           message:{
+            'changeTxRecord':txHash,
             'fromOriginName': contract.getPoint.call({from: fromAccount})[0],
             'fromPoint': contract.getPoint.call({from: fromAccount})[1].toNumber(),
             'toOriginName': contract.getPoint.call({from: toAccount})[0],
@@ -134,18 +136,19 @@ exports.changePoint = async(ctx)=>{
  取得交換紀錄
  */
 exports.getRecord = async(ctx)=>{
-  const accountAddress = ctx.request.body.account;
+  // const accountAddress = ctx.request.body.account;
   
-  const record = '0x' + getLedgers(accountAddress);
-  console.log('changeTxRecord: '+record);
+  // const record = '0x' + getLedgers(accountAddress);
+  // console.log('changeTxRecord: '+record);
   
-  if(record=='0x') return ctx.body = { message: 'The account have not any Tx in changeBouns Platform.'};
+  // if(record=='0x') return ctx.body = { message: 'The account have not any Tx in changeBouns Platform.'};
 
+  const changeTxHash = ctx.request.body.changeTxHash;
   // eth_getTransactionReceipt
-  const receipt = web3.eth.getTransactionReceipt(record);
+  const receipt = web3.eth.getTransactionReceipt(changeTxHash);
   console.log('changeTxReceipt: '+JSON.stringify(receipt));
   return ctx.body = {
-    changeTxRecord:record,
+    changeTxRecord:changeTxHash,
     fromAccount:receipt['from'],
     fromPoint:parseInt(receipt['logs'][0]['topics'][2],16),
     toAccount:'0x'+receipt['logs'][0]['topics'][1].substr(26,40),
