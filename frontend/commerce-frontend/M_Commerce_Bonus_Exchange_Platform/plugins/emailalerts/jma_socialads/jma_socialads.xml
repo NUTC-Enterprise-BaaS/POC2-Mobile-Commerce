@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="emailalerts" method="upgrade">
+	<name>plg_jma_socialads_name</name>
+	<creationDate>24th Sept 2015</creationDate>
+	<version>3.0.1</version>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>http://www.techjoomla.com</authorUrl>
+	<copyright>(c) Techjoomla</copyright>
+	<version>2.5.5</version>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>PLG_JMA_SOCIALADS_DESC</description>
+	<files>
+		<filename plugin="jma_socialads">jma_socialads.php</filename>
+		<folder>jma_socialads</folder>
+	</files>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_emailalerts_jma_socialads.sys.ini</language>
+		<language tag="en-GB">en-GB.plg_emailalerts_jma_socialads.ini</language>
+	</languages>
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic" label="Plugin Parameters">
+				<field name="plugintitle" type="text" default="PLG_JMA_SOCIALADS_TRANSLATABLE_TITLE" label="PLG_JMA_SOCIALADS_LBL_PLUGIN_TITLE" description="PLG_JMA_SOCIALADS_DESC_PLUGIN_TITLE" />
+				<field name="is_special" type="radio" default="1" label="PLG_JMA_SOCIALADS_LBL_SPL_DISP" description="PLG_JMA_SOCIALADS_DESC_SPL_DISP">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="zone" type="sql" default="1" label="PLG_JMA_SOCIALADS_LBL_SEL_ZONE" query="SELECT id , zone_name FROM #__ad_zone WHERE state = 1 " key_field="id" value_field="zone_name" description="PLG_JMA_SOCIALADS_DESC_SEL_ZONE" />
+				<field name="num_ads" type="text" default="5" class="required validate-numeric inputbox" label="PLG_JMA_SOCIALADS_LBL_NO_OF_ADS" description="PLG_JMA_SOCIALADS_DESC_NO_OF_ADS" />
+				<field name="no_rand" type="radio" default="0" label="PLG_JMA_SOCIALADS_LBL_DISP_RAND" description="PLG_JMA_SOCIALADS_DESC_DISP_RAND">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="owner_ad" type="radio" default="0" label="PLG_JMA_SOCIALADS_LBL_OWN_ADS" description="PLG_JMA_SOCIALADS_DESC_OWN_ADS">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="create" type="radio" default="1" label="PLG_JMA_SOCIALADS_LBL_ADLINK" description="PLG_JMA_SOCIALADS_DESC_ADLINK">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="create_text" type="text" default="Create an Ad" label="PLG_JMA_SOCIALADS_LBL_TEXT_ADLINK" description="PLG_JMA_SOCIALADS_DESC_TEXT_ADLINK" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,22 @@
+.error{color:red;}
+.cptcha{color:red;font-weight:bold; margin:0px; padding0px;}
+.padtxt{margin:0px 8px 0px 5px !important;font-size: 1.5ex;color:red;cursor:pointer}
+.showtxt{margin:3px 0px 0px 0px !important;font-size: 1.5ex;cursor:pointer}
+#laodingdiv{position:absolute; margin:-23px 0px 0px 75px;}
+.regload{position:absolute; margin:-22px 0px 0px 90px;}
+
+
+
+.sp-module ul li {
+ border-bottom: 0px !important;  
+}
+    
+        s{
+            display: inline-block;
+            width: 17px; height: 17px;          
+            background: url(radio.png) no-repeat;
+           
+        }
+        input:checked+s{
+            background: url(radio_check.png) no-repeat;
+        }

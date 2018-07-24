@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<report>
+  <title>DAILY_TICKETS</title>
+  <description>DAILY_TICKETS_DESC</description>
+
+  <sql>    
+<![CDATA[
+
+    SELECT 
+    
+      sum(COALESCE(openedcount, 0)) as openedcount, 
+      sum(COALESCE(closedcount, 0)) as closedcount, 
+      {dategroup_disp} as display, 
+      date
+
+    FROM #__fss_date_day as baseday
+
+    LEFT JOIN 
+      (
+        SELECT count(*) as openedcount, DATE(opened) as opened
+        FROM #__fss_ticket_ticket as t
+        WHERE 
+            opened BETWEEN '{opened_from} 00:00:00' AND '{opened_to} 23:59:59'
+        {if,product}
+            AND
+                {product}
+        {endif}
+        
+        {if,department}
+            AND
+                {department}
+        {endif}
+
+        AND t.source != 'email' AND t.source != 'email_declined'
+        
+        GROUP BY DATE(opened)
+      ) AS opened
+      ON baseday.date = opened.opened
+
+    LEFT JOIN 
+      (
+        SELECT count(*) as closedcount, DATE(closed) as closed
+        FROM #__fss_ticket_ticket as t
+        WHERE 
+            opened BETWEEN '{opened_from} 00:00:00' AND '{opened_to} 23:59:59'
+            
+        {if,product}
+            AND
+                {product}
+        {endif}
+        
+        {if,department}
+            AND
+                {department}
+        {endif}
+        
+        AND t.source != 'email' AND t.source != 'email_declined'
+            
+        GROUP BY DATE(closed)
+      ) AS closed
+      ON baseday.date = closed.closed
+       
+    WHERE 
+    
+    baseday.date BETWEEN '{opened_from} 00:00:00' AND '{opened_to} 23:59:59'
+
+    AND 
+    
+    baseday.date >= (SELECT MIN(opened) as mindate FROM #__fss_ticket_ticket)
+
+    GROUP BY {dategroup}
+    
+    ORDER BY date DESC
+]]>
+
+  </sql>
+
+  <!--<filter>
+    <name>datepreset</name>
+    <type>datepresets</type>
+    <filter>opened</filter>
+    <title>Opened</title>
+    <extra key="">Custom</extra>
+    <extra key="7">Last 7 days</extra>
+    <extra key="30">Last 30 days</extra>
+    <extra key="61">Last 2 Months</extra>
+    <extra key="92">Last 3 Months</extra>
+    <extra key="182">Last 6 Month</extra>
+    <extra key="365">Last Year</extra>
+    <extra key="999999">All Time</extra>
+  </filter>-->
+  
+  <filter>
+    <name>opened</name>
+    <type>daterange</type>
+    <field>opened</field>
+
+    <!--
+    The default date range can be modified on a report by using the default tag. Eg:
+    
+    <default>lastmonth</default>
+    
+    Options: 
+      blank for last 3 months, 
+      lastmonth - last month
+      thismonth - this month
+      lastweek - last week
+      thisweek - this week
+      diff - see example below
+      datetime - see example below
+    
+    Example of using day counts to specify the default date range of the select. 
+    Numbers are how many days ago to display
+    <default>diff</default>
+    <default_from>90</default_from>
+    <default_to>0</default_to>
+
+    datetime type will pass the default_from/to to the DateTime class. An example is:
+    <default>datetime</default>
+    <default_from>first day of last month</default_from>
+    <default_to>last day of last month</default_to>
+    
+    For info on what can be used see http://php.net/manual/en/function.strtotime.php
+    
+    A few examples:
+    -1 week
+    now
+    last monday
+    -->
+  </filter>
+
+  <filter>
+    <name>product</name>
+    <type>lookup</type>
+    <table>#__fss_prod</table>
+    <translate>1</translate>
+    <field>prod_id</field>
+    <key>id</key>
+    <display>title</display>
+    <order>ordering</order>
+    <header>SELECT_PRODUCT</header>
+    <title>PRODUCT</title>
+    <published>1</published>
+  </filter>
+
+  <filter>
+    <name>department</name>
+    <type>lookup</type>
+    <translate>1</translate>
+    <table>#__fss_ticket_dept</table>
+    <field>ticket_dept_id</field>
+    <key>id</key>
+    <display>title</display>
+    <order>title</order>
+    <title>DEPARTMENT</title>
+    <header>SELECT_DEPARTMENT</header>
+  </filter>
+
+  <group>
+    <name>dategroup</name>
+    <type>dategroup</type>
+    <field>date</field>
+    <title>GROUPING</title>
+  </group>
+
+  <field name="display" style="white-space: nowrap;" totalheader="1">PERIOD</field>
+  <field name="date" style="white-space: nowrap;">DATE</field>
+  <field name="openedcount" sum="1">TICKETS_OPENED</field>
+  <field name="closedcount" sum="1">TICKETS_CLOSED</field>
+
+  <totals>1</totals>
+
+  <graph>
+    <xaxis>date</xaxis>
+    <yaxis>openedcount</yaxis>
+    <yaxis2>closedcount</yaxis2>
+  </graph>
+</report>

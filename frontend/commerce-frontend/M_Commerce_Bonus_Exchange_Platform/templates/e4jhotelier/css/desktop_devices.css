@@ -1,0 +1,374 @@
+@media screen and (max-width: 800px) {
+	.menumob-btn {
+		display: block;
+		float: left;
+		display: inline-block;
+		margin: 2em 0 0;
+	}    
+    #menutitlemob {
+        cursor: pointer;
+        display: inline-block;
+        padding: 5px 10px 5px 10px;
+        color: #fff;
+        width: 21px;
+        height: 18px;
+        margin: 0 35px 0 25px;
+        background: url(../images/menumobile_white.png) 5% center no-repeat;
+        border:0;
+    }
+    #tbar-user {
+        text-align: center;
+        min-width: 30% !important;
+        margin: 0px 30px 0px 0;
+        min-height: inherit;
+    }
+   #mainmenu {
+        display: none;
+        float: none;
+        text-align: left;
+        background: #414141;
+    }
+    .menumobile .mainmenu-items .l-inline li > .l-block {
+        top: 34px;
+    }
+    .menumobile .mainmenu-items .moduletable ul > li > a,
+    .menumobile .mainmenu-items .moduletable ul > li > span {
+        color: #fff !important;
+    }
+    #mainmenu .menumobile > .mainmenu-items > .spt-menu {
+        margin: 15px 0 0 !important;
+    }
+    .menumobile .loginmenu {
+        display: block;
+        float: none;
+    }
+    .menumobile .loginmenu h3 {
+        padding: 5px;
+        margin: 10px 0 10px 0;
+    }
+    .menumobile .loginmenu #login-form {
+        top: 30px;
+    }
+    .h-search {
+        position: relative;
+    }
+    #mainmenu .loginmenu h3 {
+        padding: 6px 5px !important;
+    }
+    #mainmenu .e4jsign h3 {
+        background-position: left top;
+    }
+    #mainmenu .l-inline li .l-block > div {
+        background: transparent !important;
+        margin: 0 !important;
+    }
+    .vbmodhorsearchmaindiv form .vbmodhorsearchbookdiv {
+    	float: right;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .fx-menu-slide {
+        animation: none !important;
+        -webkit-animation: none !important;
+        border-bottom: 0;
+        height: auto;
+        position: inherit;
+        top: 0;
+        z-index: 100000;
+    }
+    .fx-menu-slide #tbar-logo .moduletable img {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 715px) {
+    #main {
+        float: none;
+        width: 100% !important;
+        left: 0 !important;
+    }
+    aside {
+        float: none;
+        width: 100% !important;
+    }
+    .grid-box {
+        float: none;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .sidebar .grid-module,
+    #module-box1 .grid-module,
+    footer .grid-module,
+    #subcontent .grid-module,
+    #upcontent .grid-module,
+    #module-box2 .grid-module {
+        width: 100% !important;
+        float: left;
+    }
+    #sidebar-left {
+        left: 0 !important;
+    }
+    #sidebar-right {
+        left: 0 !important;
+    }
+    #tbar-logo,
+    #tbar-logo-center,
+    #tbar-user {
+        display: inline-block;
+        position: relative;
+    }
+    #tbar-user .moduletable,
+    #tbar-user .moduletable_menu {
+        float: none;
+        width: 100%;
+    }
+    #tbar-user .moduletable:last-child,
+    #tbar-user .moduletable_menu:last-child {
+        margin: 0;
+    }
+    #mainmenu {
+        width: 100%;
+    }
+    #mainmenu .l-inline {
+        margin: 5px 0 0;
+    }
+    .blog .cols-3 .items-div-blog {
+        width: 96%;
+    }
+    .slogan-content .slogan-dx,
+    .slogan-content .slogan-sx {
+        display: none;
+    }
+    .slogan-content .slogan-mdl {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar .grid-module,
+    #module-box1 .grid-module,
+    footer .grid-module,
+    #subcontent .grid-module,
+    #upcontent .grid-module,
+    #module-box2 .grid-module {
+        width: 100% !important;
+        float: left;
+    }
+    #slideadv {
+        height: auto !important;
+    }
+    .logorounded {
+        background: transparent;
+    }
+    .triangle-search {
+        display: none;
+    }
+    .h-search .moduletable {
+        padding: 18px 20px;
+    }
+}
+/* Desktops and laptops ----------- */
+
+@media only screen and (min-width: 1224px) {
+    .loginmenu .e4jaccountmanagercont {
+        left: auto;
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .hp-ext {
+        width: 18%;
+    }
+    .hp-ext-front,
+    .hp-ext-back {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1010px) {
+    .hp-ext {
+        width: 32%;
+    }
+    .e4j-promo-top {
+        font-size: 4vw;
+    }
+    .e4j-promo-bottom {
+        font-size: 7vw;
+        margin: 0;
+        line-height: 1em;
+    }
+}
+
+@media only screen and (max-width: 886px) {
+    .hp-ext {
+        width: 25%;
+    }
+    .activities-cnt-inner, .activities-cnt-inner:last-child {
+   		margin: 80px 0 0;
+   		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 1014px) {
+    .va-area-block {
+        width: 41%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .va-area-block {
+        width: 92%;
+    }
+    .mainmenu-icons {
+        width: 100%;
+        float: left;
+        display: inline-block;
+        margin: 5px 27px 0 0px;
+    }
+    .e4jsign-rsz > .e4jaccountmanagercont {
+        right: auto;
+        left: -33px !important;
+    }
+    .e4jsign-rsz > .e4jcartcontent {
+        right: auto;
+        left: 0 !important;
+    }
+    .e4jsign-rsz > #login-form {
+        right: auto !important;
+        left: -30px;
+    }
+    .va-inbox-mess-left {
+        width: 100%;
+    }
+    .va-inbox-mess-right {
+        width: 100%;
+    }
+    .va-inbox-unread .va-inbox-mess-right,
+    .va-inb-read .va-inbox-mess-right {
+        border: 0;
+    }
+    .va-prmess-block {
+        width: 89%;
+    }
+    .va-prmess-leftside,
+    .va-prmess-rightside {
+        width: 100%;
+    }
+    .va-prmess-tareasubmit-leftblock {
+        margin: 15px 0 0;
+        display: inline-block;
+    }
+    .va-uposts-imgblock {
+        width: 100%;
+    }
+    .violauser {
+        width: 92%;
+    }
+    .va-prmess-cell-left {
+        width: 100%;
+        text-align: left;
+        margin: 5px 0 5px 0;
+    }
+    .productdetails-view .e4j-prod-cart-cont {
+        width: 100%;
+    }
+    .product-related-products .product-field-type-R {
+        width: 88%;
+        margin: 4px 0;
+    }
+    .productdetails-view .product-description {
+        width: 99%;
+    }
+    .e4jproductsinfo-tabs-block {
+        width: 100%;
+        float: none;
+    }
+    .e4jproductsinfo-tabcont {
+        padding: 0 0 0 5px;
+    }
+    .e4jproductsinfo-contents {
+        width: 100%;
+    }
+    .e4j-prod-details-content .main-image img {
+        width: 100%;
+        height: auto;
+    }
+    .e4j-promo-inner {
+        height: 150px;
+    }
+    .e4j-promo-top {
+        padding: 53px 0 0;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .hp-ext {
+        width: 74%;
+        padding: 16px 70px 51px;
+        height: 270px;
+    }
+    .vikrentcarheader,
+    .vikeventsheader,
+    .vikrentitemsheader,
+    .vikrestaurantsheader,
+    .vikappointmentsheader,
+    .vikbookingheader {
+        background: none;
+    }
+    .slogan-message {
+        font-size: 7vw;
+    }
+    .e4jproductsinfo-contents img {
+        width: 100%;
+        height: auto;
+    }
+    #main .vikbookingheader h2,
+    #main .vikeventsheader h2,
+    #main .vikrentcarheader h2,
+    #main .vikrentitemsheader h2,
+    #main .vikrestaurantsheader h2,
+    #main .vikappointmentsheader h2,
+    #main .vikcmheader h2 {
+        margin: 5px 0 15px;
+    }
+}
+
+@media only screen and (max-device-width: 550px) {
+    .hp-ext {
+        width: 77%;
+        padding: 16px 30px 51px;
+        height: 270px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .browse-view .product.width33,
+    .category-view .category.width33 {
+        width: 100% !important;
+        margin: 4px 0 !important;
+    }
+    .e4j-prod-details-content .width50 {
+        width: 100%;
+    }
+    .slogan-mdl {
+        display: none !important;
+    }
+    .slogan-content {
+        padding: 40px 0 35px !important;
+    }
+    .slogan-background {
+        height: auto;
+    }
+    .va-area-block {
+        width: 87%;
+    }
+}
+/***** Vik Content Slider ****/
+
+.vikcs-slide h2 {
+    font-size: 2em;
+    top: 9%;
+}

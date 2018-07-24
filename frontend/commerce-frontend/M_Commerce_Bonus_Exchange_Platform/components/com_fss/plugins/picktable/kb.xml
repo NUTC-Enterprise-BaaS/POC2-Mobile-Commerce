@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<plugin>
+  <table>
+    <display>KB_ARTICLE</display>
+    <sql>SELECT a.*, c.title as category FROM #__fss_kb_art as a LEFT JOIN #__fss_kb_cat as c ON a.kb_cat_id = c.id</sql>
+
+    <use_auth published="a.published" access="a.access" author="a.author" />
+
+    <addbtntext>SELECT_KB_ARTICLE</addbtntext>
+
+    <!-- default ordering field -->
+    <ordering>a.title</ordering>
+
+    <!-- field that is the id -->
+    <keyfield>id</keyfield>
+    <displayfield>title</displayfield>
+
+    <link>index.php?option=com_fss&amp;view=kb&amp;kbartid=%ID%</link>
+
+    <!-- filters at the top of the page -->
+    <filters>
+      <!-- what fields to search on -->
+
+      <search>
+        <field>a.title</field>
+      </search>
+
+      <!-- published filter -->
+      <filter id="category" type="lookup" field="a.kb_cat_id">
+        <sql>SELECT id, title FROM #__fss_kb_cat ORDER BY title</sql>
+        <key>id</key>
+        <display>title</display>
+        <heading>Select Category</heading>
+
+      </filter>
+
+    </filters>
+
+    <!-- what fields to display -->
+    <displayfields>
+      <field link="1" name="title" id="JGLOBAL_TITLE" type="string" sort="a.title" />
+      <field name="category" id="Category" type="string" sort="c.title" />
+    </displayfields>
+  </table>
+</plugin>

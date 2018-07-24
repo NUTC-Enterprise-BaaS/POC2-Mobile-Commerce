@@ -1,0 +1,129 @@
+a {
+  color: #3d449a;
+}
+a:hover {
+  color: #2f3475;
+}
+.sp-megamenu-parent >li.active>a,
+.sp-megamenu-parent >li:hover>a {
+  color: #fff;
+  background: #3d449a;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item >a:hover {
+  background: #5058ba;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active>a {
+  background: #5058ba;
+  color: #fff;
+}
+#offcanvas-toggler >i {
+  color: #000000;
+}
+#offcanvas-toggler >i:hover {
+  color: #3d449a;
+}
+.btn-primary,
+.sppb-btn-primary {
+  background-color: #1679c3;
+  border-color: #0e4e7e;
+}
+.btn-primary:hover,
+.sppb-btn-primary:hover {
+  background-color: #136bac;
+  border-color: #0b4067;
+}
+ul.social-icons >li a:hover {
+  color: #3d449a;
+}
+.sp-page-title {
+  background-color: #3d449a;
+  background: #3d449a url("../images/bg_title.png");
+}
+.layout-boxed .body-innerwrapper {
+  background: #ffffff;
+}
+.sp-module ul >li >a {
+  color: #000000;
+}
+.sp-module ul >li >a:hover {
+  color: #3d449a;
+}
+.sp-module .latestnews >div >a {
+  color: #000000;
+}
+.sp-module .latestnews >div >a:hover {
+  color: #3d449a;
+}
+.sp-module .tagscloud .tag-name:hover {
+  background: #3d449a;
+}
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li.active > a,
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li > a:hover {
+  background: rgba(0,0,0,0);
+  border: 1px solid #000000;
+  border-radius: 0;
+  color: #000000;
+}
+.search .btn-toolbar button {
+  background: #3d449a;
+}
+.pager li>a {
+  border-radius: 0;
+}
+.pager li>a:hover {
+  background-color: #000000;
+  color: #fff !important;
+  border-color: #000000;
+}
+.post-format {
+  background: #3d449a;
+}
+.voting-symbol span.star.active:before {
+  color: #3d449a;
+}
+.sp-rating span.star:hover:before,
+.sp-rating span.star:hover ~ span.star:before {
+  color: #2f3475;
+}
+.entry-link,
+.entry-quote {
+  background: #3d449a;
+}
+blockquote {
+  border-color: #3d449a;
+}
+.carousel-left:hover,
+.carousel-right:hover {
+  background: #3d449a;
+}
+#sp-footer {
+  background: #3d449a;
+  border-top: 1px solid #535353;
+}
+.sp-comingsoon body {
+  background-color: #3d449a;
+}
+.pagination>li>a,
+.pagination>li>span {
+  border-radius: 0;
+  padding: 8px 18px;
+  color: #000000;
+}
+.pagination>li>a:hover,
+.pagination>li>a:focus,
+.pagination>li>span:hover,
+.pagination>li>span:focus {
+  color: #000000;
+}
+.pagination>.active>a,
+.pagination>.active>span {
+  border-color: #3d449a;
+  background-color: #3d449a;
+}
+.pagination>.active>a:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:hover,
+.pagination>.active>span:focus {
+  border-color: #3d449a;
+  background-color: #3d449a;
+}

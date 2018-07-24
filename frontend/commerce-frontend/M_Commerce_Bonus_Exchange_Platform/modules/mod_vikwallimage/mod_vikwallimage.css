@@ -1,0 +1,24 @@
+.vikwallimage-container { 
+	display: inline-block;
+	width: 100%;
+}
+.vikwallimage-inner {
+	background-attachment: fixed;
+    background-position: center top;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+}
+.vikwallimage-mask {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.vikwallimage-desc {
+	position: relative;
+    z-index: 1000000;
+    color: #fff;
+    top: 20%;
+}

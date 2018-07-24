@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="socialadspromote" method="upgrade">
+	<name>Social Ads - Promote - CB Profile</name>
+	<creationDate>2016-10-12</creationDate>
+	<version>3.1.4</version>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>http://www.techjoomla.com</authorUrl>
+	<copyright>Copyright (c) 2009-2016 TechJoomla. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>Plugin for Promoting a List for CB</description>
+	<files>
+		<filename plugin="cb_profile">cb_profile.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB/en-GB.plg_socialadspromote_cb_profile.ini</language>
+	</languages>
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/media/com_sa/fields">
+				<field name="plugin_name" type="text" default="CB Profile" label="PLG_NAM" description="PLG_NAM_DESC" />
+				<field name="cb_field" type="cbfields" default="" label="PLG_SA_PROMOTE_CB_PROFILE_FIELD_NAM" description="PLG_SA_PROMOTE_CB_PROFILE_FIELD_NAM_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

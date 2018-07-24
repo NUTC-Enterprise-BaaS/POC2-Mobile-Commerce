@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="1.8.4" method="upgrade">
+	<name>AC Common installer package</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>www.techjoomla.com</authorUrl>
+	<copyright>Copyright(C)2012-16 TechJoomla</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>22 Apr 2016</creationDate>
+	<version>1.8.4</version>
+	<packagename>ac_common</packagename>
+	<packager>AppCarvers Team</packager>
+	<description>
+	</description>
+	<files>
+		<file type="component" id="com_api">com_api.zip</file>
+		<file type="component" id="com_acmanager">com_acmanager.zip</file>
+	</files>
+	<scriptfile>script.pkg_ac_common.php</scriptfile>
+	<updateservers>
+		<server type="collection" priority="1" name="ac_api_installer"><![CDATA[http://appcarvers.com/component/ars/updates/packages?format=xml&dummy=extension.xml]]></server>
+	</updateservers>
+	
+</extension>
+
+

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.herbhousesgobuyother">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--<uses-permission android:name="android.permission.CAMERA" />-->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.WRITE_EXTERNAL_STORAGE"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.CALL_PHONE"
+        android:required="false" />
+
+    <permission
+        android:name="com.herbhousesgobuyother.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.herbhousesgobuyother.permission.C2D_MESSAGE" />
+    <permission
+        android:name="com.herbhousesgobuyother"
+        android:protectionLevel="normal" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme">
+
+        <activity
+            android:name=".contrube.view.premium.ActivityPremiumSelectLogo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.premium.ActivityPremiumSelectPicAll"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.premium.ActivityPremiumSelectPicSingle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.special.ActivitySpecialSelectLogo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.special.ActivitySpecialSelectPicAll"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.special.ActivitySpecialSelectPicSingle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.normal.ActivityNormalRegisterRecommend"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.special.ActivitySpecialSetRecommend"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.normal.ActivityNormalSetRecommend"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.guest.ActivityLogin"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contrube.view.special.ActivitySpecialAdvertisement"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.premium.ActivityPremiumAdvertisement"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.normal.ActivityNormalAdvertisement"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.guest.ActivityRegister"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.normal.ActivityQrcode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.guest.ActivityForgetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.special.ActivitySpecialRegister"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.special.ActivitySpecialRegisterRecommend"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.premium.ActivityPremiumRegister"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.premium.ActivityPremiumRegisterRecommend"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.premium.ActivityPremiumSetRecommend"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contrube.view.guest.ActivityForgetChangePwd"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".contrube.temporarydevelop.TemporaryDevelopActivity"
+            android:screenOrientation="portrait">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".contrube.core.StubFragmentActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".contrube.service.RegistrationIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".contrube.service.TokenGetService" />
+
+        <!--audio setting-->
+        <receiver android:name=".contrube.broadcastreceiver.AudioBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+        <activity
+            android:name=".ui.send.SendActivity"
+            android:screenOrientation="portrait" />
+
+
+        <service android:name=".service.ScratChcardService" />
+
+        <service android:name=".service.TokenGetService" />
+
+        <provider
+            android:name="com.androidlibrary.module.AccountProvider"
+            android:authorities="com.herbhousesgobuyother"
+            android:exported="true"
+            android:multiprocess="true"
+            android:permission="com.herbhousesgobuyother"
+            android:readPermission="com.herbhousesgobuyother"
+            android:writePermission="com.herbhousesgobuyother" />
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.herbhousesgobuyother" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.RegistrationIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".service.GCMListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".service.MyInstanceIDListenerService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+
+        <!--google map key-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAqZ4c7Dw5IMqnwD22fKkX0SjdZGcX6F4s" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:screenOrientation="portrait"
+            android:value="@string/app_id" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationName"
+            android:value="@string/app_name" />
+
+        <!--<provider-->
+            <!--android:name="com.facebook.FacebookContentProvider"-->
+            <!--android:authorities="com.facebook.app.FacebookContentProvider1053181544771323"-->
+            <!--android:exported="true" />-->
+
+    </application>
+
+
+</manifest>

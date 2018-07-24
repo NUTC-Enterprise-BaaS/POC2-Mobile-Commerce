@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/backounLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <PercentRelativeLayout
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        app:layout_heightPercent="60%"
+        app:layout_widthPercent="90%"/>
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@id/content"
+        app:layout_heightPercent="6%"
+        app:layout_marginLeftPercent="15%"
+        app:layout_marginTopPercent="5%"
+        app:layout_widthPercent="70%"/>
+
+    <RelativeLayout
+        android:id="@+id/phoneEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/title"
+        app:layout_heightPercent="13%"
+        app:layout_widthPercent="75%"
+        app:layout_marginTopPercent="4%"
+        android:layout_centerHorizontal="true"
+        />
+
+    <RelativeLayout
+        android:id="@+id/emailEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/phoneEdit"
+        app:layout_heightPercent="13%"
+        app:layout_widthPercent="75%"
+        app:layout_marginTopPercent="1%"
+        android:layout_centerHorizontal="true"
+        />
+
+    <RelativeLayout
+        android:id="@+id/left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/emailEdit"
+        app:layout_heightPercent="11%"
+        app:layout_marginLeftPercent="15%"
+        app:layout_widthPercent="20%"
+        android:background="@color/cardview_light_background"/>
+
+    <RelativeLayout
+        android:id="@+id/right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/emailEdit"
+        app:layout_heightPercent="11%"
+        app:layout_marginLeftPercent="65%"
+        app:layout_widthPercent="20%"
+        android:background="@color/cardview_light_background"/>
+
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,35 @@
+// Bootstrap missing elements
+
+// Add stuff in here if the styling is missing from your templates bootstrap implementation
+
+// Comment if your template includes the relevent css
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "variables.parsed.less";
+@import "mixins.less";
+
+.fss_main 
+{
+		@import "media.less";
+	@import "pagination-sizing.less";
+	
+	
+	// Override the image based icons
+	}
+
+// needed for some other templates, but not all
+// default yes! (Rt- yes, yoo - no)
+// This seems to work fine when allways included so keep it in!
+@import "modal-core.less";
+
+.collapse {
+  position:relative;
+  height:0;
+  overflow:hidden;
+  -webkit-transition:height 0.35s ease;
+  -moz-transition:height 0.35s ease;
+  -o-transition:height 0.35s ease;
+  transition:height 0.35s ease;
+}
+.collapse.in {
+  height:auto;
+}

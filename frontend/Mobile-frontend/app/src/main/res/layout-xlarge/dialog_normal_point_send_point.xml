@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_normal_point_background">
+
+    <RelativeLayout
+        android:layout_width="@dimen/fragment_normal_point_dialog_background_width"
+        android:layout_height="@dimen/fragment_normal_point_dialog_background_height"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/fragment_normal_point_dialog_title_text"
+            android:layout_width="@dimen/fragment_normal_point_dialog_title_text_width"
+            android:layout_height="@dimen/fragment_normal_point_dialog_title_text_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/fragment_normal_point_dialog_title_text_margin_top"
+            android:gravity="center"
+            android:text="@string/point_layout_send"
+            android:textColor="@color/MainFragmentNormalPointDialogTextColor"
+            android:textSize="@dimen/fragment_normal_point_dialog_title_text_text_size"/>
+
+        <EditText
+            android:id="@+id/fragment_normal_point_dialog_input_point_edit"
+            android:layout_width="@dimen/fragment_normal_point_dialog_title_text_width"
+            android:layout_height="@dimen/fragment_normal_point_dialog_title_text_height"
+            android:layout_below="@id/fragment_normal_point_dialog_title_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/fragment_normal_point_dialog_title_text_margin_top"
+            android:background="@drawable/layout_normal_point_edit_background"
+            android:gravity="center"
+            android:hint="@string/point_dialog_hint_point"
+            android:inputType="number"
+            android:textColor="@color/MainFragmentNormalPointDialogTextColor"
+            android:textSize="@dimen/fragment_normal_point_dialog_edit_size"/>
+
+        <EditText
+            android:id="@+id/fragment_normal_point_dialog_input_phone_edit"
+            android:layout_width="@dimen/fragment_normal_point_dialog_title_text_width"
+            android:layout_height="@dimen/fragment_normal_point_dialog_title_text_height"
+            android:layout_below="@id/fragment_normal_point_dialog_input_point_edit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/fragment_normal_point_dialog_edit_margin_top"
+            android:background="@drawable/layout_normal_point_edit_background"
+            android:gravity="center"
+            android:hint="@string/point_dialog_hint_phone"
+            android:inputType="number"
+            android:textColor="@color/MainFragmentNormalPointDialogTextColor"
+            android:textSize="@dimen/fragment_normal_point_dialog_edit_size"/>
+
+        <EditText
+            android:id="@+id/fragment_normal_point_dialog_input_email_edit"
+            android:layout_width="@dimen/fragment_normal_point_dialog_title_text_width"
+            android:layout_height="@dimen/fragment_normal_point_dialog_title_text_height"
+            android:layout_below="@id/fragment_normal_point_dialog_input_phone_edit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/fragment_normal_point_dialog_edit_margin_top"
+            android:background="@drawable/layout_normal_point_edit_background"
+            android:gravity="center"
+            android:hint="@string/point_dialog_hint_email"
+            android:maxLines="1"
+            android:textColor="@color/MainFragmentNormalPointDialogTextColor"
+            android:textSize="@dimen/fragment_normal_point_dialog_edit_size"/>
+
+        <Button
+            android:id="@+id/fragment_normal_point_dialog_cancle_button"
+            android:layout_width="@dimen/fragment_normal_point_dialog_button_width"
+            android:layout_height="@dimen/fragment_normal_point_dialog_title_text_height"
+            android:layout_alignLeft="@id/fragment_normal_point_dialog_input_email_edit"
+            android:layout_below="@id/fragment_normal_point_dialog_input_email_edit"
+            android:layout_marginTop="@dimen/fragment_normal_point_dialog_title_text_margin_top"
+            android:background="@drawable/layout_normal_point_button_background"
+            android:text="@string/point_dialog_cancel"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/fragment_normal_point_dialog_edit_size"/>
+
+        <Button
+            android:id="@+id/fragment_normal_point_dialog_submit_button"
+            android:layout_width="@dimen/fragment_normal_point_dialog_button_width"
+            android:layout_height="@dimen/fragment_normal_point_dialog_title_text_height"
+            android:layout_alignRight="@id/fragment_normal_point_dialog_input_email_edit"
+            android:layout_below="@id/fragment_normal_point_dialog_input_email_edit"
+            android:layout_marginTop="@dimen/fragment_normal_point_dialog_title_text_margin_top"
+            android:background="@drawable/layout_normal_point_button_background"
+            android:text="@string/point_dialog_next"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/fragment_normal_point_dialog_edit_size"/>
+    </RelativeLayout>
+</RelativeLayout>

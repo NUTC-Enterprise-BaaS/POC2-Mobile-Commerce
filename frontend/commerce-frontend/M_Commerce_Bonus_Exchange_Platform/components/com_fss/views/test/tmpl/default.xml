@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="TESTIMONIALS_LIST">
+		<help url = "http://www.freestyle-joomla.com/comhelp/fss/frontend-view-test-default" />
+		<message></message>
+	</layout>
+	<state>
+		<name>TESTIMONIALS_LIST</name>
+
+		<url addpath="/administrator/components/com_fss/elements">
+			<param name="prodid" type="sql" default="" label="TEST_SEL_PROD" query="(SELECT -1 as id, 'All Products' as title) UNION (SELECT 0 as id, 'General Testimonials' as title) UNION (SELECT id, title FROM #__fss_prod ORDER BY ordering)" key_field="id" value_field="title" />
+		</url>
+
+		<params>
+			<param name="test_show_prod_mode" type="-1" default="accordian" label="TEST_SHOW_PROD_MODE" description="VIEWHELP_TEST_SHOW_PROD_MODE">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="list">TEST_SHOW_PROD_MODE_LIST</option>
+				<option value="inline">TEST_SHOW_PROD_MODE_INLINE</option>
+				<option value="accordian">TEST_SHOW_PROD_MODE_ACCORDIAN</option>
+			</param>
+			<param name="test_pages" type="radio" default="-1" label="TEST_PAGES" description="VIEWHELP_TEST_PAGES">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="0">jNo</option>
+				<option value="1">jYes</option>
+			</param>
+			<param name="test_always_prod_select" type="radio" default="-1" label="TEST_ALWAYS_PROD_SELECT" description="VIEWHELP_TEST_ALWAYS_PROD_SELECT">
+        <option value="-1">USE_GLOBAL</option>
+        <option value="0">jNo</option>
+				<option value="1">jYes</option>
+			</param>
+		</params>
+
+		<fields name="request">
+			<fieldset name="request">
+				<field name="prodid" type="sql" default="" label="TEST_SEL_PROD" query="(SELECT -1 as id, 'All Products' as title) UNION (SELECT 0 as id, 'General Testimonials' as title) UNION (SELECT id, title FROM #__fss_prod ORDER BY ordering)" key_field="id" value_field="title" />
+			</fieldset>
+		</fields>
+
+		<fields name="params">
+      <fieldset name="adding" label="Create Testimonials">
+        <field name="hide_add" type="radio" default="0" label="Hide Add Testimonial button" description="Hide the add button">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+      </fieldset>
+			<fieldset name="mainpage" label="TEST_WHEN_SHOWING_PRODUCT_LIST">
+				<field name="test_show_prod_mode" type="list" default="-1" label="TEST_SHOW_PROD_MODE" description="VIEWHELP_TEST_SHOW_PROD_MODE">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="list">TEST_SHOW_PROD_MODE_LIST</option>
+          <option value="inline">TEST_SHOW_PROD_MODE_INLINE</option>
+          <option value="accordian">TEST_SHOW_PROD_MODE_ACCORDIAN</option>
+        </field>
+				<field name="test_pages" type="radio" default="-1" label="TEST_PAGES" description="VIEWHELP_TEST_PAGES">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">jNo</option>
+					<option value="1">jYes</option>
+				</field>
+				<field name="test_always_prod_select" type="radio" default="-1" label="TEST_ALWAYS_PROD_SELECT" description="VIEWHELP_TEST_ALWAYS_PROD_SELECT">
+          <option value="-1">USE_GLOBAL</option>
+          <option value="0">jNo</option>
+					<option value="1">jYes</option>
+				</field>
+			</fieldset>
+		</fields>
+	</state>
+</metadata>

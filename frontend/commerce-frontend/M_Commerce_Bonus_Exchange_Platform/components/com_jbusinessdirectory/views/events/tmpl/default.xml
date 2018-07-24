@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_J_BUSINESSDIRECTORY_MENUITEM_EVENTS">
+		<message>COM_J_BUSINESSDIRECTORY_MENUITEM_EVENT_INFO</message>
+	</layout>
+
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_jbusinessdirectory/models/fields">
+			<field
+				name="menuCategoryId"
+				type="businesscategories"
+				multiple="false"
+				size="10"
+				default=""
+				category_type="3"
+				label="Category"
+				description="Select category" >
+			</field>
+			
+			<field
+				name="citySearch"
+				type="businesscities"
+				multiple="false"
+				size="10"
+				default=""
+				label="City"
+				description="Select city" >
+			</field>	
+			
+			<field
+				name="regionSearch"
+				type="text"
+				label="Region"
+				description="Enter the name of the region" />
+		
+			<field name="resetSearch" type="radio" class="btn-group btn-group-yesno" default="1" label="Reset search" description="Reset search when the menu item is accessed">
+				  <option value="0">No</option>
+				  <option value="1">Yes</option>
+				</field>
+		</fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_fragment_gcm_record_name_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/layout_record_stroke_blue"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/item_fragment_gcm_record_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/ColorGeneralTheme"
+        android:textSize="15sp" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/item_fragment_gcm_record_time"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_toRightOf="@id/item_fragment_gcm_record_name"-->
+    <!--android:text="2016/11/24 09:04:57"-->
+    <!--android:layout_marginEnd="@dimen/fragment_gcm_record_item_margin_right"-->
+    <!--android:layout_marginRight="@dimen/fragment_gcm_record_item_margin_right"-->
+    <!--android:ellipsize="end"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:maxLines="1"-->
+    <!--android:textColor="@color/ColorBlack"-->
+    <!--android:textSize="@dimen/fragment_gcm_record_item_text_size"/>-->
+
+
+</RelativeLayout>

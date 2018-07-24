@@ -1,0 +1,10 @@
+<?php
+/**
+ * @package    Shipping Fee Per Vendor for Joomla! HikaShop/HikaMarket
+ * @version    {__VERSION__}
+ * @author     Obsidev S.A.R.L.
+ * @copyright  (C) 2011-{__YEAR__} OBSIDEV. All rights reserved.
+ * @license    GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ */
+defined('_JEXEC') or die('Restricted access');
+?>

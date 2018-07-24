@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+  <fields name="conditions" label="Conditions">
+
+    <fieldset name="conditions" label="">
+      <field
+				name="label1"
+				type="fssstatic"
+				class="btn-group btn-group-yesno"
+				label=""
+				description=""
+        default="0">
+        <content>Limit how many tickets a user can open in a given timeframe.</content>
+      </field>
+
+      <field
+				name="enabled"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="Enabled"
+				description="Send email to admins when custom field changes"
+        default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+
+      <field
+				name="group"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="Include group members"
+				description="Conunt tickets by all other members in this users ticket groups"
+        default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+
+      <field
+         name="max_tickets"
+         type="text"
+         class="btn-group btn-group-yesno"
+         label="Max Tickets"
+         description="Maximum open tickets"
+         />
+
+      <field
+        name="type"
+        type="list"
+				class="btn-group btn-group-yesno"
+        label="When"
+        description=""
+        useglobal="1">
+        <option value="thisweek">This Week</option>
+        <option value="thismonth">This Month</option>
+        <option value="lastdays">Last xx days</option>
+        <option value="lastweeks">Last xx weeks</option>
+        <option value="lastmonths">Last xx months</option>
+      </field>
+
+      <field
+         name="type_count"
+         type="text"
+         class="btn-group btn-group-yesno"
+         label="Count (when xx above)"
+         description="How many days, weeks or months (from above)"
+         />
+
+      <field name="spacer" type="fssspacer" label="" />
+    </fieldset>
+  </fields>
+
+  <fields name="message" label="Message">
+
+    <fieldset name="message" label="">
+      <field
+				name="label1"
+				type="fssstatic"
+				class="btn-group btn-group-yesno"
+				label=""
+				description=""
+        default="0">
+        <content>Message to display when user has reached the max number of tickets</content>
+      </field>
+
+      <field
+         name="subject"
+         type="text"
+         class="btn-group btn-group-yesno"
+         label="Title"
+         description="Page title"
+         />
+
+      <field
+         name="message"
+         type="editor"
+         class="btn-group btn-group-yesno"
+         label="Message"
+         description="Message"
+         />
+      
+      <field
+				name="label2"
+				type="fssstatic"
+				class="btn-group btn-group-yesno"
+				label=""
+				description=""
+        default="0">
+        <content>Within the message, {count} will be replaced with the number of tickets opened in the timeframe.</content>
+      </field>
+
+    </fieldset>
+
+
+  </fields>
+
+  <fields name="custom" label="Custom PHP">
+    <fieldset name="custom">
+
+      <field
+        name="label1"
+        type="fssstatic"
+        class="btn-group btn-group-yesno"
+        label=""
+        description=""
+        default="0">
+        <content>Use your own php code to determine if the user can open a ticket or not.</content>
+      </field>
+
+      <field
+				name="custom"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="Use custom code"
+				description="Enter php code below to fully customize."
+        default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+
+      <field
+         name="php"
+         type="fsseditor"
+         class="btn-group btn-group-yesno"
+         label="Code"
+         description="Code"
+         code="1"
+         codetype="text/x-php"
+         />
+
+      <field
+        name="label2"
+        type="fssstatic"
+        class="btn-group btn-group-yesno"
+        label=""
+        description=""
+        default="0">
+        <content>
+        <![CDATA[
+        <h4>The following variables will be passed to your code:</h4>
+          <ul>
+            <li><b>$type</b> - set to 'without' for an unregisterd ticket</li>
+            <li><b>$email</b> - email of unregistered user</li>
+            <li><b>$name</b> - name of unregistered user</li>
+          </ul>
+        <h4>Results</h4>
+        <p>Return either true or false from your code to decide if the user can open a ticket or not.</p>
+        <p>If you return a string, then it will be classed as a false, and the string will be displayed instead of the message body.</p>
+        <p>Return an array with 'title' and 'body' in it to override both the title and message body of the displayed page</p>
+        <h4>Example</h4>
+        <p>An example that will only allow unregistered users with a gmail.com email to open tickets:</p>
+        <pre>if ($type != "without")
+    return true;
+if (strpos($email, "gmail.com") !== false)
+    return true;
+            
+return array('title' => 'Address not allowed', 'body' => 'Only gmail addresses allowed');</pre></code>
+        ]]></content>
+      </field>
+
+
+    </fieldset>
+  </fields>
+</form>

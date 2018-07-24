@@ -1,0 +1,17 @@
+/* Admin style */
+.pri-module-admin #myTabTabs{
+	background-color: #279DCD;
+	margin: 30px 0;
+}
+.pri-module-admin #myTabTabs li a{
+	color:#fff;
+	border:none;
+	border-radius:0;
+	font-weight:bold;
+	padding:20px 30px;
+}
+.pri-module-admin #myTabTabs li a:hover,
+.pri-module-admin #myTabTabs li.active a{
+	color:#279DCD;
+	background:#fff;
+}

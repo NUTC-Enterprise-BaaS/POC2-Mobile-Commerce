@@ -1,0 +1,556 @@
+@import "mixins.less";
+
+@master-spacing: 15px;
+@master-border-color: #ddd;
+
+/*- Progress Bars ----------*/
+
+.progress-sm {
+	height: 6px;
+	.box-shadow(none);
+
+	.progress-bar {
+		.box-shadow(none);
+	}
+}
+
+
+/*- Toolbars ----------*/
+
+// .es-toolbar { display: none; } 
+
+
+
+/*- Basic Containers ----------*/
+
+.es-container {
+	.es-sidebar {
+		border-right: 0;
+	}
+
+// 	@media(max-width:756px) {
+// 		.es-sidebar,
+// 		.es-content {
+// 			width: auto;
+// 			padding-left: 0 !important;
+// 			padding-right: 0 !important;
+// 			display: block;
+// 		}
+// 	}
+}
+
+.es-toolbar {
+	margin-bottom: 20px;
+}
+
+.es-filterbar {
+	height: auto;
+	padding: @master-spacing - 5 @master-spacing !important;
+	margin: -@master-spacing -@master-spacing @master-spacing !important;
+	overflow: hidden;
+
+	* {
+		line-height: 20px !important;
+	}
+
+	.filterbar-title {
+		font-size: 12px;
+		font-weight: bold;
+	}
+}
+
+.es-snackbar {
+	line-height: 41px;
+	padding: 0 15px;
+}
+
+
+/*- Widgets ----------*/
+
+.es-widget,
+.es-widget.es-widget-borderless,
+.es-login-box {
+	margin-bottom: @master-spacing;
+}
+
+.es-widget {
+	.es-widget-head {
+		padding: @master-spacing - 5 @master-spacing !important;
+		margin: 0;
+
+		* {
+			line-height: 20px !important;
+		}
+	}
+
+	.es-widget-body {
+		padding: @master-spacing;
+	}
+
+	.fd-nav-stacked {
+		margin: 0 -@master-spacing;
+
+		> li {
+			border: 0;
+			position: relative;
+
+			> a {
+				border: 0;
+				line-height: 30px !important;
+				padding: 0 @master-spacing;
+				display: block;
+			}
+
+			&:before {
+				border: 0;
+				content: '';
+				display: block;
+				width: 2px;
+				position: absolute;
+				left: -2px;
+				top: 0;
+				bottom: 0;
+				z-index: 2;
+			}
+		}
+
+		li.active {
+			> a {
+				background: #f8f9fb;
+    			font-weight: bold;
+    			color: #555;
+    			position: relative;
+    			z-index: 1;
+			}
+
+			&:before {
+				background: #f57d62;
+			}
+		}
+
+		li.widget-filter-group,
+		li.empty {
+			padding: 0 @master-spacing;
+		}
+
+		.label-notification {
+			margin: 3px 0 0 !important;
+		}
+	}
+}
+
+.es-widget-create {
+	margin: 0 0 15px !important;
+	padding: 15px;
+	border-bottom: 1px solid lighten(@master-border-color, 5%);
+
+	+ hr {
+		display: none;
+
+		+ .es-widget-body {
+			padding-top: 0;
+		}
+	}
+}
+
+.es-widget-filter {
+	margin: 0 0 15px;
+
+	+ .es-widget-filter {
+		padding-top: 15px;
+		border-top: 1px solid @master-border-color;
+	}
+	> li > a {
+		padding: 5px 15px;
+	}
+}
+
+
+/*- Composer ----------*/
+
+.es-story {
+	// overflow: hidden !important;
+}
+
+.es-story-actions {
+	margin: 4px @master-spacing 4px 0;
+}
+
+
+/*- Streams ----------*/
+
+.es-streams {
+	padding: 0;
+
+	.es-story {
+		margin-bottom: @master-spacing;
+	}
+}
+
+.es-stream-list>li+li{
+	margin-top: @master-spacing;
+}
+
+.es-action-wrap {
+	margin-bottom: 0;
+}
+
+
+.es-login-box {
+	background: #fff;
+}
+
+.es-stream-meta {
+	padding: @master-spacing;
+}
+
+.es-stream-control {
+	right: @master-spacing;
+}
+
+.es-stream-content,
+.es-stream-preview {
+	padding: @master-spacing;
+	margin: 0;
+}
+
+.es-stream-content + .es-stream-preview {
+	padding-top: 0;
+}
+
+.es-action-wrap {
+	padding: 0 @master-spacing @master-spacing;
+	float: left;
+
+	&:before,
+	&:after {
+		display: none;
+	}
+}
+
+.es-action-feedback {
+	line-height: 14px;
+}
+
+.es-stream-counter {
+	clear: none;
+	padding: 5px @master-spacing;
+	margin: 0 -@master-spacing;
+
+	+.es-stream-actions {
+		margin-top: 0;
+	}
+}
+
+
+/*- Comments ----------*/
+
+.es-comments {
+	>.es-comment {
+		background: lighten(@master-border-color, 10%);
+		border-top: 1px solid lighten(@master-border-color, 2.5%);
+		padding: (@master-spacing - 5) @master-spacing;
+		margin: 0 -@master-spacing;
+	}
+
+	.media > .media-object {
+		padding-right: 10px;
+	}
+
+	.es-avatar img {
+		width: 32px;
+		height: 32px;
+	}
+}
+
+.es-comments-control .es-comments-load {
+	border-top: 1px solid lighten(@master-border-color, 2.5%);
+	padding: 10px 15px;
+	margin: 0 -15px;
+}
+
+.es-comments-control .es-comments-stats {
+	position: static;
+}
+
+.es-comments-form {
+	border-top: 1px solid lighten(@master-border-color, 2.5%);
+	padding: @master-spacing @master-spacing 0;
+	margin: 0 -@master-spacing;
+}
+
+
+/*- Profile ----------*/
+
+.es-profile-header {
+	background: #fff;
+	margin-bottom: @grid-gutter-width;
+}
+
+.empty {
+	display: none !important;
+}
+
+.is-empty {
+	min-height: 0 !important;
+	display: table;
+	width: 100%;
+
+	> .empty {
+		margin: 0 !important;
+		background: #fff;
+		height: auto;
+		display: table-cell !important;
+		vertical-align: middle;
+		padding: @grid-gutter-width*2 0;
+		border: 1px solid @master-border-color;
+		text-align: center;
+	}
+}
+
+
+.es-video-response {
+	padding-left: @master-spacing;
+	padding-right: @master-spacing;
+}
+
+.es-video-content-brief {
+
+}
+
+
+
+/*- Album's single ----------*/
+
+.es-album-cover {
+	display: none;
+}
+
+.es-albums {
+	.es-album-item {
+		padding: 0;
+	}
+	.es-album-cover {
+		display: block;
+	}
+}
+
+
+
+/*- Conversation ----------*/
+
+.conversation-sidebar {
+
+}
+
+.conversation-participants-title,
+.conversation-participants-brief,
+.conversation-participants-list,
+.conversation-files-title,
+.conversation-files-list,
+.conversation-files-empty {
+	padding: 0 @master-spacing;
+}
+
+
+
+/*- Applications ----------*/
+
+.es-app-thumbnail {
+	width: 52px;
+	padding-right: 20px;
+	text-align: center;
+
+	img {
+		width: auto;
+		height: auto;
+		max-width: 32px;
+	}
+}
+
+.es-app-item {
+	+ .es-app-item {
+		border-top: 1px solid @master-border-color;
+		margin-top: 20px;
+		padding-top: 20px;
+	}
+}
+
+.es-app-header {
+	line-height: 1;
+
+	> .col-cell {
+		vertical-align: middle;
+	}
+}
+
+.es-app-name {
+	font-size: 115%;
+}
+
+.es-app-version {
+	font-size: 11px;
+	margin-top: 5px;
+	.opacity(.6);
+}
+
+.es-snackbar {
+	.row-table {
+		display: table;
+		width: 100%;
+
+		> .col-cell {
+			display: table-cell !important;
+			vertical-align: middle;
+		}
+	}
+}
+
+.fc {
+	margin-top: @master-spacing;
+
+	.fc-header {
+		margin-top: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&.layout-edit .edit-form,
+&.layout-advanced .es-content > .pt-10,
+&.layout-advanced .es-content > .pt-10 > .es-adv-search {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.es-video-manage {
+	margin-top: 0 !important;
+	padding: 0;
+}
+
+
+&.layout-editNotifications .tab-content,
+&.layout-editNotifications .form-actions,
+.es-item-grid,
+.es-item-grid > li,
+.list-media-footer,
+.es-story,
+.es-app-wrapper,
+.es-modules-wrap {
+	display: inline-block;
+	width: 100%;
+
+	&:before,
+	&:after {
+		display: none;
+	}
+}
+
+
+
+/*- Standard Box ----------*/
+
+.es-item,
+.es-album-item,
+.es-group-listing,
+// .es-video-single,
+.es-widget,
+.es-media-browser .es-widget-create,
+.es-media-browser .es-widget-filter,
+.es-widget.es-widget-borderless,
+.es-login-box,
+.es-conversation-list .es-content,
+.es-conversation-single .es-content,
+.es-events .es-content,
+.es-profile-details,
+.es-videos .es-content,
+&.layout-edit .es-content,
+&.layout-editPrivacy .es-content,
+&.layout-editNotifications .es-content,
+&.layout-advanced .es-content,
+&.view-apps .es-content,
+&.view-groups.layout-steps .es-container,
+&.view-events.layout-steps .es-container,
+.appCanvas > .fc,
+.es-app-wrapper {
+	border: 1px solid @master-border-color;
+	background: #fff;
+}
+
+.es-album-item,
+.es-group-listing,
+.es-conversation-list .es-content,
+.es-conversation-single .es-content,
+.es-events .es-content,
+.es-profile-details,
+.es-videos .es-content,
+&.layout-edit .es-content,
+&.layout-editPrivacy .es-content,
+&.layout-editNotifications .es-content,
+&.layout-advanced .es-content,
+&.view-apps .es-content,
+&.view-groups.layout-steps .es-container,
+&.view-events.layout-steps .es-container,
+.appCanvas > .fc,
+.es-app-wrapper {
+	padding: @master-spacing !important;
+}
+
+
+
+/*- Alternative Clearfix ----------*/
+
+.es-item,
+.es-stream,
+.es-action-wrap,
+.es-stream-content,
+.es-stream-preview,
+.es-action-feedback,
+.es-item-grid,
+.es-item-grid_1col>li,
+.es-video-listing {
+	display: inline-block;
+	width: 100%;
+}
+
+
+/*- Alternative Clearfix ----------*/
+
+.es-filterbar {
+    .clearfix();
+    position: relative;
+    z-index: 2;
+    padding: 0 0 15px !important;
+    margin: 0 0 15px !important;
+    border-bottom: 1px solid @master-border-color; 
+}

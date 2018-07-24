@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fields name="prefs" label="Handler Preferences">
+
+    <fieldset name="prefs_1" label="Ticket List">
+
+      <field
+         name="per_page"
+         type="text"
+         class="btn-group btn-group-yesno"
+         label="Default tickets per page"
+         description="Default number of tickets to view on a page"
+         default="10"
+         />
+    </fieldset>
+
+    <fieldset name="prefs_2" label="Ticket View">
+      <field
+         name="reverse_order"
+         type="checkbox"
+         class="btn-group btn-group-yesno"
+         label="Show tickets messages in ascending ascending date order"
+         description="Default number of tickets to view on a page"
+         default=""
+         />
+
+    </fieldset>
+
+    <fieldset name="prefs_3" label="Reply Settings">
+      <field
+         name="return_on_reply"
+         type="fssreplytype"
+         class="btn-group btn-group-yesno"
+         label="On reply"
+         description="When a ticket reply has been submitted, what should be displayed"
+         default=""
+         >
+      </field>
+      
+      <field
+         name="return_on_close"
+         type="fssreplytype"
+         class="btn-group btn-group-yesno"
+         label="On close
+"
+         description="When a ticket has been closed, what should be displayed"
+         default=""
+         >
+      </field>
+
+    </fieldset>
+
+    <fieldset name="prefs_4" label="Ticket list grouping">
+
+      <field
+         name="group_products"
+         type="checkbox"
+         class="btn-group btn-group-yesno"
+         label="Group by Product"
+         description="Group tickets by products"
+         default=""
+         />
+
+      <field
+         name="group_departments"
+         type="checkbox"
+         class="btn-group btn-group-yesno"
+         label="Group by Department"
+         description="Group tickets by departments"
+         default=""
+         />
+
+      <field
+         name="group_cats"
+         type="checkbox"
+         class="btn-group btn-group-yesno"
+         label="Group by Category"
+         description="Group tickets by categories"
+         default=""
+         />
+
+      <field
+         name="group_group"
+         type="checkbox"
+         class="btn-group btn-group-yesno"
+         label="Group by Ticket Group"
+         description="Group tickets by ticket groups"
+         default=""
+         />
+      
+      <field
+         name="group_pri"
+         type="checkbox"
+         class="btn-group btn-group-yesno"
+         label="Group by Priority"
+         description="Group tickets by priority"
+         default=""
+         />
+
+    </fieldset>
+
+    <fieldset name="prefs_5" label="Reports Settings">
+      <field
+         name="separator"
+         type="list"
+         class="btn-group btn-group-yesno"
+         label="CSV Separator"
+         description=""
+         default="default"
+         >
+        <option value="">Default</option>
+        <option value=",">,</option>
+        <option value=";">;</option>
+      </field>
+
+    </fieldset>
+  </fields>
+
+  <fields name="tools" label="Preference Tools">
+    <fieldset name="tools" label="">
+
+      <field
+         name="reset"
+         type="fssprefsreset"
+         class="btn-group btn-group-yesno"
+         label="Reset Prefs"
+         description="Reset Preferences"
+         default=""
+         />
+
+    </fieldset>
+  </fields>
+
+</form>

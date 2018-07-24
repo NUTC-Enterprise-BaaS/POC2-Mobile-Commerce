@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ActivityQRcodeBackgroundColor">
+
+    <RelativeLayout
+        android:id="@+id/recommend_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/ColorGeneralTheme">
+
+        <ImageView
+            android:layout_width="@dimen/toolbar_back_image_width"
+            android:layout_height="@dimen/toolbar_back_image_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/toolbar_back_image_margin_left"
+            android:layout_marginStart="@dimen/toolbar_back_image_margin_left"
+            android:scaleType="fitCenter"
+            android:src="@drawable/toolbar_back" />
+
+        <View
+            android:id="@+id/toolbar_back_touch"
+            android:layout_width="@dimen/toolbar_back_touch"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:maxLines="1"
+            android:text="@string/scan_qr_code_registeted"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/toolbar_text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/qrcode_scan_text_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_qrcode_scan_container_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/fragment_qrcode_scan_item_margin"
+        android:layout_marginRight="@dimen/fragment_qrcode_scan_item_margin">
+
+        <TextView
+            android:id="@+id/qrcode_scan_remind_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fragment_qrcode_scan_item_height"
+            android:gravity="center"
+            android:text="@string/scan_qr_code_remind"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/fragment_qrcode_scan_remind_text" />
+
+        <TextView
+            android:id="@+id/albums"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fragment_qrcode_scan_item_height"
+            android:layout_below="@id/qrcode_scan_remind_text"
+            android:layout_marginTop="@dimen/fragment_qrcode_scan_item_margin_top"
+            android:background="@drawable/layout_qrcode_scan_album"
+            android:gravity="center"
+            android:text="@string/recommend_qr_code_albums"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/fragment_qrcode_scan_from_album_text" />
+    </RelativeLayout>
+
+    <com.journeyapps.barcodescanner.CompoundBarcodeView
+        android:id="@+id/scan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/qrcode_scan_text_container"
+        android:layout_below="@id/recommend_toolbar"/>
+
+</RelativeLayout>

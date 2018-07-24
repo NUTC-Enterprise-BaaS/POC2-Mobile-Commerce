@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form>
+  
+  <fields name="cfhandler" label="Custom Field -> Handler">
+
+    <fieldset name="cfhandler" label="">
+      <field
+				name="label1"
+				type="fssstatic"
+				class="btn-group btn-group-yesno"
+				label=""
+				description=""
+        default="0">
+        <content>Send an email to the tickets handlers when a custom field value is changed.</content>
+      </field>
+      
+      <field
+				name="enabled"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="Enabled"
+				description="Send email to admins when custom field changes"
+        default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+
+      <field
+        name="who"
+        type="radio"
+				class="btn-group btn-group-yesno"
+        label="Who changed"
+        description=""
+        useglobal="1">
+        <option value="">All Changes</option>
+        <option value="1">User change only</option>
+        <option value="2">Handler change only</option>
+      </field>
+
+      <field
+        name="use"
+        type="radio"
+				class="btn-group btn-group-yesno"
+        label="Which Fields"
+        description=""
+        useglobal="1">
+        <option value="">All</option>
+        <option value="1">Include</option>
+        <option value="-1">Exclude</option>
+      </field>
+
+      <field name="list" type="fsschecklist" label="" description="">
+        <sql>SELECT description as display, id FROM #__fss_field WHERE published = 1 AND ident = 0 ORDER BY ordering</sql>
+      </field>
+
+      <field
+         name="subject"
+         type="text"
+         class="btn-group btn-group-yesno"
+         label="Subject"
+         description="Subject of email"
+         />
+
+      <field
+         name="message"
+         type="editor"
+         class="btn-group btn-group-yesno"
+         label="Message"
+         description="Body of email"
+         />
+      
+      <field
+				name="label2"
+				type="fssstatic"
+				class="btn-group btn-group-yesno"
+				label=""
+				description=""
+        default="0">
+        <content>
+          <![CDATA[
+        The template uses the same tags as the usual ticket email tempaltes along with the following:
+          <ul>
+            <li><b>{cf_old}</b> : Old Value</li>
+            <li><b>{cf_new}</b> : New Value</li>
+            <li><b>{cf_id}</b> : Field ID</li>
+            <li><b>{cf_name}</b> : Field Name</li>
+            <li><b>{cf_alias}</b> : Field Alias</li>
+           </ul>
+        ]]>
+        </content>
+      </field>
+
+    </fieldset>
+  </fields>
+  
+  <fields name="cfuser" label="Custom Field -> User">
+
+    <fieldset name="cfuser" label="">
+
+      <field
+        name="label1"
+        type="fssstatic"
+        class="btn-group btn-group-yesno"
+        label=""
+        description=""
+        default="0">
+        <content>Send an email to the tickets user when a custom field value is changed.</content>
+      </field>
+      <field
+				name="enabled"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="Enabled"
+				description="Send email to user when custom field changes"
+        default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+
+      <field
+        name="who"
+        type="radio"
+				class="btn-group btn-group-yesno"
+        label="Who changed"
+        description=""
+        useglobal="1">
+        <option value="">All Changes</option>
+        <option value="1">User change only</option>
+        <option value="0">Handler change only</option>
+      </field>
+
+      <field
+        name="use"
+        type="radio"
+				class="btn-group btn-group-yesno"
+        label="Which Fields"
+        description=""
+        useglobal="1">
+        <option value="">All</option>
+        <option value="1">Include</option>
+        <option value="0">Exclude</option>
+      </field>
+
+      <field name="list" type="fsschecklist" label="" description="">
+        <sql>SELECT description as display, id FROM #__fss_field WHERE published = 1 AND ident = 0 ORDER BY ordering</sql>
+      </field>
+
+      <field
+         name="subject"
+         type="text"
+         class="btn-group btn-group-yesno"
+         label="Subject"
+         description="Subject of email"
+         />
+
+      <field
+         name="message"
+         type="editor"
+         class="btn-group btn-group-yesno"
+         label="Message"
+         description="Body of email"
+         />
+
+      <field
+				name="label2"
+				type="fssstatic"
+				class="btn-group btn-group-yesno"
+				label=""
+				description=""
+        default="0">
+        <content>
+          <![CDATA[
+        The template uses the same tags as the usual ticket email tempaltes along with the following:
+          <ul>
+            <li><b>{cf_old}</b> : Old Value</li>
+            <li><b>{cf_new}</b> : New Value</li>
+            <li><b>{cf_id}</b> : Field ID</li>
+            <li><b>{cf_name}</b> : Field Name</li>
+            <li><b>{cf_alias}</b> : Field Alias</li>
+           </ul>
+        ]]>
+        </content>
+      </field>
+    </fieldset>
+  </fields>
+  
+  <fields name="useruser" label="User Reply -> User">
+
+    <fieldset name="useruser" label="">
+
+      <field
+        name="label1"
+        type="fssstatic"
+        class="btn-group btn-group-yesno"
+        label=""
+        description=""
+        default="0">
+        <content>Send an email notification to all users on a ticket when a user replies to a ticket. Usefull if you want to notify a ticket group, or similar. Note: Handlers are notified using the built in system</content>
+      </field>
+      <field
+				name="enabled"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="Enabled"
+				description="Send email to all ticket users when a user replies"
+        default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+
+      <field
+         name="subject"
+         type="text"
+         class="btn-group btn-group-yesno"
+         label="Subject"
+         description="Subject of email"
+         />
+
+      <field
+         name="message"
+         type="editor"
+         class="btn-group btn-group-yesno"
+         label="Message"
+         description="Body of email"
+         />
+
+      <field
+				name="label2"
+				type="fssstatic"
+				class="btn-group btn-group-yesno"
+				label=""
+				description=""
+        default="0">
+        <content>
+          <![CDATA[
+        The template uses the same tags as the usual ticket email tempaltes.
+        ]]>
+        </content>
+      </field>
+    </fieldset>
+  </fields>
+  
+  <fields name="handlercc" label="Add CC'd Handler">
+
+    <fieldset name="handlercc" label="">
+
+      <field
+        name="label1"
+        type="fssstatic"
+        class="btn-group btn-group-yesno"
+        label=""
+        description=""
+        default="0">
+        <content>Send an email notification to a handler when they are CC'd to a support ticket</content>
+      </field>
+      
+      <field
+				name="enabled"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="Enabled"
+				description="Send email to all ticket users when a user replies"
+        default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+
+      <field
+         name="subject"
+         type="text"
+         class="btn-group btn-group-yesno"
+         label="Subject"
+         description="Subject of email"
+
+         />
+
+      <field
+         name="message"
+         type="editor"
+         class="btn-group btn-group-yesno"
+         label="Message"
+         description="Body of email"
+          />
+      <field
+				name="label2"
+				type="fssstatic"
+				class="btn-group btn-group-yesno"
+				label=""
+				description=""
+        default="0">
+        <content>
+          <![CDATA[
+        The template uses the same tags as the usual ticket email tempaltes.<br />
+<br />
+Example:<br />
+<br />
+<h4>Subject:</h4>
+[{reference}] {subject}<br />
+<br />
+<h4>Message:</h4>
+<br />
+Dear {to_name},<br />
+<br />
+{ccd_name} has been CC'd to the support ticket by {sender_name}.<br />
+<br />        
+Ticket Summary:-<br />
+<br />
+Subject: {subject}<br />
+Ticket reference number: {reference}<br />
+{if,department}Department: {department}<br />
+{endif}{if,category}Category: {category}<br />
+{endif}{if,product}Product: {product}<br />
+{endif}<br />
+<br />
+You can view the ticket by going to {admin_link}<br />
+<br />
+Thanks,<br />
+Support Team<br />
+        ]]>
+        </content>
+      </field>
+    </fieldset>
+  </fields>
+
+  <fields name="statususer" label="Status Change -> User">
+
+    <fieldset name="statususer" label="">
+
+      <field
+        name="label1"
+        type="fssstatic"
+        class="btn-group btn-group-yesno"
+        label=""
+        description=""
+        default="0">
+        <content>Send an email to the tickets user when the status is changed using batch action or dropdown.</content>
+      </field>
+      <field
+				name="enabled"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="Enabled"
+				description="Send email to user when custom field changes"
+        default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+
+      <field
+				name="batch"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="On Batch Change"
+				description="Send email to user when changing status using batch actions"
+        default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+
+      <field
+				name="dropdown"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="On Dropdown Change"
+				description="Send email to user when changing status using the dropdown"
+        default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+
+
+      <field
+         name="subject"
+         type="text"
+         class="btn-group btn-group-yesno"
+         label="Subject"
+         description="Subject of email"
+         />
+
+      <field
+         name="message"
+         type="editor"
+         class="btn-group btn-group-yesno"
+         label="Message"
+         description="Body of email"
+         />
+
+      <field
+				name="label2"
+				type="fssstatic"
+				class="btn-group btn-group-yesno"
+				label=""
+				description=""
+        default="0">
+        <content>
+          <![CDATA[
+        The template uses the same tags as the usual ticket email tempaltes along with the following:
+          <ul>
+            <li><b>{status_old_id}</b> : Old Status ID</li>
+            <li><b>{status_old_name}</b> : Old Status Name</li>
+            <li><b>{status_new_id}</b> : New Status ID</li>
+            <li><b>{status_new_name}</b> : New Status Name</li>
+           </ul>
+        ]]>
+        </content>
+      </field>
+    </fieldset>
+  </fields>
+
+  <fields name="statushandler" label="Status Change -> Handler">
+
+    <fieldset name="statushandler" label="">
+
+      <field
+        name="label1"
+        type="fssstatic"
+        class="btn-group btn-group-yesno"
+        label=""
+        description=""
+        default="0">
+        <content>Send an email to the tickets handlers when the status is changed using batch action or dropdown.</content>
+      </field>
+      <field
+				name="enabled"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="Enabled"
+				description="Send email to user when custom field changes"
+        default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+
+      <field
+				name="batch"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="On Batch Change"
+				description="Send email to user when changing status using batch actions"
+        default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+
+      <field
+				name="dropdown"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="On Dropdown Change"
+				description="Send email to user when changing status using the dropdown"
+        default="0">
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+      </field>
+
+
+      <field
+         name="subject"
+         type="text"
+         class="btn-group btn-group-yesno"
+         label="Subject"
+         description="Subject of email"
+         />
+
+      <field
+         name="message"
+         type="editor"
+         class="btn-group btn-group-yesno"
+         label="Message"
+         description="Body of email"
+         />
+
+      <field
+				name="label2"
+				type="fssstatic"
+				class="btn-group btn-group-yesno"
+				label=""
+				description=""
+        default="0">
+        <content>
+          <![CDATA[
+        The template uses the same tags as the usual ticket email tempaltes along with the following:
+          <ul>
+            <li><b>{status_old_id}</b> : Old Status ID</li>
+            <li><b>{status_old_name}</b> : Old Status Name</li>
+            <li><b>{status_new_id}</b> : New Status ID</li>
+            <li><b>{status_new_name}</b> : New Status Name</li>
+           </ul>
+        ]]>
+        </content>
+      </field>
+    </fieldset>
+  </fields>
+
+</form>

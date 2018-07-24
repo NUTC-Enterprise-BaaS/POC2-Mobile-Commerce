@@ -1,0 +1,267 @@
+/*** Menu dropdown ***/
+
+.l-inline li > .l-block, .loginmenu.parent-open > #login-form, 
+.loginmenu.parent-open > .e4jaccountmanagercont, 
+.loginmenu.parent-open > .e4jcartcontent, 
+.topmenu.parent-open li > .l-block {
+    margin-top: 0;
+    -webkit-transition: all 400ms ease-in-out 0s;
+    -moz-transition: all 400ms ease-in-out 0s;
+    -o-transition: all 400ms ease-in-out 0s;
+    -ms-transition: all 400ms ease-in-out 0s;
+    transition: all 400ms ease-in-out 0s;
+}
+/**** efj-slide-top-fixed ***/
+@-webkit-keyframes efj-slide-top-fixed {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-moz-keyframes efj-slide-top-fixed {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-o-keyframes efj-slide-top-fixed {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-ms-keyframes efj-slide-top-fixed {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes efj-slide-top-fixed {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+/**** End efj-slide-top-fixed ***/
+
+/**** efj-tofixed-up ***/
+
+@-webkit-keyframes efj-tofixed-up {
+    0% {
+        -webkit-transform: translateY(-10px)
+    }
+    100% {
+        -webkit-transform: translateY(0)
+    }
+}
+
+@-moz-keyframes efj-tofixed-up {
+    0% {
+        -moz-transform: translateY(-10px)
+    }
+    100% {
+        -moz-transform: translateY(0)
+    }
+}
+@-ms-keyframes efj-tofixed-up {
+    0% {
+        -ms-transform: translateY(-10px)
+    }
+    100% {
+        -ms-transform: translateY(0)
+    }
+}
+
+@-o-keyframes efj-tofixed-up {
+    0% {
+        -ms-transform: translateY(-10px)
+    }
+    100% {
+        -ms-transform: translateY(0)
+    }
+}
+
+@keyframes efj-tofixed-up {
+    0% {
+        transform: translateY(-10px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+/**** End efj-tofixed-up ***/
+
+.l-inline li.parent-open > .l-block, .loginmenu.parent-open > #login-form, 
+.loginmenu.parent-open > .e4jaccountmanagercont, .loginmenu.parent-open > .e4jcartcontent, 
+.topmenu.parent-open li > .l-block {
+    display: block;
+    -webkit-transform-origin: 0 0 0;
+    -moz-transform-origin: 0 0 0;
+    -ms-transform-origin: 0 0 0;
+    -o-transform-origin: 0 0 0;
+    transform-origin: 0 0 0;
+
+    -moz-animation: 0.2s ease-in 0s normal none 1 running efj-slide-top-fixed;
+    -ms-animation: 0.2s ease-in 0s normal none 1 running efj-slide-top-fixed;
+    -o-animation: 0.2s ease-in 0s normal none 1 running efj-slide-top-fixed;
+    animation: 0.2s ease-in 0s normal none 1 running efj-slide-top-fixed;
+    -webkit-animation: efj-slide-top-fixed 0.2s ease-in 0s;
+
+}
+/*** Fixed menu ***/
+
+.fx-menu-slide {
+    -webkit-transform-origin: 0 0 0;
+    -o-transform-origin: 0 0 0;
+    -ms-transform-origin: 0 0 0;
+    -moz-transform-origin: 0 0 0;
+    transform-origin: 0 0 0;
+    -o-animation: 0.2s ease-in 0s normal none 1 running efj-tofixed-up;
+    -ms-animation: 0.2s ease-in 0s normal none 1 running efj-tofixed-up;
+    -moz-animation: 0.2s ease-in 0s normal none 1 running efj-tofixed-up;
+    animation: 0.2s ease-in 0s normal none 1 running efj-tofixed-up;
+    -webkit-animation: efj-tofixed-up 0.2s ease-in 0s;
+
+}
+.fx-menu-slide .l-inline li > .l-block {
+    top: 37px;
+}
+.fx-menu-slide #tbar-logo .moduletable img {
+    width: 90%;
+    transition: all 400ms ease-in-out 0s;
+    -moz-transition: all 400ms ease-in-out 0s;
+    -o-transition: all 400ms ease-in-out 0s;
+    -webkit-transition: none;
+}
+.fx-menu-slide #mainmenu .l-inline {
+    padding: 5px 1em;
+    margin: 20px 0 0;
+    -moz-transition: all 400ms ease-in-out 0s;
+    -o-transition: all 400ms ease-in-out 0s;
+    transition: all 400ms ease-in-out 0s;
+    -webkit-transition: none;
+
+}
+/**** Slide Search Module ***/
+
+@-webkit-keyframes efj-slide-search {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-10px)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0)
+    }
+}
+@-moz-keyframes efj-slide-search {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(-10px)
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0)
+    }
+}
+@-ms-keyframes efj-slide-search {
+    0% {
+        opacity: 0;
+        -ms-transform: translateX(-10px)
+    }
+    100% {
+        opacity: 1;
+        -ms-transform: translateX(0)
+    }
+}
+@keyframes efj-slide-search {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+.slide-search .e4jsearch-input {
+    position: relative;
+    display: inline-block;
+}
+.slide-search .e4jsearch-input:before {
+    width: 26px;
+    height: 29px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 2px;
+    background: url(../images/search-white.png) left 5px no-repeat;
+    float: left;
+    position: absolute;
+    left: 0;
+    content: "";
+}
+.slide-search .e4jsearch-input input::-moz-placeholder {
+    color: rgba(0, 0, 0, 0);
+}
+.slide-search .e4jsearch-input input::-moz-placeholder {
+    opacity: 1;
+}
+.slide-search .e4jsearch-input input {
+    display: inline-block;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 15px;
+    height: 40px;
+    line-height: normal;
+    margin: 0;
+    padding: 0 0 0 30px;
+    position: relative;
+    transition: all 0.2s linear 0s;
+    -moz-transition: all 0.2s linear 0s;
+    -webkit-transition: all 0.2s linear 0s;
+    -o-transition: all 0.2s linear 0s;
+    width: 30px;
+    z-index: 1;
+}
+.slide-search .e4jsearch-input input:focus {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #666;
+    box-shadow: none;
+    outline: 0 none;
+    padding: 0;
+    margin: 0 0 0 30px;
+    width: 250px;
+    transition: all 0.2s linear 0s;
+    -moz-transition: all 0.2s linear 0s;
+    -webkit-transition: all 0.2s linear 0s;
+    -o-transition: all 0.2s linear 0s;
+}

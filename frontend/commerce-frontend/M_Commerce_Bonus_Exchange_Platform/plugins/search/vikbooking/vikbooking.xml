@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="search">
+	<name>Search - VikBooking</name>
+	<author>e4j - Extensionsforjoomla.com</author>
+	<creationDate>January 2016</creationDate>
+	<copyright>e4j - Extensionsforjoomla.com</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>tech@e4j.com</authorEmail>
+	<authorUrl>https://e4j.com</authorUrl>
+	<version>1.7</version>
+	<description>This is a plugin for the Joomla native Search component. Searches will be made accross all the room types defined in Vik Booking.</description>
+	<files>
+		<filename plugin="vikbooking">vikbooking.php</filename>
+	</files>
+</extension>

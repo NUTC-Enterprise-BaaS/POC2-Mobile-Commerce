@@ -1,0 +1,563 @@
+<resources>
+    <string name="app_name">行動電商A紅利數交換平台</string>
+
+
+    <string name="title">行動電商A\n紅利數交換平台</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="request_data_empty">"無資料"</string>
+
+    <string name="directionText">使用說明</string>
+    <string name="logout">登    出</string>
+    <string name="news">最新消息</string>
+    <string name="bonus">特約發點</string>
+    <string name="advertisement">刊登廣告申請</string>
+    <string name="setting">功能設置</string>
+    <string name="apply">申請</string>
+    <string name="applyIn">申請加入</string>
+    <string name="preferential">優惠店</string>
+    <string name="special">特約店</string>
+    <string name="check">審核中</string>
+    <string name="scan">掃描/推薦</string>
+    <!--<string name="search">推播活動</string>-->
+    <string name="search">轉換平台點數</string>
+    <string name="bonus_search">紅利點數查詢</string>
+    <string name="store_search">搜尋店家</string>
+
+    <string name="gcmlayout">轉換點數</string>
+
+    <string name="remind">提醒</string>
+    <string name="remind_volume">訊息提示聲音音量</string>
+    <string name="shock">震動</string>
+    <string name="language">語言</string>
+    <string name="chinese">繁體中文</string>
+    <string name="basic_data">基本資料</string>
+    <string name="change_pwd">密碼變更</string>
+    <string name="hide_button">隱藏申請優惠/特約店按鈕</string>
+    <string name="update">可更新</string>
+    <string name="app">APP版本</string>
+    <string name="version"> %1$s</string>
+    <string name="opinion">意見回饋</string>
+    <string name="login_layout_title">移動消費 致富商機</string>
+    <string name="login_layout_account">會員帳號</string>
+    <string name="login_layout_account_hint">輸入手機號碼或信箱</string>
+    <string name="login_layout_password">會員密碼</string>
+    <string name="login_layout_password_hint">密碼最少六碼</string>
+    <string name="login_layout_https">HTTPS</string>
+    <string name="login_layout_stable">常駐</string>
+    <string name="login_layout_show_pwd">顯示密碼</string>
+    <string name="login_layout_authenticate">驗證碼</string>
+    <string name="login_layout_authenticate_hint">請輸入驗證碼</string>
+    <string name="login_layout_forget_password">忘記密碼</string>
+    <string name="login_layout_register">註冊會員</string>
+    <string name="login_layout_reset">清除重設</string>
+    <string name="login_layout_send">確認送出</string>
+    <string name="login_block">用戶已被封鎖</string>
+    <string name="delete_point">優惠折點</string>
+    <string name="request_registered_scuess">"註冊成功"</string>
+    <string name="request_registered_fail">"資料重複"</string>
+    <string name="request_registered_fail_phone">"手機號碼重複"</string>
+    <string name="request_registered_fail_email">"電子信箱重複"</string>
+
+    <string name="registered_layout_country">國籍別</string>
+    <string name="registered_layout_sex">性 別</string>
+    <string name="registered_layout_account">會員帳號</string>
+    <string name="registered_layout_name">會員姓名</string>
+    <string name="registered_layout_title">集客註冊</string>
+    <string name="registered_layout_remind">*為必填欄位</string>
+    <string name="registered_layout_name_hint">請輸入姓名</string>
+    <string name="registered_layout_account_phone_hint">請輸入手機號碼</string>
+    <string name="registered_layout_account_email_hint">請輸入電子郵件</string>
+    <string name="registered_layout_account_password">會員密碼</string>
+    <string name="registered_layout_account_password_hint">密碼最少六碼</string>
+    <string name="registered_layout_birth">生日日期</string>
+    <string name="registered_layout_birth_hint">YYYY/MM/DD</string>
+    <string name="registered_layout_recommend">推薦人</string>
+    <string name="registered_layout_recommend_hint">QR碼</string>
+    <string name="registered_layout_recommend_send">掃描</string>
+
+    <string name="registered_layout_authenticate">認證碼</string>
+    <string name="registered_layout_authenticate_hint">請輸入認證碼</string>
+    <string name="registered_layout_reset">清除重填</string>
+    <string name="registered_layout_send">確認送出</string>
+
+    <string-array name="registered_layout_country">
+        <item>台灣</item>
+        <item>馬來西亞</item>
+        <item>新加坡</item>
+        <item>韓國</item>
+        <item>日本</item>
+        <item>香港</item>
+        <item>緬甸</item>
+    </string-array>
+
+
+    <string name="version_number">V 1.2</string>
+
+    <string name="loading_please_login">"請先安裝一般會員 APP 並進行登入"</string>
+    <string name="point_layout_title_tradeDate">交易日期</string>
+    <string name="point_layout_title_tradeTime">交易時間</string>
+
+    <string name="point_layout_title_people">"收點者"</string>
+    <string name="point_layout_title_money">"消費金額"</string>
+    <string name="point_layout_title">"紅利紀錄"</string>
+    <string name="point_layout_search">"搜尋"</string>
+    <string name="point_layout_edit">"編輯"</string>
+
+    <string name="point_dialog_input_point">請輸入點數</string>
+
+    <string name="csv_fragment_title">匯出CSV表單</string>
+    <string name="csv_fragment_search">日期\n查詢</string>
+    <string name="csv_fragment_symbol">~</string>
+    <string name="csv_fragment_start">開始日期</string>
+    <string name="csv_fragment_end">結束日期</string>
+    <string name="csv_fragment_export">匯出</string>
+    <string name="csv_fragment_id">編號</string>
+    <string name="csv_fragment_phone">手機號碼</string>
+    <string name="csv_fragment_money">消費金額</string>
+    <string name="date_dialog_empty">請輸入日期</string>
+
+    <string name="point_layout_key">輸入手機號碼</string>
+    <string name="point_layout_csv">匯出\nCSV</string>
+    <string name="phone_send_point_title">數字鍵</string>
+    <string name="phone_send_point_prompt">請輸入電話號碼</string>
+    <string name="phone_send_point_confirm">確認</string>
+    <string name="phone_send_point_cancel">取消</string>
+    <string name="phone_send_point_check_fail">無此會員</string>
+
+    <array name="opinion_fragment_item">
+        <item>請選擇</item>
+    </array>
+
+    <string name="export_csv_dialog_check_password_title">匯出CSV密碼</string>
+    <string name="export_csv_dialog_title">密碼</string>
+    <string name="export_csv_dialog_promp">首次登入密碼請輸入身分證字號</string>
+    <string name="export_csv_dialog_input">請輸入密碼</string>
+    <string name="export_csv_dialog_confirm">確認</string>
+    <string name="export_csv_dialog_success">已發送至電子信箱</string>
+    <string name="export_csv_dialog_forget">忘記密碼</string>
+    <string name="export_csv_dialog_fail1">發送失敗，未知錯誤</string>
+    <string name="export_csv_dialog_fail2">發送失敗，密碼錯誤</string>
+    <string name="change_pasword">會員密碼變更</string>
+    <string name="export_csv_dialog_download">下載</string>
+    <string name="export_csv_dialog_text3">之CSV表單</string>
+
+    <string name="publish">刊登廣告申請</string>
+    <string name="publish_success">刊登廣告成功</string>
+    <string name="publish_fail">"刊登廣告維修中，請稍候重新嘗試"</string>
+
+
+    <string name="special_csv_reset_password">匯出CSV密碼變更</string>
+
+    <string name="send_verify_code">發 送 驗 證 碼</string>
+    <string name="import_verify_code">請  輸  入  驗  證  碼</string>
+    <string name="import_phone_number_email">請  輸  入   電  子  信  箱</string>
+    <string name="forgot_password">忘記密碼</string>
+    <string name="access">確  認  ，  下  一  步</string>
+    <string name="verify_code_access">驗證碼正確</string>
+    <string name="verify_code_fail">"驗證碼錯誤"</string>
+    <string name="email_not_exist">電子信箱不存在</string>
+    <string name="email_exist">電子信箱已存在</string>
+    <string name="basic_email_hint">請輸入電子信箱</string>
+    <string name="vip_success">驗證成功</string>
+    <string name="vip_fail">驗證失敗</string>
+
+    <string name="verify_code_error">驗證碼或電子信箱錯誤</string>
+    <string name="send_verify_code_access">驗證碼發送成功</string>
+    <string name="send_verify_code_error">驗證碼發送失敗</string>
+
+    <string name="special_register_title">申請加入特約店</string>
+    <string name="premium_register_title">申請加入優惠店</string>
+
+    <string name="country">國  籍  別</string>
+
+    <string name="check_clear_dialog_cancel">"取消"</string>
+    <string name="check_clear_dialog_ok">"確定"</string>
+    <string name="check_clear_dialog_message">"確定清除資訊嗎？"</string>
+
+    <string name="privacy_policy">"隱 私 權 聲 明"</string>
+    <string name="privacy_policy_content_top">"本隱私權政策（以下稱「政策」）只在說明GoBuy及相關公司（以下稱「GoBuy」或「本公司」如何收集、使用及分享本公司自GoBuy網站、裝置、應用城市與服務（以下合稱「服務」）之使用者所取得的個人資訊。GoBuy努力遵守本公司對所收集之你的相關資訊所是用全部法律。本政策須受該些法律所拘束、其可能比在此所敘述之內容更嚴格。）"</string>
+    <string name="privacy_policy_content_middle">"本公司得另行通知新增或修訂本政策。本公司意得救部份服務發布不同的隱私權聲明，屆時本政策集不再適用。例如、本公司會在適用時透過「通知GoBuy使用情況回報」及「通知GoBuy錯誤回報」自你的裝置中所收集的資訊分別適用不同的政策"</string>
+    <string name="privacy_policy_content_bottom">"注意：你的無限電信業者、行動作業係統提供者及/或第三方應用程式、工具列、服務、「外掛城市」、社群媒體平台和網站亦可能收集、使用以及分享你、你的裝置以及使用情況相關的資訊。GoBuy之隱私政策並不適用於熱河第三方以及其產品、行為或服務，GoBuy無法控制第三方如何收集、使用或保護你的資料。如有需要有關第三方隱私政策施行原則的詳細資訊，請參閱其隱私政策。請務必與信譽良好的第三方互動、連線。並從其下載應用程式。"</string>
+    <string name="privacy_policy_content_check">"我已詳讀並同意此條款"</string>
+    <string name="privacy_policy_disagree_button">不同意</string>
+    <string name="privacy_policy_check_button">請勾選同意鈕</string>
+    <string name="scratchcardservice_success">送出成功</string>
+    <string name="showCorrectFriendError">好友電話或電子信箱錯誤</string>
+    <string name="privacy_policy_agree_button">同意</string>
+    <string name="point_layout_send">轉讓點數</string>
+    <string name="point_layout_point">餘點: %1$d </string>
+    <string name="point_layout_cost">消點: %1$d </string>
+    <string name="point_layout_title_store">店家名稱</string>
+    <string name="point_layout_title_trade">交易時間</string>
+    <string name="point_layout_title_bonus">紅利點數</string>
+    <string name="point_layout_title_am">上午</string>
+    <string name="point_layout_title_pm">下午</string>
+    <string name="latest_news">最新消息</string>
+    <string name="premium_activity">優惠活動</string>
+    <string name="special_activity">特約活動</string>
+
+    <string name="special_register_country">國  籍  別</string>
+    <string name="special_register_store_name">店家名稱</string>
+    <string name="special_register_entity_store">實 體 店 面</string>
+    <string name="special_register_virtual_store">虛 擬 店 面</string>
+    <string name="special_register_job_type">行業類別</string>
+    <string name="special_register_store_address">店家地址</string>
+    <string name="special_register_contact_person">聯 絡 人</string>
+    <string name="special_register_male">男</string>
+    <string name="special_register_female">女</string>
+    <string name="special_register_member_account">會員帳號</string>
+    <string name="special_register_member_password">會員密碼</string>
+    <string name="special_register_member_birthday">出生日期</string>
+    <string name="special_register_id">驗 證 碼</string>
+    <string name="special_register_phone_number">請 輸 入 手 機 號 碼</string>
+    <string name="special_register_email">請 輸 入 電 子 信 箱</string>
+    <string name="special_register_password">密碼長度至少為6個字元</string>
+    <string name="special_register_birthday_edit_text">YYYY/MM/DD</string>
+    <string name="special_register_verify_code">請輸入驗證碼</string>
+    <string name="special_register_clear">清除重填</string>
+    <string name="special_register_confirm">確認送出</string>
+    <string name="special_register_clear_message">確定清除資訊嗎?</string>
+    <string name="special_register_yes">確定</string>
+    <string name="special_register_cancel">取消</string>
+
+    <string name="preferential_register_title">申請加入優惠店</string>
+    <string name="preferential_register_country">國  籍  別</string>
+    <string name="preferential_register_store_name">店家名稱</string>
+    <string name="preferential_register_entity_store">實 體 店 面</string>
+    <string name="preferential_register_virtual_store">虛 擬 店 面</string>
+    <string name="preferential_register_job_type">行業類別</string>
+    <string name="preferential_register_store_address">店家地址</string>
+    <string name="preferential_register_contact_person">聯絡人</string>
+    <string name="preferential_register_main_logo">優店主圖一</string>
+    <string name="preferential_register_sub_logo">優店副圖三</string>
+    <string name="special_register_main_logo">特店主圖一</string>
+    <string name="preferential_register_main_logo_hint">上傳一張</string>
+    <string name="special_register_sub_logo">特店副圖三</string>
+    <string name="preferential_register_sub_logo_hint">上傳三張</string>
+    <string name="preferential_register_male">男</string>
+    <string name="preferential_register_female">女</string>
+    <string name="preferential_register_member_account">會員帳號</string>
+    <string name="preferential_register_member_email">電子信箱</string>
+    <string name="preferential_register_member_password">會員密碼</string>
+    <string name="preferential_register_phone_number">請 輸 入 手 機 號 碼</string>
+    <string name="preferential_register_email">請 輸 入 電 子 信 箱</string>
+    <string name="preferential_register_success">註冊成功，作業人員認證後即可使用</string>
+    <string name="request_load_fail_register">"資料沒填齊，請再檢查一次"</string>
+    <string name="request_load_fail_verify">"驗證碼錯誤"</string>
+    <string name="preferential_register_cancel">取消</string>
+    <string name="preferential_register_yes">確定</string>
+    <string name="preferential_register_clear_message">確定清除資訊嗎？</string>
+    <string name="preferential_register_confirm">確認送出</string>
+    <string name="preferential_register_clear">清除重填</string>
+    <string name="preferential_register_verify_code">請輸入驗證碼</string>
+    <string name="preferential_register_id">驗證碼</string>
+    <string name="preferential_register_recommend">推薦人</string>
+    <string name="preferential_register_birthday_edit_text">YYYY/MM/DD</string>
+    <string name="preferential_register_member_birthday">出生日期</string>
+    <string name="preferential_register_password">密碼長度只少為6個字元</string>
+
+    <string name="special_register_country_china">中國</string>
+    <string name="special_register_country_malaysia">馬來西亞</string>
+    <string name="special_register_country_singapore">新加坡</string>
+    <string name="special_register_country_korea">韓國</string>
+    <string name="special_register_country_japan">日本</string>
+    <string name="special_register_country_hong_kong">香港</string>
+    <string name="special_register_country_myanmar">緬甸</string>
+
+    <string name="ScratChcardShareLayout_tittle">刮刮卡分享至</string>
+    <string name="ScratChcardSuccesLayout_tittle">好友分享刮刮樂給您試運氣!</string>
+
+    <string name="scratchcard_share_layout_empty_error_0">
+        <item>請輸入手機號碼</item>
+    </string>
+
+    <string name="scratchcard_share_layout_empty_error_1">
+        <item>請輸入電子信箱</item>
+    </string>
+
+    <string name="scratchcard_share_layout_empty_error_2">
+        <item>請輸入正確信箱格式</item>
+    </string>
+
+    <string-array name="preferential_register_country_list">
+        <item>緬甸</item>
+        <item>中國</item>
+        <item>馬來西亞</item>
+        <item>新加坡</item>
+        <item>韓國</item>
+        <item>日本</item>
+        <item>香港</item>
+        <item>台灣</item>
+    </string-array>
+
+    <string-array name="special_register_country_list">
+        <item>緬甸</item>
+        <item>中國</item>
+        <item>馬來西亞</item>
+        <item>新加坡</item>
+        <item>韓國</item>
+        <item>日本</item>
+        <item>香港</item>
+        <item>台灣</item>
+    </string-array>
+
+    <string-array name="list">
+        <item>登出系統</item>
+        <item>功能設置</item>
+        <item>搜尋店家</item>
+        <item>掃描/推薦</item>
+        <item>最新消息</item>
+        <item>活動查詢</item>
+        <item>點數查詢</item>
+        <item>使用說明</item>
+        <item>客服中心</item>
+        <item>加入特約</item>
+        <item>加入優惠</item>
+    </string-array>
+
+    <string-array name="list1">
+        <item>登出系統</item>
+        <item>功能設置</item>
+        <item>搜尋店家</item>
+        <item>掃描/推薦</item>
+        <item>最新消息</item>
+        <item>活動查詢</item>
+        <item>點數查詢</item>
+        <item>使用說明</item>
+        <item>客服中心</item>
+        <item>特約店</item>
+        <item>加入優惠</item>
+    </string-array>
+
+    <string-array name="list2">
+        <item>登出系統</item>
+        <item>功能設置</item>
+        <item>搜尋店家</item>
+        <item>掃描/推薦</item>
+        <item>最新消息</item>
+        <item>活動查詢</item>
+        <item>點數查詢</item>
+        <item>使用說明</item>
+        <item>客服中心</item>
+        <item>加入特約</item>
+        <item>優惠店</item>
+    </string-array>
+
+    <string-array name="list3">
+        <item>登出系統</item>
+        <item>功能設置</item>
+        <item>搜尋店家</item>
+        <item>掃描/推薦</item>
+        <item>最新消息</item>
+        <item>活動查詢</item>
+        <item>點數查詢</item>
+        <item>使用說明</item>
+        <item>客服中心</item>
+        <item>特約店</item>
+        <item>優惠店</item>
+    </string-array>
+
+    <string-array name="list_special_nonpremium">
+        <item>登出系統</item>
+        <item>功能設置</item>
+        <item>特約公告</item>
+        <item>特約活動</item>
+        <item>特約發點</item>
+        <item>付款紀錄</item>
+        <item>刊登廣告</item>
+        <item>使用說明</item>
+        <item>客服中心</item>
+        <item>會員</item>
+        <item>加入優惠</item>
+        <item>allPay付款</item>
+    </string-array>
+
+    <string-array name="list_special">
+        <item>登出系統</item>
+        <item>功能設置</item>
+        <item>特約公告</item>
+        <item>特約活動</item>
+        <item>特約發點</item>
+        <item>付款紀錄</item>
+        <item>刊登廣告</item>
+        <item>使用說明</item>
+        <item>客服中心</item>
+        <item>會員</item>
+        <item>優惠店</item>
+        <item>allPay付款</item>
+    </string-array>
+
+    <string-array name="list_premium_nonspecial">
+        <item>登出系統</item>
+        <item>功能設置</item>
+        <item>優惠公告</item>
+        <item>優惠活動</item>
+        <item>優惠折點</item>
+        <item>刊登廣告</item>
+        <item>使用說明</item>
+        <item>客服中心</item>
+        <item>會員</item>
+        <item>加入特約</item>
+    </string-array>
+
+    <string-array name="list_premium">
+        <item>登出系統</item>
+        <item>功能設置</item>
+        <item>優惠公告</item>
+        <item>優惠活動</item>
+        <item>優惠折點</item>
+        <item>刊登廣告</item>
+        <item>使用說明</item>
+        <item>客服中心</item>
+        <item>會員</item>
+        <item>特約店</item>
+    </string-array>
+
+    <string-array name="special_register_country_job_list">
+        <item>製造商</item>
+        <item>經銷商</item>
+        <item>批發商</item>
+        <item>零售商</item>
+        <item>服務商</item>
+        <item>分銷商</item>
+        <item>代理商</item>
+    </string-array>
+
+    <string-array name="preferential_register_country_job_list">
+        <item>製造商</item>
+        <item>經銷商</item>
+        <item>批發商</item>
+        <item>零售商</item>
+        <item>服務商</item>
+        <item>分銷商</item>
+        <item>代理商</item>
+    </string-array>
+
+    <string name="point_dialog_hint_point">請輸入轉讓點數</string>
+    <string name="point_dialog_hint_phone">請輸入手機號碼</string>
+    <string name="point_dialog_hint_email">請輸入E-mail</string>
+    <string name="point_dialog_cancel">取消</string>
+    <string name="point_dialog_next">下一步</string>
+    <string name="point_dialog_password">會員登入密碼</string>
+    <string name="point_dialog_submit">送出</string>
+    <string name="point_dialog_empty">欄位不得為空</string>
+    <string name="point_dialog_confirm">確認</string>
+    <string name="point_dialog_prompt">對方確認才會成功</string>
+    <string name="point_dialog_check_point">成功轉讓點數%1$d點至 </string>
+
+    <string name="scan_qr_code_registeted">掃描推薦人</string>
+    <string name="scan_qr_code_search">掃描/推薦</string>
+    <string name="scan_qr_code_premium_qrtext">優</string>
+    <string name="scan_qr_code_special_qrtext">特</string>
+    <string name="scan_qr_code">限店家 QR 碼</string>
+    <string name="scan_qr_code_show">顯示推薦 QR 碼</string>
+    <string name="scan_qr_code_remind">將QR碼對齊在方框內掃描</string>
+    <string name="scan_qr_code_albums">從相簿掃描店家 QR 碼</string>
+    <string name="recommend_qr_code_albums">從相簿掃描 QR 碼</string>
+    <string name="scan_qr_code_albums_share">分享</string>
+    <string name="scan_qr_code_albums_save">儲存到相簿</string>
+    <string name="scan_qr_code_pic_share">分享 QR 碼</string>
+    <string name="scan_qr_code_url_share">分享連結</string>
+
+
+    <string name="feedback">意見回饋</string>
+    <string name="opinion_layout_title">若您有任何問題或建議，歡迎聯絡我們!</string>
+    <string name="opinion_layout_hint_company">請輸入公司名稱</string>
+    <string name="opinion_layout_hint_phone">請輸入電話</string>
+    <string name="opinion_layout_hint_contact">請輸入聯絡人</string>
+    <string name="opinion_layout_hint_subject">請輸入  主旨</string>
+    <string name="opinion_layout_hint_content">請輸入  內文</string>
+    <string name="opinion_layout_spinner">項目別</string>
+    <string name="opinion_layout_submit">送出</string>
+    <string name="opinion_layout_cancel">取消</string>
+    <string name="opinion_layout_empty">欄位不得為空值</string>
+
+    <string name="favorite_layout_title">我的最愛</string>
+    <string name="favorite_layout_prompt">最多加入20筆</string>
+    <string name="favorite_layout_remind">向左滑分享及刪除</string>
+    <string name="scratchcard_nonshare">凡刮開後不得分享給好友</string>
+    <string name="scratchcard_share">分享給好友</string>
+    <string name="favorite_layout_delete">刪除</string>
+
+    <string name="facebook_share_success">分享成功</string>
+    <string name="facebook_share_fail">分享失敗</string>
+
+    <string name="browse_store_range_dialog_distance">半徑(公里)</string>
+    <string name="browse_store_range_dialog_title">地點參數</string>
+
+    <string name="browse_store_range_fail">範圍內無店家</string>
+    <string name="browse_store_no_url">店家無網站</string>
+    <string name="scan_qr_code_premium_search">優惠店 QR 碼</string>
+    <string name="special_qrcode_title">特約店 QR 碼</string>
+    <string name="special_qrcode_send_qrcode">傳送發點 QR 碼</string>
+    <string name="scan_qr_code_albums_share_premium">傳送折點 QR 碼</string>
+    <string name="special_qrcode_store_album">儲存到相簿</string>
+
+
+    <string-array name="general_store_list">
+        <item>所有店</item>
+        <item>特約店</item>
+        <item>優惠店</item>
+    </string-array>
+
+    <!--加盟合約-->
+    <string name="dialog_special_privacy_content_one_title">一、法律規範：</string>
+    <string name="dialog_special_privacy_content_one">本合約及其相關使用規範、辦法、處理原則、政策、及相關服務說明等，以中華民國法令為準據法。若有任何一方違犯法律規範，致使對方發生任何損失的情形，則受損方即可立即中止本契約並求償其損失。</string>
+    <string name="dialog_special_privacy_content_two_title">二、乙方資格：</string>
+    <string name="dialog_special_privacy_content_two">若乙方特約店資格失效時，本契約亦隨之中止。</string>
+    <string name="dialog_special_privacy_content_three_title">三、發放點數：</string>
+    <string name="dialog_special_privacy_content_three">凡為GinkerApp會員至乙方所經營的特約店消費時，乙方應依照實際消費總金額以1：１的比率發放消費點數給予該會員，乙方不得藉故或無故不發放消費點數。</string>
+    <string name="dialog_special_privacy_content_four_title">四、相關所有設備與空間為乙方自備：</string>
+    <string name="dialog_special_privacy_content_four">連接GinkerApp系統所需之相關所有設備與連線工具。 </string>
+    <string name="dialog_special_privacy_content_four_second">相關宣傳懸掛物、張貼廣告(文字、照片、其他所有相關檔案)。 </string>
+    <string name="dialog_special_privacy_content_five_title">五、資源提供：</string>
+    <string name="dialog_special_privacy_content_five">甲方提供乙方在GinkerApp系統與官網中之店家介紹功能，並由乙方自行上傳相關店家照片(至少4張)與店家資料，且遵守甲方系統規則，若乙方無上傳照片或是資料不齊全與作假，審核將不予通過，甲方亦不會另行通知，損失之權益由乙方自行負責。</string>
+    <string name="dialog_special_privacy_content_five_second">甲方提供乙方系統內的區域搜尋功能以及特約店範圍搜尋(消費者可更動搜尋條件)之主動顯示，以利乙方增加曝光度。</string>
+    <string name="dialog_special_privacy_content_six_title">六、帳務費用(四捨五入)：</string>
+    <string name="dialog_special_privacy_content_six">乙方同意以發放消費點數總點數之 10%，做為系統使用費(未稅)。</string>
+    <string name="dialog_special_privacy_content_six_second">每七日(星期六至下星期五)結算一次(週結)，每星期一為結帳日，結帳日後三日內，乙方需自行依對帳單內金額，匯款至甲方指定帳戶內。</string>
+    <string name="dialog_special_privacy_content_seven_title">七、市場服務：</string>
+    <string name="dialog_special_privacy_content_seven">乙方受甲方委託所從事之作業，其對象為甲方GinkerApp會員，乙方不得有差別待遇，同時不得在未獲甲方同意下，對GinkerApp會員推廣非乙方原先登錄之業務，或超出乙方經營項目以外之商品。乙方如有變更營業項目或遷址，須以書面資料告知甲方，提出變更申請。</string>
+    <string name="dialog_special_privacy_content_eight_title">八、合作關係：</string>
+    <string name="dialog_special_privacy_content_eight">乙方純粹為加盟特約店形式之合作關係，乙方不得對外罔稱為甲方其他名義上之關係，或以對方名義從事加盟合約書以外之業務。</string>
+    <string name="dialog_special_privacy_content_nine_title">九、加盟合約書轉讓：</string>
+    <string name="dialog_special_privacy_content_nine">乙方於本加盟書中之權利及義務，非經甲方書面之同意，不得將本加盟書之權利、義務轉讓或再授權予第三人。</string>
+    <string name="dialog_special_privacy_content_ten_title">十、終止合約規範：</string>
+    <string name="dialog_special_privacy_content_ten">乙方若發生點數發放不正常、舞弊之情形，或經第三方檢舉，並經甲方查證且屬實者，將累計違規一次，累計三次將立即取消乙方特約店資格，同時終止本契約。甲方亦會於官方網站公佈乙方終止契約之消息，乙方不得有任何異議。</string>
+    <string name="dialog_special_privacy_content_ten_second">若乙方有任何會影響甲方聲譽、商譽之行為出現，或經檢舉並查證屬實，本契約將立即終止，並取消乙方特約店資格，甲方亦會於官方網站公佈乙方終止契約之消息。且甲方得以向乙方求償所有損失，乙方不得有任何異議。</string>
+    <string name="dialog_special_privacy_content_ten_third">乙方須注意所上傳的店家圖片、文字、其他所有相關檔案，均不得觸犯著作權相關規範，或是必須取得同意授權證明。若有觸犯之實情，衍生出的所有相關法律問題將與甲方無關，需由乙方全部負責，甲方也將立即終止契約，並取消乙方特約店資格，甲方亦會於官方網站公佈乙方終止契約之消息。且甲方得向乙方求償所有損失，乙方不得有任何異議。</string>
+    <string name="dialog_special_privacy_content_eleven_title">十一、加盟起訖：</string>
+    <string name="dialog_special_privacy_content_eleven">本合約書自加盟簽約日(本合約書末頁所署)起生效，有效期間為一年。屆滿前30日若雙方未以書面通知終止或變更，即視為自動延長本合約書有效期間一年，雙方毋須辨理續約手續，以後期滿亦同。</string>
+    <string name="dialog_special_privacy_content_twelve_title">十二、其他</string>
+    <string name="dialog_special_privacy_content_twelve">若因本合約而涉訟，雙方同意以台灣台中地方法院為第一審管轄法院。</string>
+    <string name="dialog_special_privacy_content_twelve_second">本合約書上之所有說明均為規範，甲方有權修改或變更本合約規範之內容。</string>
+    <string name="dialog_special_privacy_content_twelve_third">本合約書規範若有任何修改或變更，甲方亦會公告於官方網站上。</string>
+    <string name="dialog_special_privacy_content_twelve_fourth">若乙方被暫停系統使用權，如欲恢復系統使用權，乙方須先繳清所有積欠、應付的款項後得以重新連線，但乙方須再支付連線處理費300元給予甲方。</string>
+
+
+    <string name="activity_select_content_pic">選三張</string>
+    <string name="activity_select_logo_pic">選一張</string>
+
+    <string name="special_upload_logo_dialog_title">特店主圖一</string>
+    <string name="special_upload_logo_dialog_prompt">特店按 + 增加主圖</string>
+    <string name="premium_upload_logo_dialog_title">優店主圖一</string>
+    <string name="premium_upload_logo_dialog_prompt">優店按 + 增加主圖</string>
+    <string name="special_upload_content_dialog_title">特店副圖三</string>
+    <string name="special_upload_content_dialog_prompt">特店按 + 增三張圖</string>
+    <string name="premium_upload_content_dialog_title">優店副圖三</string>
+    <string name="premium_upload_content_dialog_prompt">優店按 + 增三張圖</string>
+    <string name="dialog_vip_title">VIP驗證</string>
+    <string name="dialog_vip_input">請輸入驗證碼</string>
+
+    <string name="dialog_scrat_chcard_title">幸運刮刮卡</string>
+
+
+    <string name="fingerprint_not_recognized">指紋驗證失敗，請再試一次</string>
+    <string name="fingerprint_success">驗證成功</string>
+    <string name="fingerprint_hint">觸碰感測器</string>
+    <string name="sign_in">使用指紋辨識進行登入</string>
+    <string name="get_point_token">重新取得\n驗證碼</string>
+
+</resources>

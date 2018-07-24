@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_export_csv_field_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/fragment_special_export_csv_list_background_item_height"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/item_export_csv_number_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_special_export_csv_list_background_item_height"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/ColorBlack"
+        android:textSize="@dimen/item_special_point_detail_trade_time_text_size" />
+
+
+    <TextView
+        android:id="@+id/item_export_csv_phone_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_special_export_csv_list_background_item_height"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/ColorBlack"
+        android:textSize="@dimen/item_special_point_detail_trade_time_text_size" />
+
+
+    <TextView
+        android:id="@+id/item_export_csv_money_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_special_export_csv_list_background_item_height"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/ColorBlack"
+        android:textSize="@dimen/item_special_point_detail_trade_time_text_size" />
+
+
+</LinearLayout>

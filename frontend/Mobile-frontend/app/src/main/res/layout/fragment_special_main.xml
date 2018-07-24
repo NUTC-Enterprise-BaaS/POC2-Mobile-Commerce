@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorWhite">
+
+    <ImageView
+        android:id="@+id/special_activity_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/activity_enter_special_menu_button_margin_right"
+        android:layout_marginRight="@dimen/activity_enter_special_menu_button_margin_right"
+        android:layout_marginTop="@dimen/activity_enter_special_menu_button_margin_top"
+        android:background="@drawable/meau"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/activity_enter_special_logo"
+            android:layout_width="260dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_enter_special_logo_height_margin_top"
+            android:text="@string/title"
+            android:background="@color/ActivityPremiumBonusBackgroundColor"
+            android:textColor="@color/ColorWhite"
+            android:gravity="center"
+            android:textSize="35sp" />
+
+        <!--最新消息-->
+        <RelativeLayout
+            android:id="@+id/activity_enter_special_news"
+            android:layout_width="@dimen/activity_enter_special_general_button_width"
+            android:layout_height="@dimen/activity_enter_special_general_button_height"
+            android:layout_below="@id/activity_enter_special_logo"
+            android:layout_marginEnd="@dimen/activity_enter_special_button_container_margin_horizontal"
+            android:layout_marginRight="@dimen/activity_enter_special_button_container_margin_horizontal"
+            android:layout_marginTop="@dimen/activity_enter_special_button_container_margin_vertical"
+            android:background="@color/ActivityEnterSpecialNewsBackgroundColor"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/activity_enter_special_news_image"
+                android:layout_width="@dimen/activity_enter_special_general_image_width"
+                android:layout_height="@dimen/activity_enter_special_general_image_height"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/newicon_01"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/activity_enter_special_news_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_enter_special_news_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_enter_special_general_Text_margin_top"
+                android:text="@string/news"
+                android:textColor="@color/ActivityEnterSpecialTextColor"
+                android:textSize="@dimen/activity_enter_special_general_text_size" />
+        </RelativeLayout>
+
+        <!--紅利優惠-->
+        <RelativeLayout
+            android:id="@+id/activity_enter_special_bonus"
+            android:layout_width="@dimen/activity_enter_special_general_button_width"
+            android:layout_height="@dimen/activity_enter_special_general_button_height"
+            android:layout_below="@id/activity_enter_special_logo"
+            android:layout_marginTop="@dimen/activity_enter_special_button_container_margin_vertical"
+            android:layout_toEndOf="@id/activity_enter_special_news"
+            android:layout_toRightOf="@id/activity_enter_special_news"
+            android:background="@color/ActivityEnterSpecialBonusBackgroundColor"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/activity_enter_special_bonus_image"
+                android:layout_width="@dimen/activity_enter_special_general_image_width"
+                android:layout_height="@dimen/activity_enter_special_general_image_height"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/newicon_08"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/activity_enter_special_bonus_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_enter_special_bonus_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_enter_special_general_Text_margin_top"
+                android:text="@string/bonus"
+                android:textColor="@color/ActivityEnterSpecialTextColor"
+                android:textSize="@dimen/activity_enter_special_general_text_size" />
+        </RelativeLayout>
+
+        <!--廣告申請-->
+        <RelativeLayout
+            android:id="@+id/activity_enter_special_advertisement"
+            android:layout_width="@dimen/activity_enter_special_general_button_width"
+            android:layout_height="@dimen/activity_enter_special_general_button_height"
+            android:layout_below="@id/activity_enter_special_news"
+            android:layout_marginEnd="@dimen/activity_enter_special_button_container_margin_horizontal"
+            android:layout_marginRight="@dimen/activity_enter_special_button_container_margin_horizontal"
+            android:layout_marginTop="@dimen/activity_enter_special_general_button_margin_top"
+            android:background="@color/ActivityEnterSpecialAdvertisementBackgroundColor"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/activity_enter_special_advertisement_image"
+                android:layout_width="@dimen/activity_enter_special_general_image_width"
+                android:layout_height="@dimen/activity_enter_special_general_image_height"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/newicon_03"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/activity_enter_special_advertisement_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_enter_special_advertisement_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_enter_special_general_Text_margin_top"
+                android:text="@string/advertisement"
+                android:textColor="@color/ActivityEnterSpecialTextColor"
+                android:textSize="@dimen/activity_enter_special_general_text_size" />
+        </RelativeLayout>
+
+        <!--掃描-->
+        <RelativeLayout
+            android:id="@+id/activity_enter_special_scanqrcodesearch"
+            android:layout_width="@dimen/activity_enter_special_general_button_width"
+            android:layout_height="@dimen/activity_enter_special_qrcode_height"
+            android:layout_alignTop="@id/activity_enter_special_advertisement"
+            android:layout_below="@id/activity_enter_special_advertisement"
+            android:layout_toEndOf="@id/activity_enter_special_advertisement"
+            android:layout_toRightOf="@id/activity_enter_special_advertisement"
+            android:background="@color/ActivityEnterSpecialQRcodeBackgroundColor"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/activity_enter_special_scanqrcodesearch_image"
+                android:layout_width="@dimen/activity_enter_special_small_image"
+                android:layout_height="@dimen/activity_enter_special_small_image"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/newicon_02"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/activity_enter_special_scanqrcodesearch_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_enter_special_scanqrcodesearch_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_enter_special_general_Text_margin_top"
+                android:text="@string/special_qrcode_title"
+                android:textColor="@color/ActivityEnterSpecialTextColor"
+                android:textSize="@dimen/activity_enter_special_general_text_size" />
+        </RelativeLayout>
+
+        <!--功能設置-->
+        <RelativeLayout
+            android:id="@+id/activity_enter_special_setting"
+            android:layout_width="@dimen/activity_enter_special_general_button_width"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/activity_enter_special_advertisement"
+            android:layout_alignEnd="@id/activity_enter_special_scanqrcodesearch"
+            android:layout_alignRight="@id/activity_enter_special_scanqrcodesearch"
+            android:layout_below="@id/activity_enter_special_scanqrcodesearch"
+            android:layout_marginTop="@dimen/activity_enter_special_general_button_margin_top"
+            android:background="@color/ActivityEnterSpecialSettingBackgroundColor"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/activity_enter_special_setting_image"
+                android:layout_width="@dimen/premium_activity_controll_image_width"
+                android:layout_height="@dimen/premium_activity_controll_image_width"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_enter_special_menu_button_margin_right"
+                android:background="@drawable/newicon_07"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/activity_enter_special_setting_Text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/activity_enter_special_setting_image"
+                android:layout_toRightOf="@id/activity_enter_special_setting_image"
+                android:gravity="center"
+                android:text="@string/setting"
+                android:textColor="@color/ActivityEnterSpecialTextColor"
+                android:textSize="@dimen/activity_enter_special_general_text_size" />
+
+        </RelativeLayout>
+
+        <!--申請加入-->
+        <RelativeLayout
+            android:id="@+id/activity_enter_special_join"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/activity_enter_special_join_height"
+            android:layout_alignEnd="@id/activity_enter_special_setting"
+            android:layout_alignLeft="@id/activity_enter_special_advertisement"
+            android:layout_alignRight="@id/activity_enter_special_setting"
+            android:layout_alignStart="@id/activity_enter_special_advertisement"
+            android:layout_below="@id/activity_enter_special_setting"
+            android:layout_marginTop="@dimen/activity_enter_special_general_button_margin_top"
+            android:background="@color/ActivityEnterSpecialJoinBackgroundColor"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/special_main_apply_premium"
+                    android:layout_width="@dimen/premium_activity_controll_image_width"
+                    android:layout_height="@dimen/premium_activity_controll_image_width"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/newicon_06"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/activity_enter_special_setting_apply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fragment_main_margin"
+                    android:layout_marginStart="@dimen/fragment_main_margin"
+                    android:layout_toEndOf="@id/special_main_apply_premium"
+                    android:layout_toRightOf="@id/special_main_apply_premium"
+                    android:text="@string/applyIn"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/ActivityEnterSpecialTextColor"
+                    android:textSize="@dimen/activity_enter_special_left_text_size" />
+
+                <TextView
+                    android:id="@+id/activity_enter_special_setting_preferential"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/activity_enter_special_setting_apply"
+                    android:layout_toEndOf="@id/activity_enter_special_setting_apply"
+                    android:layout_toRightOf="@id/activity_enter_special_setting_apply"
+                    android:text="@string/preferential"
+                    android:textColor="@color/ActivityEnterSpecialTextColor"
+                    android:textSize="@dimen/activity_enter_special_right_text_size" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

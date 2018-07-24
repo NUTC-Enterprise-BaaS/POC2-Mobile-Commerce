@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install version="1.0" type="osbplugin" group="payment">
+	<name>os_paypal</name>
+	<title>Paypal</title>	
+	<author>Dang Thuc Dam</author>
+	<creationDate>09-03-2012</creationDate>
+	<copyright>Copyright 2008-2016 Ossolution Team</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+	<authorEmail>services@joomdonation.com</authorEmail>
+	<authorUrl>www.joomdonation.com</authorUrl>
+	<version>1.0</version>
+	<description>Paypal Payment Plugin For OS Services Booking Extension</description>
+	<params addPath="/administrator/components/com_osservicesbooking/elements">
+		<param name="paypal_mode" type="list" label="Paypal Mode" description="Set to Test Mode Or Live Mode">
+			<option value="0">Test Mode</option>
+			<option value="1">Live Mode</option>
+		</param>
+		<param name="paypal_id" type="text" size="50" label="Paypal Email" description="Enter your Paypal ID or Paypal Email" default=""></param>	
+		<param name="paypal_currency" type="osmcurrency" label="Paypal Currency" description="Choose Paypal Currency"></param>	
+	</params>
+	<config>	
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_osservicesbooking/elements">
+				<field name="paypal_mode" type="list" label="Paypal Mode" description="Set to Test Mode Or Live Mode">
+					<option value="0">Test Mode</option>
+					<option value="1">Live Mode</option>
+				</field>
+				<field name="paypal_id" type="text" size="40" label="Paypal Email" description="Enter your Paypal ID or Paypal Email" default=""></field>	
+				<field name="paypal_currency" type="osmcurrency" label="Paypal Currency" description="Choose Paypal Currency"></field>	
+			</fieldset>			
+		</fields>
+	</config>
+	<files>
+		<filename>os_paypal.php</filename>				
+	</files>	
+	<installsql />
+	<installfile />	
+</install>

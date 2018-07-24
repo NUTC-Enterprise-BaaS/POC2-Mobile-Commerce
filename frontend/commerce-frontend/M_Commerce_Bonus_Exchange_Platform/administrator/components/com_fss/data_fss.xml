@@ -1,0 +1,1581 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  
+  <table name='jos_fss_ticket_pri' once='1'>
+    <keyfields>
+      <field>id</field>
+    </keyfields>
+    <rows>
+      <row>
+        <id>1</id>
+        <title>Low</title>
+        <color>#8A8A8A</color>
+        <ordering>1</ordering>
+        <access>1</access>
+      </row>
+      <row>
+        <id>2</id>
+        <title>Medium</title>
+        <color>#000000</color>
+        <ordering>2</ordering>
+        <access>1</access>
+      </row>
+      <row>
+        <id>3</id>
+        <title>High</title>
+        <color>#F07D18</color>
+        <ordering>3</ordering>
+        <access>1</access>
+      </row>
+      <row>
+        <id>4</id>
+        <title>Urgent</title>
+        <color>#E826C6</color>
+        <ordering>4</ordering>
+        <access>1</access>
+      </row>
+      <row>
+        <id>5</id>
+        <title>Emergency</title>
+        <color>#E06161</color>
+        <ordering>5</ordering>
+        <access>1</access>
+      </row>
+      <row>
+        <id>6</id>
+        <title>Critical</title>
+        <color>#FF0000</color>
+        <ordering>6</ordering>
+        <access>1</access>
+      </row>
+    </rows>
+  </table>
+
+  <table name='jos_fss_ticket_status' once='1' alwaysreplace='1'>
+    <keyfields>
+      <field>id</field>
+    </keyfields>
+    <rows>
+      <row>
+        <id>1</id>
+        <title>Open</title>
+        <color>#61cd64</color>
+        <def_open>1</def_open>
+        <def_user>1</def_user>
+        <def_admin>0</def_admin>
+        <def_closed>0</def_closed>
+        <def_archive>0</def_archive>
+        <can_autoclose>0</can_autoclose>
+        <is_closed>0</is_closed>
+        <own_tab>1</own_tab>
+        <ordering>1</ordering>
+        <published>1</published>
+      </row>
+      <row>
+        <id>2</id>
+        <title>Follow Up</title>
+        <color>#6072ce</color>
+        <def_open>0</def_open>
+        <def_user>0</def_user>
+        <def_admin>0</def_admin>
+        <def_closed>0</def_closed>
+        <def_archive>0</def_archive>
+        <can_autoclose>0</can_autoclose>
+        <is_closed>0</is_closed>
+        <own_tab>1</own_tab>
+        <ordering>3</ordering>
+        <published>1</published>
+      </row>
+      <row>
+        <id>3</id>
+        <title>Closed</title>
+        <color>#ce6065</color>
+        <def_open>0</def_open>
+        <def_user>0</def_user>
+        <def_admin>0</def_admin>
+        <def_closed>1</def_closed>
+        <def_archive>0</def_archive>
+        <can_autoclose>0</can_autoclose>
+        <is_closed>1</is_closed>
+        <ordering>4</ordering>
+        <published>1</published>
+      </row>
+      <row>
+        <id>4</id>
+        <title>Awaiting User</title>
+        <color>#cf5fbe</color>
+        <def_open>0</def_open>
+        <def_user>0</def_user>
+        <def_admin>1</def_admin>
+        <def_closed>0</def_closed>
+        <def_archive>0</def_archive>
+        <can_autoclose>1</can_autoclose>
+        <is_closed>0</is_closed>
+        <own_tab>1</own_tab>
+        <ordering>2</ordering>
+        <published>1</published>
+      </row>
+      <row>
+        <id>5</id>
+        <title>Archived</title>
+        <color>#AAAAAA</color>
+        <def_open>0</def_open>
+        <def_user>0</def_user>
+        <def_admin>0</def_admin>
+        <def_closed>0</def_closed>
+        <def_archive>1</def_archive>
+        <can_autoclose>0</can_autoclose>
+        <is_closed>1</is_closed>
+        <ordering>5</ordering>
+        <published>1</published>
+      </row>
+    </rows>
+  </table>
+
+  <table name='jos_fss_help_text'>
+    <keyfields>
+      <field>identifier</field>
+    </keyfields>
+    <rows>
+      <row>
+        <identifier>support_open_prod_header</identifier>
+        <description>Top of the product select screen</description>
+        <group>Support - Open - Product Selection</group>
+      </row>
+      <row>
+        <identifier>support_open_prod_footer</identifier>
+        <description>Bottom of the product select screen</description>
+        <group>Support - Open - Product Selection</group>
+      </row>
+      
+      <row>
+        <identifier>support_open_dept_header</identifier>
+        <description>Top of the department select screen</description>
+        <group>Support - Open - Department Selection</group>
+      </row>
+      <row>
+        <identifier>support_open_dept_after_product</identifier>
+        <description>After product on the department select screen</description>
+        <group>Support - Open - Department Selection</group>
+      </row>
+      <row>
+        <identifier>support_open_dept_footer</identifier>
+        <description>Bottom of the department select screen</description>
+        <group>Support - Open - Department Selection</group>
+      </row>     
+      <row>
+        <identifier>support_open_main_header</identifier>
+        <description>Top of page</description>
+        <group>Support - Open - Main Page</group>
+      </row>
+      <row>
+        <identifier>support_open_main_pd_header</identifier>
+        <description>After 'Product and Department Information' header</description>
+        <group>Support - Open - Main Page</group>
+      </row>
+      <row>
+        <identifier>support_open_main_pd_footer</identifier>
+        <description>Bottom of 'Product and Department Information' section</description>
+        <group>Support - Open - Main Page</group>
+      </row>
+      <row>
+        <identifier>support_open_main_md_header</identifier>
+        <description>After 'Message Details' header</description>
+        <group>Support - Open - Main Page</group>
+      </row>
+      <row>
+        <identifier>support_open_main_md_footer</identifier>
+        <description>Bottom of 'Message Details' section</description>
+        <group>Support - Open - Main Page</group>
+      </row>
+      <row>
+        <identifier>support_open_main_file_header</identifier>
+        <description>After 'Upload File' header</description>
+        <group>Support - Open - Main Page</group>
+      </row>
+      <row>
+        <identifier>support_open_main_file_footer</identifier>
+        <description>Bottom of 'Upload File' section</description>
+        <group>Support - Open - Main Page</group>
+      </row>
+      <row>
+        <identifier>support_open_main_buttons_before</identifier>
+        <description>Before 'Back' and 'Submit' button</description>
+        <group>Support - Open - Main Page</group>
+      </row>
+      <row>
+        <identifier>support_open_main_buttons_after</identifier>
+        <description>After 'Back' and 'Submit' button</description>
+        <group>Support - Open - Main Page</group>
+      </row>
+      <row>
+        <identifier>support_open_main_message_before</identifier>
+        <description>Before 'Message' input</description>
+        <group>Support - Open - Main Page</group>
+      </row>
+      <row>
+        <identifier>support_open_main_message_after</identifier>
+        <description>After 'Message' input</description>
+        <group>Support - Open - Main Page</group>
+      </row>
+      <row>
+        <identifier>support_open_main_field_subject</identifier>
+        <description>Subject field help</description>
+        <group>Support - Open - Main Page</group>
+      </row>
+      <row>
+        <identifier>support_open_main_field_handler</identifier>
+        <description>Handler field help</description>
+        <group>Support - Open - Main Page</group>
+      </row>
+      <row>
+        <identifier>support_open_main_field_handler</identifier>
+        <description>Handler field help</description>
+        <group>Support - Open - Main Page</group>
+      </row>
+      <row>
+        <identifier>support_open_main_field_category</identifier>
+        <description>Caregory field help</description>
+        <group>Support - Open - Main Page</group>
+      </row>
+      <row>
+        <identifier>support_open_main_field_priority</identifier>
+        <description>Priority field help</description>
+        <group>Support - Open - Main Page</group>
+      </row>
+
+      <row>
+        <identifier>support_user_list_header</identifier>
+        <description>Top of page</description>
+        <group>Support - User - Ticket List</group>
+      </row>
+      <row>
+        <identifier>support_user_list_after_search</identifier>
+        <description>After Search</description>
+        <group>Support - User - Ticket List</group>
+      </row>
+      <row>
+        <identifier>support_user_list_after_footer</identifier>
+        <description>Bottom of page</description>
+        <group>Support - User - Ticket List</group>
+      </row>
+
+      <row>
+        <identifier>support_user_view_header</identifier>
+        <description>Top of Page</description>
+        <group>Support - User - Ticket View</group>
+      </row>
+      <row>
+        <identifier>support_user_view_after_details</identifier>
+        <description>After 'Ticket Details' header</description>
+        <group>Support - User - Ticket View</group>
+      </row>
+      <row>
+        <identifier>support_user_view_end_details</identifier>
+        <description>End of 'Ticket Details' section</description>
+        <group>Support - User - Ticket View</group>
+      </row>
+      <row>
+        <identifier>support_user_view_mes_header</identifier>
+        <description>After 'Messages' header</description>
+        <group>Support - User - Ticket View</group>
+      </row>
+      <row>
+        <identifier>support_user_view_mes_buttons</identifier>
+        <description>After 'Messages' buttons</description>
+        <group>Support - User - Ticket View</group>
+      </row>
+      <row>
+        <identifier>support_user_view_mes_footer</identifier>
+        <description>End of 'Messages' section</description>
+        <group>Support - User - Ticket View</group>
+      </row>
+      <row>
+        <identifier>support_user_view_mes_key</identifier>
+        <description>Before 'Messages' key</description>
+        <group>Support - User - Ticket View</group>
+      </row>
+      <row>
+        <identifier>support_user_view_attach_header</identifier>
+        <description>After 'Attachments' header</description>
+        <group>Support - User - Ticket View</group>
+      </row>
+      <row>
+        <identifier>support_user_view_attach_footer</identifier>
+        <description>End of 'Attachments' section</description>
+        <group>Support - User - Ticket View</group>
+      </row>
+      <row>
+        <identifier>menu_header</identifier>
+        <description>Top of page</description>
+        <group>Main Menu</group>
+      </row>
+      <row>
+        <identifier>menu_after_admin</identifier>
+        <description>After admin sections</description>
+        <group>Main Menu</group>
+      </row>
+      <row>
+        <identifier>menu_footer</identifier>
+        <description>Bottom of page</description>
+        <group>Main Menu</group>
+      </row>
+      <row>
+        <identifier>support_open_thanks</identifier>
+        <description>Thanks message displayed after ticket submitted</description>
+        <group>Support - Open - Thanks Message</group>
+      </row>
+      
+      
+      <row>
+        <identifier>support_view_login_header</identifier>
+        <description>Top of page</description>
+        <group>Support - View - Login Page</group>
+      </row>
+      <row>
+        <identifier>support_open_login_header</identifier>
+        <description>Top of page</description>
+        <group>Support - Open - Login Page</group>
+      </row>
+
+      <row>
+        <identifier>support_message_new_ticket_reg</identifier>
+        <description>Displayed after a registered user opens a ticket</description>
+        <group>Support - Messages</group>
+      </row>
+
+      <row>
+        <identifier>support_message_new_ticket_unreg</identifier>
+        <description>Displayed after an un-registered user opens a ticket</description>
+        <group>Support - Messages</group>
+      </row>
+
+      <row>
+        <identifier>support_message_user_reply</identifier>
+        <description>Displayed after a user posts a reply to a ticket</description>
+        <group>Support - Messages</group>
+      </row>
+
+    </rows>
+  </table>
+  
+  <table name='jos_fss_emails'>
+    <keyfields>
+      <field>tmpl</field>
+    </keyfields>
+    <rows>
+      <row>
+        <tmpl>email_on_create</tmpl>
+        <body>
+          <![CDATA[<p>Dear {to_name},</p>
+<p>You have created a new support ticket for '<i>{websitetitle}</i>'. 
+{if,admin_id}Your ticket has been assigned to <b>{handler_name}</b>, who will respond as soon as possible.{endif}
+{if,admin_id,0}Your ticket will be dealt with as soon as possible.{endif}</p>
+
+<p><b>Ticket Summary:-</b></p>
+
+<p>
+<i>Subject:</i> {subject}<br />
+<i>Ticket reference number:</i> {reference}<br />
+{if,department}<i>Department:</i> {department}<br />
+{endif}{if,category}<i>Category:</i> {category}<br />
+{endif}{if,product}<i>Product:</i> {product}<br />
+{endif}</p>
+<p><i>Message:</i></p>
+<p>{body}</p>
+
+<p>You can view the ticket by going to <a href='{ticket_link}'>{ticket_link}</a></p>
+
+<p>Thanks,<br />
+Support Team</p>
+]]>
+        </body>
+        <description>This email is sent to the user when a new ticket is created.</description>
+        <subject><![CDATA[[{reference}] {subject} ]]></subject>
+        <ishtml>1</ishtml>
+      </row>
+      <row>
+        <tmpl>email_handler_on_create</tmpl>
+        <body>
+          <![CDATA[<p>Dear {to_name},</p>
+
+<p><b>{user_name} ({user_username})</b> has created a support ticket on '{websitetitle}'. {if,admin_id}This ticket has been assigned to <b>{handler_name}</b>.{endif}
+{if,admin_id,0}This ticket had not been assigned.{endif}</p>
+
+<p><b>Ticket Summary:-</b></p>
+
+<p>
+<i>Subject:</i> {subject}<br />
+<i>Ticket reference number:</i> {reference}<br />
+{if,department}<i>Department:</i> {department}<br />
+{endif}{if,category}<i>Category:</i> {category}<br />
+{endif}{if,product}<i>Product:</i> {product}<br />
+{endif}</p>
+<p><i>Message:</i></p>
+<p>{body}</p>
+
+<p>You can view the ticket by going to <a href='{admin_link}'>{admin_link}</a></p>
+
+<p>Thanks,<br />
+Support Team</p>
+]]>
+        </body>
+        <description>This email is sent to the assigned handler when a new ticket is created. If no hander is assigned, then this email doesnt get sent.</description>
+        <subject><![CDATA[[{reference}] {subject} ]]></subject>
+        <ishtml>1</ishtml>
+      </row>
+      <row>
+        <tmpl>email_handler_on_pending</tmpl>
+        <body>
+          <![CDATA[<p>Dear {to_name},</p>
+
+<p><b>{user_name} ({user_username})</b> has created a support ticket on '{websitetitle}'. It is awaiting approval before being imported into the system.</p>
+
+<p><b>Ticket Summary:-</b></p>
+
+<p>
+<i>Subject:</i> {subject}<br />
+<i>Ticket reference number:</i> {reference}<br />
+{if,department}<i>Department:</i> {department}<br />
+{endif}{if,category}<i>Category:</i> {category}<br />
+{endif}{if,product}<i>Product:</i> {product}<br />
+{endif}</p>
+<p><i>Message:</i></p>
+<p>{body}</p>
+
+<p>You can view the ticket by going to <a href='{email_pending_link}'>{email_pending_link}</a></p>
+
+<p>Thanks,<br />
+Support Team</p>
+]]>
+        </body>
+        <description>This email is sent to the assigned handler when a new ticket is created and awaiting approval in the EMails tab.</description>
+        <subject><![CDATA[[{reference}] {subject} ]]></subject>
+        <ishtml>1</ishtml>
+      </row>
+      <row>
+        <tmpl>email_on_reply</tmpl>
+        <body>
+          <![CDATA[<p>Dear {to_name},</p>
+
+<p>Your support ticket has been replied to by <b>{sender_name}</b>.</p>
+
+<p><b>Ticket Summary:-</b></p>
+
+<p>
+<i>Subject:</i> {subject}<br />
+<i>Ticket reference number:</i> {reference}<br />
+{if,department}<i>Department:</i> {department}<br />
+{endif}{if,category}<i>Category:</i> {category}<br />
+{endif}{if,product}<i>Product:</i> {product}<br />
+{endif}</p>
+<p><i>Message:</i></p>
+<p>{body}</p>
+
+<p>You can view the ticket by going to <a href="{ticket_link}">{ticket_link}</a></p>
+
+<p>Thanks,<br />
+Support Team</p>
+]]>
+        </body>
+        <description>This email is sent to the user when a handler replys to a ticket.</description>
+        <subject><![CDATA[Re: [{reference}] {subject}]]></subject>
+        <ishtml>1</ishtml>
+      </row>
+      <row>
+        <tmpl>email_on_close</tmpl>
+        <body>
+          <![CDATA[<p>Dear {to_name},</p>
+
+<p>Your support ticket has been closed by <b>{sender_name}</b>.</p>
+
+<p><b>Ticket Summary:-</b></p>
+
+<p>
+<i>Subject:</i> {subject}<br />
+<i>Ticket reference number:</i> {reference}<br />
+{if,department}<i>Department:</i> {department}<br />
+{endif}{if,category}<i>Category:</i> {category}<br />
+{endif}{if,product}<i>Product:</i> {product}<br />
+{endif}</p>
+<p><i>Message:</i></p>
+<p>{body}</p>
+
+<p>You can view the ticket by going to <a href="{ticket_link}">{ticket_link}</a></p>
+
+<p>Thanks,<br />
+Support Team</p>
+]]>
+        </body>
+        <description>This email is sent to the user when a handler closes ticket.</description>
+        <subject><![CDATA[Re: [{reference}] {subject}]]></subject>
+        <ishtml>1</ishtml>
+      </row>
+      <row>
+        <tmpl>email_on_autoclose</tmpl>
+        <body>
+          <![CDATA[<p>Dear {to_name},</p>
+
+<p>Your support ticket has been automatically closed due to inactivity.</p>
+
+<p><b>Ticket Summary:-</b></p>
+
+<p>
+<i>Subject:</i> {subject}<br />
+<i>Ticket reference number:</i> {reference}<br />
+{if,department}<i>Department:</i> {department}<br />
+{endif}{if,category}<i>Category:</i> {category}<br />
+{endif}{if,product}<i>Product:</i> {product}<br />
+{endif}</p>
+<p><i>Message:</i></p>
+<p>{body}</p>
+
+<p>You can view the ticket by going to <a href="{ticket_link}">{ticket_link}</a></p>
+
+<p>Thanks,<br />
+Support Team</p>
+]]>
+        </body>
+        <description>This email is sent to the user when a ticket is closed due to inactivity.</description>
+        <subject><![CDATA[Re: [{reference}] {subject}]]></subject>
+        <ishtml>1</ishtml>
+      </row>
+      <row>
+        <tmpl>email_handler_on_reply</tmpl>
+        <body>
+          <![CDATA[Dear {to_name},
+
+<p>This support ticket has been replied to by <b>{user_name} ({user_username})</b>. Please go to the support admin area to view the response.</p>
+
+{if,admin_id}<p>This ticket is assigned to <b>{handler_name}</b>.</p>{endif}
+
+<p><b>Ticket Summary:-</b></p>
+
+<p>
+<i>Subject:</i> {subject}<br />
+<i>Ticket reference number:</i> {reference}<br />
+{if,department}<i>Department:</i> {department}<br />
+{endif}{if,category}<i>Category:</i> {category}<br />
+{endif}{if,product}<i>Product:</i> {product}<br />
+{endif}</p>
+<p><i>Message:</i></p>
+<p>{body}</p>
+
+<p>You can view the ticket by going to <a href='{admin_link}'>{admin_link}</a></p>
+
+<p>Thanks,<br />
+Support Team</p>
+]]>
+        </body>
+        <description>This email is sent to the assigned handler when a user replys to a ticket.</description>
+        <subject><![CDATA[Re: [{reference}] {subject} ]]></subject>
+        <ishtml>1</ishtml>
+      </row>
+      <row>
+        <tmpl>email_handler_on_forward</tmpl>
+        <body>
+          <![CDATA[Dear {to_name},
+
+<p>This support ticket has been forwarded to <b>{handler_name}</b> by <b>{sender_name}</b>.</p>
+
+<p><b>Ticket Summary:-</b></p>
+
+<p>
+<i>Subject:</i> {subject}<br />
+<i>Ticket reference number:</i> {reference}<br />
+{if,department}<i>Department:</i> {department}<br />
+{endif}{if,category}<i>Category:</i> {category}<br />
+{endif}{if,product}<i>Product:</i> {product}<br />
+{endif}</p>
+<p><i>Message:</i></p>
+<p>{body}</p>
+
+<p>You can view the ticket by going to <a href='{admin_link}'>{admin_link}</a></p>
+
+<p>Thanks,<br />
+Support Team</p>
+]]>
+        </body>
+        <description>This email is sent to the new handler when a ticket is forwarded.</description>
+        <subject><![CDATA[Fwd: [{reference}] {subject}]]></subject>
+        <ishtml>1</ishtml>
+      </row>
+      
+      <row>
+        <tmpl>email_handler_on_private</tmpl>
+        <body>
+          <![CDATA[<p>Dear {to_name},</p>
+          
+<p>A private message has been added to the support ticket by <b>{sender_name}</b>.</p>
+
+<p><b>Ticket Summary:-</b></p>
+
+<p>
+<i>Subject:</i> {subject}<br />
+<i>Ticket reference number:</i> {reference}<br />
+{if,department}<i>Department:</i> {department}<br />
+{endif}{if,category}<i>Category:</i> {category}<br />
+{endif}{if,product}<i>Product:</i> {product}<br />
+{endif}</p>
+<p><i>Message:</i></p>
+<p>{body}</p>
+
+<p>You can view the ticket by going to <a href="{admin_link}">{admin_link}</a></p>
+
+<p>Thanks,<br />
+Support Team</p>
+]]>
+        </body>
+        <description>This email is sent to ccd handlers when a handler adds a private message</description>
+        <subject><![CDATA[Re: [{reference}] {subject}]]></subject>
+        <ishtml>1</ishtml>
+      </row>  
+      
+      <row>
+        <tmpl>email_unreg_passwords</tmpl>
+        <body>
+          <![CDATA[<p>Dear {to_name},</p>
+
+<p>You have requested a list of tickets on {websitetitle}. They are as follows:</p>
+
+<p>{passlist}</p>
+<p>You can view these tickets on our website by going to the View Support Tickets section, and entering your email and the ticket password.</p>
+
+<p>Thanks,<br />
+Support Team</p>
+]]>
+        </body>
+        <description>This email is sent to an unregistered user who requests a list of tickets.</description>
+        <subject><![CDATA[{websitetitle} - Ticket List]]></subject>
+        <ishtml>1</ishtml>
+      </row>
+      
+      <row>
+        <tmpl>email_on_create_unreg</tmpl>
+        <body>
+          <![CDATA[<p>Dear {to_name},</p>
+<p>You have created a new support ticket for '<i>{websitetitle}</i>'. 
+{if,admin_id}Your ticket has been assigned to <b>{handler_name}</b>, who will respond as soon as possible.{endif}
+{if,admin_id,0}Your ticket will be dealt with as soon as possible.{endif}</p>
+
+<p><b>Ticket Summary:-</b></p>
+
+<p>
+<i>Subject:</i> {subject}<br />
+<i>Ticket reference number:</i> {reference}<br />
+{if,department}<i>Department:</i> {department}<br />
+{endif}{if,category}<i>Category:</i> {category}<br />
+{endif}{if,product}<i>Product:</i> {product}<br />
+{endif}</p>
+<p><i>Message:</i></p>
+<p>{body}</p>
+
+<p>You can view the ticket by going to <a href="{ticket_link}">{ticket_link}</a>. {haspassword_start}Your ticket access password is <b>{password}</b>.{haspassword_end}</p>
+
+<p>Thanks,<br />
+Support Team</p>
+]]>
+        </body>
+        <description>This email is sent to the user when a new ticket is created by an unregistered user.</description>
+        <subject><![CDATA[[{reference}] {subject} ]]></subject>
+        <ishtml>1</ishtml>
+      </row>
+      <row>
+        <tmpl>comment</tmpl>
+        <body>
+          <![CDATA[{title} has been added. {moderated_start}This requires moderation.{moderated_end}
+
+{article_type} : {article}
+{name_start}Name: {name}
+{name_end}{email_start}EMail: {email}
+{email_end}{website_start}Website: {website}
+{website_end}{customfields_start}{customfields}
+{customfields_end}Comment Body: 
+{body}
+
+{linkmod_start}This comment can be found for moderation <a href="{linkmod}">{linkmod}</a>.
+
+{linkmod_end}The article for this comment can be viewed <a href="{linkart}">{linkart}.]]>
+        </body>
+        <description>Comment or Testimonial submitted</description>
+        <subject><![CDATA[{title} has been added.{moderated_start} Moderation is required{moderated_end}]]></subject>
+        <ishtml>0</ishtml>
+      </row>
+      <row>
+        <tmpl>messagerow</tmpl>
+        <body>
+          <![CDATA[<p><b>{subject}</b><br /><i>{name}</i> @ <i>{posted}</i><br />{body}</p><hr />
+]]>
+        </body>
+        <description>Message details when showing all messages in an email</description>
+        <subject><![CDATA[IGNORED]]></subject>
+        <ishtml>1</ishtml>
+      </row>
+    </rows>
+  </table>
+
+  <table name='jos_fss_main_menu' once='1'>
+    <keyfields>
+      <field>itemtype</field>
+    </keyfields>
+    <rows>
+      <row>
+        <title>Knowledge Base</title>
+        <description>Displays a list of detailed articles that can contain attachments, support user comments and user ratings. These can be organised by product and cateogry. </description>
+        <icon>kb.png</icon>
+        <ordering>2</ordering>
+        <itemtype>1</itemtype>
+        <published>1</published>
+      </row>
+      <row>
+        <title>Frequently Asked Questions</title>
+        <description>Displays a list of short frequently asked questions with various visual options available that can be organised by product and/or category </description>
+        <icon>faqs.png</icon>
+        <ordering>1</ordering>
+        <itemtype>2</itemtype>
+        <published>1</published>
+      </row>
+      <row>
+        <title>Testimonials</title>
+        <description>View a list of user testimonials specific to each product. Here you can also add a testimonial. </description>
+        <icon>testimonials.png</icon>
+        <ordering>3</ordering>
+        <itemtype>3</itemtype>
+        <published>1</published>
+      </row>
+      <row>
+        <title>New Support Ticket</title>
+        <description>Open a new support ticket which can be allocated to a specific product or category. </description>
+        <icon>newticket.png</icon>
+        <ordering>4</ordering>
+        <itemtype>4</itemtype>
+        <published>1</published>
+      </row>
+      <row>
+        <title>View Support Tickets</title>
+        <description>View a list of your submitted support tickets and replies organised by open tickets, awaiting reply and closed tickets. </description>
+        <icon>support.png</icon>
+        <ordering>5</ordering>
+        <itemtype>5</itemtype>
+        <published>1</published>
+      </row>
+      <row>
+        <title>Announcements</title>
+        <description>View a list of recent announcements/news items organised by date </description>
+        <icon>announce.png</icon>
+        <ordering>6</ordering>
+        <itemtype>6</itemtype>
+        <published>1</published>
+      </row>
+      <row>
+        <title>Glossary</title>
+        <description>View a glossary of terms used in the Knowledge Base and FAQs </description>
+        <icon>glossary.png</icon>
+        <ordering>7</ordering>
+        <itemtype>8</itemtype>
+        <published>1</published>
+      </row>
+      <row>
+        <title>Administration</title>
+        <description>Support ticket administration and comment moderation</description>
+        <icon>supportadmin.png</icon>
+        <ordering>8</ordering>
+        <itemtype>9</itemtype>
+        <published>1</published>
+      </row>
+      <row>
+        <title>Group Admin</title>
+        <description>Ticket group administration</description>
+        <icon>groupadmin.png</icon>
+        <ordering>9</ordering>
+        <itemtype>10</itemtype>
+        <published>1</published>
+      </row>
+    </rows>
+  </table>
+
+  <table name='jos_fss_cron'>
+    <keyfields>
+      <field>class</field>
+    </keyfields>
+    <rows>
+      <row>
+        <id>1</id>
+        <cronevent>Ticket Autoclose</cronevent>
+        <class>AutoClose</class>
+        <lastrun>0</lastrun>
+        <interval>5</interval>
+        <published>0</published>
+        <params>addaudit:1;emailuser:0;closeinterval:30;</params>
+      </row>
+    </rows>
+  </table>
+
+  <table name='jos_fss_templates' alwaysreplace='1'>
+    <keyfields>
+      <field>template</field>
+      <field>tpltype</field>
+    </keyfields>
+    <rows>
+      <!-- comments_announce -->
+      <row>
+        <template>comments_announce</template>
+        <tpltype>3</tpltype>
+        <value decode='1'>
+          <![CDATA[&lt;div id='{divid}'&gt;
+  {moderation}
+  &lt;blockquote&gt;
+    {body}
+    &lt;small&gt;
+      {name}{if,website}, {website}{endif}
+      @ 
+      {created_nice}
+    &lt;/small&gt;
+  &lt;/blockquote&gt;
+&lt;/div&gt;]]>
+        </value>
+      </row>
+      <!-- comments_general -->
+      <row>
+        <template>comments_general</template>
+        <tpltype>3</tpltype>
+        <value decode='1'>
+          <![CDATA[&lt;div id='{divid}'&gt;
+  {moderation}
+  &lt;blockquote&gt;
+    {body}
+    &lt;small&gt;
+      {name}{if,website}, {website}{endif}
+      @ 
+      {created_nice}
+    &lt;/small&gt;
+  &lt;/blockquote&gt;
+&lt;/div&gt;]]>
+        </value>
+      </row>
+      <!-- comments_kb -->
+      <row>
+        <template>comments_kb</template>
+        <tpltype>3</tpltype>
+        <value decode='1'>
+          <![CDATA[&lt;div id='{divid}'&gt;
+  {moderation}
+  &lt;blockquote&gt;
+    {body}
+    &lt;small&gt;
+      {name}{if,website}, {website}{endif}
+      @ 
+      {created_nice}
+    &lt;/small&gt;
+  &lt;/blockquote&gt;
+&lt;/div&gt;]]>
+        </value>
+      </row>
+      <!-- comments_test -->
+      <row>
+        <template>comments_test</template>
+        <tpltype>3</tpltype>
+        <value decode='1'>
+          <![CDATA[&lt;div id='{divid}'&gt;
+  {moderation}
+  &lt;blockquote&gt;
+    {body}
+    &lt;small&gt;
+      {name}{if,website}, {website}{endif}
+      @ 
+      {created_nice}
+    &lt;/small&gt;
+  &lt;/blockquote&gt;
+&lt;/div&gt;]]>
+        </value>
+      </row>
+      <!-- comments_testmod -->
+      <row>
+        <template>comments_testmod</template>
+        <tpltype>3</tpltype>
+        <value decode='1'>
+          <![CDATA[&lt;div id='{divid}'&gt;
+  {moderation}
+  &lt;blockquote&gt;
+    {body}
+    &lt;small&gt;
+      {name}{if,website}, {website}{endif}
+      @ 
+      {created_nice}
+    &lt;/small&gt;
+  &lt;/blockquote&gt;
+&lt;/div&gt;]]>
+        </value>
+      </row>
+
+      <!-- announce -->
+      <row>
+        <template>announce</template>
+        <tpltype>3</tpltype>
+        <value decode='1'>
+          <![CDATA[&lt;div class='{class}'&gt;
+	
+  &lt;div class='pull-right small'&gt;
+		{author} @ {date}
+	&lt;/div&gt;
+  
+  &lt;h2&gt;&lt;a href='{link}'&gt;{title}&lt;/a&gt;&lt;/h2&gt;
+
+  {editpanel}
+  
+	{body}
+	
+  {if,needsreadmore}
+		&lt;div class='pull-right'&gt;
+			&lt;a href='{link}'&gt;
+				{readmore}
+			&lt;/a&gt;
+			{commentcount}
+		&lt;/div&gt;
+	{endif}
+  
+  &lt;div class='clearfix'&gt;&lt;/div&gt;
+&lt;/div&gt; ]]>
+        </value>
+      </row>
+      <!-- announcesingle -->
+      <row>
+        <template>announcesingle</template>
+        <tpltype>3</tpltype>
+        <value decode='1'>
+          <![CDATA[&lt;div class='{class}'&gt;
+	
+  &lt;div class='pull-right small'&gt;
+		{author} @ {date}
+	&lt;/div&gt;
+  
+  {editpanel}
+	{body}
+	{fulltext}
+&lt;/div&gt;]]>
+        </value>
+      </row>
+      <!-- announcemod -->
+      <row>
+        <template>announcemod</template>
+        <tpltype>3</tpltype>
+        <value decode='1'>
+          <![CDATA[
+&lt;div class='fss_mod_announcements'&gt;
+  &lt;div class='media'&gt;
+    &lt;div class='media-body'&gt;
+      &lt;h4 class='media-heading'&gt;
+        &lt;a href='{link}'&gt;
+          {title}
+        &lt;/a&gt;
+      &lt;/h4&gt;
+      {subtitle}
+      &lt;div class='pull-right small' style='text-align: right'&gt;{author} @ {date}&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+          ]]>
+        </value>
+      </row>
+
+      <!-- classic 0 -->
+      <row>
+        <template>classic</template>
+        <tpltype>0</tpltype>
+        <value decode='1'>
+          <![CDATA[{set,cols,4}
+	{if,hidehandler,0}
+		{set,cols,5}
+	{endif}
+	&lt;tr {trhl} class="{class} first" &gt;	 
+    &lt;td colspan='{cols}' class='fss_ticket_title'&gt;
+			{subject}
+			&lt;div class='pull-right' &gt;
+	      {attach}
+        {tags}
+        {lock}
+        {time_taken}
+        {msgcnt}
+			&lt;/div&gt;
+		&lt;/td&gt;
+	{if,view,'closed'}
+	{if,candelete}
+		&lt;td nowrap class='fss_ticket_title'&gt;{deletebutton}&lt;/td&gt;
+	{endif}
+	{if,candelete,0}
+			&lt;td nowrap class='fss_ticket_row' rowspan='2'&gt;{archivebutton}&lt;/td&gt;
+	{endif}
+	{endif}
+	{if,view,'archived'}
+	{if,candelete}
+		&lt;td nowrap class='fss_ticket_row' rowspan='2'&gt;{deletebutton}&lt;/td&gt;
+	{endif}
+	{endif}
+  {if,merge}
+    &lt;td rowspan='2' style='vertical-align: middle'&gt;
+      {mergebutton}
+    &lt;/td&gt;
+  {endif}
+	&lt;/tr&gt;
+	&lt;tr {trhl} class="{class}" &gt;
+		&lt;td class='fss_ticket_row'&gt;{ref}&lt;/td&gt;
+		&lt;td class='fss_ticket_row'&gt;{status}&lt;/td&gt;
+		&lt;td class='fss_ticket_row'&gt;{name}&lt;/td&gt;
+			&lt;td class='fss_ticket_row'&gt;{lastactivity}&lt;/td&gt;
+	{if,hidehandler,0}
+		&lt;td class='fss_ticket_row'&gt;{handler_tag}&lt;/td&gt;
+	{endif}
+	{if,view,'closed'}
+	{if,candelete}
+		&lt;td nowrap class='fss_ticket_row'&gt;{archivebutton}&lt;/td&gt;
+	{endif}
+	{endif}
+	&lt;/tr&gt;]]>
+        </value>
+      </row>
+      <!-- classic 1 -->
+      <row>
+        <template>classic</template>
+        <tpltype>1</tpltype>
+        <value decode='1'>
+          <![CDATA[&lt;tr&gt;
+	&lt;th&gt;{order reference %TICKET_REF%}&lt;/th&gt;
+	&lt;th&gt;{order status %STATUS%}&lt;/th&gt;
+	&lt;th&gt;{order username %USER%}&lt;/th&gt;
+	&lt;th&gt;{order lastupdate.desc %LAST_UPDATE%}&lt;/th&gt;
+	{if,hidehandler,0}
+	&lt;th&gt;{order handlerusername %ASSIGNED_TO%}&lt;/th&gt;
+	{endif}
+	{if,view,'closed'}
+	&lt;th&gt;%ARCHIVE%&lt;/th&gt;
+	{endif}
+	{if,view,'archived'}
+	{if,candelete}
+	&lt;th&gt;%ARCHIVE%&lt;/th&gt;
+	{endif}
+	{endif}
+  {if,merge}
+    &lt;th&gt;%TICKET_MERGE%&lt;/th&gt;
+  {endif}
+&lt;/tr&gt;]]>
+        </value>
+      </row>
+      <!-- withall 0 -->
+      <row>
+        <template>withall</template>
+        <tpltype>0</tpltype>
+        <value decode='1'>
+          <![CDATA[{set,cols,4}
+	{if,hidehandler,0}
+		{set,cols,5}
+	{endif}
+	{set,rows,2}{set,rowsb,1}
+	{if,custom}{set,rows,3}{set,rowsb,2}{endif}
+	&lt;tr {trhl} class="{class} first" &gt;	 
+    &lt;td colspan='{cols}' class='fss_ticket_title'&gt;
+			{subject}
+			&lt;div class='pull-right' &gt;
+        {attach}
+        {tags}
+        {lock}
+        {time_taken}
+        {msgcnt}
+			&lt;/div&gt;
+		&lt;/td&gt;
+	{if,view,'closed'}
+	{if,candelete}
+		&lt;td nowrap class='fss_ticket_title'&gt;{deletebutton}&lt;/td&gt;
+	{endif}
+	{if,candelete,0}
+			&lt;td nowrap class='fss_ticket_row' rowspan='2'&gt;{archivebutton}&lt;/td&gt;
+	{endif}
+	{endif}
+	{if,view,'archived'}
+	{if,candelete}
+		&lt;td nowrap class='fss_ticket_row' rowspan='2'&gt;{deletebutton}&lt;/td&gt;
+	{endif}
+	{endif}
+  {if,merge}
+    &lt;td rowspan='2' style='vertical-align: middle'&gt;
+      {mergebutton}
+    &lt;/td&gt;
+  {endif}
+	&lt;/tr&gt;
+	&lt;tr {trhl} class="{class}" &gt;
+		&lt;td class='fss_ticket_row'&gt;{ref}&lt;/td&gt;
+		&lt;td class='fss_ticket_row'&gt;{status}&lt;/td&gt;
+		&lt;td class='fss_ticket_row'&gt;{name}&lt;/td&gt;
+			&lt;td class='fss_ticket_row'&gt;{lastactivity}&lt;/td&gt;
+	{if,hidehandler,0}
+		&lt;td class='fss_ticket_row'&gt;{handler_tag}&lt;/td&gt;
+	{endif}
+	{if,view,'closed'}
+	{if,candelete}
+		&lt;td nowrap class='fss_ticket_row'&gt;{archivebutton}&lt;/td&gt;
+	{endif}
+	{endif}
+	&lt;/tr&gt;
+	&lt;tr {trhl} class="{class}" &gt;
+	&lt;td class='fss_ticket_br' colspan='6'&gt;
+	{if,product}
+	&lt;span class='fss_support_fieldname'&gt;%PRODUCT%: &lt;/span&gt; {product},
+	{endif}
+	{if,department}
+	&lt;span class='fss_support_fieldname'&gt;%DEPARTMENT%: &lt;/span&gt; {department},
+	{endif}
+	{if,category}
+	&lt;span class='fss_support_fieldname'&gt;%CATEGORY%: &lt;/span&gt; {category},
+	{endif}
+	{if,groups}
+	&lt;span class='fss_support_fieldname'&gt;%GROUPS%: &lt;/span&gt; {groups},
+	{endif}
+	&lt;span class='fss_support_fieldname'&gt;%PRIORITY%: &lt;/span&gt; {priority},
+	{custom}
+	&lt;/td&gt;&lt;/tr&gt;]]>
+        </value>
+      </row>
+      <!-- withall 1 -->
+      <row>
+        <template>withall</template>
+        <tpltype>1</tpltype>
+        <value decode='1'>
+          <![CDATA[&lt;tr&gt;
+	&lt;th&gt;{order reference %TICKET_REF%}&lt;/th&gt;
+	&lt;th&gt;{order status %STATUS%}&lt;/th&gt;
+	&lt;th&gt;{order username %USER%}&lt;/th&gt;
+	&lt;th&gt;{order lastupdate.desc %LAST_UPDATE%}&lt;/th&gt;
+	{if,hidehandler,0}
+	&lt;th&gt;{order handlerusername %ASSIGNED_TO%}&lt;/th&gt;
+	{endif}
+	{if,view,'closed'}
+	&lt;th&gt;%ARCHIVE%&lt;/th&gt;
+	{endif}
+	{if,view,'archived'}
+	{if,candelete}
+	&lt;th&gt;%ARCHIVE%&lt;/th&gt;
+	{endif}
+	{endif}
+  {if,merge}
+    &lt;th&gt;%TICKET_MERGE%&lt;/th&gt;
+  {endif}
+&lt;/tr&gt;]]>
+        </value>
+      </row>
+
+      <!-- withall 0 -->
+      <row>
+        <template>minimal</template>
+        <tpltype>0</tpltype>
+        <value decode='1'>
+          <![CDATA[
+          &lt;tr {trhl} class="{class} first" &gt;
+            &lt;td class='fss_ticket_title'&gt;
+			        {subject}
+			        &lt;div class='pull-right'&gt;
+	              {attach}
+                {tags}
+                {lock}
+                {time_taken}
+                {msgcnt}
+			        &lt;/div&gt;
+		        &lt;/td&gt;
+    
+		        &lt;td class='fss_ticket_row nowrap'&gt;{status}&lt;/td&gt;
+		        &lt;td class='fss_ticket_row nowrap'&gt;{lastactivity}&lt;/td&gt;
+		        &lt;td class='fss_ticket_row nowrap'&gt;{username}&lt;/td&gt;
+            
+ 	          {if,hidehandler,0}
+		          &lt;td class='fss_ticket_row nowrap'&gt;{handler_tag}&lt;/td&gt;
+	          {endif}
+
+	          {if,view,'closed'}
+	            &lt;td class='fss_ticket_row nowrap'&gt;
+                {if,candelete}{deletebutton}{endif}
+                {archivebutton}
+              &lt;/td&gt;
+	          {endif}
+          
+	          {if,view,'archived'}
+	            {if,candelete}
+		            &lt;td class='fss_ticket_row nowrap'&gt;{deletebutton}&lt;/td&gt;
+	            {endif}
+	          {endif}
+    
+            {if,merge}
+              &lt;td class='fss_ticket_row nowrap'&gt;
+                {mergebutton}
+              &lt;/td&gt;
+            {endif}
+	        &lt;/tr&gt;         
+          ]]>
+        </value>
+      </row>
+      <!-- withall 1 -->
+      <row>
+        <template>minimal</template>
+        <tpltype>1</tpltype>
+        <value decode='1'>
+          <![CDATA[
+          &lt;tr&gt;
+	          &lt;th class='nowrap'&gt;{order status %SUBJECT%}&lt;/th&gt;
+	          &lt;th class='nowrap'&gt;{order status %STATUS%}&lt;/th&gt;
+	          &lt;th class='nowrap'&gt;{order lastupdate.desc %LAST_UPDATE%}&lt;/th&gt;
+	          &lt;th class='nowrap'&gt;{order username %USER%}&lt;/th&gt;
+            
+	          {if,hidehandler,0}
+	          &lt;th class='nowrap'&gt;{order handlerusername %ASSIGNED_TO%}&lt;/th&gt;
+	          {endif}
+            
+	          {if,view,'closed'}
+	            &lt;th class='nowrap'&gt;%ARCHIVE%&lt;/th&gt;
+	          {endif}
+            
+	          {if,view,'archived'}
+	          {if,candelete}
+	            &lt;th class='nowrap'&gt;%ARCHIVE%&lt;/th&gt;
+	          {endif}
+	          {endif}
+            
+            {if,merge}
+              &lt;th class='nowrap'&gt;%TICKET_MERGE%&lt;/th&gt;
+            {endif}
+          &lt;/tr&gt;
+          ]]>
+        </value>
+      </row>
+
+      <!-- withcustomfields 0 -->
+      <row>
+        <template>withcustomfields</template>
+        <tpltype>0</tpltype>
+        <value decode='1'>
+          <![CDATA[{set,cols,4}
+	{if,hidehandler,0}
+		{set,cols,5}
+	{endif}
+	{set,rows,2}{set,rowsb,1}
+	{if,custom}{set,rows,3}{set,rowsb,2}{endif}
+	&lt;tr {trhl} class="{class} first" &gt;	 
+		&lt;td colspan='{cols}' class='fss_ticket_title'&gt;
+			{subject}
+			&lt;div class='pull-right' &gt;
+        {attach}
+        {tags}
+        {lock}
+        {time_taken}
+        {msgcnt}
+			&lt;/div&gt;
+		&lt;/td&gt;
+	{if,view,'closed'}
+	{if,candelete}
+		&lt;td nowrap class='fss_ticket_title'&gt;{deletebutton}&lt;/td&gt;
+	{endif}
+	{if,candelete,0}
+			&lt;td nowrap class='fss_ticket_row' rowspan='2'&gt;{archivebutton}&lt;/td&gt;
+	{endif}
+	{endif}
+	{if,view,'archived'}
+	{if,candelete}
+		&lt;td nowrap class='fss_ticket_row' rowspan='2'&gt;{deletebutton}&lt;/td&gt;
+	{endif}
+	{endif}
+  {if,merge}
+    &lt;td rowspan='2' style='vertical-align: middle'&gt;
+      {mergebutton}
+    &lt;/td&gt;
+  {endif}
+  &lt;/tr&gt;
+	&lt;tr {trhl} class="{class}" &gt;
+		&lt;td class='fss_ticket_row'&gt;{ref}&lt;/td&gt;
+		&lt;td class='fss_ticket_row'&gt;{status}&lt;/td&gt;
+		&lt;td class='fss_ticket_row'&gt;{name}&lt;/td&gt;
+			&lt;td class='fss_ticket_row'&gt;{lastactivity}&lt;/td&gt;
+	{if,hidehandler,0}
+		&lt;td class='fss_ticket_row'&gt;{handler_tag}&lt;/td&gt;
+	{endif}
+	{if,view,'closed'}
+	{if,candelete}
+		&lt;td nowrap class='fss_ticket_row'&gt;{archivebutton}&lt;/td&gt;
+	{endif}
+	{endif}
+	&lt;/tr&gt;
+	{if,custom}
+	&lt;tr {trhl} class="{class}" &gt;
+	&lt;td class='fss_ticket_br' colspan='6'&gt;
+	{custom}
+	&lt;/td&gt;&lt;/tr&gt;
+	{endif}]]>
+        </value>
+      </row>
+      <!-- withcustomfields 1 -->
+      <row>
+        <template>withcustomfields</template>
+        <tpltype>1</tpltype>
+        <value decode='1'>
+          <![CDATA[&lt;tr&gt;
+	&lt;th&gt;{order reference %TICKET_REF%}&lt;/th&gt;
+	&lt;th&gt;{order status %STATUS%}&lt;/th&gt;
+	&lt;th&gt;{order username %USER%}&lt;/th&gt;
+	&lt;th&gt;{order lastupdate.desc %LAST_UPDATE%}&lt;/th&gt;
+	{if,hidehandler,0}
+	&lt;th&gt;{order handlerusername %ASSIGNED_TO%}&lt;/th&gt;
+	{endif}
+	{if,view,'closed'}
+	&lt;th&gt;%ARCHIVE%&lt;/th&gt;
+	{endif}
+	{if,view,'archived'}
+	{if,candelete}
+	&lt;th&gt;%ARCHIVE%&lt;/th&gt;
+	{endif}
+	{endif}
+  {if,merge}
+    &lt;th&gt;%TICKET_MERGE%&lt;/th&gt;
+  {endif}
+&lt;/tr&gt;]]>
+        </value>
+      </row>
+      <!-- withpriority 0 -->
+      <row>
+        <template>withpriority</template>
+        <tpltype>0</tpltype>
+        <value decode='1'>
+          <![CDATA[{set,cols,5}
+	{if,hidehandler,0}
+		{set,cols,6}
+	{endif}
+	&lt;tr {trhl} class="{class} first" &gt;	 
+		&lt;td colspan='{cols}' class='fss_ticket_title'&gt;
+			{subject}
+			&lt;div class='pull-right' &gt;
+	      {attach}
+        {tags}
+        {lock}
+        {time_taken}
+        {msgcnt}
+			&lt;/div&gt;
+		&lt;/td&gt;
+	{if,view,'closed'}
+	{if,candelete}
+		&lt;td nowrap class='fss_ticket_title'&gt;{deletebutton}&lt;/td&gt;
+	{endif}
+	{if,candelete,0}
+			&lt;td nowrap class='fss_ticket_row' rowspan='2'&gt;{archivebutton}&lt;/td&gt;
+	{endif}
+	{endif}
+	{if,view,'archived'}
+	{if,candelete}
+		&lt;td nowrap class='fss_ticket_row' rowspan='2'&gt;{deletebutton}&lt;/td&gt;
+	{endif}
+	{endif}
+  {if,merge}
+    &lt;td rowspan='2' style='vertical-align: middle'&gt;
+      {mergebutton}
+    &lt;/td&gt;
+  {endif}
+	&lt;/tr&gt;
+	&lt;tr {trhl} class="{class}" &gt;
+		&lt;td class='fss_ticket_row'&gt;{ref}&lt;/td&gt;
+		&lt;td class='fss_ticket_row'&gt;{status}&lt;/td&gt;
+		&lt;td class='fss_ticket_row'&gt;{priority}&lt;/td&gt;
+		&lt;td class='fss_ticket_row'&gt;{name}&lt;/td&gt;
+		&lt;td class='fss_ticket_row'&gt;{lastactivity}&lt;/td&gt;
+	{if,hidehandler,0}
+		&lt;td class='fss_ticket_row'&gt;{handler_tag}&lt;/td&gt;
+	{endif}
+	{if,view,'closed'}
+	{if,candelete}
+		&lt;td nowrap class='fss_ticket_row'&gt;{archivebutton}&lt;/td&gt;
+	{endif}
+	{endif}
+	&lt;/tr&gt;]]>
+        </value>
+      </row>
+      <!-- withpriority 1 -->
+      <row>
+        <template>withpriority</template>
+        <tpltype>1</tpltype>
+        <value decode='1'>
+          <![CDATA[&lt;tr&gt;
+	&lt;th&gt;{order reference %TICKET_REF%}&lt;/th&gt;
+	&lt;th&gt;{order status %STATUS%}&lt;/th&gt;
+	&lt;th&gt;{order priority %PRIORITY%}&lt;/th&gt;
+	&lt;th&gt;{order username %USER%}&lt;/th&gt;
+	&lt;th&gt;{order lastupdate.desc %LAST_UPDATE%}&lt;/th&gt;
+	{if,hidehandler,0}
+	&lt;th&gt;{order handlerusername %ASSIGNED_TO%}&lt;/th&gt;
+	{endif}
+	{if,view,'closed'}
+	&lt;th&gt;%ARCHIVE%&lt;/th&gt;
+	{endif}
+	{if,view,'archived'}
+	{if,candelete}
+	&lt;th&gt;%ARCHIVE%&lt;/th&gt;
+	{endif}
+	{endif}
+  {if,merge}
+    &lt;th&gt;%TICKET_MERGE%&lt;/th&gt;
+  {endif}
+&lt;/tr&gt;]]>
+        </value>
+      </row>
+      <!-- withproddept 0 -->
+      <row>
+        <template>withproddept</template>
+        <tpltype>0</tpltype>
+        <value decode='1'>
+          <![CDATA[{set,cols,4}
+	{if,hidehandler,0}
+		{set,cols,5}
+	{endif}
+	{set,rows,2}{set,rowsb,1}
+	{if,custom}{set,rows,3}{set,rowsb,2}{endif}
+	&lt;tr {trhl} class="{class} first" &gt;	 
+		&lt;td colspan='{cols}' class='fss_ticket_title'&gt;
+			{subject}
+			&lt;div class='pull-right' &gt;
+	      {attach}
+        {tags}
+        {lock}
+        {time_taken}
+        {msgcnt}
+			&lt;/div&gt;
+		&lt;/td&gt;
+	{if,view,'closed'}
+	{if,candelete}
+		&lt;td nowrap class='fss_ticket_title'&gt;{deletebutton}&lt;/td&gt;
+	{endif}
+	{if,candelete,0}
+			&lt;td nowrap class='fss_ticket_row' rowspan='2'&gt;{archivebutton}&lt;/td&gt;
+	{endif}
+	{endif}
+	{if,view,'archived'}
+	{if,candelete}
+		&lt;td nowrap class='fss_ticket_row' rowspan='2'&gt;{deletebutton}&lt;/td&gt;
+	{endif}
+	{endif}
+  {if,merge}
+    &lt;td rowspan='2' style='vertical-align: middle'&gt;
+      {mergebutton}
+    &lt;/td&gt;
+  {endif}
+	&lt;/tr&gt;
+	&lt;tr {trhl} class="{class}" &gt;
+		&lt;td class='fss_ticket_row'&gt;{ref}&lt;/td&gt;
+		&lt;td class='fss_ticket_row'&gt;{status}&lt;/td&gt;
+		&lt;td class='fss_ticket_row'&gt;{name}&lt;/td&gt;
+			&lt;td class='fss_ticket_row'&gt;{lastactivity}&lt;/td&gt;
+	{if,hidehandler,0}
+		&lt;td class='fss_ticket_row'&gt;{handler_tag}&lt;/td&gt;
+	{endif}
+	{if,view,'closed'}
+	{if,candelete}
+		&lt;td nowrap class='fss_ticket_row'&gt;{archivebutton}&lt;/td&gt;
+	{endif}
+	{endif}
+	&lt;/tr&gt;
+	&lt;tr {trhl} class="{class}" &gt;
+	&lt;td class='fss_ticket_br' colspan='6'&gt;
+	{if,product}
+	&lt;span class='fss_support_fieldname'&gt;%PRODUCT%: &lt;/span&gt; {product},
+	{endif}
+	{if,department}
+	&lt;span class='fss_support_fieldname'&gt;%DEPARTMENT%: &lt;/span&gt; {department},
+	{endif}
+	{if,category}
+	&lt;span class='fss_support_fieldname'&gt;%CATEGORY%: &lt;/span&gt; {category},
+	{endif}
+	&lt;span class='fss_support_fieldname'&gt;%PRIORITY%: &lt;/span&gt; {priority}
+	&lt;/td&gt;
+ &lt;/tr&gt;]]>
+        </value>
+      </row>
+      <!-- withproddept 1 -->
+      <row>
+        <template>withproddept</template>
+        <tpltype>1</tpltype>
+        <value decode='1'>
+          <![CDATA[&lt;tr&gt;
+	&lt;th&gt;{order reference %TICKET_REF%}&lt;/th&gt;
+	&lt;th&gt;{order status %STATUS%}&lt;/th&gt;
+	&lt;th&gt;{order username %USER%}&lt;/th&gt;
+	&lt;th&gt;{order lastupdate.desc %LAST_UPDATE%}&lt;/th&gt;
+	{if,hidehandler,0}
+	&lt;th&gt;{order handlerusername %ASSIGNED_TO%}&lt;/th&gt;
+	{endif}
+	{if,view,'closed'}
+	&lt;th&gt;%ARCHIVE%&lt;/th&gt;
+	{endif}
+	{if,view,'archived'}
+	{if,candelete}
+	&lt;th&gt;%ARCHIVE%&lt;/th&gt;
+	{endif}
+	{endif}
+  {if,merge}
+    &lt;th&gt;%TICKET_MERGE%&lt;/th&gt;
+  {endif}
+&lt;/tr&gt;]]>
+        </value>
+      </row>
+      
+      <!-- userclassic 0 -->
+      <row>
+        <template>userclassic</template>
+        <tpltype>1</tpltype>
+        <value decode='1'>
+          <![CDATA[&lt;tr&gt;
+	&lt;th&gt;{order reference %TICKET_REF%}&lt;/th&gt;
+	&lt;th&gt;{order status %STATUS%}&lt;/th&gt;
+	&lt;th&gt;{order lastupdate.desc %LAST_UPDATE%}&lt;/th&gt;
+	{if,hidehandler,0}
+	&lt;th&gt;{order handlerusername %HANDLER%}&lt;/th&gt;
+	{endif}
+	{if,multiuser}
+	&lt;th&gt;{order username %USER%}&lt;/th&gt;
+  {endif}
+&lt;/tr&gt;
+]]>
+        </value>
+      </row>
+
+      <!-- userclassic 1 -->
+      <row>
+        <template>userclassic</template>
+        <tpltype>0</tpltype>
+        <value decode='1'>
+          <![CDATA[&lt;tr {trhl} class="{class} first"&gt;
+	&lt;td colspan=6 class='fss_ticket_title'&gt;
+    {subject}
+  &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr {trhl} class="{class}"&gt;
+	&lt;td class='fss_ticket_row'&gt;
+    {ref}
+  &lt;/td&gt;
+	&lt;td class='fss_ticket_row'&gt;
+    {status}
+  &lt;/td&gt;
+	&lt;td class='fss_ticket_row'&gt;
+		{lastactivity}
+	&lt;/td&gt;
+	{if,hidehandler,0}
+	&lt;td class='fss_ticket_row'&gt;
+    {handlername}
+  &lt;/td&gt;
+	{endif}
+  
+	{if,multiuser}
+	&lt;td class='fss_ticket_row'&gt;
+    {name}
+  &lt;/td&gt;
+	{endif}
+  
+&lt;/tr&gt;
+]]>
+        </value>
+      </row>
+
+    </rows>
+  </table>
+
+</data>

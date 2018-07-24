@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension	type="module" ersion="3.0"	client="site"	method="upgrade">
+	<name>JBusinessDirectory - Offers</name>
+	<creationDate>June 2014</creationDate>
+	<author>CMSJunkie</author>
+	<copyright>(C) CMSJunkie. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>info@cmsjunkie.com</authorEmail>
+	<authorUrl>www.cmsjunkie.com</authorUrl>
+	<version>3.0.0</version>	
+	<description>JBusinessDirectory</description>
+	
+	<files>
+		<filename module="mod_jbusiness_offers">mod_jbusiness_offers.php</filename>
+		<folder>assets</folder>
+		<folder>models</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_jbusiness_offers.xml</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_jbusiness_offers.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_jbusiness_offers.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_jbusinessdirectory/models/fields">
+				<field
+						name="viewtype"
+						type="radio"
+						class="btn-group"
+						default="default"
+						label="View type"
+						description="Choose the module layout">
+						<option
+							value="default">Simple</option>
+						<option
+							value="discount">Discount</option>
+				</field>
+				<field
+					name="categoryIds"
+					type="businesscategories"
+					multiple="true"
+					size="10"
+					default=""
+					category_type="2"
+					label="Categories"
+					description="Select categories" >
+				</field>
+				
+				<field
+					name="citySearch"
+					type="businesscities"
+					multiple="false"
+					size="10"
+					default=""
+					label="City"
+					description="Select city" >
+				</field>	
+				
+				<field
+					name="regionSearch"
+					type="text"
+					label="Region"
+					description="Enter the name of the region" />
+				
+				<field
+					name="count"
+					type="text"
+					default="5"
+					label="Number of offers"
+					description="Number of offers that will be displayed" />
+
+				<field
+					name="only_featured"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="Only featured"
+					description="Show only featurd businesses">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				
+				<field
+					name="order"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="Ordering"
+					description="Set ordering for diplaying latest business listings">
+					<option
+						value="1">Creation date</option>
+					<option
+						value="0">Random</option>
+				</field>
+
+				<field
+					name="itemId"
+					type="text"
+					default="0"
+					label="Itemid"
+					description="The Itemid associated with offers" />
+					
+				<field
+					name="showviewall"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="Show view all"
+					description="Display view all link at the bottom">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

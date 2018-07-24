@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>DC Bullet List Accordion Menu</name>
+	<author>DART Creations</author>
+	<creationDate>June 2013</creationDate>
+	<copyright>Copyright (C) 2013 DART Creations</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@dart-creations.com</authorEmail>
+	<authorUrl>www.dart-creations.com</authorUrl>
+	<version>2.5.0</version>
+		<description>
+	<![CDATA[
+	<h2>DC Bullet List Accordion Menu</h2>
+	Description: This is a Bullet List Accordion menu as defined by Dynamic Drive. Basically, it is an adaptation of a jQuery Accordion menu script adapted for Joomla. Set it up like a normal Joomla menu and you're done! 
+	<br/><br/>
+	Support and feature request enquiries at <a href='http://www.dart-creations.com/joomla/joomla-modules/bullet-list-accordion-menu.html'>http://www.dart-creations.com</a>
+	<br /><br/>
+	<br />
+	If you like this module please <a href="http://www.dart-creations.com/donate-a-beer.html">Donate a beer €3</a> :)
+	<br/><br/>
+	Thanks for using this module!
+	<br />
+	DART Creations
+	]]>
+	</description>
+	<files>
+		<filename module="mod_accordianmenu">mod_accordianmenu.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_accordianmenu.xml</filename>
+		<folder>styles</folder>
+	</files>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_MENU" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="menutype"
+					type="menu"
+					label="Select Menu"
+					description="Select a menu in the list" />
+				<field
+					name="startLevel"
+					type="list"
+					default="1"
+					label="Start Level"
+					description="Level to start rendering the menu at. Setting the start and end levels to the same # and setting 'Show Sub-menu Items' to yes will only display that single level.">
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field
+					name="endLevel"
+					type="list"
+					default="0"
+					label="End Level"
+					description="Level to stop rendering the menu at. If you choose 'All', all levels will be shown depending on 'Show Sub-menu Items' setting."
+					>
+					<option value="0">JALL</option>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field
+					name="showAllChildren"
+					type="radio"
+					default="0"
+					label="Show Sub-menu Items"
+					description="Expand the menu and make its sub-menu items always visible.">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="tag_id"
+					type="text"
+					label="Menu Tag ID"
+					description="An ID attribute to assign to the root UL tag of the menu (optional)" />
+				<field
+					name="window_open"
+					type="text"
+					label="Target Position"
+					description="JavaScript values to position a popup window, e.g. top=50,left=50,width=200,height=300" />
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

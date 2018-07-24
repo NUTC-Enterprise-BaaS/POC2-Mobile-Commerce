@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<emailcheck>
+  
+  <!-- Trim from Blockquote -->
+  <!--<trimmatch rawhtml="1" plaintext="0">
+    <regex><![CDATA[\<blockquote]]></regex>
+  </trimmatch>-->
+  
+  <!-- Trim for hr-->
+  <!--<trimmatch rawhtml="1" plaintext="0">
+    <regex><![CDATA[\<hr]]></regex>
+  </trimmatch>-->
+
+  <!-- On xxx wrote, with 4 digit year in middle to make better match -->
+  <trimmatch rawhtml="1" plaintext="0">
+    <regex><![CDATA[On .*\d{4}.* wrote:]]></regex>
+  </trimmatch>
+
+</emailcheck>

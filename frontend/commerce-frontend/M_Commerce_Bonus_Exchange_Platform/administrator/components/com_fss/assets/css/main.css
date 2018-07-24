@@ -1,0 +1,304 @@
+.fss_main_item
+{
+    margin: 3px;
+    padding: 3px;
+    /*float: left;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 5px;*/
+}
+
+.fss_main_item:hover
+{
+    background-color: White;
+}
+
+.fss_main_item a:hover
+{
+    text-decoration: none;
+}
+
+.fss_main_icon
+{
+    display: inline-block;
+}
+
+.fss_main_text
+{
+    display: inline-block;
+}
+
+.fss_main_icon img
+{
+    width: 32px;
+}
+
+.icon-48-fss {
+	background-image: url(../images/fss-48x48.png);
+}
+
+.icon-48-fss_admin {
+	background-image: url(../images/admin-48x48.png);
+}
+.icon-48-fss_announce {
+	background-image: url(../images/announce-48x48.png);
+}
+.icon-48-fss_categories {
+	background-image: url(../images/categories-48x48.png);
+}
+.icon-48-fss_cronlog {
+	background-image: url(../images/cronlog-48x48.png);
+}
+.icon-48-fss_customfields {
+	background-image: url(../images/customfields-48x48.png);
+}
+.icon-48-fss_customtext {
+	background-image: url(../images/customtext-48x48.png);
+}
+.icon-48-fss_emailaccounts {
+	background-image: url(../images/emailaccounts-48x48.png);
+}
+.icon-48-fss_emails {
+	background-image: url(../images/emails-48x48.png);
+}
+.icon-48-fss_faqs {
+	background-image: url(../images/faqs-48x48.png);
+}
+.icon-48-fss_glossary {
+	background-image: url(../images/glossary-48x48.png);
+}
+.icon-48-fss_groups {
+	background-image: url(../images/groups-48x48.png);
+}
+.icon-48-fss_kb {
+	background-image: url(../images/kb-48x48.png);
+}
+.icon-48-fss_list {
+	background-image: url(../images/list-48x48.png);
+}
+.icon-48-fss_menu {
+	background-image: url(../images/menu-48x48.png);
+}
+.icon-48-fss_prods {
+	background-image: url(../images/prods-48x48.png);
+}
+.icon-48-fss_settings {
+	background-image: url(../images/settings-48x48.png);
+}
+.icon-48-fss_viewsettings {
+	background-image: url(../images/viewsettings-48x48.png);
+}
+.icon-48-fss_templates {
+	background-image: url(../images/templates-48x48.png);
+}
+.icon-48-fss_ticketdepts {
+	background-image: url(../images/ticketdepts-48x48.png);
+}
+.icon-48-fss_ticketstatuss {
+	background-image: url(../images/ticketstatus-48x48.png);
+}
+.icon-48-fss_ticketpris {
+	background-image: url(../images/ticketpris-48x48.png);
+}
+.icon-48-fss_users {
+	background-image: url(../images/users-48x48.png);
+}
+.icon-48-fss_moderate {
+	background-image: url(../images/moderate-48x48.png);
+}
+
+.icon-32-translate {
+    background-image: url(../images/translate-32x32.png);	
+}
+
+.icon-32-resetviews {
+    background-image: url(../images/resetviews-32.png);	
+}
+
+.icon-32-resetrating {
+    background-image: url(../images/resetrating-32.png);	
+}
+
+.icon-32-autosort {
+    background-image: url(../images/autosort-32.png);	
+}
+
+/* J3 specific stuff */
+div.container-main td.order input.text_area
+{
+    float: right;
+}
+
+/*input, textarea
+{
+    width: auto !important;
+}*/
+
+
+.tcontent
+{
+	overflow: scroll;
+	height: 100%;
+}
+
+
+/* --------- */
+/* tab stuff */
+/* --------- */
+div.ffs_tabs {
+	/*padding: 8px;
+	margin-bottom: 18px;
+	width: 100%;
+	border-bottom: 1px solid #ccc;*/
+	padding-left: 4px !important;
+    margin-bottom: 18px !important;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-right: 4px !important;
+    padding-top: 4px !important;
+    padding-bottom: 0px !important;
+}
+
+a.ffs_tab 
+{
+    white-space: nowrap;
+	/*margin: 4px;
+	padding: 5px 8px 8px 8px;
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	background-color: <?php echo FSS_Settings::get('css_tb'); ?>;*/
+	margin: 0px !important;
+    padding: 5px 6px 6px 6px !important;
+    border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	background-color: white;
+    line-height: 28px !important;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+a.ffs_tab:hover {
+	background-color: #f0f0f0;
+	text-decoration: none;
+}
+
+a.fss_tab_selected {
+	background-color: #f0f0f0 !important;
+	border-bottom: 1px solid #f0f0f0 !important;
+	font-weight: bold !important;
+}
+
+a.fss_tab_selected:hover {
+	background-color: #f0f0f0;
+	text-decoration: none;
+}
+
+table.admintable
+{
+    width: 100%;
+}
+
+div.container-main td.order input {
+    width: 50px;
+}
+
+/* Russian Fix */
+fieldset.adminform label, fieldset.panelform label, fieldset.adminform span.faux-label, div.current label, div.current span.faux-label 
+{
+    min-width: inherit !important;   
+    max-width: inherit !important; 
+    width: inherit !important;
+}
+
+#popup_css_outer pre, #popup_css_outer b {
+    margin-top: 8px;
+}
+
+.fss_help {
+    font-style: italic;
+}
+
+.fss_custom_warn
+{
+	color: red;
+}
+
+.table-settings td {
+    vertical-align:middle !important;
+}
+
+.table-settings tr td:first-child {
+    border-left: 1px solid #ddd !important;
+}
+
+.table-settings tr td {
+    border-left: none !important;
+}
+
+.fss_settings .table td input, 
+.fss_settings .table td select
+{
+	margin-bottom: 0 !important;
+}
+
+.CodeMirror {
+    border-radius: 4px;
+}
+
+.plugin-settings {
+    padding: 6px;
+    margin: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.plugin-settings .control-group {
+	margin-bottom: 6px !important;
+}
+
+.fss_admin_header input,
+.fss_admin_header select,
+#editcell table:nth-child(1) input,
+#editcell table:nth-child(1) select
+{
+    margin-bottom: 0 !important;
+}
+
+td.order input {
+    margin-bottom: 0 !important;
+    padding: 1px;
+    padding-top: 3px;
+}
+
+.table-narrow
+{
+	width: inherit !important;
+}
+.form-condensed .control-group {
+	margin-bottom: 6px !important;
+}
+
+.fss_main pre code {
+    border: 1px solid #ccc !important;
+    padding: 3px !important;
+    background-color: #eef !important;
+}
+
+.side_header {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #146295;
+    font-style: italic;
+    margin-left: -12px;
+    display: inline-block;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.fss_main .form-condensed .control-group {
+    margin-bottom: 3px !important;
+    margin-top: 3px;
+}

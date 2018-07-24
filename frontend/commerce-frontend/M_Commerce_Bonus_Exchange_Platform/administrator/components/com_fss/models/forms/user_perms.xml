@@ -1,0 +1,144 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<form>
+  <authorEmail>support@freestyle-joomla.com</authorEmail>
+  <author>Freestyle Joomla</author>
+  <copyright>(C) 2013 Freestyle Joomla. All rights reserved.</copyright>
+  <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html </license>
+  <authorUrl>http://www.freestyle-joomla.com</authorUrl>
+
+  <fieldset>
+    <field name="asset_id" type="hidden" filter="unset" />
+    <field name="user_id" type="hidden" filter="unset" />
+
+    <field name="faq" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="content" validate="rules" tab_id="permfaq"
+        asset_field="com_fss.faq"
+		/>
+
+    <field name="kb" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="content" validate="rules" tab_id="permkb"
+       asset_field="com_fss.kb"
+		/>
+
+    <field name="glossary" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="content" validate="rules" tab_id="permglo"
+       asset_field="com_fss.glossary"
+		/>
+
+    <field name="announce" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="content" validate="rules" tab_id="permann"
+       asset_field="com_fss.announce"
+		/>
+
+    <field name="moderation" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="moderation" validate="rules"
+		/>
+    
+    <field name="support_user" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="support_user" validate="rules" tab_id="permsuppuser"
+       asset_field="com_fss.support_user"
+		/>
+
+    <field name="groups" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="groups" validate="rules" tab_id="permsuppuser"
+       asset_field="com_fss.groups"
+		/>
+
+    <field name="reports" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="reports" validate="rules" tab_id="permsuppuser"
+       asset_field="com_fss.reports"
+		/>
+
+    <field name="moderation" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="moderation" validate="rules" tab_id="permsuppuser"
+       asset_field="com_fss.moderation"
+		/>
+
+    <field name="support_admin" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="support_admin" validate="rules"
+        tab_id="permsuppadmin"
+	      asset_field="com_fss.support_admin"
+	      />
+
+    <field name="support_admin_misc" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="support_admin_misc" validate="rules"
+        tab_id="permsuppadminticketmisc"
+	      asset_field="com_fss.support_admin"
+	      />
+
+    <field name="support_admin_ticket" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="support_admin_ticket" validate="rules"
+        tab_id="permsuppadminticket"
+	      asset_field="com_fss.support_admin"
+	      />
+
+    <field name="support_admin_ticket_cc" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="support_admin_ticket_cc" validate="rules"
+        tab_id="permsuppadminticketcc"
+	      asset_field="com_fss.support_admin"
+	      />
+
+    <field name="support_admin_ticket_other" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="support_admin_ticket_other" validate="rules"
+        tab_id="permsuppadminticketother"
+	      asset_field="com_fss.support_admin"
+	      />
+
+    <field name="support_admin_ticket_una" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="support_admin_ticket_una" validate="rules"
+        tab_id="permsuppadminticketuna"
+	      asset_field="com_fss.support_admin"
+	      />
+
+    <field name="view_products" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="" validate="rules"
+        asset_field="com_fss.support_admin"
+          />
+
+    <field name="view_departments" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="" validate="rules" 
+        asset_field="com_fss.support_admin"
+          />
+
+    <field name="view_categories" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="" validate="rules"
+        asset_field="com_fss.support_admin"
+          />
+
+    <field name="assign_products" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="" validate="rules"
+        asset_field="com_fss.support_admin"
+          />
+
+    <field name="assign_departments" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="" validate="rules"
+         asset_field="com_fss.support_admin"
+         />
+
+    <field name="assign_categories" type="fssrulesu" label=""
+        translate_label="false" class="inputbox" filter="rules"
+        component="com_fss" section="" validate="rules"
+        asset_field="com_fss.support_admin"
+          />
+  </fieldset>
+</form>

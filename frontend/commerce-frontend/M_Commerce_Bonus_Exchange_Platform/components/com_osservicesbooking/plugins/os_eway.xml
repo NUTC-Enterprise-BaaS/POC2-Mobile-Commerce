@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install version="1.0" type="osbplugin" group="payment">
+	<name>os_eway</name>
+	<title>Eway</title>	
+	<author>Tuan Pham Ngoc</author>
+	<creationDate>09-03-2010</creationDate>
+	<copyright>Copyright 2007-2010 Ossolution Team</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+	<authorEmail>contact@joomdonation.com</authorEmail>
+	<authorUrl>www.joomdonation.com</authorUrl>
+	<version>1.0</version>
+	<description>Eway Payment Plugin For OS Services Booking Extension</description>
+	<config>	
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_eventbooking/elements">
+				<field name="eway_mode" type="list" label="Eway Mode" description="Set to Test Mode Or Live Mode">
+					<option value="0">Test Mode</option>
+					<option value="1">Live Mode</option>
+				</field>
+				<field name="eway_customer_id" type="text" size="40" label="Customer ID" description="Enter your Eway customer ID" default="87654321"></field>	
+				<field name="use_cvn" type="list" label="Use CVN" description="If Set to Yes, Eway will check the valid of Card CVV Code">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>	
+			</fieldset>			
+		</fields>
+	</config>
+	<files>
+		<filename>os_eway.php</filename>				
+	</files>
+	<languages>
+		<filename>en-GB.os_eway.ini</filename>		
+	</languages>
+	<installsql />
+	<installfile />	
+</install>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>VikBooking Horizontal Search</name>
+	<author>Alessio Gaggii - e4j Extensionsforjoomla.com</author>
+	<creationDate>February 2016</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>tech@extensionsforjoomla.com</authorEmail>
+	<authorUrl>www.extensionsforjoomla.com</authorUrl>
+	<version>1.7</version>
+	<description>Module to Show a Horizontal Search Form for VikBooking 1.7 or newer</description>
+ 
+	<files>
+		<filename module="mod_vikbooking_horizontalsearch">mod_vikbooking_horizontalsearch.php</filename>
+		<filename>mod_vikbooking_horizontalsearch.css</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>images</folder>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">languages/en-GB/en-GB.mod_vikbooking_horizontalsearch.ini</language>
+		<language tag="it-IT">languages/it-IT/it-IT.mod_vikbooking_horizontalsearch.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">		
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				<field name="" type="spacer" default="" label="" description="" />
+
+				<field name="heading_text" type="text" default="" label="PARAMHEADINGTEXT" description="PARAMHEADINGTEXT" />
+				<field name="tag_heading" type="text" default="p" label="PARAMHEADINGTAG" description="PARAMHEADINGTAG" />
+				<field name="css_tag_heading" type="text" default="" label="PARAMHEADINGTAGCLASS" description="PARAMHEADINGTAGCLASS" /> 
+
+				<field name="" type="spacer" default="" label="" description="" />
+				
+				<field name="srchbtntext" type="text" default="" label="SEARCHT" description="SEARCHHELP" />
+
+				<field name="defadults" type="number" default="2" label="DEFADULTS" description="DEFADULTSHELP" />
+
+				<field name="showcat" type="list" default="2" label="SHOWCAT" description="SHOWCAT">
+					<option value="1">JYES</option>
+					<option value="2">JNO</option>
+				</field>
+
+				<field name="calendar" type="list" default="jqueryui" label="Calendar Type" description="The native Joomla Calendar or the jQuery UI Calendar. jQuery UI strongly recommended">
+					<option value="jqueryui">jQuery UI</option>
+					<option value="joomla">Joomla!</option>
+				</field>
+
+				<field name="room_id" type="sql" default="0" label="FORCESINGLEROOMSEARCH" description="FORCESINGLEROOMSEARCHHELP" query="SELECT id AS value, name AS title FROM #__vikbooking_rooms ORDER BY name ASC" key_field="value" value_field="title" required="false">
+					<option value="0">FORCESINGLEROOMSEARCHDISABLED</option>
+				</field>
+
+				<field name="loadjqueryvb" type="list" default="1" label="Load jQuery" description="Load jQuery Library for jQuery UI Calendar. If your template has already jQuery you do not need to load it">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="itemid" type="menuitem" default="" label="Force Menu Item" description="In case the module is displayed in the home page or any other page with no ItemID, force one to have it assigned in the pages after the search." />
+				<field name="layout" type="modulelayout" label="Layout" description="The layout of the module" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

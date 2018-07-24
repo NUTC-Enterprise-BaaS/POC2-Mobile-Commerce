@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/activity_setting_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/ColorGeneralTheme">
+
+        <ImageView
+            android:layout_width="@dimen/toolbar_back_image_width"
+            android:layout_height="@dimen/toolbar_back_image_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/toolbar_back_image_margin_left"
+            android:layout_marginStart="@dimen/toolbar_back_image_margin_left"
+            android:scaleType="fitCenter"
+            android:src="@drawable/toolbar_back" />
+
+        <View
+            android:id="@+id/toolbar_back_touch"
+            android:layout_width="@dimen/toolbar_back_touch"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/activity_setting_toolbar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/setting"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/toolbar_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/setting_contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_setting_toolbar"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_row_height"
+            android:background="@color/ActivitySettingRemindBackGroundColor"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/activity_setting_row_padding_horizontal"
+            android:paddingRight="@dimen/activity_setting_row_padding_horizontal"
+            android:text="@string/remind"
+            android:textColor="@color/ColorBlack"
+            android:textSize="@dimen/activity_setting_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_line_height"
+            android:background="@color/ColorBlack" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_remind_volume_height"
+            android:background="@color/ColorWhite"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/activity_setting_row_padding_horizontal"
+            android:paddingRight="@dimen/activity_setting_row_padding_horizontal"
+            android:text="@string/remind_volume"
+            android:textColor="@color/ColorBlack"
+            android:textSize="@dimen/activity_setting_text_size" />
+
+        <View
+            android:id="@+id/remind_volume_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_line_height"
+            android:layout_marginLeft="@dimen/activity_setting_inside_line_margin"
+            android:layout_marginRight="@dimen/activity_setting_inside_line_margin"
+            android:background="@color/ColorBlack" />
+
+        <RelativeLayout
+            android:id="@+id/setting_volume_contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_row_height"
+            android:background="@color/ColorWhite">
+
+            <ImageView
+                android:id="@+id/voice_close"
+                android:layout_width="@dimen/activity_setting_volume_image_width"
+                android:layout_height="@dimen/activity_setting_volume_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_setting_voice_margin"
+                android:layout_marginStart="@dimen/activity_setting_voice_margin"
+                android:scaleType="centerInside"
+                android:src="@drawable/voice_close" />
+
+            <ImageView
+                android:id="@+id/voice_start"
+                android:layout_width="@dimen/activity_setting_volume_image_width"
+                android:layout_height="@dimen/activity_setting_volume_image_height"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/activity_setting_voice_margin"
+                android:layout_marginRight="@dimen/activity_setting_voice_margin"
+                android:scaleType="centerInside"
+                android:src="@drawable/voice_start" />
+
+            <SeekBar
+                android:id="@+id/voice_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/voice_close"
+                android:layout_toLeftOf="@id/voice_start"
+                android:layout_toRightOf="@id/voice_close"
+                android:layout_toStartOf="@id/voice_start"
+                android:max="7"
+                android:progressBackgroundTint="@color/ActivitySettingSeekBarColor"
+                android:progressTint="@color/ActivitySettingSeekBarColor"
+                android:thumbTint="@color/ActivitySettingSeekBarColor" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/remind_volume_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_line_height"
+            android:layout_marginLeft="@dimen/activity_setting_inside_line_margin"
+            android:layout_marginRight="@dimen/activity_setting_inside_line_margin"
+            android:background="@color/ColorBlack" />
+
+        <RelativeLayout
+            android:id="@+id/setting_shock_contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_row_height"
+            android:background="@color/ColorWhite">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_setting_row_padding_horizontal"
+                android:layout_marginStart="@dimen/activity_setting_row_padding_horizontal"
+                android:background="@color/ColorWhite"
+                android:text="@string/shock"
+                android:textColor="@color/ColorBlack"
+                android:textSize="@dimen/activity_setting_text_size" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/setting_switch_shock"
+                android:layout_width="@dimen/activity_setting_switch_width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/activity_setting_switch_margin"
+                android:layout_marginRight="@dimen/activity_setting_switch_margin" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_line_height"
+            android:layout_gravity="center"
+            android:background="@color/ColorBlack" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_row_height"
+            android:background="@color/ActivitySettingRemindBackGroundColor"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/activity_setting_row_padding_horizontal"
+            android:paddingRight="@dimen/activity_setting_row_padding_horizontal"
+            android:text="@string/language"
+            android:textColor="@color/ColorBlack"
+            android:textSize="@dimen/activity_setting_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_line_height"
+            android:layout_gravity="center"
+            android:background="@color/ColorBlack" />
+
+        <RelativeLayout
+            android:id="@+id/setting_language"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_row_height"
+            android:background="@color/ColorWhite">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_setting_row_padding_horizontal"
+                android:layout_marginStart="@dimen/activity_setting_row_padding_horizontal"
+                android:text="@string/chinese"
+                android:textColor="@color/ColorBlack"
+                android:textSize="@dimen/activity_setting_text_size" />
+
+            <ImageView
+                android:layout_width="@dimen/activity_setting_volume_image_width"
+                android:layout_height="@dimen/activity_setting_volume_image_height"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/activity_setting_switch_margin"
+                android:layout_marginRight="@dimen/activity_setting_switch_margin"
+                android:scaleType="centerInside"
+                android:src="@drawable/z"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_line_height"
+            android:layout_gravity="center"
+            android:background="@color/ColorBlack" />
+
+        <TextView
+            android:id="@+id/setting_basic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_row_height"
+            android:background="@color/ActivitySettingRemindBackGroundColor"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/activity_setting_row_padding_horizontal"
+            android:paddingRight="@dimen/activity_setting_row_padding_horizontal"
+            android:text="@string/basic_data"
+            android:textColor="@color/ColorBlack"
+            android:textSize="@dimen/activity_setting_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_line_height"
+            android:layout_gravity="center"
+            android:background="@color/ColorBlack" />
+
+        <TextView
+            android:id="@+id/setting_change"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_row_height"
+            android:background="@color/ActivitySettingRemindBackGroundColor"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/activity_setting_row_padding_horizontal"
+            android:paddingRight="@dimen/activity_setting_row_padding_horizontal"
+            android:text="@string/change_pasword"
+            android:textColor="@color/ColorBlack"
+            android:textSize="@dimen/activity_setting_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_line_height"
+            android:layout_gravity="center"
+            android:background="@color/ColorBlack" />
+
+        <RelativeLayout
+            android:id="@+id/setting_hide_button_contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_row_height"
+            android:background="@color/ColorWhite">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_setting_row_padding_horizontal"
+                android:layout_marginStart="@dimen/activity_setting_row_padding_horizontal"
+                android:text="@string/hide_button"
+                android:textColor="@color/ColorBlack"
+                android:textSize="@dimen/activity_setting_text_size" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/setting_switch_hide_button"
+                android:layout_width="@dimen/activity_setting_switch_width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/activity_setting_switch_margin"
+                android:layout_marginRight="@dimen/activity_setting_switch_margin" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_line_height"
+            android:layout_gravity="center"
+            android:background="@color/ColorBlack" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_row_height"
+            android:background="@color/ActivitySettingRemindBackGroundColor"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/activity_setting_row_padding_horizontal"
+            android:paddingRight="@dimen/activity_setting_row_padding_horizontal"
+            android:text="@string/app"
+            android:textColor="@color/ColorBlack"
+            android:textSize="@dimen/activity_setting_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_line_height"
+            android:layout_gravity="center"
+            android:background="@color/ColorBlack" />
+
+        <RelativeLayout
+            android:id="@+id/setting_version_contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_row_height"
+            android:background="@color/ColorWhite">
+
+            <TextView
+                android:id="@+id/setting_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/ColorWhite"
+                android:paddingLeft="@dimen/activity_setting_row_padding_horizontal"
+                android:paddingRight="@dimen/activity_setting_row_padding_horizontal"
+                android:text="@string/version"
+                android:textColor="@color/ColorBlack"
+                android:textSize="@dimen/activity_setting_text_size" />
+
+            <TextView
+                android:id="@+id/setting_version_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/activity_setting_switch_margin"
+                android:layout_marginRight="@dimen/activity_setting_switch_margin"
+                android:background="@color/ColorWhite"
+                android:text="@string/update"
+                android:textColor="@color/ActivitySettingUpdateColor"
+                android:textSize="@dimen/activity_setting_text_size" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_line_height"
+            android:layout_gravity="center"
+            android:background="@color/ColorBlack" />
+
+        <TextView
+            android:id="@+id/setting_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_row_height"
+            android:background="@color/ActivitySettingRemindBackGroundColor"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/activity_setting_row_padding_horizontal"
+            android:paddingRight="@dimen/activity_setting_row_padding_horizontal"
+            android:text="@string/opinion"
+            android:textColor="@color/ColorBlack"
+            android:textSize="@dimen/activity_setting_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_line_height"
+            android:layout_gravity="center"
+            android:background="@color/ColorBlack" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_row_height"
+            android:background="@color/ColorWhite">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_setting_row_padding_horizontal"
+                android:layout_marginStart="@dimen/activity_setting_row_padding_horizontal"
+                android:text="啟用指紋解鎖登入"
+                android:textColor="@color/ColorBlack"
+                android:textSize="@dimen/activity_setting_text_size" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/setting_switch_button"
+                android:layout_width="@dimen/activity_setting_switch_width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/activity_setting_switch_margin"
+                android:layout_marginRight="@dimen/activity_setting_switch_margin" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_setting_line_height"
+            android:layout_gravity="center"
+            android:background="@color/ColorBlack" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ActivityQRcodeBackgroundColor">
+
+    <RelativeLayout
+        android:id="@+id/qrcode_show_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_qrcode_show_container_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/fragment_qrcode_show_margin_bottom"
+        android:layout_marginLeft="@dimen/fragment_qrcode_scan_item_margin"
+        android:layout_marginRight="@dimen/fragment_qrcode_scan_item_margin">
+
+        <LinearLayout
+            android:id="@+id/qrcode_show_share_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fragment_qrcode_show_share_button_height"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/qrcode_show_share_qr_album"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/layout_qrcode_scan_album"
+                android:gravity="center"
+                android:text="@string/scan_qr_code_pic_share"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/fragment_qrcode_show_button_text" />
+
+            <TextView
+                android:id="@+id/qrcode_show_share_url"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/fragment_qrcode_show_share_button_margin"
+                android:layout_weight="1"
+                android:background="@drawable/layout_qrcode_scan_album"
+                android:gravity="center"
+                android:text="@string/scan_qr_code_url_share"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/fragment_qrcode_show_button_text" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/qrcode_show_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fragment_qrcode_show_share_button_height"
+            android:layout_below="@id/qrcode_show_share_button_container"
+            android:layout_marginTop="@dimen/fragment_qrcode_show_save_button_margin_top"
+            android:background="@drawable/layout_qrcode_scan_album"
+            android:gravity="center"
+            android:text="@string/scan_qr_code_albums_save"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/fragment_qrcode_show_button_text" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/qrcode_show_qrcode_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/qrcode_show_button_container"
+        android:background="@color/ColorTransparent">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/qrcode_show_qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/fragment_qrcode_scan_item_margin"
+            android:background="@color/ColorTransparent"
+            android:scaleType="fitXY" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

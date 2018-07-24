@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.3" client="site" method="upgrade">
+  <name>SP News Highlighter</name>
+  <author>JoomShaper.com</author>
+  <creationDate>Oct 2010</creationDate>
+  <copyright>Copyright (C) 2010 - 2014 JoomShaper.com. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>support@joomshaper.com</authorEmail>
+  <authorUrl>www.joomshaper.com</authorUrl>
+  <version>3.4</version>
+  <description>News highlighter module by JoomShaper.com</description>
+  <languages>
+    <language tag="en-GB">language/en-GB.mod_sp_news_highlighter.ini</language>
+  </languages>
+  <files>
+    <filename module="mod_sp_news_highlighter">mod_sp_news_highlighter.php</filename>
+    <filename>index.html</filename>	
+    <filename>helper.php</filename>
+    <filename>k2helper.php</filename>
+    <folder>elements</folder>
+    <folder>tmpl</folder>
+    <folder>assets</folder>
+  </files>
+  <config>
+    <fields name="params" addfieldpath="/modules/mod_sp_news_highlighter/elements">
+      <fieldset name="DATA_SOURCE">
+        <field name="content_source" type="list" default="joomla" label="CONTENT_SOURCE" description="CONTENT_SOURCE_DESC">
+          <option value="joomla">JOOMLA</option>
+          <option value="k2">MODK2</option>
+        </field>
+        <field name="catid" type="category" extension="com_content" multiple="true" size="10" default="" label="CATEGORY" description="CATEGORY_DESC"/>
+        <field name="k2catids" type="k2category" default="all" label="K2CATEGORY" description="K2CATEGORY_DESC"/>
+        <field name="count" type="text" default="5" label="COUNT" description="COUNT_DESC"/>
+        <field name="ordering" type="list" default="a.title" label="ORDER" description="ORDER_DESC">
+          <option value="a.ordering">JOOMLA_ORDERING</option>
+          <option value="a.publish_up">PUBLISHED_UP</option>
+          <option value="a.hits">HITS</option>
+          <option value="a.title">TITLE</option>
+          <option value="a.id">ID</option>
+          <option value="a.alias">ALIAS</option>
+          <option value="a.created">CREATED</option>
+          <option value="a.modified">MODIFIED</option>
+        </field>
+        <field name="ordering_direction" type="list" default="ASC" label="ORDERING_FILTER" description="ORDERING_FILTER_DESC">
+          <option value="DESC">FILTER_DESC</option>
+          <option value="ASC">FILTER_ASC</option>
+        </field>
+        <field name="user_id" type="list" default="0" label="AUTHORS" description="AUTHORS_DESC">
+          <option value="0">ANYONE</option>
+          <option value="by_me">BYME</option>
+          <option value="not_me">NOTBYME</option>
+        </field>
+        <field name="show_featured" type="list" default="" label="FEATURED" description="FEATURED_DESC">
+          <option value="">JSHOW</option>
+          <option value="0">JHIDE</option>
+          <option value="1">ONLY_SHOW_FEATURED</option>
+        </field>
+        <field name="titleas" type="radio" class="btn-group" default="0" label="TITLEAS" description="TITLEAS_DESC">
+          <option value="0">WLIMIT</option>
+          <option value="1">CLIMIT</option>
+          <option value="2">NOLIMIT</option>
+        </field>
+        <field name="titlelimit" type="text" default="20" label="TITLELIMIT" description="TITLELIMIT_DESC"/>
+        <field name="showtitle" type="radio" class="btn-group" default="1" label="SHOW_TITLE" description="SHOW_TITLE_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="date_format" type="list" default="DATE_FORMAT_LC2" label="DATE_FORMAT" description="DATE_FORMAT_DESC">
+          <option value="disabled">DISABLED</option>
+          <option value="DATE_FORMAT_LC">DATE_FORMAT_LC</option>
+          <option value="DATE_FORMAT_LC1">DATE_FORMAT_LC1</option>
+          <option value="DATE_FORMAT_LC2">DATE_FORMAT_LC2</option>
+          <option value="DATE_FORMAT_LC3">DATE_FORMAT_LC3</option>
+          <option value="DATE_FORMAT_LC4">DATE_FORMAT_LC4</option>
+        </field>
+        <field name="linkable" type="radio" class="btn-group" default="1" label="LINKABLE" description="LINKABLE_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+      </fieldset>
+      <fieldset name="STYLES">
+        <field name="height" type="text" default="30" label="MOD_HEIGHT" description="MOD_HEIGHT_DESC"/>
+        <field name="bgcolor" type="color" default="#F9F9F9" label="BGCOLOR" description="BGCOLOR_DESC"/>
+        <field name="linkcolor" type="color" default="#047aac" label="LINK_COLOR" description="LINK_COLOR_DESC"/>
+        <field name="linkhover" type="color" default="#039ee1" label="HLINK_COLOR" description="HLINK_COLOR_DESC"/>
+        <field name="textcolor" type="color" default="#666666" label="TEXT_COLOR" description="TEXT_COLOR_DESC"/>
+        <field name="text" type="text" default="Highlighter" label="TEXT" description="TEXT_DESC"/>
+        <field name="show_arrows" type="radio" class="btn-group" default="1" label="SHOW_ARROWS" description="SHOW_ARROWS_DESC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="arrows" type="list" default="style1.png" label="ARROWS" description="ARROWS_DESC">
+          <option value="style1.png">Style1</option>
+          <option value="style2.png">Style2</option>
+          <option value="style3.png">Style3</option>
+          <option value="style4.png">Style4</option>
+          <option value="style5.png">Style5</option>
+          <option value="style6.png">Style6</option>
+          <option value="style7.png">Style7</option>
+          <option value="style8.png">Style8</option>
+          <option value="style9.png">Style9</option>
+        </field>
+      </fieldset>
+      <fieldset name="EFFECTS">
+        <field name="effects" type="list" default="slide-vertical" label="EFFECTS" description="EFFECTS_DESC">
+          <option value="slide-horizontal">Horizontal Slide</option>
+          <option value="slide-vertical">Vertical Slide</option>
+          <option value="fade">Fade</option>
+          <option value="none">None</option>
+        </field>
+        <field name="interval" type="text" default="5000" label="INTERVAL" description="INTERVAL_DESC"/>
+        <field name="fxduration" type="text" default="1000" label="FXDURATION" description="FXDURATION_DESC"/>
+        <field type="asset"/>
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+        <field name="moduleclass_sfx" type="text" default="" label="MODSFX" description="MODSFX_DESC"/>
+        <field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+          <option value="1">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+        </field>
+        <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+        <field name="cachemode" type="hidden" default="itemid">
+          <option value="itemid"/>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

@@ -1,0 +1,3 @@
+The new reports location is components/com_fss/plugins/reports
+
+This location will still be checked for reports for a while, but please relocate your report xml files to the above folder.

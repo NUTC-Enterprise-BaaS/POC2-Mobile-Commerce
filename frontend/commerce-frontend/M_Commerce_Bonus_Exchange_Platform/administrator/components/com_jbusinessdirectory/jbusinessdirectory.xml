@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade" client="administrator">
+	<name>JBusinessDirectory</name>
+	<author>CMSJunkie</author>
+	<creationDate>November 2011</creationDate>
+	<copyright>(C) CMSJunkie. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>info@cmsjunkie.com</authorEmail>
+	<authorUrl>www.cmsjunkie.com</authorUrl>
+	<version>4.5.7</version>	
+	<description>JBusinessDirectory</description>
+	
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.sql</file>
+		</sql>
+	</install>
+	
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+		</sql>
+	</uninstall>	
+	
+	 <update> 
+			<schemas>
+					<schemapath type="mysql">sql/updates/mysql</schemapath>
+			</schemas>
+	</update>
+
+	<updateservers>
+		<server type="extension" priority="2" name="J-BusinessDirectory Updates">http://updates.cmsjunkie.com/directory/j-businessdirectory3.xml</server>
+	</updateservers> 
+	
+	<scriptfile>script.php</scriptfile>
+	
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+		<filename>jbusinessdirectory.php</filename>
+		<folder>assets</folder>
+		<folder>classes</folder>
+		<folder>controllers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<folder>include</folder>
+		<folder>theme</folder>
+		<folder>libraries</folder>
+		<folder>logs</folder>
+	</files>
+	
+	<media folder="media" destination="com_jbusinessdirectory">
+		<folder>pictures</folder>
+		<folder>attachments</folder>
+		<filename>index.html</filename>
+	</media>
+	
+	<administration>
+		<menu>COM_J_BUSINESSDIRECTORY</menu>
+		<submenu>
+			<menu view="applicationsettings">APPLICATION_SETTINGS</menu>
+			<menu view="categories">MANAGE_CATEGORIES</menu>
+			<menu view="companies">MANAGE_COMPANIES</menu>
+			<menu view="attributes">MANAGE_CUSTOM_FIELDS</menu>			
+			<menu view="companytypes">MANAGE_COMPANY_TYPES</menu>
+			<menu view="offers">MANAGE_OFFERS</menu>
+			<menu view="events">MANAGE_EVENTS</menu>
+			<menu view="eventtypes">MANAGE_EVENT_TYPES</menu>
+			<menu view="packages">MANAGE_PACKAGES</menu>
+			<menu view="discounts">MANAGE_DISCOUNTS</menu>
+			<menu view="orders">MANAGE_ORDERS</menu>
+			<menu view="paymentprocessors">PAYMENT_PROCESSORS</menu>
+			<menu view="countries">MANAGE_COUNTRIES</menu>
+			<menu view="ratings">MANAGE_RATINGS</menu>
+			<menu view="reviews">MANAGE_REVIEWS</menu>
+			<menu view="emailtemplates">MANAGE_EMAILS</menu>
+			<!-- <menu view="conferences">MANAGE_CONFERENCES</menu>
+			<menu view="speakers">MANAGE_SPEAKERS</menu>
+			<menu view="sessions">MANAGE_SESSIONS</menu> -->
+			<menu view="reports">REPORTS</menu>
+			<menu view="updates">UPDATE</menu>
+		</submenu>
+		<languages folder='admin'>
+			<language tag="en-GB">language/en-GB/en-GB.com_jbusinessdirectory.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_jbusinessdirectory.sys.ini</language>
+			<language tag="ar-AA">language/ar-AA/ar-AA.com_jbusinessdirectory.sys.ini</language>
+			<language tag="de-DE">language/de-DE/de-DE.com_jbusinessdirectory.sys.ini</language>
+			<language tag="el-GR">language/el-GR/el-GR.com_jbusinessdirectory.sys.ini</language>
+			<language tag="es-ES">language/es-ES/es-ES.com_jbusinessdirectory.sys.ini</language>
+			<language tag="fr-FR">language/fr-FR/fr-FR.com_jbusinessdirectory.sys.ini</language>
+			<language tag="hu-HU">language/hu-HU/hu-HU.com_jbusinessdirectory.sys.ini</language>
+			<language tag="it-IT">language/it-IT/it-IT.com_jbusinessdirectory.sys.ini</language>
+			<language tag="nl-NL">language/nl-NL/nl-NL.com_jbusinessdirectory.sys.ini</language>
+			<language tag="pl-PL">language/pl-PL/pl-PL.com_jbusinessdirectory.sys.ini</language>
+			<language tag="pt-BR">language/pt-BR/pt-BR.com_jbusinessdirectory.sys.ini</language>
+			<language tag="pt-PT">language/pt-PT/pt-PT.com_jbusinessdirectory.sys.ini</language>
+			<language tag="ro-RO">language/ro-RO/ro-RO.com_jbusinessdirectory.sys.ini</language>
+			<language tag="ru-RU">language/ru-RU/ru-RU.com_jbusinessdirectory.sys.ini</language>
+			<language tag="sv-SE">language/sv-SE/sv-SE.com_jbusinessdirectory.sys.ini</language>
+			<language tag="tr-TR">language/tr-TR/tr-TR.com_jbusinessdirectory.sys.ini</language>
+		</languages>
+	
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>jbusinessdirectory.php</filename>
+	
+			<folder>assets</folder>
+			<folder>helpers</folder>
+			<folder>controllers</folder>
+			<folder>help</folder>
+			<folder>language</folder>
+			<folder>library</folder>
+			<folder>logs</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>packages</folder>
+			<folder>theme</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>  
+	</administration>
+</extension>

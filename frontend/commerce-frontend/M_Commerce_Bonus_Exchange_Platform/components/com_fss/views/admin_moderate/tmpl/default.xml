@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="MENU_COMMENT_MODERATION">
+	  <help url = "http://www.freestyle-joomla.com/comhelp/fss/frontend-view-admin-moderate" />
+	  <message></message>
+  </layout>
+  <state>
+    <name>MENU_COMMENT_MODERATION</name>
+  </state>
+</metadata>

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id$ -->
+<access component="com_fss">
+  <section name="component">
+    <!-- Should have public set as allowed as default -->
+    <action name="fss.view" title="VIEW_CONTENT" description="CAN_VIEW_FAQS_KB_GLOSSARY_ANNOUNCEMENTS_ON_FRONTEND" />
+    
+    <action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+    
+    <action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+    
+    <action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC" />
+    
+    <action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
+    
+    <action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+    
+    <action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+    
+    <action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC" />
+  </section>
+
+  <section name="content">
+    <action name="fss.view" title="VIEW_CONTENT" description="CAN_VIEW_ON_FRONTEND" />
+    
+    <!--<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />-->
+    
+    <action name="core.create" title="JACTION_CREATE" description="COM_CATEGORIES_ACCESS_CREATE_DESC" />
+    
+    <!--<action name="core.delete" title="JACTION_DELETE" description="COM_CATEGORIES_ACCESS_DELETE_DESC" />-->
+    
+    <action name="core.edit" title="JACTION_EDIT" description="COM_CATEGORIES_ACCESS_EDIT_DESC" />
+    
+    <action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_CATEGORIES_ACCESS_EDITSTATE_DESC" />
+    
+    <action name="core.edit.own" title="JACTION_EDITOWN" description="COM_CATEGORIES_ACCESS_EDITOWN_DESC" />
+  </section>
+
+  <section name="support_user">
+    <!-- Should have public set as allowed as default -->
+    <action name="fss.ticket.view" title="CAN_VIEW_OWN_SUPPORT_TICKETS" description="" />
+
+    <!-- Should have public set as allowed as default -->
+    <action name="fss.ticket.open" title="CAN_OPEN_SUPPORT_TICKET" description="" />
+
+
+  </section>
+
+  <section name="support_admin">
+    <action name="fss.handler" title="TICKET_HANDLER" description="" />
+ 
+    <action name="fss.handler.seeunassigned" title="MANAGE_UNASSIGNED_TICKETS" description="" heading="TICKET_VIEWING_PERMISSIONS" />
+    <!--<action name="fss.handler.editunassigned" title="Can edit unassigned tickets" description="" />-->
+
+    <action name="fss.handler.seeothers" title="MANAGE_OTHER_HANDLERS_TICKETS" description="" />
+    <action name="fss.handler.dontassign" title="DONT__AUTO_ASSIGN__TICKETS" description="IF_THIS_IS__ALLOWED__THEN_THIS_USER_WILL_NOT_GET_TICKETS_AUTOMATICALLY_ASSIGNED_TO_THEM" heading="TICKET_AUTO_ASSIGN_PERMISSIONS" />
+    <!--<action name="fss.handler.editothers" title="Can edit other handlers tickets" description="" />-->
+
+    <action name="fss.handler.view.products" title="CAN_VIEW_TICKETS_FOR_ALL_PRODUCTS" description="IF_NOT_ALLOWED__THEN_THE_PRODUCTS_ARE_SPECIFIED_IN_THE__VIEW__PRODUCTS__TAB" heading="TICKET_PDC_PERMS" />
+    <action name="fss.handler.view.departments" title="CAN_VIEW_TICKETS_FOR_ALL_DEPARTMENTS" description="IF_NOT_ALLOWED__THEN_THE_PRODUCTS_ARE_SPECIFIED_IN_THE__VIEW__DEPARTMENTS__TAB" />
+    <action name="fss.handler.view.categories" title="CAN_VIEW_TICKETS_FOR_ALL_CATEGORIES" description="IF_NOT_ALLOWED__THEN_THE_PRODUCTS_ARE_SPECIFIED_IN_THE__VIEW__CATEGORIES__TAB" />
+    
+    <action name="fss.handler.assign.separate" title="ASSIGN_TICKETS_BASED_ON_SEPARATE_PERMISSIONS" description="IF_THIS_IS_NOT_SET__THEN_THE_TICKET_VIEWING_PERMISSIONS_WILL_BE_USED_TO_DETERMINE_THE_AUTO_ASSIGN_OPTIONS" heading="TICKET_ASSIGN_SEPARATE_HEADING" />
+
+    <action name="fss.handler.assign.products" title="ASSIGNED_TICKETS_FOR_ALL_PRODUCTS" description="" heading="TICKET_ASSIGN_SEPARATE_NOTICE" />
+    <action name="fss.handler.assign.departments" title="ASSIGNED_TICKETS_FOR_ALL_DEPARTMENTS" description="" />
+    <action name="fss.handler.assign.categories" title="ASSIGNED_TICKETS_FOR_ALL_CATEGORIES" description="" />
+  </section>
+
+  <section name="support_admin_misc">
+    <action name="fss.misc_admin.restrict" title="Restrict general permissions" description=": Restrict the actions the user can take within the system. Leaving this as 'Not Allowed' will provide full access." />
+    <action name="fss.misc_admin.ooo" title="MANAGE_OUT_OF_OFFICE" description=": Can manage other users out of office status." />
+    <action name="fss.misc_admin.delete" title="Delete Tickets" description=": Can delete tickets." />
+    <action name="fss.misc_admin.opennew" title="Open for user" description=": Can open new tickets for users." />
+    <action name="fss.misc_admin.emails" title="Accept emails as tickets" description=": Can accept new emails as tickets, and access the 'EMails' tab." />
+    <action name="fss.misc_admin.canned" title="Manage canned replis and signatures" description=": Can manage canned replies and signatures." />
+    <action name="fss.misc_admin.listhandlers" title="Access 'List Handlers'" description=": Can access the list handlers section." />
+  </section>
+
+  <section name="support_admin_ticket">
+    <action name="fss.ticket_admin.restrict" title="RESTRICT_TICKET_PERMISSIONS" description=": Restrict the actions the user can take on a ticket. Leaving this as 'Not Allowed' will provide full access." />
+    <action name="fss.ticket_admin.reply" title="CAN_REPLY_TO_TICKET" description=": Can the handler reply to the ticket, if not then the 'Reply' button will not be present." heading="THESE_ONLY_APPLY_IF_THE_CALCULATED_SETTING_ABOVE_IS__ALLOWED_" />
+    <action name="fss.ticket_admin.forward" title="CAN_FORWARD_TICKET" description=": Can the handler forward the ticket to another department or product." />
+    <action name="fss.ticket_admin.changeuser" title="CAN_CHANGE_USER" description=": Can the handler change user on the ticket." />
+    <action name="fss.ticket_admin.editfields" title="EDIT_CUSTOM_FIELDS" description=": Can the handler edit custom fields on the ticket." />
+    <action name="fss.ticket_admin.editticket" title="EDIT_TICKET" description=": Can the handler edit the title and existing messages for the ticket." />
+    <action name="fss.ticket_admin.editmisc" title="EDIT_MISC" description=": Can the handler edit the tags, time taken and other ticket data." />
+    <action name="fss.ticket_admin.close" title="CLOSE_TICKET" description=": Can the handler set the status of the ticket to closed." />
+  </section>
+
+  <section name="support_admin_ticket_cc">
+    <action name="fss.ticket_admin_cc.restrict" title="RESTRICT_TICKET_PERMISSIONS" description=": Restrict the actions the user can take on a ticket. Leaving this as 'Not Allowed' will provide full access." />
+    <action name="fss.ticket_admin_cc.reply" title="CAN_REPLY_TO_TICKET" description=": Can the handler reply to the ticket, if not then the 'Reply' button will not be present." heading="THESE_ONLY_APPLY_IF_THE_CALCULATED_SETTING_ABOVE_IS__ALLOWED_" />
+    <action name="fss.ticket_admin_cc.forward" title="CAN_FORWARD_TICKET" description=": Can the handler forward the ticket to another department or product." />
+    <action name="fss.ticket_admin_cc.changeuser" title="CAN_CHANGE_USER" description=": Can the handler change user on the ticket." />
+    <action name="fss.ticket_admin_cc.editfields" title="EDIT_CUSTOM_FIELDS" description=": Can the handler edit custom fields on the ticket." />
+    <action name="fss.ticket_admin_cc.editticket" title="EDIT_TICKET" description=": Can the handler edit the title and existing messages for the ticket." />
+    <action name="fss.ticket_admin_cc.editmisc" title="EDIT_MISC" description=": Can the handler edit the tags, time taken and other ticket data." />
+    <action name="fss.ticket_admin_cc.close" title="CLOSE_TICKET" description=": Can the handler set the status of the ticket to closed." />
+  </section>
+
+  <section name="support_admin_ticket_other">
+    <action name="fss.ticket_admin_other.restrict" title="RESTRICT_TICKET_PERMISSIONS" description=": Restrict the actions the user can take on a ticket. Leaving this as 'Not Allowed' will provide full access." />
+    <action name="fss.ticket_admin_other.reply" title="CAN_REPLY_TO_TICKET" description=": Can the handler reply to the ticket, if not then the 'Reply' button will not be present." heading="THESE_ONLY_APPLY_IF_THE_CALCULATED_SETTING_ABOVE_IS__ALLOWED_" />
+    <action name="fss.ticket_admin_other.forward" title="CAN_FORWARD_TICKET" description=": Can the handler forward the ticket to another department or product." />
+    <action name="fss.ticket_admin_other.changeuser" title="CAN_CHANGE_USER" description=": Can the handler change user on the ticket." />
+    <action name="fss.ticket_admin_other.editfields" title="EDIT_CUSTOM_FIELDS" description=": Can the handler edit custom fields on the ticket." />
+    <action name="fss.ticket_admin_other.editticket" title="EDIT_TICKET" description=": Can the handler edit the title and existing messages for the ticket." />
+    <action name="fss.ticket_admin_other.editmisc" title="EDIT_MISC" description=": Can the handler edit the tags, time taken and other ticket data." />
+    <action name="fss.ticket_admin_other.close" title="CLOSE_TICKET" description=": Can the handler set the status of the ticket to closed." />
+  </section>
+
+  <section name="support_admin_ticket_una">
+    <action name="fss.ticket_admin_una.restrict" title="RESTRICT_TICKET_PERMISSIONS" description=": Restrict the actions the user can take on a ticket. Leaving this as 'Not Allowed' will provide full access." />
+    <action name="fss.ticket_admin_una.reply" title="CAN_REPLY_TO_TICKET" description=": Can the handler reply to the ticket, if not then the 'Reply' button will not be present." heading="THESE_ONLY_APPLY_IF_THE_CALCULATED_SETTING_ABOVE_IS__ALLOWED_" />
+    <action name="fss.ticket_admin_una.forward" title="CAN_FORWARD_TICKET" description=": Can the handler forward the ticket to another department or product." />
+    <action name="fss.ticket_admin_una.changeuser" title="CAN_CHANGE_USER" description=": Can the handler change user on the ticket." />
+    <action name="fss.ticket_admin_una.editfields" title="EDIT_CUSTOM_FIELDS" description=": Can the handler edit custom fields on the ticket." />
+    <action name="fss.ticket_admin_una.editticket" title="EDIT_TICKET" description=": Can the handler edit the title and existing messages for the ticket." />
+    <action name="fss.ticket_admin_una.editmisc" title="EDIT_MISC" description=": Can the handler edit the tags, time taken and other ticket data." />
+    <action name="fss.ticket_admin_una.close" title="CLOSE_TICKET" description=": Can the handler set the status of the ticket to closed." />
+  </section>
+
+  <section name="reports">
+    <action name="fss.reports" title="VIEW_REPORTS" description="" />
+    <action name="fss.reports.all" title="VIEW_ALL_REPORTS" description="" />
+  </section>
+
+  <section name="moderation">
+    <action name="fss.mod.all" title="CAN_MODERATE_COMMENTS" description="" />
+    <!--<action name="fss.mod.5" title="Can Moderate: Testimonials" description="" />
+    <action name="fss.mod.4" title="Can Moderate: Announcement Comments" description="" />
+    <action name="fss.mod.1" title="Can Moderate: KB Article Comments" description="" />-->
+  </section>
+
+  <section name="groups">
+    <action name="fss.groups" title="MANAGE_TICKET_GROUPS" description="" />
+  </section>
+</access>

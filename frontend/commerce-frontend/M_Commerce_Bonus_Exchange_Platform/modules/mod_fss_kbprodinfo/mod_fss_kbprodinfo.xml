@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+  <help url="HELP_MODULE" key="HELP_MODULE"></help>
+  <name>MOD_FSS_KBPRODINFO</name>
+	<author>Freestyle Joomla</author>
+	<creationDate>2016 06 02</creationDate>
+	<version>2.5.21.2074</version>
+	<description>MOD_FSS_KBPRODINFO_DESC</description>
+  <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+  <files>
+		<filename>mod_fss_kbprodinfo.xml</filename>
+		<filename module="mod_fss_kbprodinfo">mod_fss_kbprodinfo.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+    <language tag="en-GB">en-GB.mod_fss_kbprodinfo.ini</language>
+    <language tag="en-GB">en-GB.mod_fss_kbprodinfo.sys.ini</language>
+  </languages>
+
+	<!-- Joomla 1.6+ -->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="show_prod" type="radio" default="1" label="Show on Cat page" description="show the module when no cat has been selected">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="show_cat" type="radio" default="1" label="Show on article list page" description="show the module when a product and cat have been selected and listing articles">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="show_art" type="radio" default="1" label="Show on article page" description="show the module when viewing an article">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

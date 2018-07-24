@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/premium_activity_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/premium_activity_menu_margin_right"
+        android:layout_marginRight="@dimen/premium_activity_menu_margin_right"
+        android:layout_marginTop="@dimen/premium_activity_menu_margin_top"
+        android:background="@drawable/meau"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/premium_activity_logo"
+            android:layout_width="260dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/premium_activity_logo_margin_top"
+            android:background="@color/ActivityPremiumBonusBackgroundColor"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:text="@string/title"
+            android:textColor="@color/ColorWhite"
+            android:textSize="35sp" />
+
+        <RelativeLayout
+            android:id="@+id/premium_activity_news"
+            android:layout_width="@dimen/premium_activity_news_width"
+            android:layout_height="@dimen/premium_activity_news_height"
+            android:layout_below="@id/premium_activity_logo"
+            android:layout_marginEnd="@dimen/premium_activity_news_margin_right"
+            android:layout_marginRight="@dimen/premium_activity_news_margin_right"
+            android:layout_marginTop="@dimen/premium_activity_news_margin_top"
+            android:background="@color/ActivityPremiumNewsBackgroundColor"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/premium_activity_news_image"
+                android:layout_width="@dimen/activity_enter_special_general_image_width"
+                android:layout_height="@dimen/activity_enter_special_general_image_height"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/newicon_01"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/premium_activity_news_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/premium_activity_news_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/premium_activity_news_text_margin_top"
+                android:text="@string/news"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/premium_activity_news_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/premium_activity_bonus"
+            android:layout_width="@dimen/premium_activity_news_width"
+            android:layout_height="@dimen/premium_activity_news_height"
+            android:layout_alignBottom="@id/premium_activity_news"
+            android:layout_below="@id/premium_activity_logo"
+            android:layout_marginTop="@dimen/premium_activity_news_margin_top"
+            android:layout_toEndOf="@id/premium_activity_news"
+            android:layout_toRightOf="@id/premium_activity_news"
+            android:background="@color/ActivityPremiumBonusBackgroundColor"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/premium_activity_bonus_image"
+                android:layout_width="@dimen/activity_enter_special_general_image_width"
+                android:layout_height="@dimen/activity_enter_special_general_image_height"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/newicon_08"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/premium_activity_bonus_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/premium_activity_bonus_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/premium_activity_bonus_text_margin_top"
+                android:text="@string/delete_point"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/premium_activity_news_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/premium_activity_advertisement"
+            android:layout_width="@dimen/premium_activity_news_width"
+            android:layout_height="@dimen/premium_activity_news_height"
+            android:layout_below="@id/premium_activity_news"
+            android:layout_marginEnd="@dimen/premium_activity_news_margin_right"
+            android:layout_marginRight="@dimen/premium_activity_news_margin_right"
+            android:layout_marginTop="@dimen/premium_activity_news_margin_right"
+            android:background="@color/ActivityPremiumAdvertisementBackgroundColor"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/premium_activity_advertisement_image"
+                android:layout_width="@dimen/activity_enter_special_general_image_width"
+                android:layout_height="@dimen/activity_enter_special_general_image_height"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/newicon_03"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/premium_activity_advertisement_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/premium_activity_advertisement_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/premium_activity_advertisement_text_margin_top"
+                android:text="@string/advertisement"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/premium_activity_news_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/premium_activity_scan_qr_code_search"
+            android:layout_width="@dimen/premium_activity_news_width"
+            android:layout_height="@dimen/premium_activity_scan_qr_code_search_width"
+            android:layout_alignTop="@id/premium_activity_advertisement"
+            android:layout_below="@id/premium_activity_bonus"
+            android:layout_toEndOf="@id/premium_activity_advertisement"
+            android:layout_toRightOf="@id/premium_activity_advertisement"
+            android:background="@color/ActivityPremiumScanBackgroundColor"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/premium_activity_scan_qr_code_search_image"
+                android:layout_width="@dimen/premium_activity_scan_qr_code_search_image_width"
+                android:layout_height="@dimen/premium_activity_scan_qr_code_search_image_height"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/newicon_02"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/premium_activity_scan_qr_code_search_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/premium_activity_scan_qr_code_search_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/premium_activity_scan_qr_code_search_text_margin_top"
+                android:text="@string/scan_qr_code_premium_search"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/premium_activity_news_text_size" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/premium_activity_setting"
+            android:layout_width="@dimen/premium_activity_news_width"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/premium_activity_advertisement"
+            android:layout_alignEnd="@id/premium_activity_scan_qr_code_search"
+            android:layout_alignRight="@id/premium_activity_scan_qr_code_search"
+            android:layout_below="@id/premium_activity_scan_qr_code_search"
+            android:layout_marginTop="@dimen/premium_activity_news_margin_right"
+            android:layout_toEndOf="@id/premium_activity_advertisement"
+            android:layout_toRightOf="@id/premium_activity_advertisement"
+            android:background="@color/ActivityPremiumSettingBackgroundColor">
+
+            <ImageView
+                android:id="@+id/premium_activity_setting_image"
+                android:layout_width="@dimen/premium_activity_controll_image_width"
+                android:layout_height="@dimen/premium_activity_controll_image_width"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/premium_activity_setting_image_margin_left"
+                android:layout_marginStart="@dimen/premium_activity_setting_image_margin_left"
+                android:background="@drawable/newicon_07"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/premium_activity_setting_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/premium_activity_setting_image"
+                android:layout_toRightOf="@id/premium_activity_setting_image"
+                android:gravity="center"
+                android:text="@string/setting"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/premium_activity_news_text_size" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/join"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/premium_activity_join_height"
+            android:layout_alignEnd="@id/premium_activity_setting"
+            android:layout_alignLeft="@id/premium_activity_advertisement"
+            android:layout_alignRight="@id/premium_activity_setting"
+            android:layout_alignStart="@id/premium_activity_advertisement"
+            android:layout_below="@id/premium_activity_setting"
+            android:layout_marginTop="@dimen/premium_activity_news_margin_right"
+            android:background="@color/ActivityPremiumJoinBackgroundColor"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/premium_main_apply_special"
+                    android:layout_width="@dimen/premium_activity_controll_image_width"
+                    android:layout_height="@dimen/premium_activity_controll_image_width"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/newicon_05"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/join_left_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fragment_main_margin"
+                    android:layout_marginStart="@dimen/fragment_main_margin"
+                    android:layout_toEndOf="@id/premium_main_apply_special"
+                    android:layout_toRightOf="@id/premium_main_apply_special"
+                    android:text="@string/applyIn"
+                    android:textColor="@color/ColorWhite"
+                    android:textSize="@dimen/premium_activity_bonus_text_size" />
+
+                <TextView
+                    android:id="@+id/join_right_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/join_left_text"
+                    android:layout_toEndOf="@id/join_left_text"
+                    android:layout_toRightOf="@id/join_left_text"
+                    android:text="@string/special"
+                    android:textColor="@color/ColorWhite"
+                    android:textSize="@dimen/premium_activity_join_right_text_size" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

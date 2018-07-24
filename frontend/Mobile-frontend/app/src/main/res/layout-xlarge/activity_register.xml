@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorWhite">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/ColorWhite"
+        android:scrollbarThumbVertical="@android:color/transparent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ColorWhite">
+
+            <TextView
+                android:id="@+id/register_title"
+                android:layout_width="@dimen/activity_register_title_width"
+                android:layout_height="@dimen/activity_register_title_height"
+                android:layout_marginLeft="@dimen/activity_register_reset_margin"
+                android:layout_marginTop="@dimen/activity_register_title_marginTop"
+                android:background="@color/ColorGeneralTheme"
+                android:gravity="center"
+                android:text="@string/registered_layout_title"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/activity_register_title_textsize" />
+
+            <TextView
+                android:id="@+id/register_remind"
+                android:layout_width="@dimen/activity_register_name_edit_width"
+                android:layout_height="@dimen/activity_register_title_height"
+                android:layout_marginLeft="@dimen/activity_register_reset_margin"
+                android:layout_marginStart="@dimen/activity_register_reset_margin"
+                android:layout_marginTop="@dimen/activity_register_title_marginTop"
+                android:layout_toEndOf="@id/register_title"
+                android:layout_toRightOf="@id/register_title"
+                android:gravity="bottom"
+                android:text="@string/registered_layout_remind"
+                android:textColor="@color/ColorPremiumTheme"
+                android:textSize="@dimen/activity_register_title_textsize" />
+
+            <TextView
+                android:id="@+id/register_text_country"
+                android:layout_width="@dimen/activity_register_country_text_width"
+                android:layout_height="@dimen/activity_register_country_text_height"
+                android:layout_alignLeft="@id/register_title"
+                android:layout_below="@id/register_title"
+                android:layout_marginTop="@dimen/activity_register_country_text_marginTop"
+                android:background="@color/ColorGeneralTheme"
+                android:gravity="center"
+                android:text="@string/registered_layout_country"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/activity_register_country_text_textsize" />
+
+            <Spinner
+                android:id="@+id/register_spinner_country"
+                android:layout_width="@dimen/activity_register_country_spinner_width"
+                android:layout_height="@dimen/activity_register_country_spinner_height"
+                android:layout_alignTop="@id/register_text_country"
+                android:layout_toRightOf="@id/register_text_country"
+                android:background="@drawable/spinner"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/register_name_text"
+                android:layout_width="@dimen/activity_register_name_text_width"
+                android:layout_height="@dimen/activity_register_name_text_height"
+                android:layout_alignLeft="@id/register_text_country"
+                android:layout_below="@id/register_text_country"
+                android:layout_marginTop="@dimen/activity_register_name_text_marginTop"
+                android:background="@color/ColorGeneralTheme"
+                android:gravity="center"
+                android:text="@string/registered_layout_name"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/activity_register_name_text_textsize" />
+
+            <TextView
+                android:id="@+id/register_name_text_start"
+                android:layout_width="@dimen/activity_register_name_text_width"
+                android:layout_height="@dimen/activity_register_name_text_height"
+                android:layout_alignRight="@id/register_name_text"
+                android:layout_below="@id/register_text_country"
+                android:layout_marginRight="@dimen/activity_register_reset_margin"
+                android:layout_marginTop="@dimen/activity_register_name_text_marginTop"
+                android:gravity="center|left"
+                android:text="*"
+                android:textColor="@color/ColorPremiumTheme"
+                android:textSize="@dimen/activity_register_name_text_textsize" />
+
+            <EditText
+                android:id="@+id/register_name_edit"
+                android:layout_width="@dimen/activity_register_name_edit_width"
+                android:layout_height="@dimen/activity_register_name_edit_height"
+                android:layout_alignTop="@id/register_name_text"
+                android:layout_toRightOf="@id/register_name_text"
+                android:background="@drawable/activity_register_spinner"
+                android:ellipsize="end"
+                android:hint="@string/registered_layout_name_hint"
+                android:maxLines="1"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:textSize="@dimen/activity_register_name_edit_textsize" />
+
+            <TextView
+                android:id="@+id/register_account_text"
+                android:layout_width="@dimen/activity_register_account_text_width"
+                android:layout_height="@dimen/activity_register_account_text_height"
+                android:layout_alignLeft="@id/register_name_text"
+                android:layout_below="@id/register_name_text"
+                android:layout_marginTop="@dimen/activity_register_account_text_marginTop"
+                android:background="@color/ColorGeneralTheme"
+                android:gravity="center"
+                android:text="@string/registered_layout_account"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/activity_register_account_text_textsize" />
+
+            <TextView
+                android:id="@+id/register_account_text_start"
+                android:layout_width="@dimen/activity_register_account_text_width"
+                android:layout_height="@dimen/activity_register_account_text_height"
+                android:layout_below="@id/register_name_text"
+                android:layout_marginRight="@dimen/activity_register_reset_margin"
+                android:layout_marginTop="@dimen/activity_register_account_text_marginTop"
+                android:gravity="center|left"
+                android:text="*"
+                android:textColor="@color/ColorPremiumTheme"
+                android:textSize="@dimen/activity_register_account_text_textsize" />
+
+
+            <EditText
+                android:id="@+id/register_account_edit"
+                android:layout_width="@dimen/activity_register_account_edit_width"
+                android:layout_height="@dimen/activity_register_account_edit_height"
+                android:layout_alignTop="@id/register_account_text"
+                android:layout_toRightOf="@id/register_account_text"
+                android:background="@drawable/activity_register_spinner"
+                android:hint="@string/registered_layout_account_phone_hint"
+                android:inputType="phone"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:textSize="@dimen/activity_register_account_edit_textsize" />
+
+            <EditText
+                android:id="@+id/register_mail"
+                android:layout_width="@dimen/activity_register_mail_width"
+                android:layout_height="@dimen/activity_register_mail_height"
+                android:layout_below="@id/register_account_edit"
+                android:layout_marginTop="@dimen/activity_register_mail_marginTop"
+                android:layout_toRightOf="@id/register_account_text"
+                android:background="@drawable/activity_register_spinner"
+                android:ellipsize="end"
+                android:hint="@string/registered_layout_account_email_hint"
+                android:maxLines="1"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:textSize="@dimen/activity_register_mail_edit_textsize" />
+
+            <TextView
+                android:id="@+id/register_password_text"
+                android:layout_width="@dimen/activity_register_password_text_width"
+                android:layout_height="@dimen/activity_register_password_text_height"
+                android:layout_alignLeft="@id/register_account_text"
+                android:layout_below="@id/register_mail"
+                android:layout_marginTop="@dimen/activity_register_password_text_marginTop"
+                android:background="@color/ColorGeneralTheme"
+                android:gravity="center"
+                android:text="@string/registered_layout_account_password"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/activity_register_password_text_textsize" />
+
+            <TextView
+                android:id="@+id/register_password_text_start"
+                android:layout_width="@dimen/activity_register_password_text_width"
+                android:layout_height="@dimen/activity_register_password_text_height"
+                android:layout_below="@id/register_mail"
+                android:layout_marginRight="@dimen/activity_register_reset_margin"
+                android:layout_marginTop="@dimen/activity_register_password_text_marginTop"
+                android:gravity="center|left"
+                android:text="*"
+                android:textColor="@color/ColorPremiumTheme"
+                android:textSize="@dimen/activity_register_password_text_textsize" />
+
+            <EditText
+                android:id="@+id/register_password_edit"
+                android:layout_width="@dimen/activity_register_password_edit_width"
+                android:layout_height="@dimen/activity_register_password_edit_height"
+                android:layout_alignTop="@id/register_password_text"
+                android:layout_toRightOf="@id/register_password_text"
+                android:background="@drawable/activity_register_spinner"
+                android:hint="@string/registered_layout_account_password_hint"
+                android:inputType="textPassword"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:textSize="@dimen/activity_register_password_edit_textsize" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/register_password_text"
+                android:layout_alignEnd="@id/register_password_edit"
+                android:layout_alignRight="@id/register_password_edit"
+                android:layout_alignTop="@id/register_password_text">
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/register_password_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/register_birthday_text"
+                android:layout_width="@dimen/activity_register_birthday_text_width"
+                android:layout_height="@dimen/activity_register_birthday_text_height"
+                android:layout_alignLeft="@id/register_password_text"
+                android:layout_below="@id/register_password_text"
+                android:layout_marginTop="@dimen/activity_register_birthday_text_marginTop"
+                android:background="@color/ColorGeneralTheme"
+                android:gravity="center"
+                android:text="@string/registered_layout_birth"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/activity_register_birthday_text_textsize" />
+
+            <EditText
+                android:id="@+id/register_birthday_edit"
+                android:layout_width="@dimen/activity_register_birthday_edit_width"
+                android:layout_height="@dimen/activity_register_birthday_edit_height"
+                android:layout_alignTop="@id/register_birthday_text"
+                android:layout_toRightOf="@id/register_birthday_text"
+                android:background="@drawable/activity_register_spinner"
+                android:focusable="false"
+                android:hint="@string/registered_layout_birth_hint"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:textSize="@dimen/activity_register_birthday_edit_textsize" />
+
+            <TextView
+                android:id="@+id/register_recommend_text"
+                android:layout_width="@dimen/activity_register_recommend_text_width"
+                android:layout_height="@dimen/activity_register_recommend_text_height"
+                android:layout_alignLeft="@id/register_birthday_text"
+                android:layout_below="@id/register_birthday_text"
+                android:layout_marginTop="@dimen/activity_register_recommend_text_marginTop"
+                android:background="@color/ColorGeneralTheme"
+                android:gravity="center"
+                android:text="@string/registered_layout_recommend"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/activity_register_recommend_text_textsize" />
+
+            <EditText
+                android:id="@+id/register_recommend_edit"
+                android:layout_width="@dimen/activity_register_recommend_edit_width"
+                android:layout_height="@dimen/activity_register_recommend_edit_height"
+                android:layout_alignTop="@id/register_recommend_text"
+                android:layout_toRightOf="@id/register_recommend_text"
+                android:background="@drawable/activity_register_spinner"
+                android:focusable="false"
+                android:hint="@string/registered_layout_recommend_hint"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:textSize="@dimen/activity_register_recommend_edit_textsize" />
+
+            <Button
+                android:id="@+id/register_recommend_button"
+                android:layout_width="@dimen/activity_register_recommend_button_width"
+                android:layout_height="@dimen/activity_register_recommend_button_height"
+                android:layout_alignTop="@id/register_recommend_edit"
+                android:layout_toRightOf="@id/register_recommend_edit"
+                android:background="@color/ColorGeneralTheme"
+                android:gravity="center"
+                android:text="@string/registered_layout_recommend_send"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/activity_register_recommend_button_textsize" />
+
+            <TextView
+                android:id="@+id/register_authenticate_text"
+                android:layout_width="@dimen/activity_register_authenticate_text_width"
+                android:layout_height="@dimen/activity_register_authenticate_text_height"
+                android:layout_alignLeft="@id/register_recommend_text"
+                android:layout_below="@id/register_recommend_text"
+                android:layout_marginTop="@dimen/activity_register_authenticate_text_marginTop"
+                android:background="@color/ColorGeneralTheme"
+                android:gravity="center"
+                android:text="@string/registered_layout_authenticate"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/activity_register_authenticate_text_textsize" />
+
+            <TextView
+                android:id="@+id/register_authenticate_text_start"
+                android:layout_width="@dimen/activity_register_authenticate_text_width"
+                android:layout_height="@dimen/activity_register_authenticate_text_height"
+                android:layout_below="@id/register_recommend_text"
+                android:layout_marginRight="@dimen/activity_register_reset_margin"
+                android:layout_marginTop="@dimen/activity_register_authenticate_text_marginTop"
+                android:gravity="center|left"
+                android:text="*"
+                android:textColor="@color/ColorPremiumTheme"
+                android:textSize="@dimen/activity_register_authenticate_text_textsize" />
+
+            <EditText
+                android:id="@+id/register_authenticate_edit"
+                android:layout_width="@dimen/activity_register_authenticate_edit_width"
+                android:layout_height="@dimen/activity_register_authenticate_edit_height"
+                android:layout_alignTop="@id/register_authenticate_text"
+                android:layout_toRightOf="@id/register_authenticate_text"
+                android:background="@drawable/activity_register_spinner"
+                android:hint="@string/registered_layout_authenticate"
+                android:inputType="number"
+                android:maxLength="4"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:textSize="@dimen/activity_register_authenticate_edit_textsize" />
+
+            <TextView
+                android:id="@+id/register_authenticate_button"
+                android:layout_width="@dimen/activity_register_authenticate_button_width"
+                android:layout_height="@dimen/activity_register_authenticate_button_height"
+                android:layout_alignTop="@id/register_authenticate_edit"
+                android:layout_toRightOf="@id/register_authenticate_edit"
+                android:background="@color/ColorBlack"
+                android:gravity="center"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/activity_register_recommend_button_textsize" />
+
+            <Button
+                android:id="@+id/register_reset"
+                android:layout_width="@dimen/activity_register_reset_width"
+                android:layout_height="@dimen/activity_register_reset_height"
+                android:layout_alignLeft="@id/register_authenticate_text"
+                android:layout_alignStart="@id/register_authenticate_text"
+                android:layout_below="@id/register_authenticate_text"
+                android:layout_marginLeft="@dimen/activity_register_reset_margin"
+                android:layout_marginStart="@dimen/activity_register_reset_margin"
+                android:layout_marginTop="@dimen/activity_register_reset_marginTop"
+                android:background="@drawable/activity_register_button_shape"
+                android:gravity="center"
+                android:text="@string/registered_layout_reset"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/activity_register_reset_textsize" />
+
+            <Button
+                android:id="@+id/register_send"
+                android:layout_width="@dimen/activity_register_send_width"
+                android:layout_height="@dimen/activity_register_send_height"
+                android:layout_alignRight="@id/register_spinner_country"
+                android:layout_alignTop="@id/register_reset"
+                android:layout_marginEnd="@dimen/activity_register_reset_margin"
+                android:layout_marginRight="@dimen/activity_register_reset_margin"
+                android:background="@drawable/activity_register_button_shape"
+                android:gravity="center"
+                android:text="@string/registered_layout_send"
+                android:textColor="@color/ColorWhite"
+                android:textSize="@dimen/activity_register_send_textsize" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

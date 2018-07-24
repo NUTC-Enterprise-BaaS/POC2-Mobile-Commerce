@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="library" version="2.5" method="upgrade">
+  <name>TCPDF</name>
+  <libraryname>tcpdf</libraryname>
+  <version>5.9.202</version>
+  <creationDate>2013-01-04</creationDate>
+  <author>Nicola Asuni / Davide Tampellini</author>
+  <authorUrl>Tecnick.com / www.fabbricabinaria.it</authorUrl>
+  <authorEmail>webmaster@fabbricabinaria.it</authorEmail>
+  <description><![CDATA[TCPDF library for Joomla!. <br/>
+  Please note that FabbricaBinaria has only created an installation package, all credit belongs to Nicola Asuni (www.teknick.com)<br> This is a lite version, only most used fonts are included.]]>
+  </description>
+  
+  <updateservers>
+    <server type="extension" priority="1" name="TCPDF library Updates"><![CDATA[http://www.fabbricabinaria.it/index.php?option=com_ars&view=update&task=stream&format=xml&id=5&dummy=extension.xml]]></server>
+  </updateservers>
+  
+  <files folder="tcpdf">
+    <folder>cache</folder>
+    <folder>config</folder>
+    <folder>fonts</folder>
+    <file>2dbarcodes.php</file>
+    <file>barcodes.php</file>
+    <file>CHANGELOG.TXT</file>
+    <file>composer.json</file>
+    <file>datamatrix.php</file>
+    <file>encodings_maps.php</file>
+    <file>htmlcolors.php</file>
+	<file>index.html</file>
+    <file>LICENSE.TXT</file>
+    <file>pdf417.php</file>
+    <file>qrcode.php</file>
+    <file>README.TXT</file>
+    <file>spotcolors.php</file>
+    <file>sRGB.icc</file>
+    <file>tcpdf_filters.php</file>
+    <file>tcpdf_parser.php</file>
+    <file>tcpdf.crt</file>
+    <file>tcpdf.fdf</file>
+    <file>tcpdf.p12</file>
+    <file>tcpdf.php</file>
+    <file>unicode_data.php</file>
+  </files>
+</extension>

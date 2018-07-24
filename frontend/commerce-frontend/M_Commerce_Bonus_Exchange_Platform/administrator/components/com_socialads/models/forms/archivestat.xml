@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="COM_SOCIALADS_FORM_LBL_ARCHIVESTAT_ID" readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+		<field name="ad_id" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_ARCHIVESTAT_AD_ID" description="COM_SOCIALADS_FORM_DESC_ARCHIVESTAT_AD_ID" filter="safehtml" />
+		<field name="date" type="calendar" class="inputbox" default="0000-00-00 00:00:00" label="COM_SOCIALADS_FORM_LBL_ARCHIVESTAT_DATE" description="COM_SOCIALADS_FORM_DESC_ARCHIVESTAT_DATE" format="%Y-%m-%d %H:%M:%S" filter="safehtml" />
+		<field name="impression" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_ARCHIVESTAT_IMPRESSION" description="COM_SOCIALADS_FORM_DESC_ARCHIVESTAT_IMPRESSION" filter="safehtml" />
+		<field name="click" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_ARCHIVESTAT_CLICK" description="COM_SOCIALADS_FORM_DESC_ARCHIVESTAT_CLICK" filter="safehtml" />
+		<field name="created_by" type="createdby" default="" label="COM_SOCIALADS_FORM_LBL_ARCHIVESTAT_CREATED_BY" description="COM_SOCIALADS_FORM_DESC_ARCHIVESTAT_CREATED_BY" />
+		<field name="state" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>

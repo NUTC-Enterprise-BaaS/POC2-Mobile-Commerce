@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_normal_point_spinner_item_text"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#DCDDDD"
+    android:gravity="center"
+    android:textColor="#595757"
+    android:textSize="@dimen/fragment_normal_point_spinner_item_down_text_size"
+    />

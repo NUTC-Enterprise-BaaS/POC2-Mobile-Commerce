@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 擺放有順序性 -->
+    <!-- 被按壓 -->
+    <item android:state_pressed="true"><shape>
+
+        <!-- 實心 -->
+        <solid
+            android:color="@color/ColorGeneralTheme"/>
+
+        <!-- 邊框 顏色 -->
+        <!--<stroke-->
+            <!--android:width="1dp"-->
+            <!--android:color="#0066CC" />-->
+
+        <!-- 圓角 -->
+        <corners
+            android:radius="30dp" />
+
+        <!-- 間距 -->
+        <!--<padding-->
+            <!--android:bottom="10dp"-->
+            <!--android:left="10dp"-->
+            <!--android:right="10dp"-->
+            <!--android:top="10dp" />-->
+
+    </shape></item>
+    <!-- 一般狀態 -->
+    <item><shape>
+
+        <!-- 漸變 -->
+        <!--
+             45倍數為單位 Max : 360  ,Min : 0
+            angle 的參數是影響漸層出發的位置 EX : 左至右、上至下
+        -->
+        <!--<gradient-->
+            <!--android:angle="0"-->
+            <!--android:startColor="#2894FF"-->
+            <!--android:endColor="#0066CC"  />-->
+        <!-- 實心 -->
+        <solid
+            android:color="@color/ColorGeneralTheme"/>
+
+
+        <!--&lt;!&ndash; 邊框 &ndash;&gt;-->
+        <!--<stroke android:width="1dp"-->
+            <!--android:color="#0066CC" />-->
+
+        <!-- 圓角 -->
+        <corners
+            android:radius="30dp" />
+
+        <!-- 間距 -->
+        <!--<padding-->
+            <!--android:bottom="10dp"-->
+            <!--android:left="10dp"-->
+            <!--android:right="10dp"-->
+            <!--android:top="10dp" />-->
+    </shape></item>
+
+</selector>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="SUPPORT_MAIN_MENU">
+		<help url = "http://www.freestyle-joomla.com/comhelp/fss/frontend-view-main-default" />
+		<message></message>
+  </layout>
+	<state>
+		<name>SUPPORT_MAIN_MENU</name>
+
+		<!-- Joomla 1.6 settings -->
+		<fields name="params">
+			<!-- Basic options. -->
+			<fieldset name="basic"	label="Main Settings">
+				<field name="show_desc" type="radio" default="1" label="Show Description" description="When viewing main page, should descriptions be shown?">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+        <field name="template" type="radio" default="grid" label="Alignment" description="When viewing main page, what alignment should be used">
+          <option value="grid">Centered</option>
+          <option value="list">Left</option>
+        </field>
+        <field name="border" type="radio" default="0" label="Border" description="Should borders be displayed around the menu items">
+          <option value="0">Yes</option>
+          <option value="1">No</option>
+        </field>
+
+        <field name="mainwidth" type="text" size="5" default="100%" label="Width of main content" description="When viewing main page, how wide should the support menu be?" />
+				<field name="maincolums" type="text" size="3" default="3" label="Number Of Colums" description="When viewing main page, how many columns should be listed?" />
+				<field name="hideicons" type="radio" default="0" label="Show Icons" description="Show icons on main support page">
+					<option value="1">No</option>
+					<option value="0">Yes</option>
+				</field>
+				<field name="imagewidth" type="text" size="3" default="128" label="Icon Width" description="How wide should the icons be" />
+				<field name="imageheight" type="text" size="3" default="128" label="Icon Height" description="How high should the icons be" />
+
+        <field name="info_well" type="radio" default="1" label="Info panels border" description="Display well around the info panels">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </field>
+
+        <field name="info_top" type="radio" default="1" label="Info panels position" description="Should info panels be displayed at the top or bottom">
+          <option value="1">Top</option>
+          <option value="0">Bottom</option>
+        </field>
+
+      </fieldset>
+		</fields>
+	</state>
+</metadata>

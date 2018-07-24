@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:shape="rectangle">
+    <stroke
+        android:width="2.0dp"
+        android:color="@color/ActivityForgetPasswordLineBackgroundColor"
+        android:dashWidth="3.0dp" />
+    <solid android:color="@color/ColorTransparent" />
+    <corners
+        android:bottomLeftRadius="@dimen/fragment_special_qrcode_button_radius"
+        android:bottomRightRadius="@dimen/fragment_special_qrcode_button_radius"
+        android:topLeftRadius="@dimen/fragment_special_qrcode_button_radius"
+        android:topRightRadius="@dimen/fragment_special_qrcode_button_radius" />
+    <padding
+        android:bottom="7.5dp"
+        android:left="10dp"
+        android:right="10dp"
+        android:top="7.5dp" />
+</shape>

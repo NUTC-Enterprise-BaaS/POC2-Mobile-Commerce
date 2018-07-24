@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_normal_point_background">
+
+    <RelativeLayout
+        android:layout_width="@dimen/fragment_normal_point_dialog_background_width"
+        android:layout_height="@dimen/fragment_normal_point_dialog_check_background_height"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/fragment_normal_point_dialog_check_point_text"
+            android:layout_width="@dimen/fragment_normal_point_dialog_title_text_width"
+            android:layout_height="@dimen/fragment_normal_point_dialog_title_text_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/fragment_normal_point_dialog_title_text_margin_top"
+            android:gravity="center"
+            android:text="@string/point_dialog_password"
+            android:textColor="@color/MainFragmentNormalPointDialogTextColor"
+            android:textSize="@dimen/fragment_normal_point_dialog_check_text_text_size"/>
+
+        <TextView
+            android:id="@+id/fragment_normal_point_dialog_check_phone_text"
+            android:layout_width="@dimen/fragment_normal_point_dialog_title_text_width"
+            android:layout_height="@dimen/fragment_normal_point_dialog_title_text_height"
+            android:layout_below="@id/fragment_normal_point_dialog_check_point_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/fragment_normal_point_dialog_edit_margin_top"
+            android:gravity="center"
+            android:text="@string/point_dialog_password"
+            android:textColor="@color/MainFragmentNormalPointDialogTextColor"
+            android:textSize="@dimen/fragment_normal_point_dialog_title_text_text_size"/>
+
+
+        <TextView
+            android:id="@+id/fragment_normal_point_dialog_check_email_text"
+            android:layout_width="@dimen/fragment_normal_point_dialog_title_text_width"
+            android:layout_height="@dimen/fragment_normal_point_dialog_title_text_height"
+            android:layout_below="@id/fragment_normal_point_dialog_check_phone_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/fragment_normal_point_dialog_edit_margin_top"
+            android:gravity="center"
+            android:text="@string/point_dialog_password"
+            android:textColor="@color/MainFragmentNormalPointDialogTextColor"
+            android:textSize="@dimen/fragment_normal_point_dialog_check_text_text_size"/>
+
+
+        <Button
+            android:id="@+id/fragment_normal_point_dialog_check_confirm_button"
+            android:layout_width="@dimen/fragment_normal_point_dialog_button_width"
+            android:layout_height="@dimen/fragment_normal_point_dialog_title_text_height"
+            android:layout_below="@id/fragment_normal_point_dialog_check_email_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/fragment_normal_point_dialog_title_text_margin_top"
+            android:background="@drawable/layout_normal_point_button_background"
+            android:text="@string/point_dialog_confirm"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/fragment_normal_point_dialog_edit_size"/>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+  <help url="HELP_MODULE" key="HELP_MODULE"></help>
+  <name>FREESTYLE_SUPPORT_ANNOUNCEMENTS</name>
+  <author>Freestyle Joomla</author>
+  <creationDate>2016 06 02</creationDate>
+  <version>2.5.21.2074</version>
+  <description>MODULE_TO_LIST_YOUR_ANNOUNCEMENTS</description>
+  <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+  <files>
+    <filename>mod_fss_announce.xml</filename>
+    <filename module="mod_fss_announce">mod_fss_announce.php</filename>
+    <filename>index.html</filename>
+    <folder>tmpl</folder>
+  </files>
+  <languages>
+    <language tag="en-GB">en-GB.mod_fss_announce.ini</language>
+    <language tag="en-GB">en-GB.mod_fss_announce.sys.ini</language>
+  </languages>
+
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="listall" type="radio" default="0" label="WHICH_ANNOUNCEMENTS" description="WHICH_ANNOUNCEMENTS_ALL_OR_MOST_RECENT_ONES">
+          <option value="1">ALL_PUBLISHED</option>
+          <option value="0">MOST_RECENT</option>
+        </field>
+        <field name="dispcount" type="text" size="3" default="3" label="NUMBER_OF_RECENT_ANNOUNCEMENTS_TO_DISPLAY" description="HOW_MANY_ANNOUNCEMENTS_TO_DISPLAY_WHEN_IN_MOST_RECENT_MODE" />
+        <field name="maxheight" type="text" size="5" default="0" label="Maximum Height" description="Maximum height of testimonials display. If larger than this, the display will scroll. Use 0 for auto height." />
+        <field name="viewannounce" type="radio" default="1" label="CLICK_THE_ANNOUNCEMENT_FOR_MORE_DETAILS" description="CLICK_THE_ANNOUNCEMENT_FOR_MORE_DETAILS">
+          <option value="0">JNo</option>
+          <option value="1">JYes</option>
+        </field>
+        <!--<field name="show_date" type="radio" default="1" label="SHOW_DATE" description="SHOW_DATE_WHEN_LISTING_ANNOUNCEMENTS">
+          <option value="0">JNo</option>
+          <option value="1">JYes</option>
+        </field>-->
+        <field name="show_more" type="radio" default="1" label="SHOW_MORE_ANNOUNCEMENTS_BUTTON" description="SHOW_THE_MORE_BUTTON_IN_RECENT_MODE">
+          <option value="0">JNo</option>
+          <option value="1">JYes</option>
+        </field>
+
+      </fieldset>
+      <fieldset name="advanced">
+        <field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+      </fieldset>
+    </fields>
+  </config>
+</extension>

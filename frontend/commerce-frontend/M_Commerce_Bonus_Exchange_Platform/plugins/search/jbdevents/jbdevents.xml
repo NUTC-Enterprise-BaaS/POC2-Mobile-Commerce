@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" version="2.5" type="plugin" group="search">
+    <name>JBusinessDirectory Event Search</name>
+    <author>CMSJunkie</author>
+    <creationDate>December 2015</creationDate>
+    <copyright>Copyright (C) CMSJunkie. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html</license>
+    <authorEmail>info@cmsjunkie.com</authorEmail>
+    <authorUrl>www.cmsjunkie.com</authorUrl>
+    <version>1.0.0</version>
+    <description>JBD_EVENTS_XML_DESC</description>
+
+    <files>
+        <filename plugin="jbdevents">jbdevents.php</filename>
+        <filename>index.html</filename>
+    </files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_search_jbdevents.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_search_jbdevents.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="orderby" type="list" default="ordering" label="JBD_EVENTS_XML_ORDER_BY_LABEL" description="JBD_EVENTS_XML_ORDER_BY_DESC">
+                    <option value="name">JBD_EVENTS_XML_ORDER_BY_OPTION_EVENTNAME</option>
+                    <option value="start_date">JBD_EVENTS_XML_ORDER_BY_OPTION_EVENTSTARTDATE</option>
+                    <option value="end_date">JBD_EVENTS_XML_ORDER_BY_OPTION_EVENTENDDATE</option>
+                </field>
+                <field name="asc_desc" type="list" default="ASC" label="JBD_EVENTS_XML_ASC_DESC_LABEL" description="JBD_EVENTS_XML_ASC_DESC_DESC">
+                    <option value="ASC">JBD_EVENTS_XML_ASC_DESC_OPTION_ASC</option>
+                    <option value="DESC">JBD_EVENTS_XML_ASC_DESC_OPTION_DESC</option>
+                </field>
+                <field name="searchfields" type="list" multiple="multiple" default="jbdevents_events, jbdevents_categories" label="JBD_EVENTS_XML_SEARCH_FIELDS_LABEL" description="JBD_EVENTS_XML_SEARCH_FIELDS_DESC">
+                    <option value="jbdevents_events">JBD_EVENTS_XML_EVENTS</option>
+                    <option value="jbdevents_categories">JBD_EVENTS_XML_CATEGORIES</option>
+                </field>
+                <field name="browsernav" type="list" default="1" label="JBD_XML_BROWSER_NAV" description="JBD_XML_BROWSER_NAV_DESC">
+                    <option value="0">JBD_XML_SAME_TAB</option>
+                    <option value="1">JBD_XML_NEW_TAB</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

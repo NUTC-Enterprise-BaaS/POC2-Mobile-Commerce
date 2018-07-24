@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/FragmentSpecialQRCodeBackgroundColor"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/special_qrcode_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/ColorPremiumTheme">
+
+        <ImageView
+            android:layout_width="@dimen/toolbar_back_image_width"
+            android:layout_height="@dimen/toolbar_back_image_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/toolbar_back_image_margin_left"
+            android:layout_marginStart="@dimen/toolbar_back_image_margin_left"
+            android:scaleType="fitCenter"
+            android:src="@drawable/toolbar_back" />
+
+        <View
+            android:id="@+id/toolbar_back_touch"
+            android:layout_width="@dimen/toolbar_back_touch"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/special_qrcode_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/scan_qr_code_premium_search"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/toolbar_text_size"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/special_qrcode_qr_rel"
+        android:layout_width="@dimen/fragment_special_qrcode_qr_image_width"
+        android:layout_height="@dimen/fragment_special_qrcode_qr_image_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/fragment_special_qrcode_qr_image_top_margin">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/premium_qrcode_qr_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/special_qrcode_qr_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/ColorWhite"
+            android:text="@string/scan_qr_code_premium_qrtext"
+            android:textColor="@color/ColorPremiumTheme"
+            android:textSize="@dimen/fragment_special_qrcode_qr_image_text_size"/>
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/special_qrcode_send_qr_button"
+        android:layout_width="@dimen/fragment_special_qrcode_send_qr_width"
+        android:layout_height="@dimen/fragment_special_qrcode_send_qr_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/fragment_special_qrcode_send_qr_top_margin"
+        android:background="@drawable/fragment_special_qrcode_button_background"
+        android:text="@string/scan_qr_code_albums_share_premium"
+        android:textColor="@color/ColorWhite"
+        android:textSize="@dimen/fragment_special_qrcode_send_qr_text_size"/>
+
+    <Button
+        android:id="@+id/special_qrcode_store_album_button"
+        android:layout_width="@dimen/fragment_special_qrcode_store_album_width"
+        android:layout_height="@dimen/fragment_special_qrcode_store_album_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/fragment_special_qrcode_store_album_margin"
+        android:background="@drawable/fragment_special_qrcode_button_background"
+        android:text="@string/special_qrcode_store_album"
+        android:textColor="@color/ColorWhite"
+        android:textSize="@dimen/fragment_special_qrcode_store_album_text_size"/>
+</LinearLayout>

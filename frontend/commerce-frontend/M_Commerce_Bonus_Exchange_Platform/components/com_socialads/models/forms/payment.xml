@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="amount" id ="amount" type="text" label="COM_SOCIALAD_PAYMENT_AMOUNT_NEEDS_TO_PAY" class="alphaCheck input input-medium" required="true" description="COM_SOCIALAD_PAYMENT_AMOUNT_NEEDS_TO_PAY" />
+		<field name="coupon_result" type="radio" class="couponshow" label="COM_SOCIALAD_PAYMENT_DO_U_HV_A_COUPON" description="COM_SOCIALAD_PAYMENT_DO_U_HV_A_COUPON" default="0" menu_published="0" filter="raw">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="coupon_code" id="coupon_code" type="text" label="COM_SOCIALAD_PAYMENT_COUPON_CODE" class = "input  input-medium" description="COM_SOCIALAD_PAYMENT_COUPON_CODE" />
+	</fieldset>
+</form>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install version="1.0" type="osbplugin" group="payment">
+	<name>os_paypal_pro</name>
+	<title>Paypal Pro (Creditcard payment)</title>	
+	<author>Tuan Pham Ngoc</author>
+	<creationDate>09-03-2010</creationDate>
+	<copyright>Copyright 2010-2012 Ossolution Team</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+	<authorEmail>contact@joomdonation.com</authorEmail>
+	<authorUrl>www.joomdonation.com</authorUrl>
+	<version>1.0</version>
+	<description>Paypal Pro Payment Plugin For OS Services Booking Extension</description>
+	<params addPath="/administrator/components/com_osservicesbooking/elements">
+		<param name="paypal_pro_mode" type="list" label="Paypal Pro Mode" description="Set to Test Mode Or Live Mode">
+			<option value="0">Test Mode</option>
+			<option value="1">Live Mode</option>
+		</param>
+		<param name="api_username" type="text" size="40" label="API Username" description="API Username" default=""></param>	
+		<param name="api_password" type="text" size="40" label="API Password" description="API Password" default=""></param>	
+		<param name="api_signature" type="text" size="40" label="API Signature" description="API Signature" default=""></param>	
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_osservicesbooking/elements">
+				<field name="paypal_pro_mode" type="list" label="Paypal Pro Mode" description="Set to Test Mode Or Live Mode">
+					<option value="0">Test Mode</option>
+					<option value="1">Live Mode</option>
+				</field>
+				<field name="api_username" type="text" size="40" label="API Username" description="API Username" default=""></field>	
+				<field name="api_password" type="text" size="40" label="API Password" description="API Password" default=""></field>	
+				<field name="api_signature" type="text" size="40" label="API Signature" description="API Signature" default=""></field>	
+			</fieldset>	
+		</fields>
+	</config>
+	<files>
+		<filename>os_paypal_pro.php</filename>				
+	</files>	
+</install>

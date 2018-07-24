@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<access component="com_osservicesbooking">
+	<section name="component">
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+		<action name="osservicesbooking.checkin_management" title="Front-end Check-in Management" description="Allows managing Check-in Status from front-end" />
+		<action name="osservicesbooking.orders" title="Front-end Manage Orders" description="Allows managing Orders at Front-end side" />
+		<action name="categories" title="Manage Categories" description="Allows managing Categories" />
+		<action name="services" title="Manage Services" description="Allows managing Services" />
+		<action name="employees" title="Manage Empoyees" description="Allows managing Empoyees" />
+		<action name="venues" title="Manage Venues" description="Allows managing Venues" />
+		<action name="orders" title="Manage Orders" description="Allows managing Orders" />
+		<action name="payment" title="Manage Payment Plugins" description="Allows managing Payment Plugins" />
+		<action name="coupons" title="Manage Coupons" description="Allows managing Coupons" />
+		<action name="user_balance" title="Manage User Balance" description="Allows managing User Balance" />
+		<action name="workingtime" title="Manage Working Time" description="Allows managing Working Time" />
+		<action name="custom_workingtime" title="Manage Custom Working Time" description="Allows managing Custom Working Time" />
+		<action name="custom_fields" title="Manage Custom Fields" description="Allows managing Custom Fields" />
+		<action name="translation" title="Manage Translation" description="Allows managing Manage Translation tool" />
+		<action name="emails" title="Manage Emails" description="Allows managing Manage Email templates" />
+		<action name="configuration" title="Configuration" description="Allows Configuration page access" />
+	</section>	
+</access>

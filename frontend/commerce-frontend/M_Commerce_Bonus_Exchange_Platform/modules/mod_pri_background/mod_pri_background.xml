@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>PRI Background</name>
+	<author>Devpri</author>
+	<creationDate>25/05/2016</creationDate>
+	<copyright>Copyright (C) 2016 Devpri SRL. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later, see LICENSE.txt</license>
+	<authorEmail>contact@devpri.com</authorEmail>
+	<authorUrl>www.devpri.com</authorUrl>
+	<version>4.0</version>
+	<description>
+		<![CDATA[
+			Joomla! module to add image, random image, slideshow, video (html5), youtube, vimeo background to your website.
+		 ]]>
+	</description>
+	<files>
+		<filename module="mod_pri_background">mod_pri_background.php</filename>
+		<folder>assets</folder>
+		<folder>languages</folder>
+		<folder>includes</folder>
+		<folder>libraries</folder>
+		<folder>fields</folder>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+		<filename>mod_pri_background.xml</filename>
+	</files>
+	<updateservers> 
+        <server type="extension" priority="1" name="PRI Background">http://products.devpri.com/joomla/extensions/pri-background/update.xml</server>
+    </updateservers>
+	<languages>
+	<language tag="zh-TW">languages/zh-TW/zh-TW.mod_pri_background.ini</language>
+		<language tag="zh-TW">languages/zh-TW/zh-TW.mod_pri_background.sys.ini</language>
+		<language tag="en-GB">languages/en-GB/en-GB.mod_pri_background.ini</language>
+		<language tag="en-GB">languages/en-GB/en-GB.mod_pri_background.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_pri_background/fields">
+			        <field type="settings"/>
+					<field name="background_type" type="list" class="priparent backgroundtype" default="image" label="Background Type" description="COM_MODULES_FIELD_CACHING_DESC">
+						<option value="image">Image</option>
+						<option value="random-image">Random Image</option>
+						<option value="slideshow">Slideshow</option>
+						<option value="video">Video</option>
+						<option value="youtube">Youtube</option>
+						<option value="vimeo">Vimeo</option>
+					</field>
+					<field name="background_selector" type="text" default="body"  label="Background Selector" description="Background Selctor"/>
+					<field name="custom_css" type="editor" editor="codemirror" default=""  label="Custom Css" description="Custom css"/>
+			</fieldset>
+			<fieldset name="image" label="Image">
+				<field name="image_background_source" type="list" default="local"  label="Image Source" description="Background Image source.">
+					<option value="local">Local</option>
+					<option value="extern">Extern</option>
+				</field>
+				<field name="image_background" type="text" default=""  label="Background Image" description="Background image url."/>
+				<field name="image_background_color" type="color" default="#fff"  label="Background Color" description="Background color."/>
+				<field name="image_background_size" type="list" default="cover"  label="Background Size" description="Background Image size.">
+					<option value="auto">Auto</option>
+					<option value="cover">Cover</option>
+					<option value="100%">100%</option>
+				</field>
+				<field name="image_background_repeat" type="list" default="fixed"  label="Background Repeat" description="Background Image Repeat.">
+					<option value="no-repeat">No Repeat</option>
+					<option value="repeat-x">Repeat X</option>
+					<option value="repeat-y">Repeat Y</option>
+					<option value="repeat">Repeat</option>
+				</field>
+				<field name="image_background_attachment" type="list" default="fixed"  label="Background Attachment" description="Background Image attachment.">
+					<option value="fixed">Fixed</option>
+					<option value="scroll">Scroll</option>
+				</field>
+				<field name="image_background_position" type="list" default="fixed"  label="Background Position" description="Background Image Position.">
+					<option value="top">Top</option>
+					<option value="center">Center</option>
+					<option value="bottom">Bottom</option>
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+				</field>
+			</fieldset>
+			<fieldset name="random_image" label="Random Image">
+				<field name="random_image_background_source" type="list" default="local"  label="Image Source" description="Background Image source.">
+					<option value="local">Local</option>
+					<option value="extern">Extern</option>
+				</field>
+				<field name="random_image_backgrounds_url" type="textarea" default=""  label="Background Images" description="Background image url."/>
+				<field name="random_image_background_color" type="color" default="#fff"  label="Background Color" description="Background color."/>
+				<field name="random_image_background_size" type="list" default="cover"  label="Background Size" description="Background Image size.">
+					<option value="auto">Auto</option>
+					<option value="cover">Cover</option>
+					<option value="100%">100%</option>
+				</field>
+				<field name="random_image_background_repeat" type="list" default="fixed"  label="Background Repeat" description="Background Image Repeat.">
+					<option value="no-repeat">No Repeat</option>
+					<option value="repeat-x">Repeat X</option>
+					<option value="repeat-y">Repeat Y</option>
+					<option value="repeat">Repeat</option>
+				</field>
+				<field name="random_image_background_attachment" type="list" default="fixed"  label="Background Attachment" description="Background Image attachment.">
+					<option value="fixed">Fixed</option>
+					<option value="scroll">Scroll</option>
+				</field>
+				<field name="random_image_background_position" type="list" default="fixed"  label="Background Position" description="Background Image Position.">
+					<option value="top">Top</option>
+					<option value="center">Center</option>
+					<option value="bottom">Bottom</option>
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+				</field>
+			</fieldset>
+			<fieldset name="slideshow" label="Slideshow">
+				<field name="slideshow_background_source" type="list" default="local"  label="Images Source" description="Background Images source.">
+					<option value="local">Local</option>
+					<option value="extern">Extern</option>
+				</field>
+				<field name="slideshow_background_urls" type="textarea" default=""  label="Background Images URL" description="Background images url."/>
+				<field name="slideshow_duration" type="text" default="6000"  label="Slideshow Duration" description="Slideshow Duration"/>
+				<field name="slideshow_fade_duration" type="text" default="6000"  label="Slideshow Fade Duration" description="Slideshow Fade Duration"/>
+				<field name="slideshow_background_size" type="list" default="cover"  label="Background Size" description="Background Image size.">
+					<option value="auto">Auto</option>
+					<option value="cover">Cover</option>
+					<option value="100%">100%</option>
+				</field>
+				<field name="slideshow_background_repeat" type="list" default="fixed"  label="Background Repeat" description="Background Image Repeat.">
+					<option value="no-repeat">No Repeat</option>
+					<option value="repeat-x">Repeat X</option>
+					<option value="repeat-y">Repeat Y</option>
+					<option value="repeat">Repeat</option>
+				</field>
+				<field name="slideshow_background_attachment" type="list" default="fixed"  label="Background Attachment" description="Background Image attachment.">
+					<option value="fixed">Fixed</option>
+					<option value="scroll">Scroll</option>
+				</field>
+				<field name="slideshow_background_position" type="list" default="fixed"  label="Background Position" description="Background Image Position.">
+					<option value="top">Top</option>
+					<option value="center">Center</option>
+					<option value="bottom">Bottom</option>
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+				</field>
+			</fieldset>
+			<fieldset name="video" label="Video">
+				<field name="video_background_source" type="list" default="local"  label="Video Source" description="Background Video source.">
+					<option value="local">Local</option>
+					<option value="extern">Extern</option>
+				</field>
+				<field name="video_background_mp4" type="text" default=""  label="Background Video MP4" description="Background Video MP4."/>
+				<field name="video_background_webm" type="text" default=""  label="Background Video Webm" description="Background Video Webm."/>
+				<field name="video_background_ogg" type="text" default=""  label="Background Video Ogg" description="Background Video Ogg."/>
+				<field name="video_background_poster" type="text" default=""  label="Background Poster" description="Background Poster."/>
+				<field name="video_background_width" type="text" default="1920" label="Background Video Width" description="Background Video Height"/>
+				<field name="video_background_height" type="text" default="1080" label="Background Video Height" description="Background Video Width"/>
+				<field name="video_background_position" type="list"  default="fixed"  label="Background Position" description="Background Video Position">
+					<option value="fixed">Fixed</option>
+					<option value="absolute">Absolute</option>
+				</field>
+				<field name="video_background_loop" type="list"  default="true"  label="Background Video Loop" description="Background Video Loop">
+					<option value="false">False</option>
+					<option value="true">True</option>
+				</field>
+				<field name="video_background_keep_time" type="list"  default="1"  label="Keep Video Time" description="Keep video time on page refresh.">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="video_background_volume" type="text"  default="0"  label="Background Video Volume" description="Background Video Volume"/>
+			</fieldset>
+			<fieldset name="youtube" label="Youtube">
+				<field name="youtube_background_id" type="text" default=""  label="Background Video ID" description="Insert Youtube Video ID."/>
+				<field name="youtube_background_poster" type="media" default=""  label="Background Poster" description="Poster used for mobile and tablet devices."/>
+				<field name="youtube_background_keep_time" type="list"  default="1"  label="Keep Video Time" description="Keep video time on page refresh.">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="youtube_background_volume" type="text" default="0"  label="Background Video Volume" description="Set Youtube Video Volume (0 to 100)."/>
+				<field name="youtube_background_loop" type="list"  default="1"  label="Background Video Loop" description="Background Video Loop">
+					<option value="0">False</option>
+					<option value="1">True</option>
+				</field>
+				<field name="youtube_background_quality" type="list"  default="mediun"  label="Video Quality" description="Set Video Quality">
+					<option value="small">Small</option>
+					<option value="medium">Medium</option>
+					<option value="large">Large</option>
+					<option value="hd720">HD 720</option>
+					<option value="hd1080">HD 1080</option>
+				</field>
+				<field name="youtube_background_controls" type="list"  default="1"  label="Video Controls" description="Show/Hide Video controls.">
+					<option value="0">False</option>
+					<option value="1">True</option>
+				</field>
+				<field name="youtube_background_position" type="list"  default="fixed"  label="Background Position" description="For window background (body) select fixed and for container background(a site section) select absolute.">
+					<option value="fixed">Fixed</option>
+					<option value="absolute">Absolute</option>
+				</field>
+				<field name="youtube_background_fullscreen" type="list"  default="1"  label="Fullscreen background" description="Enable fullscreen mode.">
+					<option value="0">False</option>
+					<option value="1">True</option>
+				</field>
+				<field name="youtube_background_ratio" type="list"  default="16/9" label="Video Ratio" description="Select video ratio (works only with option: Fullscren Background)">
+					<option value="16/9">16/9</option>
+					<option value="4/3">4/3</option>
+				</field>
+			</fieldset>
+			<fieldset name="vimeo" label="Vimeo">
+				<field name="vimeo_background_id" type="text" default=""  label="Background Video ID" description="Insert Youtube Video ID."/>
+				<field name="vimeo_background_poster" type="media" default=""  label="Background Poster" description="Poster used for mobile and tablet devices."/>
+				<field name="vimeo_background_keep_time" type="list"  default="1"  label="Keep Video Time" description="Keep video time on page refresh.">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="vimeo_background_volume" type="text" default="0"  label="Background Video Volume" description="Set Youtube Video Volume (0 to 100)."/>
+				<field name="vimeo_background_loop" type="list"  default="1"  label="Background Video Loop" description="Background Video Loop">
+					<option value="0">False</option>
+					<option value="1">True</option>
+				</field>
+				<field name="vimeo_background_position" type="list"  default="fixed"  label="Background Position" description="For window background (body) select fixed and for container background(a site section) select absolute.">
+					<option value="fixed">Fixed</option>
+					<option value="absolute">Absolute</option>
+				</field>
+				<field name="vimeo_background_fullscreen" type="list"  default="1"  label="Fullscreen background" description="Enable fullscreen mode.">
+					<option value="0">False</option>
+					<option value="1">True</option>
+				</field>
+				<field name="vimeo_background_ratio" type="list"  default="16/9" label="Video Ratio" description="Select video ratio (works only with option: Fullscren Background)">
+					<option value="16/9">16/9</option>
+					<option value="4/3">4/3</option>
+				</field>
+			</fieldset>
+			<fieldset name="overlay" label="Overlay">
+				<field name="overlay_type" class="priparent overlaytype" type="list" default="none" label="Overlay Type" description="Select Overlay Type.">
+					<option value="none">None</option>
+					<option value="color">Color</option>
+					<option value="pattern">Pattern</option>
+					<option value="svg">SVG</option>
+				</field>
+				<field name="color_overlay" class="prichild overlaytype overlaytype_color" type="color" default="#fff"  label="Color Overlay" description="PRI_PARALLAX_OVERLAY_COLOR_DESC"/>
+				<field name="color_overlay_opacity" class="prichild overlaytype overlaytype_color" type="text" default="0.4"  label="Overlay Opacity" description="Set opacity for color overlay."/>
+				<field name="pattern_overlay_url" class="prichild overlaytype overlaytype_pattern" type="media" default=""  label="Overlay Pattern" description="Select Overlay pattern."/>
+				<field name="pattern_overlay_opacity" class="prichild overlaytype overlaytype_pattern" type="text" default="0.7"  label="Pattern Opacity" description="Set opacity for overlay pattern."/>
+				<field name="pattern_overlay_size" class="prichild overlaytype overlaytype_pattern" type="list" default="auto"  label="Pattern Size" description="Select pattern size.">
+					<option value="auto">Auto</option>
+					<option value="cover">Cover</option>
+					<option value="100%">100%</option>
+				</field>
+				<field name="pattern_overlay_repeat" class="prichild overlaytype overlaytype_pattern" type="list" default="repeat"  label="Pattern Repeat" description="Pattern repeat options.">
+					<option value="no-repeat">No Repeat</option>
+					<option value="repeat-x">Repeat X</option>
+					<option value="repeat-y">Repeat Y</option>
+					<option value="repeat">Repeat</option>
+				</field>
+				<field name="pattern_overlay_position" class="prichild overlaytype overlaytype_pattern" type="list" default="fixed"  label="Pattern Position" description="Select Pattern position.">
+					<option value="top">Top</option>
+					<option value="center">Center</option>
+					<option value="bottom">Bottom</option>
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+				</field>
+				<field name="svg_overlay_opacity" class="prichild overlaytype overlaytype_svg" type="text" default="0.7"  label="SVG Opacity" description="Set opacity for SVG Overlay."/>
+				<field name="svg_overlay_code" class="prichild overlaytype overlaytype_svg" type="editor" editor="codemirror" filter="raw" default=""  label="SVG Code" description="Insert SVG code."/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="static">
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

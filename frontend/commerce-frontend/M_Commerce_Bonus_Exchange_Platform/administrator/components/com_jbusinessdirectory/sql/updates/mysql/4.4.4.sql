@@ -1,0 +1,1 @@
+UPDATE`#__jbusinessdirectory_categories` set `type`=0 where id=1;

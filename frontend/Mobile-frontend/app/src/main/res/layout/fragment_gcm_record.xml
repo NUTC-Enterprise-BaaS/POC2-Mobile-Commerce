@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorWhite">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/ColorGeneralTheme">
+
+        <ImageView
+            android:layout_width="@dimen/toolbar_back_image_width"
+            android:layout_height="@dimen/toolbar_back_image_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/toolbar_back_image_margin_left"
+            android:layout_marginStart="@dimen/toolbar_back_image_margin_left"
+            android:scaleType="fitCenter"
+            android:src="@drawable/toolbar_back" />
+
+        <View
+            android:id="@+id/toolbar_back_touch"
+            android:layout_width="@dimen/toolbar_back_touch"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/gcmlayout"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/toolbar_text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_token"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="@color/ColorGeneralTheme">
+
+        <Button
+            android:id="@+id/button_token"
+            android:layout_width="@dimen/fragment_normal_point_transfer_button_width"
+            android:layout_height="@dimen/toolbar_height"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/fragment_normal_point_transfer_button_margin_right"
+            android:layout_marginRight="@dimen/fragment_normal_point_transfer_button_margin_right"
+            android:layout_marginTop="@dimen/fragment_normal_point_transfer_button_margin_top"
+            android:background="@drawable/fragment_normal_point_transfer_button_background"
+            android:text="@string/get_point_token"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/fragment_normal_point_text_size" />
+
+        <TextView
+            android:id="@+id/text_token"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textColor="@color/ColorWhite"
+            android:textIsSelectable="true"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_gcm_record_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_token"
+        android:layout_centerInParent="true"
+        android:background="@color/ColorWhite" />
+
+</RelativeLayout>

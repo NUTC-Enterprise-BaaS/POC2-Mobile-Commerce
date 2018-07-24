@@ -1,0 +1,14 @@
+/*added for sa_jbolo integration*/
+div.jbolo_sa_intgr_Chat span.mf_chaton {background:url(../images/green.gif) no-repeat 3px 7px;display:block;margin:0; padding:3px 0 0 15px ;}
+div.jbolo_sa_intgr_Chat span.mf_chaton a{text-decoration:none;}
+div.jbolo_sa_intgr_Chat span.mf_chatoff {background:url(../images/offline.jpg) no-repeat 3px 7px;display:block;margin:0; padding:3px 0 0 15px ;}
+div.jbolo_sa_intgr_Chat span.mf_chatoff a{text-decoration:none;}
+div.jbolo_sa_intgr_Chat{display: block;padding-left: 3px;}
+/*end added for sa_jbolo integration*/
+div.social_share_container{width:180px;}
+div.social_share_container_inner{padding:5px;}
+.modsa {clear:both;}
+.affiliate_div_style
+{
+	width:100% !important;
+}

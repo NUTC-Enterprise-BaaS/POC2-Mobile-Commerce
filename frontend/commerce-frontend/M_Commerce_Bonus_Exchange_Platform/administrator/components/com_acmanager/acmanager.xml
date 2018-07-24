@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_acmanager</name>
+    <creationDate>2016-01-11</creationDate>
+    <copyright>Copyright (C) 2016. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Parth Lawate</author>
+    <authorEmail>contact@techjoomla.com</authorEmail>
+    <authorUrl>http://techjoomla.com</authorUrl>
+    <version>CVS: 1.8.2</version>
+    <description>This component used for as manage app notification.</description>
+    
+    <scriptfile>script.php</scriptfile>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>acmanager.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <media destination="com_acmanager" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+    <languages folder="languages/site">
+        
+			<language tag="en-GB">en-GB/en-GB.com_acmanager.ini</language>
+    </languages>
+    <administration>
+        <menu img="media/com_acmanager/images/s_com_acmanager.png" >COM_ACMANAGER</menu>
+        <submenu>
+            
+			<menu link="option=com_acmanager&amp;view=appusers" view="appusers" img="media/com_acmanager/images/s_appusers.png" alt="Acmanager/Appusers">COM_ACMANAGER_TITLE_APPUSERS</menu>
+
+			<menu link="option=com_acmanager&amp;view=pushnotificationconfigs" view="pushnotificationconfigs" img="media/com_acmanager/images/s_pushnotificationconfigs.png" alt="Acmanager/Pushnotificationconfigs">COM_ACMANAGER_TITLE_PUSHNOTIFICATIONCONFIGS</menu>
+
+			<menu link="option=com_acmanager&amp;view=manageioscertificatess" view="manageioscertificatess" img="media/com_acmanager/images/s_manageioscertificatess.png" alt="Acmanager/Manageioscertificatess">COM_ACMANAGER_TITLE_MANAGEIOSCERTIFICATESS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>acmanager.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            
+			<language tag="en-GB">en-GB/en-GB.com_acmanager.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_acmanager.sys.ini</language>
+        </languages>
+    </administration>
+    <plugins>
+        <plugin group="search" plugin="acmanager"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->

@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<report>
+  <title>ACTIVE_USERS</title>
+  <description>ACTIVE_USERS_DESC</description>
+
+  <sql>
+    <![CDATA[
+      SELECT
+
+      count(*) as open_count,
+      IFNULL(u.username, CONCAT("User ID (", t.user_id, ")") ) as username,
+      IFNULL(u.name, "Unknown") as name,
+      sum(timetaken) as totaltime,
+      message_count,
+      u.email
+
+      FROM #__fss_ticket_ticket as t
+
+      LEFT JOIN #__users as u ON t.user_id = u.id
+
+      LEFT JOIN (
+          SELECT user_id, count(*) as message_count 
+          FROM #__fss_ticket_messages 
+          WHERE admin = 0 AND posted BETWEEN '{opened_from} 00:00:00' AND '{opened_to} 23:59:59' 
+          GROUP BY user_id
+          ) as mc ON t.user_id = mc.user_id
+
+      WHERE
+
+      t.user_id > 0
+      
+      AND
+
+      opened BETWEEN '{opened_from} 00:00:00' AND '{opened_to} 23:59:59'
+      
+      {if,product}
+        AND
+          {product}
+      {endif}
+      
+      {if,department}
+        AND
+          {department}
+      {endif}
+    
+      {if,group}
+          AND
+              t.user_id IN (SELECT user_id FROM #__fss_ticket_group_members WHERE group_id = '{group}')
+      {endif}
+
+      AND t.source != 'email' AND t.source != 'email_declined'
+
+      GROUP BY t.user_id
+
+      ORDER BY {order} DESC
+    ]]>
+  </sql>
+
+  <filter>
+    <name>opened</name>
+    <type>daterange</type>
+    <field>opened</field>
+    
+    
+    <!--
+    The default date range can be modified on a report by using the default tag. Eg:
+    
+    <default>lastmonth</default>
+    
+    Options: 
+      blank for last 3 months, 
+      lastmonth - last month
+      thismonth - this month
+      lastweek - last week
+      thisweek - this week
+      diff - see example below
+      datetime - see example below
+    
+    Example of using day counts to specify the default date range of the select. 
+    Numbers are how many days ago to display
+    <default>diff</default>
+    <default_from>90</default_from>
+    <default_to>0</default_to>
+
+    datetime type will pass the default_from/to to the DateTime class. An example is:
+    <default>datetime</default>
+    <default_from>first day of last month</default_from>
+    <default_to>last day of last month</default_to>
+    
+    For info on what can be used see http://php.net/manual/en/function.strtotime.php
+    
+    A few examples:
+    -1 week
+    now
+    last monday
+    -->
+
+  </filter>
+
+  <filter>
+    <name>product</name>
+    <type>lookup</type>
+    <table>#__fss_prod</table>
+    <field>prod_id</field>
+    <translate>1</translate>
+    <key>id</key>
+    <display>title</display>
+    <order>ordering</order>
+    <header>SELECT_PRODUCT</header>
+    <title>PRODUCT</title>
+    <published>1</published>
+  </filter>
+
+  <filter>
+    <name>department</name>
+    <type>lookup</type>
+    <table>#__fss_ticket_dept</table>
+    <translate>1</translate>
+    <field>ticket_dept_id</field>
+    <key>id</key>
+    <display>title</display>
+    <order>title</order>
+    <title>DEPARTMENT</title>
+    <header>SELECT_DEPARTMENT</header>
+  </filter>
+
+  <filter>
+    <name>group</name>
+    <type>normal</type>
+    <sql>SELECT * FROM #__fss_ticket_group ORDER BY groupname</sql>
+    <key>id</key>
+    <display>groupname</display>
+
+    <default></default>
+
+    <extra key="" value="">SELECT_TICKET_GROUP</extra>
+
+    <title>TICKET_GROUP</title>
+  </filter>
+
+  <filter>
+    <name>order</name>
+    <type>normal</type>
+    <title>ORDERING</title>
+    <default>open_count</default>
+    <extra key="open_count">TICKETS</extra>
+    <extra key="message_count">MESSAGES</extra>
+    <extra key="totaltime">TIME</extra>
+  </filter>
+
+  <totals>1</totals>
+
+  <field name="username" totalheader="1" link="index.php?option=com_fss&amp;view=admin_support&amp;searchtype=advanced&amp;what=search&amp;status=&amp;username={username}">USERNAME</field>
+  <field name="name">NAME</field>
+  <field name="email">EMAIL</field>
+  <field name="open_count" sum="1">COUNT</field>
+  <field name="message_count" sum="1">MESSAGE_COUNT</field>
+  <field name="totaltime" format="hm" sum="1">TIME_TAKEN</field>
+</report>

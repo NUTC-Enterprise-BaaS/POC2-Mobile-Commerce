@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Employee layout: List all appointments of employee">
+		<message>
+			<![CDATA[Employee layout: List all appointments of employee.]]>
+		</message>
+	</layout>
+	<state>
+		<name>Employee layout: List all appointments of employee</name>
+		<description>Employee layout: List all appointments of employee</description>
+	</state>
+</metadata>

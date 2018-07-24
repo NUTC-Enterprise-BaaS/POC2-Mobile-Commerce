@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Customer layout: List all orders history of customer">
+		<message>
+			<![CDATA[Customer layout: List all orders history of customer.]]>
+		</message>
+	</layout>
+	<state>
+		<name>Customer layout: List all orders history of customer</name>
+		<description>Customer layout: List all orders history of customer</description>
+	</state>
+</metadata>

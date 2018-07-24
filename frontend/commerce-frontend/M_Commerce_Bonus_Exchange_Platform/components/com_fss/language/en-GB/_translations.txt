@@ -1,0 +1,13 @@
+Info about report translations
+
+Each report has 2 ini files in the folder components\com_fss\language\en-GB\
+A sys file that only contains the name and description of the report named en-GB.report_XXXX.sys.ini
+A ini file that contains all other translation entries for the report names en-GB.report_XXXX.ini
+XXX is the name of the report (ie, list_tickets.xml has files en-GB.report_list_tickets.ini and en-GB.report_list_tickets.sys.ini)
+
+Also, entries that are common to several reports are found in the en-GB.report_shared.ini file.
+
+For the report list, the .sys.ini file for each report is loaded.
+For displaying the report, the .sys.ini file, the .ini file and the report_shared.ini files are loaded
+
+To translate, you need to create the relevant language sub folder and translate the ini files as you would with a normal component

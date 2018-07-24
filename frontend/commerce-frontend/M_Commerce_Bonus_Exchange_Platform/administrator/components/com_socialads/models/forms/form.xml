@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="COM_SOCIALADS_FORM_LBL_DATA_ID" readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+		<field name="created_by" type="createdby" default="" label="COM_SOCIALADS_FORM_LBL_DATA_CREATED_BY" description="COM_SOCIALADS_FORM_DESC_DATA_CREATED_BY" />
+		<field name="ad_id" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_AD_ID" description="COM_SOCIALADS_FORM_DESC_DATA_AD_ID" filter="safehtml" />
+		<field name="ad_creator" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_AD_CREATOR" description="COM_SOCIALADS_FORM_DESC_DATA_AD_CREATOR" filter="safehtml" />
+		<field name="ad_url1" type="editor" buttons="true" class="inputbox" filter="safehtml" label="COM_SOCIALADS_FORM_LBL_DATA_AD_URL1" description="COM_SOCIALADS_FORM_DESC_DATA_AD_URL1" />
+		<field name="ad_url2" type="editor" buttons="true" class="inputbox" filter="safehtml" label="COM_SOCIALADS_FORM_LBL_DATA_AD_URL2" description="COM_SOCIALADS_FORM_DESC_DATA_AD_URL2" />
+		<field name="ad_title" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_AD_TITLE" description="COM_SOCIALADS_FORM_DESC_DATA_AD_TITLE" filter="safehtml" />
+		<field name="ad_body" type="editor" buttons="true" class="inputbox" filter="safehtml" label="COM_SOCIALADS_FORM_LBL_DATA_AD_BODY" description="COM_SOCIALADS_FORM_DESC_DATA_AD_BODY" />
+		<field name="ad_image" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_AD_IMAGE" description="COM_SOCIALADS_FORM_DESC_DATA_AD_IMAGE" filter="safehtml" />
+		<field name="ad_startdate" type="calendar" class="inputbox" default="0000-00-00" label="COM_SOCIALADS_FORM_LBL_DATA_AD_STARTDATE" description="COM_SOCIALADS_FORM_DESC_DATA_AD_STARTDATE" filter="safehtml" />
+		<field name="ad_enddate" type="calendar" class="inputbox" default="0000-00-00" label="COM_SOCIALADS_FORM_LBL_DATA_AD_ENDDATE" description="COM_SOCIALADS_FORM_DESC_DATA_AD_ENDDATE" filter="safehtml" />
+		<field name="ad_noexpiry" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_AD_NOEXPIRY" description="COM_SOCIALADS_FORM_DESC_DATA_AD_NOEXPIRY" filter="safehtml" />
+		<field name="ad_payment_type" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_AD_PAYMENT_TYPE" description="COM_SOCIALADS_FORM_DESC_DATA_AD_PAYMENT_TYPE" filter="safehtml" />
+		<field name="ad_credits" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_AD_CREDITS" description="COM_SOCIALADS_FORM_DESC_DATA_AD_CREDITS" filter="safehtml" />
+		<field name="ad_credits_balance" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_AD_CREDITS_BALANCE" description="COM_SOCIALADS_FORM_DESC_DATA_AD_CREDITS_BALANCE" filter="safehtml" />
+		<field name="ad_created_date" type="calendar" class="inputbox" default="0000-00-00 00:00:00" label="COM_SOCIALADS_FORM_LBL_DATA_AD_CREATED_DATE" description="COM_SOCIALADS_FORM_DESC_DATA_AD_CREATED_DATE" format="%Y-%m-%d %H:%M:%S" filter="safehtml" />
+		<field name="ad_modified_date" type="calendar" class="inputbox" default="0000-00-00 00:00:00" label="COM_SOCIALADS_FORM_LBL_DATA_AD_MODIFIED_DATE" description="COM_SOCIALADS_FORM_DESC_DATA_AD_MODIFIED_DATE" format="%Y-%m-%d %H:%M:%S" filter="safehtml" />
+		<field name="ad_published" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_AD_PUBLISHED" description="COM_SOCIALADS_FORM_DESC_DATA_AD_PUBLISHED" filter="safehtml" />
+		<field name="ad_approved" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_AD_APPROVED" description="COM_SOCIALADS_FORM_DESC_DATA_AD_APPROVED" filter="safehtml" />
+		<field name="ad_alternative" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_AD_ALTERNATIVE" description="COM_SOCIALADS_FORM_DESC_DATA_AD_ALTERNATIVE" filter="safehtml" />
+		<field name="ad_guest" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_AD_GUEST" description="COM_SOCIALADS_FORM_DESC_DATA_AD_GUEST" filter="safehtml" />
+		<field name="ad_affiliate" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_AD_AFFILIATE" description="COM_SOCIALADS_FORM_DESC_DATA_AD_AFFILIATE" filter="safehtml" />
+		<field name="ad_zone" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_AD_ZONE" description="COM_SOCIALADS_FORM_DESC_DATA_AD_ZONE" filter="safehtml" />
+		<field name="layout" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_LAYOUT" description="COM_SOCIALADS_FORM_DESC_DATA_LAYOUT" filter="safehtml" />
+		<field name="camp_id" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_CAMP_ID" description="COM_SOCIALADS_FORM_DESC_DATA_CAMP_ID" filter="safehtml" />
+		<field name="bid_value" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_DATA_BID_VALUE" description="COM_SOCIALADS_FORM_DESC_DATA_BID_VALUE" default="NULL" filter="safehtml" />
+		<field name="state" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>

@@ -266,5 +266,3 @@ exports.getPoint = async(ctx)=>{
   };
 }
 
-
-

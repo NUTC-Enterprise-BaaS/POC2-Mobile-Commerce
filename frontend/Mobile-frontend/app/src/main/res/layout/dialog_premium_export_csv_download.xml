@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/fragment_normal_point_dialog_background_width"
+        android:layout_height="@dimen/fragment_normal_point_dialog_password_background_height"
+        android:layout_centerInParent="true"
+        android:background="@drawable/layout_normal_point_background">
+
+        <TextView
+            android:id="@+id/dialog_special_export_csv_download_start_text"
+            android:layout_width="@dimen/fragment_normal_point_dialog_title_text_width"
+            android:layout_height="@dimen/fragment_normal_point_dialog_title_text_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/fragment_normal_point_dialog_title_text_margin_top"
+            android:gravity="center"
+            android:textColor="@color/MainFragmentNormalPointDialogTextColor"
+            android:textSize="@dimen/fragment_normal_point_dialog_check_text_text_size"/>
+
+        <TextView
+            android:id="@+id/dialog_special_export_csv_download_end_text"
+            android:layout_width="@dimen/fragment_normal_point_dialog_title_text_width"
+            android:layout_height="@dimen/fragment_normal_point_dialog_title_text_height"
+            android:layout_below="@id/dialog_special_export_csv_download_start_text"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/MainFragmentNormalPointDialogTextColor"
+            android:textSize="@dimen/fragment_normal_point_dialog_check_text_text_size"/>
+
+        <TextView
+            android:id="@+id/dialog_special_export_csv_download_text"
+            android:layout_width="@dimen/fragment_normal_point_dialog_title_text_width"
+            android:layout_height="@dimen/fragment_normal_point_dialog_title_text_height"
+            android:layout_below="@id/dialog_special_export_csv_download_end_text"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/export_csv_dialog_text3"
+            android:textColor="@color/MainFragmentNormalPointDialogTextColor"
+            android:textSize="@dimen/fragment_normal_point_dialog_check_text_text_size"/>
+
+        <Button
+            android:id="@+id/dialog_special_export_csv_download_button"
+            android:layout_width="@dimen/fragment_normal_point_dialog_button_width"
+            android:layout_height="@dimen/fragment_normal_point_dialog_title_text_height"
+            android:layout_below="@id/dialog_special_export_csv_download_text"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/activity_premium_register_recommend_button_background"
+            android:text="@string/export_csv_dialog_download"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/fragment_normal_point_dialog_edit_size"/>
+
+    </RelativeLayout>
+</RelativeLayout>
