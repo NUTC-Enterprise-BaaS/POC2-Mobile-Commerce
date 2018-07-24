@@ -12,6 +12,6 @@ router.get('/', async(ctx)=>{
 router.get('/test',change.testindex);
 // change point
 router.post('/changePoint',change.changePoint);
-
+router.post('/getRecord',change.getRecord);
 
 module.exports = router;

@@ -50,18 +50,18 @@ const transformPointEvent = async(transformPointEvent,txHash,fromAccount,toAccou
     transformPointEvent.watch(function(err, result) {
       if (!err && result.transactionHash == txHash) {
         console.log({
-          			'from,originName': contract.getPoint.call({from: fromAccount})[0],
-          			'from,point': contract.getPoint.call({from: fromAccount})[1].toNumber(),
-          			'to,originName': contract.getPoint.call({from: toAccount})[0],
-          			'to,point': contract.getPoint.call({from: toAccount})[1].toNumber()
+          			'fromOriginName': contract.getPoint.call({from: fromAccount})[0],
+          			'fromPoint': contract.getPoint.call({from: fromAccount})[1].toNumber(),
+          			'toOriginName': contract.getPoint.call({from: toAccount})[0],
+          			'toPoint': contract.getPoint.call({from: toAccount})[1].toNumber()
           		});
         resolve({
           statusCode:200,
           message:{
-            'from,originName': contract.getPoint.call({from: fromAccount})[0],
-            'from,point': contract.getPoint.call({from: fromAccount})[1].toNumber(),
-            'to,originName': contract.getPoint.call({from: toAccount})[0],
-            'to,point': contract.getPoint.call({from: toAccount})[1].toNumber()
+            'fromOriginName': contract.getPoint.call({from: fromAccount})[0],
+            'fromPoint': contract.getPoint.call({from: fromAccount})[1].toNumber(),
+            'toOriginName': contract.getPoint.call({from: toAccount})[0],
+            'toPoint': contract.getPoint.call({from: toAccount})[1].toNumber()
           }
         }); 
       } else {
@@ -73,7 +73,23 @@ const transformPointEvent = async(transformPointEvent,txHash,fromAccount,toAccou
   });
 }
 
+/***
+ 帳本列表
+ */
+function getLedgers (account) {
+	var result = contract.getLedgers.call({from: account});
+	console.log(result);
+	return result;
+}
 
+/***
+ 新增帳本列表
+ */
+function addLedgers (changeTxHash, account) {
+  // console.log("changeTxHash: "+changeTxHash);
+	var txHash = contract.addLedgers.sendTransaction(changeTxHash, {from: account});
+	console.log('addLedgersTxHash: '+txHash);
+}
 
 
 /***
@@ -86,8 +102,8 @@ exports.changePoint = async(ctx)=>{
   // const fromRate = ctx.request.body.fromRate;
   // const toRate = ctx.request.body.toRate;
 
-  // console.log(fromAccountAddress);
-  // console.log(toAccountAddress);
+  console.log(fromAccountAddress);
+  console.log(toAccountAddress);
 
   const fromAccount = await getPoint(fromAccountAddress);
 	console.log(fromAccount['originName']);
@@ -108,8 +124,33 @@ exports.changePoint = async(ctx)=>{
 	}
 
   var txHash = contract.transformPoint.sendTransaction(txPoint, fromStoreRate, toStoreRate, toAccountAddress, {from: fromAccountAddress});
-  console.log(txHash);
+  console.log('changeTxHash: '+txHash);
+  addLedgers(txHash.substring(2,txHash.length), fromAccountAddress);
+  addLedgers(txHash.substring(2,txHash.length), toAccountAddress);
   return ctx.body = await transformPointEvent(contract.TransformPoint(),txHash,fromAccountAddress,toAccountAddress);
+}
+
+/***
+ 取得交換紀錄
+ */
+exports.getRecord = async(ctx)=>{
+  const accountAddress = ctx.request.body.account;
+  
+  const record = '0x' + getLedgers(accountAddress);
+  console.log('changeTxRecord: '+record);
+  
+  if(record=='0x') return ctx.body = { message: 'The account have not any Tx in changeBouns Platform.'};
+
+  // eth_getTransactionReceipt
+  const receipt = web3.eth.getTransactionReceipt(record);
+  console.log('changeTxReceipt: '+JSON.stringify(receipt));
+  return ctx.body = {
+    changeTxRecord:record,
+    fromAccount:receipt['from'],
+    fromPoint:parseInt(receipt['logs'][0]['topics'][2],16),
+    toAccount:'0x'+receipt['logs'][0]['topics'][1].substr(26,40),
+    toPoint:parseInt(receipt['logs'][0]['topics'][3],16)
+  };
 }
 
 exports.testindex = async(ctx)=>{
