@@ -13,12 +13,19 @@ const admin = '0xed02bc7fba831f1a451fa9dc75de63349a9a815f';
  取得帳號的餘額
  */
 const getBalance = async() =>{
-	for (let index = 0; index < web3.eth.accounts.length; index++) {
-		console.log({
-			'account': web3.eth.accounts[index],
-			'balance': web3.eth.getBalance(web3.eth.accounts[index]).toNumber()
-		});
-	}
+	// for (let index = 0; index < web3.eth.accounts.length; index++) {
+    if(web3.eth.accounts.length>0){
+      console.log({
+        'account': web3.eth.accounts[web3.eth.accounts.length-1],
+        'balance': web3.eth.getBalance(web3.eth.accounts.length-1).toNumber()
+      });
+    }else{
+      console.log({
+        'account': web3.eth.accounts[0],
+        'balance': web3.eth.getBalance(web3.eth.accounts.length-1).toNumber()
+      });
+    }
+	// }
 }
 
 /***
@@ -114,7 +121,11 @@ exports.testuser = async(ctx)=>{
 exports.addOrigin = async(ctx)=>{
   const name = ctx.request.body.name;
   const rate = ctx.request.body.rate;
-	const originCount = contract.getOriginCount.call().toNumber();
+  const originCount = contract.getOriginCount.call().toNumber();
+  if(originCount==0){
+    const txHash = contract.addOrigin.sendTransaction(originCount, name, rate, {from: admin});
+    return ctx.body = await addOriginEvent(contract.AddOrigin(),txHash,originCount);
+  }
 	for (let i = 0; i < originCount; i++) {
 		if(contract.getOrigin.call(i)[0] == name) {
 			console.log('This name is already exist.');
@@ -136,6 +147,12 @@ exports.addOrigin = async(ctx)=>{
 exports.getOriginList = async(ctx)=>{
   let result = [];
   const originCount = contract.getOriginCount.call().toNumber();
+  if(originCount==0) {
+    return ctx.body = {
+      statusCode:200,
+      message:[]
+    }
+  };
 	for (let i = 0; i < originCount; i++) {
     const origin = contract.getOrigin.call(i);
     result.push({
@@ -220,9 +237,13 @@ exports.newAccount = async(ctx)=>{
   const accountAddr = await rpcAPI(serverUrl,'personal_newAccount',['123456']);
   console.log('accountAddr: '+JSON.stringify(accountAddr));
   console.log(web3.eth.accounts);
+  await setTimeout(function(){
+    return new Promise(function(resolve, reject) {
+      resolve();
+    });
+  },1000);
   const rpcTxHash = await sendBalance(admin, accountAddr['result'], 999999999999999999999999);
   getBalance();
-
   await rpcAPI(serverUrl,'personal_unlockAccount',[accountAddr['result'],'123456',0]);
   const smartContractTxHash = contract.addAccount.sendTransaction(store, point, {from: accountAddr['result']});
   return ctx.body = await addAccountEvent(contract.AddAccount(),smartContractTxHash,accountAddr);
