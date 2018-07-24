@@ -12,14 +12,19 @@ contract Test {
     uint rate;
   }
 
+  struct Ledger {
+    string tx;
+  }
+
   mapping(address => Account) public accounts;
   mapping(uint => Origin) public origins;
+  mapping(address => Ledger) public ledgers;
 
   uint originCount;
 
   event AddAccount(address addr);
   event AddOrigin(uint index);
-  event TransformPoint(address addr);
+  event TransformPoint(address indexed fromAddr, uint indexed fromPoint, uint indexed toPoint);
 
   function Test () {
     originCount = 0;
@@ -71,10 +76,18 @@ contract Test {
   function transformPoint (uint point, uint fromRate, uint toRate, address addr) returns (uint, uint) {
     accounts[msg.sender].points -= point;
     accounts[addr].points += (point/fromRate*toRate);
-    TransformPoint(msg.sender);
+    TransformPoint(addr, point, point/fromRate*toRate);
     return (
       accounts[msg.sender].points,
       accounts[addr].points
     );
+  }
+
+  function addLedgers (string txHash) {
+    ledgers[msg.sender].tx = txHash;
+  }
+
+  function getLedgers () returns (string) {
+    return (ledgers[msg.sender].tx);
   }
 }
