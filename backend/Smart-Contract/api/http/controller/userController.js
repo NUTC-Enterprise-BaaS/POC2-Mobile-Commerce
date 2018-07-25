@@ -22,7 +22,7 @@ const getBalance = async() =>{
     }else{
       console.log({
         'account': web3.eth.accounts[0],
-        'balance': web3.eth.getBalance(web3.eth.accounts[web3.eth.accounts.length-1]).toNumber()
+        'balance': web3.eth.getBalance(web3.eth.accounts[0]).toNumber()
       });
     }
 	// }
