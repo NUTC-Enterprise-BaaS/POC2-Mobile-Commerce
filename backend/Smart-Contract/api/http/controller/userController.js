@@ -13,19 +13,19 @@ const admin = '0xed02bc7fba831f1a451fa9dc75de63349a9a815f';
  取得帳號的餘額
  */
 const getBalance = async() =>{
-	// for (let index = 0; index < web3.eth.accounts.length; index++) {
+  return new Promise(function(resolve, reject) {
     if(web3.eth.accounts.length>0){
-      console.log({
+      const result = {
         'account': web3.eth.accounts[web3.eth.accounts.length-1],
         'balance': web3.eth.getBalance(web3.eth.accounts[web3.eth.accounts.length-1]).toNumber()
-      });
+      };
+      console.log(result);
+      if(result['balance']!=0) resolve(result);
+      else getBalance;
     }else{
-      console.log({
-        'account': web3.eth.accounts[0],
-        'balance': web3.eth.getBalance(web3.eth.accounts[0]).toNumber()
-      });
+      console.log('The Ethereum node have not any account.');
     }
-	// }
+  });
 }
 
 /***
@@ -243,6 +243,7 @@ exports.newAccount = async(ctx)=>{
     });
   },1000);
   const rpcTxHash = await sendBalance(admin, accountAddr['result'], 999999999999999999999999);
+
   getBalance();
   await rpcAPI(serverUrl,'personal_unlockAccount',[accountAddr['result'],'123456',0]);
   const smartContractTxHash = contract.addAccount.sendTransaction(store, point, {from: accountAddr['result']});
