@@ -17,12 +17,12 @@ const getBalance = async() =>{
     if(web3.eth.accounts.length>0){
       console.log({
         'account': web3.eth.accounts[web3.eth.accounts.length-1],
-        'balance': web3.eth.getBalance(web3.eth.accounts.length-1).toNumber()
+        'balance': web3.eth.getBalance(web3.eth.accounts[web3.eth.accounts.length-1]).toNumber()
       });
     }else{
       console.log({
         'account': web3.eth.accounts[0],
-        'balance': web3.eth.getBalance(web3.eth.accounts.length-1).toNumber()
+        'balance': web3.eth.getBalance(web3.eth.accounts[web3.eth.accounts.length-1]).toNumber()
       });
     }
 	// }
