@@ -124,7 +124,7 @@
                 android:layout_below="@id/fragment_main_store_search_image"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
-                android:text="@string/search"
+                android:text="@string/login_block_change"
                 android:textColor="@color/ColorWhite"
                 android:textSize="@dimen/fragment_main_activity_news_text" />
 

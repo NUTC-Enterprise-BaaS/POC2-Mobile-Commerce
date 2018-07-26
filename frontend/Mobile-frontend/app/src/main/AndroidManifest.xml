@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.herbhousesgobuyother">
+    package="com.poc2">
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -23,15 +23,16 @@
         android:required="false" />
 
     <permission
-        android:name="com.herbhousesgobuyother.permission.C2D_MESSAGE"
+        android:name="com.poc2.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="com.herbhousesgobuyother.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.poc2.permission.C2D_MESSAGE" />
     <permission
-        android:name="com.herbhousesgobuyother"
+        android:name="com.poc2"
         android:protectionLevel="normal" />
 
     <application
         android:allowBackup="true"
+        android:name="com.poc2.MyApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme">
@@ -152,12 +153,12 @@
 
         <provider
             android:name="com.androidlibrary.module.AccountProvider"
-            android:authorities="com.herbhousesgobuyother"
+            android:authorities="com.poc2"
             android:exported="true"
             android:multiprocess="true"
-            android:permission="com.herbhousesgobuyother"
-            android:readPermission="com.herbhousesgobuyother"
-            android:writePermission="com.herbhousesgobuyother" />
+            android:permission="com.poc2"
+            android:readPermission="com.poc2"
+            android:writePermission="com.poc2" />
         <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
 
@@ -172,7 +173,7 @@
             android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <category android:name="com.herbhousesgobuyother" />
+                <category android:name="com.poc2" />
             </intent-filter>
         </receiver>
 
@@ -223,6 +224,7 @@
             <!--android:name="com.facebook.FacebookContentProvider"-->
             <!--android:authorities="com.facebook.app.FacebookContentProvider1053181544771323"-->
             <!--android:exported="true" />-->
+        <receiver android:name=".contrube.component.alarm.AlarmBroadCastReceiver" />
 
     </application>
 

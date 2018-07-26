@@ -559,5 +559,5 @@
     <string name="fingerprint_hint">觸碰感測器</string>
     <string name="sign_in">使用指紋辨識進行登入</string>
     <string name="get_point_token">重新取得\n驗證碼</string>
-
+    <string name="login_block_change">登入區塊鏈\n點數交換平台</string>
 </resources>

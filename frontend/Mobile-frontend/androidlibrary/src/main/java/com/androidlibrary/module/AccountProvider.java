@@ -13,7 +13,7 @@ import com.androidlibrary.module.consts.AccountConst;
  * Created by chriske on 2016/5/27.
  */
 public class AccountProvider extends ContentProvider {
-    public static final Uri URI = Uri.parse("content://com.herbhousesgobuyother");
+    public static final Uri URI = Uri.parse("content://com.poc2");
 
     private SQLiteOpenHelper databaseHelper;
 

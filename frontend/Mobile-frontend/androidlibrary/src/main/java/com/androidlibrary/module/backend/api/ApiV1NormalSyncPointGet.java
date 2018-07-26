@@ -3,6 +3,7 @@ package com.androidlibrary.module.backend.api;
 import android.content.Context;
 
 import com.androidlibrary.module.ApiParams;
+import com.androidlibrary.module.backend.ApiUrls;
 import com.androidlibrary.module.backend.data.ProcessingData;
 import com.androidlibrary.module.backend.request.AuthTokenGetRequest;
 
@@ -11,15 +12,12 @@ import com.androidlibrary.module.backend.request.AuthTokenGetRequest;
  */
 
 public class ApiV1NormalSyncPointGet<T extends ProcessingData> extends AuthTokenGetRequest<T> {
-    private String mUrl;
-
-    public ApiV1NormalSyncPointGet(Context context, ApiParams params, String url) {
+    public ApiV1NormalSyncPointGet(Context context, ApiParams params) {
         super(context, params);
-        mUrl = url;
     }
 
     @Override
     protected String getUrl() {
-        return mUrl;
+        return ApiUrls.apiSync(getParams());
     }
 }
