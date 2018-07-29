@@ -331,6 +331,35 @@ public class ApiUrls {
         return getDomain(params) + "api/v1/use/voucher";
     }
 
+    public static String apiBindingClear(ApiParams params) {
+        return getDomain(params) + "api/v1/user/ldap/binding/clear";
+    }
+
+    public static String apiLDAPLogin(ApiParams params) {
+        return getDomain(params) + "api/v1/ldap/login";
+    }
+
+    public static String apiLDAPADD(ApiParams params) {
+        return getDomain(params) + "api/v1/user/ldapadd";
+    }
+
+    public static String apiPoint(ApiParams params) {
+        return getDomain(params) + "api/v1/user/point";
+    }
+
+    public static String apiCostPoint(ApiParams params) {
+        return getDomain(params) + "api/v1/user/point/costs";
+    }
+
+    public static String apiHistoryPoint(ApiParams params) {
+        return getDomain(params) + "api/v1/user/point/history";
+    }
+
+    public static String apiSync(ApiParams params) {
+        return getDomain(params) + "api/v1/user/point/sync";
+    }
+
+
     public static String getDomain(ApiParams params) {
         String protocol = (params.isSSL) ? "https" : "http";
         String domain = protocol + "://" + params.domainHost + ":" + params.domainPort + "/";

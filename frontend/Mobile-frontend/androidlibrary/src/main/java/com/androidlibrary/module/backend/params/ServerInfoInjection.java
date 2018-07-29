@@ -16,7 +16,7 @@ public class ServerInfoInjection extends ParamsInjection {
         //廠商測試port
 //        params.domainHost = "106.184.6.69";
 //        params.domainHost = "10.26.1.228";
-        params.domainHost = "10.0.0.59";
+        params.domainHost = "211.20.7.116";
 
 //        params.domainPort = 5002;
         params.domainPort = 8080;

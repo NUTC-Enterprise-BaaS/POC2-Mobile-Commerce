@@ -29,6 +29,7 @@ public class ApiV1NormalConnectLdapPost<T extends ProcessingData> extends AuthTo
     protected Map<String, String> getPostParams() {
         HashMap<String, String> params = new HashMap<>();
         params.put(ParamsConst.Key.LDAP_TOKEN, getParams().inputLdapToken);
+        params.put(ParamsConst.Key.LDAP_AUTH_TOKEN, getParams().ldapAuthToken);
         return params;
     }
 }

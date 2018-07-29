@@ -198,11 +198,11 @@
                 android:layout_height="@dimen/activity_setting_volume_image_height"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
                 android:layout_marginEnd="@dimen/activity_setting_switch_margin"
                 android:layout_marginRight="@dimen/activity_setting_switch_margin"
                 android:scaleType="centerInside"
-                android:src="@drawable/z"
-                android:layout_centerVertical="true"/>
+                android:src="@drawable/z" />
         </RelativeLayout>
 
         <View
@@ -355,7 +355,9 @@
             android:layout_height="@dimen/activity_setting_line_height"
             android:layout_gravity="center"
             android:background="@color/ColorBlack" />
+
         <RelativeLayout
+            android:id="@+id/layout_finger_print"
             android:layout_width="match_parent"
             android:layout_height="@dimen/activity_setting_row_height"
             android:background="@color/ColorWhite">
@@ -366,7 +368,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/activity_setting_row_padding_horizontal"
                 android:layout_marginStart="@dimen/activity_setting_row_padding_horizontal"
-                android:text="啟用指紋解鎖登入"
+                android:text="啟用指紋認證登入區塊鏈點數交換平台"
                 android:textColor="@color/ColorBlack"
                 android:textSize="@dimen/activity_setting_text_size" />
 
@@ -379,12 +381,37 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="@dimen/activity_setting_switch_margin"
                 android:layout_marginRight="@dimen/activity_setting_switch_margin" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_setting_line_height"
+                android:layout_gravity="center"
+                android:layout_alignParentBottom="true"
+                android:background="@color/ColorBlack" />
         </RelativeLayout>
 
-        <View
+        <RelativeLayout
+            android:id="@+id/layout_clear"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/activity_setting_line_height"
-            android:layout_gravity="center"
-            android:background="@color/ColorBlack" />
+            android:layout_height="@dimen/activity_setting_row_height"
+            android:background="@color/ColorWhite">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_setting_row_padding_horizontal"
+                android:layout_marginStart="@dimen/activity_setting_row_padding_horizontal"
+                android:text="取消區塊鏈點數交換功能"
+                android:textColor="@color/ColorBlack"
+                android:textSize="@dimen/activity_setting_text_size" />
+
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_setting_line_height"
+                android:layout_gravity="center"
+                android:background="@color/ColorBlack" />
+        </RelativeLayout>
+
     </LinearLayout>
 </RelativeLayout>

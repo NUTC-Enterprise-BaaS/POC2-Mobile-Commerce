@@ -181,21 +181,6 @@
                     android:gravity="center_vertical" />
             </RelativeLayout>
 
-            <Button
-                android:id="@+id/text_finger_print"
-                android:layout_width="wrap_content"
-                android:paddingStart="5dp"
-                android:paddingEnd="5dp"
-                android:layout_height="@dimen/activity_login_submit_button_height"
-                android:layout_alignEnd="@id/login_keep_container"
-                android:layout_alignRight="@id/login_keep_container"
-                android:layout_below="@id/login_keep_container"
-                android:layout_marginTop="@dimen/activity_login_forget_button_margin_top"
-                android:background="@drawable/activity_login_button_shape"
-                android:gravity="center"
-                android:text="進行指紋辨識登入"
-                android:textColor="@color/ColorWhite"
-                android:textSize="@dimen/activity_login_submit_button_textsize" />
 
             <TextView
                 android:id="@+id/login_authenticate_text"
@@ -204,7 +189,7 @@
                 android:layout_alignLeft="@id/login_logo"
                 android:layout_alignStart="@id/login_logo"
                 android:layout_below="@id/login_keep_container"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="40dp"
                 android:background="@color/ColorGeneralTheme"
                 android:gravity="center"
                 android:text="@string/registered_layout_authenticate"

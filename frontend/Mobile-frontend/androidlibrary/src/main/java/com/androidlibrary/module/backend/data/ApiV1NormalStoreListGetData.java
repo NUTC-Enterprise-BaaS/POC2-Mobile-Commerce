@@ -16,15 +16,17 @@ public class ApiV1NormalStoreListGetData extends JsonData {
     public String status;
     public ArrayList<String> storeNameGroup;
     public ArrayList<String> userNameGroup;
-
+    public String message;
     public ApiV1NormalStoreListGetData(String data) {
         super(data);
-        Log.e("data", data);
+        Log.e("StoreListGetData", data);
     }
 
     @Override
     protected void processing(JSONObject json) {
         super.processing(json);
+        message = getString(json, "list", "");
+
         JSONArray itemsArray;
         storeNameGroup = new ArrayList<>();
         userNameGroup = new ArrayList<>();

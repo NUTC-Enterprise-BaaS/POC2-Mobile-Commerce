@@ -94,4 +94,5 @@ public class ApiParams {
     public String userName = "";
     public String message = "";
     public String voucherid  = "";
+    public String ldapAuthToken  = "";
 }

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorWhite">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/ColorGeneralTheme">
+
+        <ImageView
+            android:layout_width="@dimen/toolbar_back_image_width"
+            android:layout_height="@dimen/toolbar_back_image_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/toolbar_back_image_margin_left"
+            android:layout_marginStart="@dimen/toolbar_back_image_margin_left"
+            android:scaleType="fitCenter"
+            android:src="@drawable/toolbar_back" />
+
+        <View
+            android:id="@+id/toolbar_back_touch"
+            android:layout_width="@dimen/toolbar_back_touch"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="登入區塊鏈點數交換平台"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/toolbar_text_size" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_title_token"
+        android:layout_width="@dimen/activity_login_layout_account_width"
+        android:layout_height="@dimen/activity_login_layout_account_height"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:background="@color/ColorGeneralTheme"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="帳號"
+        android:textColor="@color/ColorWhite"
+        android:textSize="@dimen/activity_login_layout_account_text_size" />
+
+    <EditText
+        android:id="@+id/edit_token"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_login_layout_account_edit_height"
+        android:layout_alignBottom="@id/text_title_token"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toEndOf="@id/text_title_token"
+        android:layout_toRightOf="@id/text_title_token"
+        android:background="@drawable/activity_register_spinner"
+        android:hint="請輸入LDAP帳號"
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:textColor="@color/ColorBlack"
+        android:textColorHint="@color/ColorHint"
+        android:textSize="@dimen/activity_login_layout_account_edit_size" />
+
+    <TextView
+        android:id="@+id/text_password"
+        android:layout_width="@dimen/activity_login_layout_account_width"
+        android:layout_height="@dimen/activity_login_layout_account_height"
+        android:layout_below="@id/text_title_token"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/ColorGeneralTheme"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="密碼"
+        android:textColor="@color/ColorWhite"
+        android:textSize="@dimen/activity_login_layout_account_text_size" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_login_layout_account_edit_height"
+        android:layout_alignBottom="@id/text_password"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="textPassword"
+        android:layout_toEndOf="@id/text_title_token"
+        android:layout_toRightOf="@id/text_password"
+        android:background="@drawable/activity_register_spinner"
+        android:hint="請輸入LDAP密碼"
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:textColor="@color/ColorBlack"
+        android:textColorHint="@color/ColorHint"
+        android:textSize="@dimen/activity_login_layout_account_edit_size" />
+
+    <TextView
+        android:id="@+id/text_password_auth"
+        android:layout_width="120dp"
+        android:layout_height="@dimen/activity_login_layout_account_height"
+        android:layout_below="@id/text_password"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/ColorGeneralTheme"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="身分證字號"
+        android:textColor="@color/ColorWhite"
+        android:textSize="@dimen/activity_login_layout_account_text_size" />
+
+    <EditText
+        android:id="@+id/edit_auth"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_login_layout_account_edit_height"
+        android:layout_alignBottom="@id/text_password_auth"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toEndOf="@id/text_password_auth"
+        android:layout_toRightOf="@id/text_password_auth"
+        android:background="@drawable/activity_register_spinner"
+        android:hint="請輸入身分證字號"
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:textColor="@color/ColorBlack"
+        android:textColorHint="@color/ColorHint"
+        android:textSize="@dimen/activity_login_layout_account_edit_size" />
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_login_register_button_height"
+        android:layout_below="@id/text_password_auth"
+        android:layout_marginEnd="@dimen/activity_register_reset_margin"
+        android:layout_marginLeft="@dimen/activity_register_reset_margin"
+        android:layout_marginRight="@dimen/activity_register_reset_margin"
+        android:layout_marginStart="@dimen/activity_register_reset_margin"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/activity_login_button_shape"
+        android:gravity="center"
+        android:text="@string/login_layout_send"
+        android:textColor="@color/ColorWhite"
+        android:textSize="@dimen/activity_login_submit_button_textsize" />
+
+    <RelativeLayout
+        android:id="@+id/text_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_submit"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:paddingEnd="14dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="14dp"
+        android:paddingStart="18dp">
+
+        <TextView
+            android:id="@+id/text_headset_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:letterSpacing="0.09"
+            android:text="或是使用指紋辨識進行登入"
+            android:textColor="@color/ColorHint"
+            android:textSize="@dimen/activity_login_layout_account_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/text_headset_or"
+            android:layout_toStartOf="@id/text_headset_or"
+            android:background="@color/ColorHint" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/text_headset_or"
+            android:layout_toRightOf="@id/text_headset_or"
+            android:background="@color/ColorHint" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_fingerprint"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_login_register_button_height"
+        android:layout_below="@id/text_hint"
+        android:layout_marginEnd="@dimen/activity_register_reset_margin"
+        android:layout_marginLeft="@dimen/activity_register_reset_margin"
+        android:layout_marginRight="@dimen/activity_register_reset_margin"
+        android:layout_marginStart="@dimen/activity_register_reset_margin"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/activity_login_button_shape"
+        android:gravity="center"
+        android:text="進行指紋辨識進行登入"
+        android:textColor="@color/ColorWhite"
+        android:textSize="@dimen/activity_login_submit_button_textsize" />
+
+</RelativeLayout>
