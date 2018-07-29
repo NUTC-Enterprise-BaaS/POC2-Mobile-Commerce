@@ -75,5 +75,6 @@ public class ParamsConst {
         public static final String SEND_POINT_USER_NAME = "toUser";
         public static final String VOUCHER_MESSAGE = "message";
         public static final String VOUCHER_ID = "voucherid";
+        public static final String LDAP_AUTH_TOKEN = "ldapAuthToken";
     }
 }

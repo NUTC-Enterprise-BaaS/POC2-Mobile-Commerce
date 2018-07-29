@@ -194,7 +194,7 @@ public class BasicInformationFragment extends Fragment {
         @Override
         public void onClick(View view) {
 //            Intent intent = new Intent();
-//            intent.setClass(BasicInformationFragment.this,com.herbhousesgobuyother.ui.normal.scanrecommend);
+//            intent.setClass(BasicInformationFragment.this,com.poc2.ui.normal.scanrecommend);
 //            startActivity(intent);
 
         }

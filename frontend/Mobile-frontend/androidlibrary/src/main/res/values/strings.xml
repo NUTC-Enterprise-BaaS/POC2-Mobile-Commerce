@@ -223,8 +223,8 @@
 
     <string name="login_layout_title">移動消費 致富商機</string>
 
-    <string name="login_finger_print_dialog_title">未啟用指紋登入</string>
-    <string name="login_finger_print_dialog_message">請先使用帳號登入再點選功能設置啟用指紋登入功能</string>
+    <string name="login_finger_print_dialog_title">未啟用指紋辨識登入</string>
+    <string name="login_finger_print_dialog_message">請先到功能設置頁面啟用指紋登辨識入功能</string>
     <string name="login_finger_print_dialog_sure">關閉</string>
     <string name="finger_print_dialog_title">未設置指紋鎖</string>
     <string name="finger_print_dialog_message">要引導至安全性頁面設定嗎?</string>
