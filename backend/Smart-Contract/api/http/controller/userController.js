@@ -122,6 +122,7 @@ exports.addOrigin = async(ctx)=>{
   const name = ctx.request.body.name;
   const rate = ctx.request.body.rate;
   const originCount = contract.getOriginCount.call().toNumber();
+  await rpcAPI(serverUrl,'personal_unlockAccount',[admin,'123456',0]);
   if(originCount==0){
     const txHash = contract.addOrigin.sendTransaction(originCount, name, rate, {from: admin});
     return ctx.body = await addOriginEvent(contract.AddOrigin(),txHash,originCount);
@@ -234,6 +235,7 @@ exports.newAccount = async(ctx)=>{
   const point = ctx.request.body.point;
   const store = ctx.request.body.store;
   console.log(point,store);
+  await rpcAPI(serverUrl,'personal_unlockAccount',[admin,'123456',0]);
   const accountAddr = await rpcAPI(serverUrl,'personal_newAccount',['123456']);
   console.log('accountAddr: '+JSON.stringify(accountAddr));
   console.log(web3.eth.accounts);
@@ -256,6 +258,7 @@ exports.newAccount = async(ctx)=>{
  */
 exports.getPoint = async(ctx)=>{
   const account = ctx.request.body.account;
+  await rpcAPI(serverUrl,'personal_unlockAccount',[account,'123456',0]);
 	const result = {
 		'originName': contract.getPoint.call({from: account})[0],
 		'point': contract.getPoint.call({from: account})[1].toNumber()
