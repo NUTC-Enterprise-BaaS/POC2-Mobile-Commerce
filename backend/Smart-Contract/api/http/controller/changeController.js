@@ -1,5 +1,6 @@
 const env = require('../../../config/env.json');
-
+const serverUrl = env['rpcUrl'];
+const rpcAPI = require('../../models/rpc').rpcAPI;
 const Web3 = require("web3");
 const web3 = new Web3();
 web3.setProvider(new Web3.providers.HttpProvider(env.rpcUrl));
@@ -87,8 +88,9 @@ function getLedgers (account) {
 /***
  新增帳本列表
  */
-function addLedgers (changeTxHash, account) {
+async function addLedgers (changeTxHash, account) {
   // console.log("changeTxHash: "+changeTxHash);
+  await rpcAPI(serverUrl,'personal_unlockAccount',[account,'123456',0])
 	var txHash = contract.addLedgers.sendTransaction(changeTxHash, {from: account});
 	console.log('addLedgersTxHash: '+txHash);
 }
@@ -124,7 +126,7 @@ exports.changePoint = async(ctx)=>{
       message:"The Account point not enough , only have "+fromAccount['point']+" must be have "+txPoint
     };
 	}
-
+  await rpcAPI(serverUrl,'personal_unlockAccount',[fromAccountAddress,'123456',0])
   var txHash = contract.transformPoint.sendTransaction(txPoint, fromStoreRate, toStoreRate, toAccountAddress, {from: fromAccountAddress});
   console.log('changeTxHash: '+txHash);
   addLedgers(txHash.substring(2,txHash.length), fromAccountAddress);
